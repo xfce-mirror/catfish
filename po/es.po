@@ -1,0 +1,101 @@
+# Spanish translation of catfish
+# Copyright (C) 2007 Christian Dywan
+# This file is distributed under the same license as the catfish package.
+# Raúl González Duque <zootropo@gmail.com>, 2007
+
+msgid ""
+msgstr ""
+"Project-Id-Version: catfish\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-01-12 04:31+0100\n"
+"PO-Revision-Date: 2007-06-08 14:17+0000\n"
+"Last-Translator: Raúl González Duque <zootropo@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Rosetta-Export-Date: 2007-07-31 06:18:17+0000\n"
+
+msgid "Exact match"
+msgstr "Conincidencia exacta"
+
+msgid "Hidden files"
+msgstr "Archivos ocultos"
+
+msgid "Fulltext search"
+msgstr "Buscar texto completo"
+
+msgid "Limit results"
+msgstr "Limitar resultados"
+
+msgid "File type"
+msgstr "Tipo de archivo"
+
+msgid "Folder"
+msgstr "Carpeta"
+
+msgid "Choose folder"
+msgstr "Elija la carpeta"
+
+msgid "Search method"
+msgstr "Método de búsqueda"
+
+msgid "Save to file"
+msgstr "Guardar en un archivo"
+
+msgid "Documents"
+msgstr "Documentos"
+
+msgid "Images"
+msgstr "Imágenes:"
+
+msgid "Music"
+msgstr "Música"
+
+msgid "Videos"
+msgstr "Vídeos"
+
+msgid "Preview"
+msgstr "Vista Preliminar"
+
+msgid "Filename"
+msgstr "nombre del archivo"
+
+msgid "Size"
+msgstr "Tamaño"
+
+msgid "Location"
+msgstr "Situación"
+
+msgid "Last modified"
+msgstr "Ultima modificación"
+
+msgid "Searching for \"%s\""
+msgstr "Buscando \"%s\""
+
+msgid "Searching..."
+msgstr "Buscando…"
+
+msgid "No files found for \"%s\"."
+msgstr "No se encontraron archivos para \"%s\"."
+
+msgid "No files were found."
+msgstr "No se encontró ningún archivo"
+
+msgid "%s files found for \"%s\"."
+msgstr "%s archivos encontrados para \"%s\"."
+
+msgid "Fatal error, search was aborted."
+msgstr "Error grave, búsqueda cancelada."
+
+msgid "The search backend doesn't support wildcards."
+msgstr "El backend de búsqueda no soporta caracteres comodín."
+
+msgid "Click here to start the search daemon."
+msgstr "Pulse aquí para iniciar el servicio de búsqueda"
+
+msgid "The search daemon was started."
+msgstr "El servicio de búsqueda ha sido iniciado"
+
+msgid "The search daemon could not be started."
+msgstr "Fallo al iniciar el servicio de búsqueda"

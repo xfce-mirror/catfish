@@ -1,0 +1,106 @@
+# Swedish translation for catfish
+# Copyright (C) 2007 Christian Dywan
+# This file is distributed under the same license as the catfish package.
+# Daniel Nylander <po@danielnylander.se>, 2007
+
+msgid ""
+msgstr ""
+"Project-Id-Version: catfish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-12 04:31+0100\n"
+"PO-Revision-Date: 2007-01-22 23:24+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Rosetta-Export-Date: 2007-01-29 04:57+0000\n"
+
+# User interface
+msgid "Exact match"
+msgstr "Exakt matchning"
+
+msgid "Hidden files"
+msgstr "Dolda filer"
+
+msgid "Fulltext search"
+msgstr ""
+
+msgid "Limit results"
+msgstr "Begränsa resultat"
+
+msgid "File type"
+msgstr "Filtyp"
+
+msgid "Folder"
+msgstr "Mapp"
+
+msgid "Choose folder"
+msgstr "Välj mapp"
+
+msgid "Search method"
+msgstr "Sökmetod"
+
+msgid "Save to file"
+msgstr "Spara till fil"
+
+# Filter file type
+msgid "Documents"
+msgstr "Dokument"
+
+msgid "Images"
+msgstr "Bilder"
+
+msgid "Music"
+msgstr "Musik"
+
+msgid "Videos"
+msgstr "Video"
+
+# Column titles
+msgid "Preview"
+msgstr "Förhandsvisa"
+
+msgid "Filename"
+msgstr "Filnamn"
+
+msgid "Size"
+msgstr "Storlek"
+
+msgid "Location"
+msgstr "Plats"
+
+msgid "Last modified"
+msgstr "Senast ändrad"
+
+# Status messages
+msgid "Searching for \"%s\""
+msgstr "Söker efter \"%s\""
+
+msgid "Searching..."
+msgstr "Söker..."
+
+msgid "No files found for \"%s\"."
+msgstr "Inga filer hittades för \"%s\"."
+
+msgid "No files were found."
+msgstr "Inga filer hittades."
+
+msgid "%s files found for \"%s\"."
+msgstr "%s filer hittades för \"%s\"."
+
+msgid "Fatal error, search was aborted."
+msgstr "Ödesdigert fel, sökningen avbröts."
+
+# Search daemon messages
+msgid "The search backend doesn't support wildcards."
+msgstr "Sökbakänden saknar stöd för jokertecken."
+
+msgid "Click here to start the search daemon."
+msgstr "Klicka här för att starta sökdemonen."
+
+msgid "The search daemon was started."
+msgstr "Sökdemonen startades."
+
+msgid "The search daemon could not be started."
+msgstr "Sökdemonen kunde inte startas."

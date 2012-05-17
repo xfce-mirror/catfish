@@ -1,0 +1,106 @@
+# LANGUAGE translation of catfish.
+# Copyright (C) 2007 Christian Dywan
+# This file is distributed under the same license as the catfish package.
+# Christian Dywan <software@twotoasts.de>, 2007.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: catfish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-12 04:31+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# User interface
+msgid "Exact match"
+msgstr ""
+
+msgid "Hidden files"
+msgstr ""
+
+msgid "Fulltext search"
+msgstr ""
+
+msgid "Limit results"
+msgstr ""
+
+msgid "File type"
+msgstr ""
+
+msgid "Folder"
+msgstr ""
+
+msgid "Choose folder"
+msgstr ""
+
+msgid "Search method"
+msgstr ""
+
+msgid "Save to file"
+msgstr ""
+
+
+# Filter file type
+msgid "Documents"
+msgstr ""
+
+msgid "Images"
+msgstr ""
+
+msgid "Music"
+msgstr ""
+
+msgid "Videos"
+msgstr ""
+
+# Column titles
+msgid "Preview"
+msgstr ""
+
+msgid "Filename"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Location"
+msgstr ""
+
+msgid "Last modified"
+msgstr ""
+
+# Status messages
+msgid "Searching for \"%s\""
+msgstr ""
+
+msgid "Searching..."
+msgstr ""
+
+msgid "No files found for \"%s\"."
+msgstr ""
+
+msgid "No files were found."
+msgstr ""
+
+msgid "%s files found for \"%s\"."
+msgstr ""
+
+msgid "Fatal error, search was aborted."
+msgstr ""
+
+# Search daemon messages
+msgid "The search backend doesn't support wildcards."
+msgstr ""
+
+msgid "Click here to start the search daemon."
+msgstr ""
+
+msgid "The search daemon was started."
+msgstr ""
+
+msgid "The search daemon could not be started."
+msgstr ""

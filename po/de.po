@@ -1,0 +1,106 @@
+# German translation of catfish.
+# Copyright (C) 2007 Christian Dywan
+# This file is distributed under the same license as the catfish package.
+# Christian Dywan <software@twotoasts.de>, 2007
+
+msgid ""
+msgstr ""
+"Project-Id-Version: catfish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-12 04:31+0100\n"
+"PO-Revision-Date: 2007-01-12 04:56+0100\n"
+"Last-Translator: Christian <software@twotoasts.de>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# User interface
+msgid "Exact match"
+msgstr "Genaue Treffer"
+
+msgid "Hidden files"
+msgstr "Versteckte Dateien"
+
+msgid "Fulltext search"
+msgstr "Volltextsuche"
+
+msgid "Limit results"
+msgstr "Ergebnisse begrenzen"
+
+msgid "File type"
+msgstr "Dateityp"
+
+msgid "Folder"
+msgstr "Ordner"
+
+msgid "Choose folder"
+msgstr "Ordner wählen"
+
+msgid "Search method"
+msgstr "Suchmethode"
+
+msgid "Save to file"
+msgstr "In Datei speichern"
+
+# Filter file type
+msgid "Documents"
+msgstr "Dokumente"
+
+msgid "Images"
+msgstr "Bilder"
+
+msgid "Music"
+msgstr "Musik"
+
+msgid "Videos"
+msgstr "Videos"
+
+# Column titles
+msgid "Preview"
+msgstr "Vorschau"
+
+msgid "Filename"
+msgstr "Dateiname"
+
+msgid "Size"
+msgstr "Größe"
+
+msgid "Location"
+msgstr "Ort"
+
+msgid "Last modified"
+msgstr "Zuletzt geändert"
+
+# Status messages
+msgid "Searching for \"%s\""
+msgstr "Suchen nach \"%s\""
+
+msgid "Searching..."
+msgstr "Suchen..."
+
+msgid "No files found for \"%s\"."
+msgstr "Keine Dateien gefunden für \"%s\"."
+
+msgid "No files were found."
+msgstr "Keine Dateien gefunden."
+
+msgid "%s files found for \"%s\"."
+msgstr "%s Dateien gefunden für \"%s\"."
+
+msgid "Fatal error, search was aborted."
+msgstr "Kritischer Fehler, die Suche wurde abgebrochen."
+
+# Search daemon messages
+msgid "The search backend doesn't support wildcards."
+msgstr "Das Suchbackend unterstützt keine Wildcards."
+
+msgid "Click here to start the search daemon."
+msgstr "Hier klicken um den Suchdaemon zu starten."
+
+msgid "The search daemon was started."
+msgstr "Der Suchdaemon wurde gestartet."
+
+msgid "The search daemon could not be started."
+msgstr "Der Suchdaemon konnte nicht gestartet werden."

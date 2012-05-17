@@ -1,0 +1,13 @@
+TODO:
+ . fix popup menu not being shown on first click
+ . show text excerpts and meta information
+ . remember last chosen search method and fulltext state
+ . settings dialog
+ . drag'n drop of filenames
+ . add an 'update index' button
+ . add filter for executables/ desktop files
+ . search for files by date
+ . fix occasional broken pipes
+ . optional plain command line mode
+ . add about dialog
+ . customizable search methods

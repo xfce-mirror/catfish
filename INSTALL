@@ -1,0 +1,16 @@
+1. Unpack the archive.
+
+2. To build catfish run 
+      ./configure
+      make
+
+3. To install catfish run either
+      (sudo) make install
+   or
+      (sudo) checkinstall
+
+4. For a list of command line options run
+      catfish --help
+
+5. To create a distributable package of catfish run
+      make deb

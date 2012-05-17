@@ -1,0 +1,101 @@
+# Catalan translation for catfish
+# Copyright (C) 2007 Christian Dywan
+# This file is distributed under the same license as the catfish package.
+# Paco <web@pacoriviere.cat>, 2007
+
+msgid ""
+msgstr ""
+"Project-Id-Version: catfish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-12 04:31+0100\n"
+"PO-Revision-Date: 2007-02-24 19:53+0000\n"
+"Last-Translator: Paco <web@pacoriviere.cat>\n"
+"Language-Team: Catalan <ca@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Rosetta-Export-Date: 2007-05-11 08:28:11+0000\n"
+
+msgid "Exact match"
+msgstr "Coincidència exacta"
+
+msgid "Hidden files"
+msgstr "Arxius ocults"
+
+msgid "Fulltext search"
+msgstr "Cerca tot el text"
+
+msgid "Limit results"
+msgstr "Limita els resultats"
+
+msgid "File type"
+msgstr "Tipus de fitxer"
+
+msgid "Folder"
+msgstr "Carpeta"
+
+msgid "Choose folder"
+msgstr "Tria la carpeta"
+
+msgid "Search method"
+msgstr "Mètode de cerca"
+
+msgid "Save to file"
+msgstr "Desa a un fitxer"
+
+msgid "Documents"
+msgstr "Documents"
+
+msgid "Images"
+msgstr "Imatges"
+
+msgid "Music"
+msgstr "Música"
+
+msgid "Videos"
+msgstr "Vídeos"
+
+msgid "Preview"
+msgstr "Previsualitació"
+
+msgid "Filename"
+msgstr "Nom d'arxiu"
+
+msgid "Size"
+msgstr "Mida"
+
+msgid "Location"
+msgstr "Ubicació"
+
+msgid "Last modified"
+msgstr "Darrera modificació"
+
+msgid "Searching for \"%s\""
+msgstr "S'està cercant \"%s\""
+
+msgid "Searching..."
+msgstr "S'està cercant..."
+
+msgid "No files found for \"%s\"."
+msgstr "No s'ha trobat arxius amb \"%s\"."
+
+msgid "No files were found."
+msgstr "No s'ha trobat arxius."
+
+msgid "%s files found for \"%s\"."
+msgstr "S'han trobat %s arxius amb \"%s\"."
+
+msgid "Fatal error, search was aborted."
+msgstr "Hi ha un error irrecuperable, s'ha cancel·lat la cerca."
+
+msgid "The search backend doesn't support wildcards."
+msgstr "La cerca en segon pla no permet comodins."
+
+msgid "Click here to start the search daemon."
+msgstr "Cliqueu aquí per iniciar el dimoni de cerca."
+
+msgid "The search daemon was started."
+msgstr "S'ha iniciat el dimoni de cerca."
+
+msgid "The search daemon could not be started."
+msgstr "No ha estat possible iniciar el dimoni de cerca."

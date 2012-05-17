@@ -1,0 +1,102 @@
+# Polish translation for catfish
+# Copyright (C) 2007 Christian Dywan
+# This file is distributed under the same license as the catfish package.
+# Radomir Dopieralski <ubuntu@sheep.prv.pl>, 2007
+# Szymon Gruszczynski <atavus@interia.pl>, 2007
+
+msgid ""
+msgstr ""
+"Project-Id-Version: catfish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-12 04:31+0100\n"
+"PO-Revision-Date: 2007-03-26 21:40+0000\n"
+"Last-Translator: Szymon Gruszczynski <atavus@interia.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Rosetta-Export-Date: 2007-05-11 08:28:14+0000\n"
+
+msgid "Exact match"
+msgstr "Dokładne dopasowanie"
+
+msgid "Hidden files"
+msgstr "Ukryte pliki"
+
+msgid "Fulltext search"
+msgstr "Przeszukiwanie pelnotekstowe"
+
+msgid "Limit results"
+msgstr "Ogranicz wynik"
+
+msgid "File type"
+msgstr "Typ pliku"
+
+msgid "Folder"
+msgstr "Katalog"
+
+msgid "Choose folder"
+msgstr "Wybierz katalog"
+
+msgid "Search method"
+msgstr "Metoda szukania"
+
+msgid "Save to file"
+msgstr "Zapisz do pliku"
+
+msgid "Documents"
+msgstr "Dokumenty"
+
+msgid "Images"
+msgstr "Obrazy"
+
+msgid "Music"
+msgstr "Muzyka"
+
+msgid "Videos"
+msgstr "Video"
+
+msgid "Preview"
+msgstr "Podgląd"
+
+msgid "Filename"
+msgstr "Nazwa pliku"
+
+msgid "Size"
+msgstr "Wielkość"
+
+msgid "Location"
+msgstr "Położenie"
+
+msgid "Last modified"
+msgstr "Ostatnio modyfikowane"
+
+msgid "Searching for \"%s\""
+msgstr "Szukanie \"%s\""
+
+msgid "Searching..."
+msgstr "Szukanie..."
+
+msgid "No files found for \"%s\"."
+msgstr "Nie znaleziono plików dla \"%s\""
+
+msgid "No files were found."
+msgstr "Nie znaleziono plików."
+
+msgid "%s files found for \"%s\"."
+msgstr "Znaleziono %s plików dla \"%s\""
+
+msgid "Fatal error, search was aborted."
+msgstr "Błąd krytyczny, szukanie porzucone."
+
+msgid "The search backend doesn't support wildcards."
+msgstr "Ta metoda wyszukiwanie nie obsługuje wzorców."
+
+msgid "Click here to start the search daemon."
+msgstr "Kilknij tutaj aby uruchomić demona szukania."
+
+msgid "The search daemon was started."
+msgstr "Demon szukania został uruchomiony."
+
+msgid "The search daemon could not be started."
+msgstr "Demon szukania nie mógł zostać uruchomiony."

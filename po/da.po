@@ -1,0 +1,101 @@
+# Danish translation for catfish
+# Copyright (C) 2007 Christian Dywan
+# This file is distributed under the same license as the catfish package.
+# Mads Thrane <mads.thrane@gmail.com>, 2007
+
+msgid ""
+msgstr ""
+"Project-Id-Version: catfish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-12 04:31+0100\n"
+"PO-Revision-Date: 2007-02-24 19:53+0000\n"
+"Last-Translator: Mads Thrane <mads.thrane@gmail.com>\n"
+"Language-Team: Danish <da@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Rosetta-Export-Date: 2007-02-27 05:08+0000\n"
+
+msgid "Exact match"
+msgstr "Præcis match"
+
+msgid "Hidden files"
+msgstr "Skjulte filer"
+
+msgid "Fulltext search"
+msgstr ""
+
+msgid "Limit results"
+msgstr "Begræns resultater"
+
+msgid "File type"
+msgstr "Filtype"
+
+msgid "Folder"
+msgstr "Mappe"
+
+msgid "Choose folder"
+msgstr "Vælg mappe"
+
+msgid "Search method"
+msgstr "Søge metode"
+
+msgid "Save to file"
+msgstr "Gem som"
+
+msgid "Documents"
+msgstr "Dokumenter"
+
+msgid "Images"
+msgstr ""
+
+msgid "Music"
+msgstr ""
+
+msgid "Videos"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Filename"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Location"
+msgstr ""
+
+msgid "Last modified"
+msgstr ""
+
+msgid "Searching for \"%s\""
+msgstr ""
+
+msgid "Searching..."
+msgstr ""
+
+msgid "No files found for \"%s\"."
+msgstr ""
+
+msgid "No files were found."
+msgstr ""
+
+msgid "%s files found for \"%s\"."
+msgstr ""
+
+msgid "Fatal error, search was aborted."
+msgstr ""
+
+msgid "The search backend doesn't support wildcards."
+msgstr ""
+
+msgid "Click here to start the search daemon."
+msgstr ""
+
+msgid "The search daemon was started."
+msgstr ""
+
+msgid "The search daemon could not be started."
+msgstr ""

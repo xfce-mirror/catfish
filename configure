@@ -1,0 +1,39 @@
+#!/bin/sh
+
+APPNAME=catfish
+VERSION=0.4.0
+
+help () {
+    echo "Supported options are:"
+    echo "--help - print this help and exit"
+    echo "--prefix=<path> specify installation prefix. "
+    echo "       <path>/bin - will hold all executables"
+    echo "       default <path> is /usr/local"
+}
+
+PREFIX="/usr/local"
+while [ $# -gt 0 ]; do
+    case $1 in
+        --help)
+            help
+            exit 0
+            ;;
+        --prefix=*)
+            PREFIX=`echo $1 | sed 's/--prefix=//'`
+            ;;
+        *)
+            echo "Unknwon option $1"
+            help
+            exit 1
+            ;;
+    esac
+    shift
+done
+
+python build.py check $APPNAME
+echo "Creating Makefile..."
+sed -e s,@prefix@,$PREFIX, Makefile.in > Makefile
+echo "Creating package data..."
+install -d deb/DEBIAN
+sed -e s,@version@,$VERSION, control.in > deb/DEBIAN/control
+echo "Installation prefix is $PREFIX"
