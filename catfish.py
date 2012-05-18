@@ -46,6 +46,17 @@ app_version = '0.4.0'
 
 _ = gettext.gettext # i18n shortcut
 
+def detach_cb(menu, widget):
+	menu.detach()
+
+def menu_position(self, menu, data=None, something_else=None):
+    widget = menu.get_attach_widget()
+    allocation = widget.get_allocation()
+    window_pos = widget.get_window().get_position()
+    x = window_pos[0] + allocation.x
+    y = window_pos[1] + allocation.y + allocation.height
+    return (x, y, True)
+
 def callback(events):
     print len(events)
     
@@ -293,11 +304,6 @@ class catfish:
         # Load interface from glade file and retrieve widgets
         self.load_interface(os.path.join(glade_path, glade_file))
 
-        # Add markup to labels
-        for label in (self.label_find_type, self.label_find_method,
-            self.label_find_folder):
-            label.set_markup('<i>%s</i>' % label.get_text())
-
         # Set some initial values
         self.icon_cache = {}
         self.icon_theme = Gtk.IconTheme.get_default()
@@ -358,32 +364,8 @@ class catfish:
             print 'Warning:', ('Method "%s" is not available.' %
              self.options.method)
             method_default = 0
-        self.combobox_find_method.set_sensitive(len(listmodel) > 1)
-
-        # Prepare method combobox
-        cell = Gtk.CellRendererPixbuf()
-        cell.set_property('xalign', 0)
-        self.combobox_find_method.pack_start(cell, True)
-        self.combobox_find_method.add_attribute(cell, 'pixbuf', 0)
-        cell = Gtk.CellRendererText()
-        self.combobox_find_method.pack_start(cell, True)
-        self.combobox_find_method.add_attribute(cell, 'text', 1)
-        self.combobox_find_method.set_model(listmodel)
-        self.combobox_find_method.set_active(method_default)
         
         self.suggestions = suggestions()
-
-        # Prepare type toolbar
-        if 'xdg' in globals():
-            # This feature requires xdg
-            for label, mime in ((_('Documents'), 'text'), (_('Images'), 'image'),
-                (_('Music'), 'audio'), (_('Videos'), 'video')):
-                self.toolbar_find_type.insert(self.new_toggle_button(label, mime), -1)
-            self.toolbar_find_type.show_all()
-        else:
-            # If xdg is unavailable we hide the type toolbar
-            self.label_find_type.hide()
-            self.toolbar_find_type.hide()
 
         if self.options.icons_large or self.options.thumbnails:
             self.treeview_files.append_column(Gtk.TreeViewColumn(_('Preview'),
@@ -396,7 +378,6 @@ class catfish:
             self.treeview_files.append_column(self.new_column(_('Last modified'), 4, markup=1))
 
         self.entry_find_text.set_text(keywords)
-        self.button_find.activate()
         
         self.find_in_progress = False
         
@@ -420,13 +401,13 @@ class catfish:
         self.checkbox_find_limit = self.builder.get_object('checkbox_find_limit')
         self.spin_find_limit = self.builder.get_object('spin_find_limit')
         self.label_find_type = self.builder.get_object('label_find_type')
-        self.toolbar_find_type = self.builder.get_object('toolbar_find_type')
-        self.label_find_method = self.builder.get_object('label_find_method')
-        self.combobox_find_method = self.builder.get_object('combobox_find_method')
-        self.label_find_folder = self.builder.get_object('label_find_folder')
         self.button_find_folder = self.builder.get_object('button_find_folder')
-        self.button_find = self.builder.get_object('button_find')
         self.treeview_files = self.builder.get_object('treeview_files')
+        self.scrolled_files = self.builder.get_object('scrolled_files')
+        self.application_menu = self.builder.get_object('application_menu')
+        self.menu_button = self.builder.get_object('menu_button')
+        self.application_menu.attach_to_widget(self.menu_button, detach_cb)
+        
         self.menu_file = self.builder.get_object('menu_file')
         self.menu_file_open = self.builder.get_object('menu_open')
         self.menu_file_goto = self.builder.get_object('menu_goto')
@@ -438,6 +419,11 @@ class catfish:
         self.combobox_filemanager = self.builder.get_object('combobox_filemanager')
         self.combobox_openwrapper = self.builder.get_object('combobox_openwrapper')
         self.combobox_defaultaction = self.builder.get_object('combobox_defaultaction')
+        self.box_type_filter = self.builder.get_object('box_type_filter')
+        
+        self.sidebar = self.builder.get_object('sidebar')
+        
+        
         
         self.builder.connect_signals(self)
 
@@ -621,10 +607,15 @@ class catfish:
 
     def file_is_wanted(self, filename, mime_type):
         wanted_types = []
-        for button in self.toolbar_find_type.get_children():
-            if button.get_active():
-                wanted_types.append(button.filter_value)
-
+        checkboxes = self.box_type_filter.get_children()
+        other = checkboxes[5].get_active()
+        for checkbox in self.box_type_filter.get_children():
+            try:
+                if checkbox.get_active():
+                    wanted_types.append(checkbox.get_label().lower())
+            except AttributeError: # button
+                pass
+                # TODO ADD SUPPORT FOR CUSTOM
         if not len(wanted_types):
             return True
         try:
@@ -661,7 +652,6 @@ class catfish:
     def find(self):
         """Do the actual search."""
         self.find_in_progress = True
-        self.button_find.set_label(Gtk.stock_lookup(Gtk.STOCK_CANCEL).label[1:])
         self.window_search.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
         self.window_search.set_title(_('Searching for "%s"') % self.entry_find_text.get_text())
         self.statusbar.push(self.statusbar.get_context_id('results'), _('Searching...'))
@@ -674,15 +664,12 @@ class catfish:
 
         # Retrieve search parameters
         keywords = self.entry_find_text.get_text()
-        method = self.get_selected_find_method()
+        method = 'locate' # TODO make dynamic
         folder = self.button_find_folder.get_filename()
         exact = self.checkbox_find_exact.get_active()
         hidden = self.checkbox_find_hidden.get_active()
         fulltext = self.checkbox_find_fulltext.get_active()
-        if self.checkbox_find_limit.get_active():
-            limit = self.spin_find_limit.get_value()
-        else:
-            limit = -1
+        limit = -1
 
         if keywords != '':
             # Generate search command
@@ -785,7 +772,6 @@ class catfish:
         self.treeview_files.set_model(listmodel)
 
         self.window_search.get_window().set_cursor(None)
-        self.button_find.set_label(Gtk.stock_lookup(Gtk.STOCK_FIND).label[1:])
         self.window_search.set_title( _('Search results for \"%s\"') % keywords )
         self.find_in_progress = False
         yield False
@@ -858,13 +844,15 @@ class catfish:
     def on_button_find_clicked(self, widget):
         """Initiate the search thread."""
 
+        self.scrolled_files.set_visible(True)
+        self.window_search.set_size_request(640, 400)
         # Add search term to the completion list
         keywords = self.entry_find_text.get_text()
         completion = self.entry_find_text.get_completion()
         listmodel = completion.get_model()
         listmodel.append([keywords])
 
-        if self.button_find.get_image().get_stock()[0] == Gtk.STOCK_FIND and keywords <> '' and not self.find_in_progress:
+        if not self.find_in_progress:
             self.abort_find = 0
             task = self.find()
             GObject.idle_add(task.next)
@@ -965,8 +953,22 @@ class catfish:
         except TypeError:
             pass
             
-    def on_entry_find_text_activate(self, widget):
+    def on_entry_find_text_activate(self, widget, event=None, data=None):
         self.on_button_find_clicked(widget)
+        
+    def on_menu_button_clicked(self, widget):
+        window_pos = self.window_search.get_position()
+        widget_size = self.menu_button.get_allocation()
+        x = widget_size.x
+        y = widget_size.y
+        widget_pos = self.menu_button.translate_coordinates(self.window_search, 0, 0)
+        #print widget_pos
+        def pos(menu, icon):
+            return (Gtk.StatusIcon.position_menu(menu, icon))
+        self.application_menu.popup(None, None, menu_position, self.application_menu, 3, Gtk.get_current_event_time())
+        
+    def on_checkbox_advanced_toggled(self, widget):
+        self.sidebar.set_visible(widget.get_active())
 
 catfish()
 Gtk.main()
