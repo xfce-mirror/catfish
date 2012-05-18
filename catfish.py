@@ -42,7 +42,7 @@ except ImportError, msg:
     print 'Warning: The optional module %s is missing.' % str(msg).split()[-1]
 
 app_name = 'catfish'
-app_version = '0.3.2'
+app_version = '0.4.0'
 
 _ = gettext.gettext # i18n shortcut
 
@@ -54,6 +54,7 @@ class suggestions:
     def __init__(self):
         self.zeitgeist_results = []
         self.locate_results = []
+        self.max_results = 20
 
     def zeitgeist_query(self, keywords):
         self.zeitgeist_results = []
@@ -73,18 +74,37 @@ class suggestions:
         for event in results:
             for subject in event.get_subjects():
                 if subject.uri[:7] == 'file://':
-                    filename = split_filename(subject.uri)[1]
-                    if keywords.lower() in filename.lower():
+                    filename = split_filename(subject.uri)[1].lower()
+                    if keywords.lower() in filename and filename not in self.zeitgeist_results:
                         self.zeitgeist_results.append(filename)
     
-    def locate_query(self, keywords, folder, exact, hidden, limit):
-        print "locate"
+    def locate_query(self, keywords, folder):
+        self.locate_results = []
+        query = "locate -i %s -n 100" % os.path.join(folder, "*%s*" % keywords)
+        self.process = subprocess.Popen(query, stdout=subprocess.PIPE, shell=True)
+        for filepath in self.process.communicate()[0].split('\n'):
+            filename = split_filename(filepath)[1].lower()
+            if filename not in self.locate_results and keywords.lower() == filename[:len(keywords)]:
+                self.locate_results.append(filename)
     
-    def run(self, keywords, folder, exact, hidden, limit):
+    def run(self, keywords, folder):
+        results = []
         try:
             self.zeitgeist_query(keywords)
         except NameError:
             pass
+        if len(self.zeitgeist_results) < self.max_results:
+            self.locate_query(keywords, folder)
+            results = self.zeitgeist_results
+            index = 0
+            try:
+                while len(results) < self.max_results:
+                    if self.locate_results[index] not in results:
+                        results.append(self.locate_results[index])
+                    index+=1
+            except:
+                return results
+            return results
         
     def search(self, keywords):
         self.zeitgeist_query(keywords)
@@ -290,7 +310,12 @@ class catfish:
             self.spin_find_limit.set_value(self.options.limit_results)
         self.folder_thumbnails = os.path.expanduser('~/.thumbnails/normal/')
         self.options.path = os.path.abspath(self.options.path)
-        self.button_find_folder.set_filename(os.path.expanduser(self.options.path))
+        if not os.path.isdir(self.options.path):
+            self.options.path = os.path.dirname(self.options.path)
+        if self.options.path != os.getcwd():
+            self.button_find_folder.set_filename(os.path.expanduser(self.options.path))
+        else:
+            self.button_find_folder.set_current_folder( os.getenv("HOME") )
         self.link_color = None
         # TODO: FIX ME, LINK COLOR
         #try:
@@ -381,8 +406,6 @@ class catfish:
 
     def load_interface(self, filename):
         """Load glade file and retrieve widgets."""
-        
-        
 
         # Load interface from the glade file
         self.builder = Gtk.Builder()
@@ -931,13 +954,19 @@ class catfish:
                  
     def on_entry_find_text_changed(self, widget):
         query = widget.get_text()
-        results = self.suggestions.search(query)
+        results = self.suggestions.run(query, self.button_find_folder.get_filename())
         
         completion = self.entry_find_text.get_completion()
         listmodel = completion.get_model()
         listmodel.clear()
-        for keyword in results:
-            listmodel.append([keyword])
+        try:
+            for keyword in results:
+                listmodel.append([keyword])
+        except TypeError:
+            pass
+            
+    def on_entry_find_text_activate(self, widget):
+        self.on_button_find_clicked(widget)
 
 catfish()
 Gtk.main()
