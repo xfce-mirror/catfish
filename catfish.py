@@ -422,6 +422,9 @@ class catfish:
         self.box_type_filter = self.builder.get_object('box_type_filter')
         
         self.sidebar = self.builder.get_object('sidebar')
+        self.button_time_filter_custom = self.builder.get_object('button_time_filter_custom')
+        self.button_type_filter_other = self.builder.get_object('button_type_filter_other')
+        
         
         
         
@@ -774,6 +777,7 @@ class catfish:
         self.window_search.get_window().set_cursor(None)
         self.window_search.set_title( _('Search results for \"%s\"') % keywords )
         self.find_in_progress = False
+        self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
         yield False
 
     def get_icon_pixbuf(self, name, icon_size=Gtk.IconSize.MENU):
@@ -853,10 +857,12 @@ class catfish:
         listmodel.append([keywords])
 
         if not self.find_in_progress:
+            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CANCEL)
             self.abort_find = 0
             task = self.find()
             GObject.idle_add(task.next)
         else:
+            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
             self.abort_find = 1
 
     def on_treeview_files_row_activated(self, widget, path, column):
@@ -969,6 +975,12 @@ class catfish:
         
     def on_checkbox_advanced_toggled(self, widget):
         self.sidebar.set_visible(widget.get_active())
+        
+    def on_time_filter_custom_toggled(self, widget):
+        self.button_time_filter_custom.set_sensitive(widget.get_active())
+        
+    def on_type_filter_other_toggled(self, widget):
+        self.button_type_filter_other.set_sensitive(widget.get_active())
 
 catfish()
 Gtk.main()
