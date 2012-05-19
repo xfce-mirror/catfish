@@ -12,7 +12,7 @@
 import sys
 
 try:
-    import os, stat, time, md5, optparse, subprocess, fnmatch, re
+    import os, stat, time, md5, optparse, subprocess, fnmatch, re, time
 
     import locale, gettext
     from gi.repository import GObject, Gtk, Gdk, GdkPixbuf, Pango
@@ -57,9 +57,6 @@ def menu_position(self, menu, data=None, something_else=None):
     y = window_pos[1] + allocation.y + allocation.height
     return (x, y, True)
 
-def callback(events):
-    print len(events)
-    
 
 class suggestions:
     def __init__(self):
@@ -116,10 +113,7 @@ class suggestions:
             except:
                 return results
             return results
-        
-    def search(self, keywords):
-        self.zeitgeist_query(keywords)
-        return self.zeitgeist_results
+            
 
 class dbus_query:
     def __init__(self, options):
@@ -284,10 +278,9 @@ class catfish:
         # Prepare i18n using gettext
         try:
             locale.setlocale(locale.LC_ALL, '')
+            locale.bindtextdomain(app_name, 'locale')
             gettext.bindtextdomain(app_name, 'locale')
             gettext.textdomain(app_name)
-            Gtk.glade.bindtextdomain(app_name, 'locale')
-            Gtk.glade.textdomain(app_name)
         except Exception, msg:
             if self.options.debug: print 'Debug:', msg
             print 'Warning: Invalid locale, i18n is disabled.'
@@ -390,58 +383,55 @@ class catfish:
 
         # Load interface from the glade file
         self.builder = Gtk.Builder()
+        self.builder.set_translation_domain(app_name)
         self.builder.add_from_file(filename)
 
         # Retrieve significant widgets
         self.window_search = self.builder.get_object('window_search')
+        
+        self.button_find_folder = self.builder.get_object('button_find_folder')
         self.entry_find_text = self.builder.get_object('entry_find_text')
+        
+        # Application Menu
+        self.menu_button = self.builder.get_object('menu_button')
+        self.application_menu = self.builder.get_object('application_menu')
         self.checkbox_find_exact = self.builder.get_object('checkbox_find_exact')
         self.checkbox_find_hidden = self.builder.get_object('checkbox_find_hidden')
         self.checkbox_find_fulltext = self.builder.get_object('checkbox_find_fulltext')
-        self.checkbox_find_limit = self.builder.get_object('checkbox_find_limit')
-        self.spin_find_limit = self.builder.get_object('spin_find_limit')
-        self.label_find_type = self.builder.get_object('label_find_type')
-        self.button_find_folder = self.builder.get_object('button_find_folder')
-        self.treeview_files = self.builder.get_object('treeview_files')
-        self.scrolled_files = self.builder.get_object('scrolled_files')
-        self.application_menu = self.builder.get_object('application_menu')
-        self.menu_button = self.builder.get_object('menu_button')
         self.application_menu.attach_to_widget(self.menu_button, detach_cb)
         
+        # Treeview and Right-Click menu
+        self.scrolled_files = self.builder.get_object('scrolled_files')
+        self.treeview_files = self.builder.get_object('treeview_files')
         self.menu_file = self.builder.get_object('menu_file')
         self.menu_file_open = self.builder.get_object('menu_open')
         self.menu_file_goto = self.builder.get_object('menu_goto')
         self.menu_file_copy = self.builder.get_object('menu_copy')
         self.menu_file_save = self.builder.get_object('menu_save')
-        self.statusbar = self.builder.get_object('statusbar')
-        self.combobox_icons = self.builder.get_object('combobox_icons')
-        self.combobox_timeformat = self.builder.get_object('combobox_timeformat')
-        self.combobox_filemanager = self.builder.get_object('combobox_filemanager')
-        self.combobox_openwrapper = self.builder.get_object('combobox_openwrapper')
-        self.combobox_defaultaction = self.builder.get_object('combobox_defaultaction')
-        self.box_type_filter = self.builder.get_object('box_type_filter')
         
+        self.statusbar = self.builder.get_object('statusbar')
+        
+        # Sidebar
         self.sidebar = self.builder.get_object('sidebar')
+        self.box_type_filter = self.builder.get_object('box_type_filter')
         self.button_time_filter_custom = self.builder.get_object('button_time_filter_custom')
         self.button_type_filter_other = self.builder.get_object('button_type_filter_other')
         
         self.aboutdialog = self.builder.get_object('aboutdialog')
-        
-        
-        
-        
+
         self.builder.connect_signals(self)
 
-
-    def new_toggle_button(self, label, filter):
-        togglebutton = Gtk.ToggleToolButton()
-        togglebutton.set_label(label)
-        togglebutton.set_tooltip_text(label)
-        icon = 'gnome-mime-' + filter
-        icon_widget = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.MENU)
-        togglebutton.set_icon_widget(icon_widget)
-        togglebutton.filter_value = filter
-        return togglebutton
+    def compare_dates(self, model, row1, row2, user_data):
+        """Compare 2 dates, used for sorting modification dates."""
+        sort_column, _ = model.get_sort_column_id()
+        value1 = time.strptime(model.get_value(row1, sort_column), '%x %X')
+        value2 = time.strptime(model.get_value(row2, sort_column), '%x %X')
+        if value1 < value2:
+            return -1
+        elif value1 == value2:
+            return 0
+        else:
+            return 1
 
     def new_column(self, label, id, special=None, markup=0):
         if special == 'icon':
@@ -490,7 +480,7 @@ class catfish:
         """Display modal error dialog."""
 
         SaveFile = Gtk.MessageDialog(parent, 0,
-            Gtk.MESSAGE_ERROR, Gtk.BUTTONS_OK, msg)
+            Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, msg)
         response = SaveFile.run()
         SaveFile.destroy()
 
@@ -498,11 +488,11 @@ class catfish:
         """Display yes/ no dialog and return a boolean value."""
 
         SaveFile = Gtk.MessageDialog(parent, 0,
-            Gtk.MESSAGE_QUESTION, Gtk.BUTTONS_YES_NO, msg)
-        SaveFile.set_default_response(Gtk.RESPONSE_NO);
+            Gtk.MessageType.QUESTION, Gtk.ButtonsType.YES_NO, msg)
+        SaveFile.set_default_response(Gtk.ResponseType.NO);
         response = SaveFile.run()
         SaveFile.destroy()
-        return response == Gtk.RESPONSE_YES
+        return response == Gtk.ResposeType.YES
 
     def get_save_dialog(self, parent=None):
         """Display save dialog and return filename or None."""
@@ -609,6 +599,18 @@ class catfish:
     def string_wild_match(self, string, keyword, exact):
         if not exact: keyword = '*' + keyword + '*'
         return fnmatch.fnmatch(string.lower(), keyword.lower())
+        
+    def map_mimetype(self, mime):
+        if mime == 'documents':
+            return 'text'
+        elif mime == 'images':
+            return 'image'
+        elif mime == 'music':
+            return 'audio'
+        elif mime == 'videos':
+            return 'video'
+        elif mime == 'applications':
+            return 'application'
 
     def file_is_wanted(self, filename, mime_type):
         wanted_types = []
@@ -617,7 +619,7 @@ class catfish:
         for checkbox in self.box_type_filter.get_children():
             try:
                 if checkbox.get_active():
-                    wanted_types.append(checkbox.get_label().lower())
+                    wanted_types.append(self.map_mimetype(checkbox.get_label().lower()))
             except AttributeError: # button
                 pass
                 # TODO ADD SUPPORT FOR CUSTOM
@@ -775,6 +777,7 @@ class catfish:
                 listmodel.append([icon, message, -1, None, action])
             self.statusbar.push(self.statusbar.get_context_id('results'), status)
         self.treeview_files.set_model(listmodel)
+        listmodel.set_sort_func(4, self.compare_dates, None)
 
         self.window_search.get_window().set_cursor(None)
         self.window_search.set_title( _('Search results for \"%s\"') % keywords )

@@ -216,7 +216,6 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="has_focus">True</property>
-                    <property name="has_default">True</property>
                     <property name="invisible_char">•</property>
                     <property name="secondary_icon_stock">gtk-find</property>
                     <property name="placeholder_text">Search terms</property>
