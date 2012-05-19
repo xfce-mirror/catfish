@@ -753,7 +753,7 @@ class catfish:
                     self.treeview_files.set_model(listmodel)
                     yield True
                 if len(listmodel) == 0:
-                    if not errors_ignore and query.status():
+                    if errors_ignore and query.status():
                         status_icon = Gtk.STOCK_CANCEL
                         messages.append([_('Fatal error, search was aborted.'), None])
                         if daemon <> '':
@@ -769,7 +769,7 @@ class catfish:
                     status = _('%s files found for "%s".') % (len(listmodel), keywords)
             for message, action in messages:
                 icon = [None, self.get_icon_pixbuf(status_icon)][message == messages[0][0]]
-                listmodel.append([icon, message, -1, None, action])
+                listmodel.append([icon, message, None, None, action])
             self.statusbar.push(self.statusbar.get_context_id('results'), status)
         self.treeview_files.set_model(listmodel)
         listmodel.set_sort_func(4, self.compare_dates, None)
