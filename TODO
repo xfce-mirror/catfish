@@ -5,9 +5,7 @@ TODO:
  . settings dialog
  . drag'n drop of filenames
  . add an 'update index' button
- . add filter for executables/ desktop files
  . search for files by date
  . fix occasional broken pipes
  . optional plain command line mode
- . add about dialog
  . customizable search methods

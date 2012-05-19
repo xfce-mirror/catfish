@@ -425,6 +425,8 @@ class catfish:
         self.button_time_filter_custom = self.builder.get_object('button_time_filter_custom')
         self.button_type_filter_other = self.builder.get_object('button_type_filter_other')
         
+        self.aboutdialog = self.builder.get_object('aboutdialog')
+        
         
         
         
@@ -968,9 +970,6 @@ class catfish:
         x = widget_size.x
         y = widget_size.y
         widget_pos = self.menu_button.translate_coordinates(self.window_search, 0, 0)
-        #print widget_pos
-        def pos(menu, icon):
-            return (Gtk.StatusIcon.position_menu(menu, icon))
         self.application_menu.popup(None, None, menu_position, self.application_menu, 3, Gtk.get_current_event_time())
         
     def on_checkbox_advanced_toggled(self, widget):
@@ -981,6 +980,12 @@ class catfish:
         
     def on_type_filter_other_toggled(self, widget):
         self.button_type_filter_other.set_sensitive(widget.get_active())
+        
+    def on_menu_about_activate(self, widget):
+        self.aboutdialog.show()
+        
+    def on_aboutdialog_response(self, widget, event):
+        self.aboutdialog.hide()
 
 catfish()
 Gtk.main()
