@@ -515,8 +515,7 @@ class catfish:
             try:
                 path = treeview.get_cursor()[0]
                 return model, path
-            except Exception as err:
-                print err
+            except Exception:
                 path = None
         if event <> None:
             # Select the entry at the mouse position
@@ -524,8 +523,7 @@ class catfish:
             try:
                 path, col, cellx, celly = pathinfo
                 treeview.set_cursor(path)
-            except Exception as err:
-                print err
+            except Exception:
                 path = None
         return model, path
 
@@ -592,8 +590,7 @@ class catfish:
             }
         try:
             return methods[method_name]
-        except Exception as err:
-            print err
+        except Exception:
             return method, '', '%s', '', '', '', 0, 0, 0, 0, 0
 
     def string_wild_match(self, string, keyword, exact):
@@ -628,16 +625,14 @@ class catfish:
         try:
             file_type = mime_type[0]
             return file_type in wanted_types
-        except Exception as err:
-            print err
+        except Exception:
             return True
 
     def get_mime_type(self, filename):
         try:
             mime = xdg.Mime.get_type(filename)
             return mime.media, mime.subtype
-        except Exception as err:
-            print err
+        except Exception:
             return None, None
 
     def file_is_hidden(self, filename, current=None):
@@ -688,7 +683,7 @@ class catfish:
             if not self.options.icons_large and not self.options.thumbnails:
                 icon_size = Gtk.IconSize.SMALL_TOOLBAR
             else:
-                icon_size = Gtk.ICON_SIZE_DIALOG
+                icon_size = Gtk.IconSize.DIALOG
             if not self.options.time_iso:
                 time_format = '%x %X'
             else:
@@ -789,7 +784,7 @@ class catfish:
         try:
             return self.icon_cache[name]
         except KeyError:
-            icon_size = Gtk.icon_size_lookup(icon_size)[0]
+            icon_size = Gtk.icon_size_lookup(icon_size)[1]
             icon = self.icon_theme.load_icon(name, icon_size, 0)
             self.icon_cache[name] = icon
             return icon
@@ -801,8 +796,7 @@ class catfish:
         filename = '%s%s.png' % (self.folder_thumbnails, md5_hash)
         try:
             return GdkPixbuf.Pixbuf.new_from_file(filename)
-        except Exception as err:
-            print err
+        except Exception:
             return self.get_file_icon(path, icon_size, mime_type)
 
     def get_file_icon(self, path, icon_size=0, mime_type=None):
@@ -810,8 +804,7 @@ class catfish:
 
         try:
             is_folder = stat.S_ISDIR(os.stat(path).st_mode)
-        except Exception as err:
-            print err
+        except Exception:
             is_folder = 0
         if is_folder:
             icon_name = Gtk.STOCK_DIRECTORY
@@ -822,14 +815,12 @@ class catfish:
                     media, subtype = mime_type
                     icon_name = 'gnome-mime-%s-%s' % (media, subtype)
                     return self.get_icon_pixbuf(icon_name, icon_size)
-                except Exception as err:
-                    print err
+                except Exception:
                     try:
                         # Then try generic icon
                         icon_name = 'gnome-mime-%s' % media
                         return self.get_icon_pixbuf(icon_name, icon_size)
-                    except Exception as err:
-                        print err
+                    except Exception:
                         # Use default icon
                         icon_name = Gtk.STOCK_FILE
             else:

@@ -1,6 +1,10 @@
 v0.4.0:
  + GTK+ 3.2+ port
  + Zeitgeist/Locate search suggestions
+ + Revamped minimalistic interface
+ + Fixed sorting by date
+ + Defaults to user home folder
+ + Search on entry activate
  - Removed deprecated pyGTK
 
 v0.3.2:
