@@ -62,7 +62,7 @@ class suggestions:
     def __init__(self):
         self.zeitgeist_results = []
         self.locate_results = []
-        self.max_results = 20
+        self.max_results = 10
 
     def zeitgeist_query(self, keywords):
         self.zeitgeist_results = []

@@ -220,6 +220,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                     <property name="invisible_char">•</property>
                     <property name="secondary_icon_stock">gtk-find</property>
                     <property name="placeholder_text">Search terms</property>
+                    <signal name="changed" handler="on_entry_find_text_changed" swapped="no"/>
                     <signal name="activate" handler="on_entry_find_text_activate" swapped="no"/>
                     <signal name="icon-release" handler="on_entry_find_text_activate" swapped="no"/>
                   </object>
