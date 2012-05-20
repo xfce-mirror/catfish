@@ -723,6 +723,7 @@ class catfish:
         """Do the actual search."""
         self.infobar.hide()
         self.find_in_progress = True
+        self.results = []
         self.window_search.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
         self.window_search.set_title(_('Searching for "%s"') % self.entry_find_text.get_text())
         self.statusbar.push(self.statusbar.get_context_id('results'), _('Searching...'))
