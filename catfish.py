@@ -373,6 +373,7 @@ class catfish:
         self.entry_find_text.set_text(keywords)
         
         self.find_in_progress = False
+        self.results = []
         
         self.window_search.show_all()
 
@@ -811,6 +812,7 @@ class catfish:
                     status = _('%s files found for "%s".') % (len(listmodel), keywords)
             for message, action in messages:
                 icon = [None, self.get_icon_pixbuf(status_icon)][message == messages[0][0]]
+                self.results.append([icon, message, None, None, action])
                 listmodel.append([icon, message, None, None, action])
             self.statusbar.push(self.statusbar.get_context_id('results'), status)
         self.treeview_files.set_model(listmodel)
@@ -822,6 +824,7 @@ class catfish:
         self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
         if method != 'find':
             self.infobar.show()
+        print self.results
         yield False
 
     def get_icon_pixbuf(self, name, icon_size=Gtk.IconSize.MENU):
