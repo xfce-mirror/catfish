@@ -295,6 +295,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                             <property name="xalign">0</property>
                             <property name="active">True</property>
                             <property name="draw_indicator">True</property>
+                            <signal name="toggled" handler="on_filter_changed" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -313,6 +314,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">time_filter_any</property>
+                            <signal name="toggled" handler="on_filter_changed" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -378,6 +380,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                             <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <signal name="toggled" handler="on_filter_changed" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -395,6 +398,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                             <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <signal name="toggled" handler="on_filter_changed" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -412,6 +416,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                             <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <signal name="toggled" handler="on_filter_changed" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -429,6 +434,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                             <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <signal name="toggled" handler="on_filter_changed" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -446,6 +452,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                             <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <signal name="toggled" handler="on_filter_changed" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>

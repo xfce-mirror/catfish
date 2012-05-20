@@ -12,7 +12,7 @@
 import sys
 
 try:
-    import os, stat, time, md5, optparse, subprocess, fnmatch, re, time
+    import os, stat, time, md5, optparse, subprocess, fnmatch, re, datetime
 
     import locale, gettext
     from gi.repository import GObject, Gtk, Gdk, GdkPixbuf, Pango
@@ -457,6 +457,8 @@ class catfish:
         # Sidebar
         self.sidebar = self.builder.get_object('sidebar')
         self.box_type_filter = self.builder.get_object('box_type_filter')
+        self.time_filter_any = self.builder.get_object('time_filter_any')
+        self.time_filter_week = self.builder.get_object('time_filter_week')
         self.button_time_filter_custom = self.builder.get_object('button_time_filter_custom')
         self.button_type_filter_other = self.builder.get_object('button_type_filter_other')
         
@@ -652,7 +654,11 @@ class catfish:
         elif mime == 'applications':
             return 'application'
 
-    def file_is_wanted(self, filename, mime_type):
+    def file_is_wanted(self, filename, mime_type, modification_date):
+        mime_type_is_wanted = True
+        modification_date_is_wanted = True
+        
+        # Mime Type Wanted
         wanted_types = []
         checkboxes = self.box_type_filter.get_children()
         other = checkboxes[5].get_active()
@@ -664,12 +670,31 @@ class catfish:
                 pass
                 # TODO ADD SUPPORT FOR CUSTOM
         if not len(wanted_types):
+            mime_type_is_wanted = True
+        else:
+            try:
+                file_type = mime_type[0]
+                mime_type_is_wanted = file_type in wanted_types
+            except Exception:
+                mime_type_is_wanted = True
+            
+        # Modification Date Wanted
+        if self.time_filter_any.get_active():
+            return mime_type_is_wanted
+        else:
+            if not self.options.time_iso:
+                time_format = '%x %X'
+            else:
+                time_format = '%Y-%m-%d %H:%M'
+            filetime = datetime.datetime.strptime(modification_date, time_format)
+            if self.time_filter_week.get_active():
+                weektime = datetime.datetime.today() - datetime.timedelta(days=7)
+                modification_date_is_wanted = weektime < filetime
+        if mime_type_is_wanted and modification_date_is_wanted:
             return True
-        try:
-            file_type = mime_type[0]
-            return file_type in wanted_types
-        except Exception:
-            return True
+        else:
+            return False
+        
 
     def get_mime_type(self, filename):
         try:
@@ -769,9 +794,9 @@ class catfish:
                         yield True
                         continue
                     mime_type = self.get_mime_type(os.path.join(path, filename))
-                    if not self.file_is_wanted(filename, mime_type):
-                        yield True
-                        continue
+                    #if not self.file_is_wanted(filename, mime_type):
+                    #    yield True
+                    #    continue
                     if self.options.thumbnails:
                         icon = self.get_thumbnail(filename, icon_size, mime_type)
                     else:
@@ -782,12 +807,18 @@ class catfish:
                         modified = time.strftime(time_format, time.gmtime(filestat.st_mtime))
                         name = name.replace('&', '&amp;')
                         if not self.options.icons_large and not self.options.thumbnails:
-                            listmodel.append([icon, name, size, path, modified])
+                            if self.file_is_wanted(filename, mime_type, modified):
+                                listmodel.append([icon, name, size, path, modified])
+                            self.results.append([mime_type, icon, name, size, path, modified])
                         else:
                             path = path.replace('&', '&amp;')
                             if modified <> '':
                                 modified = os.linesep + modified
-                            listmodel.append([icon, '%s %s%s%s%s' % (name
+                            if self.file_is_wanted(filename, mime_type, modified):
+                                listmodel.append([icon, '%s %s%s%s%s' % (name
+                                , self.format_size(size), os.linesep, path
+                                , modified), -1, name, path])
+                            self.results.append([mime_type, icon, '%s %s%s%s%s' % (name
                             , self.format_size(size), os.linesep, path
                             , modified), -1, name, path])
                     except Exception, msg:
@@ -812,7 +843,6 @@ class catfish:
                     status = _('%s files found for "%s".') % (len(listmodel), keywords)
             for message, action in messages:
                 icon = [None, self.get_icon_pixbuf(status_icon)][message == messages[0][0]]
-                self.results.append([icon, message, None, None, action])
                 listmodel.append([icon, message, None, None, action])
             self.statusbar.push(self.statusbar.get_context_id('results'), status)
         self.treeview_files.set_model(listmodel)
@@ -820,11 +850,11 @@ class catfish:
 
         self.window_search.get_window().set_cursor(None)
         self.window_search.set_title( _('Search results for \"%s\"') % keywords )
+        self.keywords = keywords
         self.find_in_progress = False
         self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
         if method != 'find':
             self.infobar.show()
-        print self.results
         yield False
 
     def get_icon_pixbuf(self, name, icon_size=Gtk.IconSize.MENU):
@@ -1040,6 +1070,45 @@ class catfish:
         
     def on_infobar_cancel_clicked(self, widget):
         self.infobar.hide()
+        
+    def on_filter_changed(self, widget):
+        self.find_in_progress = True
+        messages = []
+        listmodel = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, str)
+        self.treeview_files.set_model(listmodel)
+        self.treeview_files.columns_autosize()
+        for filegroup in self.results:
+            mime_type = filegroup[0]
+            filename = filegroup[2]
+            try:
+                modified = filegroup[7]
+            except IndexError:
+                modified = filegroup[5]
+            if not self.options.icons_large and not self.options.thumbnails:
+                if self.file_is_wanted(filename, mime_type, modified):
+                    listmodel.append(filegroup[1:])
+            else:
+                path = path.replace('&', '&amp;')
+                if modified <> '':
+                    modified = os.linesep + modified
+                if self.file_is_wanted(filename, mime_type, modified):
+                    listmodel.append(filegroup[1:])
+        if len(listmodel) == 0:
+            status_icon = Gtk.STOCK_INFO
+            messages.append([_('No files were found.'), None])
+            status = _('No files found for "%s".') % self.keywords
+        else:
+            status = _('%s files found for "%s".') % (len(listmodel), self.keywords)
+        for message, action in messages:
+            icon = [None, self.get_icon_pixbuf(status_icon)][message == messages[0][0]]
+            listmodel.append([icon, message, None, None, action])
+        self.statusbar.push(self.statusbar.get_context_id('results'), status)
+        self.treeview_files.set_model(listmodel)
+        listmodel.set_sort_func(4, self.compare_dates, None)
+
+        self.window_search.get_window().set_cursor(None)
+        self.window_search.set_title( _('Search results for \"%s\"') % self.keywords )
+        self.find_in_progress = False
 
 catfish()
 Gtk.main()
