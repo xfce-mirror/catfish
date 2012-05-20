@@ -1072,43 +1072,44 @@ class catfish:
         self.infobar.hide()
         
     def on_filter_changed(self, widget):
-        self.find_in_progress = True
-        messages = []
-        listmodel = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, str)
-        self.treeview_files.set_model(listmodel)
-        self.treeview_files.columns_autosize()
-        for filegroup in self.results:
-            mime_type = filegroup[0]
-            filename = filegroup[2]
-            try:
-                modified = filegroup[7]
-            except IndexError:
-                modified = filegroup[5]
-            if not self.options.icons_large and not self.options.thumbnails:
-                if self.file_is_wanted(filename, mime_type, modified):
-                    listmodel.append(filegroup[1:])
+        if self.scrolled_files.get_visible():
+            self.find_in_progress = True
+            messages = []
+            listmodel = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, str)
+            self.treeview_files.set_model(listmodel)
+            self.treeview_files.columns_autosize()
+            for filegroup in self.results:
+                mime_type = filegroup[0]
+                filename = filegroup[2]
+                try:
+                    modified = filegroup[7]
+                except IndexError:
+                    modified = filegroup[5]
+                if not self.options.icons_large and not self.options.thumbnails:
+                    if self.file_is_wanted(filename, mime_type, modified):
+                        listmodel.append(filegroup[1:])
+                else:
+                    path = path.replace('&', '&amp;')
+                    if modified <> '':
+                        modified = os.linesep + modified
+                    if self.file_is_wanted(filename, mime_type, modified):
+                        listmodel.append(filegroup[1:])
+            if len(listmodel) == 0:
+                status_icon = Gtk.STOCK_INFO
+                messages.append([_('No files were found.'), None])
+                status = _('No files found for "%s".') % self.keywords
             else:
-                path = path.replace('&', '&amp;')
-                if modified <> '':
-                    modified = os.linesep + modified
-                if self.file_is_wanted(filename, mime_type, modified):
-                    listmodel.append(filegroup[1:])
-        if len(listmodel) == 0:
-            status_icon = Gtk.STOCK_INFO
-            messages.append([_('No files were found.'), None])
-            status = _('No files found for "%s".') % self.keywords
-        else:
-            status = _('%s files found for "%s".') % (len(listmodel), self.keywords)
-        for message, action in messages:
-            icon = [None, self.get_icon_pixbuf(status_icon)][message == messages[0][0]]
-            listmodel.append([icon, message, None, None, action])
-        self.statusbar.push(self.statusbar.get_context_id('results'), status)
-        self.treeview_files.set_model(listmodel)
-        listmodel.set_sort_func(4, self.compare_dates, None)
+                status = _('%s files found for "%s".') % (len(listmodel), self.keywords)
+            for message, action in messages:
+                icon = [None, self.get_icon_pixbuf(status_icon)][message == messages[0][0]]
+                listmodel.append([icon, message, None, None, action])
+            self.statusbar.push(self.statusbar.get_context_id('results'), status)
+            self.treeview_files.set_model(listmodel)
+            listmodel.set_sort_func(4, self.compare_dates, None)
 
-        self.window_search.get_window().set_cursor(None)
-        self.window_search.set_title( _('Search results for \"%s\"') % self.keywords )
-        self.find_in_progress = False
+            self.window_search.get_window().set_cursor(None)
+            self.window_search.set_title( _('Search results for \"%s\"') % self.keywords )
+            self.find_in_progress = False
 
 catfish()
 Gtk.main()
