@@ -188,7 +188,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkBox" id="box2">
+          <object class="GtkBox" id="box_main_controls">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="border_width">5</property>
@@ -262,6 +262,9 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                 <property name="fill">True</property>
                 <property name="position">0</property>
               </packing>
+            </child>
+            <child>
+              <placeholder/>
             </child>
             <child>
               <object class="GtkBox" id="box4">
@@ -507,6 +510,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                       <object class="GtkScrolledWindow" id="scrolled_files">
                         <property name="can_focus">True</property>
                         <property name="no_show_all">True</property>
+                        <property name="window_placement_set">True</property>
                         <property name="shadow_type">in</property>
                         <child>
                           <object class="GtkViewport" id="viewport_files">
@@ -516,11 +520,9 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                               <object class="GtkTreeView" id="treeview_files">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
+                                <property name="enable_grid_lines">vertical</property>
                                 <signal name="button-press-event" handler="on_treeview_files_button_pressed" swapped="no"/>
                                 <signal name="row-activated" handler="on_treeview_files_row_activated" swapped="no"/>
-                                <child internal-child="selection">
-                                  <object class="GtkTreeSelection" id="treeview-selection1"/>
-                                </child>
                               </object>
                             </child>
                           </object>
@@ -543,7 +545,8 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="pack_type">end</property>
+                <property name="position">2</property>
               </packing>
             </child>
           </object>

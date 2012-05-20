@@ -377,6 +377,43 @@ class catfish:
         self.window_search.show_all()
 
 # -- helper functions --
+    def get_find_infobar(self):
+        """The latest version of glade and GtkBuilder do not support InfoBar
+        in the glade file.  This is the code for InfoBar."""
+        main_message = _("Did not find what you were looking for?")
+        sub_message = _("Try searching with 'find' instead.")
+        infobar = Gtk.InfoBar()
+        infobar.set_no_show_all(True)
+        infobar.set_message_type(Gtk.MessageType.QUESTION)
+        icon = Gtk.Image()
+        icon.set_from_stock(Gtk.STOCK_DIALOG_QUESTION, Gtk.IconSize.DIALOG)
+        label = Gtk.Label("")
+        label.set_markup( "<big><b>%s</b></big>\n%s" % (main_message, sub_message) )
+        button_box = Gtk.Box()
+        button_box.set_orientation(Gtk.Orientation.VERTICAL)
+        ok_button = Gtk.Button()
+        ok_button.set_use_stock(True)
+        ok_button.set_label(Gtk.STOCK_OK)
+        cancel_button = Gtk.Button()
+        cancel_button.set_use_stock(True)
+        cancel_button.set_label(Gtk.STOCK_CANCEL)
+        button_box.pack_start(ok_button, False, False, 0)
+        button_box.pack_end(cancel_button, False, False, 0)
+        content = infobar.get_content_area()
+        content.add(icon)
+        content.add(label)
+        content.pack_end(button_box, False, False, 0)
+        
+        icon.show()
+        label.show()
+        button_box.show_all()
+
+        ok_button.connect("clicked", self.on_infobar_ok_clicked)
+        cancel_button.connect("clicked", self.on_infobar_cancel_clicked)
+
+        return infobar
+        
+
 
     def load_interface(self, filename):
         """Load glade file and retrieve widgets."""
@@ -391,6 +428,11 @@ class catfish:
         
         self.button_find_folder = self.builder.get_object('button_find_folder')
         self.entry_find_text = self.builder.get_object('entry_find_text')
+        self.box_main_controls = self.builder.get_object('box_main_controls')
+        
+        # Info bar since it cannot be defined in Glade.
+        self.infobar = self.get_find_infobar()
+        self.box_main_controls.pack_start(self.infobar, False, False, 0)
         
         # Application Menu
         self.menu_button = self.builder.get_object('menu_button')
@@ -651,8 +693,9 @@ class catfish:
                     return True
         return False
 
-    def find(self):
+    def find(self, widget=None, method='locate'):
         """Do the actual search."""
+        self.infobar.hide()
         self.find_in_progress = True
         self.window_search.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
         self.window_search.set_title(_('Searching for "%s"') % self.entry_find_text.get_text())
@@ -666,7 +709,6 @@ class catfish:
 
         # Retrieve search parameters
         keywords = self.entry_find_text.get_text()
-        method = 'locate' # TODO make dynamic
         folder = self.button_find_folder.get_filename()
         exact = self.checkbox_find_exact.get_active()
         hidden = self.checkbox_find_hidden.get_active()
@@ -778,6 +820,8 @@ class catfish:
         self.window_search.set_title( _('Search results for \"%s\"') % keywords )
         self.find_in_progress = False
         self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
+        if method != 'find':
+            self.infobar.show()
         yield False
 
     def get_icon_pixbuf(self, name, icon_size=Gtk.IconSize.MENU):
@@ -834,12 +878,6 @@ class catfish:
 
     def on_button_close_clicked(self, widget):
         self.window_search.destroy()
-
-    def on_checkbox_find_limit_toggled(self, widget):
-        self.spin_find_limit.set_sensitive(widget.get_active())
-
-    def on_combobox_find_method_changed(self, widget):
-        self.checkbox_find_fulltext.set_sensitive(self.get_selected_find_method() <> 'find')
 
     def on_button_find_clicked(self, widget):
         """Initiate the search thread."""
@@ -980,6 +1018,25 @@ class catfish:
         
     def on_aboutdialog_response(self, widget, event):
         self.aboutdialog.hide()
+        
+    def on_infobar_ok_clicked(self, widget):
+        self.infobar.hide()
+        keywords = self.entry_find_text.get_text()
+        completion = self.entry_find_text.get_completion()
+        listmodel = completion.get_model()
+        listmodel.append([keywords])
+
+        if not self.find_in_progress:
+            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CANCEL)
+            self.abort_find = 0
+            task = self.find(method='find')
+            GObject.idle_add(task.next)
+        else:
+            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
+            self.abort_find = 1
+        
+    def on_infobar_cancel_clicked(self, widget):
+        self.infobar.hide()
 
 catfish()
 Gtk.main()
