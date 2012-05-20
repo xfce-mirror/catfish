@@ -12,7 +12,9 @@
 import sys
 
 try:
-    import os, stat, time, md5, optparse, subprocess, fnmatch, re, datetime
+    import os, stat, time, md5, optparse, subprocess, fnmatch, re, datetime, mimetypes
+
+    from os.path import split as split_filename
 
     import locale, gettext
     from gi.repository import GObject, Gtk, Gdk, GdkPixbuf, Pango
@@ -33,11 +35,9 @@ except ImportError, msg:
     
 try:
     from zeitgeist.client import ZeitgeistDBusInterface
-    from zeitgeist.datamodel import Event, Subject, Interpretation, TimeRange
+    from zeitgeist.datamodel import Event, TimeRange
     from zeitgeist import datamodel
     iface = ZeitgeistDBusInterface()
-    from datetime import date
-    from os.path import split as split_filename
 except ImportError, msg:
     print 'Warning: The optional module %s is missing.' % str(msg).split()[-1]
 
@@ -161,7 +161,7 @@ class dbus_query:
                                 break
             except Exception, msg:
                 if 1: print 'Debug:', msg # DEBUG
-                pass # Nothing was found
+                # pass # Nothing was found
         return results
     def status(self): return self.err
 
@@ -469,8 +469,12 @@ class catfish:
     def compare_dates(self, model, row1, row2, user_data):
         """Compare 2 dates, used for sorting modification dates."""
         sort_column, _ = model.get_sort_column_id()
-        value1 = time.strptime(model.get_value(row1, sort_column), '%x %X')
-        value2 = time.strptime(model.get_value(row2, sort_column), '%x %X')
+        if not self.options.time_iso:
+            time_format = '%x %X'
+        else:
+            time_format = '%Y-%m-%d %H:%M'
+        value1 = time.strptime(model.get_value(row1, sort_column), time_format)
+        value2 = time.strptime(model.get_value(row2, sort_column), time_format)
         if value1 < value2:
             return -1
         elif value1 == value2:
@@ -528,16 +532,17 @@ class catfish:
             Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, msg)
         response = SaveFile.run()
         SaveFile.destroy()
+        return response == Gtk.ResponseType.YES
 
     def get_yesno_dialog(self, msg, parent=None):
         """Display yes/ no dialog and return a boolean value."""
 
         SaveFile = Gtk.MessageDialog(parent, 0,
             Gtk.MessageType.QUESTION, Gtk.ButtonsType.YES_NO, msg)
-        SaveFile.set_default_response(Gtk.ResponseType.NO);
+        SaveFile.set_default_response(Gtk.ResponseType.NO)
         response = SaveFile.run()
         SaveFile.destroy()
-        return response == Gtk.ResposeType.YES
+        return response == Gtk.ResponseType.YES
 
     def get_save_dialog(self, parent=None):
         """Display save dialog and return filename or None."""
@@ -546,7 +551,7 @@ class catfish:
             Gtk.STOCK_SAVE, Gtk.ResponseType.REJECT)
         SaveFile = Gtk.FileChooserDialog(_('Save list to file'), parent,
             Gtk.FileChooserAction.SAVE, buttons)
-        SaveFile.set_default_response(Gtk.ResponseType.REJECT);
+        SaveFile.set_default_response(Gtk.ResponseType.REJECT)
         response = SaveFile.run()
         filename = SaveFile.get_filename()
         SaveFile.destroy()
@@ -611,7 +616,7 @@ class catfish:
         treeiter = self.combobox_find_method.get_active_iter()
         try:
             return model.get_value(treeiter, 1)
-        except Exception, msg:
+        except Exception:
             return None
 
     def get_find_options(self, method, folder='~', limit=-1):
@@ -661,8 +666,8 @@ class catfish:
         # Mime Type Wanted
         wanted_types = []
         checkboxes = self.box_type_filter.get_children()
-        other = checkboxes[5].get_active()
-        for checkbox in self.box_type_filter.get_children():
+        #other = checkboxes[5].get_active()
+        for checkbox in checkboxes:
             try:
                 if checkbox.get_active():
                     wanted_types.append(self.map_mimetype(checkbox.get_label().lower()))
@@ -702,6 +707,11 @@ class catfish:
             return mime.media, mime.subtype
         except Exception:
             return None, None
+            
+    def load_mimetypes(self):
+        mimetypes.init()
+        mimes = mimetypes.types_maps.values()
+        mimes.sort()
 
     def file_is_hidden(self, filename, current=None):
         """Determine if a file is hidden or in a hidden folder"""
@@ -1031,11 +1041,6 @@ class catfish:
         self.on_button_find_clicked(widget)
         
     def on_menu_button_clicked(self, widget):
-        window_pos = self.window_search.get_position()
-        widget_size = self.menu_button.get_allocation()
-        x = widget_size.x
-        y = widget_size.y
-        widget_pos = self.menu_button.translate_coordinates(self.window_search, 0, 0)
         self.application_menu.popup(None, None, menu_position, self.application_menu, 3, Gtk.get_current_event_time())
         
     def on_checkbox_advanced_toggled(self, widget):
@@ -1090,7 +1095,6 @@ class catfish:
                     if self.file_is_wanted(filename, mime_type, modified):
                         listmodel.append(filegroup[1:])
                 else:
-                    path = path.replace('&', '&amp;')
                     if modified <> '':
                         modified = os.linesep + modified
                     if self.file_is_wanted(filename, mime_type, modified):
