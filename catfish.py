@@ -88,7 +88,7 @@ class suggestions:
     
     def locate_query(self, keywords, folder):
         self.locate_results = []
-        query = "locate -i %s -n 100" % os.path.join(folder, "*%s*" % keywords)
+        query = "locate -i %s -n 20" % os.path.join(folder, "*%s*" % keywords)
         self.process = subprocess.Popen(query, stdout=subprocess.PIPE, shell=True)
         for filepath in self.process.communicate()[0].split('\n'):
             filename = split_filename(filepath)[1].lower()
@@ -96,23 +96,24 @@ class suggestions:
                 self.locate_results.append(filename)
     
     def run(self, keywords, folder):
-        results = []
-        try:
-            self.zeitgeist_query(keywords)
-        except NameError:
-            pass
-        if len(self.zeitgeist_results) < self.max_results:
-            self.locate_query(keywords, folder)
-            results = self.zeitgeist_results
-            index = 0
+        if len(keywords) > 1:
+            results = []
             try:
-                while len(results) < self.max_results:
-                    if self.locate_results[index] not in results:
-                        results.append(self.locate_results[index])
-                    index+=1
-            except:
+                self.zeitgeist_query(keywords)
+            except NameError:
+                pass
+            if len(self.zeitgeist_results) < self.max_results:
+                self.locate_query(keywords, folder)
+                results = self.zeitgeist_results
+                index = 0
+                try:
+                    while len(results) < self.max_results:
+                        if self.locate_results[index] not in results:
+                            results.append(self.locate_results[index])
+                        index+=1
+                except:
+                    return results
                 return results
-            return results
             
 
 class dbus_query:
@@ -1093,7 +1094,8 @@ class catfish:
                 self.get_error_dialog('The file %s could not be saved.'
                  % filename, self.window_search)
                  
-    def on_entry_find_text_changed(self, widget):
+    def show_suggestions(self, widget):
+        while Gtk.events_pending(): Gtk.main_iteration()
         query = widget.get_text()
         results = self.suggestions.run(query, self.button_find_folder.get_filename())
         
@@ -1105,6 +1107,11 @@ class catfish:
                 listmodel.append([keyword])
         except TypeError:
             pass
+        yield False
+                 
+    def on_entry_find_text_changed(self, widget):
+        task = self.show_suggestions(widget)
+        GObject.idle_add(task.next)
             
     def on_entry_find_text_activate(self, widget, event=None, data=None):
         self.on_button_find_clicked(widget)
