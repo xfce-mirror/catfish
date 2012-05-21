@@ -47,7 +47,7 @@ app_version = '0.4.0'
 _ = gettext.gettext # i18n shortcut
 
 def detach_cb(menu, widget):
-	menu.detach()
+    menu.detach()
 
 def menu_position(self, menu, data=None, something_else=None):
     widget = menu.get_attach_widget()
@@ -217,7 +217,7 @@ class catfish:
         else:
             # Unknown desktop? Just see what we have then
             # Guess suitable fileman
-            commands = ['Nautilus', 'Thunar', 'konqueror']
+            commands = ['Nautilus', 'Thunar', 'konqueror', 'marlin', 'pcmanfm']
             default_fileman = ''
             for path in os.environ.get('PATH', '/usr/bin').split(os.pathsep):
                 for command in commands:
@@ -594,7 +594,12 @@ class catfish:
 
         try:
             if stat.S_ISDIR(os.stat(filename).st_mode):
-                command = [self.options.fileman, filename]
+                if self.options.fileman == 'pcmanfm':
+                    cwd = os.getcwd()
+                    os.chdir(filename)
+                    command = self.options.fileman
+                else:
+                    command = [self.options.fileman, filename]
             else:
                 command = [self.open_wrapper, filename]
             try:
@@ -610,14 +615,8 @@ class catfish:
             if self.options.debug: print 'Debug:', msg
             self.get_error_dialog(('Error: Could not access the file %s.'
              % filename), self.window_search)
-
-    def get_selected_find_method(self):
-        model = self.combobox_find_method.get_model()
-        treeiter = self.combobox_find_method.get_active_iter()
-        try:
-            return model.get_value(treeiter, 1)
-        except Exception:
-            return None
+        if self.options.fileman == 'pcmanfm':
+            os.chdir(cwd)
 
     def get_find_options(self, method, folder='~', limit=-1):
         folder = os.path.expanduser(folder)
@@ -999,7 +998,7 @@ class catfish:
 
     def on_menu_copy_activate(self, menu):
         folder, filename = self.get_selected_filename(self.treeview_files)
-        clipboard = Gtk.clipboard_get('CLIPBOARD')
+        clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         clipboard.set_text(os.path.join(folder, filename), -1)
 
     def on_menu_save_activate(self, menu):
