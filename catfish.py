@@ -381,43 +381,6 @@ class catfish:
         self.window_search.show_all()
 
 # -- helper functions --
-    def get_find_infobar(self):
-        """The latest version of glade and GtkBuilder do not support InfoBar
-        in the glade file.  This is the code for InfoBar."""
-        main_message = _("Did not find what you were looking for?")
-        sub_message = _("Try searching with 'find' instead.")
-        infobar = Gtk.InfoBar()
-        infobar.set_no_show_all(True)
-        infobar.set_message_type(Gtk.MessageType.QUESTION)
-        icon = Gtk.Image()
-        icon.set_from_stock(Gtk.STOCK_DIALOG_QUESTION, Gtk.IconSize.DIALOG)
-        label = Gtk.Label("")
-        label.set_markup( "<big><b>%s</b></big>\n%s" % (main_message, sub_message) )
-        button_box = Gtk.Box()
-        button_box.set_orientation(Gtk.Orientation.VERTICAL)
-        ok_button = Gtk.Button()
-        ok_button.set_use_stock(True)
-        ok_button.set_label(Gtk.STOCK_OK)
-        cancel_button = Gtk.Button()
-        cancel_button.set_use_stock(True)
-        cancel_button.set_label(Gtk.STOCK_CANCEL)
-        button_box.pack_start(ok_button, False, False, 0)
-        button_box.pack_end(cancel_button, False, False, 0)
-        content = infobar.get_content_area()
-        content.add(icon)
-        content.add(label)
-        content.pack_end(button_box, False, False, 0)
-        
-        icon.show()
-        label.show()
-        button_box.show_all()
-
-        ok_button.connect("clicked", self.on_infobar_ok_clicked)
-        cancel_button.connect("clicked", self.on_infobar_cancel_clicked)
-
-        return infobar
-        
-
 
     def load_interface(self, filename):
         """Load glade file and retrieve widgets."""
@@ -434,9 +397,7 @@ class catfish:
         self.entry_find_text = self.builder.get_object('entry_find_text')
         self.box_main_controls = self.builder.get_object('box_main_controls')
         
-        # Info bar since it cannot be defined in Glade.
-        self.infobar = self.get_find_infobar()
-        self.box_main_controls.pack_start(self.infobar, False, False, 0)
+        self.box_infobar = self.builder.get_object('box_infobar')
         
         # Application Menu
         self.menu_button = self.builder.get_object('menu_button')
@@ -455,6 +416,7 @@ class catfish:
         self.menu_file_copy = self.builder.get_object('menu_copy')
         self.menu_file_save = self.builder.get_object('menu_save')
         
+        self.spinner = self.builder.get_object('spinner')
         self.statusbar = self.builder.get_object('statusbar')
         
         # Sidebar
@@ -803,7 +765,8 @@ class catfish:
         """Do the actual search."""
         if self.checkbox_find_fulltext.get_active():
             method = 'find'
-        self.infobar.hide()
+        self.box_infobar.hide()
+        self.spinner.show()
         self.find_in_progress = True
         self.reset_text_entry_icon()
         self.results = []
@@ -935,10 +898,11 @@ class catfish:
         self.window_search.get_window().set_cursor(None)
         self.window_search.set_title( _('Search results for \"%s\"') % keywords )
         self.keywords = keywords
+        self.spinner.hide()
         self.find_in_progress = False
         self.reset_text_entry_icon()
         if method != 'find':
-            self.infobar.show()
+            self.box_infobar.show()
         yield False
 
     def get_icon_pixbuf(self, name, icon_size=Gtk.IconSize.MENU):
@@ -1151,8 +1115,8 @@ class catfish:
     def on_aboutdialog_response(self, widget, event):
         self.aboutdialog.hide()
         
-    def on_infobar_ok_clicked(self, widget):
-        self.infobar.hide()
+    def on_button_search_find_clicked(self, widget):
+        self.box_infobar.hide()
         keywords = self.entry_find_text.get_text()
         completion = self.entry_find_text.get_completion()
         listmodel = completion.get_model()
@@ -1164,9 +1128,6 @@ class catfish:
             GObject.idle_add(task.next)
         else:
             self.abort_find = 1
-        
-    def on_infobar_cancel_clicked(self, widget):
-        self.infobar.hide()
         
     def on_filter_changed(self, widget):
         if self.scrolled_files.get_visible():
