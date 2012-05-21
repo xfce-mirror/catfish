@@ -463,6 +463,7 @@ class catfish:
         self.button_time_filter_custom = self.builder.get_object('button_time_filter_custom')
         self.button_type_filter_other = self.builder.get_object('button_type_filter_other')
         
+        
         self.aboutdialog = self.builder.get_object('aboutdialog')
         
         self.date_dialog = self.builder.get_object('date_dialog')
@@ -472,6 +473,12 @@ class catfish:
         self.calendar_end = Gtk.Calendar()
         self.box_calendar_start.pack_start(self.calendar_start, True, True, 0)
         self.box_calendar_end.pack_start(self.calendar_end, True, True, 0)
+        
+        self.mimetypes_dialog = self.builder.get_object('mimetypes_dialog')
+        self.combobox_mimetype_existing = self.builder.get_object('combobox_mimetype_existing')
+        self.entry_mimetype_custom = self.builder.get_object('entry_mimetype_custom')
+        self.radio_mimetype_existing = self.builder.get_object('radio_mimetype_existing')
+        self.load_mimetypes()
 
         self.builder.connect_signals(self)
 
@@ -668,28 +675,53 @@ class catfish:
             return 'application'
 
     def file_is_wanted(self, filename, mime_type, modification_date):
-        mime_type_is_wanted = True
+        mime_type_is_wanted = False
         modification_date_is_wanted = True
         
         # Mime Type Wanted
         wanted_types = []
         checkboxes = self.box_type_filter.get_children()
-        #other = checkboxes[5].get_active()
-        for checkbox in checkboxes:
+        other = checkboxes[5].get_active()
+        for checkbox in checkboxes[:5]:
             try:
                 if checkbox.get_active():
                     wanted_types.append(self.map_mimetype(checkbox.get_label().lower()))
             except AttributeError: # button
                 pass
                 # TODO ADD SUPPORT FOR CUSTOM
-        if not len(wanted_types):
-            mime_type_is_wanted = True
-        else:
-            try:
-                file_type = mime_type[0]
-                mime_type_is_wanted = file_type in wanted_types
-            except Exception:
+        if other:
+            wanted_types.append('notarealtype')
+            if self.radio_mimetype_existing.get_active():
+                model = self.combobox_mimetype_existing.get_model()
+                tree_iter = self.combobox_mimetype_existing.get_active_iter()
+                selected_mime = model[tree_iter][0]
+                selected_mime = selected_mime.split('/')
+                if selected_mime[0] == mime_type[0] and selected_mime[1] == mime_type[1]:
+                    mime_type_is_wanted = True
+            else:
+                extensions = self.entry_mimetype_custom.get_text()
+                if ',' in extensions:
+                    split = extensions.split(',')
+                else:
+                    split = extensions.split(' ')
+                extensions = []
+                for string in split:
+                    if string[0] != '.':
+                        extensions.append('.' + string)
+                    else:
+                        extensions.append(string)
+                if os.path.splitext(filename)[1] in extensions:
+                    mime_type_is_wanted = True
+                    
+        if not mime_type_is_wanted:
+            if not len(wanted_types):
                 mime_type_is_wanted = True
+            else:
+                try:
+                    file_type = mime_type[0]
+                    mime_type_is_wanted = file_type in wanted_types
+                except Exception:
+                    mime_type_is_wanted = True
             
         # Modification Date Wanted
         if self.time_filter_any.get_active():
@@ -724,8 +756,19 @@ class catfish:
             
     def load_mimetypes(self):
         mimetypes.init()
-        mimes = mimetypes.types_maps.values()
+        mimes = mimetypes.types_map.values()
         mimes.sort()
+        liststore = Gtk.ListStore(str)
+        cell = Gtk.CellRendererText()
+        self.combobox_mimetype_existing.pack_start(cell, True)
+        self.combobox_mimetype_existing.add_attribute(cell, 'text', 0)
+        mime_list = []
+        for mime in mimes:
+            if mime not in mime_list:
+                mime_list.append(mime)
+                liststore.append([mime])
+            
+        self.combobox_mimetype_existing.set_model(liststore)
 
     def file_is_hidden(self, filename, current=None):
         """Determine if a file is hidden or in a hidden folder"""
@@ -1134,6 +1177,8 @@ class catfish:
             
     def on_button_time_filter_custom_clicked(self, widget):
         self.date_dialog.show_all()
+        self.date_dialog.run()
+        self.date_dialog.hide()
         
     def on_calendar_end_today_toggled(self, widget):
         if widget.get_active():
@@ -1148,6 +1193,20 @@ class catfish:
             self.calendar_start.select_month(today.month-1, today.year)
             self.calendar_start.select_day(today.day)
         self.calendar_start.set_sensitive(not widget.get_active())
+        
+    def on_date_dialog_close(self, widget, data=None):
+        self.date_dialog.hide()
+        
+    def on_button_type_filter_other_clicked(self, widget):
+        self.mimetypes_dialog.show_all()
+        self.mimetypes_dialog.run()
+        self.mimetypes_dialog.hide()
+        
+    def on_radio_mimetype_custom_toggled(self, widget):
+        self.entry_mimetype_custom.set_sensitive(widget.get_active())
+        
+    def on_radio_mimetype_existing_toggled(self, widget):
+        self.combobox_mimetype_existing.set_sensitive(widget.get_active())
 
 catfish()
 Gtk.main()
