@@ -730,6 +730,8 @@ class catfish:
 
     def find(self, widget=None, method='locate'):
         """Do the actual search."""
+        if self.checkbox_find_fulltext.get_active():
+            method = 'find'
         self.infobar.hide()
         self.find_in_progress = True
         self.results = []
