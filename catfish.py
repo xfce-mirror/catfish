@@ -376,6 +376,8 @@ class catfish:
         self.find_in_progress = False
         self.results = []
         
+        self.suggestion_pending = False
+        
         self.window_search.show_all()
 
 # -- helper functions --
@@ -803,6 +805,7 @@ class catfish:
             method = 'find'
         self.infobar.hide()
         self.find_in_progress = True
+        self.reset_text_entry_icon()
         self.results = []
         self.window_search.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
         self.window_search.set_title(_('Searching for "%s"') % self.entry_find_text.get_text())
@@ -933,7 +936,7 @@ class catfish:
         self.window_search.set_title( _('Search results for \"%s\"') % keywords )
         self.keywords = keywords
         self.find_in_progress = False
-        self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
+        self.reset_text_entry_icon()
         if method != 'find':
             self.infobar.show()
         yield False
@@ -987,6 +990,15 @@ class catfish:
 
 # -- events --
 
+    def reset_text_entry_icon(self):
+        if self.find_in_progress:
+            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CANCEL)
+        elif len(self.entry_find_text.get_text()) > 0:
+            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CLOSE)
+        else:
+            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
+                
+
     def on_window_search_destroy(self, widget):
         Gtk.main_quit()
 
@@ -1005,12 +1017,10 @@ class catfish:
         listmodel.append([keywords])
 
         if not self.find_in_progress:
-            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CANCEL)
             self.abort_find = 0
             task = self.find()
             GObject.idle_add(task.next)
         else:
-            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
             self.abort_find = 1
 
     def on_treeview_files_row_activated(self, widget, path, column):
@@ -1095,21 +1105,25 @@ class catfish:
                  % filename, self.window_search)
                  
     def show_suggestions(self, widget):
-        while Gtk.events_pending(): Gtk.main_iteration()
-        query = widget.get_text()
-        results = self.suggestions.run(query, self.button_find_folder.get_filename())
-        
-        completion = self.entry_find_text.get_completion()
-        listmodel = completion.get_model()
-        listmodel.clear()
-        try:
-            for keyword in results:
-                listmodel.append([keyword])
-        except TypeError:
-            pass
-        yield False
+        if not self.suggestion_pending:
+            self.suggestion_pending = True
+            while Gtk.events_pending(): Gtk.main_iteration()
+            query = widget.get_text()
+            results = self.suggestions.run(query, self.button_find_folder.get_filename())
+            
+            completion = self.entry_find_text.get_completion()
+            listmodel = completion.get_model()
+            listmodel.clear()
+            try:
+                for keyword in results:
+                    listmodel.append([keyword])
+            except TypeError:
+                pass
+            self.suggestion_pending = False
+            yield False
                  
     def on_entry_find_text_changed(self, widget):
+        self.reset_text_entry_icon()
         task = self.show_suggestions(widget)
         GObject.idle_add(task.next)
             
@@ -1145,12 +1159,10 @@ class catfish:
         listmodel.append([keywords])
 
         if not self.find_in_progress:
-            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CANCEL)
             self.abort_find = 0
             task = self.find(method='find')
             GObject.idle_add(task.next)
         else:
-            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
             self.abort_find = 1
         
     def on_infobar_cancel_clicked(self, widget):
@@ -1227,6 +1239,13 @@ class catfish:
         
     def on_radio_mimetype_existing_toggled(self, widget):
         self.combobox_mimetype_existing.set_sensitive(widget.get_active())
+        
+    def on_entry_find_text_icon_release(self, widget, event=None, data=None):
+        if self.find_in_progress:
+            self.abort_find = 1
+        else:
+            self.entry_find_text.set_text('')
+        
 
 catfish()
 Gtk.main()

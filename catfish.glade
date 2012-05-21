@@ -4,6 +4,7 @@
   <object class="GtkAboutDialog" id="aboutdialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="window_position">center-on-parent</property>
     <property name="destroy_with_parent">True</property>
     <property name="icon_name">edit-find</property>
     <property name="type_hint">dialog</property>
@@ -134,6 +135,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
     <property name="resizable">False</property>
     <property name="window_position">center-on-parent</property>
     <property name="destroy_with_parent">True</property>
+    <property name="icon_name">gtk-find</property>
     <property name="type_hint">dialog</property>
     <property name="has_resize_grip">False</property>
     <signal name="close" handler="on_date_dialog_close" swapped="no"/>
@@ -385,6 +387,8 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Select a mimetype or enter an extension</property>
     <property name="resizable">False</property>
+    <property name="window_position">center-on-parent</property>
+    <property name="icon_name">gtk-find</property>
     <property name="type_hint">dialog</property>
     <property name="has_resize_grip">False</property>
     <child internal-child="vbox">
@@ -554,20 +558,33 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
           <object class="GtkBox" id="box_main_controls">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="border_width">5</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkBox" id="box3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="homogeneous">True</property>
                 <child>
-                  <object class="GtkFileChooserButton" id="button_find_folder">
+                  <object class="GtkBox" id="box7">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
-                    <property name="action">select-folder</property>
-                    <property name="create_folders">False</property>
-                    <property name="title" translatable="yes">Select a Folder</property>
+                    <child>
+                      <object class="GtkFileChooserButton" id="button_find_folder">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">start</property>
+                        <property name="orientation">vertical</property>
+                        <property name="action">select-folder</property>
+                        <property name="create_folders">False</property>
+                        <property name="title" translatable="yes">Select a Folder</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -581,35 +598,50 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                     <property name="can_focus">True</property>
                     <property name="has_focus">True</property>
                     <property name="invisible_char">•</property>
+                    <property name="caps_lock_warning">False</property>
                     <property name="secondary_icon_stock">gtk-find</property>
+                    <property name="primary_icon_activatable">False</property>
                     <property name="placeholder_text">Search terms</property>
                     <signal name="changed" handler="on_entry_find_text_changed" swapped="no"/>
                     <signal name="activate" handler="on_entry_find_text_activate" swapped="no"/>
-                    <signal name="icon-release" handler="on_entry_find_text_activate" swapped="no"/>
+                    <signal name="icon-release" handler="on_entry_find_text_icon_release" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">False</property>
-                    <property name="fill">True</property>
+                    <property name="fill">False</property>
                     <property name="position">1</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkToggleButton" id="menu_button">
-                    <property name="use_action_appearance">False</property>
+                  <object class="GtkBox" id="box8">
                     <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="use_action_appearance">False</property>
-                    <property name="relief">none</property>
-                    <property name="focus_on_click">False</property>
-                    <signal name="clicked" handler="on_menu_button_clicked" swapped="no"/>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkImage" id="image1">
+                      <object class="GtkToggleButton" id="menu_button">
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="stock">gtk-properties</property>
-                        <property name="icon-size">3</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="halign">end</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="relief">none</property>
+                        <property name="focus_on_click">False</property>
+                        <signal name="clicked" handler="on_menu_button_clicked" swapped="no"/>
+                        <child>
+                          <object class="GtkImage" id="image1">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="stock">gtk-properties</property>
+                            <property name="icon-size">3</property>
+                          </object>
+                        </child>
                       </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
                     </child>
                   </object>
                   <packing>
@@ -888,6 +920,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                           <object class="GtkTreeView" id="treeview_files">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
+                            <property name="rules_hint">True</property>
                             <property name="enable_grid_lines">vertical</property>
                             <signal name="button-press-event" handler="on_treeview_files_button_pressed" swapped="no"/>
                             <signal name="row-activated" handler="on_treeview_files_row_activated" swapped="no"/>
