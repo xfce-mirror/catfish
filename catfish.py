@@ -459,10 +459,19 @@ class catfish:
         self.box_type_filter = self.builder.get_object('box_type_filter')
         self.time_filter_any = self.builder.get_object('time_filter_any')
         self.time_filter_week = self.builder.get_object('time_filter_week')
+        self.time_filter_custom = self.builder.get_object('time_filter_custom')
         self.button_time_filter_custom = self.builder.get_object('button_time_filter_custom')
         self.button_type_filter_other = self.builder.get_object('button_type_filter_other')
         
         self.aboutdialog = self.builder.get_object('aboutdialog')
+        
+        self.date_dialog = self.builder.get_object('date_dialog')
+        self.box_calendar_end = self.builder.get_object('box_calendar_end')
+        self.box_calendar_start = self.builder.get_object('box_calendar_start')
+        self.calendar_start = Gtk.Calendar()
+        self.calendar_end = Gtk.Calendar()
+        self.box_calendar_start.pack_start(self.calendar_start, True, True, 0)
+        self.box_calendar_end.pack_start(self.calendar_end, True, True, 0)
 
         self.builder.connect_signals(self)
 
@@ -694,6 +703,12 @@ class catfish:
             if self.time_filter_week.get_active():
                 weektime = datetime.datetime.today() - datetime.timedelta(days=7)
                 modification_date_is_wanted = weektime < filetime
+            elif self.time_filter_custom.get_active():
+                start_date = self.calendar_start.get_date()
+                start_date = datetime.datetime(start_date[0], start_date[1], start_date[2])
+                end_date = self.calendar_end.get_date()
+                end_date = datetime.datetime(end_date[0], end_date[1], end_date[2])
+                modification_date_is_wanted = start_date <= filetime and end_date >= filetime
         if mime_type_is_wanted and modification_date_is_wanted:
             return True
         else:
@@ -1116,6 +1131,23 @@ class catfish:
             self.window_search.get_window().set_cursor(None)
             self.window_search.set_title( _('Search results for \"%s\"') % self.keywords )
             self.find_in_progress = False
+            
+    def on_button_time_filter_custom_clicked(self, widget):
+        self.date_dialog.show_all()
+        
+    def on_calendar_end_today_toggled(self, widget):
+        if widget.get_active():
+            today = datetime.datetime.now()
+            self.calendar_end.select_month(today.month-1, today.year)
+            self.calendar_end.select_day(today.day)
+        self.calendar_end.set_sensitive(not widget.get_active())
+        
+    def on_calendar_start_today_toggled(self, widget):
+        if widget.get_active():
+            today = datetime.datetime.now()
+            self.calendar_start.select_month(today.month-1, today.year)
+            self.calendar_start.select_day(today.day)
+        self.calendar_start.set_sensitive(not widget.get_active())
 
 catfish()
 Gtk.main()

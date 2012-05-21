@@ -2,7 +2,6 @@ TODO:
  . fix popup menu not being shown on first click
  . show text excerpts and meta information
  . remember last chosen search method and fulltext state
- . settings dialog
  . drag'n drop of filenames
  . add an 'update index' button
  . fix occasional broken pipes
