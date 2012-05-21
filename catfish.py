@@ -957,10 +957,13 @@ class catfish:
     def reset_text_entry_icon(self):
         if self.find_in_progress:
             self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CANCEL)
+            self.entry_find_text.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Cancel search') )
         elif len(self.entry_find_text.get_text()) > 0:
             self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CLOSE)
+            self.entry_find_text.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Clear search terms') )
         else:
             self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
+            self.entry_find_text.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Enter search terms and press ENTER') )
                 
 
     def on_window_search_destroy(self, widget):
