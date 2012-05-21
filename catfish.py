@@ -465,6 +465,11 @@ class catfish:
         
         
         self.aboutdialog = self.builder.get_object('aboutdialog')
+        try:
+            logo = GdkPixbuf.Pixbuf.new_from_file('catfish.svg')
+        except Exception:
+            logo = GdkPixbuf.Pixbuf.new_from_file('/usr/local/share/icons/hicolor/scalable/apps/catfish.svg')
+        self.aboutdialog.set_logo(logo)
         
         self.date_dialog = self.builder.get_object('date_dialog')
         self.box_calendar_end = self.builder.get_object('box_calendar_end')
@@ -737,10 +742,15 @@ class catfish:
                 modification_date_is_wanted = weektime < filetime
             elif self.time_filter_custom.get_active():
                 start_date = self.calendar_start.get_date()
-                start_date = datetime.datetime(start_date[0], start_date[1], start_date[2])
                 end_date = self.calendar_end.get_date()
-                end_date = datetime.datetime(end_date[0], end_date[1], end_date[2])
-                modification_date_is_wanted = start_date <= filetime and end_date >= filetime
+                if start_date == end_date:
+                    start_date = datetime.datetime(start_date[0], start_date[1]+1, start_date[2]) - datetime.timedelta(days=1)
+                    end_date = datetime.datetime(end_date[0], end_date[1]+1, end_date[2]) + datetime.timedelta(days=1)
+                    modification_date_is_wanted = start_date < filetime and end_date > filetime
+                else:
+                    start_date = datetime.datetime(start_date[0], start_date[1]+1, start_date[2])
+                    end_date = datetime.datetime(end_date[0], end_date[1]+1, end_date[2]) + datetime.timedelta(days=1)
+                    modification_date_is_wanted = start_date <= filetime and end_date >= filetime
         if mime_type_is_wanted and modification_date_is_wanted:
             return True
         else:
