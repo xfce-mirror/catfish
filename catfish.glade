@@ -65,6 +65,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
   <object class="GtkMenu" id="application_menu">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
+    <signal name="hide" handler="on_application_menu_hide" swapped="no"/>
     <child>
       <object class="GtkCheckMenuItem" id="checkbox_find_exact">
         <property name="use_action_appearance">False</property>
@@ -594,7 +595,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton" id="menu_button">
+                  <object class="GtkToggleButton" id="menu_button">
                     <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>

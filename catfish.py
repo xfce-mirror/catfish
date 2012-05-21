@@ -1102,6 +1102,9 @@ class catfish:
     def on_menu_button_clicked(self, widget):
         self.application_menu.popup(None, None, menu_position, self.application_menu, 3, Gtk.get_current_event_time())
         
+    def on_application_menu_hide(self, widget):
+        self.menu_button.set_active(False)
+        
     def on_checkbox_advanced_toggled(self, widget):
         self.sidebar.set_visible(widget.get_active())
         
