@@ -199,8 +199,8 @@ class shell_query:
             command += ' ' + nocase
         if limit > 0:
             command += ' ' + limit_results
-        if wildcards:
-            keywords = keywords.replace(' ', '*')
+        #if wildcards:
+        #    keywords = keywords.replace(' ', '*')
         if file_manual:
             command += ' "*%s*"' % keywords
         else:
@@ -636,7 +636,7 @@ class catfish:
         methods = {
             'find': (method, '', '%s "' + folder + '" -ignore_readdir_race -noleaf',
                 '-wholename', '-iwholename', '', 1, 1, 0, 0, 0),
-            'locate': (method, '', '%s', '', '-i', '-n %i' % limit,
+            'locate': (method, '', '%s', '', '-i', '',
                 1, 0, 1, 0, 0),
             'tracker': ('tracker-search', 'trackerd', '%s', '', '', '-l %i' % limit,
                 0, 0, 1, 1, 0),
@@ -875,9 +875,6 @@ class catfish:
                         yield True
                         continue
                     mime_type = self.get_mime_type(os.path.join(path, filename))
-                    #if not self.file_is_wanted(filename, mime_type):
-                    #    yield True
-                    #    continue
                     if self.options.thumbnails:
                         icon = self.get_thumbnail(filename, icon_size, mime_type)
                     else:
