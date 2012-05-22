@@ -38,7 +38,6 @@ sv: Daniel Nylander &lt;po@danielnylander.se&gt;
 zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
     <property name="artists">Nancy Runge &lt;nancy@twotoasts.de&gt;</property>
     <property name="license_type">gpl-2-0</property>
-    <signal name="response" handler="on_aboutdialog_response" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="aboutdialog_vbox1">
         <property name="can_focus">False</property>
@@ -136,6 +135,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
         <property name="use_stock">True</property>
+        <signal name="activate" handler="on_menu_about_activate" swapped="no"/>
       </object>
     </child>
   </object>
@@ -149,7 +149,6 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
     <property name="icon_name">gtk-find</property>
     <property name="type_hint">dialog</property>
     <property name="has_resize_grip">False</property>
-    <signal name="close" handler="on_date_dialog_close" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="can_focus">False</property>
@@ -168,7 +167,6 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
-                <signal name="clicked" handler="on_date_dialog_close" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -185,7 +183,6 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
-                <signal name="clicked" handler="on_date_dialog_close" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -786,7 +783,7 @@ This requires sudo (admin) powers.</property>
                     <property name="placeholder_text">Search terms</property>
                     <signal name="changed" handler="on_entry_find_text_changed" swapped="no"/>
                     <signal name="activate" handler="on_entry_find_text_activate" swapped="no"/>
-                    <signal name="icon-release" handler="on_entry_find_text_icon_release" swapped="no"/>
+                    <signal name="icon-release" handler="on_entry_find_text_icon_clicked" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">True</property>

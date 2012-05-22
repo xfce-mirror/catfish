@@ -58,64 +58,76 @@ def menu_position(self, menu, data=None, something_else=None):
     return (x, y, True)
 
 
-class suggestions:
-    def __init__(self):
-        self.zeitgeist_results = []
-        self.locate_results = []
-        self.max_results = 10
+class suggestions(list):
+    """Suggestions class, autocomplete for file search."""
+    def __init__(self, max_results=10):
+        """Initialize the suggestions class with a maximum # results."""
+        list.__init__(self)
+        self.max_results = max_results
+        
+    def clear(self):
+        """Clear the suggestions list."""
+        del self[:]
 
     def zeitgeist_query(self, keywords, folder):
-        self.zeitgeist_results = []
-        event_template = Event()
-        time_range = TimeRange.from_seconds_ago(60 * 3600 * 24) # 60 days at most
+        """Perform a query using zeitgeist.  
         
-        results = iface.FindEvents(
-            time_range, # (min_timestamp, max_timestamp) in milliseconds
-            [event_template, ],
-            datamodel.StorageState.Any,
-            200,
-            datamodel.ResultType.MostRecentSubjects
-        )
+        Return the number of found results."""
+        result_count = 0
+        try:
+            event_template = Event()
+            time_range = TimeRange.from_seconds_ago(60 * 3600 * 24) # 60 days at most
+            
+            results = iface.FindEvents(
+                time_range, # (min_timestamp, max_timestamp) in milliseconds
+                [event_template, ],
+                datamodel.StorageState.Any,
+                200,
+                datamodel.ResultType.MostRecentSubjects
+            )
 
-        results = (datamodel.Event(result) for result in results)
-
-        for event in results:
-            for subject in event.get_subjects():
-                if subject.uri[:7] == 'file://':
-                    filename = split_filename(subject.uri)[1].lower()
-                    if keywords.lower() in filename and filename not in self.zeitgeist_results and folder.lower() in filename:
-                        print filename
-                        self.zeitgeist_results.append(filename)
+            results = (datamodel.Event(result) for result in results)
+            
+            for event in results:
+                for subject in event.get_subjects():
+                    if subject.uri[:7] == 'file://':
+                        filename = split_filename(subject.uri)[1].lower()
+                        if keywords.lower() in filename and filename not in self and folder.lower() in filename:
+                            result_count += 1
+                            self.append(filename)
+                    if self.__len__ == self.max_results: break
+                if self.__len__ == self.max_results: break
+        except NameError:
+            pass
+        return result_count
     
     def locate_query(self, keywords, folder):
-        self.locate_results = []
-        query = "locate -i %s -n 20" % os.path.join(folder, "*%s*" % keywords)
+        """Perform a query using locate.
+        
+        Return the number of found results."""
+        query = "locate -i %s --existing -n 20" % os.path.join(folder, "*%s*" % keywords)
         self.process = subprocess.Popen(query, stdout=subprocess.PIPE, shell=True)
+        result_count = 0
         for filepath in self.process.communicate()[0].split('\n'):
             filename = split_filename(filepath)[1].lower()
-            if filename not in self.locate_results and keywords.lower() == filename[:len(keywords)]:
-                self.locate_results.append(filename)
+            if filename not in self and keywords.lower() == filename[:len(keywords)]:
+                result_count += 1
+                self.append(filename)
+            if self.__len__ == self.max_results: break
+        return result_count
     
     def run(self, keywords, folder):
+        """Run the suggestions query and return the number of found
+        results."""
         if len(keywords) > 1:
-            results = []
-            try:
-                self.zeitgeist_query(keywords, folder)
-            except NameError:
-                pass
-            if len(self.zeitgeist_results) < self.max_results:
-                self.locate_query(keywords, folder)
-                results = self.zeitgeist_results
-                index = 0
-                try:
-                    while len(results) < self.max_results:
-                        if self.locate_results[index] not in results:
-                            results.append(self.locate_results[index])
-                        index+=1
-                except:
-                    return results
-                return results
-            
+            self.clear()
+            result_count = 0
+            result_count += self.zeitgeist_query(keywords, folder)
+            result_count += self.locate_query(keywords, folder)
+            return result_count
+        else:
+            return -1
+
 
 class dbus_query:
     def __init__(self, options):
@@ -994,9 +1006,7 @@ class catfish:
             else:
                 icon_name = Gtk.STOCK_FILE
         return self.get_icon_pixbuf(icon_name, icon_size)
-
-# -- events --
-
+    
     def reset_text_entry_icon(self):
         if self.find_in_progress:
             self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CANCEL)
@@ -1007,24 +1017,51 @@ class catfish:
         else:
             self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
             self.entry_find_text.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Enter search terms and press ENTER') )
-                
+            
+    def show_suggestions(self, widget):
+        if not self.suggestion_pending:
+            self.suggestion_pending = True
+            while Gtk.events_pending(): Gtk.main_iteration()
+            query = widget.get_text()
+            self.suggestions.run(query, self.button_find_folder.get_filename())
+            
+            completion = self.entry_find_text.get_completion()
+            listmodel = completion.get_model()
+            listmodel.clear()
+            try:
+                for keyword in self.suggestions:
+                    listmodel.append([keyword])
+            except TypeError:
+                pass
+            self.suggestion_pending = False
+            yield False
+    
+    def disable_filters(self):
+        self.time_filter_any.set_active(True)
+        for checkbox in self.box_type_filter.get_children():
+            try:
+                checkbox.set_active(False)
+            except AttributeError:
+                pass
+
+# -- events --
 
     def on_window_search_destroy(self, widget):
+        """When the application window is closed, end the program."""
         Gtk.main_quit()
-
-    def on_button_close_clicked(self, widget):
-        self.window_search.destroy()
-
-    def on_button_find_clicked(self, widget):
+        
+    # Keyword/Search Terms entry
+    def on_entry_find_text_changed(self, widget):
+        """When text is modified in the search terms box, change the
+        icon as necessary and show suggestions."""
+        self.reset_text_entry_icon()
+        task = self.show_suggestions(widget)
+        GObject.idle_add(task.next)
+            
+    def on_entry_find_text_activate(self, widget):
         """Initiate the search thread."""
-
         self.scrolled_files.set_visible(True)
         self.window_search.set_size_request(640, 400)
-        # Add search term to the completion list
-        keywords = self.entry_find_text.get_text()
-        completion = self.entry_find_text.get_completion()
-        listmodel = completion.get_model()
-        listmodel.append([keywords])
 
         if not self.find_in_progress:
             self.abort_find = 0
@@ -1032,8 +1069,67 @@ class catfish:
             GObject.idle_add(task.next)
         else:
             self.abort_find = 1
+        
+    def on_entry_find_text_icon_clicked(self, widget, event, data):
+        """When the search/clear/stop icon is pressed, perform the 
+        appropriate action."""
+        if self.find_in_progress:
+            self.abort_find = 1
+        else:
+            self.entry_find_text.set_text('')
+            
+    # Application Menu
+    def on_menu_button_clicked(self, widget):
+        """When the menu button is clicked, display the appmenu."""
+        self.application_menu.popup(None, None, menu_position, 
+                                    self.application_menu, 3, 
+                                    Gtk.get_current_event_time())
+        
+    def on_application_menu_hide(self, widget):
+        """When the application menu is unfocused (menu item activated
+        or clicked elsewhere), unclick the button."""
+        self.menu_button.set_active(False)
+        
+    def on_checkbox_advanced_toggled(self, widget):
+        """When the Advanced Filters toggle is activated, show/hide the
+        advanced filters panel."""
+        self.sidebar.set_visible(widget.get_active())
+        if not widget.get_active():
+            self.disable_filters()
+            
+    # Update Locate Database Dialog
+    def on_menu_updatedb_activate(self, widget):
+        """Show the Update Locate Database dialog."""
+        self.dialog_updatedb.show()
+        self.dialog_updatedb.run()
+        self.dialog_updatedb.hide()
+    
+    def on_dialog_updatedb_run(self, widget):
+        """Request admin rights with gksudo and run updatedb."""
+        if self.updatedb_done:
+            self.dialog_updatedb.hide()
+        else:
+            self.dialog_updatedb.show()
+            self.updatedb_label_updating.set_visible(True)
+            return_code = subprocess.call(['gksudo', 'updatedb'])
+            if return_code == 0:
+                status = _('locatedb updated successfully.')
+            else:
+                status = _('An errror was encountered while updating locatedb.')
+            self.updatedb_label_done.set_visible(True)
+            self.updatedb_done = True
+            self.statusbar.push(self.statusbar.get_context_id('updatedb'), status)
+            
+    def on_menu_about_activate(self, widget):
+        """Show the About dialog."""
+        self.aboutdialog.show()
+        self.aboutdialog.run()
+        self.aboutdialog.hide()
 
+    # Search Results TreeView
     def on_treeview_files_row_activated(self, widget, path, column):
+        """When a row is activated (SPACE, ENTER, double-clicked), open
+        the file/folder if possible."""
         try:
             if self.options.file_action == 'open':
                 self.on_menu_open_activate(None)
@@ -1044,7 +1140,6 @@ class catfish:
 
     def on_treeview_files_button_pressed(self, treeview, event):
         """Show a popup menu for files or handle clicked links."""
-
         pri, sec = self.get_selected_filename(treeview)
         if event.button == 1:
             if pri == None:
@@ -1075,26 +1170,29 @@ class catfish:
                 self.menu_file.popup(None, None, None, None, event.button, event.time)
 
     def on_treeview_files_popup(self, treeview):
+        """Display right-click popup menu for the selected file."""
         pri, sec = self.get_selected_filename(treeview)
         if sec <> None:
             self.menu_file.popup(None, None, None, 3, Gtk.get_current_event_time())
 
     def on_menu_open_activate(self, menu):
+        """Open the selected file."""
         folder, filename = self.get_selected_filename(self.treeview_files)
         self.open_file(os.path.join(folder, filename))
 
     def on_menu_goto_activate(self, menu):
+        """Open the file manager in the selected file's directory."""
         folder, filename = self.get_selected_filename(self.treeview_files)
         self.open_file(folder)
 
     def on_menu_copy_activate(self, menu):
+        """Copy the selected file name to the clipboard."""
         folder, filename = self.get_selected_filename(self.treeview_files)
         clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         clipboard.set_text(os.path.join(folder, filename), -1)
 
     def on_menu_save_activate(self, menu):
         """Show a save dialog and possibly write the results to a file."""
-
         filename = self.get_save_dialog(self.window_search)
         if os.path.exists(filename):
             if not self.get_yesno_dialog(('The file %s already exists. Do you '
@@ -1113,75 +1211,60 @@ class catfish:
                 if self.options.debug: print 'Debug:', msg
                 self.get_error_dialog('The file %s could not be saved.'
                  % filename, self.window_search)
-                 
-    def show_suggestions(self, widget):
-        if not self.suggestion_pending:
-            self.suggestion_pending = True
-            while Gtk.events_pending(): Gtk.main_iteration()
-            query = widget.get_text()
-            results = self.suggestions.run(query, self.button_find_folder.get_filename())
-            
-            completion = self.entry_find_text.get_completion()
-            listmodel = completion.get_model()
-            listmodel.clear()
-            try:
-                for keyword in results:
-                    listmodel.append([keyword])
-            except TypeError:
-                pass
-            self.suggestion_pending = False
-            yield False
-                 
-    def on_entry_find_text_changed(self, widget):
-        self.reset_text_entry_icon()
-        task = self.show_suggestions(widget)
-        GObject.idle_add(task.next)
-            
-    def on_entry_find_text_activate(self, widget, event=None, data=None):
-        self.on_button_find_clicked(widget)
-        
-    def on_menu_button_clicked(self, widget):
-        self.application_menu.popup(None, None, menu_position, self.application_menu, 3, Gtk.get_current_event_time())
-        
-    def on_application_menu_hide(self, widget):
-        self.menu_button.set_active(False)
-        
-    def on_checkbox_advanced_toggled(self, widget):
-        self.sidebar.set_visible(widget.get_active())
-        if not widget.get_active():
-            self.disable_filters()
-        
+
+    # Advanced Filters Sidebar
     def on_time_filter_custom_toggled(self, widget):
+        """Enable/Disable the custom time filter button."""
         self.button_time_filter_custom.set_sensitive(widget.get_active())
+    
+    # Date Select Dialog    
+    def on_button_time_filter_custom_clicked(self, widget):
+        """Show the Custom Time filter dialog."""
+        self.date_dialog.show_all()
+        self.date_dialog.run()
+        self.date_dialog.hide()
         
+    def on_calendar_start_today_toggled(self, widget):
+        """Set the Start Date calendar to the current date and toggle
+        sensitivity if the today checkbox is enabled."""
+        if widget.get_active():
+            today = datetime.datetime.now()
+            self.calendar_start.select_month(today.month-1, today.year)
+            self.calendar_start.select_day(today.day)
+        self.calendar_start.set_sensitive(not widget.get_active())
+        
+    def on_calendar_end_today_toggled(self, widget):
+        """Set the End Date calendar to the current date and toggle
+        sensitivity if the today checkbox is enabled."""
+        if widget.get_active():
+            today = datetime.datetime.now()
+            self.calendar_end.select_month(today.month-1, today.year)
+            self.calendar_end.select_day(today.day)
+        self.calendar_end.set_sensitive(not widget.get_active())
+
     def on_type_filter_other_toggled(self, widget):
+        """Enable/Disable the custom file type filter button."""
         self.button_type_filter_other.set_sensitive(widget.get_active())
         self.on_filter_changed(widget)
         
-    def on_menu_about_activate(self, widget):
-        self.aboutdialog.show()
-        self.aboutdialog.run()
-        self.aboutdialog.hide()
+    # Mimetypes Dialog
+    def on_button_type_filter_other_clicked(self, widget):
+        """Show the Custom Mimetype filter dialog."""
+        self.mimetypes_dialog.show_all()
+        self.mimetypes_dialog.run()
+        self.mimetypes_dialog.hide()
         
-    def on_aboutdialog_response(self, widget, event):
-        self.aboutdialog.hide()
+    def on_radio_mimetype_custom_toggled(self, widget):
+        """Enable/Disable mimetype selection modes."""
+        self.entry_mimetype_custom.set_sensitive(widget.get_active())
         
-    def on_button_search_find_clicked(self, widget):
-        self.box_infobar.hide()
-        keywords = self.entry_find_text.get_text()
-        completion = self.entry_find_text.get_completion()
-        listmodel = completion.get_model()
-        listmodel.append([keywords])
-
-        if not self.find_in_progress:
-            self.abort_find = 0
-            
-            task = self.find(method='find', deepsearch=True)
-            GObject.idle_add(task.next)
-        else:
-            self.abort_find = 1
+    def on_radio_mimetype_existing_toggled(self, widget):
+        """Enable/Disable mimetype selection modes."""
+        self.combobox_mimetype_existing.set_sensitive(widget.get_active())
         
+    # Filter Change Event
     def on_filter_changed(self, widget):
+        """When a filter is changed, adjust the displayed results."""
         if self.scrolled_files.get_visible():
             self.find_in_progress = True
             messages = []
@@ -1221,73 +1304,24 @@ class catfish:
             self.window_search.get_window().set_cursor(None)
             self.window_search.set_title( _('Search results for \"%s\"') % self.keywords )
             self.find_in_progress = False
-            
-    def on_button_time_filter_custom_clicked(self, widget):
-        self.date_dialog.show_all()
-        self.date_dialog.run()
-        self.date_dialog.hide()
-        
-    def on_calendar_end_today_toggled(self, widget):
-        if widget.get_active():
-            today = datetime.datetime.now()
-            self.calendar_end.select_month(today.month-1, today.year)
-            self.calendar_end.select_day(today.day)
-        self.calendar_end.set_sensitive(not widget.get_active())
-        
-    def on_calendar_start_today_toggled(self, widget):
-        if widget.get_active():
-            today = datetime.datetime.now()
-            self.calendar_start.select_month(today.month-1, today.year)
-            self.calendar_start.select_day(today.day)
-        self.calendar_start.set_sensitive(not widget.get_active())
-        
-    def on_date_dialog_close(self, widget, data=None):
-        self.date_dialog.hide()
-        
-    def on_button_type_filter_other_clicked(self, widget):
-        self.mimetypes_dialog.show_all()
-        self.mimetypes_dialog.run()
-        self.mimetypes_dialog.hide()
-        
-    def on_radio_mimetype_custom_toggled(self, widget):
-        self.entry_mimetype_custom.set_sensitive(widget.get_active())
-        
-    def on_radio_mimetype_existing_toggled(self, widget):
-        self.combobox_mimetype_existing.set_sensitive(widget.get_active())
-        
-    def on_entry_find_text_icon_release(self, widget, event=None, data=None):
-        if self.find_in_progress:
+
+    # Deep Search Info/Status bar
+    def on_button_search_find_clicked(self, widget):
+        """When the deep search button is pressed, perform an additional
+        search using the 'find' command."""
+        self.box_infobar.hide()
+        keywords = self.entry_find_text.get_text()
+        completion = self.entry_find_text.get_completion()
+        listmodel = completion.get_model()
+        listmodel.append([keywords])
+
+        if not self.find_in_progress:
+            self.abort_find = 0
+            task = self.find(method='find', deepsearch=True)
+            GObject.idle_add(task.next)
+        else:
             self.abort_find = 1
-        else:
-            self.entry_find_text.set_text('')
-            
-    def disable_filters(self):
-        self.time_filter_any.set_active(True)
-        for checkbox in self.box_type_filter.get_children():
-            try:
-                checkbox.set_active(False)
-            except AttributeError:
-                pass
-    
-    def on_menu_updatedb_activate(self, widget):
-        self.dialog_updatedb.show()
-        self.dialog_updatedb.run()
-        self.dialog_updatedb.hide()
-    
-    def on_dialog_updatedb_run(self, widget):
-        if self.updatedb_done:
-            self.dialog_updatedb.hide()
-        else:
-            self.dialog_updatedb.show()
-            self.updatedb_label_updating.set_visible(True)
-            return_code = subprocess.call(['gksudo', 'updatedb'])
-            if return_code == 0:
-                status = _('locatedb updated successfully.')
-            else:
-                status = _('An errror was encountered while updating locatedb.')
-            self.updatedb_label_done.set_visible(True)
-            self.updatedb_done = True
-            self.statusbar.push(self.statusbar.get_context_id('updatedb'), status)
+
 
 catfish()
 Gtk.main()
