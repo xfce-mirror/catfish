@@ -427,6 +427,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
+                <signal name="clicked" handler="on_filter_changed" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -1007,11 +1008,12 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                 </child>
                 <child>
                   <object class="GtkButton" id="button_search_find">
-                    <property name="label" translatable="yes">Search thoroughly</property>
+                    <property name="label" translatable="yes">Deep Search</property>
                     <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
+                    <property name="tooltip_text" translatable="yes">Perform a deep search using 'find'</property>
                     <property name="use_action_appearance">False</property>
                     <signal name="clicked" handler="on_button_search_find_clicked" swapped="no"/>
                   </object>

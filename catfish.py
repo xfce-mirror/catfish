@@ -664,16 +664,18 @@ class catfish:
                 pass
                 # TODO ADD SUPPORT FOR CUSTOM
         if other:
-            wanted_types.append('notarealtype')
             if self.radio_mimetype_existing.get_active():
                 model = self.combobox_mimetype_existing.get_model()
                 tree_iter = self.combobox_mimetype_existing.get_active_iter()
-                selected_mime = model[tree_iter][0]
-                selected_mime = selected_mime.split('/')
-                if selected_mime[0] == mime_type[0] and selected_mime[1] == mime_type[1]:
-                    mime_type_is_wanted = True
+                if model and tree_iter:
+                    wanted_types.append('notarealtype')
+                    selected_mime = model[tree_iter][0]
+                    selected_mime = selected_mime.split('/')
+                    if selected_mime[0] == mime_type[0] and selected_mime[1] == mime_type[1]:
+                        mime_type_is_wanted = True
             else:
                 extensions = self.entry_mimetype_custom.get_text()
+                if len(extensions) > 0: wanted_types.append('notarealtype')
                 if ',' in extensions:
                     split = extensions.split(',')
                 else:
@@ -813,7 +815,7 @@ class catfish:
             if ('*' in keywords or '?' in keywords) and not wildcards:
                 status_icon = Gtk.STOCK_CANCEL
                 messages.append([_('The search backend doesn\'t support wildcards.'), None])
-                status = _('No files found for "%s".') % keywords
+                status = _('No files found.')
             else:
                 try:
                     if default[:7] == 'dbus://':
@@ -889,9 +891,9 @@ class catfish:
                     else:
                         status_icon = Gtk.STOCK_INFO
                         messages.append([_('No files were found.'), None])
-                    status = _('No files found for "%s".') % keywords
+                    status = _('No files found.')
                 else:
-                    status = _('%s files found for "%s".') % (len(listmodel), keywords)
+                    status = _('%s files found.') % str(len(listmodel))
             for message, action in messages:
                 icon = [None, self.get_icon_pixbuf(status_icon)][message == messages[0][0]]
                 listmodel.append([icon, message, None, None, action])
@@ -1109,15 +1111,20 @@ class catfish:
         
     def on_checkbox_advanced_toggled(self, widget):
         self.sidebar.set_visible(widget.get_active())
+        if not widget.get_active():
+            self.disable_filters()
         
     def on_time_filter_custom_toggled(self, widget):
         self.button_time_filter_custom.set_sensitive(widget.get_active())
         
     def on_type_filter_other_toggled(self, widget):
         self.button_type_filter_other.set_sensitive(widget.get_active())
+        self.on_filter_changed(widget)
         
     def on_menu_about_activate(self, widget):
         self.aboutdialog.show()
+        self.aboutdialog.run()
+        self.aboutdialog.hide()
         
     def on_aboutdialog_response(self, widget, event):
         self.aboutdialog.hide()
@@ -1161,9 +1168,9 @@ class catfish:
             if len(listmodel) == 0:
                 status_icon = Gtk.STOCK_INFO
                 messages.append([_('No files were found.'), None])
-                status = _('No files found for "%s".') % self.keywords
+                status = _('No files found.')
             else:
-                status = _('%s files found for "%s".') % (len(listmodel), self.keywords)
+                status = _('%s files found.') % str(len(listmodel))
             for message, action in messages:
                 icon = [None, self.get_icon_pixbuf(status_icon)][message == messages[0][0]]
                 listmodel.append([icon, message, None, None, action])
@@ -1213,6 +1220,14 @@ class catfish:
             self.abort_find = 1
         else:
             self.entry_find_text.set_text('')
+            
+    def disable_filters(self):
+        self.time_filter_any.set_active(True)
+        for checkbox in self.box_type_filter.get_children():
+            try:
+                checkbox.set_active(False)
+            except AttributeError:
+                pass
         
 
 catfish()
