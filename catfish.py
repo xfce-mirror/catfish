@@ -440,7 +440,11 @@ class catfish:
         self.box_calendar_end = self.builder.get_object('box_calendar_end')
         self.box_calendar_start = self.builder.get_object('box_calendar_start')
         self.calendar_start = Gtk.Calendar()
+        self.calendar_start.connect("day-selected", self.on_filter_changed)
+        self.calendar_start.connect("month-changed", self.on_filter_changed)
         self.calendar_end = Gtk.Calendar()
+        self.calendar_end.connect("day-selected", self.on_filter_changed)
+        self.calendar_end.connect("month-changed", self.on_filter_changed)
         self.box_calendar_start.pack_start(self.calendar_start, True, True, 0)
         self.box_calendar_end.pack_start(self.calendar_end, True, True, 0)
         
