@@ -106,7 +106,7 @@ class suggestions(list):
         
         Return the number of found results."""
         query = "locate -i %s --existing -n 20" % os.path.join(folder, "*%s*" % keywords)
-        self.process = subprocess.Popen(query, stdout=subprocess.PIPE, shell=True)
+        self.process = subprocess.Popen(query, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         result_count = 0
         for filepath in self.process.communicate()[0].split('\n'):
             filename = split_filename(filepath)[1].lower()
