@@ -205,7 +205,7 @@ class shell_query:
             command += ' "*%s*"' % keywords
         else:
             command += ' "%s"' % keywords
-        self.process = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
+        self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         return self.process.stdout
     def status(self): return self.err or self.process.poll()
 

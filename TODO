@@ -3,7 +3,5 @@ TODO:
  . show text excerpts and meta information
  . remember last chosen search method and fulltext state
  . drag'n drop of filenames
- . add an 'update index' button
- . fix occasional broken pipes
  . optional plain command line mode
  . customizable search methods
