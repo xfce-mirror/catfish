@@ -921,12 +921,14 @@ This requires sudo (admin) powers.</property>
                             <property name="sensitive">False</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
+                            <property name="halign">start</property>
+                            <property name="margin_left">18</property>
                             <property name="use_action_appearance">False</property>
                             <signal name="clicked" handler="on_button_time_filter_custom_clicked" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
-                            <property name="fill">True</property>
+                            <property name="fill">False</property>
                             <property name="position">3</property>
                           </packing>
                         </child>
@@ -1059,6 +1061,8 @@ This requires sudo (admin) powers.</property>
                             <property name="sensitive">False</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
+                            <property name="halign">start</property>
+                            <property name="margin_left">18</property>
                             <property name="use_action_appearance">False</property>
                             <signal name="clicked" handler="on_button_type_filter_other_clicked" swapped="no"/>
                           </object>
