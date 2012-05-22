@@ -354,6 +354,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
     <property name="destroy_with_parent">True</property>
     <property name="type_hint">dialog</property>
     <property name="has_resize_grip">False</property>
+    <signal name="delete-event" handler="on_dialog_updatedb_delete_event" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox3">
         <property name="can_focus">False</property>
@@ -395,6 +396,9 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                 <property name="fill">True</property>
                 <property name="position">1</property>
               </packing>
+            </child>
+            <child>
+              <placeholder/>
             </child>
           </object>
           <packing>

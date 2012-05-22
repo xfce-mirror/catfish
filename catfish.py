@@ -472,6 +472,8 @@ class catfish:
         self.dialog_updatedb = self.builder.get_object('dialog_updatedb')
         self.updatedb_label_updating = self.builder.get_object('updatedb_label_updating')
         self.updatedb_label_done = self.builder.get_object('updatedb_label_done')
+        self.updatedb_button_cancel = self.builder.get_object('updatedb_button_cancel')
+        self.updatedb_button_ok = self.builder.get_object('updatedb_button_ok')
 
         self.window_search.connect("key-press-event", self.on_keypress)
         self.builder.connect_signals(self)
@@ -1113,23 +1115,53 @@ class catfish:
         """Show the Update Locate Database dialog."""
         self.dialog_updatedb.show()
         self.dialog_updatedb.run()
-        self.dialog_updatedb.hide()
+        
+    def on_dialog_updatedb_delete_event(self, widget, event):
+        """Prevent updatedb dialog from being closed if in progress."""
+        try:
+            if self.updatedb_in_progress:
+                return True
+            else:
+                self.updatedb_label_updating.set_visible(False)
+                self.updatedb_label_done.set_visible(False)
+                return False
+        except AttributeError:
+            self.updatedb_label_updating.set_visible(False)
+            self.updatedb_label_done.set_visible(False)
+            return False
     
     def on_dialog_updatedb_run(self, widget):
         """Request admin rights with gksudo and run updatedb."""
         if self.updatedb_done:
             self.dialog_updatedb.hide()
+            self.updatedb_done = False
+            self.updatedb_label_updating.set_visible(False)
+            self.updatedb_label_done.set_visible(False)
         else:
-            self.dialog_updatedb.show()
+            def updatedb_subprocess():
+                done = self.updatedb_process.poll() != None
+                if done:
+                    self.updatedb_button_cancel.set_sensitive(True)
+                    self.updatedb_button_ok.set_sensitive(True)
+                    return_code = self.updatedb_process.returncode
+                    if return_code == 0:
+                        status = _('Locate database updated successfully.')
+                    else:
+                        status = _('An errror occurred while updating locatedb.')
+                    self.updatedb_done = True
+                    self.updatedb_in_progress = False
+                    self.updatedb_label_done.set_label(status)
+                    self.updatedb_label_done.set_visible(True)
+                return not done
             self.updatedb_label_updating.set_visible(True)
-            return_code = subprocess.call(['gksudo', 'updatedb'])
-            if return_code == 0:
-                status = _('locatedb updated successfully.')
-            else:
-                status = _('An errror was encountered while updating locatedb.')
-            self.updatedb_label_done.set_visible(True)
-            self.updatedb_done = True
-            self.statusbar.push(self.statusbar.get_context_id('updatedb'), status)
+            self.updatedb_in_progress = True
+            self.updatedb_button_cancel.set_sensitive(False)
+            self.updatedb_button_ok.set_sensitive(False)
+            self.updatedb_process = subprocess.Popen(['gksudo', 'updatedb'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+            GObject.timeout_add(1000, updatedb_subprocess)
+
+            
+            
             
     def on_menu_about_activate(self, widget):
         """Show the About dialog."""
