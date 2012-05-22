@@ -64,7 +64,7 @@ class suggestions:
         self.locate_results = []
         self.max_results = 10
 
-    def zeitgeist_query(self, keywords):
+    def zeitgeist_query(self, keywords, folder):
         self.zeitgeist_results = []
         event_template = Event()
         time_range = TimeRange.from_seconds_ago(60 * 3600 * 24) # 60 days at most
@@ -83,7 +83,8 @@ class suggestions:
             for subject in event.get_subjects():
                 if subject.uri[:7] == 'file://':
                     filename = split_filename(subject.uri)[1].lower()
-                    if keywords.lower() in filename and filename not in self.zeitgeist_results:
+                    if keywords.lower() in filename and filename not in self.zeitgeist_results and folder.lower() in filename:
+                        print filename
                         self.zeitgeist_results.append(filename)
     
     def locate_query(self, keywords, folder):
@@ -99,7 +100,7 @@ class suggestions:
         if len(keywords) > 1:
             results = []
             try:
-                self.zeitgeist_query(keywords)
+                self.zeitgeist_query(keywords, folder)
             except NameError:
                 pass
             if len(self.zeitgeist_results) < self.max_results:
