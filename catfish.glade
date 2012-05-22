@@ -105,7 +105,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
         <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Advanced</property>
+        <property name="label" translatable="yes">Advanced Filtering</property>
         <property name="use_underline">True</property>
         <signal name="toggled" handler="on_checkbox_advanced_toggled" swapped="no"/>
       </object>
@@ -118,13 +118,13 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
       </object>
     </child>
     <child>
-      <object class="GtkMenuItem" id="menu_about">
+      <object class="GtkImageMenuItem" id="menu_about">
+        <property name="label">gtk-about</property>
         <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">About</property>
         <property name="use_underline">True</property>
-        <signal name="activate" handler="on_menu_about_activate" swapped="no"/>
+        <property name="use_stock">True</property>
       </object>
     </child>
   </object>
@@ -574,6 +574,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                     <property name="orientation">vertical</property>
                     <child>
                       <object class="GtkFileChooserButton" id="button_find_folder">
+                        <property name="width_request">150</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="halign">start</property>
@@ -610,8 +611,8 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                     <signal name="icon-release" handler="on_entry_find_text_icon_release" swapped="no"/>
                   </object>
                   <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">False</property>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
                     <property name="position">1</property>
                   </packing>
                 </child>
@@ -667,6 +668,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                 <property name="can_focus">False</property>
                 <child>
                   <object class="GtkBox" id="sidebar">
+                    <property name="width_request">144</property>
                     <property name="can_focus">False</property>
                     <property name="no_show_all">True</property>
                     <property name="margin_right">6</property>

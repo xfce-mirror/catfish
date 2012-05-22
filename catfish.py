@@ -377,6 +377,7 @@ class catfish:
         self.results = []
         
         self.suggestion_pending = False
+        self.clear_deepsearch = False
         
         self.window_search.show_all()
 
@@ -767,24 +768,30 @@ class catfish:
                     return True
         return False
 
-    def find(self, widget=None, method='locate'):
+    def find(self, widget=None, method='locate', deepsearch=False):
         """Do the actual search."""
         if self.checkbox_find_fulltext.get_active():
             method = 'find'
+        if self.clear_deepsearch:
+            deepsearch=False
         self.box_infobar.hide()
         self.spinner.show()
         self.find_in_progress = True
         self.reset_text_entry_icon()
-        self.results = []
+        if not deepsearch:
+            self.results = []
         self.window_search.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
         self.window_search.set_title(_('Searching for "%s"') % self.entry_find_text.get_text())
         self.statusbar.push(self.statusbar.get_context_id('results'), _('Searching...'))
         while Gtk.events_pending(): Gtk.main_iteration()
 
+        if deepsearch:
+            listmodel = self.treeview_files.get_model()
+        else:
         # Reset treeview
-        listmodel = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, str)
-        self.treeview_files.set_model(listmodel)
-        self.treeview_files.columns_autosize()
+            listmodel = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, str)
+            self.treeview_files.set_model(listmodel)
+            self.treeview_files.columns_autosize()
 
         # Retrieve search parameters
         keywords = self.entry_find_text.get_text()
@@ -860,26 +867,48 @@ class catfish:
                         modified = time.strftime(time_format, time.gmtime(filestat.st_mtime))
                         name = name.replace('&', '&amp;')
                         if not self.options.icons_large and not self.options.thumbnails:
-                            if self.file_is_wanted(filename, mime_type, modified):
-                                listmodel.append([icon, name, size, path, modified])
-                            self.results.append([mime_type, icon, name, size, path, modified])
+                            if deepsearch:
+                                result = [mime_type, icon, name, size, path, modified]
+                                if result not in self.results:
+                                    if self.file_is_wanted(filename, mime_type, modified):
+                                        listmodel.append([icon, name, size, path, modified])
+                                    self.results.append([mime_type, icon, name, size, path, modified])
+                            else:
+                                if self.file_is_wanted(filename, mime_type, modified):
+                                    listmodel.append([icon, name, size, path, modified])
+                                self.results.append([mime_type, icon, name, size, path, modified])
                         else:
                             path = path.replace('&', '&amp;')
                             if modified <> '':
                                 modified = os.linesep + modified
-                            if self.file_is_wanted(filename, mime_type, modified):
-                                listmodel.append([icon, '%s %s%s%s%s' % (name
+                            if deepsearch:
+                                result = [mime_type, icon, '%s %s%s%s%s' % (name
+                                , self.format_size(size), os.linesep, path
+                                , modified), -1, name, path]
+                                if result not in self.results:
+                                    if self.file_is_wanted(filename, mime_type, modified):
+                                        listmodel.append([icon, '%s %s%s%s%s' % (name
+                                        , self.format_size(size), os.linesep, path
+                                        , modified), -1, name, path])
+                                    self.results.append([mime_type, icon, '%s %s%s%s%s' % (name
+                                    , self.format_size(size), os.linesep, path
+                                    , modified), -1, name, path])
+                            else:
+                                if self.file_is_wanted(filename, mime_type, modified):
+                                    listmodel.append([icon, '%s %s%s%s%s' % (name
+                                    , self.format_size(size), os.linesep, path
+                                    , modified), -1, name, path])
+                                self.results.append([mime_type, icon, '%s %s%s%s%s' % (name
                                 , self.format_size(size), os.linesep, path
                                 , modified), -1, name, path])
-                            self.results.append([mime_type, icon, '%s %s%s%s%s' % (name
-                            , self.format_size(size), os.linesep, path
-                            , modified), -1, name, path])
                     except Exception, msg:
                         if self.options.debug: print 'Debug:', msg
                         pass # Ignore inaccessible files
-                    self.treeview_files.set_model(listmodel)
+                    if not deepsearch:
+                        self.treeview_files.set_model(listmodel)
                     yield True
                 if len(listmodel) == 0:
+                    self.clear_deepsearch = True
                     if errors_ignore and query.status():
                         status_icon = Gtk.STOCK_CANCEL
                         messages.append([_('Fatal error, search was aborted.'), None])
@@ -893,13 +922,15 @@ class catfish:
                         messages.append([_('No files were found.'), None])
                     status = _('No files found.')
                 else:
+                    self.clear_deepsearch = False
                     status = _('%s files found.') % str(len(listmodel))
             for message, action in messages:
                 icon = [None, self.get_icon_pixbuf(status_icon)][message == messages[0][0]]
                 listmodel.append([icon, message, None, None, action])
             self.statusbar.push(self.statusbar.get_context_id('results'), status)
-        self.treeview_files.set_model(listmodel)
-        listmodel.set_sort_func(4, self.compare_dates, None)
+        if not deepsearch:
+            self.treeview_files.set_model(listmodel)
+            listmodel.set_sort_func(4, self.compare_dates, None)
 
         self.window_search.get_window().set_cursor(None)
         self.window_search.set_title( _('Search results for \"%s\"') % keywords )
@@ -965,7 +996,7 @@ class catfish:
             self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CANCEL)
             self.entry_find_text.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Cancel search') )
         elif len(self.entry_find_text.get_text()) > 0:
-            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CLOSE)
+            self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CLEAR)
             self.entry_find_text.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Clear search terms') )
         else:
             self.entry_find_text.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
@@ -1138,7 +1169,8 @@ class catfish:
 
         if not self.find_in_progress:
             self.abort_find = 0
-            task = self.find(method='find')
+            
+            task = self.find(method='find', deepsearch=True)
             GObject.idle_add(task.next)
         else:
             self.abort_find = 1
@@ -1166,10 +1198,12 @@ class catfish:
                     if self.file_is_wanted(filename, mime_type, modified):
                         listmodel.append(filegroup[1:])
             if len(listmodel) == 0:
+                self.clear_deepsearch = True
                 status_icon = Gtk.STOCK_INFO
                 messages.append([_('No files were found.'), None])
                 status = _('No files found.')
             else:
+                self.clear_deepsearch = False
                 status = _('%s files found.') % str(len(listmodel))
             for message, action in messages:
                 icon = [None, self.get_icon_pixbuf(status_icon)][message == messages[0][0]]
