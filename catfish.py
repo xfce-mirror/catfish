@@ -473,6 +473,7 @@ class catfish:
         self.updatedb_label_updating = self.builder.get_object('updatedb_label_updating')
         self.updatedb_label_done = self.builder.get_object('updatedb_label_done')
 
+        self.window_search.connect("key-press-event", self.on_keypress)
         self.builder.connect_signals(self)
 
     def compare_dates(self, model, row1, row2, user_data):
@@ -1049,6 +1050,16 @@ class catfish:
     def on_window_search_destroy(self, widget):
         """When the application window is closed, end the program."""
         Gtk.main_quit()
+        
+    def on_keypress(self, widget, event):
+        """When a keypress is detected, do the following:
+        
+        ESCAPE      Stop search/Clear Search terms"""
+        if str(Gdk.keyval_name(event.keyval)) == 'Escape':
+            if self.find_in_progress:
+                self.abort_find = 1
+            else:
+                self.entry_find_text.set_text('')
         
     # Keyword/Search Terms entry
     def on_entry_find_text_changed(self, widget):
