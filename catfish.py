@@ -379,6 +379,7 @@ class catfish:
         
         self.suggestion_pending = False
         self.clear_deepsearch = False
+        self.updatedb_done = False
         
         self.window_search.show_all()
 
@@ -455,6 +456,10 @@ class catfish:
         self.entry_mimetype_custom = self.builder.get_object('entry_mimetype_custom')
         self.radio_mimetype_existing = self.builder.get_object('radio_mimetype_existing')
         self.load_mimetypes()
+        
+        self.dialog_updatedb = self.builder.get_object('dialog_updatedb')
+        self.updatedb_label_updating = self.builder.get_object('updatedb_label_updating')
+        self.updatedb_label_done = self.builder.get_object('updatedb_label_done')
 
         self.builder.connect_signals(self)
 
@@ -1263,7 +1268,26 @@ class catfish:
                 checkbox.set_active(False)
             except AttributeError:
                 pass
-        
+    
+    def on_menu_updatedb_activate(self, widget):
+        self.dialog_updatedb.show()
+        self.dialog_updatedb.run()
+        self.dialog_updatedb.hide()
+    
+    def on_dialog_updatedb_run(self, widget):
+        if self.updatedb_done:
+            self.dialog_updatedb.hide()
+        else:
+            self.dialog_updatedb.show()
+            self.updatedb_label_updating.set_visible(True)
+            return_code = subprocess.call(['gksudo', 'updatedb'])
+            if return_code == 0:
+                status = _('locatedb updated successfully.')
+            else:
+                status = _('An errror was encountered while updating locatedb.')
+            self.updatedb_label_done.set_visible(True)
+            self.updatedb_done = True
+            self.statusbar.push(self.statusbar.get_context_id('updatedb'), status)
 
 catfish()
 Gtk.main()
