@@ -231,7 +231,7 @@ class catfish:
         else:
             # Unknown desktop? Just see what we have then
             # Guess suitable fileman
-            commands = ['Nautilus', 'Thunar', 'konqueror', 'marlin', 'pcmanfm']
+            commands = ['nautilus', 'thunar', 'konqueror', 'marlin', 'pcmanfm']
             default_fileman = ''
             for path in os.environ.get('PATH', '/usr/bin').split(os.pathsep):
                 for command in commands:
@@ -1234,23 +1234,26 @@ class catfish:
     def on_menu_save_activate(self, menu):
         """Show a save dialog and possibly write the results to a file."""
         filename = self.get_save_dialog(self.window_search)
-        if os.path.exists(filename):
-            if not self.get_yesno_dialog(('The file %s already exists. Do you '
-             + 'want to overwrite it?') % filename, self.window_search):
-                filename = None
-        if filename <> None:
-            try:
-                save = open(filename, 'w')
-                listmodel = self.treeview_files.get_model()
-                for item in range(len(listmodel)):
-                    treeiter = listmodel.iter_nth_child(None, item)
-                    name, path = self.get_selected_filename(self.treeview_files, treeiter)
-                    save.write(os.path.join(name, path) + os.linesep)
-                save.close()
-            except Exception, msg:
-                if self.options.debug: print 'Debug:', msg
-                self.get_error_dialog('The file %s could not be saved.'
-                 % filename, self.window_search)
+        try:
+            if os.path.exists(filename):
+                if not self.get_yesno_dialog(('The file %s already exists. Do you '
+                 + 'want to overwrite it?') % filename, self.window_search):
+                    filename = None
+            if filename <> None:
+                try:
+                    save = open(filename, 'w')
+                    listmodel = self.treeview_files.get_model()
+                    for item in range(len(listmodel)):
+                        treeiter = listmodel.iter_nth_child(None, item)
+                        name, path = self.get_selected_filename(self.treeview_files, treeiter)
+                        save.write(os.path.join(name, path) + os.linesep)
+                    save.close()
+                except Exception, msg:
+                    if self.options.debug: print 'Debug:', msg
+                    self.get_error_dialog('The file %s could not be saved.'
+                     % filename, self.window_search)
+        except TypeError:
+            pass
 
     # Advanced Filters Sidebar
     def on_time_filter_custom_toggled(self, widget):
