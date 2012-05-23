@@ -878,7 +878,7 @@ class catfish:
 
             # Set display options
             if not self.options.icons_large and not self.options.thumbnails:
-                icon_size = Gtk.IconSize.SMALL_TOOLBAR
+                icon_size = Gtk.IconSize.MENU
             else:
                 icon_size = Gtk.IconSize.DIALOG
             if not self.options.time_iso:
