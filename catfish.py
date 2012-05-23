@@ -12,7 +12,7 @@
 import sys
 
 try:
-    import os, stat, time, md5, optparse, subprocess, fnmatch, re, datetime, mimetypes
+    import os, stat, time, md5, optparse, subprocess, re, datetime, mimetypes
 
     from os.path import split as split_filename
 
@@ -46,23 +46,23 @@ app_version = '0.4.0'
 
 _ = gettext.gettext # i18n shortcut
 
-import itertools
+from itertools import permutations
 
 def string_regex(string):
     keywords = string.split(' ')
-    permutations = []
-    perm = itertools.permutations(keywords)
+    perms = []
+    perm = permutations(keywords)
     p = perm.next()
     regex = ""
     try:
         while p != None:
-            permutations.append(p)
+            perms.append(p)
             p = perm.next()
     except StopIteration:
         pass
     
     first_string = True
-    for permutation in permutations:
+    for permutation in perms:
         strperm = ""
         first = True
         for string in permutation:
@@ -694,7 +694,6 @@ class catfish:
 
     def string_wild_match(self, string, keyword, exact):
         if exact:
-            #return fnmatch.fnmatch(string, keyword)
             return keyword in string
         else:
             keyword = keyword.lower()
@@ -861,6 +860,7 @@ class catfish:
             listmodel = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, str)
             self.treeview_files.set_model(listmodel)
             self.treeview_files.columns_autosize()
+            listmodel.set_sort_column_id(1, Gtk.SortType.ASCENDING)
 
         # Retrieve search parameters
         keywords = self.entry_find_text.get_text()
