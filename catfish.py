@@ -46,6 +46,38 @@ app_version = '0.4.0'
 
 _ = gettext.gettext # i18n shortcut
 
+import itertools
+
+def string_regex(string):
+    keywords = string.split(' ')
+    permutations = []
+    perm = itertools.permutations(keywords)
+    p = perm.next()
+    regex = ""
+    try:
+        while p != None:
+            permutations.append(p)
+            p = perm.next()
+    except StopIteration:
+        pass
+    
+    first_string = True
+    for permutation in permutations:
+        strperm = ""
+        first = True
+        for string in permutation:
+            if first:
+                first = False
+                strperm += string
+            else:
+                strperm += "(.)*" + string
+        if first_string:
+            first_string = False
+            regex = strperm
+        else:
+            regex += '|' + strperm
+    return regex
+
 def detach_cb(menu, widget):
     menu.detach()
 
@@ -190,9 +222,12 @@ class shell_query:
             self.err = 'Program %s is unavailable' % options[0]
     def run(self, keywords, folder, exact, hidden, limit):
         (binary, daemon, default, case, nocase, limit_results, wildcards
-            , file_manual, path_manual, exact_manual, errors_ignore
+            , file_manual, path_manual, exact_manual, errors_ignore, use_regex
             ) = self.options
-        command = default % binary
+        if 'locate' in binary and '*' not in keywords:
+            command = default % binary + ' --regex'
+        else:
+            command = default % binary
         if exact:
             command += ' ' + case
         else:
@@ -201,9 +236,12 @@ class shell_query:
             command += ' ' + limit_results
         #if wildcards:
         #    keywords = keywords.replace(' ', '*')
+        if use_regex:
+            keywords = string_regex(keywords)
         if file_manual:
             command += ' "*%s*"' % keywords
         else:
+            #command += ' "%s"' % keywords
             command += ' "%s"' % keywords
         self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         return self.process.stdout
@@ -635,28 +673,38 @@ class catfish:
         method_name = [method, 'locate'][method=='slocate']
         methods = {
             'find': (method, '', '%s "' + folder + '" -ignore_readdir_race -noleaf',
-                '-wholename', '-iwholename', '', 1, 1, 0, 0, 0),
+                '-wholename', '-iwholename', '', 1, 1, 0, 0, 0, 0),
             'locate': (method, '', '%s', '', '-i', '',
-                1, 0, 1, 0, 0),
+                1, 0, 1, 0, 0, 1),
             'tracker': ('tracker-search', 'trackerd', '%s', '', '', '-l %i' % limit,
-                0, 0, 1, 1, 0),
+                0, 0, 1, 1, 0, 0),
             'doodle': (method, '', '%s', '', '-i', '',
-                0, 0, 0, 0, 1),
+                0, 0, 0, 0, 1, 0),
             'beagle': ('beagle-query', 'beagled', '%s', '', '', '--max-hits=%i' % limit,
-                0, 0, 1, 1, 0),
+                0, 0, 1, 1, 0, 0),
             'strigi': ('strigidaemon', 'strigidaemon', 'dbus://%s', '', '', '',
-                1, 0, 1, 1, 0),
+                1, 0, 1, 1, 0, 0),
             'pinot': ('pinot', 'pinot-dbus-daemon', 'dbus://%s', '', '', '',
-                1, 0, 1, 1, 0)
+                1, 0, 1, 1, 0, 0)
             }
         try:
             return methods[method_name]
         except Exception:
-            return method, '', '%s', '', '', '', 0, 0, 0, 0, 0
+            return method, '', '%s', '', '', '', 0, 0, 0, 0, 0, 0
 
     def string_wild_match(self, string, keyword, exact):
-        if not exact: keyword = '*' + keyword + '*'
-        return fnmatch.fnmatch(string.lower(), keyword.lower())
+        if exact:
+            #return fnmatch.fnmatch(string, keyword)
+            return keyword in string
+        else:
+            keyword = keyword.lower()
+            string = string.lower()
+            keywords = keyword.split(' ')
+            for key in keywords:
+                if key not in string:
+                    return False
+            return True
+        
         
     def map_mimetype(self, mime):
         if mime == 'documents':
@@ -826,7 +874,7 @@ class catfish:
             # Generate search command
             options = self.get_find_options(method, folder, limit)
             (a, daemon, default, a, a, a, wildcards, file_manual, path_manual
-                , exact_manual, errors_ignore) = options
+                , exact_manual, errors_ignore, use_regex) = options
 
             # Set display options
             if not self.options.icons_large and not self.options.thumbnails:
@@ -855,6 +903,7 @@ class catfish:
                     query = generic_query()
                 for filename in query.run(keywords, folder, exact, hidden, limit):
                     if self.abort_find or len(listmodel) == limit: break
+                    
                     filename = filename.split(os.linesep)[0]
                     # Convert uris to filenames
                     if filename[:7] == 'file://':
@@ -865,7 +914,7 @@ class catfish:
                         filename = filename[:filename.index('?')]
                     path, name = os.path.split(filename)
                     if (path_manual or exact_manual) and not fulltext:
-                        if not self.string_wild_match(name, keywords, exact):
+                        if '*' not in keywords and not self.string_wild_match(name, keywords, exact):
                             yield True
                             continue
                     if path_manual and not folder in path:
