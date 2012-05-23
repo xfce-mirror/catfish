@@ -1360,7 +1360,9 @@ class catfish:
         if self.scrolled_files.get_visible():
             self.find_in_progress = True
             messages = []
+            sort_settings = self.treeview_files.get_model().get_sort_column_id()
             listmodel = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, str)
+            listmodel.set_sort_column_id(sort_settings[0], sort_settings[1])
             self.treeview_files.set_model(listmodel)
             self.treeview_files.columns_autosize()
             for filegroup in self.results:
