@@ -241,7 +241,6 @@ class shell_query:
         if file_manual:
             command += ' "*%s*"' % keywords
         else:
-            #command += ' "%s"' % keywords
             command += ' "%s"' % keywords
         self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         return self.process.stdout
@@ -388,7 +387,7 @@ class catfish:
         completion.set_text_column(0)
 
         # Retrieve available search methods
-        methods = ['find', 'locate', 'slocate', 'tracker', 'doodle', 'beagle']
+        methods = ['find', 'locate', 'slocate', 'tracker', 'doodle']
         # DBus allows us to have two more methods
         if 'dbus' in globals():
             for method in ('strigi', 'pinot'):
@@ -680,8 +679,6 @@ class catfish:
                 0, 0, 1, 1, 0, 0),
             'doodle': (method, '', '%s', '', '-i', '',
                 0, 0, 0, 0, 1, 0),
-            'beagle': ('beagle-query', 'beagled', '%s', '', '', '--max-hits=%i' % limit,
-                0, 0, 1, 1, 0, 0),
             'strigi': ('strigidaemon', 'strigidaemon', 'dbus://%s', '', '', '',
                 1, 0, 1, 1, 0, 0),
             'pinot': ('pinot', 'pinot-dbus-daemon', 'dbus://%s', '', '', '',
