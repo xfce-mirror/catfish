@@ -1116,6 +1116,8 @@ class catfish:
             
     def on_entry_find_text_activate(self, widget):
         """Initiate the search thread."""
+        if len(self.entry_find_text.get_text()) == 0:
+            return
         self.scrolled_files.set_visible(True)
         self.window_search.set_size_request(640, 400)
 
