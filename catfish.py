@@ -15,6 +15,7 @@ try:
     import os, stat, time, md5, optparse, subprocess, re, datetime, mimetypes
 
     from os.path import split as split_filename
+    from shutil import copy2
 
     import locale, gettext
     from gi.repository import GObject, Gtk, Gdk, GdkPixbuf, Pango
@@ -594,14 +595,16 @@ class catfish:
         SaveFile.destroy()
         return response == Gtk.ResponseType.YES
 
-    def get_save_dialog(self, parent=None):
+    def get_save_dialog(self, parent=None, default_filename=None):
         """Display save dialog and return filename or None."""
 
         buttons = (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
             Gtk.STOCK_SAVE, Gtk.ResponseType.REJECT)
-        SaveFile = Gtk.FileChooserDialog(_('Save list to file'), parent,
+        SaveFile = Gtk.FileChooserDialog(_('Save "%s" as...') % default_filename, parent,
             Gtk.FileChooserAction.SAVE, buttons)
         SaveFile.set_default_response(Gtk.ResponseType.REJECT)
+        SaveFile.set_current_name(default_filename)
+        SaveFile.set_do_overwrite_confirmation(True)
         response = SaveFile.run()
         filename = SaveFile.get_filename()
         SaveFile.destroy()
@@ -1287,24 +1290,20 @@ class catfish:
         folder, filename = self.get_selected_filename(self.treeview_files)
         clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         clipboard.set_text(os.path.join(folder, filename), -1)
+        clipboard.store()
 
     def on_menu_save_activate(self, menu):
         """Show a save dialog and possibly write the results to a file."""
-        filename = self.get_save_dialog(self.window_search)
+        folder, original_file = self.get_selected_filename(self.treeview_files)
+        filename = self.get_save_dialog(self.window_search, original_file)
         try:
             if os.path.exists(filename):
-                if not self.get_yesno_dialog(('The file %s already exists. Do you '
+                if not self.get_yesno_dialog(('The file %s already exists.  Do you '
                  + 'want to overwrite it?') % filename, self.window_search):
                     filename = None
             if filename <> None:
                 try:
-                    save = open(filename, 'w')
-                    listmodel = self.treeview_files.get_model()
-                    for item in range(len(listmodel)):
-                        treeiter = listmodel.iter_nth_child(None, item)
-                        name, path = self.get_selected_filename(self.treeview_files, treeiter)
-                        save.write(os.path.join(name, path) + os.linesep)
-                    save.close()
+                    copy2(os.path.join(folder, original_file), filename)
                 except Exception, msg:
                     if self.options.debug: print 'Debug:', msg
                     self.get_error_dialog('The file %s could not be saved.'

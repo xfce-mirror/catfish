@@ -118,7 +118,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_updatedb">
-        <property name="label" translatable="yes">Update locatedb (Admin)</property>
+        <property name="label" translatable="yes">Update Search Index</property>
         <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
@@ -350,7 +350,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
   <object class="GtkDialog" id="dialog_updatedb">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
-    <property name="title" translatable="yes">Update Search Database</property>
+    <property name="title" translatable="yes">Update Search Index</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
     <property name="window_position">center</property>
@@ -447,7 +447,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Update Search Database&lt;/b&gt;&lt;/big&gt;</property>
+                        <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Update Search Index&lt;/b&gt;&lt;/big&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
@@ -565,6 +565,17 @@ This requires sudo (admin) rights.</property>
     <property name="stock">gtk-refresh</property>
     <property name="icon-size">1</property>
   </object>
+  <object class="GtkImage" id="image4">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-directory</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image5">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-copy</property>
+  </object>
   <object class="GtkMenu" id="menu_file">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -581,23 +592,23 @@ This requires sudo (admin) rights.</property>
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_goto">
-        <property name="label">gtk-jump-to</property>
+        <property name="label">Open in File Manager</property>
         <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="use_stock">True</property>
+        <property name="image">image4</property>
+        <property name="use_stock">False</property>
         <signal name="activate" handler="on_menu_goto_activate" swapped="no"/>
       </object>
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_copy">
-        <property name="label">gtk-copy</property>
+        <property name="label">Copy File Location</property>
         <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="use_stock">True</property>
+        <property name="image">image5</property>
+        <property name="use_stock">False</property>
         <signal name="activate" handler="on_menu_copy_activate" swapped="no"/>
       </object>
     </child>
