@@ -507,6 +507,7 @@ class catfish:
         self.load_mimetypes()
         
         self.dialog_updatedb = self.builder.get_object('dialog_updatedb')
+        self.updatedb_spinner = self.builder.get_object('updatedb_spinner')
         self.updatedb_label_updating = self.builder.get_object('updatedb_label_updating')
         self.updatedb_label_done = self.builder.get_object('updatedb_label_done')
         self.updatedb_button_cancel = self.builder.get_object('updatedb_button_cancel')
@@ -1186,6 +1187,8 @@ class catfish:
             def updatedb_subprocess():
                 done = self.updatedb_process.poll() != None
                 if done:
+                    self.updatedb_label_updating.set_sensitive(False)
+                    self.updatedb_spinner.set_visible(False)
                     self.updatedb_button_cancel.set_sensitive(True)
                     self.updatedb_button_ok.set_sensitive(True)
                     return_code = self.updatedb_process.returncode
@@ -1198,6 +1201,7 @@ class catfish:
                     self.updatedb_label_done.set_label(status)
                     self.updatedb_label_done.set_visible(True)
                 return not done
+            self.updatedb_spinner.set_visible(True)
             self.updatedb_label_updating.set_visible(True)
             self.updatedb_in_progress = True
             self.updatedb_button_cancel.set_sensitive(False)

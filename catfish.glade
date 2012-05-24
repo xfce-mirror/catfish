@@ -347,7 +347,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
   <object class="GtkDialog" id="dialog_updatedb">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
-    <property name="title" translatable="yes">Update Locate Database</property>
+    <property name="title" translatable="yes">Update Search Database</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
     <property name="window_position">center</property>
@@ -397,9 +397,6 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                 <property name="position">1</property>
               </packing>
             </child>
-            <child>
-              <placeholder/>
-            </child>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -414,11 +411,12 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
             <property name="can_focus">False</property>
             <property name="border_width">12</property>
             <property name="orientation">vertical</property>
-            <property name="spacing">12</property>
+            <property name="spacing">24</property>
             <child>
               <object class="GtkBox" id="box11">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="spacing">12</property>
                 <child>
                   <object class="GtkImage" id="image3">
                     <property name="visible">True</property>
@@ -435,18 +433,43 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="label2">
+                  <object class="GtkBox" id="box14">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Update Locate Database&lt;/b&gt;&lt;/big&gt;
-
-To provide accurate results, the locate database needs to be refreshed.
-This requires sudo (admin) powers.</property>
-                    <property name="use_markup">True</property>
-                    <property name="wrap">True</property>
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">12</property>
+                    <child>
+                      <object class="GtkLabel" id="dialog_updatedb_text_primary">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Update Search Database&lt;/b&gt;&lt;/big&gt;</property>
+                        <property name="use_markup">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dialog_updatedb_text_secondary">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">To provide accurate results, the &lt;i&gt;locate&lt;/i&gt; database needs to be refreshed.
+This requires sudo (admin) rights.</property>
+                        <property name="use_markup">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
                   </object>
                   <packing>
-                    <property name="expand">False</property>
+                    <property name="expand">True</property>
                     <property name="fill">True</property>
                     <property name="position">1</property>
                   </packing>
@@ -465,10 +488,33 @@ This requires sudo (admin) powers.</property>
                 <property name="orientation">vertical</property>
                 <property name="spacing">6</property>
                 <child>
-                  <object class="GtkLabel" id="updatedb_label_updating">
+                  <object class="GtkBox" id="box15">
+                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="xalign">0</property>
-                    <property name="label" translatable="yes">Updating database...</property>
+                    <property name="spacing">6</property>
+                    <child>
+                      <object class="GtkSpinner" id="updatedb_spinner">
+                        <property name="can_focus">False</property>
+                        <property name="active">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="updatedb_label_updating">
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Updating database...</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
                   </object>
                   <packing>
                     <property name="expand">False</property>
