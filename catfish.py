@@ -1162,6 +1162,11 @@ class catfish:
         self.dialog_updatedb.show()
         self.dialog_updatedb.run()
         
+    def on_updatedb_button_cancel_clicked(self, widget):
+        self.dialog_updatedb.hide()
+        self.updatedb_label_updating.set_visible(False)
+        self.updatedb_label_done.set_visible(False)
+        
     def on_dialog_updatedb_delete_event(self, widget, event):
         """Prevent updatedb dialog from being closed if in progress."""
         try:

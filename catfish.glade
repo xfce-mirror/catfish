@@ -376,6 +376,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
+                <signal name="clicked" handler="on_updatedb_button_cancel_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -615,7 +616,7 @@ This requires sudo (admin) rights.</property>
   <object class="GtkDialog" id="mimetypes_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
-    <property name="title" translatable="yes">Select a mimetype or enter an extension</property>
+    <property name="title" translatable="yes">Select a custom file filter</property>
     <property name="resizable">False</property>
     <property name="window_position">center-on-parent</property>
     <property name="icon_name">gtk-find</property>
@@ -675,7 +676,10 @@ This requires sudo (admin) rights.</property>
           <object class="GtkBox" id="box6">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="margin_bottom">12</property>
+            <property name="border_width">6</property>
             <property name="orientation">vertical</property>
+            <property name="spacing">6</property>
             <child>
               <object class="GtkFrame" id="frame3">
                 <property name="visible">True</property>
@@ -686,6 +690,7 @@ This requires sudo (admin) rights.</property>
                   <object class="GtkAlignment" id="alignment3">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="top_padding">3</property>
                     <property name="left_padding">12</property>
                     <child>
                       <object class="GtkComboBox" id="combobox_mimetype_existing">
@@ -726,6 +731,7 @@ This requires sudo (admin) rights.</property>
                   <object class="GtkAlignment" id="alignment4">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="top_padding">3</property>
                     <property name="left_padding">12</property>
                     <child>
                       <object class="GtkEntry" id="entry_mimetype_custom">
