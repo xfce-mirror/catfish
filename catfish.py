@@ -921,7 +921,7 @@ class catfish:
                     if path_manual and not folder in path:
                         yield True
                         continue
-                    if not hidden and self.file_is_hidden(filename, folder):
+                    if not hidden and self.file_is_hidden(filename, folder) and keywords[0] != '.':
                         yield True
                         continue
                     mime_type = self.get_mime_type(os.path.join(path, filename))
@@ -935,40 +935,31 @@ class catfish:
                         modified = time.strftime(time_format, time.gmtime(filestat.st_mtime))
                         name = name.replace('&', '&amp;')
                         if not self.options.icons_large and not self.options.thumbnails:
-                            if deepsearch:
-                                result = [mime_type, icon, name, size, path, modified]
-                                if result not in self.results:
-                                    if self.file_is_wanted(filename, mime_type, modified):
-                                        listmodel.append([icon, name, size, path, modified])
-                                    self.results.append([mime_type, icon, name, size, path, modified])
+                            result = [mime_type, icon, name, size, path, modified]
+                            if deepsearch and result not in self.results:
+                                if self.file_is_wanted(filename, mime_type, modified):
+                                    listmodel.append(result[1:])
+                                self.results.append(result)
                             else:
                                 if self.file_is_wanted(filename, mime_type, modified):
-                                    listmodel.append([icon, name, size, path, modified])
-                                self.results.append([mime_type, icon, name, size, path, modified])
+                                    listmodel.append(result[1:])
+                                self.results.append(result)
                         else:
                             path = path.replace('&', '&amp;')
                             if modified <> '':
                                 modified = os.linesep + modified
-                            if deepsearch:
-                                result = [mime_type, icon, '%s %s%s%s%s' % (name
+                            result = [mime_type, icon, '%s %s%s%s%s' % (name
                                 , self.format_size(size), os.linesep, path
                                 , modified), -1, name, path]
+                            if deepsearch:
                                 if result not in self.results:
                                     if self.file_is_wanted(filename, mime_type, modified):
-                                        listmodel.append([icon, '%s %s%s%s%s' % (name
-                                        , self.format_size(size), os.linesep, path
-                                        , modified), -1, name, path])
-                                    self.results.append([mime_type, icon, '%s %s%s%s%s' % (name
-                                    , self.format_size(size), os.linesep, path
-                                    , modified), -1, name, path])
+                                        listmodel.append(result[1:])
+                                    self.results.append(result)
                             else:
                                 if self.file_is_wanted(filename, mime_type, modified):
-                                    listmodel.append([icon, '%s %s%s%s%s' % (name
-                                    , self.format_size(size), os.linesep, path
-                                    , modified), -1, name, path])
-                                self.results.append([mime_type, icon, '%s %s%s%s%s' % (name
-                                , self.format_size(size), os.linesep, path
-                                , modified), -1, name, path])
+                                    listmodel.append(result[1:])
+                                self.results.append(result)
                     except Exception, msg:
                         if self.options.debug: print 'Debug:', msg
                         pass # Ignore inaccessible files
