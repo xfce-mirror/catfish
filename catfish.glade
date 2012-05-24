@@ -142,7 +142,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
   <object class="GtkDialog" id="date_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
-    <property name="title" translatable="yes">Enter a time range</property>
+    <property name="title" translatable="yes">Select a time range</property>
     <property name="resizable">False</property>
     <property name="window_position">center-on-parent</property>
     <property name="destroy_with_parent">True</property>
@@ -202,6 +202,9 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
           <object class="GtkBox" id="box2">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="margin_left">2</property>
+            <property name="margin_right">6</property>
+            <property name="margin_bottom">15</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkBox" id="box5">
