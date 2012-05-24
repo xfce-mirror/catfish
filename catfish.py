@@ -85,7 +85,7 @@ def menu_position(self, menu, data=None, something_else=None):
     widget = menu.get_attach_widget()
     allocation = widget.get_allocation()
     window_pos = widget.get_window().get_position()
-    x = window_pos[0] + allocation.x
+    x = window_pos[0] + allocation.x - menu.get_allocated_width() + widget.get_allocated_width()
     y = window_pos[1] + allocation.y + allocation.height
     return (x, y, True)
 
