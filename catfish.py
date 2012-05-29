@@ -251,11 +251,26 @@ class generic_query:
     def __init__(self): return
     def run(self, keywords, folder, exact, hidden, limit): return []
     def status(self): return 1
+    
+class Mimetyper:
+    def __init__(self):
+        self.mimetype_overrides = {'.abw': 'text', '.ai': 'text', '.cdy': 'video', '.chrt': 'text', '.doc':'text', '.docm':'text', '.docx':'text', '.dot':'text', '.dotm':'text', '.dotx':'text', '.eps':'text', '.gnumeric':'text', '.kil':'text', '.kpr':'text', '.kpt':'text', '.ksp':'text', '.kwd':'text', '.kwt':'text', '.latex':'text', '.mdb':'text', '.mm':'text', '.nb':'text', '.nbp':'text', '.odb':'text', '.odc':'text', '.odf':'text', '.odg':'image', '.odi':'image', '.odm':'text', '.odp':'text', '.ods':'text', '.odt':'text', '.otg':'text', '.oth':'text', '.odp':'text', '.ots':'text', '.ott':'text', '.pdf': 'text', '.php':'text', '.pht':'text', '.phtml':'text', '.potm':'text', '.potx':'text', '.ppa':'text', '.ppam':'text', '.pps':'text', '.ppsm':'text', '.ppsx':'text', '.ppt':'text', '.pptm':'text', '.pptx':'text', '.ps':'text', '.pwz':'text', '.rtf':'text', '.sda':'text', '.sdc':'text', '.sdd':'text', '.sds':'text', '.sdw':'text', '.stc':'text', '.std':'text', '.sti':'text', '.stw':'text', '.sxc':'text', '.sxd':'text', '.sxg':'text', '.sxi':'text', '.sxm':'text', '.sxw':'text', '.wiz':'text', '.wp5':'text', '.wpd':'text', '.xlam':'text', '.xlb':'text', '.xls':'text', '.xlsb':'text', '.xlsm':'text', '.xlsx':'text', '.xlt':'text', '.xltm':'text', '.xlsx':'text', '.xml':'text'}
+        
+    def guess_type(self, filename):
+        file_type = []
+        ext = os.path.splitext(filename)[1]
+        mime = xdg.Mime.get_type(filename)
+        if ext in self.mimetype_overrides.keys():
+            file_type.append( self.mimetype_overrides[ext] )
+        else:
+            file_type.append(mime.media)
+        file_type.append([mime.media, mime.subtype])
+        return file_type
 
 class catfish:
     def __init__(self):
         """Create the main window."""
-
+        self.mimetyper = Mimetyper()
         # Check for a desktop environment
         desktop = os.environ.get('DESKTOP_SESSION', os.environ.get('GDMSESSION', ''))
         if desktop[:4] == 'xfce':
@@ -484,7 +499,6 @@ class catfish:
         self.time_filter_custom = self.builder.get_object('time_filter_custom')
         self.button_time_filter_custom = self.builder.get_object('button_time_filter_custom')
         self.button_type_filter_other = self.builder.get_object('button_type_filter_other')
-        
         
         self.aboutdialog = self.builder.get_object('aboutdialog')
         
@@ -804,8 +818,8 @@ class catfish:
 
     def get_mime_type(self, filename):
         try:
-            mime = xdg.Mime.get_type(filename)
-            return mime.media, mime.subtype
+            return self.mimetyper.guess_type(filename)
+            
         except Exception:
             return None, None
             
@@ -1010,7 +1024,7 @@ class catfish:
 
     def get_thumbnail(self, path, icon_size=0, mime_type=None):
         """Try to fetch a small thumbnail."""
-
+        mime_type = mime_type[1]
         md5_hash = md5.new('file://' + path).hexdigest()
         filename = '%s%s.png' % (self.folder_thumbnails, md5_hash)
         try:
@@ -1020,7 +1034,7 @@ class catfish:
 
     def get_file_icon(self, path, icon_size=0, mime_type=None):
         """Retrieve the file icon."""
-
+        mime_type = mime_type[1]
         try:
             is_folder = stat.S_ISDIR(os.stat(path).st_mode)
         except Exception:
