@@ -732,6 +732,14 @@ class catfish:
             return 'application'
 
     def file_is_wanted(self, keywords, filename, folder, show_hidden, mime_type, modification_date):
+        in_any = False
+        name = os.path.split(filename)[1]
+        for keyword in keywords.split(' '):
+            if keyword.lower() in name.lower():
+                in_any = True
+                break
+        if not in_any:
+            return False
         if show_hidden or keywords[0] == '.':
             pass
         elif self.file_is_hidden(filename, folder):
@@ -1024,7 +1032,6 @@ class catfish:
 
     def get_thumbnail(self, path, icon_size=0, mime_type=None):
         """Try to fetch a small thumbnail."""
-        mime_type = mime_type[1]
         md5_hash = md5.new('file://' + path).hexdigest()
         filename = '%s%s.png' % (self.folder_thumbnails, md5_hash)
         try:
