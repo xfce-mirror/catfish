@@ -431,6 +431,9 @@ class catfish:
         self.clear_deepsearch = False
         self.updatedb_done = False
         
+        # This variable shows that find was used for a set of results.
+        self.find_powered = False
+        
         self.window_search.show_all()
 
 # -- helper functions --
@@ -842,6 +845,10 @@ class catfish:
             method = 'find'
         if self.clear_deepsearch:
             deepsearch=False
+        if method == 'find':
+            self.find_powered = True
+        else:
+            self.find_powered = False
         self.box_infobar.hide()
         self.spinner.show()
         self.find_in_progress = True
@@ -932,22 +939,23 @@ class catfish:
                         size = filestat.st_size
                         modified = time.strftime(time_format, time.gmtime(filestat.st_mtime))
                         name = name.replace('&', '&amp;')
+                        result = [mime_type, filename, modified]
                         if not self.options.icons_large and not self.options.thumbnails:
-                            result = [mime_type, filename, icon, name, size, path, modified]
+                            result.append([icon, name, size, path, modified])
                             if result not in self.results:
                                 if self.file_is_wanted(keywords, filename, folder, hidden, mime_type, modified):
-                                    listmodel.append(result[2:])
+                                    listmodel.append(result[3])
                                 self.results.append(result)
                         else:
                             path = path.replace('&', '&amp;')
                             if modified <> '':
                                 modified = os.linesep + modified
-                            result = [mime_type, filename, icon, '%s %s%s%s%s' % (name
+                            result.append([icon, '%s %s%s%s%s' % (name
                                 , self.format_size(size), os.linesep, path
-                                , modified), None, name, path]
+                                , modified), None, name, path])
                             if result not in self.results:
                                 if self.file_is_wanted(keywords, filename, folder, hidden, mime_type, modified):
-                                    listmodel.append(result[2:])
+                                    listmodel.append(result[3])
                                 self.results.append(result)
                     except Exception, msg:
                         if self.options.debug: print 'Debug:', msg
@@ -1132,6 +1140,11 @@ class catfish:
         """When the application menu is unfocused (menu item activated
         or clicked elsewhere), unclick the button."""
         self.menu_button.set_active(False)
+        
+    def on_checkbox_find_exact_toggled(self, widget):
+        self.on_filter_changed(widget)
+        if not self.find_powered:
+            self.on_button_search_find_clicked(widget)
         
     def on_checkbox_advanced_toggled(self, widget):
         """When the Advanced Filters toggle is activated, show/hide the
@@ -1347,7 +1360,9 @@ class catfish:
         """When a filter is changed, adjust the displayed results."""
         if self.scrolled_files.get_visible():
             self.find_in_progress = True
+            exact = self.checkbox_find_exact.get_active()
             hidden = self.checkbox_find_hidden.get_active()
+            fulltext = self.checkbox_find_fulltext.get_active()
             messages = []
             sort_settings = self.treeview_files.get_model().get_sort_column_id()
             listmodel = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, str)
@@ -1357,12 +1372,16 @@ class catfish:
             for filegroup in self.results:
                 mime_type = filegroup[0]
                 filename = filegroup[1]
-                try:
-                    modified = filegroup[7]
-                except IndexError:
-                    modified = filegroup[5]
+                path, name = os.path.split(filename)
+                modified = filegroup[2]
                 if self.file_is_wanted(self.keywords, filename, self.folder, hidden, mime_type, modified):
-                    listmodel.append(filegroup[2:])
+                    if not fulltext:
+                        if '*' not in self.keywords and not self.string_wild_match(name, self.keywords, exact):
+                            pass
+                        else:
+                            listmodel.append(filegroup[3])
+                    else:
+                        listmodel.append(filegroup[3])
             if len(listmodel) == 0:
                 self.clear_deepsearch = True
                 status_icon = Gtk.STOCK_INFO
@@ -1386,10 +1405,6 @@ class catfish:
         """When the deep search button is pressed, perform an additional
         search using the 'find' command."""
         self.box_infobar.hide()
-        keywords = self.entry_find_text.get_text()
-        completion = self.entry_find_text.get_completion()
-        listmodel = completion.get_model()
-        listmodel.append([keywords])
 
         if not self.find_in_progress:
             self.abort_find = 0
