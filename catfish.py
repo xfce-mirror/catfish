@@ -448,6 +448,7 @@ class catfish:
 
         # Retrieve significant widgets
         self.window_search = self.builder.get_object('window_search')
+        self.window_search.set_wmclass ("catfish", "catfish")
         
         self.button_find_folder = self.builder.get_object('button_find_folder')
         self.entry_find_text = self.builder.get_object('entry_find_text')
