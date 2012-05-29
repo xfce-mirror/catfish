@@ -731,19 +731,20 @@ class catfish:
         elif mime == 'applications':
             return 'application'
 
-    def file_is_wanted(self, keywords, filename, folder, show_hidden, mime_type, modification_date):
+    def file_is_wanted(self, keywords, filename, folder, show_hidden, mime_type, modification_date, fulltext):
         in_any = False
         name = os.path.split(filename)[1]
         for keyword in keywords.split(' '):
             if keyword.lower() in name.lower():
                 in_any = True
                 break
-        if not in_any:
-            return False
-        if show_hidden or keywords[0] == '.':
-            pass
-        elif self.file_is_hidden(filename, folder):
-            return False
+        if not fulltext:
+            if not in_any:
+                return False
+            if show_hidden or keywords[0] == '.':
+                pass
+            elif self.file_is_hidden(filename, folder):
+                return False
 
         mime_type_is_wanted = False
         modification_date_is_wanted = True
@@ -966,7 +967,7 @@ class catfish:
                         if not self.options.icons_large and not self.options.thumbnails:
                             result.append([icon, name, size, path, modified])
                             if result not in self.results:
-                                if self.file_is_wanted(keywords, filename, folder, hidden, mime_type, modified):
+                                if self.file_is_wanted(keywords, filename, folder, hidden, mime_type, modified, fulltext):
                                     listmodel.append(result[3])
                                 self.results.append(result)
                         else:
@@ -977,7 +978,7 @@ class catfish:
                                 , self.format_size(size), os.linesep, path
                                 , modified), None, name, path])
                             if result not in self.results:
-                                if self.file_is_wanted(keywords, filename, folder, hidden, mime_type, modified):
+                                if self.file_is_wanted(keywords, filename, folder, hidden, mime_type, modified, fulltext):
                                     listmodel.append(result[3])
                                 self.results.append(result)
                     except Exception, msg:
@@ -1396,7 +1397,7 @@ class catfish:
                 filename = filegroup[1]
                 path, name = os.path.split(filename)
                 modified = filegroup[2]
-                if self.file_is_wanted(self.keywords, filename, self.folder, hidden, mime_type, modified):
+                if self.file_is_wanted(self.keywords, filename, self.folder, hidden, mime_type, modified, fulltext):
                     if not fulltext:
                         if '*' not in self.keywords and not self.string_wild_match(name, self.keywords, exact):
                             pass
