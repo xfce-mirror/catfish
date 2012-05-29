@@ -1105,7 +1105,6 @@ class catfish:
         if not self.scrolled_files.get_visible():
             self.scrolled_files.set_visible(True)
             self.window_search.set_size_request(640, 400)
-            self.window_search.set_position(Gtk.WindowPosition.CENTER_ALWAYS)
 
         if not self.find_in_progress:
             self.abort_find = 0
