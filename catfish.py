@@ -483,11 +483,6 @@ class catfish:
         
         
         self.aboutdialog = self.builder.get_object('aboutdialog')
-        try:
-            logo = GdkPixbuf.Pixbuf.new_from_file('catfish.svg')
-        except Exception:
-            logo = GdkPixbuf.Pixbuf.new_from_file('/usr/local/share/icons/hicolor/scalable/apps/catfish.svg')
-        self.aboutdialog.set_logo(logo)
         
         self.date_dialog = self.builder.get_object('date_dialog')
         self.box_calendar_end = self.builder.get_object('box_calendar_end')
