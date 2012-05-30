@@ -790,11 +790,17 @@ class catfish:
             if not len(wanted_types):
                 mime_type_is_wanted = True
             else:
-                try:
-                    file_type = mime_type[0]
-                    mime_type_is_wanted = file_type in wanted_types
-                except Exception:
-                    mime_type_is_wanted = True
+                if mime_type[0] == 'application' and 'application' in wanted_types:
+                    if os.path.splitext(filename)[1] in ['.exe', '.app', '.desktop']:
+                        mime_type_is_wanted = True
+                    if mime_type[1] == 'x-executable':
+                        mime_type_is_wanted = True
+                else:
+                    try:
+                        file_type = mime_type[0]
+                        mime_type_is_wanted = file_type in wanted_types
+                    except Exception:
+                        mime_type_is_wanted = True
             
         # Modification Date Wanted
         if self.time_filter_any.get_active():
