@@ -790,10 +790,10 @@ class catfish:
             if not len(wanted_types):
                 mime_type_is_wanted = True
             else:
-                if mime_type[0] == 'application' and 'application' in wanted_types:
+                if mime_type[1][0] == 'application' and 'application' in wanted_types:
                     if os.path.splitext(filename)[1] in ['.exe', '.app', '.desktop']:
                         mime_type_is_wanted = True
-                    if mime_type[1] == 'x-executable':
+                    if mime_type[1][1] == 'x-executable':
                         mime_type_is_wanted = True
                 else:
                     try:
