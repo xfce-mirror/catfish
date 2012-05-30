@@ -348,16 +348,25 @@ class dbus_query:
                 # pass # Nothing was found
         return results
     def status(self): return self.err
+    
+class fulltext_query:
+    def __init__(self, options):
+        self.err = ''
+        self.options = options
+        
+    def run(self, keywords, folder, exact, hidden, limit):
+        command = "find %s -name \"*\" -print | xargs grep \"%s\"" % (folder, keywords)
+        print command
+        self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+        return self.process.stdout
+    
+    def status(self): return self.err or self.process.poll()
 
 class shell_query:
     def __init__(self, options):
         self.err = ''
         self.options = options
-        try:
-            pass
-        except Exception, msg:
-            if 1: print 'Debug:', msg # DEBUG
-            self.err = 'Program %s is unavailable' % options[0]
+        
     def run(self, keywords, folder, exact, hidden, limit):
         (binary, daemon, default, case, nocase, limit_results, wildcards
             , file_manual, path_manual, exact_manual, errors_ignore, use_regex
@@ -380,6 +389,7 @@ class shell_query:
             command += ' "*%s*"' % keywords
         else:
             command += ' "%s"' % keywords
+        print command
         self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         return self.process.stdout
     def status(self): return self.err or self.process.poll()
@@ -965,25 +975,34 @@ class catfish:
                 messages.append([_('The search backend doesn\'t support wildcards.'), None])
                 status = _('No files found.')
             else:
-                try:
-                    if default[:7] == 'dbus://':
-                        query = dbus_query(options)
-                    else:
-                        query = shell_query(options)
-                except Exception, msg:
-                    if self.options.debug: print 'Debug:', msg
-                    query = generic_query()
+                if fulltext:
+                    query = fulltext_query(options)
+                else:
+                    try:
+                        if default[:7] == 'dbus://':
+                            query = dbus_query(options)
+                        else:
+                            query = shell_query(options)
+                    except Exception, msg:
+                        if self.options.debug: print 'Debug:', msg
+                        query = generic_query()
                 for filename in query.run(keywords, folder, exact, hidden, limit):
                     if self.abort_find or len(listmodel) == limit: break
-                    
-                    filename = filename.split(os.linesep)[0]
-                    # Convert uris to filenames
-                    if filename[:7] == 'file://':
-                        filename = filename[7:]
-                    # Handle mailbox uris like filenames as well
-                    if filename[:10] == 'mailbox://':
-                        filename = filename[10:]
-                        filename = filename[:filename.index('?')]
+                    if fulltext:
+                        filename = filename.split(':')[0]
+                        if not os.path.isfile(filename):
+                            # "Binary file x matches"
+                            filename = filename[12:]
+                            filename = filename[:len(filename)-8]
+                    else:
+                        filename = filename.split(os.linesep)[0]
+                        # Convert uris to filenames
+                        if filename[:7] == 'file://':
+                            filename = filename[7:]
+                        # Handle mailbox uris like filenames as well
+                        if filename[:10] == 'mailbox://':
+                            filename = filename[10:]
+                            filename = filename[:filename.index('?')]
                     path, name = os.path.split(filename)
                     if (path_manual or exact_manual) and not fulltext:
                         if '*' not in keywords and not result_filter.string_wild_match(name):
