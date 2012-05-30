@@ -355,7 +355,7 @@ class fulltext_query:
         self.options = options
         
     def run(self, keywords, folder, exact, hidden, limit):
-        command = "find %s -name \"*\" -print | xargs grep \"%s\"" % (folder, keywords)
+        command = "find %s -name '*' -print0 | xargs -0 grep \"%s\"" % (folder, keywords)
         print command
         self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         return self.process.stdout
@@ -994,6 +994,9 @@ class catfish:
                             # "Binary file x matches"
                             filename = filename[12:]
                             filename = filename[:len(filename)-8]
+                        if not os.path.isfile(filename):
+                            yield True
+                            continue
                     else:
                         filename = filename.split(os.linesep)[0]
                         # Convert uris to filenames
