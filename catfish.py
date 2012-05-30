@@ -90,6 +90,143 @@ def menu_position(self, menu, data=None, something_else=None):
     y = window_pos[1] + allocation.y + allocation.height
     return (x, y, True)
 
+class Filter:
+    def __init__(self, keywords, exact_match, show_hidden, fulltext, 
+        start_date, end_date, time_format, type_families, custom_mime, 
+        custom_extensions):
+        #print '\nFilter init:'
+        #print 'Keywords: ' + str(keywords)
+        #print 'Exact: %s    Hidden: %s    Fulltext: %s' % (str(exact_match), str(show_hidden), str(fulltext))
+        #print 'Time range: %s to %s' % (str(start_date), str(end_date))
+        #print 'Mimetypes: ' + str(type_families)
+        #print 'Custom Mime: %s    Custom Extensions: %s' % (str(custom_mime), str(custom_extensions))
+        
+        self.keywords = keywords
+        self.exact_match = bool(exact_match)
+        self.show_hidden = bool(show_hidden)
+        self.fulltext = bool(fulltext)
+        self.start_date = start_date
+        self.end_date = end_date
+        self.time_format = time_format
+        self.type_families = type_families
+        self.custom_mime = custom_mime
+        self.custom_extensions = []
+        for ext in custom_extensions:
+            if ext[0] != '.':
+                self.custom_extensions.append('.' + ext)
+            else:
+                self.custom_extensions.append(ext)
+        self.mimetype_overrides = {'.abw': 'text', '.ai': 'text', 
+        '.cdy': 'video', '.chrt': 'text', '.doc':'text', '.docm':'text',
+        '.docx':'text', '.dot':'text', '.dotm':'text', '.dotx':'text', 
+        '.eps':'text', '.gnumeric':'text', '.kil':'text', '.kpr':'text', 
+        '.kpt':'text', '.ksp':'text', '.kwd':'text', '.kwt':'text', 
+        '.latex':'text', '.mdb':'text', '.mm':'text', '.nb':'text', 
+        '.nbp':'text', '.odb':'text', '.odc':'text', '.odf':'text', 
+        '.odg':'image', '.odi':'image', '.odm':'text', '.odp':'text', 
+        '.ods':'text', '.odt':'text', '.otg':'text', '.oth':'text', 
+        '.odp':'text', '.ots':'text', '.ott':'text', '.pdf': 'text', 
+        '.php':'text', '.pht':'text', '.phtml':'text', '.potm':'text', 
+        '.potx':'text', '.ppa':'text', '.ppam':'text', '.pps':'text', 
+        '.ppsm':'text', '.ppsx':'text', '.ppt':'text', '.pptm':'text', 
+        '.pptx':'text', '.ps':'text', '.pwz':'text', '.rtf':'text', 
+        '.sda':'text', '.sdc':'text', '.sdd':'text', '.sds':'text', 
+        '.sdw':'text', '.stc':'text', '.std':'text', '.sti':'text', 
+        '.stw':'text', '.sxc':'text', '.sxd':'text', '.sxg':'text', 
+        '.sxi':'text', '.sxm':'text', '.sxw':'text', '.wiz':'text', 
+        '.wp5':'text', '.wpd':'text', '.xlam':'text', '.xlb':'text', 
+        '.xls':'text', '.xlsb':'text', '.xlsm':'text', '.xlsx':'text', 
+        '.xlt':'text', '.xltm':'text', '.xlsx':'text', '.xml':'text'}
+            
+    def apply_filters(self, fileobject, modification_date):
+        show_file = True
+        if isinstance(fileobject, str):
+            filename = fileobject
+            is_hidden = self.file_is_hidden(filename)
+            if isinstance(modification_date, str):
+                modification_date = datetime.datetime.strptime(modification_date, self.time_format)
+            mime_type = self.determine_mimetype(filename)
+        else:
+            filename = fileobject[0]
+            is_hidden = fileobject[1]
+            modification_date = fileobject[2]
+            mime_type = fileobject[3]
+        name = os.path.split(filename)[1]
+
+        if not self.date_in_range(modification_date):
+            show_file = False
+        if not self.filetype_is_wanted(filename, mime_type[1]):
+            show_file = False
+        if not self.fulltext:
+            if '*' not in self.keywords and not self.string_wild_match(name):
+                show_file = False
+        if not self.show_hidden and is_hidden and self.keywords[0] != '.': 
+            show_file = False
+        return show_file, is_hidden, modification_date, mime_type
+    
+    def file_is_hidden(self, filename):
+        """Determine if a file is hidden or in a hidden folder"""
+        if filename == '': return False
+        path, name = os.path.split(filename)
+        if len(name) and name[0] == '.':
+            return True
+        for folder in path.split(os.path.sep):
+            if len(folder):
+                if folder[0] == '.':
+                    return True
+        return False
+    
+    def date_in_range(self, datetimeobject):
+        if self.start_date == self.end_date:
+            start_date = self.start_date - datetime.timedelta(days=1)
+            end_date = self.end_date + datetime.timedelta(days=1)
+            return start_date <= datetimeobject and end_date >= datetimeobject
+        return self.start_date <= datetimeobject and self.end_date >= datetimeobject
+    
+    def filetype_is_wanted(self, filename, mime_type):
+        if len(self.type_families) == 0 and len(self.custom_extensions) == 0 and self.custom_mime == [None, None]:
+            return True
+        if mime_type == self.custom_mime:
+            return True
+        extension = os.path.splitext(filename)[1]
+        if extension in self.mimetype_overrides.keys():
+            if self.mimetype_overrides[extension] in self.type_families:
+                return True
+        if extension in self.custom_extensions:
+            return True
+        if 'application' in self.type_families:
+            if extension in ['.exe', '.app', '.desktop']:
+                return True
+            if mime_type[1] == 'x-executable':
+                return True
+        if mime_type[0] in self.type_families and mime_type[0] != 'application':
+            return True
+        return False
+        
+    def determine_mimetype(self, filename):
+        file_type = []
+        ext = os.path.splitext(filename)[1]
+        mime = xdg.Mime.get_type(filename)
+        if ext in self.mimetype_overrides.keys():
+            file_type.append( self.mimetype_overrides[ext] )
+        else:
+            file_type.append(mime.media)
+        file_type.append([mime.media, mime.subtype])
+        return file_type
+    
+    def string_wild_match(self, string):
+        if self.exact_match:
+            return self.keywords in string
+        else:
+            keyword = self.keywords.lower()
+            string = string.lower()
+            keywords = keyword.split()
+            for key in keywords:
+                if key not in string:
+                    return False
+            return True
+        
+
 
 class suggestions(list):
     """Suggestions class, autocomplete for file search."""
@@ -251,26 +388,10 @@ class generic_query:
     def __init__(self): return
     def run(self, keywords, folder, exact, hidden, limit): return []
     def status(self): return 1
-    
-class Mimetyper:
-    def __init__(self):
-        self.mimetype_overrides = {'.abw': 'text', '.ai': 'text', '.cdy': 'video', '.chrt': 'text', '.doc':'text', '.docm':'text', '.docx':'text', '.dot':'text', '.dotm':'text', '.dotx':'text', '.eps':'text', '.gnumeric':'text', '.kil':'text', '.kpr':'text', '.kpt':'text', '.ksp':'text', '.kwd':'text', '.kwt':'text', '.latex':'text', '.mdb':'text', '.mm':'text', '.nb':'text', '.nbp':'text', '.odb':'text', '.odc':'text', '.odf':'text', '.odg':'image', '.odi':'image', '.odm':'text', '.odp':'text', '.ods':'text', '.odt':'text', '.otg':'text', '.oth':'text', '.odp':'text', '.ots':'text', '.ott':'text', '.pdf': 'text', '.php':'text', '.pht':'text', '.phtml':'text', '.potm':'text', '.potx':'text', '.ppa':'text', '.ppam':'text', '.pps':'text', '.ppsm':'text', '.ppsx':'text', '.ppt':'text', '.pptm':'text', '.pptx':'text', '.ps':'text', '.pwz':'text', '.rtf':'text', '.sda':'text', '.sdc':'text', '.sdd':'text', '.sds':'text', '.sdw':'text', '.stc':'text', '.std':'text', '.sti':'text', '.stw':'text', '.sxc':'text', '.sxd':'text', '.sxg':'text', '.sxi':'text', '.sxm':'text', '.sxw':'text', '.wiz':'text', '.wp5':'text', '.wpd':'text', '.xlam':'text', '.xlb':'text', '.xls':'text', '.xlsb':'text', '.xlsm':'text', '.xlsx':'text', '.xlt':'text', '.xltm':'text', '.xlsx':'text', '.xml':'text'}
-        
-    def guess_type(self, filename):
-        file_type = []
-        ext = os.path.splitext(filename)[1]
-        mime = xdg.Mime.get_type(filename)
-        if ext in self.mimetype_overrides.keys():
-            file_type.append( self.mimetype_overrides[ext] )
-        else:
-            file_type.append(mime.media)
-        file_type.append([mime.media, mime.subtype])
-        return file_type
 
 class catfish:
     def __init__(self):
         """Create the main window."""
-        self.mimetyper = Mimetyper()
         # Check for a desktop environment
         desktop = os.environ.get('DESKTOP_SESSION', os.environ.get('GDMSESSION', ''))
         if desktop[:4] == 'xfce':
@@ -498,7 +619,15 @@ class catfish:
         self.time_filter_week = self.builder.get_object('time_filter_week')
         self.time_filter_custom = self.builder.get_object('time_filter_custom')
         self.button_time_filter_custom = self.builder.get_object('button_time_filter_custom')
+        self.type_filter_documents = self.builder.get_object('type_filter_documents')
+        self.type_filter_pictures = self.builder.get_object('type_filter_pictures')
+        self.type_filter_music = self.builder.get_object('type_filter_music')
+        self.type_filter_videos = self.builder.get_object('type_filter_videos')
+        self.type_filter_applications = self.builder.get_object('type_filter_applications')
+        self.type_filter_other = self.builder.get_object('type_filter_other')
+        
         self.button_type_filter_other = self.builder.get_object('button_type_filter_other')
+        
         
         self.aboutdialog = self.builder.get_object('aboutdialog')
         
@@ -705,138 +834,6 @@ class catfish:
             return methods[method_name]
         except Exception:
             return method, '', '%s', '', '', '', 0, 0, 0, 0, 0, 0
-
-    def string_wild_match(self, string, keyword, exact):
-        if exact:
-            return keyword in string
-        else:
-            keyword = keyword.lower()
-            string = string.lower()
-            keywords = keyword.split(' ')
-            for key in keywords:
-                if key not in string:
-                    return False
-            return True
-        
-        
-    def map_mimetype(self, mime):
-        if mime == 'documents':
-            return 'text'
-        elif mime == 'images':
-            return 'image'
-        elif mime == 'music':
-            return 'audio'
-        elif mime == 'videos':
-            return 'video'
-        elif mime == 'applications':
-            return 'application'
-
-    def file_is_wanted(self, keywords, filename, folder, show_hidden, mime_type, modification_date, fulltext):
-        in_any = False
-        name = os.path.split(filename)[1]
-        for keyword in keywords.split(' '):
-            if keyword.lower() in name.lower():
-                in_any = True
-                break
-        if not fulltext:
-            if not in_any:
-                return False
-            if show_hidden or keywords[0] == '.':
-                pass
-            elif self.file_is_hidden(filename, folder):
-                return False
-
-        mime_type_is_wanted = False
-        modification_date_is_wanted = True
-        
-        # Mime Type Wanted
-        wanted_types = []
-        checkboxes = self.box_type_filter.get_children()
-        other = checkboxes[5].get_active()
-        for checkbox in checkboxes[:5]:
-            try:
-                if checkbox.get_active():
-                    wanted_types.append(self.map_mimetype(checkbox.get_label().lower()))
-            except AttributeError: # button
-                pass
-                # TODO ADD SUPPORT FOR CUSTOM
-        if other:
-            if self.radio_mimetype_existing.get_active():
-                model = self.combobox_mimetype_existing.get_model()
-                tree_iter = self.combobox_mimetype_existing.get_active_iter()
-                if model and tree_iter:
-                    wanted_types.append('notarealtype')
-                    selected_mime = model[tree_iter][0]
-                    selected_mime = selected_mime.split('/')
-                    if selected_mime[0] == mime_type[0] and selected_mime[1] == mime_type[1]:
-                        mime_type_is_wanted = True
-            else:
-                extensions = self.entry_mimetype_custom.get_text()
-                if len(extensions) > 0: wanted_types.append('notarealtype')
-                if ',' in extensions:
-                    split = extensions.split(',')
-                else:
-                    split = extensions.split(' ')
-                extensions = []
-                for string in split:
-                    if string[0] != '.':
-                        extensions.append('.' + string)
-                    else:
-                        extensions.append(string)
-                if os.path.splitext(filename)[1] in extensions:
-                    mime_type_is_wanted = True
-                    
-        if not mime_type_is_wanted:
-            if not len(wanted_types):
-                mime_type_is_wanted = True
-            else:
-                if mime_type[1][0] == 'application' and 'application' in wanted_types:
-                    if os.path.splitext(filename)[1] in ['.exe', '.app', '.desktop']:
-                        mime_type_is_wanted = True
-                    if mime_type[1][1] == 'x-executable':
-                        mime_type_is_wanted = True
-                else:
-                    try:
-                        file_type = mime_type[0]
-                        mime_type_is_wanted = file_type in wanted_types
-                    except Exception:
-                        mime_type_is_wanted = True
-            
-        # Modification Date Wanted
-        if self.time_filter_any.get_active():
-            return mime_type_is_wanted
-        else:
-            if not self.options.time_iso:
-                time_format = '%x %X'
-            else:
-                time_format = '%Y-%m-%d %H:%M'
-            filetime = datetime.datetime.strptime(modification_date, time_format)
-            if self.time_filter_week.get_active():
-                weektime = datetime.datetime.today() - datetime.timedelta(days=7)
-                modification_date_is_wanted = weektime < filetime
-            elif self.time_filter_custom.get_active():
-                start_date = self.calendar_start.get_date()
-                end_date = self.calendar_end.get_date()
-                if start_date == end_date:
-                    start_date = datetime.datetime(start_date[0], start_date[1]+1, start_date[2]) - datetime.timedelta(days=1)
-                    end_date = datetime.datetime(end_date[0], end_date[1]+1, end_date[2]) + datetime.timedelta(days=1)
-                    modification_date_is_wanted = start_date < filetime and end_date > filetime
-                else:
-                    start_date = datetime.datetime(start_date[0], start_date[1]+1, start_date[2])
-                    end_date = datetime.datetime(end_date[0], end_date[1]+1, end_date[2]) + datetime.timedelta(days=1)
-                    modification_date_is_wanted = start_date <= filetime and end_date >= filetime
-        if mime_type_is_wanted and modification_date_is_wanted:
-            return True
-        else:
-            return False
-        
-
-    def get_mime_type(self, filename):
-        try:
-            return self.mimetyper.guess_type(filename)
-            
-        except Exception:
-            return None, None
             
     def load_mimetypes(self):
         mimetypes.init()
@@ -853,21 +850,57 @@ class catfish:
                 liststore.append([mime])
             
         self.combobox_mimetype_existing.set_model(liststore)
-
-    def file_is_hidden(self, filename, current=None):
-        """Determine if a file is hidden or in a hidden folder"""
-        if filename == '': return False
-        path, name = os.path.split(filename)
-        if len(name) and name[0] == '.':
-            return True
-        if current <> None:
-            if '.' in current:
-                return False
-        for folder in path.split(os.path.sep):
-            if len(folder):
-                if folder[0] == '.':
-                    return True
-        return False
+    
+    def get_search_settings(self):
+        keywords = self.entry_find_text.get_text()
+        folder = self.button_find_folder.get_filename()
+        exact = self.checkbox_find_exact.get_active()
+        hidden = self.checkbox_find_hidden.get_active()
+        fulltext = self.checkbox_find_fulltext.get_active()
+        limit = -1
+        
+        if self.time_filter_any.get_active():
+            start_date = datetime.datetime.min
+            end_date = datetime.datetime.max
+        elif self.time_filter_week.get_active():
+            now = datetime.datetime.now()
+            week_ago = now - datetime.timedelta(days=7)
+            start_date = datetime.datetime(week_ago.year, week_ago.month, week_ago.day, 0, 0, 0, 0)
+            end_date = now + datetime.timedelta(days=1)
+            end_date = datetime.datetime(end_date.year, end_date.month, end_date.day, 0, 0, 0, 0)
+        else:
+            start_date = self.calendar_start.get_date()
+            start_date = datetime.datetime(start_date[0], start_date[1]+1, start_date[2])
+            end_date = self.calendar_end.get_date()
+            end_date = datetime.datetime(end_date[0], end_date[1]+1, end_date[2]) + datetime.timedelta(days=1)
+        
+        type_families = []
+        if self.type_filter_documents.get_active():
+            type_families.append('text')
+        if self.type_filter_pictures.get_active():
+            type_families.append('image')
+        if self.type_filter_music.get_active():
+            type_families.append('audio')
+        if self.type_filter_videos.get_active():
+            type_families.append('video')
+        if self.type_filter_applications.get_active():
+            type_families.append('application')
+        
+        custom_mime = [None, None]
+        custom_extensions = []
+        if self.type_filter_other.get_active():
+            if self.radio_mimetype_existing.get_active():
+                model = self.combobox_mimetype_existing.get_model()
+                tree_iter = self.combobox_mimetype_existing.get_active_iter()
+                if model and tree_iter:
+                    selected_mime = model[tree_iter][0]
+                    custom_mime = selected_mime.split('/')
+            else:
+                ext = self.entry_mimetype_custom.get_text()
+                ext = ext.replace(',', ' ')
+                custom_extensions = ext.split()
+                
+        return keywords, folder, exact, hidden, fulltext, limit, start_date, end_date, type_families, custom_mime, custom_extensions
 
     def find(self, widget=None, method='locate', deepsearch=False):
         """Do the actual search."""
@@ -900,12 +933,16 @@ class catfish:
             listmodel.set_sort_column_id(1, Gtk.SortType.ASCENDING)
 
         # Retrieve search parameters
-        keywords = self.entry_find_text.get_text()
-        folder = self.button_find_folder.get_filename()
-        exact = self.checkbox_find_exact.get_active()
-        hidden = self.checkbox_find_hidden.get_active()
-        fulltext = self.checkbox_find_fulltext.get_active()
-        limit = -1
+        keywords, folder, exact, hidden, fulltext, limit, start_date, end_date, type_families, custom_mime, custom_extensions = self.get_search_settings()
+        
+        if not self.options.time_iso:
+            time_format = '%x %X'
+        else:
+            time_format = '%Y-%m-%d %H:%M'
+        
+        result_filter = Filter(keywords, exact, hidden, fulltext, 
+        start_date, end_date, time_format, type_families, custom_mime, 
+        custom_extensions)
 
         if keywords != '':
             # Generate search command
@@ -920,10 +957,6 @@ class catfish:
                 icon_size = Gtk.IconSize.MENU
             else:
                 icon_size = Gtk.IconSize.DIALOG
-            if not self.options.time_iso:
-                time_format = '%x %X'
-            else:
-                time_format = '%Y-%m-%d %H:%M'
 
             # Run search command and capture the results
             messages = []
@@ -953,28 +986,30 @@ class catfish:
                         filename = filename[:filename.index('?')]
                     path, name = os.path.split(filename)
                     if (path_manual or exact_manual) and not fulltext:
-                        if '*' not in keywords and not self.string_wild_match(name, keywords, exact):
+                        if '*' not in keywords and not result_filter.string_wild_match(name):
                             yield True
                             continue
                     if path_manual and not folder in path:
                         yield True
                         continue
-                    mime_type = self.get_mime_type(os.path.join(path, filename))
-                    if self.options.thumbnails:
-                        icon = self.get_thumbnail(filename, icon_size, mime_type)
-                    else:
-                        icon = self.get_file_icon(filename, icon_size, mime_type)
                     try:
                         filestat = os.stat(filename)
                         size = filestat.st_size
                         modified = time.strftime(time_format, time.gmtime(filestat.st_mtime))
+                        show_file, is_hidden, modification_date, mime_type = result_filter.apply_filters(filename, modified)
+                        
+                        if self.options.thumbnails:
+                            icon = self.get_thumbnail(filename, icon_size, mime_type)
+                        else:
+                            icon = self.get_file_icon(filename, icon_size, mime_type)
+
                         name = name.replace('&', '&amp;')
-                        result = [mime_type, filename, modified]
+                        result = [filename, is_hidden, modification_date, mime_type]
                         if not self.options.icons_large and not self.options.thumbnails:
                             result.append([icon, name, size, path, modified])
                             if result not in self.results:
-                                if self.file_is_wanted(keywords, filename, folder, hidden, mime_type, modified, fulltext):
-                                    listmodel.append(result[3])
+                                if show_file:
+                                    listmodel.append(result[4])
                                 self.results.append(result)
                         else:
                             path = path.replace('&', '&amp;')
@@ -984,8 +1019,8 @@ class catfish:
                                 , self.format_size(size), os.linesep, path
                                 , modified), None, name, path])
                             if result not in self.results:
-                                if self.file_is_wanted(keywords, filename, folder, hidden, mime_type, modified, fulltext):
-                                    listmodel.append(result[3])
+                                if show_file:
+                                    listmodel.append(result[4])
                                 self.results.append(result)
                     except Exception, msg:
                         if self.options.debug: print 'Debug:', msg
@@ -1389,9 +1424,14 @@ class catfish:
         """When a filter is changed, adjust the displayed results."""
         if self.scrolled_files.get_visible():
             self.find_in_progress = True
-            exact = self.checkbox_find_exact.get_active()
-            hidden = self.checkbox_find_hidden.get_active()
-            fulltext = self.checkbox_find_fulltext.get_active()
+            if not self.options.time_iso:
+                time_format = '%x %X'
+            else:
+                time_format = '%Y-%m-%d %H:%M'
+            keywords, folder, exact, hidden, fulltext, limit, start_date, end_date, type_families, custom_mime, custom_extensions = self.get_search_settings()
+            result_filter = Filter(keywords, exact, hidden, fulltext, 
+                start_date, end_date, time_format, type_families, custom_mime, 
+                custom_extensions)
             messages = []
             sort_settings = self.treeview_files.get_model().get_sort_column_id()
             listmodel = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, str)
@@ -1399,18 +1439,18 @@ class catfish:
             self.treeview_files.set_model(listmodel)
             self.treeview_files.columns_autosize()
             for filegroup in self.results:
-                mime_type = filegroup[0]
-                filename = filegroup[1]
+                filename = filegroup[0]
+                modification_date = filegroup[2]
                 path, name = os.path.split(filename)
-                modified = filegroup[2]
-                if self.file_is_wanted(self.keywords, filename, self.folder, hidden, mime_type, modified, fulltext):
+                show_file, is_hidden, modification_date, mime_type = result_filter.apply_filters(filegroup, modification_date)
+                if show_file:
                     if not fulltext:
-                        if '*' not in self.keywords and not self.string_wild_match(name, self.keywords, exact):
+                        if '*' not in self.keywords and not result_filter.string_wild_match(name):
                             pass
                         else:
-                            listmodel.append(filegroup[3])
+                            listmodel.append(filegroup[4])
                     else:
-                        listmodel.append(filegroup[3])
+                        listmodel.append(filegroup[4])
             if len(listmodel) == 0:
                 self.clear_deepsearch = True
                 status_icon = Gtk.STOCK_INFO
