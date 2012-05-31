@@ -415,14 +415,14 @@ class catfish:
         else:
             # Unknown desktop? Just see what we have then
             # Guess suitable fileman
-            commands = ['nautilus', 'thunar', 'konqueror', 'marlin', 'pcmanfm']
+            commands = ['nautilus', 'caja', 'thunar', 'dolphin', 'konqueror', 'marlin', 'pcmanfm']
             default_fileman = ''
             for path in os.environ.get('PATH', '/usr/bin').split(os.pathsep):
                 for command in commands:
                     if os.path.exists(os.path.join(path, command)):
                         default_fileman = command
                         break
-            commands = ['gnome-open', 'exo-open', 'xdg-open']
+            commands = ['gnome-open', 'mate-open', 'exo-open', 'xdg-open']
             self.open_wrapper = ''
             # Guess suitable file open wrapper
             for path in os.environ.get('PATH', '/usr/bin').split(os.pathsep):
