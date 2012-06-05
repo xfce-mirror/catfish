@@ -1016,7 +1016,7 @@ class catfish:
                         continue
                     try:
                         filestat = os.stat(filename)
-                        size = filestat.st_size
+                        size = long(os.path.getsize(filename))
                         modified = time.strftime(time_format, time.gmtime(filestat.st_mtime))
                         show_file, is_hidden, modification_date, mime_type = result_filter.apply_filters(filename, modified)
                         
