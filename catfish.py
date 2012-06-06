@@ -567,6 +567,8 @@ class catfish:
             self.treeview_files.append_column(self.new_column(_('Size'), 2, 'filesize'))
             self.treeview_files.append_column(self.new_column(_('Location'), 3, 'ellipsize'))
             self.treeview_files.append_column(self.new_column(_('Last modified'), 4, markup=1))
+        for column in self.treeview_files.get_columns():
+			column.set_reorderable(True)
 
         self.entry_find_text.set_text(keywords)
         
