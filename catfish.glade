@@ -37,7 +37,7 @@ ru: Alexey Voronov &lt;alexey.voronov@gmail.com&gt;
 sv: Daniel Nylander &lt;po@danielnylander.se&gt;
 zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
     <property name="artists">Nancy Runge &lt;nancy@twotoasts.de&gt;</property>
-    <property name="logo_icon_name">gtk-find</property>
+    <property name="logo_icon_name">edit-find</property>
     <property name="license_type">gpl-2-0</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="aboutdialog_vbox1">
