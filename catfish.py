@@ -94,12 +94,6 @@ class Filter:
     def __init__(self, keywords, exact_match, show_hidden, fulltext, 
         start_date, end_date, time_format, type_families, custom_mime, 
         custom_extensions):
-        #print '\nFilter init:'
-        #print 'Keywords: ' + str(keywords)
-        #print 'Exact: %s    Hidden: %s    Fulltext: %s' % (str(exact_match), str(show_hidden), str(fulltext))
-        #print 'Time range: %s to %s' % (str(start_date), str(end_date))
-        #print 'Mimetypes: ' + str(type_families)
-        #print 'Custom Mime: %s    Custom Extensions: %s' % (str(custom_mime), str(custom_extensions))
         
         self.keywords = keywords
         self.exact_match = bool(exact_match)
@@ -603,6 +597,8 @@ class catfish:
         self.box_main_controls = self.builder.get_object('box_main_controls')
         
         self.box_infobar = self.builder.get_object('box_infobar')
+        self.button_deepsearch = self.builder.get_object('button_search_find')
+        self.label_deepsearch = self.builder.get_object('label_search_find')
         
         # Application Menu
         self.menu_button = self.builder.get_object('menu_button')
@@ -610,6 +606,7 @@ class catfish:
         self.checkbox_find_exact = self.builder.get_object('checkbox_find_exact')
         self.checkbox_find_hidden = self.builder.get_object('checkbox_find_hidden')
         self.checkbox_find_fulltext = self.builder.get_object('checkbox_find_fulltext')
+        self.checkbox_advanced = self.builder.get_object('checkbox_advanced')
         self.application_menu.attach_to_widget(self.menu_button, detach_cb)
         
         # Treeview and Right-Click menu
@@ -637,21 +634,20 @@ class catfish:
         self.type_filter_videos = self.builder.get_object('type_filter_videos')
         self.type_filter_applications = self.builder.get_object('type_filter_applications')
         self.type_filter_other = self.builder.get_object('type_filter_other')
-        
         self.button_type_filter_other = self.builder.get_object('button_type_filter_other')
         
         
         self.aboutdialog = self.builder.get_object('aboutdialog')
         
         self.date_dialog = self.builder.get_object('date_dialog')
+        label_startdate = self.builder.get_object('label_startdate')
+        label_enddate = self.builder.get_object("label_enddate")
         self.box_calendar_end = self.builder.get_object('box_calendar_end')
         self.box_calendar_start = self.builder.get_object('box_calendar_start')
         self.calendar_start = Gtk.Calendar()
-        self.calendar_start.connect("day-selected", self.on_filter_changed)
-        self.calendar_start.connect("month-changed", self.on_filter_changed)
+        calendar_start_today = self.builder.get_object('calendar_start_today')
+        calendar_end_today = self.builder.get_object('calendar_end_today')
         self.calendar_end = Gtk.Calendar()
-        self.calendar_end.connect("day-selected", self.on_filter_changed)
-        self.calendar_end.connect("month-changed", self.on_filter_changed)
         self.box_calendar_start.pack_start(self.calendar_start, True, True, 0)
         self.box_calendar_end.pack_start(self.calendar_end, True, True, 0)
         
@@ -659,14 +655,63 @@ class catfish:
         self.combobox_mimetype_existing = self.builder.get_object('combobox_mimetype_existing')
         self.entry_mimetype_custom = self.builder.get_object('entry_mimetype_custom')
         self.radio_mimetype_existing = self.builder.get_object('radio_mimetype_existing')
+        radio_mimetype_custom = self.builder.get_object('radio_mimetype_custom')
         self.load_mimetypes()
         
         self.dialog_updatedb = self.builder.get_object('dialog_updatedb')
+        dialog_updatedb_text_primary = self.builder.get_object('dialog_updatedb_text_primary')
+        dialog_updatedb_text_secondary = self.builder.get_object('dialog_updatedb_text_secondary')
         self.updatedb_spinner = self.builder.get_object('updatedb_spinner')
         self.updatedb_label_updating = self.builder.get_object('updatedb_label_updating')
         self.updatedb_label_done = self.builder.get_object('updatedb_label_done')
         self.updatedb_button_cancel = self.builder.get_object('updatedb_button_cancel')
         self.updatedb_button_ok = self.builder.get_object('updatedb_button_ok')
+        
+        # Localized strings
+        self.entry_find_text.set_placeholder_text( _("Search terms") )
+        
+        self.button_deepsearch.set_label( _("Deep Search") )
+        self.label_deepsearch.set_label( _("Didn't find what you were looking for?") )
+        
+        self.checkbox_find_exact.set_label( _("Exact match") )
+        self.checkbox_find_hidden.set_label( _("Hidden files") )
+        self.checkbox_find_fulltext.set_label( _("Fulltext search") )
+        self.checkbox_advanced.set_label( _("Advanced Filtering") )
+        
+        self.time_filter_any.set_label( _("Any time") )
+        self.time_filter_week.set_label( _("Past week") )
+        self.time_filter_custom.set_label( _("Other") )
+        self.button_time_filter_custom.set_label( _("Custom...") )
+        
+        self.type_filter_documents.set_label( _("Documents") )
+        self.type_filter_pictures.set_label( _("Images") )
+        self.type_filter_music.set_label( _("Music") )
+        self.type_filter_videos.set_label( _("Videos") )
+        self.type_filter_applications.set_label( _("Applications") )
+        self.type_filter_other.set_label( _("Other") )
+        self.button_type_filter_other.set_label( _("Custom...") )
+        
+        self.date_dialog.set_title( _("Custom Time Range") )
+        label_startdate.set_label( _("Start Date") )
+        label_enddate.set_label( _("End Date") )
+        calendar_start_today.set_label( _("Today") )
+        calendar_end_today.set_label( _("Today") )
+        
+        self.mimetypes_dialog.set_title( _("Custom File Filter") )
+        self.radio_mimetype_existing.set_label( _("Existing mimetype") )
+        radio_mimetype_custom.set_label( _("Enter extensions") )
+        
+        self.dialog_updatedb.set_title( _("Update Search Index") )
+        dialog_updatedb_text_primary.set_markup('<big><b>%s</b></big>' % _("Update Search Index"))
+        dialog_updatedb_text_secondary.set_label( _("To provide accurate results, the locate database needs to be refreshed.\nThis requires sudo (admin) rights.") )
+        self.updatedb_label_updating.set_label( _("Updating database...") )
+        self.updatedb_label_done.set_label( _("Done.") )
+        
+        # Signals
+        self.calendar_start.connect("day-selected", self.on_filter_changed)
+        self.calendar_start.connect("month-changed", self.on_filter_changed)
+        self.calendar_end.connect("day-selected", self.on_filter_changed)
+        self.calendar_end.connect("month-changed", self.on_filter_changed)
 
         self.window_search.connect("key-press-event", self.on_keypress)
         self.builder.connect_signals(self)
@@ -1284,7 +1329,7 @@ class catfish:
                     if return_code == 0:
                         status = _('Locate database updated successfully.')
                     else:
-                        status = _('An errror occurred while updating locatedb.')
+                        status = _('An error occurred while updating locatedb.')
                     self.updatedb_done = True
                     self.updatedb_in_progress = False
                     self.updatedb_label_done.set_label(status)
@@ -1379,7 +1424,7 @@ class catfish:
         filename = self.get_save_dialog(self.window_search, original_file)
         try:
             if os.path.exists(filename):
-                if not self.get_yesno_dialog(('The file %s already exists.  Do you '
+                if not self.get_yesno_dialog(_('The file %s already exists.  Do you '
                  + 'want to overwrite it?') % filename, self.window_search):
                     filename = None
             if filename <> None:
@@ -1387,7 +1432,7 @@ class catfish:
                     copy2(os.path.join(folder, original_file), filename)
                 except Exception, msg:
                     if self.options.debug: print 'Debug:', msg
-                    self.get_error_dialog('The file %s could not be saved.'
+                    self.get_error_dialog(_('The file %s could not be saved.')
                      % filename, self.window_search)
         except TypeError:
             pass

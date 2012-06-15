@@ -258,7 +258,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                       </object>
                     </child>
                     <child type="label">
-                      <object class="GtkLabel" id="label3">
+                      <object class="GtkLabel" id="label_startdate">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">&lt;b&gt;Start Date&lt;/b&gt;</property>
@@ -315,7 +315,7 @@ zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
                       </object>
                     </child>
                     <child type="label">
-                      <object class="GtkLabel" id="label4">
+                      <object class="GtkLabel" id="label_enddate">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">&lt;b&gt;End Date&lt;/b&gt;</property>
@@ -1285,7 +1285,7 @@ This requires sudo (admin) rights.</property>
                 <property name="no_show_all">True</property>
                 <property name="spacing">6</property>
                 <child>
-                  <object class="GtkLabel" id="label1">
+                  <object class="GtkLabel" id="label_search_find">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label" translatable="yes">Didn't find what you were looking for?</property>
