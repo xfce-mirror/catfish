@@ -103,9 +103,6 @@ msgstr ""
 
 
 # Update Search Index Dialog
-msgid "Update Search Index"
-msgstr ""
-
 msgid "To provide accurate results, the locate database needs to be refreshed.\nThis requires sudo (admin) rights."
 msgstr ""
 
@@ -127,18 +124,6 @@ msgid "Enter extensions"
 msgstr ""
 
 # User interface
-msgid "Exact match"
-msgstr ""
-
-msgid "Hidden files"
-msgstr ""
-
-msgid "Fulltext search"
-msgstr ""
-
-msgid "Limit results"
-msgstr ""
-
 msgid "File type"
 msgstr ""
 
@@ -174,7 +159,7 @@ msgstr ""
 msgid "No files found for \"%s\"."
 msgstr ""
 
-msgid "No files were found." ###
+msgid "No files were found."
 msgstr ""
 
 msgid "No files found."
