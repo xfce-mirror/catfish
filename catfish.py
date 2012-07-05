@@ -1224,11 +1224,17 @@ class catfish:
         """When a keypress is detected, do the following:
         
         ESCAPE      Stop search/Clear Search terms"""
-        if str(Gdk.keyval_name(event.keyval)) == 'Escape':
-            if self.find_in_progress:
-                self.abort_find = 1
-            else:
-                self.entry_find_text.set_text('')
+        ctrl = event.state & Gdk.ModifierType.CONTROL_MASK
+        keyname = Gdk.keyval_name(event.keyval)
+        if ctrl:
+            if keyname == 'q' or keyname == 'w':
+                Gtk.main_quit()
+        else:
+            if keyname == 'Escape':
+                if self.find_in_progress:
+                    self.abort_find = 1
+                else:
+                    self.entry_find_text.set_text('')
         
     # Keyword/Search Terms entry
     def on_entry_find_text_changed(self, widget):
