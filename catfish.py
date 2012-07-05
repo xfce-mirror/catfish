@@ -228,6 +228,8 @@ class suggestions(list):
         """Initialize the suggestions class with a maximum # results."""
         list.__init__(self)
         self.max_results = max_results
+        self.stop_suggestions = False
+        self.suggestions_running = False
         
     def clear(self):
         """Clear the suggestions list."""
@@ -237,32 +239,37 @@ class suggestions(list):
         """Perform a query using zeitgeist.  
         
         Return the number of found results."""
-        result_count = 0
-        try:
-            event_template = Event()
-            time_range = TimeRange.from_seconds_ago(60 * 3600 * 24) # 60 days at most
-            
-            results = iface.FindEvents(
-                time_range, # (min_timestamp, max_timestamp) in milliseconds
-                [event_template, ],
-                datamodel.StorageState.Any,
-                200,
-                datamodel.ResultType.MostRecentSubjects
-            )
+        self.suggestions_running = True
+        if not self.stop_suggestions:
+            result_count = 0
+            try:
+                event_template = Event()
+                time_range = TimeRange.from_seconds_ago(60 * 3600 * 24) # 60 days at most
+                
+                results = iface.FindEvents(
+                    time_range, # (min_timestamp, max_timestamp) in milliseconds
+                    [event_template, ],
+                    datamodel.StorageState.Any,
+                    200,
+                    datamodel.ResultType.MostRecentSubjects
+                )
 
-            results = (datamodel.Event(result) for result in results)
-            
-            for event in results:
-                for subject in event.get_subjects():
-                    if subject.uri[:7] == 'file://':
-                        filename = split_filename(subject.uri)[1].lower()
-                        if keywords.lower() in filename and filename not in self and folder.lower() in filename:
-                            result_count += 1
-                            self.append(filename)
-                    if self.__len__ == self.max_results: break
-                if self.__len__ == self.max_results: break
-        except NameError:
-            pass
+                results = (datamodel.Event(result) for result in results)
+                
+                for event in results:
+                    if not self.stop_suggestions:
+                        for subject in event.get_subjects():
+                            if subject.uri[:7] == 'file://':
+                                filename = split_filename(subject.uri)[1].lower()
+                                if keywords.lower() in filename and filename not in self and folder.lower() in filename:
+                                    result_count += 1
+                                    self.append(filename)
+                            if self.__len__ == self.max_results: break
+                        if self.__len__ == self.max_results: break
+            except NameError:
+                pass
+        self.suggestions_running = False
+        self.stop_suggestions = False
         return result_count
     
     def locate_query(self, keywords, folder):
@@ -291,6 +298,10 @@ class suggestions(list):
             return result_count
         else:
             return -1
+    
+    def stop(self):
+        if self.suggestions_running:
+            self.stop_suggestions = True
 
 
 class dbus_query:
@@ -1189,6 +1200,7 @@ class catfish:
             self.entry_find_text.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Enter search terms and press ENTER') )
             
     def show_suggestions(self, widget):
+        self.suggestions.stop()
         if not self.suggestion_pending:
             self.suggestion_pending = True
             while Gtk.events_pending(): Gtk.main_iteration()
@@ -1223,7 +1235,9 @@ class catfish:
     def on_keypress(self, widget, event):
         """When a keypress is detected, do the following:
         
-        ESCAPE      Stop search/Clear Search terms"""
+        ESCAPE      Stop search/Clear Search terms
+        Ctrl-Q      Exit
+        Ctrl-W      Exit"""
         ctrl = event.state & Gdk.ModifierType.CONTROL_MASK
         keyname = Gdk.keyval_name(event.keyval)
         if ctrl:
