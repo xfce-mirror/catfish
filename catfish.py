@@ -603,6 +603,10 @@ class catfish:
         self.window_search = self.builder.get_object('window_search')
         self.window_search.set_wmclass ("catfish", "catfish")
         
+        self.toolbar = self.builder.get_object('toolbar')
+        context = self.toolbar.get_style_context()
+        context.add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)
+        
         self.button_find_folder = self.builder.get_object('button_find_folder')
         self.entry_find_text = self.builder.get_object('entry_find_text')
         self.box_main_controls = self.builder.get_object('box_main_controls')
