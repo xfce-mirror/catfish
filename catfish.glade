@@ -23,19 +23,8 @@ of the License, or (at your option) any later version.
 See the file COPYING for the full license text.</property>
     <property name="authors">Copyright 2008-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 GTK+3 Port copyright 2012 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
-    <property name="translator_credits" translatable="yes">ca: Paco &lt;web@pacoriviere.cat&gt;
-cs: Miro Hrončok &lt;churchyard@gmail.com&gt;
-de: Christian Dywan &lt;software@twotoasts.de&gt;
-fi: Elias Julkunen &lt;elias.julkunen@gmail.com&gt;
-fr: Pierre Slamich &lt;pierre.slamich@gmail.com&gt;
-    Naji Mammeri &lt;naji.mammeri@gmail.com&gt;
-    Fabrice Colin &lt;fabrice.colin@gmail.com&gt;
-it: Wolf &lt;wolfprojects@gmail.com&gt;
-pl: Radomir Dopieralski &lt;ubuntu@sheep.prv.pl&gt;
-    Szymon Gruszczynski &lt;atavus@interia.pl&gt;
-ru: Alexey Voronov &lt;alexey.voronov@gmail.com&gt;
-sv: Daniel Nylander &lt;po@danielnylander.se&gt;
-zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
+    <property name="translator_credits" translatable="yes">de: Simon Steinbeiss &lt;simon@xfce.org&gt;
+fi: Pasi Lallinaho &lt;pasi@shimmerproject.org&gt;</property>
     <property name="artists">Nancy Runge &lt;nancy@twotoasts.de&gt;</property>
     <property name="logo_icon_name">edit-find</property>
     <property name="license_type">gpl-2-0</property>

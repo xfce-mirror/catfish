@@ -1,0 +1,242 @@
+# Catfish Finnish Translation
+# Copyright (C) 2007-2008 Christian Dywan <christian at twotoasts dot de>
+# This file is distributed under the same license as the PACKAGE package.
+# Pasi Lallinaho <pasi@shimmerproject.org>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: catfish 0.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-03 18:39-0400\n"
+"PO-Revision-Date: 2012-07-18 19:45+0200\n"
+"Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
+"Language-Team: finnish <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Finnish\n"
+
+#: catfish.py:556
+msgid "Preview"
+msgstr "Esikatselu"
+
+#: catfish.py:558
+#: catfish.py:560
+msgid "Filename"
+msgstr "Tiedoston nimi"
+
+#: catfish.py:561
+msgid "Size"
+msgstr "Koko"
+
+#: catfish.py:562
+msgid "Location"
+msgstr "Sijainti"
+
+#: catfish.py:563
+msgid "Last modified"
+msgstr "Viimeksi muokattu"
+
+#: catfish.py:671
+msgid "Search terms"
+msgstr "Hakusanat"
+
+#: catfish.py:673
+msgid "Deep Search"
+msgstr "Tehokas haku"
+
+#: catfish.py:674
+msgid "Didn't find what you were looking for?"
+msgstr "Etkö löytänyt etsimääsi?"
+
+#: catfish.py:676
+msgid "Exact match"
+msgstr "Tarkka hakutulos"
+
+#: catfish.py:677
+msgid "Hidden files"
+msgstr "Piilotetut tiedostot"
+
+#: catfish.py:678
+msgid "Fulltext search"
+msgstr "Kokosanahaku"
+
+#: catfish.py:679
+msgid "Advanced Filtering"
+msgstr "Edistyneet suodattimet"
+
+#: catfish.py:681
+msgid "Any time"
+msgstr "Koska tahansa"
+
+#: catfish.py:682
+msgid "Past week"
+msgstr "Viime viikolla"
+
+#: catfish.py:683
+#: catfish.py:691
+msgid "Other"
+msgstr "Muu"
+
+#: catfish.py:684
+#: catfish.py:692
+msgid "Custom..."
+msgstr "Mukautettu..."
+
+#: catfish.py:686
+msgid "Documents"
+msgstr "Asiakirjat"
+
+#: catfish.py:687
+msgid "Images"
+msgstr "Kuvat"
+
+#: catfish.py:688
+msgid "Music"
+msgstr "Musiikki"
+
+#: catfish.py:689
+msgid "Videos"
+msgstr "Videot"
+
+#: catfish.py:690
+msgid "Applications"
+msgstr "Sovellukset"
+
+#: catfish.py:694
+msgid "Custom Time Range"
+msgstr "Mukautettu aikaväli"
+
+#: catfish.py:695
+msgid "Start Date"
+msgstr "Alkupäivämäärä"
+
+#: catfish.py:696
+msgid "End Date"
+msgstr "Loppupäivämäärä"
+
+#: catfish.py:697
+#: catfish.py:698
+msgid "Today"
+msgstr "Tänään"
+
+#: catfish.py:700
+msgid "Custom File Filter"
+msgstr "Mukautettu tiedostosuodatin"
+
+#: catfish.py:701
+msgid "Existing mimetype"
+msgstr "Olemassa oleva MIME-tyyppi"
+
+#: catfish.py:702
+msgid "Enter extensions"
+msgstr "Syötä tiedostopäätteet"
+
+#: catfish.py:704
+#: catfish.py:705
+msgid "Update Search Index"
+msgstr "Päivitä hakuindeksi"
+
+#: catfish.py:706
+msgid ""
+"To provide accurate results, the locate database needs to be refreshed.\n"
+"This requires sudo (admin) rights."
+msgstr ""
+"Jotta tarkkoja hakutuloksia voidaan saada, locate -tietokanta täytyy päivittää.\n"
+"Tämä vaatii sudo (järjestelmänvalvoja) -oikeudet."
+
+#: catfish.py:707
+msgid "Updating database..."
+msgstr "Päivitetään tietokantaa..."
+
+#: catfish.py:708
+msgid "Done."
+msgstr "Valmis."
+
+#: catfish.py:802
+#, python-format
+msgid "Save \"%s\" as..."
+msgstr "Tallenna \"%s\" nimellä..."
+
+#: catfish.py:979
+#, python-format
+msgid "Searching for \"%s\""
+msgstr "Etsitään \"%s\""
+
+#: catfish.py:980
+msgid "Searching..."
+msgstr "Etsitään..."
+
+#: catfish.py:1022
+msgid "The search backend doesn't support wildcards."
+msgstr "Hakumetodi ei tue jokerimerkkejä."
+
+#: catfish.py:1023
+#: catfish.py:1112
+#: catfish.py:1526
+msgid "No files found."
+msgstr "Tiedostoja ei löytynyt."
+
+#: catfish.py:1103
+msgid "Fatal error, search was aborted."
+msgstr "Kohtalokas virhe, etsintä keskeytettiin."
+
+#: catfish.py:1107
+msgid "Click here to start the search daemon."
+msgstr "Paina tästä käynnistääksesi haun taustaprosessin."
+
+#: catfish.py:1111
+#: catfish.py:1525
+msgid "No files were found."
+msgstr "Tiedostoja ei löytynyt."
+
+#: catfish.py:1115
+#: catfish.py:1529
+#, python-format
+msgid "%s files found."
+msgstr "Löytyi %s tiedostoa."
+
+#: catfish.py:1125
+#, python-format
+msgid "Search results for \"%s\""
+msgstr "Hakutulokset haulle \"%s\""
+
+#: catfish.py:1183
+msgid "Cancel search"
+msgstr "Peruuta haku"
+
+#: catfish.py:1186
+msgid "Clear search terms"
+msgstr "Tyhjennä hakusanat"
+
+#: catfish.py:1189
+msgid "Enter search terms and press ENTER"
+msgstr "Syötä hakusanat ja paina ENTER"
+
+#: catfish.py:1330
+msgid "Locate database updated successfully."
+msgstr "Locate -tietokanta päivitettiin onnistuneesti."
+
+#: catfish.py:1332
+msgid "An error occurred while updating locatedb."
+msgstr "Virhe päivitettäessä locate -tietokantaa."
+
+#: catfish.py:1382
+msgid "The search daemon was started."
+msgstr "Haun taustaprosessi käynnistettiin."
+
+#: catfish.py:1386
+msgid "The search daemon could not be started."
+msgstr "Haun taustaprosessia ei voitu käynnistää."
+
+#: catfish.py:1427
+#, python-format
+msgid "The file %s already exists.  Do you "
+msgstr "Tiedosto %s on jo olemassa.  Haluatko "
+
+#: catfish.py:1435
+#, python-format
+msgid "The file %s could not be saved."
+msgstr "Tiedostoa %s ei voitu tallentaa."
+
