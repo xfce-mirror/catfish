@@ -25,7 +25,8 @@ See the file COPYING for the full license text.</property>
 GTK+3 Port copyright 2012 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
     <property name="translator_credits" translatable="yes">de: Simon Steinbeiss &lt;simon@xfce.org&gt;
 fi: Pasi Lallinaho &lt;pasi@shimmerproject.org&gt;
-fr: Fabrice Colin &lt;fabrice.colin@gmail.com&gt;</property>
+fr: Fabrice Colin &lt;fabrice.colin@gmail.com&gt;
+es: Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
     <property name="artists">Nancy Runge &lt;nancy@twotoasts.de&gt;</property>
     <property name="logo_icon_name">edit-find</property>
     <property name="license_type">gpl-2-0</property>
