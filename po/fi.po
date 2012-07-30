@@ -1,5 +1,5 @@
 # Catfish Finnish Translation
-# Copyright (C) 2007-2008 Christian Dywan <christian at twotoasts dot de>
+# Copyright (C) 2007-2012 Christian Dywan <christian at twotoasts dot de>
 # This file is distributed under the same license as the PACKAGE package.
 # Pasi Lallinaho <pasi@shimmerproject.org>, 2012.
 #

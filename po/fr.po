@@ -1,230 +1,249 @@
-# SOME DESCRIPTIVE TITLE.
+# Catfish French Translation
 # Copyright (C) 2007-2012 Christian Dywan <christian at twotoasts dot de>
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Fabrice Colin <fabrice.colin@gmail.com>, 2012.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: catfish 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-03 18:39-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2012-07-30 20:53+0730\n"
+"Last-Translator: Fabrice Colin <fabrice.colin@gmail.com>\n"
+"Language-Team: french <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: catfish.py:556
+#, fuzzy
 msgid "Preview"
-msgstr ""
+msgstr "Avant-première"
 
-#: catfish.py:558 catfish.py:560
+#: catfish.py:558
+#: catfish.py:560
 msgid "Filename"
-msgstr ""
+msgstr "Nom de fichier"
 
 #: catfish.py:561
 msgid "Size"
-msgstr ""
+msgstr "Taille"
 
 #: catfish.py:562
 msgid "Location"
-msgstr ""
+msgstr "Chemin"
 
 #: catfish.py:563
 msgid "Last modified"
-msgstr ""
+msgstr "Dernière modification"
 
 #: catfish.py:671
 msgid "Search terms"
-msgstr ""
+msgstr "Termes"
 
 #: catfish.py:673
 msgid "Deep Search"
-msgstr ""
+msgstr "Recherche Profonde"
 
 #: catfish.py:674
+#, fuzzy
 msgid "Didn't find what you were looking for?"
-msgstr ""
+msgstr "Pas ce que vous recherchiez ?"
 
 #: catfish.py:676
 msgid "Exact match"
-msgstr ""
+msgstr "Réponse exacte"
 
 #: catfish.py:677
 msgid "Hidden files"
-msgstr ""
+msgstr "Fichiers cachés"
 
 #: catfish.py:678
+#, fuzzy
 msgid "Fulltext search"
-msgstr ""
+msgstr "Recherche plein texte"
 
 #: catfish.py:679
 msgid "Advanced Filtering"
-msgstr ""
+msgstr "Filtres avancés"
 
 #: catfish.py:681
+#, fuzzy
 msgid "Any time"
-msgstr ""
+msgstr "N'importe quel temps"
 
 #: catfish.py:682
 msgid "Past week"
-msgstr ""
+msgstr "La semaine dernière"
 
-#: catfish.py:683 catfish.py:691
+#: catfish.py:683
+#: catfish.py:691
 msgid "Other"
-msgstr ""
+msgstr "Autre"
 
-#: catfish.py:684 catfish.py:692
+#: catfish.py:684
+#: catfish.py:692
+#, fuzzy
 msgid "Custom..."
-msgstr ""
+msgstr "Sur mesure"
 
 #: catfish.py:686
 msgid "Documents"
-msgstr ""
+msgstr "Documents"
 
 #: catfish.py:687
 msgid "Images"
-msgstr ""
+msgstr "Images"
 
 #: catfish.py:688
 msgid "Music"
-msgstr ""
+msgstr "Musique"
 
 #: catfish.py:689
 msgid "Videos"
-msgstr ""
+msgstr "Vidéos"
 
 #: catfish.py:690
 msgid "Applications"
-msgstr ""
+msgstr "Applications"
 
 #: catfish.py:694
+#, fuzzy
 msgid "Custom Time Range"
-msgstr ""
+msgstr "Gamme horaire sur mesure"
 
 #: catfish.py:695
 msgid "Start Date"
-msgstr ""
+msgstr "Date de début"
 
 #: catfish.py:696
 msgid "End Date"
-msgstr ""
+msgstr "Date de fin"
 
-#: catfish.py:697 catfish.py:698
+#: catfish.py:697
+#: catfish.py:698
 msgid "Today"
-msgstr ""
+msgstr "Aujourd'hui"
 
 #: catfish.py:700
 msgid "Custom File Filter"
-msgstr ""
+msgstr "Filtre fichier sur mesure"
 
 #: catfish.py:701
+#, fuzzy
 msgid "Existing mimetype"
-msgstr ""
+msgstr "Type MIME existant"
 
 #: catfish.py:702
 msgid "Enter extensions"
-msgstr ""
+msgstr "Entrez les extensions"
 
-#: catfish.py:704 catfish.py:705
+#: catfish.py:704
+#: catfish.py:705
 msgid "Update Search Index"
-msgstr ""
+msgstr "Mettre à jour l'index"
 
 #: catfish.py:706
 msgid ""
 "To provide accurate results, the locate database needs to be refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
+"Pour de meilleurs résultats, la base de données locate doit être mise à jour.\n"
+"Cela nécessite les droits sudo (admin)."
 
 #: catfish.py:707
 msgid "Updating database..."
-msgstr ""
+msgstr "Mise à jour de le base de données"
 
 #: catfish.py:708
 msgid "Done."
-msgstr ""
+msgstr "Terminé."
 
 #: catfish.py:802
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr ""
+msgstr "Sauver  \"%s\" sous..."
 
 #: catfish.py:979
 #, python-format
 msgid "Searching for \"%s\""
-msgstr ""
+msgstr "Recherche pour \"%s\""
 
 #: catfish.py:980
 msgid "Searching..."
-msgstr ""
+msgstr "Recherche en cours..."
 
 #: catfish.py:1022
 msgid "The search backend doesn't support wildcards."
-msgstr ""
+msgstr "Le moteur de recherche ne supporte pas les jokers."
 
-#: catfish.py:1023 catfish.py:1112 catfish.py:1526
+#: catfish.py:1023
+#: catfish.py:1112
+#: catfish.py:1526
 msgid "No files found."
-msgstr ""
+msgstr "Aucun fichier trouvé."
 
 #: catfish.py:1103
 msgid "Fatal error, search was aborted."
-msgstr ""
+msgstr "Erreur fatale, la recherche a été terminée."
 
 #: catfish.py:1107
 msgid "Click here to start the search daemon."
-msgstr ""
+msgstr "Cliquez ici pour démarrer le daemon de recherche."
 
-#: catfish.py:1111 catfish.py:1525
+#: catfish.py:1111
+#: catfish.py:1525
 msgid "No files were found."
-msgstr ""
+msgstr "Aucun fichier n'a été trouvé."
 
-#: catfish.py:1115 catfish.py:1529
+#: catfish.py:1115
+#: catfish.py:1529
 #, python-format
 msgid "%s files found."
-msgstr ""
+msgstr "%s fichiers trouvés."
 
 #: catfish.py:1125
 #, python-format
 msgid "Search results for \"%s\""
-msgstr ""
+msgstr "Rechercher les résultats pour \"%s\""
 
 #: catfish.py:1183
 msgid "Cancel search"
-msgstr ""
+msgstr "Annuler la recherche"
 
 #: catfish.py:1186
+#, fuzzy
 msgid "Clear search terms"
-msgstr ""
+msgstr "Enlever les termes de la recherche"
 
 #: catfish.py:1189
 msgid "Enter search terms and press ENTER"
-msgstr ""
+msgstr "Entrez les termes et pressez la touche Entrée"
 
 #: catfish.py:1330
 msgid "Locate database updated successfully."
-msgstr ""
+msgstr "La base de données locate a été mise à jour."
 
 #: catfish.py:1332
 msgid "An error occurred while updating locatedb."
-msgstr ""
+msgstr "Une erreur est survenue pendant la mise à jour de locatedb."
 
 #: catfish.py:1382
 msgid "The search daemon was started."
-msgstr ""
+msgstr "La daemon de recherche a été démarré"
 
 #: catfish.py:1386
 msgid "The search daemon could not be started."
-msgstr ""
+msgstr "Le démon de recherche n'a pas pu être démarré."
 
 #: catfish.py:1427
-#, python-format
+#, fuzzy, python-format
 msgid "The file %s already exists.  Do you "
-msgstr ""
+msgstr "Le fichier %s existe déjà. Voulez vous"
 
 #: catfish.py:1435
 #, python-format
 msgid "The file %s could not be saved."
-msgstr ""
+msgstr "Le fichier %s n'a pas pu être sauvegardé."
+
