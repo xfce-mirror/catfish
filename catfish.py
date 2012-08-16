@@ -263,7 +263,11 @@ class suggestions(list):
                                 filename = split_filename(subject.uri)[1].lower()
                                 if keywords.lower() in filename and filename not in self and folder.lower() in filename:
                                     result_count += 1
-                                    self.append(filename)
+                                    if self.show_hidden:
+                                        self.append(filename)
+                                    else:
+                                        if not self.file_is_hidden(filename):
+                                            self.append(filename)
                             if self.__len__ == self.max_results: break
                         if self.__len__ == self.max_results: break
             except NameError:
@@ -283,13 +287,18 @@ class suggestions(list):
             filename = split_filename(filepath)[1].lower()
             if filename not in self and keywords.lower() == filename[:len(keywords)]:
                 result_count += 1
-                self.append(filename)
+                if self.show_hidden:
+                	self.append(filename)
+            	else:
+            		if not self.file_is_hidden(filename):
+            			self.append(filename)
             if self.__len__ == self.max_results: break
         return result_count
     
-    def run(self, keywords, folder):
+    def run(self, keywords, folder, show_hidden=False):
         """Run the suggestions query and return the number of found
         results."""
+        self.show_hidden = show_hidden
         if len(keywords) > 1:
             self.clear()
             result_count = 0
@@ -302,6 +311,17 @@ class suggestions(list):
     def stop(self):
         if self.suggestions_running:
             self.stop_suggestions = True
+            
+    def file_is_hidden(self, filename):
+        """Determine if a file is hidden or in a hidden folder"""
+        if filename == '': return False
+        path, name = os.path.split(filename)
+        if len(name) and name[0] == '.': return True
+        for folder in path.split(os.path.sep):
+            if len(folder):
+                if folder[0] == '.':
+                    return True
+        return False
 
 
 class dbus_query:
@@ -361,7 +381,6 @@ class fulltext_query:
         
     def run(self, keywords, folder, exact, hidden, limit):
         command = "find %s -name '*' -print0 | xargs -0 grep \"%s\"" % (folder, keywords)
-        print command
         self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         return self.process.stdout
     
@@ -394,7 +413,6 @@ class shell_query:
             command += ' "*%s*"' % keywords
         else:
             command += ' "%s"' % keywords
-        print command
         self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         return self.process.stdout
     def status(self): return self.err or self.process.poll()
@@ -407,34 +425,7 @@ class generic_query:
 class catfish:
     def __init__(self):
         """Create the main window."""
-        # Check for a desktop environment
-        desktop = os.environ.get('DESKTOP_SESSION', os.environ.get('GDMSESSION', ''))
-        if desktop[:4] == 'xfce':
-            # We assume this is Xfce4
-            default_fileman = 'Thunar'
-            self.open_wrapper = 'exo-open'
-        elif desktop[:5] == 'gnome':
-            # We assume this is Gnome
-            default_fileman = 'Nautilus'
-            self.open_wrapper = 'gnome-open'
-        else:
-            # Unknown desktop? Just see what we have then
-            # Guess suitable fileman
-            commands = ['nautilus', 'caja', 'thunar', 'dolphin', 'konqueror', 'marlin', 'pcmanfm']
-            default_fileman = ''
-            for path in os.environ.get('PATH', '/usr/bin').split(os.pathsep):
-                for command in commands:
-                    if os.path.exists(os.path.join(path, command)):
-                        default_fileman = command
-                        break
-            commands = ['gnome-open', 'mate-open', 'exo-open', 'xdg-open']
-            self.open_wrapper = ''
-            # Guess suitable file open wrapper
-            for path in os.environ.get('PATH', '/usr/bin').split(os.pathsep):
-                for command in commands:
-                    if os.path.exists(os.path.join(path, command)):
-                        self.open_wrapper = command
-                        break
+        self.open_wrapper = 'xdg-open'
 
         # Parse command line options
         parser = optparse.OptionParser(usage='usage: ' + app_name + ' [options] keywords',
@@ -463,7 +454,7 @@ class catfish:
         parser.add_option('', '--debug', action='store_true'
             , help='Show debugging messages.')
         parser.set_defaults(icons_large=0, thumbnails=0, time_iso=0, method='find'
-            , limit_results=0, path='~', fileman=default_fileman, exact=0
+            , limit_results=0, path='~', fileman=self.open_wrapper, exact=0
             , hidden=0, fulltext=0, file_action='open', debug=0, open_wrapper=self.open_wrapper)
         self.options, args = parser.parse_args()
         keywords = ' '.join(args)
@@ -859,16 +850,8 @@ class catfish:
     def open_file(self, filename):
         """Open the file with its default app or the file manager"""
 
-        try:
-            if stat.S_ISDIR(os.stat(filename).st_mode):
-                if self.options.fileman == 'pcmanfm':
-                    cwd = os.getcwd()
-                    os.chdir(filename)
-                    command = self.options.fileman
-                else:
-                    command = [self.options.fileman, filename]
-            else:
-                command = [self.open_wrapper, filename]
+        if os.path.exists(filename):
+            command = [self.open_wrapper, filename]
             try:
                 subprocess.Popen(command, shell=False)
             except Exception, msg:
@@ -878,12 +861,9 @@ class catfish:
                 print '* The wrapper was %s.' % self.open_wrapper
                 print '* The filemanager was %s.' % self.options.fileman
                 print 'Hint: Check wether the wrapper and filemanager exist.'
-        except Exception, msg:
-            if self.options.debug: print 'Debug:', msg
+        else:
             self.get_error_dialog(('Error: Could not access the file %s.'
              % filename), self.window_search)
-        if self.options.fileman == 'pcmanfm':
-            os.chdir(cwd)
 
     def get_find_options(self, method, folder='~', limit=-1):
         folder = os.path.expanduser(folder)
@@ -1209,7 +1189,7 @@ class catfish:
             self.suggestion_pending = True
             while Gtk.events_pending(): Gtk.main_iteration()
             query = widget.get_text()
-            self.suggestions.run(query, self.button_find_folder.get_filename())
+            self.suggestions.run(query, self.button_find_folder.get_filename(), self.checkbox_find_hidden.get_active())
             
             completion = self.entry_find_text.get_completion()
             listmodel = completion.get_model()
