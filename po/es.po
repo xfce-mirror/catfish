@@ -8,20 +8,21 @@ msgstr ""
 "Project-Id-Version: catfish 0.4.0\n"
 "Report-Msgid-Bugs-To: Sean Davis <smd.seandavis@gmail.com>\n"
 "POT-Creation-Date: 2012-07-03 18:39-0400\n"
-"PO-Revision-Date: 2012-07-30 12:31-0500\n"
-"Last-Translator: Sean Davis <smd.seandavis@gmail.com>\n"
+"PO-Revision-Date: 2012-07-30 20:42+0000\n"
+"Last-Translator: Sean Davis <Unknown>\n"
 "Language-Team: spanish <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-08-20 14:16+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
+"Language: \n"
 
 #: catfish.py:556
 msgid "Preview"
 msgstr "Vista preliminar"
 
-#: catfish.py:558
-#: catfish.py:560
+#: catfish.py:558 catfish.py:560
 msgid "Filename"
 msgstr "Nombre de archivo"
 
@@ -73,13 +74,11 @@ msgstr "En cualquier momento"
 msgid "Past week"
 msgstr "La semana pasada"
 
-#: catfish.py:683
-#: catfish.py:691
+#: catfish.py:683 catfish.py:691
 msgid "Other"
 msgstr "Otro"
 
-#: catfish.py:684
-#: catfish.py:692
+#: catfish.py:684 catfish.py:692
 msgid "Custom..."
 msgstr "Personalizar..."
 
@@ -115,8 +114,7 @@ msgstr "Fecha de inicio"
 msgid "End Date"
 msgstr "Fecha de finalización"
 
-#: catfish.py:697
-#: catfish.py:698
+#: catfish.py:697 catfish.py:698
 msgid "Today"
 msgstr "Hoy día"
 
@@ -132,8 +130,7 @@ msgstr "Mimetype existentes"
 msgid "Enter extensions"
 msgstr "Introduzca las extensiones"
 
-#: catfish.py:704
-#: catfish.py:705
+#: catfish.py:704 catfish.py:705
 msgid "Update Search Index"
 msgstr "Actualizar el índice de búsqueda"
 
@@ -142,7 +139,8 @@ msgid ""
 "To provide accurate results, the locate database needs to be refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
-"Para obtener resultados precisos, la base de datos locate necesita ser renovado.\n"
+"Para obtener resultados precisos, la base de datos locate necesita ser "
+"renovado.\n"
 "Esto requiere de los derechos sudo (admin)."
 
 #: catfish.py:707
@@ -171,9 +169,7 @@ msgstr "Buscando..."
 msgid "The search backend doesn't support wildcards."
 msgstr "El motor de búsqueda no admite comodines."
 
-#: catfish.py:1023
-#: catfish.py:1112
-#: catfish.py:1526
+#: catfish.py:1023 catfish.py:1112 catfish.py:1526
 msgid "No files found."
 msgstr "No se han encontrado archivos."
 
@@ -185,13 +181,11 @@ msgstr "Fatal error, la búsqueda se dio por terminado."
 msgid "Click here to start the search daemon."
 msgstr "Haga clic aquí para iniciar el daemon de búsqueda."
 
-#: catfish.py:1111
-#: catfish.py:1525
+#: catfish.py:1111 catfish.py:1525
 msgid "No files were found."
 msgstr "No se encontraron archivos."
 
-#: catfish.py:1115
-#: catfish.py:1529
+#: catfish.py:1115 catfish.py:1529
 #, python-format
 msgid "%s files found."
 msgstr "%s archivos encontrados."
@@ -232,10 +226,9 @@ msgstr "El demonio de búsqueda no se pudo iniciar."
 #: catfish.py:1427
 #, python-format
 msgid "The file %s already exists.  Do you "
-msgstr "El archivo %s ya existe.  ¿Usted"
+msgstr "El archivo %s ya existe.  ¿Usted "
 
 #: catfish.py:1435
 #, python-format
 msgid "The file %s could not be saved."
 msgstr "El archivo %s no se pudo guardar."
-

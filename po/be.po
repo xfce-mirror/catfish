@@ -1,236 +1,230 @@
-# Catfish German Translation
-# Copyright (C) 2007-2012 Christian Dywan <christian at twotoasts dot de>
-# This file is distributed under the same license as the PACKAGE package.
-# Simon Steinbeiss <simon@xfce.org>, 2012.
+# Belarusian translation for catfish-search
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the catfish-search package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish 0.4.0\n"
-"Report-Msgid-Bugs-To: simon@xfce.org\n"
+"Project-Id-Version: catfish-search\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-07-03 18:39-0400\n"
-"PO-Revision-Date: 2012-07-30 16:24+0000\n"
-"Last-Translator: Simon Steinbeiss <Unknown>\n"
-"Language-Team: german <LL@li.org>\n"
+"PO-Revision-Date: 2012-08-20 10:50+0000\n"
+"Last-Translator: Mikalai Udodau <Unknown>\n"
+"Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2012-08-20 14:16+0000\n"
 "X-Generator: Launchpad (build 15810)\n"
-"Language: \n"
-"X-Poedit-Language: German\n"
 
 #: catfish.py:556
 msgid "Preview"
-msgstr "Vorschau"
+msgstr "Перадпрагляд"
 
 #: catfish.py:558 catfish.py:560
 msgid "Filename"
-msgstr "Dateiname"
+msgstr "Назва файла"
 
 #: catfish.py:561
 msgid "Size"
-msgstr "Größe"
+msgstr "Памер"
 
 #: catfish.py:562
 msgid "Location"
-msgstr "Ort"
+msgstr "Размяшчэнне"
 
 #: catfish.py:563
 msgid "Last modified"
-msgstr "Zuletzt geändert"
+msgstr "Апошнія змены"
 
 #: catfish.py:671
 msgid "Search terms"
-msgstr "Suchbegriffe"
+msgstr "Умовы пошуку"
 
 #: catfish.py:673
 msgid "Deep Search"
-msgstr "Intensive Suche"
+msgstr "Глыбокі пошук"
 
 #: catfish.py:674
 msgid "Didn't find what you were looking for?"
-msgstr "Nicht gefunden, wonach sie suchten?"
+msgstr "Не знайшлося што вы шукалі?"
 
 #: catfish.py:676
 msgid "Exact match"
-msgstr "Genaue Übereinstimmung"
+msgstr "Дакладная адпаведнасць"
 
 #: catfish.py:677
 msgid "Hidden files"
-msgstr "Versteckte Dateien"
+msgstr "Схаваныя файлы"
 
 #: catfish.py:678
 msgid "Fulltext search"
-msgstr "Volltextsuche"
+msgstr "Поўнатэкставы пошук"
 
 #: catfish.py:679
 msgid "Advanced Filtering"
-msgstr "Erweiterte Filter"
+msgstr "Адмысловае фільтраванне"
 
 #: catfish.py:681
 msgid "Any time"
-msgstr "Immer"
+msgstr "Любы час"
 
 #: catfish.py:682
 msgid "Past week"
-msgstr "Vorige Woche"
+msgstr "Праз тыдзень"
 
 #: catfish.py:683 catfish.py:691
 msgid "Other"
-msgstr "Andere"
+msgstr "Іншы"
 
 #: catfish.py:684 catfish.py:692
 msgid "Custom..."
-msgstr "Benutzerdefiniert..."
+msgstr "Уласнае..."
 
 #: catfish.py:686
 msgid "Documents"
-msgstr "Dokumente"
+msgstr "Дакументы"
 
 #: catfish.py:687
 msgid "Images"
-msgstr "Bilder"
+msgstr "Выявы"
 
 #: catfish.py:688
 msgid "Music"
-msgstr "Musik"
+msgstr "Музыка"
 
 #: catfish.py:689
 msgid "Videos"
-msgstr "Videos"
+msgstr "Відэа"
 
 #: catfish.py:690
 msgid "Applications"
-msgstr "Anwendungen"
+msgstr "Праграмы"
 
 #: catfish.py:694
 msgid "Custom Time Range"
-msgstr "Zeitrahmen festlegen"
+msgstr "Адмысловы абсяг часу"
 
 #: catfish.py:695
 msgid "Start Date"
-msgstr "Anfangsdatum"
+msgstr "Дата пачатку"
 
 #: catfish.py:696
 msgid "End Date"
-msgstr "Enddatum"
+msgstr "Дата заканчэння"
 
 #: catfish.py:697 catfish.py:698
 msgid "Today"
-msgstr "Heute"
+msgstr "Сёння"
 
 #: catfish.py:700
 msgid "Custom File Filter"
-msgstr "Filter festlegen"
+msgstr "Адмысловы фільтр файлаў"
 
 #: catfish.py:701
 msgid "Existing mimetype"
-msgstr "Vorhandener Dateityp"
+msgstr "Існы тып mime"
 
 #: catfish.py:702
 msgid "Enter extensions"
-msgstr "Dateiendung eingeben"
+msgstr ""
 
 #: catfish.py:704 catfish.py:705
 msgid "Update Search Index"
-msgstr "Suchindex aktualisieren"
+msgstr "Абнавіць індэкс пошуку"
 
 #: catfish.py:706
 msgid ""
 "To provide accurate results, the locate database needs to be refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
-"Um genau Suchergebnisse liefern zu können, muss die locate Datenbank "
-"aktualisiert werden.\n"
-"Hierfür werden sudo (Administrator-) Rechte benötigt."
 
 #: catfish.py:707
 msgid "Updating database..."
-msgstr "Datenbank wird aktualisiert..."
+msgstr "Абнаўленне базы звестак..."
 
 #: catfish.py:708
 msgid "Done."
-msgstr "Fertig."
+msgstr "Скончана."
 
 #: catfish.py:802
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "\"%s\" speichern als..."
+msgstr "Запісаць \"%s\" як..."
 
 #: catfish.py:979
 #, python-format
 msgid "Searching for \"%s\""
-msgstr "Suchen nach \"%s\""
+msgstr "Пошук \"%s\""
 
 #: catfish.py:980
 msgid "Searching..."
-msgstr "Suche..."
+msgstr "Пошук..."
 
 #: catfish.py:1022
 msgid "The search backend doesn't support wildcards."
-msgstr "Das Such-backend unterstützt keine Wildcards."
+msgstr ""
 
 #: catfish.py:1023 catfish.py:1112 catfish.py:1526
 msgid "No files found."
-msgstr "Keine Dateien gefunden."
+msgstr "Файлы не знойдзены."
 
 #: catfish.py:1103
 msgid "Fatal error, search was aborted."
-msgstr "Fataler Fehler, die Suche wurde abgebrochen."
+msgstr "Непапраўная памылка, пошук перарваны."
 
 #: catfish.py:1107
 msgid "Click here to start the search daemon."
-msgstr "Hier klicken um den Such-Daemon zu starten."
+msgstr "Націсніце тут, каб запусціць дэман пошуку."
 
 #: catfish.py:1111 catfish.py:1525
 msgid "No files were found."
-msgstr "Keine Dateien gefunden."
+msgstr "Не знойдзена ніводнага файла."
 
 #: catfish.py:1115 catfish.py:1529
 #, python-format
 msgid "%s files found."
-msgstr "%s Dateien gefunden"
+msgstr "Знойдзена %s файлаў."
 
 #: catfish.py:1125
 #, python-format
 msgid "Search results for \"%s\""
-msgstr "Suchergebnisse für \"%s\""
+msgstr "Вынікі пошуку для \"%s\""
 
 #: catfish.py:1183
 msgid "Cancel search"
-msgstr "Suche abbrechen"
+msgstr "Скасаваць пошук"
 
 #: catfish.py:1186
 msgid "Clear search terms"
-msgstr "Suchbegriffe löschen"
+msgstr "Ачысціць умовы пошуку"
 
 #: catfish.py:1189
 msgid "Enter search terms and press ENTER"
-msgstr "Suchbegriffen eingeben und ENTER drücken"
+msgstr "Увядзіце умовы пошуку і націсніце ЎВОД"
 
 #: catfish.py:1330
 msgid "Locate database updated successfully."
-msgstr "Die locate Datenbank wurde erfolgreich aktualisiert."
+msgstr "База звестак locate паспяхова абноўлена."
 
 #: catfish.py:1332
 msgid "An error occurred while updating locatedb."
-msgstr ""
-"Während dem Aktualisieren der locate Datenbank ist ein Fehler aufgetreten."
+msgstr "Здарылася памылка падчас абнаўлення locatedb."
 
 #: catfish.py:1382
 msgid "The search daemon was started."
-msgstr "Der Such-Daemon wurde gestartet."
+msgstr "Дэман пошуку запушчаны."
 
 #: catfish.py:1386
 msgid "The search daemon could not be started."
-msgstr "Der Such-Daemon konnte nicht gestartet werden."
+msgstr "Немагчыма запусціць дэман пошуку."
 
 #: catfish.py:1427
 #, python-format
 msgid "The file %s already exists.  Do you "
-msgstr "Die Datei %s exisiert bereits. Wollen Sie "
+msgstr ""
 
 #: catfish.py:1435
 #, python-format
 msgid "The file %s could not be saved."
-msgstr "Die Datei %s konnte nicht gespeichert werden."
+msgstr "Немагчыма запісаць файл %s."

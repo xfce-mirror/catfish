@@ -8,21 +8,22 @@ msgstr ""
 "Project-Id-Version: catfish 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-03 18:39-0400\n"
-"PO-Revision-Date: 2012-07-18 19:45+0200\n"
+"PO-Revision-Date: 2012-07-30 16:24+0000\n"
 "Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
 "Language-Team: finnish <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-08-20 14:16+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
+"Language: \n"
 "X-Poedit-Language: Finnish\n"
 
 #: catfish.py:556
 msgid "Preview"
 msgstr "Esikatselu"
 
-#: catfish.py:558
-#: catfish.py:560
+#: catfish.py:558 catfish.py:560
 msgid "Filename"
 msgstr "Tiedoston nimi"
 
@@ -74,13 +75,11 @@ msgstr "Koska tahansa"
 msgid "Past week"
 msgstr "Viime viikolla"
 
-#: catfish.py:683
-#: catfish.py:691
+#: catfish.py:683 catfish.py:691
 msgid "Other"
 msgstr "Muu"
 
-#: catfish.py:684
-#: catfish.py:692
+#: catfish.py:684 catfish.py:692
 msgid "Custom..."
 msgstr "Mukautettu..."
 
@@ -116,8 +115,7 @@ msgstr "Alkupäivämäärä"
 msgid "End Date"
 msgstr "Loppupäivämäärä"
 
-#: catfish.py:697
-#: catfish.py:698
+#: catfish.py:697 catfish.py:698
 msgid "Today"
 msgstr "Tänään"
 
@@ -133,8 +131,7 @@ msgstr "Olemassa oleva MIME-tyyppi"
 msgid "Enter extensions"
 msgstr "Syötä tiedostopäätteet"
 
-#: catfish.py:704
-#: catfish.py:705
+#: catfish.py:704 catfish.py:705
 msgid "Update Search Index"
 msgstr "Päivitä hakuindeksi"
 
@@ -143,7 +140,8 @@ msgid ""
 "To provide accurate results, the locate database needs to be refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
-"Jotta tarkkoja hakutuloksia voidaan saada, locate -tietokanta täytyy päivittää.\n"
+"Jotta tarkkoja hakutuloksia voidaan saada, locate -tietokanta täytyy "
+"päivittää.\n"
 "Tämä vaatii sudo (järjestelmänvalvoja) -oikeudet."
 
 #: catfish.py:707
@@ -172,9 +170,7 @@ msgstr "Etsitään..."
 msgid "The search backend doesn't support wildcards."
 msgstr "Hakumetodi ei tue jokerimerkkejä."
 
-#: catfish.py:1023
-#: catfish.py:1112
-#: catfish.py:1526
+#: catfish.py:1023 catfish.py:1112 catfish.py:1526
 msgid "No files found."
 msgstr "Tiedostoja ei löytynyt."
 
@@ -186,13 +182,11 @@ msgstr "Kohtalokas virhe, etsintä keskeytettiin."
 msgid "Click here to start the search daemon."
 msgstr "Paina tästä käynnistääksesi haun taustaprosessin."
 
-#: catfish.py:1111
-#: catfish.py:1525
+#: catfish.py:1111 catfish.py:1525
 msgid "No files were found."
 msgstr "Tiedostoja ei löytynyt."
 
-#: catfish.py:1115
-#: catfish.py:1529
+#: catfish.py:1115 catfish.py:1529
 #, python-format
 msgid "%s files found."
 msgstr "Löytyi %s tiedostoa."
@@ -239,4 +233,3 @@ msgstr "Tiedosto %s on jo olemassa.  Haluatko "
 #, python-format
 msgid "The file %s could not be saved."
 msgstr "Tiedostoa %s ei voitu tallentaa."
-

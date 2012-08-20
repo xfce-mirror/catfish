@@ -23,10 +23,13 @@ of the License, or (at your option) any later version.
 See the file COPYING for the full license text.</property>
     <property name="authors">Copyright 2008-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 GTK+3 Port copyright 2012 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
-    <property name="translator_credits" translatable="yes">de: Simon Steinbeiss &lt;simon@xfce.org&gt;
+    <property name="translator_credits" translatable="yes">be: Mikalai Udodau
+cs: Jan Žárský &lt;jan.zarsky@gmail.com&gt;
+de: Simon Steinbeiss &lt;simon@xfce.org&gt;
+es: Sean Davis &lt;smd.seandavis@gmail.com&gt;
 fi: Pasi Lallinaho &lt;pasi@shimmerproject.org&gt;
 fr: Fabrice Colin &lt;fabrice.colin@gmail.com&gt;
-es: Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
+pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
     <property name="artists">Nancy Runge &lt;nancy@twotoasts.de&gt;</property>
     <property name="logo_icon_name">edit-find</property>
     <property name="license_type">gpl-2-0</property>
