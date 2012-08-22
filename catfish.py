@@ -19,6 +19,8 @@ try:
 
     import locale, gettext
     from gi.repository import GObject, Gtk, Gdk, GdkPixbuf, Pango
+    from gi._glib import GError
+    
 except ImportError, msg:
     print 'Error: The required module %s is missing.' % str(msg).split()[-1]
     sys.exit(1)
@@ -1131,9 +1133,12 @@ class catfish:
             return self.icon_cache[name]
         except KeyError:
             icon_size = Gtk.icon_size_lookup(icon_size)[1]
-            icon = self.icon_theme.load_icon(name, icon_size, 0)
-            self.icon_cache[name] = icon
-            return icon
+            try:
+                icon = self.icon_theme.load_icon(name, icon_size, 0)
+                self.icon_cache[name] = icon
+                return icon
+            except GError:
+                return
 
     def get_thumbnail(self, path, icon_size=0, mime_type=None):
         """Try to fetch a small thumbnail."""
