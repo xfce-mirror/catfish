@@ -16,6 +16,8 @@ try:
 
     from os.path import split as split_filename
     from shutil import copy2
+    
+    import xdg.Mime
 
     import locale, gettext
     from gi.repository import GObject, Gtk, Gdk, GdkPixbuf, Pango
@@ -24,12 +26,6 @@ try:
 except ImportError, msg:
     print 'Error: The required module %s is missing.' % str(msg).split()[-1]
     sys.exit(1)
-
-
-try:
-    import xdg.Mime
-except ImportError, msg:
-    print 'Warning: The optional module %s is missing.' % str(msg).split()[-1]
 
 try:
     import dbus
@@ -45,7 +41,7 @@ except ImportError, msg:
     print 'Warning: The optional module %s is missing.' % str(msg).split()[-1]
 
 app_name = 'catfish'
-app_version = '0.4.0.1'
+app_version = '0.4.0.2'
 
 _ = gettext.gettext # i18n shortcut
 

@@ -1,3 +1,11 @@
+v0.4.0.2:
+ + Added Russian localized comment in catfish.desktop
+ + Fix for not running on Ubuntu live CD
+ + Fix for using wildcards with locate
+ + Fix for find not searching in symlinked folder
+ + Fix for window icon name not matching .desktop file
+ + Fix for python-xdg not being a listed requirement
+
 v0.4.0.1:
  + Added fix for potential crash with icon_load
  + Removed deprecated string from desktop file

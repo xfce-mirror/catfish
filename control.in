@@ -3,8 +3,7 @@ Version: @version@
 Section: utils
 Priority: optional
 Architecture: all
-Depends: python, python-gi
-Recommends: python-xdg
+Depends: python-gi, python-xdg
 Suggests: findutils | slocate, doodle | tracker | python-zeitgeist
 Installed-Size: 95
 Maintainer: Christian Dywan <christian@twotoasts.de>

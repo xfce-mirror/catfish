@@ -9,7 +9,7 @@
     <property name="icon_name">catfish</property>
     <property name="type_hint">dialog</property>
     <property name="program_name">Catfish</property>
-    <property name="version">0.4.0.1</property>
+    <property name="version">0.4.0.2</property>
     <property name="copyright" translatable="yes">Copyright 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;</property>
     <property name="comments" translatable="yes">Catfish is a versatile file searching tool.</property>
     <property name="website">http://twotoasts.de/index.php/catfish/</property>
