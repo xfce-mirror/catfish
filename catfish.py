@@ -989,6 +989,9 @@ class catfish:
         # Retrieve search parameters
         keywords, folder, exact, hidden, fulltext, limit, start_date, end_date, type_families, custom_mime, custom_extensions = self.get_search_settings()
         
+        if method == 'locate':
+            keywords = keywords.replace('*', ' ')
+        
         if not self.options.time_iso:
             time_format = '%x %X'
         else:
