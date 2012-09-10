@@ -9,6 +9,10 @@ if [ -e $APPNAME.pyc ]
             then python $APPNAME.py "$@"
             else
                 cd %prefix%/share/$APPNAME
-                python $APPNAME.pyc "$@"
+                if [ -e $APPNAME.pyc ]
+                    then python $APPNAME.pyc "$@"
+                    else
+                        python $APPNAME.py "$@"
+                fi
         fi
     fi
