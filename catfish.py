@@ -871,7 +871,7 @@ class catfish:
         folder = os.path.expanduser(folder)
         method_name = [method, 'locate'][method=='slocate']
         methods = {
-            'find': (method, '', '%s "' + folder + '" -ignore_readdir_race -noleaf',
+            'find': (method, '', '%s "' + folder + '"/ -ignore_readdir_race -noleaf',
                 '-wholename', '-iwholename', '', 1, 1, 0, 0, 0, 0),
             'locate': (method, '', '%s', '', '-i', '',
                 1, 0, 1, 0, 0, 1),
