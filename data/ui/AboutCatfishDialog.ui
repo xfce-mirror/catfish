@@ -1,15 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <!-- interface-requires about_catfish_dialog 1.0 -->
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-requires about_catfish_dialog 1.0 -->
   <object class="AboutCatfishDialog" id="about_catfish_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="window_position">center-on-parent</property>
     <property name="icon">../media/catfish.svg</property>
     <property name="type_hint">normal</property>
     <property name="program_name">Catfish</property>
-    <property name="authors"></property>
-    <property name="logo">../media/catfish.svg</property>
+    <property name="version">0.5.0</property>
+    <property name="copyright" translatable="yes">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
+Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
+    <property name="comments" translatable="yes">Catfish is a versatile file searching tool.</property>
+    <property name="website">http://twotoasts.de/index.php/catfish/</property>
+    <property name="license" translatable="yes"># Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
+# Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;
+# This program is free software: you can redistribute it and/or modify it 
+# under the terms of the GNU General Public License version 2, as published 
+# by the Free Software Foundation.
+# 
+# This program is distributed in the hope that it will be useful, but 
+# WITHOUT ANY WARRANTY; without even the implied warranties of 
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR 
+# PURPOSE.  See the GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License along 
+# with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+</property>
+    <property name="authors">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
+Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
+    <property name="translator_credits" translatable="yes">ca: Paco &lt;web@pacoriviere.cat&gt;
+cs: Miro Hron&#269;ok &lt;churchyard@gmail.com&gt;
+de: Christian Dywan &lt;software@twotoasts.de&gt;
+fi: Elias Julkunen &lt;elias.julkunen@gmail.com&gt;
+fr: Pierre Slamich &lt;pierre.slamich@gmail.com&gt;
+    Naji Mammeri &lt;naji.mammeri@gmail.com&gt;
+    Fabrice Colin &lt;fabrice.colin@gmail.com&gt;
+it: Wolf &lt;wolfprojects@gmail.com&gt;
+pl: Radomir Dopieralski &lt;ubuntu@sheep.prv.pl&gt;
+    Szymon Gruszczynski &lt;atavus@interia.pl&gt;
+ru: Alexey Voronov &lt;alexey.voronov@gmail.com&gt;
+sv: Daniel Nylander &lt;po@danielnylander.se&gt;
+zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
+    <property name="artists">Nancy Runge &lt;nancy@twotoasts.de&gt;</property>
+    <property name="logo_icon_name">catfish</property>
+    <property name="license_type">gpl-2-0</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="visible">True</property>

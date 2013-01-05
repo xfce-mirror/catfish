@@ -1,7 +1,19 @@
 #!/usr/bin/env python
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 ### BEGIN LICENSE
-# This file is in the public domain
+# Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
+# Copyright (C) 2012-2013 Sean Davis <smd.seandavis@gmail.com>
+# This program is free software: you can redistribute it and/or modify it 
+# under the terms of the GNU General Public License version 2, as published 
+# by the Free Software Foundation.
+# 
+# This program is distributed in the hope that it will be useful, but 
+# WITHOUT ANY WARRANTY; without even the implied warranties of 
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR 
+# PURPOSE.  See the GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License along 
+# with this program.  If not, see <http://www.gnu.org/licenses/>.
 ### END LICENSE
 
 ###################### DO NOT TOUCH THIS (HEAD TO THE SECOND PART) ######################
@@ -76,9 +88,7 @@ def update_desktop_file(filename, target_pkgdata, target_scripts):
         fout = file(filename + '.new', 'w')
 
         for line in fin:
-            if 'Icon=' in line:
-                line = "Icon=%s\n" % (target_pkgdata + 'media/catfish.svg')
-            elif 'Exec=' in line:
+            if 'Exec=' in line:
                 cmd = line.split("=")[1].split(None, 1)
                 line = "Exec=%s" % (target_scripts + 'catfish')
                 if len(cmd) > 1:
@@ -125,13 +135,13 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 DistUtilsExtra.auto.setup(
     name='catfish',
-    version='0.1',
-    #license='GPL-3',
-    #author='Your Name',
-    #author_email='email@ubuntu.com',
-    #description='UI for managing …',
-    #long_description='Here a longer description',
-    #url='https://launchpad.net/catfish',
+    version='0.5.0',
+    license='GPL-2',
+    author='Sean Davis',
+    author_email='smd.seandavis@gmail.com',
+    description='a versatile file searching tool',
+    long_description='Catfish is a search GUI powered by locate and find behind the scenes, with autocompletion from Zeitgeist and locate.  The advanced options allow filtering by date and file type.  The interface is intentionally lightweight and simple, using only GTK+.',
+    url='http://twotoasts.de/index.php/catfish/',
     cmdclass={'install': InstallAndUpdateDataDirectory}
     )
 
