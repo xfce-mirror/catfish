@@ -18,7 +18,7 @@
 from locale import gettext as _
 
 from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, Pango # pylint: disable=E0611
-from gi._glib import GError
+from gi.repository.GLib import GError
 import logging
 logger = logging.getLogger('catfish')
 
