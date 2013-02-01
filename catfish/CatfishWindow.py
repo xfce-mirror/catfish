@@ -716,7 +716,7 @@ class CatfishWindow(Window):
         
     def cell_data_func_filesize(self, column, cell_renderer, tree_model, tree_iter, id):
         """File size cell display function."""
-        filesize = self.format_size(int(tree_model.get_value(tree_iter, id)))
+        filesize = self.format_size(tree_model.get_value(tree_iter, id))
         cell_renderer.set_property('text', filesize)
         return
         
@@ -793,18 +793,14 @@ class CatfishWindow(Window):
         except AttributeError:
             pass
         
-    def format_size(self, size):
+    def format_size(self, size, precision=1):
         """Make a file size human readable."""
-        if size > 2 ** 30:
-            return '%s GB' % round((size / 2 ** 30), 2)
-        elif size > 2 ** 20:
-            return '%s MB' % round((size / 2 ** 20), 2)
-        elif size > 2 ** 10:
-            return '%s kB' % round((size / 2 ** 10), 2)
-        elif size > -1:
-            return '%s B' % round(size, 2)
-        else:
-            return ''
+        suffixes = ['B', 'KB', 'MB', 'GB', 'TB']
+        suffixIndex = 0
+        while size > 1024:
+            suffixIndex += 1
+            size = size/1024.0
+        return "%.*f %s" % (precision, size, suffixes[suffixIndex])
 
     def guess_mimetype(self, filename):
         """Guess the mimetype of the specified filename.
@@ -909,7 +905,10 @@ class CatfishWindow(Window):
         while Gtk.events_pending(): Gtk.main_iteration()
         
         # icon, name, size, path, modified, mimetype, hidden, exact
-        model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, int, str, float, str, bool, bool)
+        if python3:
+            model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, int, str, float, str, bool, bool)
+        else:
+            model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, float, str, bool, bool)
         
         # Initialize the results filter.
         self.results_filter = model.filter_new()
@@ -938,7 +937,10 @@ class CatfishWindow(Window):
                         try:
                             path, name = os.path.split(filename)
                             
-                            size = os.path.getsize(filename)
+                            if python3: # FIXME overflows happen with larger file sizes.
+                                size = os.path.getsize(filename)
+                            else:
+                                size = long(os.path.getsize(filename))
                                 
                             modified = os.path.getmtime(filename)
                             
