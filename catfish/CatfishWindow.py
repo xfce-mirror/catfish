@@ -92,7 +92,6 @@ class CatfishWindow(Window):
         self.fulltext = builder.get_object("menu_fulltext")
         
         # -- Sidebar -- #
-        self.sidebar_toggle_button = builder.get_object("sidebar_toggle")
         self.sidebar_toggle_menu = builder.get_object("menu_show_advanced")
         self.button_time_custom = builder.get_object("button_time_custom")
         self.button_format_custom = builder.get_object("button_format_custom")
@@ -297,13 +296,18 @@ class CatfishWindow(Window):
     def on_menu_update_index_activate(self, widget):
         self.update_index_dialog.show()
 
+    def on_catfish_window_key_press_event(self, widget, event):
+        key_name = Gdk.keyval_name(event.keyval)
+        if key_name == 'F9':
+            self.sidebar_toggle_menu.activate()
+            return True
+        return False
 
     # -- Sidebar -- #
     def on_sidebar_toggle_toggled(self, widget):
         """Toggle visibility of the sidebar."""
         active = widget.get_active()
 
-        self.sidebar_toggle_button.set_active(active)
         self.sidebar_toggle_menu.set_active(active)
         
         if active != self.sidebar.get_visible():
