@@ -252,7 +252,7 @@ class CatfishWindow(Window):
         show_hidden = self.filter_formats['hidden']
         
         # If the keywords start with a hidden character, show hidden files.
-        if keywords[0] == '.': show_hidden = True
+        if len(keywords) != 0 and keywords[0] == '.': show_hidden = True
         
         model = self.search_entry.get_completion().get_model()
         model.clear()
