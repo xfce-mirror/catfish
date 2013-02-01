@@ -716,7 +716,12 @@ class CatfishWindow(Window):
         
     def cell_data_func_filesize(self, column, cell_renderer, tree_model, tree_iter, id):
         """File size cell display function."""
-        filesize = self.format_size(tree_model.get_value(tree_iter, id))
+        if python3:
+            size = int(tree_model.get_value(tree_iter, id))
+        else:
+            size = long(tree_model.get_value(tree_iter, id))
+            
+        filesize = self.format_size( size )
         cell_renderer.set_property('text', filesize)
         return
         
@@ -795,6 +800,8 @@ class CatfishWindow(Window):
         
     def format_size(self, size, precision=1):
         """Make a file size human readable."""
+        if isinstance(size, str):
+            size = int(size)
         suffixes = ['B', 'KB', 'MB', 'GB', 'TB']
         suffixIndex = 0
         while size > 1024:
@@ -885,6 +892,16 @@ class CatfishWindow(Window):
             icon_name = Gtk.STOCK_FILE
         return self.get_icon_pixbuf(icon_name)
 
+    def python_three_size_sort_func(self, model, row1, row2, user_data):
+        sort_column = 2
+        value1 = int(model.get_value(row1, sort_column))
+        value2 = int(model.get_value(row2, sort_column))
+        if value1 < value2:
+            return -1
+        elif value1 == value2:
+            return 0
+        else:
+            return 1
 
     # -- Searching -- #
     def perform_query(self, keywords):
@@ -906,7 +923,7 @@ class CatfishWindow(Window):
         
         # icon, name, size, path, modified, mimetype, hidden, exact
         if python3:
-            model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, int, str, float, str, bool, bool)
+            model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, str, str, float, str, bool, bool)
         else:
             model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, float, str, bool, bool)
         
@@ -914,6 +931,8 @@ class CatfishWindow(Window):
         self.results_filter = model.filter_new()
         self.results_filter.set_visible_func(self.results_filter_func)
         sort = Gtk.TreeModelSort(self.results_filter)
+        if python3:
+            sort.set_sort_func(2, self.python_three_size_sort_func, None)
         self.treeview.set_model(sort)
         self.treeview.columns_autosize()
         
@@ -938,7 +957,7 @@ class CatfishWindow(Window):
                             path, name = os.path.split(filename)
                             
                             if python3: # FIXME overflows happen with larger file sizes.
-                                size = os.path.getsize(filename)
+                                size = str(os.path.getsize(filename))
                             else:
                                 size = long(os.path.getsize(filename))
                                 
