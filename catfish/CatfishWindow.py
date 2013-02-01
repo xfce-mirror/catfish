@@ -679,7 +679,7 @@ class CatfishWindow(Window):
             column.pack_start(cell, False)
             column.add_attribute(cell, 'pixbuf', 0)
             cell = Gtk.CellRendererText()
-            column.pack_start(cell, True)
+            column.pack_start(cell, False)
             #column.add_attribute(cell, 'markup', id)
             #column.set_cell_data_func(cell, self.cell_data_func_markup, id)
             column.add_attribute(cell, 'text', id)
@@ -699,7 +699,7 @@ class CatfishWindow(Window):
                 column.set_cell_data_func(cell, self.cell_data_func_modified, id)
         column.set_sort_column_id(id)
         column.set_resizable(True)
-        if id == 1:
+        if id == 3:
             column.set_expand(True)
         return column
         
