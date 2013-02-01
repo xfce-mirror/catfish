@@ -295,11 +295,20 @@ class CatfishWindow(Window):
         
     def on_menu_update_index_activate(self, widget):
         self.update_index_dialog.show()
+        
+    def on_catfish_window_window_state_event(self, widget, event):
+        self.window_is_fullscreen = bool(event.new_window_state & Gdk.WindowState.FULLSCREEN)
 
     def on_catfish_window_key_press_event(self, widget, event):
         key_name = Gdk.keyval_name(event.keyval)
         if key_name == 'F9':
             self.sidebar_toggle_menu.activate()
+            return True
+        if key_name == 'F11':
+            if self.window_is_fullscreen:
+                self.unfullscreen()
+            else:
+                self.fullscreen()
             return True
         return False
 
