@@ -34,7 +34,7 @@ import os
 import time
 import hashlib
 
-from shutil import copy2
+from shutil import copy2, rmtree
 
 from xml.sax.saxutils import escape
 
@@ -103,6 +103,7 @@ class CatfishWindow(Window):
         # -- Treeview -- #
         self.treeview = builder.get_object("treeview")
         self.file_menu = builder.get_object("file_menu")
+        self.file_menu_save = builder.get_object("menu_save")
         self.file_menu_delete = builder.get_object("menu_delete")
         self.handle_single_button_press = False
         
@@ -551,7 +552,10 @@ class CatfishWindow(Window):
         if self.get_delete_dialog(self.selected_filename):
             try:
                 # Delete the file.
-                os.remove(self.selected_filename)
+                if os.path.isdir(self.selected_filename):
+                    rmtree(self.selected_filename)
+                else:
+                    os.remove(self.selected_filename)
                 
                 # Remove the selected from from the treeview.
                 model = self.treeview.get_model().get_model().get_model()
@@ -560,7 +564,7 @@ class CatfishWindow(Window):
                 model.remove(treeiter)
                 self.refilter()
                 
-            except OSError:
+            except Exception:
                 # If the file cannot be deleted, throw an error.
                 self.get_error_dialog( _("The file %s could not be deleted.") 
                                        % self.selected_filename )
@@ -666,6 +670,7 @@ class CatfishWindow(Window):
         
         # If right click, show the popup menu.
         if event.button == 3:
+            self.file_menu_save.set_visible( not os.path.isdir(self.selected_filename) )
             writeable = os.access(self.selected_filename, os.W_OK)
             self.file_menu_delete.set_sensitive(writeable)
             self.file_menu.popup(None, None, None, None, 
