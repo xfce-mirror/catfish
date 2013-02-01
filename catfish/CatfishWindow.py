@@ -653,7 +653,7 @@ class CatfishWindow(Window):
         
         # If right click, show the popup menu.
         if event.button == 3:
-            writeable = os.access(filename, os.W_OK)
+            writeable = os.access(self.selected_filename, os.W_OK)
             self.file_menu_delete.set_sensitive(writeable)
             self.file_menu.popup(None, None, None, None, 
                                  event.button, event.time)
