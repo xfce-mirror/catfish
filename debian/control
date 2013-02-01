@@ -1,0 +1,25 @@
+Source: catfish
+Section: python
+Priority: extra
+Build-Depends: debhelper (>= 8),
+ python (>= 2.6.6-3~),
+ python-distutils-extra (>= 2.10)
+Maintainer: Sean Davis <smd.seandavis@gmail.com>
+Standards-Version: 3.9.3
+X-Python-Version: >= 2.6
+
+Package: catfish
+Architecture: all
+Depends: ${misc:Depends},
+ ${python:Depends},
+ gir1.2-glib-2.0,
+ gir1.2-gtk-3.0,
+ gir1.2-pango-1.0,
+ python-zeitgeist,
+ gir1.2-gdkpixbuf-2.0,
+ yelp
+Description: a versatile file searching tool
+ Catfish is a search GUI powered by locate and find behind the scenes,
+ with autocompletion from Zeitgeist and locate.  The advanced options
+ allow filtering by date and file type.  The interface is intentionally
+ lightweight and simple, using only GTK+.
