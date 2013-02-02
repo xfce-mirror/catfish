@@ -217,7 +217,7 @@ class CatfishWindow(Window):
         """If the search entry is not empty, perform the query."""
         if len( widget.get_text() ) > 0:
             task = self.perform_query(widget.get_text())
-            GObject.idle_add(next, task)
+            GLib.idle_add(next, task)
             
     def on_search_entry_icon_press(self, widget, event, user_data):
         """If search in progress, stop the search, otherwise, clear the search
@@ -241,7 +241,7 @@ class CatfishWindow(Window):
                 widget.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Clear search terms') )
             
         task = self.get_suggestions(text)
-        GObject.idle_add(next, task)
+        GLib.idle_add(next, task)
             
     def get_suggestions(self, keywords):
         """Load suggestions from the suggestions engine into the search entry
