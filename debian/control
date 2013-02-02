@@ -17,7 +17,9 @@ Depends: ${misc:Depends},
  gir1.2-pango-1.0,
  python-zeitgeist,
  gir1.2-gdkpixbuf-2.0,
- yelp
+ yelp,
+ python-zeitgeist,
+ zeitgeist
 Description: a versatile file searching tool
  Catfish is a search GUI powered by locate and find behind the scenes,
  with autocompletion from Zeitgeist and locate.  The advanced options

@@ -17,7 +17,7 @@
 
 from locale import gettext as _
 
-from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, Pango # pylint: disable=E0611
+from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, GLib, Pango # pylint: disable=E0611
 from gi.repository.GLib import GError
 import logging
 logger = logging.getLogger('catfish')
@@ -45,6 +45,7 @@ from sys import version_info
 python3 = version_info[0] > 2
 
 GObject.threads_init()
+GLib.threads_init()
 
 # See catfish_lib.Window.py for more details about how this class works
 class CatfishWindow(Window):
@@ -208,7 +209,7 @@ class CatfishWindow(Window):
         self.updatedb_process = subprocess.Popen(['gksudo', 'updatedb', '--desktop', '/usr/share/applications/catfish.desktop'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
         
         # Poll every 1 second for completion.
-        GObject.timeout_add(1000, updatedb_subprocess)
+        GLib.timeout_add(1000, updatedb_subprocess)
 
 
     # -- Search Entry -- #
@@ -279,6 +280,7 @@ class CatfishWindow(Window):
                         # file no longer exists
                         pass
             yield True
+        yield False
 
 
     # -- Application Menu -- #
