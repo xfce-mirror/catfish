@@ -1,0 +1,292 @@
+# Catfish translation template.
+# Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
+# Copyright (C) 2012-2013 Sean Davis <smd.seandavis@gmail.com>
+# This file is distributed under the same license as the catfish package.
+# Sean Davis <smd.seandavis@gmail.com>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-03 11:42-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/ui/AboutCatfishDialog.ui.h:1
+msgid ""
+"Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n"
+"Copyright (C) 2012-2013 Sean Davis <smd.seandavis@gmail.com>"
+msgstr ""
+
+#: ../data/ui/AboutCatfishDialog.ui.h:3
+msgid "Catfish is a versatile file searching tool."
+msgstr ""
+
+#: ../data/ui/AboutCatfishDialog.ui.h:4
+msgid ""
+"# Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n"
+"# Copyright (C) 2012-2013 Sean Davis <smd.seandavis@gmail.com>\n"
+"# This program is free software: you can redistribute it and/or modify it \n"
+"# under the terms of the GNU General Public License version 2, as "
+"published \n"
+"# by the Free Software Foundation.\n"
+"# \n"
+"# This program is distributed in the hope that it will be useful, but \n"
+"# WITHOUT ANY WARRANTY; without even the implied warranties of \n"
+"# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR \n"
+"# PURPOSE.  See the GNU General Public License for more details.\n"
+"# \n"
+"# You should have received a copy of the GNU General Public License along \n"
+"# with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+msgstr ""
+
+#: ../data/ui/AboutCatfishDialog.ui.h:18
+msgid ""
+"ca: Paco <web@pacoriviere.cat>\n"
+"cs: Miro Hron&#269;ok <churchyard@gmail.com>\n"
+"de: Christian Dywan <software@twotoasts.de>\n"
+"fi: Elias Julkunen <elias.julkunen@gmail.com>\n"
+"fr: Pierre Slamich <pierre.slamich@gmail.com>\n"
+"    Naji Mammeri <naji.mammeri@gmail.com>\n"
+"    Fabrice Colin <fabrice.colin@gmail.com>\n"
+"it: Wolf <wolfprojects@gmail.com>\n"
+"pl: Radomir Dopieralski <ubuntu@sheep.prv.pl>\n"
+"    Szymon Gruszczynski <atavus@interia.pl>\n"
+"ru: Alexey Voronov <alexey.voronov@gmail.com>\n"
+"sv: Daniel Nylander <po@danielnylander.se>\n"
+"zh_CN: Longer Zhao <longer.zhao@gmail.com>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:1
+msgid "Exact Match"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:2
+msgid "Hidden Files"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:3
+msgid "Fulltext Search"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:4
+msgid "Show Advanced Settings"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:5
+msgid "Update Search Index…"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:6
+msgid "Catfish"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:7
+msgid "toggletoolbutton1"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:8
+msgid "Any time"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:9
+msgid "This week"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:10
+msgid "Custom"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:11
+msgid "<b>Modified</b>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:12
+msgid "Documents"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:13
+msgid "Images"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:14
+msgid "Music"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:15
+msgid "Videos"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:16
+msgid "Applications"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:17
+msgid "Other"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:18
+msgid "<b>File Type</b>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:19
+msgid "Custom Time Range"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:20
+msgid "Go to Today"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:21
+msgid "<b>Start Date</b>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:22
+msgid "<b>End Date</b>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:23
+msgid "Select existing mimetype"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:24
+msgid "Enter file extensions"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:25
+msgid "Show in File Manager"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:26
+msgid "Copy Location"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:27
+msgid "Unlock"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:28
+msgid "<big><b>Update Search Index</b></big>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:29
+msgid ""
+"To provide accurate results, the <i>locate</i> database needs to be "
+"refreshed.\n"
+"This requires sudo (admin) rights."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:31
+msgid "Updating database…"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:32
+msgid "Done."
+msgstr ""
+
+#: ../catfish/__init__.py:35
+msgid "Show debug messages (-vv debugs catfish_lib also)"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:146
+msgid "Preview"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:148 ../catfish/CatfishWindow.py:151
+msgid "Filename"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:152
+msgid "Size"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:153
+msgid "Location"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:154
+msgid "Last modified"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:187
+msgid "Locate database updated successfully."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:189
+msgid "An error occurred while updating locatedb."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:191 ../catfish/CatfishWindow.py:195
+msgid "User aborted authentication."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:193
+msgid "Authentication failed."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:236 ../catfish/CatfishWindow.py:1012
+msgid "Enter search terms and press ENTER"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:239 ../catfish/CatfishWindow.py:1015
+msgid "Clear search terms"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:514
+#, python-format
+msgid "The file %s could not be opened."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:547
+#, python-format
+msgid "The file %s could not be saved."
+msgstr ""
+
+#. If the file cannot be deleted, throw an error.
+#: ../catfish/CatfishWindow.py:569
+#, python-format
+msgid "The file %s could not be deleted."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:580
+#, python-format
+msgid "Save \"%s\" as…"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:602
+#, python-format
+msgid "Are you sure you wish to delete %s?"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:795 ../catfish/CatfishWindow.py:1005
+msgid "No files found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:797 ../catfish/CatfishWindow.py:1007
+#, python-format
+msgid "%i files found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:913
+#, python-format
+msgid "Searching for \"%s\""
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:915
+msgid "Searching…"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:917
+msgid "Stop Search"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1000
+#, python-format
+msgid "Search results for \"%s\""
+msgstr ""

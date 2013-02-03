@@ -1,0 +1,32 @@
+### BEGIN LICENSE
+# Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
+# Copyright (C) 2012-2013 Sean Davis <smd.seandavis@gmail.com>
+# This program is free software: you can redistribute it and/or modify it 
+# under the terms of the GNU General Public License version 2, as published 
+# by the Free Software Foundation.
+# 
+# This program is distributed in the hope that it will be useful, but 
+# WITHOUT ANY WARRANTY; without even the implied warranties of 
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR 
+# PURPOSE.  See the GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License along 
+# with this program.  If not, see <http://www.gnu.org/licenses/>.
+### END LICENSE
+
+# Glade Files
+[type: gettext/glade]data/ui/AboutCatfishDialog.ui
+[type: gettext/glade]data/ui/CatfishWindow.ui
+
+# Python Files
+catfish/__init__.py
+catfish/CatfishWindow.py
+catfish/CatfishSearchEngine.py
+catfish/AboutCatfishDialog.py
+setup.py
+catfish_lib/Builder.py
+catfish_lib/catfishconfig.py
+catfish_lib/AboutDialog.py
+catfish_lib/__init__.py
+catfish_lib/helpers.py
+./catfish_lib/Window.py
