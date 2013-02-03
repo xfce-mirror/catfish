@@ -1,6 +1,6 @@
 [Desktop Entry]
-_Name=Catfish
-_Comment=Catfish application
+_Name=Catfish File Search
+_Comment=Search the file system
 Categories=GNOME;Utility;
 Exec=catfish
 Icon=catfish

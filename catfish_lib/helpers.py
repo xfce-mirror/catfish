@@ -24,8 +24,6 @@ import os
 from . catfishconfig import get_data_file
 from . Builder import Builder
 
-from locale import gettext as _
-
 def get_builder(builder_file_name):
     """Return a fully-instantiated Gtk.Builder instance from specified ui 
     file
@@ -47,10 +45,10 @@ def get_builder(builder_file_name):
 # Owais Lone : To get quick access to icons and stuff.
 def get_media_file(media_file_name):
     media_filename = get_data_file('media', '%s' % (media_file_name,))
-    if not os.path.exists(media_filename):
-        media_filename = None
+    if os.path.exists(media_filename):
+        return "file:///"+media_filename
+    return None
 
-    return "file:///"+media_filename
 
 class NullHandler(logging.Handler):
     def emit(self, record):

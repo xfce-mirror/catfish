@@ -15,12 +15,8 @@
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 ### END LICENSE
 
-import subprocess
-
-import signal
-
-from gi.repository import Gtk, GObject
-import os
+import os, signal, subprocess
+from itertools import permutations
 
 from mimetypes import guess_type
 
@@ -33,10 +29,9 @@ try:
     from zeitgeist import datamodel
     iface = ZeitgeistDBusInterface()
     zeitgeist_support = True
-except ImportError:
+except Exception:
     zeitgeist_support = False
-    
-from itertools import permutations
+
 
 def string_regex(keywords, path):
     """Returns a string with the regular expression containing all combinations

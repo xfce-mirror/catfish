@@ -19,20 +19,18 @@ from locale import gettext as _
 
 from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, GLib, Pango # pylint: disable=E0611
 from gi.repository.GLib import GError
+
 import logging
 logger = logging.getLogger('catfish')
 
 from catfish_lib import Window
 from catfish.AboutCatfishDialog import AboutCatfishDialog
-
 from catfish.CatfishSearchEngine import *
 
-import datetime
+import datetime, time
 from calendar import timegm
 
-import os
-import time
-import hashlib
+import os, hashlib
 
 from shutil import copy2, rmtree
 
@@ -944,11 +942,9 @@ class CatfishWindow(Window):
         
         # Check if this is a fulltext query or standard query.
         if self.filter_formats['fulltext']:
-            fulltext = True
             self.search_engine = CatfishSearchEngine(['fulltext'])
             self.search_engine.set_exact( self.filter_formats['exact'] )
         else:
-            fulltext = False
             self.search_engine = CatfishSearchEngine()
         
         for filename in self.search_engine.run(keywords, folder, regex=True):

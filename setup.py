@@ -47,7 +47,7 @@ def update_config(libdir, values = {}):
         fout.close()
         fin.close()
         os.rename(fout.name, fin.name)
-    except (OSError, IOError), e:
+    except (OSError, IOError):
         print ("ERROR: Can't find %s" % filename)
         sys.exit(1)
     return oldvalues
@@ -99,7 +99,7 @@ def update_desktop_file(filename, target_pkgdata, target_scripts):
         fout.close()
         fin.close()
         os.rename(fout.name, fin.name)
-    except (OSError, IOError), e:
+    except (OSError, IOError):
         print ("ERROR: Can't find %s" % filename)
         sys.exit(1)
 
@@ -135,7 +135,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 DistUtilsExtra.auto.setup(
     name='catfish',
-    version='0.5.0-public6',
+    version='0.5.0-public10',
     license='GPL-2',
     author='Sean Davis',
     author_email='smd.seandavis@gmail.com',
