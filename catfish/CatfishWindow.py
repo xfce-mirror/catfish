@@ -118,6 +118,21 @@ class CatfishWindow(Window):
         
         self.icon_cache = {}
         self.icon_theme = Gtk.IconTheme.get_default()
+        modified_icon = self.load_symbolic_icon('document-open-recent', 16)
+        builder.get_object("image9").set_from_pixbuf(modified_icon)
+        builder.get_object("image10").set_from_pixbuf(modified_icon)
+        builder.get_object("image11").set_from_pixbuf(modified_icon)
+        
+        settings_icon = self.load_symbolic_icon('document-properties', 16)
+        builder.get_object("image8").set_from_pixbuf(settings_icon)
+        builder.get_object("image12").set_from_pixbuf(settings_icon)
+        
+        builder.get_object("image1").set_from_pixbuf(self.load_symbolic_icon('text-x-generic', 16))
+        builder.get_object("image3").set_from_pixbuf(self.load_symbolic_icon('camera-photo', 16))
+        builder.get_object("image4").set_from_pixbuf(self.load_symbolic_icon('audio-x-generic', 16))
+        builder.get_object("image5").set_from_pixbuf(self.load_symbolic_icon('video-x-generic', 16))
+        builder.get_object("image6").set_from_pixbuf(self.load_symbolic_icon('applications-utilities', 16))
+        builder.get_object("image7").set_from_pixbuf(self.load_symbolic_icon('list-add', 16))
         
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
@@ -152,6 +167,17 @@ class CatfishWindow(Window):
             self.treeview.append_column(self.new_column(_('Location'), 3, 'ellipsize'))
             self.treeview.append_column(self.new_column(_('Last modified'), 4, 'date', 1))
             self.icon_size = Gtk.IconSize.MENU
+            
+    def load_symbolic_icon(self, icon_name, size):
+        icon = None
+        context = self.sidebar.get_style_context()
+        try:
+            icon_info = self.icon_theme.choose_icon([icon_name + '-symbolic'], size, Gtk.IconLookupFlags.FORCE_SVG)
+            color = context.get_color(Gtk.StateFlags.ACTIVE)
+            icon = icon_info.load_symbolic(color, color, color, color)[0]
+        except AttributeError:
+            icon = self.icon_theme.load_icon(icon_name, size, Gtk.IconLookupFlags.FORCE_SVG|Gtk.IconLookupFlags.USE_BUILTIN|Gtk.IconLookupFlags.GENERIC_FALLBACK)
+        return icon
 
 
     # -- Update Search Index dialog -- #
