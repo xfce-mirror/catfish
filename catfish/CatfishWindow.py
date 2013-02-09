@@ -104,7 +104,6 @@ class CatfishWindow(Window):
         self.file_menu = builder.get_object("file_menu")
         self.file_menu_save = builder.get_object("menu_save")
         self.file_menu_delete = builder.get_object("menu_delete")
-        self.handle_single_button_press = False
         
         # -- Update Search Index dialog -- #
         self.update_index_dialog = builder.get_object("update_index_dialog")
@@ -521,25 +520,33 @@ class CatfishWindow(Window):
     # -- File Popup Menu -- #
     def on_menu_open_activate(self, widget):
         """Open the selected file in its default application."""
-        self.open_file(self.selected_filename)
+        for filename in self.selected_filenames:
+            self.open_file(filename)
         
     def on_menu_filemanager_activate(self, widget):
         """Open the selected file in the default file manager."""
-        self.open_file( os.path.split(self.selected_filename)[0] )
+        dirs = []
+        for filename in self.selected_filenames:
+            path = os.path.split(filename)[0]
+            if path not in dirs:
+                dirs.append(path)
+        for path in dirs:
+            self.open_file( path )
         
-    def on_menu_copy_activate(self, widget):
+    def on_menu_copy_location_activate(self, widget):
         """Copy the selected file name to the clipboard."""
         clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
-        clipboard.set_text(self.selected_filename, -1)
+        text = str(os.linesep).join(self.selected_filenames)
+        clipboard.set_text(text, -1)
         clipboard.store()
         
     def on_menu_save_activate(self, widget):
         """Show a save dialog and possibly write the results to a file."""
-        filename = self.get_save_dialog(self.selected_filename)
+        filename = self.get_save_dialog(self.selected_filename[0])
         if filename:
             try:
                 # Try to save the file.
-                copy2(self.selected_filename, filename)
+                copy2(self.selected_filename[0], filename)
                 
             except Exception as msg:
                 # If the file save fails, throw an error.
@@ -549,25 +556,26 @@ class CatfishWindow(Window):
             
     def on_menu_delete_activate(self, widget):
         """Show a delete dialog and remove the file if accepted."""
-        if self.get_delete_dialog(self.selected_filename):
-            try:
-                # Delete the file.
-                if os.path.isdir(self.selected_filename):
-                    rmtree(self.selected_filename)
-                else:
-                    os.remove(self.selected_filename)
-                
-                # Remove the selected from from the treeview.
-                model = self.treeview.get_model().get_model().get_model()
-                path = self.treeview.get_cursor()[0]
-                treeiter = model.get_iter(path)
-                model.remove(treeiter)
-                self.refilter()
-                
-            except Exception:
-                # If the file cannot be deleted, throw an error.
-                self.get_error_dialog( _("The file %s could not be deleted.") 
-                                       % self.selected_filename )
+        if self.get_delete_dialog(self.selected_filenames):
+            for filename in self.selected_filenames:
+                try:
+                    # Delete the file.
+                    if os.path.isdir(filename):
+                        rmtree(filename)
+                    else:
+                        os.remove(filename)
+                    
+                    # Remove the selected from from the treeview.
+                    model = self.treeview.get_model().get_model().get_model()
+                    path = self.treeview.get_cursor()[0]
+                    treeiter = model.get_iter(path)
+                    model.remove(treeiter)
+                    self.refilter()
+                    
+                except Exception:
+                    # If the file cannot be deleted, throw an error.
+                    self.get_error_dialog( _("The file %s could not be deleted.") 
+                                           % filename )
 
     def get_save_dialog(self, filename):
         """Show the Save As FileChooserDialog.  
@@ -597,9 +605,12 @@ class CatfishWindow(Window):
         dialog.run()
         dialog.destroy()
         
-    def get_delete_dialog(self, filename):
+    def get_delete_dialog(self, filenames):
         """Show a delete confirmation dialog.  Return True if delete wanted."""
-        msg = _("Are you sure you wish to delete %s?") % filename
+        if len(filenames) == 1:
+            msg = _("Are you sure you wish to delete %s?") % filename
+        else:
+            msg = _("Are you sure you wish to delete these %i files?") % len(filenames)
         dialog = Gtk.MessageDialog(self, 0,
             Gtk.MessageType.QUESTION, Gtk.ButtonsType.YES_NO, msg)
         dialog.set_default_response(Gtk.ResponseType.NO)
@@ -611,12 +622,7 @@ class CatfishWindow(Window):
     # -- Treeview -- #
     def on_treeview_row_activated(self, treeview, path, user_data):
         """Catch row activations by keyboard or mouse double-click."""
-        # This event sends a signal twice.  We only want to process it once.
-        if self.handle_single_button_press:
-            self.handle_single_button_press = False
-            return
-        self.handle_single_button_press = True
-        
+
         # Get the filename from the row.
         model = treeview.get_model()
         treeiter = model.get_iter(path)
@@ -630,6 +636,21 @@ class CatfishWindow(Window):
     
         # Open the selected file.
         self.open_file(self.selected_filename)
+        return True
+        
+    def treeview_get_selected_rows(self, treeview):
+        sel = treeview.get_selection()
+        model, rows = sel.get_selected_rows()
+        data = []
+        for row in rows:
+            if self.options.icons_large or self.options.thumbnails:
+                filename = model[row][1].split('\n')[0]
+                filename = filename.split(' ')
+                filename = ' '.join(filename[:len(filename)-2])
+            else:
+                filename = model[row][1]
+            data.append( os.path.join(model[row][3], filename) )
+        return (model, rows, data)
         
     def on_treeview_button_press_event(self, treeview, event):
         """Catch single mouse click events on the treeview and rows.
@@ -637,44 +658,35 @@ class CatfishWindow(Window):
             Left Click:     Ignore.
             Middle Click:   Open the selected file.
             Right Click:    Show the popup menu."""
-        # This event sends a signal twice.  We only want to process it once.
-        if self.handle_single_button_press:
-            self.handle_single_button_press = False
-            return
-        self.handle_single_button_press = True
+        # If left click, ignore.
+        if event.button == 1: return False
         
         # Get the selected row path, raises TypeError if dead space.
-        try:
-            path = treeview.get_path_at_pos(int(event.x), int(event.y))[0]
-            treeview.set_cursor(path)
-        except TypeError:
-            return
+        if treeview.get_selection().count_selected_rows() <= 1:
+            try:
+                path = treeview.get_path_at_pos(int(event.x), int(event.y))[0]
+                treeview.set_cursor(path)
+            except TypeError:
+                return False
         
-        # If left click, ignore.
-        if event.button == 1: return
-        
-        # Get the filename from the row.
-        model = treeview.get_model()
-        treeiter = model.get_iter(path)
-        file_path = model.get_value(treeiter, 3)
-        filename = model.get_value(treeiter, 1)
-        if self.options.icons_large or self.options.thumbnails:
-            filename = filename.split('\n')[0]
-            filename = filename.split(' ')
-            filename = ' '.join(filename[:len(filename)-2])
-            
-        self.selected_filename = os.path.join(file_path, filename)
+        model, rows, self.selected_filenames = self.treeview_get_selected_rows(treeview)
 
         # If middle click, open the selected file.        
-        if event.button == 2: self.open_file(filename)
+        if event.button == 2: 
+            for filename in selected_filenames:
+                self.open_file(filename)
         
         # If right click, show the popup menu.
         if event.button == 3:
-            self.file_menu_save.set_visible( not os.path.isdir(self.selected_filename) )
-            writeable = os.access(self.selected_filename, os.W_OK)
+            self.file_menu_save.set_visible( len(self.selected_filenames) == 1 and not os.path.isdir(self.selected_filenames[0]) )
+            writeable = True
+            for filename in self.selected_filenames:
+                if not os.access(filename, os.W_OK):
+                    writeable = False
             self.file_menu_delete.set_sensitive(writeable)
             self.file_menu.popup(None, None, None, None, 
                                  event.button, event.time)
+        return True
 
     def new_column(self, label, id, special=None, markup=0):
         """New Column function for creating TreeView columns easily."""
