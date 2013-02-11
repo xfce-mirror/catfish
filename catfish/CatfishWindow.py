@@ -123,6 +123,9 @@ class CatfishWindow(Window):
         self.update_index_unlock = builder.get_object("update_index_unlock")
         self.update_index_active = False
         
+        self.format_mimetype_box = builder.get_object("format_mimetype_box")
+        self.extensions_entry = builder.get_object("extensions")
+        
         self.search_engine = CatfishSearchEngine()
         
         self.icon_cache = {}
@@ -460,7 +463,6 @@ class CatfishWindow(Window):
         types = self.builder.get_object("mimetype_types")
         
         radio_extensions = self.builder.get_object("radio_custom_extensions")
-        extensions_entry = self.builder.get_object("extensions")
         
         # Lazily load the mimetypes.
         if len(self.mimetypes) == 0:
@@ -485,9 +487,15 @@ class CatfishWindow(Window):
             types.remove_all()
         
         # Load instance defaults.
-        categories.set_active( self.filter_custom_mimetype['category_id'] )
-        types.set_active( self.filter_custom_mimetype['type_id'] )
-        extensions_entry.set_text( ', '.join(self.filter_custom_extensions) )
+        if self.filter_custom_mimetype['category_id'] == -1:
+            categories.set_active( 0 )
+        else:
+            categories.set_active( self.filter_custom_mimetype['category_id'] )
+        if self.filter_custom_mimetype['type_id'] == -1:
+            types.set_active( 0 )
+        else:
+            types.set_active( self.filter_custom_mimetype['type_id'] )
+        self.extensions_entry.set_text( ', '.join(self.filter_custom_extensions) )
         
         if self.filter_custom_use_mimetype:
             radio_mimetypes.set_active(True)
@@ -505,7 +513,7 @@ class CatfishWindow(Window):
                                 'type_id': types.get_active() }
                                             
             self.filter_custom_extensions = []
-            extensions = extensions_entry.get_text()
+            extensions = self.extensions_entry.get_text()
             extensions = extensions.replace(',', ' ')
             for ext in extensions.split():
                 ext = ext.rstrip().lstrip()
@@ -526,6 +534,12 @@ class CatfishWindow(Window):
             self.refilter()
             
         dialog.hide()
+        
+    def on_radio_custom_mimetype_toggled(self, widget):
+        self.format_mimetype_box.set_sensitive( widget.get_active() )
+        
+    def on_radio_custom_extensions_toggled(self, widget):
+        self.extensions_entry.set_sensitive( widget.get_active() )
         
     def on_mimetype_categories_changed(self, combobox):
         """Update the mime subtypes when a different category is selected."""
