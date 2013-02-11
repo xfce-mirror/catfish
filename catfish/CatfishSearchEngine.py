@@ -71,7 +71,7 @@ class CatfishSearchEngine:
           walk              'os.walk' to search for files (like find).
           zeitgeist         Zeitgeist indexing service to search for files.
         """
-        logger.debug("Search init, methods: %s", str(methods))
+        logger.debug("methods: %s", str(methods))
         self.methods = []
         if 'zeitgeist' in methods:
             if zeitgeist_support:
