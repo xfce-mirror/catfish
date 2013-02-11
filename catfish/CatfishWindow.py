@@ -535,13 +535,13 @@ class CatfishWindow(Window):
         try:
             subprocess.Popen(command, shell=False)
         except Exception as msg:
-            if self.options.debug: print('Debug: %s' % msg)
+            logger.debug('Exception encountered while opening %s.' + 
+            '\n  Exception: %s' + 
+            '\n  The wrapper was %s.' + 
+            '\n  The filemanager was %s.', 
+            filename, msg, self.open_wrapper, self.options.fileman)
             self.get_error_dialog( _('The file %s could not be opened.')
              % filename)
-            print('* The wrapper was %s.' % self.open_wrapper)
-            print('* The filemanager was %s.' % self.options.fileman)
-            print('Hint: Check wether the wrapper and filemanager exist.')
-
 
     # -- File Popup Menu -- #
     def on_menu_open_activate(self, widget):
@@ -568,17 +568,19 @@ class CatfishWindow(Window):
         
     def on_menu_save_activate(self, widget):
         """Show a save dialog and possibly write the results to a file."""
-        filename = self.get_save_dialog(self.selected_filename[0])
+        filename = self.get_save_dialog(self.selected_filenames[0])
         if filename:
             try:
                 # Try to save the file.
-                copy2(self.selected_filename[0], filename)
+                copy2(self.selected_filenames[0], filename)
                 
             except Exception as msg:
                 # If the file save fails, throw an error.
-                if self.options.debug: print('Debug: %s' % msg)
+                logger.debug('Exception encountered while saving %s.' + 
+                '\n  Exception: %s', filename, msg)
                 self.get_error_dialog( _('The file %s could not be saved.')
                 % filename)
+                
             
     def on_menu_delete_activate(self, widget):
         """Show a delete dialog and remove the file if accepted."""
@@ -598,8 +600,10 @@ class CatfishWindow(Window):
                     model.remove(treeiter)
                     self.refilter()
                     
-                except Exception:
+                except Exception as msg:
                     # If the file cannot be deleted, throw an error.
+                    logger.debug('Exception encountered while deleting %s.' + 
+                    '\n  Exception: %s', filename, msg)
                     self.get_error_dialog( _("The file %s could not be deleted.") 
                                            % filename )
 
@@ -658,10 +662,10 @@ class CatfishWindow(Window):
             filename = filename.split('\n')[0]
             filename = filename.split(' ')
             filename = ' '.join(filename[:len(filename)-2])
-        self.selected_filename = os.path.join(file_path, filename)
+        self.selected_filenames = [os.path.join(file_path, filename)]
     
         # Open the selected file.
-        self.open_file(self.selected_filename)
+        self.open_file( self.selected_filenames[0] )
         return True
         
     def treeview_get_selected_rows(self, treeview):
