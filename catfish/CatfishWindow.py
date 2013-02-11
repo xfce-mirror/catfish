@@ -323,17 +323,17 @@ class CatfishWindow(Window):
     def on_menu_exact_match_toggled(self, widget):
         """Toggle the exact match settings, and restart the search
         if a fulltext search was previously run."""
-        self.on_filter_format_toggled("exact", widget.get_active())
+        self.filter_format_toggled("exact", widget.get_active())
         if self.filter_formats['fulltext']:
             self.on_search_entry_activate(self.search_entry)
         
     def on_menu_hidden_files_toggled(self, widget):
         """Toggle the hidden files settings."""
-        self.on_filter_format_toggled("hidden", widget.get_active())
+        self.filter_format_toggled("hidden", widget.get_active())
         
     def on_menu_fulltext_toggled(self, widget):
         """Toggle the fulltext settings, and restart the search."""
-        self.on_filter_format_toggled("fulltext", widget.get_active())
+        self.filter_format_toggled("fulltext", widget.get_active())
         self.on_search_entry_activate(self.search_entry)
         
     def on_menu_update_index_activate(self, widget):
@@ -430,28 +430,28 @@ class CatfishWindow(Window):
 
 
     # File Type toggles
-    def on_filter_format_toggled(self, filter_format, enabled):
+    def filter_format_toggled(self, filter_format, enabled):
         self.filter_formats[filter_format] = enabled
         logger.debug("File type filters updated: %s", str(self.filter_formats))
         self.refilter()
     
     def on_documents_toggled(self, widget):
-        self.on_filter_format_toggled("documents", widget.get_active())
+        self.filter_format_toggled("documents", widget.get_active())
         
     def on_images_toggled(self, widget):
-        self.on_filter_format_toggled("images", widget.get_active())
+        self.filter_format_toggled("images", widget.get_active())
         
     def on_music_toggled(self, widget):
-        self.on_filter_format_toggled("music", widget.get_active())
+        self.filter_format_toggled("music", widget.get_active())
         
     def on_videos_toggled(self, widget):
-        self.on_filter_format_toggled("videos", widget.get_active())
+        self.filter_format_toggled("videos", widget.get_active())
         
     def on_applications_toggled(self, widget):
-        self.on_filter_format_toggled("applications", widget.get_active())
+        self.filter_format_toggled("applications", widget.get_active())
         
     def on_other_format_toggled(self, widget):
-        self.on_filter_format_toggled("other", widget.get_active())
+        self.filter_format_toggled("other", widget.get_active())
         self.button_format_custom.set_sensitive(widget.get_active())
         
     def on_button_format_custom_clicked(self, widget):

@@ -80,8 +80,9 @@ class Window(Gtk.Window):
         self.appmenu_button = self.builder.get_object('appmenu_button')
         self.appmenu.attach_to_widget(self.appmenu_button, detach_cb)
 
-    def on_mnu_contents_activate(self, widget, data=None):
-        show_uri(self, "ghelp:%s" % get_help_uri())
+    # Help not currently in use.
+    #def on_mnu_contents_activate(self, widget, data=None):
+    #    show_uri(self, "ghelp:%s" % get_help_uri())
 
     def on_mnu_about_activate(self, widget, data=None):
         """Display the about box for catfish."""
@@ -104,7 +105,6 @@ class Window(Gtk.Window):
                                         
     def on_appmenu_hide(self, widget):
         self.appmenu_button.set_active(False)
-
         
     def on_catfish_window_window_state_event(self, widget, event):
         self.window_is_fullscreen = bool(event.new_window_state & Gdk.WindowState.FULLSCREEN)
