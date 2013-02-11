@@ -45,6 +45,15 @@ python3 = version_info[0] > 2
 GObject.threads_init()
 GLib.threads_init()
 
+def is_file_hidden(filename):
+    """Return TRUE if file is hidden or in a hidden directory."""
+    splitpath = os.path.split(filename)
+    while splitpath[1] != '':
+        if splitpath[1][0] == '.':
+            return True
+        splitpath = os.path.split(splitpath[0])
+    return False
+
 # See catfish_lib.Window.py for more details about how this class works
 class CatfishWindow(Window):
     __gtype_name__ = "CatfishWindow"
@@ -118,6 +127,8 @@ class CatfishWindow(Window):
         
         self.icon_cache = {}
         self.icon_theme = Gtk.IconTheme.get_default()
+        
+        # Load the symbolic (or fallback) icons.
         modified_icon = self.load_symbolic_icon('document-open-recent', 16)
         builder.get_object("image9").set_from_pixbuf(modified_icon)
         builder.get_object("image10").set_from_pixbuf(modified_icon)
@@ -169,7 +180,7 @@ class CatfishWindow(Window):
             self.icon_size = Gtk.IconSize.MENU
             
     def load_symbolic_icon(self, icon_name, size):
-        icon = None
+        """Return the symbolic version of icon_name, or the fallback if unavailable."""
         context = self.sidebar.get_style_context()
         try:
             icon_info = self.icon_theme.choose_icon([icon_name + '-symbolic'], size, Gtk.IconLookupFlags.FORCE_SVG)
@@ -178,7 +189,6 @@ class CatfishWindow(Window):
         except AttributeError:
             icon = self.icon_theme.load_icon(icon_name, size, Gtk.IconLookupFlags.FORCE_SVG|Gtk.IconLookupFlags.USE_BUILTIN|Gtk.IconLookupFlags.GENERIC_FALLBACK)
         return icon
-
 
     # -- Update Search Index dialog -- #
     def on_update_index_dialog_close(self, widget=None, event=None, user_data=None):
@@ -229,7 +239,11 @@ class CatfishWindow(Window):
         self.update_index_unlock.set_sensitive(False)
         
         # Start the query.  Use catfish.desktop to make popup safer-looking.
-        self.updatedb_process = subprocess.Popen(['gksudo', 'updatedb', '--desktop', '/usr/share/applications/catfish.desktop'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+        if os.path.isfile('/usr/share/applications/catfish.desktop'):
+            command = ['gksudo', 'updatedb', '--desktop', '/usr/share/applications/catfish.desktop']
+        else:
+            command = ['gksudo', 'updatedb']
+        self.updatedb_process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
         
         # Poll every 1 second for completion.
         GLib.timeout_add(1000, updatedb_subprocess)
@@ -271,7 +285,9 @@ class CatfishWindow(Window):
         completion."""
         self.suggestions_engine.stop()
 
+        # Wait for an available thread.
         while Gtk.events_pending(): Gtk.main_iteration()
+        
         folder = self.folderchooser.get_filename()
         show_hidden = self.filter_formats['hidden']
         
@@ -288,13 +304,7 @@ class CatfishWindow(Window):
                 if name not in results:
                     try:
                         # Determine if file is hidden
-                        hidden = False
-                        splitpath = os.path.split(filename)
-                        while splitpath[1] != '':
-                            if splitpath[1][0] == '.':
-                                hidden = True
-                                break
-                            splitpath = os.path.split(splitpath[0])
+                        hidden = is_file_hidden(filename)
 
                         if not hidden or show_hidden:
                             results.append(name)
@@ -308,42 +318,30 @@ class CatfishWindow(Window):
 
     # -- Application Menu -- #
     def on_menu_exact_match_toggled(self, widget):
+        """Toggle the exact match settings, and restart the search
+        if a fulltext search was previously run."""
         self.on_filter_format_toggled("exact", widget.get_active())
         if self.filter_formats['fulltext']:
             self.on_search_entry_activate(self.search_entry)
         
     def on_menu_hidden_files_toggled(self, widget):
+        """Toggle the hidden files settings."""
         self.on_filter_format_toggled("hidden", widget.get_active())
         
     def on_menu_fulltext_toggled(self, widget):
+        """Toggle the fulltext settings, and restart the search."""
         self.on_filter_format_toggled("fulltext", widget.get_active())
         self.on_search_entry_activate(self.search_entry)
         
     def on_menu_update_index_activate(self, widget):
+        """Show the Update Search Index dialog."""
         self.update_index_dialog.show()
-        
-    def on_catfish_window_window_state_event(self, widget, event):
-        self.window_is_fullscreen = bool(event.new_window_state & Gdk.WindowState.FULLSCREEN)
 
-    def on_catfish_window_key_press_event(self, widget, event):
-        key_name = Gdk.keyval_name(event.keyval)
-        if key_name == 'F9':
-            self.sidebar_toggle_menu.activate()
-            return True
-        if key_name == 'F11':
-            if self.window_is_fullscreen:
-                self.unfullscreen()
-            else:
-                self.fullscreen()
-            return True
-        return False
 
     # -- Sidebar -- #
     def on_sidebar_toggle_toggled(self, widget):
         """Toggle visibility of the sidebar."""
         active = widget.get_active()
-
-        self.sidebar_toggle_menu.set_active(active)
         
         if active != self.sidebar.get_visible():
             if active:
@@ -355,6 +353,7 @@ class CatfishWindow(Window):
         """Set the time range filter to allow for any modification time."""
         if widget.get_active():
             self.filter_timerange = (0.0, 9999999999.0)
+            logger.debug("Time Range: Beginning of time -> Eternity")
             self.refilter()
             
     def on_radio_time_week_toggled(self, widget):
@@ -366,6 +365,8 @@ class CatfishWindow(Window):
             week = timegm( (datetime.datetime(now.year, now.month, now.day, 0, 0) -
                             datetime.timedelta(7)).timetuple() )
             self.filter_timerange = (week, 9999999999.0)
+            logger.debug("Time Range: %s -> Eternity", 
+                time.strftime(self.time_format, time.gmtime(int(week))) )
             self.refilter()
             
     def on_radio_time_custom_toggled(self, widget):
@@ -376,6 +377,9 @@ class CatfishWindow(Window):
             self.filter_timerange = (   timegm( self.start_date.timetuple() ),
                                         timegm( self.end_date.timetuple() )
                                     )
+            logger.debug("Time Range: %s -> %s", 
+                time.strftime(self.time_format, time.gmtime(int(self.filter_timerange[0]))),
+                time.strftime(self.time_format, time.gmtime(int(self.filter_timerange[1]))) )
             self.refilter()
         else:
             self.button_time_custom.set_sensitive(False)
@@ -398,6 +402,10 @@ class CatfishWindow(Window):
             self.filter_timerange = (   timegm( self.start_date.timetuple() ),
                                         timegm( self.end_date.timetuple() )
                                     )
+                                    
+            logger.debug("Time Range: %s -> %s", 
+                time.strftime(self.time_format, time.gmtime(int(self.filter_timerange[0]))),
+                time.strftime(self.time_format, time.gmtime(int(self.filter_timerange[1]))) )
             
             # Reload the results filter.
             self.refilter()
@@ -421,6 +429,7 @@ class CatfishWindow(Window):
     # File Type toggles
     def on_filter_format_toggled(self, filter_format, enabled):
         self.filter_formats[filter_format] = enabled
+        logger.debug("File type filters updated: %s", str(self.filter_formats))
         self.refilter()
     
     def on_documents_toggled(self, widget):
@@ -497,7 +506,8 @@ class CatfishWindow(Window):
                                             
             self.filter_custom_extensions = []
             extensions = extensions_entry.get_text()
-            for ext in extensions.split(','):
+            extensions = extensions.replace(',', ' ')
+            for ext in extensions.split():
                 ext = ext.rstrip().lstrip()
                 if len(ext) > 0:
                     if ext[0] != '.':
@@ -505,6 +515,12 @@ class CatfishWindow(Window):
                     self.filter_custom_extensions.append( ext )
                 
             self.filter_custom_use_mimetype = radio_mimetypes.get_active()
+            
+            updated_settings = "Updated file type settings:" + \
+            "\n  Mimetype:     " + str(self.filter_custom_mimetype) + \
+            "\n  Extensions:   " + str(self.filter_custom_extensions) + \
+            "\n  Use mimetype: " + str(self.filter_custom_use_mimetype)
+            logger.debug(updated_settings)
             
             # Reload the results filter.
             self.refilter()
@@ -1011,14 +1027,7 @@ class CatfishWindow(Window):
                             if override:
                                 mimetype = override
                             
-                            # Determine if file is hidden
-                            hidden = False
-                            splitpath = os.path.split(filename)
-                            while splitpath[1] != '':
-                                if splitpath[1][0] == '.':
-                                    hidden = True
-                                    break
-                                splitpath = os.path.split(splitpath[0])
+                            hidden = is_file_hidden(filename)
                                 
                             exact = keywords in name
                             

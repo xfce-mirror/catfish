@@ -15,6 +15,9 @@
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 ### END LICENSE
 
+import logging
+logger = logging.getLogger('catfish_search')
+
 import os, signal, subprocess
 from itertools import permutations
 
@@ -68,6 +71,7 @@ class CatfishSearchEngine:
           walk              'os.walk' to search for files (like find).
           zeitgeist         Zeitgeist indexing service to search for files.
         """
+        logger.debug("Search init, methods: %s", str(methods))
         self.methods = []
         if 'zeitgeist' in methods:
             if zeitgeist_support:
@@ -91,6 +95,8 @@ class CatfishSearchEngine:
         This function is a generator.  With each filename reviewed, the filename
         is yielded if it matches the query.  False is also yielded afterwards
         to guarantee the interface does not lock up."""
+        
+        logger.debug("keywords: %s, path: %s", str(keywords), str(path))
         
         # For simplicity, make sure the path contains a trailing '/'
         if not path.endswith('/'): path += '/'

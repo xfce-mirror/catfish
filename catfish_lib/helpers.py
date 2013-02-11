@@ -66,6 +66,11 @@ def set_up_logging(opts):
     logger_sh = logging.StreamHandler()
     logger_sh.setFormatter(formatter)
     logger.addHandler(logger_sh)
+    
+    search_logger = logging.getLogger('catfish_search')
+    search_logger_sh = logging.StreamHandler()
+    search_logger_sh.setFormatter(formatter)
+    search_logger.addHandler(search_logger_sh)
 
     lib_logger = logging.getLogger('catfish_lib')
     lib_logger_sh = logging.StreamHandler()
@@ -76,6 +81,7 @@ def set_up_logging(opts):
     if opts.verbose:
         logger.setLevel(logging.DEBUG)
         logger.debug('logging enabled')
+        search_logger.setLevel(logging.DEBUG)
         if opts.verbose > 1:
             lib_logger.setLevel(logging.DEBUG)
 
