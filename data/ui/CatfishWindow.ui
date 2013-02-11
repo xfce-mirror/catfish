@@ -862,6 +862,7 @@
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Custom Time Range</property>
     <property name="resizable">False</property>
+    <property name="icon_name">catfish</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
@@ -1117,6 +1118,8 @@
   <object class="GtkDialog" id="custom_format_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="title" translatable="yes">Custom File Type</property>
+    <property name="icon_name">catfish</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox2">
@@ -1384,10 +1387,12 @@
   <object class="GtkDialog" id="update_index_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="title" translatable="yes">Update Search Index</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
     <property name="window_position">center</property>
     <property name="destroy_with_parent">True</property>
+    <property name="icon_name">catfish</property>
     <property name="type_hint">dialog</property>
     <property name="transient_for">catfish_window</property>
     <signal name="delete-event" handler="on_update_index_dialog_close" swapped="no"/>
