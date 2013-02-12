@@ -137,6 +137,8 @@ class CatfishWindow(Window):
         self.icon_cache = {}
         self.icon_theme = Gtk.IconTheme.get_default()
         
+        self.selected_filenames = []
+        
         # Load the symbolic (or fallback) icons.
         modified_icon = self.load_symbolic_icon('document-open-recent', 16)
         builder.get_object("image9").set_from_pixbuf(modified_icon)
@@ -713,8 +715,15 @@ class CatfishWindow(Window):
         self.open_file( self.selected_filenames[0] )
         return True
         
+    def on_treeview_drag_begin(self, treeview, context):
+        if len(self.selected_filenames) > 1:
+            treesel = treeview.get_selection()
+            for row in self.rows:
+                treesel.select_path(row)
+        return True
+        
     def on_treeview_drag_data_get(self, treeview, context, selection, info, time):
-        text = str(os.linesep).join(self.treeview_get_selected_rows(treeview)[2])
+        text = str(os.linesep).join(self.selected_filenames)
         selection.set_text(text, -1)
         return True
         
@@ -738,6 +747,9 @@ class CatfishWindow(Window):
             Left Click:     Ignore.
             Middle Click:   Open the selected file.
             Right Click:    Show the popup menu."""
+        
+        model, self.rows, self.selected_filenames = self.treeview_get_selected_rows(treeview)
+        
         # If left click, ignore.
         if event.button == 1: return False
         
@@ -748,8 +760,6 @@ class CatfishWindow(Window):
                 treeview.set_cursor(path)
             except TypeError:
                 return False
-        
-        model, rows, self.selected_filenames = self.treeview_get_selected_rows(treeview)
 
         # If middle click, open the selected file.        
         if event.button == 2: 

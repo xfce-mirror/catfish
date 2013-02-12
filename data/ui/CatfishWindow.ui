@@ -787,9 +787,10 @@
                     <property name="rules_hint">True</property>
                     <property name="rubber_banding">True</property>
                     <property name="enable_grid_lines">vertical</property>
-                    <signal name="button-press-event" handler="on_treeview_button_press_event" swapped="no"/>
                     <signal name="row-activated" handler="on_treeview_row_activated" swapped="no"/>
                     <signal name="drag-data-get" handler="on_treeview_drag_data_get" swapped="no"/>
+                    <signal name="button-release-event" handler="on_treeview_button_press_event" swapped="no"/>
+                    <signal name="drag-begin" handler="on_treeview_drag_begin" swapped="no"/>
                     <child internal-child="selection">
                       <object class="GtkTreeSelection" id="treeview_selection1">
                         <property name="mode">multiple</property>
