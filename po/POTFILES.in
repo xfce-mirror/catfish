@@ -14,12 +14,12 @@
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 ### END LICENSE
 
+# Desktop File
+catfish.desktop.in
+
 # Glade Files
 [type: gettext/glade]data/ui/AboutCatfishDialog.ui
 [type: gettext/glade]data/ui/CatfishWindow.ui
-
-# Desktop File
-catfish.desktop.in
 
 # Python Files
 catfish/__init__.py
