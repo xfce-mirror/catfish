@@ -41,7 +41,7 @@ except ImportError, msg:
     print 'Warning: The optional module %s is missing.' % str(msg).split()[-1]
 
 app_name = 'catfish'
-app_version = '0.4.0.2'
+app_version = '0.4.0.3'
 
 _ = gettext.gettext # i18n shortcut
 

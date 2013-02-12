@@ -1,3 +1,23 @@
+v0.4.0.3:
+ + Added Greek translation.
+ + Added Basque translation.
+ + Added Japanese translation.
+ + Added Dutch translation.
+ + Added Brazilian Portugeuse translation.
+ + Added Russian translation.
+ + Added Slovak translation.
+ + Added Serbian translation.
+ + Added Turkish translation.
+ + Added Ukranian translation.
+ + Added Chinese Traditional translation.
+ + Updated Belarusian translation.
+ + Updated Czech translation.
+ + Updated German translation.
+ + Updated Spanish translation.
+ + Updated Finnish translation.
+ + Updated French translation.
+ + Updated Polish translation.
+
 v0.4.0.2:
  + Added Russian localized comment in catfish.desktop
  + Fix for not running on Ubuntu live CD
