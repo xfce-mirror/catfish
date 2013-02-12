@@ -570,8 +570,7 @@ class CatfishWindow(Window):
             '\n  The wrapper was %s.' + 
             '\n  The filemanager was %s.', 
             filename, msg, self.open_wrapper, self.options.fileman)
-            self.get_error_dialog( _('The file %s could not be opened.')
-             % filename)
+            self.get_error_dialog( _('\"%s\" could not be opened.') % os.path.basename(filename), str(msg))
 
     # -- File Popup Menu -- #
     def on_menu_open_activate(self, widget):
@@ -608,8 +607,7 @@ class CatfishWindow(Window):
                 # If the file save fails, throw an error.
                 logger.debug('Exception encountered while saving %s.' + 
                 '\n  Exception: %s', filename, msg)
-                self.get_error_dialog( _('The file %s could not be saved.')
-                % filename)
+                self.get_error_dialog( _('\"%s\" could not be saved.') % os.path.basename(filename), str(msg))
                 
             
     def on_menu_delete_activate(self, widget):
@@ -634,8 +632,7 @@ class CatfishWindow(Window):
                     # If the file cannot be deleted, throw an error.
                     logger.debug('Exception encountered while deleting %s.' + 
                     '\n  Exception: %s', filename, msg)
-                    self.get_error_dialog( _("The file %s could not be deleted.") 
-                                           % filename )
+                    self.get_error_dialog( _("\"%s\" could not be deleted.") % os.path.basename(filename), str(msg) )
 
     def get_save_dialog(self, filename):
         """Show the Save As FileChooserDialog.  
@@ -657,10 +654,14 @@ class CatfishWindow(Window):
             return save_as
         return None
             
-    def get_error_dialog(self, msg):
+    def get_error_dialog(self, primary, secondary):
         """Show an error dialog with the specified message."""
+        dialog_text = "<big><b>%s</b></big>\n\n%s" % (escape(primary), escape(secondary))
+        
         dialog = Gtk.MessageDialog(self, 0,
-            Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, msg)
+            Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "")
+            
+        dialog.set_markup(dialog_text)
         dialog.set_default_response(Gtk.ResponseType.OK)
         dialog.run()
         dialog.destroy()
@@ -668,11 +669,19 @@ class CatfishWindow(Window):
     def get_delete_dialog(self, filenames):
         """Show a delete confirmation dialog.  Return True if delete wanted."""
         if len(filenames) == 1:
-            msg = _("Are you sure you wish to delete %s?") % filename
+            primary = _("Are you sure that you want to \npermanently delete \"%s\"?") % escape(os.path.basename(filenames[0]))
         else:
-            msg = _("Are you sure you wish to delete these %i files?") % len(filenames)
+            primary = _("Are you sure that you want to \npermanently delete the %i selected files?") % len(filenames)
+        secondary = _("If you delete a file, it is permanently lost.")
+        
+        dialog_text = "<big><b>%s</b></big>\n\n%s" % (primary, secondary)
         dialog = Gtk.MessageDialog(self, 0,
-            Gtk.MessageType.QUESTION, Gtk.ButtonsType.YES_NO, msg)
+            Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "")
+        dialog.set_markup(dialog_text)
+        
+        dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.NO,
+                           Gtk.STOCK_DELETE, Gtk.ResponseType.YES)
+        
         dialog.set_default_response(Gtk.ResponseType.NO)
         response = dialog.run()
         dialog.destroy()
