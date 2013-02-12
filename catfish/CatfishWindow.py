@@ -34,7 +34,7 @@ import os, hashlib
 
 from shutil import copy2, rmtree
 
-from xml.sax.saxutils import escape
+from xml.sax.saxutils import escape, unescape
 
 import mimetypes
 mimetypes.init()
@@ -109,11 +109,11 @@ class CatfishWindow(Window):
         self.statusbar = builder.get_object("statusbar_label")
         
         # -- Treeview -- #
-        targets = [('text/plain', Gtk.TargetFlags.OTHER_APP, 0)]
+        self.row_activated = False
         self.treeview = builder.get_object("treeview")
         self.treeview.enable_model_drag_source(
             Gdk.ModifierType.BUTTON1_MASK, 
-            targets, 
+            [('text/plain', Gtk.TargetFlags.OTHER_APP, 0)], 
             Gdk.DragAction.DEFAULT|Gdk.DragAction.COPY)
         self.treeview.drag_source_add_text_targets()
         self.file_menu = builder.get_object("file_menu")
@@ -181,7 +181,7 @@ class CatfishWindow(Window):
         if self.options.icons_large or self.options.thumbnails:
             self.treeview.append_column(Gtk.TreeViewColumn(_('Preview'),
                 Gtk.CellRendererPixbuf(), pixbuf=0))
-            self.treeview.append_column(self.new_column(_('Filename'), 1, markup=0))
+            self.treeview.append_column(self.new_column(_('Filename'), 1, markup=True))
             self.icon_size = Gtk.IconSize.DIALOG
         else:
             self.treeview.append_column(self.new_column(_('Filename'), 1, 'icon', 1))
@@ -699,21 +699,19 @@ class CatfishWindow(Window):
     # -- Treeview -- #
     def on_treeview_row_activated(self, treeview, path, user_data):
         """Catch row activations by keyboard or mouse double-click."""
+        if self.row_activated:
+            self.row_activated = False
+            return
+        else:
+            self.row_activated = True
 
         # Get the filename from the row.
         model = treeview.get_model()
-        treeiter = model.get_iter(path)
-        file_path = model.get_value(treeiter, 3)
-        filename = model.get_value(treeiter, 1)
-        if self.options.icons_large or self.options.thumbnails:
-            filename = filename.split('\n')[0]
-            filename = filename.split(' ')
-            filename = ' '.join(filename[:len(filename)-2])
-        self.selected_filenames = [os.path.join(file_path, filename)]
+        file_path = self.treemodel_get_row_filename( model, path )
+        self.selected_filenames = [file_path]
     
         # Open the selected file.
         self.open_file( self.selected_filenames[0] )
-        return True
         
     def on_treeview_drag_begin(self, treeview, context):
         if len(self.selected_filenames) > 1:
@@ -727,18 +725,24 @@ class CatfishWindow(Window):
         selection.set_text(text, -1)
         return True
         
+    def treemodel_get_row_filename(self, model, row):
+        if self.options.icons_large or self.options.thumbnails:
+            filename = model[row][1].split('\n')[0]
+            filename = filename.split(' ')
+            filename = ' '.join(filename[:len(filename)-2])
+            filename = filename[3:-4]
+            filename = unescape(filename)
+        else:
+            filename = model[row][1]
+        folder = model[row][3]
+        return os.path.join( folder, filename )
+        
     def treeview_get_selected_rows(self, treeview):
         sel = treeview.get_selection()
         model, rows = sel.get_selected_rows()
         data = []
         for row in rows:
-            if self.options.icons_large or self.options.thumbnails:
-                filename = model[row][1].split('\n')[0]
-                filename = filename.split(' ')
-                filename = ' '.join(filename[:len(filename)-2])
-            else:
-                filename = model[row][1]
-            data.append( os.path.join(model[row][3], filename) )
+            data.append( self.treemodel_get_row_filename( model, row ) )
         return (model, rows, data)
         
     def on_treeview_button_press_event(self, treeview, event):
@@ -778,7 +782,7 @@ class CatfishWindow(Window):
                                  event.button, event.time)
         return True
 
-    def new_column(self, label, id, special=None, markup=0):
+    def new_column(self, label, id, special=None, markup=False):
         """New Column function for creating TreeView columns easily."""
         if special == 'icon':
             column = Gtk.TreeViewColumn(label)
@@ -787,14 +791,11 @@ class CatfishWindow(Window):
             column.add_attribute(cell, 'pixbuf', 0)
             cell = Gtk.CellRendererText()
             column.pack_start(cell, False)
-            #column.add_attribute(cell, 'markup', id)
-            #column.set_cell_data_func(cell, self.cell_data_func_markup, id)
             column.add_attribute(cell, 'text', id)
         else:
             cell = Gtk.CellRendererText()
             if markup:
                 column = Gtk.TreeViewColumn(label, cell, markup=id)
-                column.set_cell_data_func(cell, self.cell_data_func_markup, id)
             else:
                 column = Gtk.TreeViewColumn(label, cell, text=id)
             if special == 'ellipsize':
@@ -809,12 +810,6 @@ class CatfishWindow(Window):
         if id == 3:
             column.set_expand(True)
         return column
-        
-    def cell_data_func_markup(self, column, cell_renderer, tree_model, tree_iter, id):
-        """Markup cell display function."""
-        markup = escape(tree_model.get_value(tree_iter, id))
-        cell_renderer.set_property('markup', markup)
-        return
         
     def cell_data_func_filesize(self, column, cell_renderer, tree_model, tree_iter, id):
         """File size cell display function."""
@@ -1078,8 +1073,8 @@ class CatfishWindow(Window):
                             results.append(filename)
                             
                             if self.options.icons_large or self.options.thumbnails:
-                                displayed = '%s %s%s%s%s%s' % (name
-                                            , self.format_size(size), os.linesep, path, os.linesep
+                                displayed = '<b>%s</b> %s%s%s%s%s' % (escape(name)
+                                            , self.format_size(size), os.linesep, escape(path), os.linesep
                                             , time.strftime(self.time_format, time.gmtime(int(modified))))
                                 model.append([icon, displayed, size, path, modified, mimetype, hidden, exact])
                             else:
