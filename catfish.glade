@@ -23,13 +23,25 @@ of the License, or (at your option) any later version.
 See the file COPYING for the full license text.</property>
     <property name="authors">Copyright 2008-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 GTK+3 Port copyright 2012 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
-    <property name="translator_credits" translatable="yes">be: Mikalai Udodau
+    <property name="translator_credits">be: Mikalai Udodau
 cs: Jan Žárský &lt;jan.zarsky@gmail.com&gt;
-de: Simon Steinbeiss &lt;simon@xfce.org&gt;
-es: Sean Davis &lt;smd.seandavis@gmail.com&gt;
+de: Simon Steinbeiß &lt;ochosi@shimmerproject.org&gt;
+el: Nikos Aggelis &lt;nikosaggelis@hotmail.gr&gt;
+es: Adolfo Jayme Barrientos &lt;fitoschido@gmail.com&gt;
+eu: Asier Iturralde Sarasola
 fi: Pasi Lallinaho &lt;pasi@shimmerproject.org&gt;
 fr: Fabrice Colin &lt;fabrice.colin@gmail.com&gt;
-pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
+ja: Ryan Hagood
+nl: Pjotr12345
+pl: Piotr Sokół &lt;psokol@jabster.pl&gt;
+pt_BR: Lucas S. B. Mastella &lt;lucas@bello.li&gt;
+ru: Aleksey Kabanov
+sk: DAG Software
+sr: Саша Петровић &lt;salepetronije@gmail.com&gt;
+tr: Utku BERBEROĞLU
+uk: Олександр
+zh_TW: Walter Cheuk &lt;wwycheuk@gmail.com&gt;
+</property>
     <property name="artists">Nancy Runge &lt;nancy@twotoasts.de&gt;</property>
     <property name="logo_icon_name">catfish</property>
     <property name="license_type">gpl-2-0</property>
@@ -62,7 +74,6 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
     <signal name="hide" handler="on_application_menu_hide" swapped="no"/>
     <child>
       <object class="GtkCheckMenuItem" id="checkbox_find_exact">
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="label" translatable="yes">Exact match</property>
@@ -72,7 +83,6 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
     </child>
     <child>
       <object class="GtkCheckMenuItem" id="checkbox_find_hidden">
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="label" translatable="yes">Hidden files</property>
@@ -82,7 +92,6 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
     </child>
     <child>
       <object class="GtkCheckMenuItem" id="checkbox_find_fulltext">
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="label" translatable="yes">Fulltext search</property>
@@ -91,14 +100,12 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
     </child>
     <child>
       <object class="GtkSeparatorMenuItem" id="menuitem4">
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
       </object>
     </child>
     <child>
       <object class="GtkCheckMenuItem" id="checkbox_advanced">
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="label" translatable="yes">Advanced Filtering</property>
@@ -108,7 +115,6 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
     </child>
     <child>
       <object class="GtkSeparatorMenuItem" id="menuitem6">
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
       </object>
@@ -116,7 +122,6 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
     <child>
       <object class="GtkImageMenuItem" id="menu_updatedb">
         <property name="label" translatable="yes">Update Search Index</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="image">image2</property>
@@ -127,7 +132,6 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
     <child>
       <object class="GtkImageMenuItem" id="menu_about">
         <property name="label">gtk-about</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
@@ -158,11 +162,9 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
             <child>
               <object class="GtkButton" id="button1">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
               </object>
               <packing>
@@ -174,11 +176,9 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
             <child>
               <object class="GtkButton" id="button2">
                 <property name="label">gtk-ok</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
               </object>
               <packing>
@@ -231,11 +231,9 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
                             <child>
                               <object class="GtkCheckButton" id="calendar_start_today">
                                 <property name="label" translatable="yes">Today</property>
-                                <property name="use_action_appearance">False</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
-                                <property name="use_action_appearance">False</property>
                                 <property name="xalign">0</property>
                                 <property name="draw_indicator">True</property>
                                 <signal name="toggled" handler="on_calendar_start_today_toggled" swapped="no"/>
@@ -288,11 +286,9 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
                             <child>
                               <object class="GtkCheckButton" id="calendar_end_today">
                                 <property name="label" translatable="yes">Today</property>
-                                <property name="use_action_appearance">False</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
-                                <property name="use_action_appearance">False</property>
                                 <property name="xalign">0</property>
                                 <property name="draw_indicator">True</property>
                                 <signal name="toggled" handler="on_calendar_end_today_toggled" swapped="no"/>
@@ -367,11 +363,9 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
             <child>
               <object class="GtkButton" id="updatedb_button_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
                 <signal name="clicked" handler="on_updatedb_button_cancel_clicked" swapped="no"/>
               </object>
@@ -384,11 +378,9 @@ pl: Piotr Sokół &lt;psokol@jabster.pl&gt;</property>
             <child>
               <object class="GtkButton" id="updatedb_button_ok">
                 <property name="label">gtk-ok</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
                 <signal name="clicked" handler="on_dialog_updatedb_run" swapped="no"/>
               </object>
@@ -580,7 +572,6 @@ This requires sudo (admin) rights.</property>
     <child>
       <object class="GtkImageMenuItem" id="menu_open">
         <property name="label">gtk-open</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
@@ -591,7 +582,6 @@ This requires sudo (admin) rights.</property>
     <child>
       <object class="GtkImageMenuItem" id="menu_goto">
         <property name="label">Open in File Manager</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="image">image4</property>
@@ -602,7 +592,6 @@ This requires sudo (admin) rights.</property>
     <child>
       <object class="GtkImageMenuItem" id="menu_copy">
         <property name="label">Copy File Location</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="image">image5</property>
@@ -613,7 +602,6 @@ This requires sudo (admin) rights.</property>
     <child>
       <object class="GtkImageMenuItem" id="menu_save">
         <property name="label">gtk-save-as</property>
-        <property name="use_action_appearance">False</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
@@ -643,11 +631,9 @@ This requires sudo (admin) rights.</property>
             <child>
               <object class="GtkButton" id="button_mimetypes_cancel">
                 <property name="label">gtk-cancel</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
               </object>
               <packing>
@@ -659,11 +645,9 @@ This requires sudo (admin) rights.</property>
             <child>
               <object class="GtkButton" id="button_mimetypes_ok">
                 <property name="label">gtk-ok</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
                 <property name="use_stock">True</property>
                 <signal name="clicked" handler="on_filter_changed" swapped="no"/>
               </object>
@@ -712,11 +696,9 @@ This requires sudo (admin) rights.</property>
                 <child type="label">
                   <object class="GtkRadioButton" id="radio_mimetype_existing">
                     <property name="label" translatable="yes">Existing mimetype</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="xalign">0</property>
                     <property name="active">True</property>
                     <property name="draw_indicator">True</property>
@@ -755,11 +737,9 @@ This requires sudo (admin) rights.</property>
                 <child type="label">
                   <object class="GtkRadioButton" id="radio_mimetype_custom">
                     <property name="label" translatable="yes">Enter extensions</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="xalign">0</property>
                     <property name="active">True</property>
                     <property name="draw_indicator">True</property>
@@ -812,10 +792,8 @@ This requires sudo (admin) rights.</property>
                 <property name="can_focus">False</property>
                 <child>
                   <object class="GtkToolItem" id="toolbutton1">
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="use_action_appearance">False</property>
                     <child>
                       <object class="GtkBox" id="box17">
                         <property name="visible">True</property>
@@ -848,10 +826,8 @@ This requires sudo (admin) rights.</property>
                 </child>
                 <child>
                   <object class="GtkToolItem" id="toolbutton2">
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="use_action_appearance">False</property>
                     <child>
                       <object class="GtkBox" id="box18">
                         <property name="visible">True</property>
@@ -890,10 +866,8 @@ This requires sudo (admin) rights.</property>
                 </child>
                 <child>
                   <object class="GtkToolItem" id="toolbutton3">
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="use_action_appearance">False</property>
                     <child>
                       <object class="GtkBox" id="box16">
                         <property name="visible">True</property>
@@ -901,12 +875,10 @@ This requires sudo (admin) rights.</property>
                         <property name="orientation">vertical</property>
                         <child>
                           <object class="GtkToggleButton" id="menu_button">
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
                             <property name="halign">end</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="relief">none</property>
                             <property name="focus_on_click">False</property>
                             <signal name="clicked" handler="on_menu_button_clicked" swapped="no"/>
@@ -962,11 +934,9 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkRadioButton" id="time_filter_any">
                             <property name="label" translatable="yes">Any time</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="active">True</property>
                             <property name="draw_indicator">True</property>
@@ -981,11 +951,9 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkRadioButton" id="time_filter_week">
                             <property name="label" translatable="yes">Past week</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">time_filter_any</property>
@@ -1000,11 +968,9 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkRadioButton" id="time_filter_custom">
                             <property name="label" translatable="yes">Other</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
                             <property name="group">time_filter_any</property>
@@ -1019,14 +985,12 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkButton" id="button_time_filter_custom">
                             <property name="label" translatable="yes">Custom...</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="sensitive">False</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
                             <property name="halign">start</property>
                             <property name="margin_left">18</property>
-                            <property name="use_action_appearance">False</property>
                             <signal name="clicked" handler="on_button_time_filter_custom_clicked" swapped="no"/>
                           </object>
                           <packing>
@@ -1051,11 +1015,9 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkCheckButton" id="type_filter_documents">
                             <property name="label" translatable="yes">Documents</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
                             <signal name="toggled" handler="on_filter_changed" swapped="no"/>
@@ -1069,11 +1031,9 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkCheckButton" id="type_filter_pictures">
                             <property name="label" translatable="yes">Images</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
                             <signal name="toggled" handler="on_filter_changed" swapped="no"/>
@@ -1087,11 +1047,9 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkCheckButton" id="type_filter_music">
                             <property name="label" translatable="yes">Music</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
                             <signal name="toggled" handler="on_filter_changed" swapped="no"/>
@@ -1105,11 +1063,9 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkCheckButton" id="type_filter_videos">
                             <property name="label" translatable="yes">Videos</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
                             <signal name="toggled" handler="on_filter_changed" swapped="no"/>
@@ -1123,11 +1079,9 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkCheckButton" id="type_filter_applications">
                             <property name="label" translatable="yes">Applications</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
                             <signal name="toggled" handler="on_filter_changed" swapped="no"/>
@@ -1141,11 +1095,9 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkCheckButton" id="type_filter_other">
                             <property name="label" translatable="yes">Other</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
                             <signal name="toggled" handler="on_type_filter_other_toggled" swapped="no"/>
@@ -1159,14 +1111,12 @@ This requires sudo (admin) rights.</property>
                         <child>
                           <object class="GtkButton" id="button_type_filter_other">
                             <property name="label" translatable="yes">Custom...</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="sensitive">False</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
                             <property name="halign">start</property>
                             <property name="margin_left">18</property>
-                            <property name="use_action_appearance">False</property>
                             <signal name="clicked" handler="on_button_type_filter_other_clicked" swapped="no"/>
                           </object>
                           <packing>
@@ -1293,12 +1243,10 @@ This requires sudo (admin) rights.</property>
                 <child>
                   <object class="GtkButton" id="button_search_find">
                     <property name="label" translatable="yes">Deep Search</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="tooltip_text" translatable="yes">Perform a deep search using 'find'</property>
-                    <property name="use_action_appearance">False</property>
                     <signal name="clicked" handler="on_button_search_find_clicked" swapped="no"/>
                   </object>
                   <packing>

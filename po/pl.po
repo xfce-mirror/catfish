@@ -9,32 +9,32 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-07-03 18:39-0400\n"
-"PO-Revision-Date: 2012-08-18 02:41+0000\n"
-"Last-Translator: Piotr Sokół <Unknown>\n"
+"PO-Revision-Date: 2012-08-21 20:22+0000\n"
+"Last-Translator: Maciej Habant <Unknown>\n"
 "Language-Team: polski <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-20 14:16+0000\n"
-"X-Generator: Launchpad (build 15810)\n"
+"X-Launchpad-Export-Date: 2013-02-12 11:00+0000\n"
+"X-Generator: Launchpad (build 16491)\n"
 
-#: catfish.py:556
+#: ../catfish/CatfishWindow.py:174
 msgid "Preview"
 msgstr "Podgląd"
 
-#: catfish.py:558 catfish.py:560
+#: ../catfish/CatfishWindow.py:176 ../catfish/CatfishWindow.py:179
 msgid "Filename"
 msgstr "Nazwa pliku"
 
-#: catfish.py:561
+#: ../catfish/CatfishWindow.py:180
 msgid "Size"
 msgstr "Rozmiar"
 
-#: catfish.py:562
+#: ../catfish/CatfishWindow.py:181
 msgid "Location"
 msgstr "Położenie"
 
-#: catfish.py:563
+#: ../catfish/CatfishWindow.py:182
 msgid "Last modified"
 msgstr "Czas modyfikacji"
 
@@ -66,7 +66,7 @@ msgstr "Wyszukiwanie pełnego tekstu"
 msgid "Advanced Filtering"
 msgstr "Zaawansowane filtrowanie"
 
-#: catfish.py:681
+#: ../data/ui/CatfishWindow.ui.h:8
 msgid "Any time"
 msgstr "Kiedykolwiek"
 
@@ -74,7 +74,7 @@ msgstr "Kiedykolwiek"
 msgid "Past week"
 msgstr "Ostatni tydzień"
 
-#: catfish.py:683 catfish.py:691
+#: ../data/ui/CatfishWindow.ui.h:17
 msgid "Other"
 msgstr "Inny"
 
@@ -82,27 +82,27 @@ msgstr "Inny"
 msgid "Custom..."
 msgstr "Własny..."
 
-#: catfish.py:686
+#: ../data/ui/CatfishWindow.ui.h:12
 msgid "Documents"
 msgstr "Dokumenty"
 
-#: catfish.py:687
+#: ../data/ui/CatfishWindow.ui.h:13
 msgid "Images"
 msgstr "Obrazy"
 
-#: catfish.py:688
+#: ../data/ui/CatfishWindow.ui.h:14
 msgid "Music"
 msgstr "Muzyka"
 
-#: catfish.py:689
+#: ../data/ui/CatfishWindow.ui.h:15
 msgid "Videos"
 msgstr "Wideo"
 
-#: catfish.py:690
+#: ../data/ui/CatfishWindow.ui.h:16
 msgid "Applications"
 msgstr "Programy"
 
-#: catfish.py:694
+#: ../data/ui/CatfishWindow.ui.h:19
 msgid "Custom Time Range"
 msgstr "Własny zakres czasu"
 
@@ -130,7 +130,7 @@ msgstr "Istniejący typ MIME"
 msgid "Enter extensions"
 msgstr "Wprowadzone wyrażenie"
 
-#: catfish.py:704 catfish.py:705
+#: ../data/ui/CatfishWindow.ui.h:28
 msgid "Update Search Index"
 msgstr "Uaktualnij indeks wyszukiwania"
 
@@ -147,7 +147,7 @@ msgstr ""
 msgid "Updating database..."
 msgstr "Uaktualnianie bazy danych..."
 
-#: catfish.py:708
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "Done."
 msgstr "Zakończono."
 
@@ -156,7 +156,7 @@ msgstr "Zakończono."
 msgid "Save \"%s\" as..."
 msgstr "Zapisz „%s” jako..."
 
-#: catfish.py:979
+#: ../catfish/CatfishWindow.py:994
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Wyszukiwanie wyrażenia „%s”"
@@ -169,7 +169,7 @@ msgstr "Wyszukiwanie..."
 msgid "The search backend doesn't support wildcards."
 msgstr "Ta metoda wyszukiwanie nie obsługuje znaków wieloznacznych."
 
-#: catfish.py:1023 catfish.py:1112 catfish.py:1526
+#: ../catfish/CatfishWindow.py:876 ../catfish/CatfishWindow.py:1079
 msgid "No files found."
 msgstr "Nie odnaleziono plików."
 
@@ -179,7 +179,7 @@ msgstr "Krytyczny błąd. Przerwano wyszukiwanie."
 
 #: catfish.py:1107
 msgid "Click here to start the search daemon."
-msgstr ""
+msgstr "Kilknij tutaj, aby uruchomić demona szukania."
 
 #: catfish.py:1111 catfish.py:1525
 msgid "No files were found."
@@ -190,7 +190,7 @@ msgstr "Nie odnaleziono plików."
 msgid "%s files found."
 msgstr "Odnaleziono %s plików."
 
-#: catfish.py:1125
+#: ../catfish/CatfishWindow.py:1074
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Wyniki wyszukiwania wyrażenia „%s”"
@@ -199,19 +199,19 @@ msgstr "Wyniki wyszukiwania wyrażenia „%s”"
 msgid "Cancel search"
 msgstr "Anuluje wyszukiwanie"
 
-#: catfish.py:1186
+#: ../catfish/CatfishWindow.py:281 ../catfish/CatfishWindow.py:1089
 msgid "Clear search terms"
 msgstr "Czyści kryteria wyszukiwania"
 
-#: catfish.py:1189
+#: ../catfish/CatfishWindow.py:278 ../catfish/CatfishWindow.py:1086
 msgid "Enter search terms and press ENTER"
 msgstr "Wyszukuje wyrażenie po wciśnięciu klawisza ENTER"
 
-#: catfish.py:1330
+#: ../catfish/CatfishWindow.py:225
 msgid "Locate database updated successfully."
 msgstr "Zaktualizowano bazę nazw plików."
 
-#: catfish.py:1332
+#: ../catfish/CatfishWindow.py:227
 msgid "An error occurred while updating locatedb."
 msgstr "Wystąpił błąd podczas uaktualniania bazy nazw plików."
 
@@ -226,9 +226,9 @@ msgstr "Nie można uruchomić demona wyszukiwania."
 #: catfish.py:1427
 #, python-format
 msgid "The file %s already exists.  Do you "
-msgstr ""
+msgstr "Plik %s już istnieje. Czy "
 
-#: catfish.py:1435
+#: ../catfish/CatfishWindow.py:611
 #, python-format
 msgid "The file %s could not be saved."
 msgstr "Nie udało się zapisać pliku %s."
