@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
   <!-- interface-requires about_catfish_dialog 1.0 -->
@@ -9,11 +10,11 @@
     <property name="type_hint">normal</property>
     <property name="program_name">Catfish</property>
     <property name="version">0.5.0-public19</property>
-    <property name="copyright" translatable="yes">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
+    <property name="copyright" translatable="no">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
     <property name="comments" translatable="yes">Catfish is a versatile file searching tool.</property>
     <property name="website">http://twotoasts.de/index.php/catfish/</property>
-    <property name="license" translatable="yes"># Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
+    <property name="license"># Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 # Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;
 # This program is free software: you can redistribute it and/or modify it 
 # under the terms of the GNU General Public License version 2, as published 
@@ -30,7 +31,7 @@ Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
     <property name="authors">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
     <property name="translator_credits">ca: Paco &lt;web@pacoriviere.cat&gt;
-cs: Miro Hron&#269;ok &lt;churchyard@gmail.com&gt;
+cs: Miro Hrončok &lt;churchyard@gmail.com&gt;
 de: Christian Dywan &lt;software@twotoasts.de&gt;
 fi: Elias Julkunen &lt;elias.julkunen@gmail.com&gt;
 fr: Pierre Slamich &lt;pierre.slamich@gmail.com&gt;
