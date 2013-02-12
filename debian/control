@@ -18,6 +18,8 @@ Depends: ${misc:Depends},
  python-zeitgeist,
  gir1.2-gdkpixbuf-2.0,
  yelp,
+ gksu,
+ locate,
  python-zeitgeist,
  zeitgeist
 Description: a versatile file searching tool

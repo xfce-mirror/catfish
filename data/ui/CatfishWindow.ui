@@ -103,6 +103,7 @@
                 <property name="width_request">150</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="is_important">True</property>
                 <child>
                   <object class="GtkFileChooserButton" id="folderchooser">
                     <property name="visible">True</property>
@@ -123,6 +124,9 @@
               <object class="GtkToolItem" id="toolbutton3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="margin_left">6</property>
+                <property name="margin_right">6</property>
+                <property name="is_important">True</property>
                 <child>
                   <object class="GtkEntry" id="search_entry">
                     <property name="visible">True</property>
@@ -149,6 +153,7 @@
               <object class="GtkToggleToolButton" id="appmenu_button">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="is_important">True</property>
                 <property name="label" translatable="yes">toggletoolbutton1</property>
                 <property name="use_underline">True</property>
                 <property name="icon_name">document-properties</property>
