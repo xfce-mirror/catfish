@@ -109,7 +109,13 @@ class CatfishWindow(Window):
         self.statusbar = builder.get_object("statusbar_label")
         
         # -- Treeview -- #
+        targets = [('text/plain', Gtk.TargetFlags.OTHER_APP, 0)]
         self.treeview = builder.get_object("treeview")
+        self.treeview.enable_model_drag_source(
+            Gdk.ModifierType.BUTTON1_MASK, 
+            targets, 
+            Gdk.DragAction.DEFAULT|Gdk.DragAction.COPY)
+        self.treeview.drag_source_add_text_targets()
         self.file_menu = builder.get_object("file_menu")
         self.file_menu_save = builder.get_object("menu_save")
         self.file_menu_delete = builder.get_object("menu_delete")
@@ -705,6 +711,11 @@ class CatfishWindow(Window):
     
         # Open the selected file.
         self.open_file( self.selected_filenames[0] )
+        return True
+        
+    def on_treeview_drag_data_get(self, treeview, context, selection, info, time):
+        text = str(os.linesep).join(self.treeview_get_selected_rows(treeview)[2])
+        selection.set_text(text, -1)
         return True
         
     def treeview_get_selected_rows(self, treeview):
