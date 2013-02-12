@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-12 10:14-0500\n"
+"POT-Creation-Date: 2013-02-12 10:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,6 +154,14 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Done."
+msgstr ""
+
+#: ../catfish.desktop.in.h:1
+msgid "Catfish File Search"
+msgstr ""
+
+#: ../catfish.desktop.in.h:2
+msgid "Search the file system"
 msgstr ""
 
 #: ../catfish/__init__.py:35
