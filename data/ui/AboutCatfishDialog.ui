@@ -9,8 +9,8 @@
     <property name="icon_name">catfish</property>
     <property name="type_hint">normal</property>
     <property name="program_name">Catfish</property>
-    <property name="version">0.5.0-public19</property>
-    <property name="copyright" translatable="no">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
+    <property name="version">0.6.0</property>
+    <property name="copyright">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
     <property name="comments" translatable="yes">Catfish is a versatile file searching tool.</property>
     <property name="website">http://twotoasts.de/index.php/catfish/</property>
@@ -30,19 +30,25 @@ Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
 </property>
     <property name="authors">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
-    <property name="translator_credits">ca: Paco &lt;web@pacoriviere.cat&gt;
-cs: Miro Hrončok &lt;churchyard@gmail.com&gt;
-de: Christian Dywan &lt;software@twotoasts.de&gt;
-fi: Elias Julkunen &lt;elias.julkunen@gmail.com&gt;
-fr: Pierre Slamich &lt;pierre.slamich@gmail.com&gt;
-    Naji Mammeri &lt;naji.mammeri@gmail.com&gt;
-    Fabrice Colin &lt;fabrice.colin@gmail.com&gt;
-it: Wolf &lt;wolfprojects@gmail.com&gt;
-pl: Radomir Dopieralski &lt;ubuntu@sheep.prv.pl&gt;
-    Szymon Gruszczynski &lt;atavus@interia.pl&gt;
-ru: Alexey Voronov &lt;alexey.voronov@gmail.com&gt;
-sv: Daniel Nylander &lt;po@danielnylander.se&gt;
-zh_CN: Longer Zhao &lt;longer.zhao@gmail.com&gt;</property>
+    <property name="translator_credits">be: Mikalai Udodau
+cs: Jan Žárský &lt;jan.zarsky@gmail.com&gt;
+de: Simon Steinbeiß &lt;ochosi@shimmerproject.org&gt;
+el: Nikos Aggelis &lt;nikosaggelis@hotmail.gr&gt;
+es: Adolfo Jayme Barrientos &lt;fitoschido@gmail.com&gt;
+eu: Asier Iturralde Sarasola
+fi: Pasi Lallinaho &lt;pasi@shimmerproject.org&gt;
+fr: Fabrice Colin &lt;fabrice.colin@gmail.com&gt;
+ja: Ryan Hagood
+nl: Pjotr12345
+pl: Piotr Sokół &lt;psokol@jabster.pl&gt;
+pt_BR: Lucas S. B. Mastella &lt;lucas@bello.li&gt;
+ru: Aleksey Kabanov
+sk: DAG Software
+sr: Саша Петровић &lt;salepetronije@gmail.com&gt;
+tr: Utku BERBEROĞLU
+uk: Олександр
+zh_TW: Walter Cheuk &lt;wwycheuk@gmail.com&gt;
+</property>
     <property name="artists">Nancy Runge &lt;nancy@twotoasts.de&gt;</property>
     <property name="logo_icon_name">catfish</property>
     <property name="license_type">gpl-2-0</property>

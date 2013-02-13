@@ -1,5 +1,0 @@
-project = catfish
-version = 12.08.1
-template = ubuntu-application
-dependencies = gksu, locate, python-zeitgeist, zeitgeist
-target_distribution = raring

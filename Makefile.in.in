@@ -1,0 +1,90 @@
+APPNAME=catfish
+PREFIX=@prefix@
+PYTHON=@python@
+LANGUAGE_FILES=$(patsubst po/%.po, locale/%/LC_MESSAGES/$(APPNAME).mo, $(wildcard po/*.po))
+DESTDIR=
+
+all: $(LANGUAGE_FILES)
+	$(PYTHON) ./build.py build $(APPNAME)
+	intltool-merge -d po catfish.desktop.in catfish.desktop
+	chmod +x catfish.desktop
+	sed -e s,%prefix%,$(PREFIX), bin/$(APPNAME).in.in > bin/$(APPNAME).in
+	sed -e s,%python%,$(PYTHON), bin/$(APPNAME).in > bin/$(APPNAME)
+	chmod +x bin/$(APPNAME)
+
+locale/%/LC_MESSAGES/$(APPNAME).mo: po/%.po
+	mkdir -p $(dir $@)
+	msgfmt $< -o $@
+
+install: all
+	install -d $(DESTDIR)/$(PREFIX)/bin
+	install bin/$(APPNAME) $(DESTDIR)/$(PREFIX)/bin
+
+	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)
+	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/bin
+	install bin/$(APPNAME).pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/bin
+	
+	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
+	install catfish/AboutCatfishDialog.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
+	install catfish/CatfishSearchEngine.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
+	install catfish/CatfishWindow.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
+	install catfish/__init__.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
+	
+	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/AboutDialog.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/Builder.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/catfishconfig.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/helpers.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/__init__.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/Window.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	
+	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/data
+	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/data/ui
+	install data/ui/AboutCatfishDialog.ui $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/data/ui
+	install data/ui/about_catfish_dialog.xml $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/data/ui
+	install data/ui/CatfishWindow.ui $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/data/ui
+	install data/ui/catfish_window.xml $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/data/ui
+
+	install -d $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps
+	install data/media/$(APPNAME).svg $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps
+	ln -sf $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps/$(APPNAME).svg $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/$(APPNAME).svg
+
+	install -d $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+	install AUTHORS $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+	install COPYING $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+	install ChangeLog $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+	install INSTALL $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+	install README $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+
+	install -d $(DESTDIR)/$(PREFIX)/share/applications
+	install --mode=644 $(APPNAME).desktop $(DESTDIR)/$(PREFIX)/share/applications
+
+	cp -rf locale $(DESTDIR)/$(PREFIX)/share
+	ln -sf $(DESTDIR)/$(PREFIX)/share/locale $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/locale
+
+uninstall:
+	rm -f $(DESTDIR)/$(PREFIX)/share/applications/$(APPNAME).desktop
+	rm -rf $(DESTDIR)/$(PREFIX)/share/$(APPNAME)
+	rm -rf $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps/$(APPNAME).svg
+	rm -rf $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+	# FIXME: Uninstall locales
+	rm -f $(DESTDIR)/$(PREFIX)/bin/$(APPNAME)
+
+clean:
+	rm -Rf locale
+	rm -f catfish/*.pyc
+	rm -f catfish_lib/*.pyc
+	rm -f bin/$(APPNAME).pyc
+	rm -f bin/$(APPNAME).in
+	rm -f bin/$(APPNAME)
+	rm -f catfish.desktop
+	rm -f Makefile.in
+	rm -f Makefile
+	rm -f control.in
+	rm -f control
+	rm -Rf deb
+
+deb: all
+	$(MAKE) install DESTDIR=$(CURDIR)/deb
+	fakeroot dpkg -b deb $(APPNAME).deb
+	$(MAKE) uninstall DESTDIR=$(CURDIR)/deb
