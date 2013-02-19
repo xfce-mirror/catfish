@@ -591,11 +591,13 @@ class CatfishWindow(Window):
             if self.options.fileman:
                 command = [self.options.fileman, filename]
             else:
+                # Translators: This message will only appear when trying to open the default file manager but it cannot be found.
                 msg = _("Catfish could not find the default file manager.")
         else:
             if self.options.open_wrapper:
                 command = [self.options.open_wrapper, filename]
             else:
+                # Translators: This message will only appear when the default application for opening a file cannot be found.
                 msg = _("Catfish could not find the default open wrapper.")
         if command:
             try:
