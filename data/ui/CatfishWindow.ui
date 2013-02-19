@@ -11,7 +11,7 @@
       <object class="GtkCheckMenuItem" id="menu_exact_match">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Exact Match</property>
+        <property name="label" translatable="yes">_Exact Match</property>
         <property name="use_underline">True</property>
         <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
       </object>
@@ -20,7 +20,7 @@
       <object class="GtkCheckMenuItem" id="menu_hidden_files">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Hidden Files</property>
+        <property name="label" translatable="yes">_Hidden Files</property>
         <property name="use_underline">True</property>
         <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
       </object>
@@ -29,7 +29,7 @@
       <object class="GtkCheckMenuItem" id="menu_fulltext">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Fulltext Search</property>
+        <property name="label" translatable="yes">_Fulltext Search</property>
         <property name="use_underline">True</property>
         <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
       </object>
@@ -44,7 +44,7 @@
       <object class="GtkCheckMenuItem" id="menu_show_advanced">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Show Advanced Settings</property>
+        <property name="label" translatable="yes">_Show Advanced Settings</property>
         <property name="use_underline">True</property>
         <accelerator key="F9" signal="activate"/>
         <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
@@ -58,9 +58,10 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_update_index">
-        <property name="label" translatable="yes">Update Search Index…</property>
+        <property name="label" translatable="yes">_Update Search Index…</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
         <property name="image">image2</property>
         <property name="use_stock">False</property>
         <signal name="activate" handler="on_menu_update_index_activate" swapped="no"/>
@@ -82,6 +83,7 @@
     <property name="title" translatable="yes">Catfish</property>
     <property name="window_position">center</property>
     <property name="default_width">560</property>
+    <property name="default_height">400</property>
     <property name="icon_name">catfish</property>
     <signal name="window-state-event" handler="on_catfish_window_window_state_event" swapped="no"/>
     <signal name="key-press-event" handler="on_catfish_window_key_press_event" swapped="no"/>
@@ -1314,9 +1316,10 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_filemanager">
-        <property name="label" translatable="yes">Show in File Manager</property>
+        <property name="label" translatable="yes">Show in _File Manager</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
         <property name="image">image15</property>
         <property name="use_stock">False</property>
         <signal name="activate" handler="on_menu_filemanager_activate" swapped="no"/>
@@ -1330,9 +1333,10 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_copy_location">
-        <property name="label" translatable="yes">Copy Location</property>
+        <property name="label" translatable="yes">_Copy Location</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
         <property name="image">image16</property>
         <property name="use_stock">False</property>
         <signal name="activate" handler="on_menu_copy_location_activate" swapped="no"/>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-19 09:59-0500\n"
+"POT-Creation-Date: 2013-02-19 10:21-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,23 +30,23 @@ msgid "Catfish is a versatile file searching tool."
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:1
-msgid "Exact Match"
+msgid "_Exact Match"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:2
-msgid "Hidden Files"
+msgid "_Hidden Files"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:3
-msgid "Fulltext Search"
+msgid "_Fulltext Search"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:4
-msgid "Show Advanced Settings"
+msgid "_Show Advanced Settings"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:5
-msgid "Update Search Index…"
+msgid "_Update Search Index…"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:6
@@ -126,11 +126,11 @@ msgid "Enter file extensions"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:25
-msgid "Show in File Manager"
+msgid "Show in _File Manager"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:26
-msgid "Copy Location"
+msgid "_Copy Location"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:27
