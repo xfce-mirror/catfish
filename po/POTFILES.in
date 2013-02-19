@@ -26,10 +26,9 @@ catfish/__init__.py
 catfish/CatfishWindow.py
 catfish/CatfishSearchEngine.py
 catfish/AboutCatfishDialog.py
-setup.py
 catfish_lib/Builder.py
 catfish_lib/catfishconfig.py
 catfish_lib/AboutDialog.py
 catfish_lib/__init__.py
 catfish_lib/helpers.py
-./catfish_lib/Window.py
+catfish_lib/Window.py
