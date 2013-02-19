@@ -154,7 +154,6 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="is_important">True</property>
-                <property name="label" translatable="yes">Menu</property>
                 <property name="use_underline">True</property>
                 <property name="icon_name">document-properties</property>
                 <signal name="clicked" handler="on_appmenu_button_clicked" swapped="no"/>
@@ -1187,7 +1186,7 @@
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment" id="alignment5">
+                  <object class="GtkAlignment" id="alignment_mimetype">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="left_padding">24</property>
@@ -1252,7 +1251,7 @@
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment" id="alignment6">
+                  <object class="GtkAlignment" id="alignment_extensions">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="left_padding">24</property>

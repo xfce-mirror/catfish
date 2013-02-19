@@ -45,6 +45,12 @@ python3 = version_info[0] > 2
 GObject.threads_init()
 GLib.threads_init()
 
+def application_in_PATH(application_name):
+    for path in os.getenv('PATH').split(':'):
+        if application_name in os.listdir(path):
+            return True
+    return False
+
 def is_file_hidden(filename):
     """Return TRUE if file is hidden or in a hidden directory."""
     splitpath = os.path.split(filename)
@@ -159,6 +165,11 @@ class CatfishWindow(Window):
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
         self.options = options
+        
+        if not application_in_PATH(self.options.fileman):
+            self.options.fileman = None
+        if not application_in_PATH(self.options.open_wrapper):
+            self.options.open_wrapper = None
         
         # Set the selected folder path.
         self.folderchooser.set_filename(self.options.path)
@@ -566,19 +577,29 @@ class CatfishWindow(Window):
             
     def open_file(self, filename):
         """Open the specified filename in its default application."""
+        command = None
         if os.path.isdir(filename):
-            command = [self.options.fileman, filename]
+            if self.options.fileman:
+                command = [self.options.fileman, filename]
+            else:
+                msg = _("Catfish could not find the default file manager.")
         else:
-            command = [self.options.open_wrapper, filename]
-        try:
-            subprocess.Popen(command, shell=False)
-        except Exception as msg:
-            logger.debug('Exception encountered while opening %s.' + 
-            '\n  Exception: %s' + 
-            '\n  The wrapper was %s.' + 
-            '\n  The filemanager was %s.', 
-            filename, msg, self.open_wrapper, self.options.fileman)
-            self.get_error_dialog( _('\"%s\" could not be opened.') % os.path.basename(filename), str(msg))
+            if self.options.open_wrapper:
+                command = [self.options.open_wrapper, filename]
+            else:
+                msg = _("Catfish could not find the default open wrapper.")
+        if command:
+            try:
+                p = subprocess.Popen(command, shell=False)
+                return
+            except Exception as msg:
+                logger.debug('Exception encountered while opening %s.' + 
+                '\n  Exception: %s' + 
+                '\n  The wrapper was %s.' + 
+                '\n  The filemanager was %s.', 
+                filename, msg, str(self.options.open_wrapper), str(self.options.fileman) )
+        
+        self.get_error_dialog( _('\"%s\" could not be opened.') % os.path.basename(filename), str(msg))
 
     # -- File Popup Menu -- #
     def on_menu_open_activate(self, widget):
