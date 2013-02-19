@@ -151,9 +151,11 @@ class CatfishWindow(Window):
         builder.get_object("image10").set_from_pixbuf(modified_icon)
         builder.get_object("image11").set_from_pixbuf(modified_icon)
         
-        settings_icon = self.load_symbolic_icon('document-properties', 16)
-        builder.get_object("image8").set_from_pixbuf(settings_icon)
-        builder.get_object("image12").set_from_pixbuf(settings_icon)
+        settings_icon = self.load_symbolic_icon('document-properties', 16, Gtk.StateFlags.INSENSITIVE)
+        self.modified_settings_icon = builder.get_object("image8")
+        self.document_settings_icon = builder.get_object("image12")
+        self.modified_settings_icon.set_from_pixbuf(settings_icon)
+        self.document_settings_icon.set_from_pixbuf(settings_icon)
         
         builder.get_object("image1").set_from_pixbuf(self.load_symbolic_icon('text-x-generic', 16))
         builder.get_object("image3").set_from_pixbuf(self.load_symbolic_icon('camera-photo', 16))
@@ -201,12 +203,12 @@ class CatfishWindow(Window):
             self.treeview.append_column(self.new_column(_('Last modified'), 4, 'date', 1))
             self.icon_size = Gtk.IconSize.MENU
             
-    def load_symbolic_icon(self, icon_name, size):
+    def load_symbolic_icon(self, icon_name, size, state=Gtk.StateFlags.ACTIVE):
         """Return the symbolic version of icon_name, or the fallback if unavailable."""
         context = self.sidebar.get_style_context()
         try:
             icon_info = self.icon_theme.choose_icon([icon_name + '-symbolic'], size, Gtk.IconLookupFlags.FORCE_SVG)
-            color = context.get_color(Gtk.StateFlags.ACTIVE)
+            color = context.get_color(state)
             icon = icon_info.load_symbolic(color, color, color, color)[0]
         except AttributeError:
             icon = self.icon_theme.load_icon(icon_name, size, Gtk.IconLookupFlags.FORCE_SVG|Gtk.IconLookupFlags.USE_BUILTIN|Gtk.IconLookupFlags.GENERIC_FALLBACK)
@@ -396,6 +398,7 @@ class CatfishWindow(Window):
         chooser dialog."""
         if widget.get_active():
             self.button_time_custom.set_sensitive(True)
+            self.modified_settings_icon.set_from_pixbuf(self.load_symbolic_icon('document-properties', 16))
             self.filter_timerange = (   timegm( self.start_date.timetuple() ),
                                         timegm( self.end_date.timetuple() )
                                     )
@@ -405,6 +408,7 @@ class CatfishWindow(Window):
             self.refilter()
         else:
             self.button_time_custom.set_sensitive(False)
+            self.modified_settings_icon.set_from_pixbuf(self.load_symbolic_icon('document-properties', 16, Gtk.StateFlags.INSENSITIVE))
             
     def on_button_time_custom_clicked(self, widget):
         """Show the custom time range dialog."""
@@ -470,8 +474,13 @@ class CatfishWindow(Window):
         self.filter_format_toggled("applications", widget.get_active())
         
     def on_other_format_toggled(self, widget):
-        self.filter_format_toggled("other", widget.get_active())
-        self.button_format_custom.set_sensitive(widget.get_active())
+        active = widget.get_active()
+        self.filter_format_toggled("other", active)
+        self.button_format_custom.set_sensitive(active)
+        if active:
+            self.document_settings_icon.set_from_pixbuf(self.load_symbolic_icon('document-properties', 16))
+        else:
+            self.document_settings_icon.set_from_pixbuf(self.load_symbolic_icon('document-properties', 16, Gtk.StateFlags.INSENSITIVE))
         
     def on_button_format_custom_clicked(self, widget):
         """Show the custom formats dialog."""
