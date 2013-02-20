@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-19 10:41-0500\n"
+"POT-Creation-Date: 2013-02-20 07:54-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,137 +29,144 @@ msgstr ""
 msgid "Catfish is a versatile file searching tool."
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:1
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:2
 msgid "_Exact Match"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:2
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:4
 msgid "_Hidden Files"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:3
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Fulltext Search"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:4
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:8
 msgid "_Show Advanced Settings"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:5
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:10
 msgid "_Update Search Index…"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:6
+#: ../data/ui/CatfishWindow.ui.h:11
 msgid "Catfish"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:7
+#: ../data/ui/CatfishWindow.ui.h:12
 msgid "Any time"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:8
+#: ../data/ui/CatfishWindow.ui.h:13
 msgid "This week"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:9
+#: ../data/ui/CatfishWindow.ui.h:14
 msgid "Custom"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:10
+#: ../data/ui/CatfishWindow.ui.h:15
 msgid "<b>Modified</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:11
+#: ../data/ui/CatfishWindow.ui.h:16
 msgid "Documents"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:12
+#: ../data/ui/CatfishWindow.ui.h:17
 msgid "Images"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:13
+#: ../data/ui/CatfishWindow.ui.h:18
 msgid "Music"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:14
+#: ../data/ui/CatfishWindow.ui.h:19
 msgid "Videos"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:15
+#: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:16
+#: ../data/ui/CatfishWindow.ui.h:21
 msgid "Other"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:17
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "<b>File Type</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:18
+#: ../data/ui/CatfishWindow.ui.h:23
 msgid "Custom Time Range"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:19
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Go to Today"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:20
+#: ../data/ui/CatfishWindow.ui.h:25
 msgid "<b>Start Date</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:21
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "<b>End Date</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:27
 msgid "Custom File Type"
 msgstr ""
 
 #. The "mimetype" is the file type of the file, such as "application/octet-stream"
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "Select existing mimetype"
 msgstr ""
 
 #. Enter "file extensions" such as .doc, .pdf
-#: ../data/ui/CatfishWindow.ui.h:26
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "Enter file extensions"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:27
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Show in _File Manager"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "_Copy Location"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "Update Search Index"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:30
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "Unlock"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "<big><b>Update Search Index</b></big>"
 msgstr ""
 
 #. The term "locate" is a commandline application, so it should not be translated.
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid ""
 "To provide accurate results, the <i>locate</i> database needs to be "
 "refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Updating database…"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "Done."
 msgstr ""
 

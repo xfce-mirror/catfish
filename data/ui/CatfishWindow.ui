@@ -11,7 +11,7 @@
       <object class="GtkCheckMenuItem" id="menu_exact_match">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">_Exact Match</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Exact Match</property>
         <property name="use_underline">True</property>
         <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
       </object>
@@ -20,7 +20,7 @@
       <object class="GtkCheckMenuItem" id="menu_hidden_files">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">_Hidden Files</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Hidden Files</property>
         <property name="use_underline">True</property>
         <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
       </object>
@@ -29,7 +29,7 @@
       <object class="GtkCheckMenuItem" id="menu_fulltext">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">_Fulltext Search</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Fulltext Search</property>
         <property name="use_underline">True</property>
         <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
       </object>
@@ -44,7 +44,7 @@
       <object class="GtkCheckMenuItem" id="menu_show_advanced">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">_Show Advanced Settings</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Show Advanced Settings</property>
         <property name="use_underline">True</property>
         <accelerator key="F9" signal="activate"/>
         <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
@@ -58,7 +58,7 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_update_index">
-        <property name="label" translatable="yes">_Update Search Index…</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Update Search Index…</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
@@ -1316,7 +1316,7 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_filemanager">
-        <property name="label" translatable="yes">Show in _File Manager</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete">Show in _File Manager</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
@@ -1333,7 +1333,7 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_copy_location">
-        <property name="label" translatable="yes">_Copy Location</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete">_Copy Location</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
