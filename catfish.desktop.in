@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Catfish
+_Comment=Catfish application
+Categories=GNOME;Utility;
+Exec=catfish
+Icon=catfish
+Terminal=false
+Type=Application
