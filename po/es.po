@@ -7,277 +7,295 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-02-12 15:34-0500\n"
-"PO-Revision-Date: 2013-02-12 22:47+0000\n"
-"Last-Translator: David Segura M <Unknown>\n"
+"POT-Creation-Date: 2013-02-20 07:54-0500\n"
+"PO-Revision-Date: 2013-02-19 19:35+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-13 02:36+0000\n"
-"X-Generator: Launchpad (build 16491)\n"
+"X-Launchpad-Export-Date: 2013-02-23 17:32+0000\n"
+"X-Generator: Launchpad (build 16506)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
-msgstr ""
+msgstr "Buscador de archivos Catfish"
 
 #: ../catfish.desktop.in.h:2
 msgid "Search the file system"
-msgstr ""
+msgstr "Buscar en el sistema de archivos"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish es una herramienta versátil para busqueda de archivos"
 
-#: ../data/ui/CatfishWindow.ui.h:1
-msgid "Exact Match"
-msgstr "Coincidencia Exacta"
-
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:2
-msgid "Hidden Files"
-msgstr "Archivos Ocultos"
+msgid "_Exact Match"
+msgstr "Coincidencia _exacta"
 
-#: ../data/ui/CatfishWindow.ui.h:3
-msgid "Fulltext Search"
-msgstr "Busqueda de Texto Completo"
-
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:4
-msgid "Show Advanced Settings"
-msgstr "Mostrar Configuraciones Avanzadas"
+msgid "_Hidden Files"
+msgstr "Archivos oc_ultos"
 
-#: ../data/ui/CatfishWindow.ui.h:5
-msgid "Update Search Index…"
-msgstr "Actualizar Índice de Búsqueda"
-
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:6
+msgid "_Fulltext Search"
+msgstr "Búsqueda de texto _completo"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:8
+msgid "_Show Advanced Settings"
+msgstr "_Mostrar configuración avanzada"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:10
+msgid "_Update Search Index…"
+msgstr "_Actualizar el índice de búsqueda…"
+
+#: ../data/ui/CatfishWindow.ui.h:11
 msgid "Catfish"
 msgstr "Catfish"
 
-#: ../data/ui/CatfishWindow.ui.h:7
-msgid "Menu"
-msgstr ""
-
-#: ../data/ui/CatfishWindow.ui.h:8
+#: ../data/ui/CatfishWindow.ui.h:12
 msgid "Any time"
 msgstr "En cualquier momento"
 
-#: ../data/ui/CatfishWindow.ui.h:9
+#: ../data/ui/CatfishWindow.ui.h:13
 msgid "This week"
 msgstr "Esta semana"
 
-#: ../data/ui/CatfishWindow.ui.h:10
+#: ../data/ui/CatfishWindow.ui.h:14
 msgid "Custom"
 msgstr "Personalizado"
 
-#: ../data/ui/CatfishWindow.ui.h:11
+#: ../data/ui/CatfishWindow.ui.h:15
 msgid "<b>Modified</b>"
 msgstr "<b>Modificado</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:12
+#: ../data/ui/CatfishWindow.ui.h:16
 msgid "Documents"
 msgstr "Documentos"
 
-#: ../data/ui/CatfishWindow.ui.h:13
+#: ../data/ui/CatfishWindow.ui.h:17
 msgid "Images"
 msgstr "Imágenes"
 
-#: ../data/ui/CatfishWindow.ui.h:14
+#: ../data/ui/CatfishWindow.ui.h:18
 msgid "Music"
 msgstr "Música"
 
-#: ../data/ui/CatfishWindow.ui.h:15
+#: ../data/ui/CatfishWindow.ui.h:19
 msgid "Videos"
 msgstr "Vídeos"
 
-#: ../data/ui/CatfishWindow.ui.h:16
+#: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: ../data/ui/CatfishWindow.ui.h:17
+#: ../data/ui/CatfishWindow.ui.h:21
 msgid "Other"
 msgstr "Otro"
 
-#: ../data/ui/CatfishWindow.ui.h:18
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "<b>File Type</b>"
-msgstr "<b>Tipo de fichero</b>"
+msgstr "<b>Tipo de archivo</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:19
+#: ../data/ui/CatfishWindow.ui.h:23
 msgid "Custom Time Range"
 msgstr "Intervalo de tiempo personalizado"
 
-#: ../data/ui/CatfishWindow.ui.h:20
-msgid "Go to Today"
-msgstr "Ir a Hoy"
-
-#: ../data/ui/CatfishWindow.ui.h:21
-msgid "<b>Start Date</b>"
-msgstr "<b>Fecha de Inicio</b>"
-
-#: ../data/ui/CatfishWindow.ui.h:22
-msgid "<b>End Date</b>"
-msgstr "<b>Fecha de Finalización</b>"
-
-#: ../data/ui/CatfishWindow.ui.h:23
-msgid "Custom File Type"
-msgstr "Tipo de Archivo"
-
 #: ../data/ui/CatfishWindow.ui.h:24
-msgid "Select existing mimetype"
-msgstr "Seleccionar Tipo de archivo existente"
+msgid "Go to Today"
+msgstr "Ir a hoy"
 
 #: ../data/ui/CatfishWindow.ui.h:25
-msgid "Enter file extensions"
-msgstr "Ingresar extensiones de archivo"
+msgid "<b>Start Date</b>"
+msgstr "<b>Fecha de inicio</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:26
-msgid "Show in File Manager"
-msgstr "Mostrar en Explorador de Arvhivos"
+msgid "<b>End Date</b>"
+msgstr "<b>Fecha de finalización</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:27
-msgid "Copy Location"
-msgstr "Copiar Ubicación"
+msgid "Custom File Type"
+msgstr "Tipo de archivo personalizado"
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#. The "mimetype" is the file type of the file, such as "application/octet-stream"
+#: ../data/ui/CatfishWindow.ui.h:29
+msgid "Select existing mimetype"
+msgstr "Seleccione un tipo MIME existente"
+
+#. Enter "file extensions" such as .doc, .pdf
+#: ../data/ui/CatfishWindow.ui.h:31
+msgid "Enter file extensions"
+msgstr "Escriba las extensiones de archivo"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#: ../data/ui/CatfishWindow.ui.h:33
+msgid "Show in _File Manager"
+msgstr "Mostrar en el _gestor de archivos"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#: ../data/ui/CatfishWindow.ui.h:35
+msgid "_Copy Location"
+msgstr "_Copiar la ubicación"
+
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "Update Search Index"
 msgstr "Actualizar el índice de búsqueda"
 
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "Unlock"
 msgstr "Desbloquear"
 
-#: ../data/ui/CatfishWindow.ui.h:30
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "<big><b>Update Search Index</b></big>"
-msgstr "<big><b>Actualizar Índice de Búsqueda/b></big>"
+msgstr "<big><b>Actualizar el índice de búsqueda</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#. The term "locate" is a commandline application, so it should not be translated.
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid ""
 "To provide accurate results, the <i>locate</i> database needs to be "
 "refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
-"Para ofrecer resultados precisos, la base de datos <i>locate</i> debe ser "
-"refrescada\n"
-"Esto requiere permisos de sudo (administrador)"
+"Para ofrecer resultados precisos, debe actualizar la base de datos "
+"<i>locate</i>.\n"
+"Esto requiere permisos de sudo (administrador)."
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Updating database…"
-msgstr "Actualizando base de datos..."
+msgstr "Actualizando la base de datos…"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "Done."
 msgstr "Hecho."
 
 #: ../catfish/__init__.py:35
 msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr "Mostrar mensajes de depuración (-vv debugs catfish_lib also)"
+msgstr "Mostrar mensajes de depuración (-vv depura catfish_lib también)"
 
-#: ../catfish/CatfishWindow.py:182
+#: ../catfish/CatfishWindow.py:195
 msgid "Preview"
 msgstr "Previsualización"
 
-#: ../catfish/CatfishWindow.py:184 ../catfish/CatfishWindow.py:187
+#: ../catfish/CatfishWindow.py:197 ../catfish/CatfishWindow.py:200
 msgid "Filename"
 msgstr "Nombre de archivo"
 
-#: ../catfish/CatfishWindow.py:188
+#: ../catfish/CatfishWindow.py:201
 msgid "Size"
 msgstr "Tamaño"
 
-#: ../catfish/CatfishWindow.py:189
+#: ../catfish/CatfishWindow.py:202
 msgid "Location"
 msgstr "Ubicación"
 
-#: ../catfish/CatfishWindow.py:190
+#: ../catfish/CatfishWindow.py:203
 msgid "Last modified"
 msgstr "Última modificación"
 
-#: ../catfish/CatfishWindow.py:233
+#: ../catfish/CatfishWindow.py:246
 msgid "Locate database updated successfully."
 msgstr "La base de datos locate se ha actualizado correctamente."
 
-#: ../catfish/CatfishWindow.py:235
+#: ../catfish/CatfishWindow.py:248
 msgid "An error occurred while updating locatedb."
 msgstr "Se produjo un error al actualizar la base de datos locate."
 
-#: ../catfish/CatfishWindow.py:237 ../catfish/CatfishWindow.py:241
+#: ../catfish/CatfishWindow.py:250 ../catfish/CatfishWindow.py:254
 msgid "User aborted authentication."
-msgstr "Autenticación abortada por el usuario"
+msgstr "El usuario canceló la autenticación."
 
-#: ../catfish/CatfishWindow.py:239
+#: ../catfish/CatfishWindow.py:252
 msgid "Authentication failed."
-msgstr "Autenticación fallida."
+msgstr "Falló la autenticación."
 
-#: ../catfish/CatfishWindow.py:286 ../catfish/CatfishWindow.py:1102
+#: ../catfish/CatfishWindow.py:299 ../catfish/CatfishWindow.py:1134
 msgid "Enter search terms and press ENTER"
-msgstr "Introduzca los términos de búsqueda y pulse ENTER"
+msgstr "Escriba términos de búsqueda y oprima INTRO"
 
-#: ../catfish/CatfishWindow.py:289 ../catfish/CatfishWindow.py:1105
+#: ../catfish/CatfishWindow.py:302 ../catfish/CatfishWindow.py:1137
 msgid "Clear search terms"
 msgstr "Borrar términos de la búsqueda"
 
-#: ../catfish/CatfishWindow.py:581
+#. Translators: This message will only appear when trying to open the default file manager but it cannot be found.
+#: ../catfish/CatfishWindow.py:595
+msgid "Catfish could not find the default file manager."
+msgstr "Catfish no pudo encontrar el gestor de archivos predeterminado."
+
+#. Translators: This message will only appear when the default application for opening a file cannot be found.
+#: ../catfish/CatfishWindow.py:601
+msgid "Catfish could not find the default open wrapper."
+msgstr "Catfish no pudo encontrar la aplicación de apertura predeterminada."
+
+#: ../catfish/CatfishWindow.py:613
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "No se pudo abrir «%s»."
 
-#: ../catfish/CatfishWindow.py:618
+#: ../catfish/CatfishWindow.py:650
 #, python-format
 msgid "\"%s\" could not be saved."
-msgstr "No pudo guardarse \"%s\""
+msgstr "No se pudo guardar «%s»."
 
-#: ../catfish/CatfishWindow.py:643
+#: ../catfish/CatfishWindow.py:675
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr "No pudo borrarse \"%s\""
+msgstr "No se pudo eliminar «%s»."
 
-#: ../catfish/CatfishWindow.py:653
+#: ../catfish/CatfishWindow.py:685
 #, python-format
 msgid "Save \"%s\" as…"
-msgstr "Guardar \"%s\" como..."
+msgstr "Guardar «%s» como…"
 
-#: ../catfish/CatfishWindow.py:680
+#: ../catfish/CatfishWindow.py:712
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
-msgstr "¿Esta seguro de que quiere borrar permanentemente \"%s\"?"
+msgstr ""
+"¿Está seguro de que quiere eliminar \n"
+"permanentemente «%s»?"
 
-#: ../catfish/CatfishWindow.py:682
+#: ../catfish/CatfishWindow.py:714
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
-"¿Esta seguro de que quiere\n"
-"borrar permanentemente los %i archivos seleccionados?"
+"¿Está seguro de que quiere eliminar \n"
+"permanentemente los %i archivos seleccionados?"
 
-#: ../catfish/CatfishWindow.py:683
+#: ../catfish/CatfishWindow.py:715
 msgid "If you delete a file, it is permanently lost."
 msgstr "Si elimina un archivo, lo perderá permanentemente."
 
-#: ../catfish/CatfishWindow.py:892 ../catfish/CatfishWindow.py:1095
+#: ../catfish/CatfishWindow.py:924 ../catfish/CatfishWindow.py:1127
 msgid "No files found."
 msgstr "No se han encontrado archivos."
 
-#: ../catfish/CatfishWindow.py:894 ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:926 ../catfish/CatfishWindow.py:1129
 #, python-format
 msgid "%i files found."
 msgstr "%i archivos encontrados."
 
-#: ../catfish/CatfishWindow.py:1010
+#: ../catfish/CatfishWindow.py:1042
 #, python-format
 msgid "Searching for \"%s\""
-msgstr "Buscando «%s»."
+msgstr "Buscando «%s»"
 
-#: ../catfish/CatfishWindow.py:1012
+#: ../catfish/CatfishWindow.py:1044
 msgid "Searching…"
-msgstr "Buscando..."
+msgstr "Buscando…"
 
-#: ../catfish/CatfishWindow.py:1014
+#: ../catfish/CatfishWindow.py:1046
 msgid "Stop Search"
-msgstr "Detener búsqueda"
+msgstr "Detener la búsqueda"
 
-#: ../catfish/CatfishWindow.py:1090
+#: ../catfish/CatfishWindow.py:1122
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Resultados de búsqueda para «%s»"
@@ -285,40 +303,3 @@ msgstr "Resultados de búsqueda para «%s»"
 #, python-format
 #~ msgid "The file %s could not be saved."
 #~ msgstr "El archivo %s no se pudo guardar."
-
-#~ msgid ""
-#~ "Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n"
-#~ "Copyright (C) 2012-2013 Sean Davis <smd.seandavis@gmail.com>"
-#~ msgstr ""
-#~ "Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n"
-#~ "Copyright (C) 2012-2013 Sean Davis <smd.seandavis@gmail.com>"
-
-#~ msgid ""
-#~ "# Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n"
-#~ "# Copyright (C) 2012-2013 Sean Davis <smd.seandavis@gmail.com>\n"
-#~ "# This program is free software: you can redistribute it and/or modify it \n"
-#~ "# under the terms of the GNU General Public License version 2, as published "
-#~ "\n"
-#~ "# by the Free Software Foundation.\n"
-#~ "# \n"
-#~ "# This program is distributed in the hope that it will be useful, but \n"
-#~ "# WITHOUT ANY WARRANTY; without even the implied warranties of \n"
-#~ "# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR \n"
-#~ "# PURPOSE.  See the GNU General Public License for more details.\n"
-#~ "# \n"
-#~ "# You should have received a copy of the GNU General Public License along \n"
-#~ "# with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
-#~ msgstr ""
-#~ "# Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n"
-#~ "# Copyright (C) 2012-2013 Sean Davis <smd.seandavis@gmail.com>\n"
-#~ "#Este programa es software libre: ud puede redistribuirlo y/o modificarlo\n"
-#~ "#bajo los terminos de la Licencia Pública General GNU versión 2, publicada\n"
-#~ "#por la Free Software Fundation\n"
-#~ "#\n"
-#~ "#Este programa es distribuido con el fin de que será útil, pero \n"
-#~ "#SIN NINGUNA GARANTÍA; ni siquiera lasa garantías implicadas de \n"
-#~ "#COMERCIALIZACIÓN, CALIDAD SATISFACTORIA, o ENCAJARA PARA UN PROPÓSITO \n"
-#~ "#PARTICULAR. Consulte la licencia Pública General GNU para más detalles\n"
-#~ "#\n"
-#~ "#Ud debe haber recibido una copia de Licencia Pública General GNU junto\n"
-#~ "#con este programa, si no fue así revise <http://www.gnu.org/licenses/>.\n"

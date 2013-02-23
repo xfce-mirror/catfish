@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-02-12 15:34-0500\n"
+"POT-Creation-Date: 2013-02-20 07:54-0500\n"
 "PO-Revision-Date: 2013-02-09 20:30+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-13 02:36+0000\n"
-"X-Generator: Launchpad (build 16491)\n"
+"X-Launchpad-Export-Date: 2013-02-23 17:32+0000\n"
+"X-Generator: Launchpad (build 16506)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
@@ -29,138 +29,144 @@ msgstr ""
 msgid "Catfish is a versatile file searching tool."
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:1
-msgid "Exact Match"
-msgstr ""
-
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:2
-msgid "Hidden Files"
+msgid "_Exact Match"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:3
-msgid "Fulltext Search"
-msgstr ""
-
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:4
-msgid "Show Advanced Settings"
+msgid "_Hidden Files"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:5
-msgid "Update Search Index…"
-msgstr ""
-
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:6
-msgid "Catfish"
+msgid "_Fulltext Search"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:7
-msgid "Menu"
-msgstr ""
-
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:8
-msgid "Any time"
-msgstr "Κάθε φορά"
-
-#: ../data/ui/CatfishWindow.ui.h:9
-msgid "This week"
+msgid "_Show Advanced Settings"
 msgstr ""
 
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:10
-msgid "Custom"
+msgid "_Update Search Index…"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:11
-msgid "<b>Modified</b>"
+msgid "Catfish"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:12
+msgid "Any time"
+msgstr "Κάθε φορά"
+
+#: ../data/ui/CatfishWindow.ui.h:13
+msgid "This week"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:14
+msgid "Custom"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:15
+msgid "<b>Modified</b>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:16
 msgid "Documents"
 msgstr "Έγγραφα"
 
-#: ../data/ui/CatfishWindow.ui.h:13
+#: ../data/ui/CatfishWindow.ui.h:17
 msgid "Images"
 msgstr "Εικόνες"
 
-#: ../data/ui/CatfishWindow.ui.h:14
+#: ../data/ui/CatfishWindow.ui.h:18
 msgid "Music"
 msgstr "Μουσική"
 
-#: ../data/ui/CatfishWindow.ui.h:15
+#: ../data/ui/CatfishWindow.ui.h:19
 msgid "Videos"
 msgstr "Βίντεο"
 
-#: ../data/ui/CatfishWindow.ui.h:16
+#: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "Εφαρμογές"
 
-#: ../data/ui/CatfishWindow.ui.h:17
+#: ../data/ui/CatfishWindow.ui.h:21
 msgid "Other"
 msgstr "Άλλο"
 
-#: ../data/ui/CatfishWindow.ui.h:18
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "<b>File Type</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:19
+#: ../data/ui/CatfishWindow.ui.h:23
 msgid "Custom Time Range"
 msgstr "Προσαρμοσμένο εύρος χρόνου"
 
-#: ../data/ui/CatfishWindow.ui.h:20
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Go to Today"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:21
+#: ../data/ui/CatfishWindow.ui.h:25
 msgid "<b>Start Date</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "<b>End Date</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:23
+#: ../data/ui/CatfishWindow.ui.h:27
 msgid "Custom File Type"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:24
+#. The "mimetype" is the file type of the file, such as "application/octet-stream"
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "Select existing mimetype"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:25
+#. Enter "file extensions" such as .doc, .pdf
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "Enter file extensions"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:26
-msgid "Show in File Manager"
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#: ../data/ui/CatfishWindow.ui.h:33
+msgid "Show in _File Manager"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:27
-msgid "Copy Location"
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#: ../data/ui/CatfishWindow.ui.h:35
+msgid "_Copy Location"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "Update Search Index"
 msgstr "Ενημέρωση ευρετηρίου αναζήτησης"
 
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "Unlock"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:30
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "<big><b>Update Search Index</b></big>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#. The term "locate" is a commandline application, so it should not be translated.
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid ""
 "To provide accurate results, the <i>locate</i> database needs to be "
 "refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Updating database…"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "Done."
 msgstr "Ολοκληρώθηκε."
 
@@ -168,112 +174,122 @@ msgstr "Ολοκληρώθηκε."
 msgid "Show debug messages (-vv debugs catfish_lib also)"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:182
+#: ../catfish/CatfishWindow.py:195
 msgid "Preview"
 msgstr "Προεπισκόπιση"
 
-#: ../catfish/CatfishWindow.py:184 ../catfish/CatfishWindow.py:187
+#: ../catfish/CatfishWindow.py:197 ../catfish/CatfishWindow.py:200
 msgid "Filename"
 msgstr "Όνομα αρχείου"
 
-#: ../catfish/CatfishWindow.py:188
+#: ../catfish/CatfishWindow.py:201
 msgid "Size"
 msgstr "Μέγεθος"
 
-#: ../catfish/CatfishWindow.py:189
+#: ../catfish/CatfishWindow.py:202
 msgid "Location"
 msgstr "Τοποθεσία"
 
-#: ../catfish/CatfishWindow.py:190
+#: ../catfish/CatfishWindow.py:203
 msgid "Last modified"
 msgstr "Τελευταία τροποποίηση"
 
-#: ../catfish/CatfishWindow.py:233
+#: ../catfish/CatfishWindow.py:246
 msgid "Locate database updated successfully."
 msgstr "Η βάση δεδομένων εντοπισμού ενημερώθηκε με επιτυχία."
 
-#: ../catfish/CatfishWindow.py:235
+#: ../catfish/CatfishWindow.py:248
 msgid "An error occurred while updating locatedb."
 msgstr ""
 "Παρουσιάστηκε σφάλμα κατά την ενημέρωση της βάσης δεδομένων εντοπισμού."
 
-#: ../catfish/CatfishWindow.py:237 ../catfish/CatfishWindow.py:241
+#: ../catfish/CatfishWindow.py:250 ../catfish/CatfishWindow.py:254
 msgid "User aborted authentication."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:239
+#: ../catfish/CatfishWindow.py:252
 msgid "Authentication failed."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:286 ../catfish/CatfishWindow.py:1102
+#: ../catfish/CatfishWindow.py:299 ../catfish/CatfishWindow.py:1134
 msgid "Enter search terms and press ENTER"
 msgstr "Εισάγετε τους όρους αναζήτησης και πιέστε το πλήκτρο ENTER"
 
-#: ../catfish/CatfishWindow.py:289 ../catfish/CatfishWindow.py:1105
+#: ../catfish/CatfishWindow.py:302 ../catfish/CatfishWindow.py:1137
 msgid "Clear search terms"
 msgstr "Απαλοιφή όρων αναζήτησης"
 
-#: ../catfish/CatfishWindow.py:581
+#. Translators: This message will only appear when trying to open the default file manager but it cannot be found.
+#: ../catfish/CatfishWindow.py:595
+msgid "Catfish could not find the default file manager."
+msgstr ""
+
+#. Translators: This message will only appear when the default application for opening a file cannot be found.
+#: ../catfish/CatfishWindow.py:601
+msgid "Catfish could not find the default open wrapper."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:613
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:618
+#: ../catfish/CatfishWindow.py:650
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:643
+#: ../catfish/CatfishWindow.py:675
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:653
+#: ../catfish/CatfishWindow.py:685
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:680
+#: ../catfish/CatfishWindow.py:712
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:682
+#: ../catfish/CatfishWindow.py:714
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:683
+#: ../catfish/CatfishWindow.py:715
 msgid "If you delete a file, it is permanently lost."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:892 ../catfish/CatfishWindow.py:1095
+#: ../catfish/CatfishWindow.py:924 ../catfish/CatfishWindow.py:1127
 msgid "No files found."
 msgstr "Δεν βρέθηκαν αρχεία."
 
-#: ../catfish/CatfishWindow.py:894 ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:926 ../catfish/CatfishWindow.py:1129
 #, python-format
 msgid "%i files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1010
+#: ../catfish/CatfishWindow.py:1042
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Αναζήτηση για \"%s\""
 
-#: ../catfish/CatfishWindow.py:1012
+#: ../catfish/CatfishWindow.py:1044
 msgid "Searching…"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1014
+#: ../catfish/CatfishWindow.py:1046
 msgid "Stop Search"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1090
+#: ../catfish/CatfishWindow.py:1122
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Αποτελέσματα αναζήτησης για \"%s\""
