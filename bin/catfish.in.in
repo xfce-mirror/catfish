@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+APPNAME=catfish
+
+if [ -e bin/$APPNAME.pyc ]
+    then %python% bin/$APPNAME.pyc "$@"
+    else
+        if [ -e bin/$APPNAME.py ]
+            then %python% bin/$APPNAME.py "$@"
+            else
+                cd %prefix%/share/$APPNAME
+                if [ -e bin/$APPNAME.pyc ]
+                    then %python% bin/$APPNAME.pyc "$@"
+                    else
+                        %python% bin/$APPNAME.py "$@"
+                fi
+        fi
+    fi

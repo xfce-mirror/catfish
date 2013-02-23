@@ -1,4 +1,3 @@
-# -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 ### BEGIN LICENSE
 # Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
 # Copyright (C) 2012-2013 Sean Davis <smd.seandavis@gmail.com>
@@ -15,15 +14,21 @@
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 ### END LICENSE
 
-import logging
-logger = logging.getLogger('catfish')
+# Desktop File
+catfish.desktop.in
 
-from catfish_lib.AboutDialog import AboutDialog
+# Glade Files
+[type: gettext/glade]data/ui/AboutCatfishDialog.ui
+[type: gettext/glade]data/ui/CatfishWindow.ui
 
-# See catfish_lib.AboutDialog.py for more details about how this class works.
-class AboutCatfishDialog(AboutDialog):
-    __gtype_name__ = "AboutCatfishDialog"
-    
-    def finish_initializing(self, builder): # pylint: disable=E1002
-        """Set up the about dialog"""
-        super(AboutCatfishDialog, self).finish_initializing(builder)
+# Python Files
+catfish/__init__.py
+catfish/CatfishWindow.py
+catfish/CatfishSearchEngine.py
+catfish/AboutCatfishDialog.py
+catfish_lib/Builder.py
+catfish_lib/catfishconfig.py
+catfish_lib/AboutDialog.py
+catfish_lib/__init__.py
+catfish_lib/helpers.py
+catfish_lib/Window.py

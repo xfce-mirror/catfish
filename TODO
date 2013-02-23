@@ -1,0 +1,2 @@
+Improve glade editing.  Where this update was based on quickly, glade has to be started as 'GLADE_CATALOG_SEARCH_PATH=./data/ui glade'
+    FIX: alias quickly_design='GLADE_CATALOG_SEARCH_PATH=./data/ui glade'
