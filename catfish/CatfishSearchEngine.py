@@ -96,7 +96,7 @@ class CatfishSearchEngine:
         is yielded if it matches the query.  False is also yielded afterwards
         to guarantee the interface does not lock up."""
         
-        logger.debug("keywords: %s, path: %s", str(keywords), str(path))
+        logger.debug("path: %s", str(path))
         
         # For simplicity, make sure the path contains a trailing '/'
         if not path.endswith('/'): path += '/'
