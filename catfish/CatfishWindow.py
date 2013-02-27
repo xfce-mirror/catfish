@@ -85,6 +85,7 @@ class CatfishWindow(Window):
     def finish_initializing(self, builder): # pylint: disable=E1002
         """Set up the main window"""
         super(CatfishWindow, self).finish_initializing(builder)
+        self.set_wmclass("Catfish", "Catfish")
 
         self.AboutDialog = AboutCatfishDialog
         
