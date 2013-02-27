@@ -1059,7 +1059,7 @@ class CatfishWindow(Window):
         # Initialize the results filter.
         self.results_filter = model.filter_new()
         self.results_filter.set_visible_func(self.results_filter_func)
-        sort = Gtk.TreeModelSort(self.results_filter)
+        sort = Gtk.TreeModelSort(model=self.results_filter)
         if python3:
             sort.set_sort_func(2, self.python_three_size_sort_func, None)
         self.treeview.set_model(sort)
