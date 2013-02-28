@@ -97,6 +97,7 @@ class CatfishSearchEngine:
         to guarantee the interface does not lock up."""
         
         logger.debug("path: %s", str(path))
+        keywords = keywords.replace('*', ' ')
         
         # For simplicity, make sure the path contains a trailing '/'
         if not path.endswith('/'): path += '/'
