@@ -97,6 +97,15 @@ class CatfishSearchEngine:
         to guarantee the interface does not lock up."""
         
         logger.debug("path: %s", str(path))
+        
+        keywords = keywords.replace(',', ' ')
+        self.keywords = keywords
+        
+        wildcard_chunks = []
+        for key in self.keywords.split(' '):
+            if '*' in key:
+                wildcard_chunks.append( key.split('*') )
+        
         keywords = keywords.replace('*', ' ')
         
         # For simplicity, make sure the path contains a trailing '/'
@@ -104,7 +113,7 @@ class CatfishSearchEngine:
         
         # Transform the keywords into a clean list.
         keys = []
-        for key in keywords.replace(',', ' ').split():
+        for key in keywords.split():
             keys.append( key.rstrip().lstrip() )
         
         file_count = 0
@@ -127,8 +136,29 @@ class CatfishSearchEngine:
                             # Remove whitespace from the filename.
                             filename = filename.rstrip().lstrip()
                             
-                            yield filename
-                            file_count += 1
+                            if len(wildcard_chunks) == 0 or method.method_name == 'fulltext':
+                                yield filename
+                                file_count += 1
+                            else:
+                                try:
+                                    file_pass = True
+                                    for chunk in wildcard_chunks:
+                                        last_index = -1
+                                        
+                                        for portion in chunk:
+                                            str_index = filename.lower().index(portion.lower())
+                                            if last_index < str_index:
+                                                last_index = str_index
+                                            elif portion == '':
+                                                pass
+                                            else:
+                                                file_pass = False
+                                                break
+                                    if file_pass:
+                                        yield filename
+                                        file_count += 1
+                                except ValueError:
+                                    pass
                             
                         # Stop running if we've reached the optional limit.
                         if file_count == limit:
