@@ -1,3 +1,8 @@
+v0.6.1:
+ + Fixed application name in Xfce4 application switcher
+ + Fixed early pygobject API bug for init of TreeModelSort
+ + Fixed wildcard support
+
 v0.6.0:
  + Complete rewrite from the ground-up.
  + Replaced find with os.walk
