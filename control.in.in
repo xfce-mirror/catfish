@@ -3,11 +3,11 @@ Version: @version@
 Section: utils
 Priority: optional
 Architecture: all
-Depends: @python@-gi, gksu
-Suggests: findutils | @python@-zeitgeist | zeitgeist
+Depends: @python@-gi, gksu, findutils
+Suggests: @python@-zeitgeist | zeitgeist
 Installed-Size: 347
 Maintainer: Sean Davis <smd.seandavis@gmail.com>
 Description: A file searching tool which is configurable via the command line.
- Catfish is a handy file searching tool for linux and unix. The interface is intentionally lightweight and simple, using only Gtk+3. You can configure it to your needs by using several command line options.
+ Catfish is a handy file searching tool for Linux and UNIX. The interface is intentionally lightweight and simple, using only Gtk+3. You can configure it to your needs by using several command line options.
  .
  http://software.twotoasts.de/?page=catfish

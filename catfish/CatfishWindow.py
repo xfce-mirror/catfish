@@ -147,6 +147,11 @@ class CatfishWindow(Window):
         self.selected_filenames = []
         
         # Load the symbolic (or fallback) icons.
+        self.reload_symbolic_icons(self.icon_theme, builder)
+        self.icon_theme.connect("changed", self.reload_symbolic_icons, builder)
+        self.sidebar.get_style_context().connect("changed", self.reload_symbolic_icons, builder)
+        
+    def reload_symbolic_icons(self, widget, builder):
         modified_icon = self.load_symbolic_icon('document-open-recent', 16)
         builder.get_object("image9").set_from_pixbuf(modified_icon)
         builder.get_object("image10").set_from_pixbuf(modified_icon)
