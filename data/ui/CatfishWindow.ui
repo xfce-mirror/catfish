@@ -943,9 +943,6 @@
                           <object class="GtkCalendar" id="start_calendar">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="year">2012</property>
-                            <property name="month">11</property>
-                            <property name="day">16</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -1036,9 +1033,6 @@
                           <object class="GtkCalendar" id="end_calendar">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="year">2012</property>
-                            <property name="month">11</property>
-                            <property name="day">16</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -1301,6 +1295,18 @@
       <action-widget response="-10">button6</action-widget>
     </action-widgets>
   </object>
+  <object class="GtkImage" id="image15">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-directory</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image16">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-copy</property>
+    <property name="icon-size">1</property>
+  </object>
   <object class="GtkMenu" id="file_menu">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -1368,18 +1374,6 @@
         <signal name="activate" handler="on_menu_delete_activate" swapped="no"/>
       </object>
     </child>
-  </object>
-  <object class="GtkImage" id="image15">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-directory</property>
-    <property name="icon-size">1</property>
-  </object>
-  <object class="GtkImage" id="image16">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-copy</property>
-    <property name="icon-size">1</property>
   </object>
   <object class="GtkImage" id="image18">
     <property name="visible">True</property>

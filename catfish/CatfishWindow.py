@@ -20,6 +20,17 @@ from locale import gettext as _
 from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, GLib, Pango # pylint: disable=E0611
 from gi.repository.GLib import GError
 
+from xml.sax.saxutils import escape, unescape
+from shutil import copy2, rmtree
+
+from calendar import timegm
+import datetime
+import time
+
+import mimetypes
+import hashlib
+import os
+
 import logging
 logger = logging.getLogger('catfish')
 
@@ -27,25 +38,17 @@ from catfish_lib import Window
 from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishSearchEngine import *
 
-import datetime, time
-from calendar import timegm
-
-import os, hashlib
-
-from shutil import copy2, rmtree
-
-from xml.sax.saxutils import escape, unescape
-
-import mimetypes
-mimetypes.init()
-
 from sys import version_info
 python3 = version_info[0] > 2
 
+# Initialize Gtk, GObject, and mimetypes
 GObject.threads_init()
 GLib.threads_init()
+mimetypes.init()
+
 
 def application_in_PATH(application_name):
+    """Return True if the application name is found in PATH."""
     for path in os.getenv('PATH').split(':'):
         if application_name in os.listdir(path):
             return True
@@ -148,27 +151,42 @@ class CatfishWindow(Window):
         
         # Load the symbolic (or fallback) icons.
         self.reload_symbolic_icons(self.icon_theme, builder)
+        
+        # Update the symbolic icons when GTK or icon themes change.
         self.icon_theme.connect("changed", self.reload_symbolic_icons, builder)
-        self.sidebar.get_style_context().connect("changed", self.reload_symbolic_icons, builder)
+        self.sidebar.get_style_context().connect("changed", 
+                                                 self.reload_symbolic_icons, 
+                                                 builder)
         
     def reload_symbolic_icons(self, widget, builder):
+        """Reload the symbolic icons on GTK or icon theme change."""
+        # Modification Time icons
         modified_icon = self.load_symbolic_icon('document-open-recent', 16)
         builder.get_object("image9").set_from_pixbuf(modified_icon)
         builder.get_object("image10").set_from_pixbuf(modified_icon)
         builder.get_object("image11").set_from_pixbuf(modified_icon)
         
-        settings_icon = self.load_symbolic_icon('document-properties', 16, Gtk.StateFlags.INSENSITIVE)
-        self.modified_settings_icon = builder.get_object("image8")
-        self.document_settings_icon = builder.get_object("image12")
-        self.modified_settings_icon.set_from_pixbuf(settings_icon)
-        self.document_settings_icon.set_from_pixbuf(settings_icon)
+        # Configuration icons
+        settings_icon = self.load_symbolic_icon('document-properties', 16, 
+                                                Gtk.StateFlags.INSENSITIVE)   
+        self.modified_settings_image = builder.get_object("image8")
+        self.document_settings_image = builder.get_object("image12")
+        self.modified_settings_image.set_from_pixbuf(settings_icon)
+        self.document_settings_image.set_from_pixbuf(settings_icon)
         
-        builder.get_object("image1").set_from_pixbuf(self.load_symbolic_icon('text-x-generic', 16))
-        builder.get_object("image3").set_from_pixbuf(self.load_symbolic_icon('camera-photo', 16))
-        builder.get_object("image4").set_from_pixbuf(self.load_symbolic_icon('audio-x-generic', 16))
-        builder.get_object("image5").set_from_pixbuf(self.load_symbolic_icon('video-x-generic', 16))
-        builder.get_object("image6").set_from_pixbuf(self.load_symbolic_icon('applications-utilities', 16))
-        builder.get_object("image7").set_from_pixbuf(self.load_symbolic_icon('list-add', 16))
+        # File format icons
+        documents_icon = self.load_symbolic_icon('text-x-generic', 16)
+        photos_icon = self.load_symbolic_icon('camera-photo', 16)
+        music_icon = self.load_symbolic_icon('audio-x-generic', 16)
+        videos_icon = self.load_symbolic_icon('video-x-generic', 16)
+        apps_icon = self.load_symbolic_icon('applications-utilities', 16)
+        custom_format_icon = self.load_symbolic_icon('list-add', 16)
+        builder.get_object("image1").set_from_pixbuf(documents_icon)
+        builder.get_object("image3").set_from_pixbuf(photos_icon)
+        builder.get_object("image4").set_from_pixbuf(music_icon)
+        builder.get_object("image5").set_from_pixbuf(videos_icon)
+        builder.get_object("image6").set_from_pixbuf(apps_icon)
+        builder.get_object("image7").set_from_pixbuf(custom_format_icon)
         
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
@@ -199,29 +217,43 @@ class CatfishWindow(Window):
         # Set the interface to standard or preview mode.
         if self.options.icons_large or self.options.thumbnails:
             self.treeview.append_column(Gtk.TreeViewColumn(_('Preview'),
-                Gtk.CellRendererPixbuf(), pixbuf=0))
-            self.treeview.append_column(self.new_column(_('Filename'), 1, markup=True))
+                                                       Gtk.CellRendererPixbuf(),
+                                                       pixbuf=0))
+            self.treeview.append_column(self.new_column(_('Filename'), 1, 
+                                                        markup=True))
             self.icon_size = Gtk.IconSize.DIALOG
         else:
-            self.treeview.append_column(self.new_column(_('Filename'), 1, 'icon', 1))
-            self.treeview.append_column(self.new_column(_('Size'), 2, 'filesize'))
-            self.treeview.append_column(self.new_column(_('Location'), 3, 'ellipsize'))
-            self.treeview.append_column(self.new_column(_('Last modified'), 4, 'date', 1))
+            self.treeview.append_column(self.new_column(_('Filename'), 1,
+                                                        'icon', 1))
+            self.treeview.append_column(self.new_column(_('Size'), 2, 
+                                                        'filesize'))
+            self.treeview.append_column(self.new_column(_('Location'), 3, 
+                                                        'ellipsize'))
+            self.treeview.append_column(self.new_column(_('Last modified'), 4, 
+                                                        'date', 1))
             self.icon_size = Gtk.IconSize.MENU
             
     def load_symbolic_icon(self, icon_name, size, state=Gtk.StateFlags.ACTIVE):
-        """Return the symbolic version of icon_name, or the fallback if unavailable."""
+        """Return the symbolic version of icon_name, or the non-symbolic
+        fallback if unavailable."""
         context = self.sidebar.get_style_context()
         try:
-            icon_info = self.icon_theme.choose_icon([icon_name + '-symbolic'], size, Gtk.IconLookupFlags.FORCE_SVG)
+            icon_lookup_flags = Gtk.IconLookupFlags.FORCE_SVG
+            icon_info = self.icon_theme.choose_icon([icon_name + '-symbolic'], 
+                                                    size, 
+                                                    icon_lookup_flags)
             color = context.get_color(state)
             icon = icon_info.load_symbolic(color, color, color, color)[0]
         except AttributeError:
-            icon = self.icon_theme.load_icon(icon_name, size, Gtk.IconLookupFlags.FORCE_SVG|Gtk.IconLookupFlags.USE_BUILTIN|Gtk.IconLookupFlags.GENERIC_FALLBACK)
+            icon_lookup_flags = Gtk.IconLookupFlags.FORCE_SVG| \
+                                Gtk.IconLookupFlags.USE_BUILTIN| \
+                                Gtk.IconLookupFlags.GENERIC_FALLBACK
+            icon = self.icon_theme.load_icon(icon_name, size, icon_lookup_flags)
         return icon
 
     # -- Update Search Index dialog -- #
-    def on_update_index_dialog_close(self, widget=None, event=None, user_data=None):
+    def on_update_index_dialog_close(self, widget=None, event=None, 
+                                     user_data=None):
         """Close the Update Search Index dialog, resetting to default."""
         if not self.update_index_active:
             self.update_index_dialog.hide()
@@ -269,15 +301,24 @@ class CatfishWindow(Window):
         self.update_index_unlock.set_sensitive(False)
         
         # Start the query.  Use catfish.desktop to make popup safer-looking.
-        if os.path.isfile('/usr/share/applications/catfish.desktop'):
-            command = ['gksudo', 'updatedb', '--desktop', '/usr/share/applications/catfish.desktop']
-        else:
-            command = ['gksudo', 'updatedb']
-        self.updatedb_process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+        command = ['gksudo', 'updatedb']
+        
+        # Check for installed catfish.desktop file to make popup safer-looking.
+        for path in [os.path.expanduser('~/.local/share/applications'),
+                     '/usr/local/share/applications',
+                     '/usr/share/applications']:
+            desktop_file = os.path.join(path, 'catfish.desktop')
+            if os.path.isfile( desktop_file ):
+                command += ['--desktop', desktop_file]
+                break
+            
+        self.updatedb_process = subprocess.Popen(command, 
+                                                 stdout=subprocess.PIPE, 
+                                                 stderr=subprocess.PIPE, 
+                                                 shell=False)
         
         # Poll every 1 second for completion.
         GLib.timeout_add(1000, updatedb_subprocess)
-
 
     # -- Search Entry -- #
     def on_search_entry_activate(self, widget):
@@ -301,11 +342,13 @@ class CatfishWindow(Window):
         
         if not self.search_in_progress:
             if len(text) == 0:
-                widget.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
-                widget.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Enter search terms and press ENTER') )
+                icon = Gtk.STOCK_FIND
+                msg = _('Enter search terms and press ENTER')
             else:
-                widget.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CLEAR)
-                widget.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Clear search terms') )
+                icon = Gtk.STOCK_CLEAR
+                msg = _('Clear search terms')
+            widget.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, icon)
+            widget.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, msg)
             
         task = self.get_suggestions(text)
         GLib.idle_add(next, task)
@@ -372,12 +415,8 @@ class CatfishWindow(Window):
     def on_sidebar_toggle_toggled(self, widget):
         """Toggle visibility of the sidebar."""
         active = widget.get_active()
-        
         if active != self.sidebar.get_visible():
-            if active:
-                self.sidebar.show()
-            else:
-                self.sidebar.hide()
+            self.sidebar.set_visible(active)
             
     def on_radio_time_any_toggled(self, widget):
         """Set the time range filter to allow for any modification time."""
@@ -389,11 +428,12 @@ class CatfishWindow(Window):
     def on_radio_time_week_toggled(self, widget):
         """Set the time range filter to allow for files modified since one week
         ago until eternity (to account for newer files)."""
-        # Subtract a week from beginning of today for lower, use eternity for upper.
+        # Use one week ago for lower bounds, use eternity for upper.
         if widget.get_active():
             now = datetime.datetime.now()
-            week = timegm( (datetime.datetime(now.year, now.month, now.day, 0, 0) -
-                            datetime.timedelta(7)).timetuple() )
+            week = timegm(
+                        (datetime.datetime(now.year, now.month, now.day, 0, 0) -
+                         datetime.timedelta(7)).timetuple() )
             self.filter_timerange = (week, 9999999999.0)
             logger.debug("Time Range: %s -> Eternity", 
                 time.strftime(self.time_format, time.gmtime(int(week))) )
@@ -402,19 +442,26 @@ class CatfishWindow(Window):
     def on_radio_time_custom_toggled(self, widget):
         """Set the time range filter to the custom settings chosen in the date
         chooser dialog."""
-        if widget.get_active():
-            self.button_time_custom.set_sensitive(True)
-            self.modified_settings_icon.set_from_pixbuf(self.load_symbolic_icon('document-properties', 16))
+        active = widget.get_active()
+        if active:
+            pixbuf = self.load_symbolic_icon('document-properties', 16)
+            
             self.filter_timerange = (   timegm( self.start_date.timetuple() ),
                                         timegm( self.end_date.timetuple() )
                                     )
             logger.debug("Time Range: %s -> %s", 
-                time.strftime(self.time_format, time.gmtime(int(self.filter_timerange[0]))),
-                time.strftime(self.time_format, time.gmtime(int(self.filter_timerange[1]))) )
+                time.strftime(self.time_format, 
+                              time.gmtime(int(self.filter_timerange[0]))),
+                time.strftime(self.time_format, 
+                              time.gmtime(int(self.filter_timerange[1]))) )
+            
             self.refilter()
         else:
-            self.button_time_custom.set_sensitive(False)
-            self.modified_settings_icon.set_from_pixbuf(self.load_symbolic_icon('document-properties', 16, Gtk.StateFlags.INSENSITIVE))
+            pixbuf = self.load_symbolic_icon('document-properties', 16, 
+                                             Gtk.StateFlags.INSENSITIVE)
+            
+        self.button_time_custom.set_sensitive(active)
+        self.modified_settings_image.set_from_pixbuf(pixbuf)
             
     def on_button_time_custom_clicked(self, widget):
         """Show the custom time range dialog."""
@@ -426,27 +473,32 @@ class CatfishWindow(Window):
         if dialog.run() == Gtk.ResponseType.APPLY:
             # Update the time range filter values.
             start_date = start_calendar.get_date()
-            self.start_date = datetime.datetime(start_date[0], start_date[1]+1, start_date[2])
+            self.start_date = datetime.datetime(start_date[0], start_date[1]+1, 
+                                                start_date[2])
             
             end_date = end_calendar.get_date()
-            self.end_date = datetime.datetime(end_date[0], end_date[1]+1, end_date[2])
+            self.end_date = datetime.datetime(end_date[0], end_date[1]+1, 
+                                              end_date[2])
             
-            self.filter_timerange = (   timegm( self.start_date.timetuple() ),
-                                        timegm( self.end_date.timetuple() )
-                                    )
+            self.filter_timerange = (timegm(self.start_date.timetuple()),
+                                     timegm(self.end_date.timetuple()))
                                     
             logger.debug("Time Range: %s -> %s", 
-                time.strftime(self.time_format, time.gmtime(int(self.filter_timerange[0]))),
-                time.strftime(self.time_format, time.gmtime(int(self.filter_timerange[1]))) )
+                time.strftime(self.time_format, 
+                              time.gmtime(int(self.filter_timerange[0]))),
+                time.strftime(self.time_format, 
+                              time.gmtime(int(self.filter_timerange[1]))) )
             
             # Reload the results filter.
             self.refilter()
         else:
             # Reset the calendar widgets to their previous values.
-            start_calendar.select_month(self.start_date.month-1, self.start_date.year)
+            start_calendar.select_month(self.start_date.month-1, 
+                                        self.start_date.year)
             start_calendar.select_day(self.start_date.day)
             
-            end_calendar.select_month(self.end_date.month-1, self.end_date.year)
+            end_calendar.select_month(self.end_date.month-1, 
+                                      self.end_date.year)
             end_calendar.select_day(self.end_date.day)
             
         dialog.hide()
@@ -484,9 +536,12 @@ class CatfishWindow(Window):
         self.filter_format_toggled("other", active)
         self.button_format_custom.set_sensitive(active)
         if active:
-            self.document_settings_icon.set_from_pixbuf(self.load_symbolic_icon('document-properties', 16))
+            pixbuf = self.load_symbolic_icon('document-properties', 16)
+            
         else:
-            self.document_settings_icon.set_from_pixbuf(self.load_symbolic_icon('document-properties', 16, Gtk.StateFlags.INSENSITIVE))
+            pixbuf = self.load_symbolic_icon('document-properties', 16, 
+                                             Gtk.StateFlags.INSENSITIVE)
+        self.document_settings_image.set_from_pixbuf(pixbuf)
         
     def on_button_format_custom_clicked(self, widget):
         """Show the custom formats dialog."""
@@ -529,7 +584,8 @@ class CatfishWindow(Window):
             types.set_active( 0 )
         else:
             types.set_active( self.filter_custom_mimetype['type_id'] )
-        self.extensions_entry.set_text( ', '.join(self.filter_custom_extensions) )
+        extensions_str = ', '.join(self.filter_custom_extensions)
+        self.extensions_entry.set_text(extensions_str)
         
         if self.filter_custom_use_mimetype:
             radio_mimetypes.set_active(True)
@@ -547,8 +603,7 @@ class CatfishWindow(Window):
                                 'type_id': types.get_active() }
                                             
             self.filter_custom_extensions = []
-            extensions = self.extensions_entry.get_text()
-            extensions = extensions.replace(',', ' ')
+            extensions = self.extensions_entry.get_text().replace(',', ' ')
             for ext in extensions.split():
                 ext = ext.rstrip().lstrip()
                 if len(ext) > 0:
@@ -558,11 +613,10 @@ class CatfishWindow(Window):
                 
             self.filter_custom_use_mimetype = radio_mimetypes.get_active()
             
-            updated_settings = "Updated file type settings:" + \
-            "\n  Mimetype:     " + str(self.filter_custom_mimetype) + \
-            "\n  Extensions:   " + str(self.filter_custom_extensions) + \
-            "\n  Use mimetype: " + str(self.filter_custom_use_mimetype)
-            logger.debug(updated_settings)
+            logger.debug("Updated file type settings:" + \
+                "\n  Mimetype:     " + str(self.filter_custom_mimetype) + \
+                "\n  Extensions:   " + str(self.filter_custom_extensions) + \
+                "\n  Use mimetype: " + str(self.filter_custom_use_mimetype))
             
             # Reload the results filter.
             self.refilter()
@@ -611,12 +665,15 @@ class CatfishWindow(Window):
                 return
             except Exception as msg:
                 logger.debug('Exception encountered while opening %s.' + 
-                '\n  Exception: %s' + 
-                '\n  The wrapper was %s.' + 
-                '\n  The filemanager was %s.', 
-                filename, msg, str(self.options.open_wrapper), str(self.options.fileman) )
+                    '\n  Exception: %s' + 
+                    '\n  The wrapper was %s.' + 
+                    '\n  The filemanager was %s.', 
+                    filename, msg, 
+                    str(self.options.open_wrapper), 
+                    str(self.options.fileman) )
         
-        self.get_error_dialog( _('\"%s\" could not be opened.') % os.path.basename(filename), str(msg))
+        self.get_error_dialog( _('\"%s\" could not be opened.') % 
+                               os.path.basename(filename), str(msg))
 
     # -- File Popup Menu -- #
     def on_menu_open_activate(self, widget):
@@ -652,10 +709,10 @@ class CatfishWindow(Window):
             except Exception as msg:
                 # If the file save fails, throw an error.
                 logger.debug('Exception encountered while saving %s.' + 
-                '\n  Exception: %s', filename, msg)
-                self.get_error_dialog( _('\"%s\" could not be saved.') % os.path.basename(filename), str(msg))
+                    '\n  Exception: %s', filename, msg)
+                self.get_error_dialog( _('\"%s\" could not be saved.') % 
+                                       os.path.basename(filename), str(msg))
                 
-            
     def on_menu_delete_activate(self, widget):
         """Show a delete dialog and remove the file if accepted."""
         if self.get_delete_dialog(self.selected_filenames):
@@ -677,8 +734,10 @@ class CatfishWindow(Window):
                 except Exception as msg:
                     # If the file cannot be deleted, throw an error.
                     logger.debug('Exception encountered while deleting %s.' + 
-                    '\n  Exception: %s', filename, msg)
-                    self.get_error_dialog( _("\"%s\" could not be deleted.") % os.path.basename(filename), str(msg) )
+                        '\n  Exception: %s', filename, msg)
+                    self.get_error_dialog( _("\"%s\" could not be deleted.") % 
+                                           os.path.basename(filename), 
+                                           str(msg) )
 
     def get_save_dialog(self, filename):
         """Show the Save As FileChooserDialog.  
@@ -686,10 +745,10 @@ class CatfishWindow(Window):
         Return the filename, or None if cancelled."""
         basename = os.path.basename(filename)
         
-        buttons = ( Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
-                    Gtk.STOCK_SAVE,   Gtk.ResponseType.ACCEPT)
+        buttons = (Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
+                   Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT)
         dialog = Gtk.FileChooserDialog(_('Save "%s" as…') % basename, self,
-            Gtk.FileChooserAction.SAVE, buttons)
+                                       Gtk.FileChooserAction.SAVE, buttons)
         dialog.set_default_response(Gtk.ResponseType.REJECT)
         dialog.set_current_name(basename)
         dialog.set_do_overwrite_confirmation(True)
@@ -702,11 +761,11 @@ class CatfishWindow(Window):
             
     def get_error_dialog(self, primary, secondary):
         """Show an error dialog with the specified message."""
-        dialog_text = "<big><b>%s</b></big>\n\n%s" % (escape(primary), escape(secondary))
+        dialog_text = "<big><b>%s</b></big>\n\n%s" % (escape(primary), 
+                                                      escape(secondary))
         
-        dialog = Gtk.MessageDialog(self, 0,
-            Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "")
-            
+        dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, 
+                                   Gtk.ButtonsType.OK, "")
         dialog.set_markup(dialog_text)
         dialog.set_default_response(Gtk.ResponseType.OK)
         dialog.run()
@@ -722,7 +781,8 @@ class CatfishWindow(Window):
         
         dialog_text = "<big><b>%s</b></big>\n\n%s" % (primary, secondary)
         dialog = Gtk.MessageDialog(self, 0,
-            Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "")
+                                   Gtk.MessageType.QUESTION, 
+                                   Gtk.ButtonsType.NONE, "")
         dialog.set_markup(dialog_text)
         
         dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.NO,
@@ -790,7 +850,8 @@ class CatfishWindow(Window):
             Middle Click:   Open the selected file.
             Right Click:    Show the popup menu."""
         
-        model, self.rows, self.selected_filenames = self.treeview_get_selected_rows(treeview)
+        model, self.rows, self.selected_filenames = \
+            self.treeview_get_selected_rows(treeview)
         
         # If left click, ignore.
         if event.button == 1: return False
@@ -810,7 +871,9 @@ class CatfishWindow(Window):
         
         # If right click, show the popup menu.
         if event.button == 3:
-            self.file_menu_save.set_visible( len(self.selected_filenames) == 1 and not os.path.isdir(self.selected_filenames[0]) )
+            show_save_option = len(self.selected_filenames) == 1 and not \
+                               os.path.isdir(self.selected_filenames[0])
+            self.file_menu_save.set_visible(  )
             writeable = True
             for filename in self.selected_filenames:
                 if not os.access(filename, os.W_OK):
@@ -840,16 +903,19 @@ class CatfishWindow(Window):
                 column.set_min_width(120)
                 cell.set_property('ellipsize', Pango.EllipsizeMode.START)
             elif special == 'filesize':
-                column.set_cell_data_func(cell, self.cell_data_func_filesize, id)
+                column.set_cell_data_func(cell, 
+                                          self.cell_data_func_filesize, id)
             elif special == 'date':
-                column.set_cell_data_func(cell, self.cell_data_func_modified, id)
+                column.set_cell_data_func(cell, 
+                                          self.cell_data_func_modified, id)
         column.set_sort_column_id(id)
         column.set_resizable(True)
         if id == 3:
             column.set_expand(True)
         return column
         
-    def cell_data_func_filesize(self, column, cell_renderer, tree_model, tree_iter, id):
+    def cell_data_func_filesize(self, column, cell_renderer, 
+                                tree_model, tree_iter, id):
         """File size cell display function."""
         if python3:
             size = int(tree_model.get_value(tree_iter, id))
@@ -860,9 +926,12 @@ class CatfishWindow(Window):
         cell_renderer.set_property('text', filesize)
         return
         
-    def cell_data_func_modified(self, column, cell_renderer, tree_model, tree_iter, id):
+    def cell_data_func_modified(self, column, cell_renderer, 
+                                tree_model, tree_iter, id):
         """Modification date cell display function."""
-        modified = time.strftime(self.time_format, time.gmtime(int(tree_model.get_value(tree_iter, id))))
+        modification_int = int(tree_model.get_value(tree_iter, id))
+        modified = time.strftime(self.time_format, 
+                                 time.gmtime(modification_int))
         cell_renderer.set_property('text', modified)
         return
 
@@ -881,7 +950,8 @@ class CatfishWindow(Window):
                 
         # modified
         modified = model[iter][4]
-        if modified < self.filter_timerange[0] or modified > self.filter_timerange[1]:
+        if modified < self.filter_timerange[0] or \
+            modified > self.filter_timerange[1]:
             return False
             
         # mimetype
@@ -910,7 +980,8 @@ class CatfishWindow(Window):
         if self.filter_formats['other']:
             use_filters = True
             if self.filter_custom_use_mimetype:
-                if mimetype == self.filter_custom_mimetype['category_text'] + "/" + self.filter_custom_mimetype['type_text']:
+                if mimetype == self.filter_custom_mimetype['category_text'] + \
+                    "/" + self.filter_custom_mimetype['type_text']:
                     return True
             else:
                 extension = os.path.splitext(model[iter][1])[1]
@@ -990,14 +1061,15 @@ class CatfishWindow(Window):
         if python3:
             uri = uri.encode()
         md5_hash = hashlib.md5(uri).hexdigest()
-        filenames= [os.path.join( self.folder_thumbnails, 'normal', '%s.png' % md5_hash ),
-                    os.path.join( self.folder_thumbnails, 'small',  '%s.png' % md5_hash ),
-                    os.path.join( self.folder_thumbnails, 'large',  '%s.png' % md5_hash )]
-        for filename in filenames:
-            try:
-                return GdkPixbuf.Pixbuf.new_from_file(filename)
-            except GError:
-                pass
+        for thumbnail_path in [os.path.join(self.folder_thumbnails, 'normal'),
+                               os.path.join(self.folder_thumbnails, 'small'),
+                               os.path.join(self.folder_thumbnails, 'large')]:
+            filename = os.path.join(thumbnail_path, '%s.png' % md5_hash)
+            if os.path.isfile(filename):
+                try:
+                    return GdkPixbuf.Pixbuf.new_from_file(filename)
+                except GError:
+                    pass
         return self.get_file_icon(path, mime_type)
 
     def get_file_icon(self, path, mime_type=None):
@@ -1048,8 +1120,10 @@ class CatfishWindow(Window):
         self.set_title( _("Searching for \"%s\"") % keywords )
         self.spinner.show()
         self.statusbar.set_label( _("Searching…") )
-        self.search_entry.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_STOP)
-        self.search_entry.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Stop Search') )
+        self.search_entry.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, 
+                                              Gtk.STOCK_STOP)
+        self.search_entry.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY,
+                                                _('Stop Search') )
         
         self.search_in_progress = True
         
@@ -1058,9 +1132,11 @@ class CatfishWindow(Window):
         
         # icon, name, size, path, modified, mimetype, hidden, exact
         if python3:
-            model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, str, str, float, str, bool, bool)
+            model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, str, str, float, str, 
+                                  bool, bool)
         else:
-            model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, float, str, bool, bool)
+            model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, float, str,
+                                  bool, bool)
         
         # Initialize the results filter.
         self.results_filter = model.filter_new()
@@ -1083,64 +1159,76 @@ class CatfishWindow(Window):
             self.search_engine = CatfishSearchEngine()
         
         for filename in self.search_engine.run(keywords, folder, regex=True):
-            if isinstance(filename, str):
-                if not self.stop_search:
-                    if filename not in results:
-                        try:
-                            path, name = os.path.split(filename)
-                            
-                            if python3: # FIXME overflows happen with larger file sizes.
-                                size = str(os.path.getsize(filename))
-                            else:
-                                size = long(os.path.getsize(filename))
-                                
-                            modified = os.path.getmtime(filename)
-                            
-                            mimetype, override = self.guess_mimetype(filename)
-                            if self.options.thumbnails:
-                                icon = self.get_thumbnail(filename, mimetype)
-                            else:
-                                icon = self.get_file_icon(filename, mimetype)
-                            if override:
-                                mimetype = override
-                            
-                            hidden = is_file_hidden(filename)
-                                
-                            exact = keywords in name
-                            
-                            results.append(filename)
-                            
-                            if self.options.icons_large or self.options.thumbnails:
-                                displayed = '<b>%s</b> %s%s%s%s%s' % (escape(name)
-                                            , self.format_size(size), os.linesep, escape(path), os.linesep
-                                            , time.strftime(self.time_format, time.gmtime(int(modified))))
-                                model.append([icon, displayed, size, path, modified, mimetype, hidden, exact])
-                            else:
-                                model.append([icon, name, size, path, modified, mimetype, hidden, exact])
-                        except OSError:
-                            # file no longer exists
-                            pass
+            if isinstance(filename, str) and not self.stop_search and \
+                    filename not in results:
+                try:
+                    path, name = os.path.split(filename)
+                    
+                    if python3: # FIXME overflows with larger file sizes
+                        size = str(os.path.getsize(filename))
+                    else:
+                        size = long(os.path.getsize(filename))
+                        
+                    modified = os.path.getmtime(filename)
+                    
+                    mimetype, override = self.guess_mimetype(filename)
+                    if self.options.thumbnails:
+                        icon = self.get_thumbnail(filename, mimetype)
+                    else:
+                        icon = self.get_file_icon(filename, mimetype)
+                    if override:
+                        mimetype = override
+                    
+                    hidden = is_file_hidden(filename)
+                        
+                    exact = keywords in name
+                    
+                    results.append(filename)
+                    
+                    if self.options.icons_large or self.options.thumbnails:
+                        displayed = '<b>%s</b> %s%s%s%s%s' % (escape(name),
+                                    self.format_size(size), os.linesep,
+                                    escape(path), os.linesep,
+                                    time.strftime(self.time_format, 
+                                                  time.gmtime(int(modified))))
+                        
+                    else:
+                        displayed = name
+                        
+                    model.append([icon, displayed, size, path, modified, 
+                                  mimetype, hidden, exact])
+                except OSError:
+                    # file no longer exists
+                    pass
             yield True
             continue
         
         # Return to Non-Search Mode.
         self.get_window().set_cursor(None)
-        self.set_title( _('Search results for \"%s\"') % keywords )
+        self.set_title(_('Search results for \"%s\"') % keywords)
         self.spinner.hide()
         
         n_results = len(self.treeview.get_model())
         if n_results == 0:
-            self.statusbar.set_label( _("No files found.") )
+            self.statusbar.set_label(_("No files found."))
         else:
-            self.statusbar.set_label( _("%i files found.") % n_results )
+            self.statusbar.set_label(_("%i files found.") % n_results)
             
         self.search_in_progress = False
         if len(self.search_entry.get_text()) == 0:
-            self.search_entry.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_FIND)
-            self.search_entry.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Enter search terms and press ENTER') )
+            self.search_entry.set_icon_from_stock(
+                                    Gtk.EntryIconPosition.SECONDARY, 
+                                    Gtk.STOCK_FIND)
+            self.search_entry.set_icon_tooltip_text(
+                                    Gtk.EntryIconPosition.SECONDARY, 
+                                    _('Enter search terms and press ENTER') )
         else:
-            self.search_entry.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_CLEAR)
-            self.search_entry.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, _('Clear search terms') )
+            self.search_entry.set_icon_from_stock(
+                                    Gtk.EntryIconPosition.SECONDARY, 
+                                    Gtk.STOCK_CLEAR)
+            self.search_entry.set_icon_tooltip_text(
+                                    Gtk.EntryIconPosition.SECONDARY, 
+                                    _('Clear search terms') )
         
         self.stop_search = False
         yield False
