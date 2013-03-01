@@ -774,11 +774,13 @@ class CatfishWindow(Window):
     def get_delete_dialog(self, filenames):
         """Show a delete confirmation dialog.  Return True if delete wanted."""
         if len(filenames) == 1:
-            primary = _("Are you sure that you want to"
-                        "\npermanently delete \"%s\"?") % 
+            primary = _("Are you sure that you want to \n"
+                        "permanently delete \"%s\"?") % \
                         escape(os.path.basename(filenames[0]))
         else:
-            primary = _("Are you sure that you want to \npermanently delete the %i selected files?") % len(filenames)
+            primary = _("Are you sure that you want to \n"
+                        "permanently delete the %i selected files?") % \
+                        len(filenames)
         secondary = _("If you delete a file, it is permanently lost.")
         
         dialog_text = "<big><b>%s</b></big>\n\n%s" % (primary, secondary)
@@ -820,7 +822,8 @@ class CatfishWindow(Window):
                 treesel.select_path(row)
         return True
         
-    def on_treeview_drag_data_get(self, treeview, context, selection, info, time):
+    def on_treeview_drag_data_get(self, treeview, context, selection, info, 
+            time):
         text = str(os.linesep).join(self.selected_filenames)
         selection.set_text(text, -1)
         return True
@@ -875,7 +878,7 @@ class CatfishWindow(Window):
         if event.button == 3:
             show_save_option = len(self.selected_filenames) == 1 and not \
                                os.path.isdir(self.selected_filenames[0])
-            self.file_menu_save.set_visible(  )
+            self.file_menu_save.set_visible( show_save_option )
             writeable = True
             for filename in self.selected_filenames:
                 if not os.access(filename, os.W_OK):
