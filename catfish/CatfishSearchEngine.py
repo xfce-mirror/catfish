@@ -66,10 +66,10 @@ class CatfishSearchEngine:
         """Initialize the CatfishSearchEngine.  Provide a list of methods to 
         be included in the search backends.  Available backends include:
         
-          fulltext          'os.walk' and 'file.readline' to search inside files.
-          locate            System 'locate' to search for files.
-          walk              'os.walk' to search for files (like find).
-          zeitgeist         Zeitgeist indexing service to search for files.
+          fulltext         'os.walk' and 'file.readline' to search inside files.
+          locate           System 'locate' to search for files.
+          walk             'os.walk' to search for files (like find).
+          zeitgeist        Zeitgeist indexing service to search for files.
         """
         logger.debug("methods: %s", str(methods))
         self.methods = []
@@ -119,51 +119,52 @@ class CatfishSearchEngine:
         file_count = 0
         for method in self.methods:
             for filename in method.run(keywords, path, regex):
-                if isinstance(filename, str):
+                if isinstance(filename, str) and path in filename:
+                    if method.method_name == 'fulltext' or  \
+                            all(key.lower() in \
+                                os.path.basename(filename).lower() \
+                                for key in keys):
                     
-                    if path in filename:
-                        if method.method_name == 'fulltext' or  \
-                        all(key.lower() in os.path.basename(filename).lower() \
-                        for key in keys):
+                        # Remove the URI portion of the filename if present.
+                        if filename.startswith('file://'):
+                            filename = filename[7:]
+                        if filename.startswith('mailbox://'):
+                            filename = filename[10:]
+                            filename = filename[:filename.index('?')]
+                            
+                        # Remove whitespace from the filename.
+                        filename = filename.rstrip().lstrip()
                         
-                            # Remove the URI portion of the filename if present.
-                            if filename.startswith('file://'):
-                                filename = filename[7:]
-                            if filename.startswith('mailbox://'):
-                                filename = filename[10:]
-                                filename = filename[:filename.index('?')]
-                                
-                            # Remove whitespace from the filename.
-                            filename = filename.rstrip().lstrip()
-                            
-                            if len(wildcard_chunks) == 0 or method.method_name == 'fulltext':
-                                yield filename
-                                file_count += 1
-                            else:
-                                try:
-                                    file_pass = True
-                                    for chunk in wildcard_chunks:
-                                        last_index = -1
-                                        
-                                        for portion in chunk:
-                                            str_index = filename.lower().index(portion.lower())
-                                            if last_index < str_index:
-                                                last_index = str_index
-                                            elif portion == '':
-                                                pass
-                                            else:
-                                                file_pass = False
-                                                break
-                                    if file_pass:
-                                        yield filename
-                                        file_count += 1
-                                except ValueError:
-                                    pass
-                            
-                        # Stop running if we've reached the optional limit.
-                        if file_count == limit:
-                            self.stop()
-                            return
+                        if len(wildcard_chunks) == 0 or \
+                                method.method_name == 'fulltext':
+                            yield filename
+                            file_count += 1
+                        else:
+                            try:
+                                file_pass = True
+                                for chunk in wildcard_chunks:
+                                    last_index = -1
+                                    
+                                    for portion in chunk:
+                                        lower = filename.lower()
+                                        str_index = lower.index(portion.lower())
+                                        if last_index < str_index:
+                                            last_index = str_index
+                                        elif portion == '':
+                                            pass
+                                        else:
+                                            file_pass = False
+                                            break
+                                if file_pass:
+                                    yield filename
+                                    file_count += 1
+                            except ValueError:
+                                pass
+                        
+                    # Stop running if we've reached the optional limit.
+                    if file_count == limit:
+                        self.stop()
+                        return
                 yield False
                 
     def set_exact(self, exact):
@@ -177,7 +178,8 @@ class CatfishSearchEngine:
             method.stop()
 
 class CatfishSearchMethod:
-    """The base CatfishSearchMethod class, to be inherited by defined methods."""
+    """The base CatfishSearchMethod class, to be inherited by defined 
+    methods."""
 
     def __init__(self, method_name):
         self.method_name = method_name
@@ -288,11 +290,13 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                                         yield os.path.join(root, filename)
                                         break
                                 else:
-                                    if any(keyword.lower() in line.lower() for keyword in keywords):
+                                    if any(keyword.lower() in line.lower()
+                                            for keyword in keywords):
                                         found_keywords = []
                                         for find_keyword in find_keywords:
                                             if find_keyword in line.lower():
-                                                found_keywords.append(find_keyword)
+                                                found_keywords.append(
+                                                                find_keyword)
                                         for found_keyword in found_keywords:
                                             find_keywords.remove(found_keyword)
                                         
@@ -347,7 +351,9 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
                 if uri.startswith('file://'):
                     fullname = str(uri[7:])
                     filepath, filename = os.path.split(fullname)
-                    if keywords.lower() in filename and uri not in uniques and path in filepath:
+                    if keywords.lower() in filename and \
+                            uri not in uniques and \
+                            path in filepath:
                         uniques.append(uri)
                         yield fullname
         self.stop_search = True
@@ -377,7 +383,8 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
         
         This function returns the process.stdout generator and will yield files
         as they are found."""
-        # Start the command thread, and store the thread number so we can kill it if necessary.
+        # Start the command thread, and store the thread number so we can kill 
+        # it if necessary.
         command = None
         if regex:
             command = self.assemble_query(keywords, path)
@@ -385,7 +392,8 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
             command = self.command.replace('%keywords', keywords.lower())
         if '%path' in command: 
             command = command.replace('%path', path)
-        self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+        self.process = subprocess.Popen(command, stdout=subprocess.PIPE, 
+                                        stderr=subprocess.PIPE, shell=True)
         self.pid = self.process.pid
         return self.process_output(self.process.stdout)
         
