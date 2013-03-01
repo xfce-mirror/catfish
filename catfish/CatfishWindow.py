@@ -774,7 +774,9 @@ class CatfishWindow(Window):
     def get_delete_dialog(self, filenames):
         """Show a delete confirmation dialog.  Return True if delete wanted."""
         if len(filenames) == 1:
-            primary = _("Are you sure that you want to \npermanently delete \"%s\"?") % escape(os.path.basename(filenames[0]))
+            primary = _("Are you sure that you want to"
+                        "\npermanently delete \"%s\"?") % 
+                        escape(os.path.basename(filenames[0]))
         else:
             primary = _("Are you sure that you want to \npermanently delete the %i selected files?") % len(filenames)
         secondary = _("If you delete a file, it is permanently lost.")
