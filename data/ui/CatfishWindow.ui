@@ -114,6 +114,7 @@
                     <property name="action">select-folder</property>
                     <property name="create_folders">False</property>
                     <property name="local_only">False</property>
+                    <property name="title" translatable="yes">Select a Directory</property>
                   </object>
                 </child>
               </object>
@@ -136,6 +137,7 @@
                     <property name="has_focus">True</property>
                     <property name="can_default">True</property>
                     <property name="has_default">True</property>
+                    <property name="tooltip_text" translatable="yes">Enter search terms and press ENTER</property>
                     <property name="invisible_char">•</property>
                     <property name="caps_lock_warning">False</property>
                     <property name="secondary_icon_stock">gtk-find</property>
@@ -1295,18 +1297,6 @@
       <action-widget response="-10">button6</action-widget>
     </action-widgets>
   </object>
-  <object class="GtkImage" id="image15">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-directory</property>
-    <property name="icon-size">1</property>
-  </object>
-  <object class="GtkImage" id="image16">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-copy</property>
-    <property name="icon-size">1</property>
-  </object>
   <object class="GtkMenu" id="file_menu">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -1374,6 +1364,18 @@
         <signal name="activate" handler="on_menu_delete_activate" swapped="no"/>
       </object>
     </child>
+  </object>
+  <object class="GtkImage" id="image15">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-directory</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image16">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-copy</property>
+    <property name="icon-size">1</property>
   </object>
   <object class="GtkImage" id="image18">
     <property name="visible">True</property>

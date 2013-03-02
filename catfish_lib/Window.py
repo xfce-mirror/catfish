@@ -32,7 +32,8 @@ def menu_position(self, menu, data=None, something_else=None):
     widget = menu.get_attach_widget()
     allocation = widget.get_allocation()
     window_pos = widget.get_window().get_position()
-    x = window_pos[0] + allocation.x - menu.get_allocated_width() + widget.get_allocated_width()
+    x = window_pos[0] + allocation.x - menu.get_allocated_width() + \
+        widget.get_allocated_width()
     y = window_pos[1] + allocation.y + allocation.height
     return (x, y, True)
 
@@ -107,7 +108,8 @@ class Window(Gtk.Window):
         self.appmenu_button.set_active(False)
         
     def on_catfish_window_window_state_event(self, widget, event):
-        self.window_is_fullscreen = bool(event.new_window_state & Gdk.WindowState.FULLSCREEN)
+        self.window_is_fullscreen = bool(event.new_window_state & \
+                                         Gdk.WindowState.FULLSCREEN)
 
     def on_catfish_window_key_press_event(self, widget, event):
         key_name = Gdk.keyval_name(event.keyval)

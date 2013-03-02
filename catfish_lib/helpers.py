@@ -60,7 +60,8 @@ def set_up_logging(opts):
     null_handler = NullHandler()
     root.addHandler(null_handler)
 
-    formatter = logging.Formatter("%(levelname)s:%(name)s: %(funcName)s() '%(message)s'")
+    formatter = logging.Formatter("%(levelname)s:%(name)s: "
+                                  "%(funcName)s() '%(message)s'")
 
     logger = logging.getLogger('catfish')
     logger_sh = logging.StreamHandler()

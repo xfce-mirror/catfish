@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-01 15:41-0500\n"
+"POT-Creation-Date: 2013-03-01 22:05-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,114 +59,123 @@ msgid "Catfish"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:12
-msgid "Any time"
+msgid "Select a Directory"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:13
-msgid "This week"
+#: ../data/ui/CatfishWindow.ui.h:13 ../catfish/CatfishWindow.py:346
+#: ../catfish/CatfishWindow.py:1229
+msgid "Enter search terms and press ENTER"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:14
-msgid "Custom"
+msgid "Any time"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:15
-msgid "<b>Modified</b>"
+msgid "This week"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:16
-msgid "Documents"
+msgid "Custom"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:17
-msgid "Images"
+msgid "<b>Modified</b>"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:18
-msgid "Music"
+msgid "Documents"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:19
-msgid "Videos"
+msgid "Images"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:20
-msgid "Applications"
+msgid "Music"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:21
-msgid "Other"
+msgid "Videos"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:22
-msgid "<b>File Type</b>"
+msgid "Applications"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:23
-msgid "Custom Time Range"
+msgid "Other"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:24
-msgid "Go to Today"
+msgid "<b>File Type</b>"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:25
-msgid "<b>Start Date</b>"
+msgid "Custom Time Range"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:26
-msgid "<b>End Date</b>"
+msgid "Go to Today"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:27
+msgid "<b>Start Date</b>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:28
+msgid "<b>End Date</b>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "Custom File Type"
 msgstr ""
 
 #. The "mimetype" is the file type of the file, such as "application/octet-stream"
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "Select existing mimetype"
 msgstr ""
 
 #. Enter "file extensions" such as .doc, .pdf
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Enter file extensions"
 msgstr ""
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show in _File Manager"
 msgstr ""
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Copy Location"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "Update Search Index"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Unlock"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "<big><b>Update Search Index</b></big>"
 msgstr ""
 
 #. The term "locate" is a commandline application, so it should not be translated.
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid ""
 "To provide accurate results, the <i>locate</i> database needs to be "
 "refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "Updating database…"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "Done."
 msgstr ""
 
@@ -210,11 +219,7 @@ msgstr ""
 msgid "Authentication failed."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:346 ../catfish/CatfishWindow.py:1228
-msgid "Enter search terms and press ENTER"
-msgstr ""
-
-#: ../catfish/CatfishWindow.py:349 ../catfish/CatfishWindow.py:1235
+#: ../catfish/CatfishWindow.py:349 ../catfish/CatfishWindow.py:1236
 msgid "Clear search terms"
 msgstr ""
 
@@ -266,29 +271,29 @@ msgstr ""
 msgid "If you delete a file, it is permanently lost."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1005 ../catfish/CatfishWindow.py:1217
+#: ../catfish/CatfishWindow.py:1006 ../catfish/CatfishWindow.py:1218
 msgid "No files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1007 ../catfish/CatfishWindow.py:1219
+#: ../catfish/CatfishWindow.py:1008 ../catfish/CatfishWindow.py:1220
 #, python-format
 msgid "%i files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1124
+#: ../catfish/CatfishWindow.py:1125
 #, python-format
 msgid "Searching for \"%s\""
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1126
+#: ../catfish/CatfishWindow.py:1127
 msgid "Searching…"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1130
+#: ../catfish/CatfishWindow.py:1131
 msgid "Stop Search"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1212
+#: ../catfish/CatfishWindow.py:1213
 #, python-format
 msgid "Search results for \"%s\""
 msgstr ""
