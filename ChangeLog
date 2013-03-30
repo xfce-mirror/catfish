@@ -1,3 +1,7 @@
+v0.6.2:
+ + Update website
+ + Install py files instead of pyc
+
 v0.6.1:
  + Fixed application name in Xfce4 application switcher
  + Fixed early pygobject API bug for init of TreeModelSort

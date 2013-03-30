@@ -5,7 +5,6 @@ LANGUAGE_FILES=$(patsubst po/%.po, locale/%/LC_MESSAGES/$(APPNAME).mo, $(wildcar
 DESTDIR=
 
 all: $(LANGUAGE_FILES)
-	$(PYTHON) ./build.py build $(APPNAME)
 	intltool-merge -d po catfish.desktop.in catfish.desktop
 	chmod +x catfish.desktop
 	sed -e s,%prefix%,$(PREFIX), bin/$(APPNAME).in.in > bin/$(APPNAME).in
@@ -22,21 +21,21 @@ install: all
 
 	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)
 	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/bin
-	install bin/$(APPNAME).pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/bin
+	install bin/$(APPNAME).py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/bin
 	
 	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
-	install catfish/AboutCatfishDialog.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
-	install catfish/CatfishSearchEngine.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
-	install catfish/CatfishWindow.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
-	install catfish/__init__.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
+	install catfish/AboutCatfishDialog.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
+	install catfish/CatfishSearchEngine.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
+	install catfish/CatfishWindow.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
+	install catfish/__init__.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish
 	
 	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
-	install catfish_lib/AboutDialog.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
-	install catfish_lib/Builder.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
-	install catfish_lib/catfishconfig.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
-	install catfish_lib/helpers.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
-	install catfish_lib/__init__.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
-	install catfish_lib/Window.pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/AboutDialog.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/Builder.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/catfishconfig.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/helpers.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/__init__.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/Window.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
 	
 	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/data
 	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/data/ui
