@@ -1,6 +1,7 @@
 v0.6.2:
  + Update website
  + Install py files instead of pyc
+ + Fix symbolic links for build systems
 
 v0.6.1:
  + Fixed application name in Xfce4 application switcher

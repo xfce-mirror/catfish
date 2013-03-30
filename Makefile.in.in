@@ -46,7 +46,7 @@ install: all
 
 	install -d $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps
 	install data/media/$(APPNAME).svg $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps
-	ln -sf $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps/$(APPNAME).svg $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/$(APPNAME).svg
+	ln -sf $(PREFIX)/share/icons/hicolor/scalable/apps/$(APPNAME).svg $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/$(APPNAME).svg
 
 	install -d $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
 	install AUTHORS $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
@@ -59,7 +59,7 @@ install: all
 	install --mode=644 $(APPNAME).desktop $(DESTDIR)/$(PREFIX)/share/applications
 
 	cp -rf locale $(DESTDIR)/$(PREFIX)/share
-	ln -sf $(DESTDIR)/$(PREFIX)/share/locale $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/locale
+	ln -sf $(PREFIX)/share/locale $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/locale
 
 uninstall:
 	rm -f $(DESTDIR)/$(PREFIX)/share/applications/$(APPNAME).desktop
