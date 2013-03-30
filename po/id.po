@@ -1,4 +1,4 @@
-# Japanese translation for catfish-search
+# Indonesian translation for catfish-search
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the catfish-search package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-03-01 22:05-0500\n"
-"PO-Revision-Date: 2012-07-31 16:45+0000\n"
-"Last-Translator: Ryan Hagood <Unknown>\n"
-"Language-Team: Japanese <ja@li.org>\n"
+"PO-Revision-Date: 2013-03-17 01:40+0000\n"
+"Last-Translator: Viko Adi Rahmawan <Unknown>\n"
+"Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
-msgstr ""
+msgstr "Catfish si pencari berkas"
 
 #: ../catfish.desktop.in.h:2
 msgid "Search the file system"
-msgstr ""
+msgstr "Cari berkas-berkas sistem"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
@@ -32,22 +32,22 @@ msgstr ""
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "_Exact Match"
-msgstr ""
+msgstr "_Persis Sama"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "_Hidden Files"
-msgstr ""
+msgstr "Berkas Ter_sembunyi"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Fulltext Search"
-msgstr ""
+msgstr "Dalam Berkas _Teks"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "_Show Advanced Settings"
-msgstr ""
+msgstr "Tamplikan Pengaturan _Lanjutan"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:10
@@ -56,11 +56,11 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "Catfish"
-msgstr ""
+msgstr "Catfish"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Select a Directory"
-msgstr ""
+msgstr "Pilih Direktori"
 
 #: ../data/ui/CatfishWindow.ui.h:13 ../catfish/CatfishWindow.py:346
 #: ../catfish/CatfishWindow.py:1229
@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "This week"
-msgstr ""
+msgstr "Pekan ini"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Custom"
@@ -85,31 +85,31 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Documents"
-msgstr ""
+msgstr "Dokumen"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Images"
-msgstr ""
+msgstr "Gambar"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Music"
-msgstr ""
+msgstr "Musik"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "Videos"
-msgstr ""
+msgstr "Video"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Applications"
-msgstr ""
+msgstr "Aplikasi"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "Other"
-msgstr "その他"
+msgstr "Lainnya"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "<b>File Type</b>"
-msgstr ""
+msgstr "<b>Tipe Berkas</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "Custom Time Range"
@@ -117,15 +117,15 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "Go to Today"
-msgstr ""
+msgstr "Hari Ini"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "<b>Start Date</b>"
-msgstr ""
+msgstr "Mulai"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "<b>End Date</b>"
-msgstr ""
+msgstr "Hingga"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgid "Custom File Type"
@@ -139,17 +139,17 @@ msgstr ""
 #. Enter "file extensions" such as .doc, .pdf
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Enter file extensions"
-msgstr ""
+msgstr "Masukkan ekstensi berkas"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show in _File Manager"
-msgstr ""
+msgstr "Tampilkan di Pengelola Berkas"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Copy Location"
-msgstr ""
+msgstr "_Salin Lokasi"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "Update Search Index"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Done."
-msgstr "完了"
+msgstr ""
 
 #: ../catfish/__init__.py:35
 msgid "Show debug messages (-vv debugs catfish_lib also)"
@@ -185,19 +185,19 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:219
 msgid "Preview"
-msgstr "プレビュー"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:222 ../catfish/CatfishWindow.py:226
 msgid "Filename"
-msgstr "ファイル名"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:228
 msgid "Size"
-msgstr "大きさ"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:230
 msgid "Location"
-msgstr "位置"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:232
 msgid "Last modified"
@@ -296,4 +296,4 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:1213
 #, python-format
 msgid "Search results for \"%s\""
-msgstr "\"%s\" の検索結果"
+msgstr ""
