@@ -13,7 +13,7 @@
     <property name="copyright">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
     <property name="comments" translatable="yes">Catfish is a versatile file searching tool.</property>
-    <property name="website">http://twotoasts.de/index.php/catfish/</property>
+    <property name="website">https://launchpad.net/catfish-search</property>
     <property name="license">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 Copyright (C) 2012-2013 Sean Davis &lt;smd.seandavis@gmail.com&gt;
 This program is free software: you can redistribute it and/or modify it 
