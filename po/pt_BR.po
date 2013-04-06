@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-03-01 22:05-0500\n"
-"PO-Revision-Date: 2013-02-24 01:01+0000\n"
-"Last-Translator: Bleno Lopes <blenolopes@gmail.com>\n"
+"PO-Revision-Date: 2013-04-05 12:47+0000\n"
+"Last-Translator: Lucas S. B. Mastella <lucas@bello.li>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-31 05:41+0000\n"
-"X-Generator: Launchpad (build 16546)\n"
+"X-Launchpad-Export-Date: 2013-04-06 05:53+0000\n"
+"X-Generator: Launchpad (build 16550)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
@@ -60,7 +60,7 @@ msgstr "Catfish"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Select a Directory"
-msgstr ""
+msgstr "Selecione um diretório"
 
 #: ../data/ui/CatfishWindow.ui.h:13 ../catfish/CatfishWindow.py:346
 #: ../catfish/CatfishWindow.py:1229
