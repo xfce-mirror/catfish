@@ -50,8 +50,9 @@ mimetypes.init()
 def application_in_PATH(application_name):
     """Return True if the application name is found in PATH."""
     for path in os.getenv('PATH').split(':'):
-        if application_name in os.listdir(path):
-            return True
+        if os.path.isdir (path):
+            if application_name in os.listdir(path):
+                return True
     return False
 
 def is_file_hidden(filename):
