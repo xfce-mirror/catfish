@@ -215,10 +215,10 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
             if not self.running:
                 break
             for folder in dirs:
-                if any(keyword in folder for keyword in keywords):
+                if any(keyword.lower() in folder.lower() for keyword in keywords):
                     yield os.path.join(root, folder)
             for filename in files:
-                if any(keyword in filename for keyword in keywords):
+                if any(keyword.lower() in filename.lower() for keyword in keywords):
                     yield os.path.join(root, filename)
             yield True
         yield False
