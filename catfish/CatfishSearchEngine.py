@@ -40,6 +40,8 @@ def string_regex(keywords, path):
     """Returns a string with the regular expression containing all combinations
     of the keywords."""
     keywords = keywords.split()
+    if len(keywords) == 0:
+        return ''
     if len(keywords) == 1:
         return keywords[0]
     regex = ""
