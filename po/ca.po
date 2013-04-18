@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-03-01 22:05-0500\n"
-"PO-Revision-Date: 2013-04-17 02:13+0000\n"
+"PO-Revision-Date: 2013-04-17 13:05+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-04-17 05:37+0000\n"
+"X-Launchpad-Export-Date: 2013-04-18 05:43+0000\n"
 "X-Generator: Launchpad (build 16567)\n"
 
 #: ../catfish.desktop.in.h:1
@@ -193,15 +193,15 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:228
 msgid "Size"
-msgstr ""
+msgstr "Mida"
 
 #: ../catfish/CatfishWindow.py:230
 msgid "Location"
-msgstr ""
+msgstr "Ubicació"
 
 #: ../catfish/CatfishWindow.py:232
 msgid "Last modified"
-msgstr ""
+msgstr "Darrera modificació"
 
 #: ../catfish/CatfishWindow.py:284
 msgid "Locate database updated successfully."
@@ -217,16 +217,16 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:290
 msgid "Authentication failed."
-msgstr ""
+msgstr "Ha fallat l’autenticació."
 
 #: ../catfish/CatfishWindow.py:349 ../catfish/CatfishWindow.py:1236
 msgid "Clear search terms"
-msgstr ""
+msgstr "Neteja els termes de cerca"
 
 #. Translators: This message will only appear when trying to open the default file manager but it cannot be found.
 #: ../catfish/CatfishWindow.py:655
 msgid "Catfish could not find the default file manager."
-msgstr ""
+msgstr "Catfish no ha pogut trobar el gestor de fitxers predeterminat."
 
 #. Translators: This message will only appear when the default application for opening a file cannot be found.
 #: ../catfish/CatfishWindow.py:661
@@ -236,22 +236,22 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:675
 #, python-format
 msgid "\"%s\" could not be opened."
-msgstr ""
+msgstr "No s’ha pogut obrir «%s»."
 
 #: ../catfish/CatfishWindow.py:713
 #, python-format
 msgid "\"%s\" could not be saved."
-msgstr ""
+msgstr "No s’ha pogut desar «%s»."
 
 #: ../catfish/CatfishWindow.py:738
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr ""
+msgstr "No s’ha pogut suprimir «%s»."
 
 #: ../catfish/CatfishWindow.py:750
 #, python-format
 msgid "Save \"%s\" as…"
-msgstr ""
+msgstr "Desa «%s» com…"
 
 #: ../catfish/CatfishWindow.py:777
 #, python-format
@@ -259,6 +259,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
+"Esteu segur que voleu suprimir\n"
+"permanentment «%s»?"
 
 #: ../catfish/CatfishWindow.py:781
 #, python-format
@@ -266,28 +268,30 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
+"Esteu segur que voleu suprimir\n"
+"permanentment els %i fitxers seleccionats?"
 
 #: ../catfish/CatfishWindow.py:784
 msgid "If you delete a file, it is permanently lost."
-msgstr ""
+msgstr "Si suprimiu un fitxer, es perdrà permanentment."
 
 #: ../catfish/CatfishWindow.py:1006 ../catfish/CatfishWindow.py:1218
 msgid "No files found."
-msgstr ""
+msgstr "No s’ha trobat cap fitxer."
 
 #: ../catfish/CatfishWindow.py:1008 ../catfish/CatfishWindow.py:1220
 #, python-format
 msgid "%i files found."
-msgstr ""
+msgstr "S’han trobat %i fitxers."
 
 #: ../catfish/CatfishWindow.py:1125
 #, python-format
 msgid "Searching for \"%s\""
-msgstr ""
+msgstr "S’està cercant «%s»"
 
 #: ../catfish/CatfishWindow.py:1127
 msgid "Searching…"
-msgstr ""
+msgstr "S’està cercant…"
 
 #: ../catfish/CatfishWindow.py:1131
 msgid "Stop Search"
@@ -296,4 +300,4 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:1213
 #, python-format
 msgid "Search results for \"%s\""
-msgstr ""
+msgstr "Resultats de la cerca «%s»"
