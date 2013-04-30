@@ -8,22 +8,22 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-03-01 22:05-0500\n"
-"PO-Revision-Date: 2013-02-20 23:30+0000\n"
-"Last-Translator: Matteo Costa <Unknown>\n"
+"PO-Revision-Date: 2013-04-29 19:20+0000\n"
+"Last-Translator: Cristian Marchi <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-31 05:41+0000\n"
-"X-Generator: Launchpad (build 16546)\n"
+"X-Launchpad-Export-Date: 2013-04-30 05:55+0000\n"
+"X-Generator: Launchpad (build 16580)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
-msgstr ""
+msgstr "Catfish ricerca di file"
 
 #: ../catfish.desktop.in.h:2
 msgid "Search the file system"
-msgstr "Cerca nel filesystem"
+msgstr "Cerca nel file system"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
@@ -32,27 +32,27 @@ msgstr "Catfish è un versatile strumento per cercare file"
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "_Exact Match"
-msgstr ""
+msgstr "Corrispondenza _esatta"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "_Hidden Files"
-msgstr ""
+msgstr "File _nascosti"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Fulltext Search"
-msgstr ""
+msgstr "Ricerca co_mpleta"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "_Show Advanced Settings"
-msgstr ""
+msgstr "Mostra impostazioni avan_zate"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "_Update Search Index…"
-msgstr ""
+msgstr "Aggiorna in_dice di ricerca..."
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "Catfish"
@@ -60,12 +60,12 @@ msgstr "Catfish"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Select a Directory"
-msgstr ""
+msgstr "Selezionare una cartella"
 
 #: ../data/ui/CatfishWindow.ui.h:13 ../catfish/CatfishWindow.py:346
 #: ../catfish/CatfishWindow.py:1229
 msgid "Enter search terms and press ENTER"
-msgstr "Inserisci i termini di ricerca e premi ENTER"
+msgstr "Inserire i termini da ricercare e premere INVIO"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Any time"
@@ -73,15 +73,15 @@ msgstr "Ogni volta"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "This week"
-msgstr ""
+msgstr "Questa settimana"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Custom"
-msgstr ""
+msgstr "Personalizzato"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "<b>Modified</b>"
-msgstr ""
+msgstr "<b>Modificato</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Documents"
@@ -109,7 +109,7 @@ msgstr "Altro"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "<b>File Type</b>"
-msgstr ""
+msgstr "<b>Tipo di file</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "Custom Time Range"
@@ -117,39 +117,39 @@ msgstr "Intervallo di tempo personalizzato"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "Go to Today"
-msgstr ""
+msgstr "Vai a oggi"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "<b>Start Date</b>"
-msgstr ""
+msgstr "<b>Data iniziale</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "<b>End Date</b>"
-msgstr ""
+msgstr "<b>Data finale</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgid "Custom File Type"
-msgstr ""
+msgstr "Tipo di file personalizzato"
 
 #. The "mimetype" is the file type of the file, such as "application/octet-stream"
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Select existing mimetype"
-msgstr ""
+msgstr "Selezione tipo mime esistente"
 
 #. Enter "file extensions" such as .doc, .pdf
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Enter file extensions"
-msgstr ""
+msgstr "Inserire l'estensione del file"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show in _File Manager"
-msgstr ""
+msgstr "Mostra nel _gestore di file"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Copy Location"
-msgstr ""
+msgstr "_Copia posizione"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "Update Search Index"
@@ -157,11 +157,11 @@ msgstr "Aggiorna l'indice di ricerca"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "Unlock"
-msgstr ""
+msgstr "Scarica"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "<big><b>Update Search Index</b></big>"
-msgstr ""
+msgstr "<big><b>Aggiorna indice di ricerca</b></big>"
 
 #. The term "locate" is a commandline application, so it should not be translated.
 #: ../data/ui/CatfishWindow.ui.h:42
@@ -170,10 +170,13 @@ msgid ""
 "refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
+"Per ottenere risultati accurati, il database delle <i>posizioni</i> deve "
+"essere aggiornato.\n"
+"Per questa operazione sono necessari i diritti di amministratore (sudo)"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "Updating database…"
-msgstr ""
+msgstr "Aggiornamento database in corso..."
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Done."
@@ -181,7 +184,7 @@ msgstr "Finito."
 
 #: ../catfish/__init__.py:35
 msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr ""
+msgstr "Mostra messaggi di debug (-vv debugs catfish_lib)"
 
 #: ../catfish/CatfishWindow.py:219
 msgid "Preview"
@@ -201,23 +204,24 @@ msgstr "Posizione"
 
 #: ../catfish/CatfishWindow.py:232
 msgid "Last modified"
-msgstr "Ultimo modificato"
+msgstr "Ultima modifica"
 
 #: ../catfish/CatfishWindow.py:284
 msgid "Locate database updated successfully."
-msgstr ""
+msgstr "Database delle posizioni aggiornato."
 
 #: ../catfish/CatfishWindow.py:286
 msgid "An error occurred while updating locatedb."
 msgstr ""
+"Si è verificato un errore nell'aggiornamento del database delle posizioni"
 
 #: ../catfish/CatfishWindow.py:288 ../catfish/CatfishWindow.py:292
 msgid "User aborted authentication."
-msgstr ""
+msgstr "Autenticazione interrotta dall'utente"
 
 #: ../catfish/CatfishWindow.py:290
 msgid "Authentication failed."
-msgstr ""
+msgstr "Autenticazione non riuscita."
 
 #: ../catfish/CatfishWindow.py:349 ../catfish/CatfishWindow.py:1236
 msgid "Clear search terms"
@@ -226,32 +230,33 @@ msgstr "Cancella i termini di ricerca"
 #. Translators: This message will only appear when trying to open the default file manager but it cannot be found.
 #: ../catfish/CatfishWindow.py:655
 msgid "Catfish could not find the default file manager."
-msgstr ""
+msgstr "Catfish non riesce a trovare il gestore di file predefinito"
 
 #. Translators: This message will only appear when the default application for opening a file cannot be found.
 #: ../catfish/CatfishWindow.py:661
 msgid "Catfish could not find the default open wrapper."
 msgstr ""
+"Catfish non riesce a trovare l'applicazione predefinita per l'apertura"
 
 #: ../catfish/CatfishWindow.py:675
 #, python-format
 msgid "\"%s\" could not be opened."
-msgstr ""
+msgstr "Impossibile aprire «%s»."
 
 #: ../catfish/CatfishWindow.py:713
 #, python-format
 msgid "\"%s\" could not be saved."
-msgstr ""
+msgstr "Impossibile salvare «%s»."
 
 #: ../catfish/CatfishWindow.py:738
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr ""
+msgstr "Impossibile eliminare «%s»."
 
 #: ../catfish/CatfishWindow.py:750
 #, python-format
 msgid "Save \"%s\" as…"
-msgstr ""
+msgstr "Salva «%s» come..."
 
 #: ../catfish/CatfishWindow.py:777
 #, python-format
@@ -259,6 +264,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
+"Eliminare davvero «%s» in\n"
+"modo permanente?"
 
 #: ../catfish/CatfishWindow.py:781
 #, python-format
@@ -266,10 +273,12 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
+"Eliminare davvero i %i file selezionati\n"
+"in modo permanente?"
 
 #: ../catfish/CatfishWindow.py:784
 msgid "If you delete a file, it is permanently lost."
-msgstr ""
+msgstr "Se si elimina un file non sarà più recuperabile."
 
 #: ../catfish/CatfishWindow.py:1006 ../catfish/CatfishWindow.py:1218
 msgid "No files found."
@@ -278,22 +287,22 @@ msgstr "Nessun file trovato."
 #: ../catfish/CatfishWindow.py:1008 ../catfish/CatfishWindow.py:1220
 #, python-format
 msgid "%i files found."
-msgstr ""
+msgstr "Trovati %i file."
 
 #: ../catfish/CatfishWindow.py:1125
 #, python-format
 msgid "Searching for \"%s\""
-msgstr "Ricerca di \"%s\""
+msgstr "Ricerca di «%s»"
 
 #: ../catfish/CatfishWindow.py:1127
 msgid "Searching…"
-msgstr ""
+msgstr "Ricerca in corso..."
 
 #: ../catfish/CatfishWindow.py:1131
 msgid "Stop Search"
-msgstr ""
+msgstr "Interrompi ricerca"
 
 #: ../catfish/CatfishWindow.py:1213
 #, python-format
 msgid "Search results for \"%s\""
-msgstr "Risultati della ricerca per \"%s\""
+msgstr "Risultati della ricerca di «%s»"
