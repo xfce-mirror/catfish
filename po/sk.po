@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-03-01 22:05-0500\n"
-"PO-Revision-Date: 2013-03-18 12:17+0000\n"
-"Last-Translator: DAG Software <Unknown>\n"
+"PO-Revision-Date: 2013-05-03 10:15+0000\n"
+"Last-Translator: Juraj Salus <jurajsalus@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-31 05:41+0000\n"
-"X-Generator: Launchpad (build 16546)\n"
+"X-Launchpad-Export-Date: 2013-05-04 06:20+0000\n"
+"X-Generator: Launchpad (build 16598)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
@@ -27,7 +27,7 @@ msgstr "Hľadať v súborovom systéme"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
-msgstr ""
+msgstr "Catfish je všestranný nájstroj na vyhľadávanie súborov."
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:2
@@ -170,6 +170,9 @@ msgid ""
 "refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
+"Pre dosiahnutie najlepších výsledkov, <i>locate</i> databázy musia byť "
+"aktualizované.\n"
+"To si vyžaduje sudo (admin) práva."
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "Updating database…"
@@ -181,7 +184,7 @@ msgstr "Hotovo."
 
 #: ../catfish/__init__.py:35
 msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr ""
+msgstr "Zobraziť správy Debug (-vv debugs catfish_lib also)"
 
 #: ../catfish/CatfishWindow.py:219
 msgid "Preview"
@@ -226,12 +229,12 @@ msgstr "Vyčistiť vyhľadávané výrazy"
 #. Translators: This message will only appear when trying to open the default file manager but it cannot be found.
 #: ../catfish/CatfishWindow.py:655
 msgid "Catfish could not find the default file manager."
-msgstr ""
+msgstr "Catfish nenašiel prednastaveného správcu súborov."
 
 #. Translators: This message will only appear when the default application for opening a file cannot be found.
 #: ../catfish/CatfishWindow.py:661
 msgid "Catfish could not find the default open wrapper."
-msgstr ""
+msgstr "Catfish nenašiel prednastavenú aplikáciu."
 
 #: ../catfish/CatfishWindow.py:675
 #, python-format
@@ -259,6 +262,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
+"Ste si istý, že chcete natrvalo zmazať \n"
+"\"%s\"?"
 
 #: ../catfish/CatfishWindow.py:781
 #, python-format
@@ -266,6 +271,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
+"Ste si istý, že chcete natrvalo zmazať \n"
+"%i vybraných súborov?"
 
 #: ../catfish/CatfishWindow.py:784
 msgid "If you delete a file, it is permanently lost."
