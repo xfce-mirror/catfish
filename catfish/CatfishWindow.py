@@ -1005,6 +1005,8 @@ class CatfishWindow(Window):
             n_results = len(self.treeview.get_model())
             if n_results == 0:
                 self.statusbar.set_label( _("No files found.") )
+            elif n_results == 1:
+                self.statusbar.set_label( _("1 file found.") )
             else:
                 self.statusbar.set_label( _("%i files found.") % n_results )
         except AttributeError:
@@ -1217,6 +1219,8 @@ class CatfishWindow(Window):
         n_results = len(self.treeview.get_model())
         if n_results == 0:
             self.statusbar.set_label(_("No files found."))
+        elif n_results == 1:
+            self.statusbar.set_label( _("1 file found.") )
         else:
             self.statusbar.set_label(_("%i files found.") % n_results)
             
