@@ -35,21 +35,21 @@ def parse_options():
         help=_("Show debug messages (-vv debugs catfish_lib also)"))
         
     parser.add_option('', '--large-icons', action='store_true'
-            , dest='icons_large', help='Use large icons')
+            , dest='icons_large', help=_('Use large icons'))
     parser.add_option('', '--thumbnails', action='store_true'
-        , dest='thumbnails', help='Use thumbnails')
+        , dest='thumbnails', help=_('Use thumbnails'))
     parser.add_option('', '--iso-time', action='store_true'
-        , dest='time_iso', help='Display time in iso format')
-    parser.add_option('', '--path', help='Search in folder PATH')
-    parser.add_option('', '--fileman', help='Use FILEMAN as filemanager')
+        , dest='time_iso', help=_('Display time in iso format'))
+    parser.add_option('', '--path', help=_('Search in folder PATH'))
+    parser.add_option('', '--fileman', help=_('Use FILEMAN as filemanager'))
     parser.add_option('', '--wrapper', metavar='WRAPPER'
-        , dest='open_wrapper', help='Use WRAPPER to open files')
+        , dest='open_wrapper', help=_('Use WRAPPER to open files'))
     parser.add_option('', '--exact', action='store_true'
-        , help='Perform exact match')
+        , help=_('Perform exact match'))
     parser.add_option('', '--hidden', action='store_true'
-        , help='Include hidden files')
+        , help=_('Include hidden files'))
     parser.add_option('', '--fulltext', action='store_true'
-        , help='Perform fulltext search')
+        , help=_('Perform fulltext search'))
     parser.set_defaults(icons_large=0, thumbnails=0, time_iso=0
                         , path=os.path.expanduser('~'), fileman='xdg-open'
                         , exact=0, hidden=0, fulltext=0, file_action='open'

@@ -1,6 +1,7 @@
 v0.6.4:
  + Make singular files found message available.
  + Make Search terms placeholder text translateable (lp 1175201)
+ + Make commandline options translateable (lp 1175204)
 
 v0.6.3:
  + Fix crash when directory in PATH does not exist (lp 1166079)
