@@ -1,3 +1,7 @@
+v0.6.4:
+ + Make singular files found message available.
+ + Make Search terms placeholder text translateable (lp 1175201)
+
 v0.6.3:
  + Fix crash when directory in PATH does not exist (lp 1166079)
  + Fix case sensitivity in search backend (lp 1166214)

@@ -141,7 +141,7 @@
                     <property name="invisible_char">•</property>
                     <property name="caps_lock_warning">False</property>
                     <property name="secondary_icon_stock">gtk-find</property>
-                    <property name="placeholder_text">Search terms</property>
+                    <property name="placeholder_text" translatable="yes">Search terms</property>
                     <signal name="changed" handler="on_search_entry_changed" swapped="no"/>
                     <signal name="activate" handler="on_search_entry_activate" swapped="no"/>
                     <signal name="icon-press" handler="on_search_entry_icon_press" swapped="no"/>
