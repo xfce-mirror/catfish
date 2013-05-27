@@ -29,7 +29,7 @@ import os
 
 def parse_options():
     """Support for command line options"""
-    parser = optparse.OptionParser(version="%%prog %s" % get_version())
+    parser = optparse.OptionParser(version="catfish %s" % get_version())
     parser.add_option(
         "-v", "--verbose", action="count", dest="verbose",
         help=_("Show debug messages (-vv debugs catfish_lib also)"))
