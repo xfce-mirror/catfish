@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-03-01 22:05-0500\n"
+"POT-Creation-Date: 2013-05-27 12:22-0400\n"
 "PO-Revision-Date: 2013-02-24 00:59+0000\n"
 "Last-Translator: Howard Chan <smartboyhw@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-31 05:41+0000\n"
-"X-Generator: Launchpad (build 16546)\n"
+"X-Launchpad-Export-Date: 2013-05-28 05:56+0000\n"
+"X-Generator: Launchpad (build 16640)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
@@ -62,109 +62,113 @@ msgstr "Catfish"
 msgid "Select a Directory"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:13 ../catfish/CatfishWindow.py:346
-#: ../catfish/CatfishWindow.py:1229
+#: ../data/ui/CatfishWindow.ui.h:13 ../catfish/CatfishWindow.py:347
+#: ../catfish/CatfishWindow.py:1234
 msgid "Enter search terms and press ENTER"
 msgstr "輸入搜尋項目並按「Enter」"
 
 #: ../data/ui/CatfishWindow.ui.h:14
+msgid "Search terms"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:15
 msgid "Any time"
 msgstr "任何時間"
 
-#: ../data/ui/CatfishWindow.ui.h:15
+#: ../data/ui/CatfishWindow.ui.h:16
 msgid "This week"
 msgstr "本週"
 
-#: ../data/ui/CatfishWindow.ui.h:16
+#: ../data/ui/CatfishWindow.ui.h:17
 msgid "Custom"
 msgstr "自訂"
 
-#: ../data/ui/CatfishWindow.ui.h:17
+#: ../data/ui/CatfishWindow.ui.h:18
 msgid "<b>Modified</b>"
 msgstr "<b>已更改</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:18
+#: ../data/ui/CatfishWindow.ui.h:19
 msgid "Documents"
 msgstr "文件"
 
-#: ../data/ui/CatfishWindow.ui.h:19
+#: ../data/ui/CatfishWindow.ui.h:20
 msgid "Images"
 msgstr "圖片"
 
-#: ../data/ui/CatfishWindow.ui.h:20
+#: ../data/ui/CatfishWindow.ui.h:21
 msgid "Music"
 msgstr "音樂"
 
-#: ../data/ui/CatfishWindow.ui.h:21
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "Videos"
 msgstr "影片"
 
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:23
 msgid "Applications"
 msgstr "應用程式"
 
-#: ../data/ui/CatfishWindow.ui.h:23
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Other"
 msgstr "其他"
 
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:25
 msgid "<b>File Type</b>"
 msgstr "<b>檔案類型</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:25
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "Custom Time Range"
 msgstr "自動時間範圍"
 
-#: ../data/ui/CatfishWindow.ui.h:26
+#: ../data/ui/CatfishWindow.ui.h:27
 msgid "Go to Today"
 msgstr "移至今天"
 
-#: ../data/ui/CatfishWindow.ui.h:27
+#: ../data/ui/CatfishWindow.ui.h:28
 msgid "<b>Start Date</b>"
 msgstr "<b>開始日期</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "<b>End Date</b>"
 msgstr "<b>結束日期</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:30
 msgid "Custom File Type"
 msgstr "自定檔案類别"
 
 #. The "mimetype" is the file type of the file, such as "application/octet-stream"
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select existing mimetype"
 msgstr "選擇現有mime類型"
 
 #. Enter "file extensions" such as .doc, .pdf
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "Enter file extensions"
 msgstr "輸入檔案延伸"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "Show in _File Manager"
 msgstr ""
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Copy Location"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Update Search Index"
 msgstr "更新搜尋索引"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "Unlock"
 msgstr "解除鎖定"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "<big><b>Update Search Index</b></big>"
 msgstr "<big><b>更新尋找索引</b></big>"
 
 #. The term "locate" is a commandline application, so it should not be translated.
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid ""
 "To provide accurate results, the <i>locate</i> database needs to be "
 "refreshed.\n"
@@ -173,11 +177,11 @@ msgstr ""
 "為了提供準確结果，<i>位置</i>資料庫需要重新整理。\n"
 "這需要sudo（系统管理員）許可。"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "Updating database…"
 msgstr "更新資料庫中。。。"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "Done."
 msgstr "完成。"
 
@@ -185,77 +189,116 @@ msgstr "完成。"
 msgid "Show debug messages (-vv debugs catfish_lib also)"
 msgstr "顯示解臭蟲信息（-vv也會解臭蟲catfish_lib）"
 
-#: ../catfish/CatfishWindow.py:219
+#: ../catfish/__init__.py:38
+msgid "Use large icons"
+msgstr ""
+
+#: ../catfish/__init__.py:40
+msgid "Use thumbnails"
+msgstr ""
+
+#: ../catfish/__init__.py:42
+msgid "Display time in ISO format"
+msgstr ""
+
+#. Translators: Do not translate PATH, it is a variable.
+#: ../catfish/__init__.py:44
+msgid "Search in folder PATH"
+msgstr ""
+
+#. Translators: Do not translate FILEMAN, it is a variable.
+#: ../catfish/__init__.py:46
+msgid "Use FILEMAN as filemanager"
+msgstr ""
+
+#. Translators: Do not translate WRAPPER, it is a variable.
+#: ../catfish/__init__.py:49
+msgid "Use WRAPPER to open files"
+msgstr ""
+
+#: ../catfish/__init__.py:51
+msgid "Perform exact match"
+msgstr ""
+
+#: ../catfish/__init__.py:53
+msgid "Include hidden files"
+msgstr ""
+
+#: ../catfish/__init__.py:55
+msgid "Perform fulltext search"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:220
 msgid "Preview"
 msgstr "預覽"
 
-#: ../catfish/CatfishWindow.py:222 ../catfish/CatfishWindow.py:226
+#: ../catfish/CatfishWindow.py:223 ../catfish/CatfishWindow.py:227
 msgid "Filename"
 msgstr "檔案名稱"
 
-#: ../catfish/CatfishWindow.py:228
+#: ../catfish/CatfishWindow.py:229
 msgid "Size"
 msgstr "大小"
 
-#: ../catfish/CatfishWindow.py:230
+#: ../catfish/CatfishWindow.py:231
 msgid "Location"
 msgstr "位置"
 
-#: ../catfish/CatfishWindow.py:232
+#: ../catfish/CatfishWindow.py:233
 msgid "Last modified"
 msgstr "最後修改"
 
-#: ../catfish/CatfishWindow.py:284
+#: ../catfish/CatfishWindow.py:285
 msgid "Locate database updated successfully."
 msgstr "成功更新 locate 資料庫。"
 
-#: ../catfish/CatfishWindow.py:286
+#: ../catfish/CatfishWindow.py:287
 msgid "An error occurred while updating locatedb."
 msgstr "更新 locatedb 時發生錯誤。"
 
-#: ../catfish/CatfishWindow.py:288 ../catfish/CatfishWindow.py:292
+#: ../catfish/CatfishWindow.py:289 ../catfish/CatfishWindow.py:293
 msgid "User aborted authentication."
 msgstr "使用者放棄認證。"
 
-#: ../catfish/CatfishWindow.py:290
+#: ../catfish/CatfishWindow.py:291
 msgid "Authentication failed."
 msgstr "認證失敗。"
 
-#: ../catfish/CatfishWindow.py:349 ../catfish/CatfishWindow.py:1236
+#: ../catfish/CatfishWindow.py:350 ../catfish/CatfishWindow.py:1241
 msgid "Clear search terms"
 msgstr "清除搜尋項目"
 
 #. Translators: This message will only appear when trying to open the default file manager but it cannot be found.
-#: ../catfish/CatfishWindow.py:655
+#: ../catfish/CatfishWindow.py:656
 msgid "Catfish could not find the default file manager."
 msgstr ""
 
 #. Translators: This message will only appear when the default application for opening a file cannot be found.
-#: ../catfish/CatfishWindow.py:661
+#: ../catfish/CatfishWindow.py:662
 msgid "Catfish could not find the default open wrapper."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:675
+#: ../catfish/CatfishWindow.py:676
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "無法開啟「%s」。"
 
-#: ../catfish/CatfishWindow.py:713
+#: ../catfish/CatfishWindow.py:714
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "無法儲存「%s」。"
 
-#: ../catfish/CatfishWindow.py:738
+#: ../catfish/CatfishWindow.py:739
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "無法删除「%s」。"
 
-#: ../catfish/CatfishWindow.py:750
+#: ../catfish/CatfishWindow.py:751
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "儲存「%s」為。。。"
 
-#: ../catfish/CatfishWindow.py:777
+#: ../catfish/CatfishWindow.py:778
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -264,7 +307,7 @@ msgstr ""
 "你真的要\n"
 "永遠删除「%s」嗎？"
 
-#: ../catfish/CatfishWindow.py:781
+#: ../catfish/CatfishWindow.py:782
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -273,33 +316,37 @@ msgstr ""
 "你真的要\n"
 "永遠删除%i選擇了的檔案嗎？"
 
-#: ../catfish/CatfishWindow.py:784
+#: ../catfish/CatfishWindow.py:785
 msgid "If you delete a file, it is permanently lost."
 msgstr "如果您將一個檔案刪除，它就永遠被丟失。"
 
-#: ../catfish/CatfishWindow.py:1006 ../catfish/CatfishWindow.py:1218
+#: ../catfish/CatfishWindow.py:1007 ../catfish/CatfishWindow.py:1221
 msgid "No files found."
 msgstr "找不到檔案。"
 
-#: ../catfish/CatfishWindow.py:1008 ../catfish/CatfishWindow.py:1220
+#: ../catfish/CatfishWindow.py:1009 ../catfish/CatfishWindow.py:1223
+msgid "1 file found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1011 ../catfish/CatfishWindow.py:1225
 #, python-format
 msgid "%i files found."
 msgstr "找到%i檔案。"
 
-#: ../catfish/CatfishWindow.py:1125
+#: ../catfish/CatfishWindow.py:1128
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "正在搜尋「%s」"
 
-#: ../catfish/CatfishWindow.py:1127
+#: ../catfish/CatfishWindow.py:1130
 msgid "Searching…"
 msgstr "搜尋中…"
 
-#: ../catfish/CatfishWindow.py:1131
+#: ../catfish/CatfishWindow.py:1134
 msgid "Stop Search"
 msgstr "停止尋找。"
 
-#: ../catfish/CatfishWindow.py:1213
+#: ../catfish/CatfishWindow.py:1216
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "搜尋「%s」的結果"
