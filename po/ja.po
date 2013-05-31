@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-27 12:22-0400\n"
-"PO-Revision-Date: 2013-04-29 04:26+0000\n"
-"Last-Translator: o-157 <Unknown>\n"
+"PO-Revision-Date: 2013-05-30 19:16+0000\n"
+"Last-Translator: Ryan Hagood <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-28 05:56+0000\n"
-"X-Generator: Launchpad (build 16640)\n"
+"X-Launchpad-Export-Date: 2013-05-31 06:16+0000\n"
+"X-Generator: Launchpad (build 16660)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
@@ -69,7 +69,7 @@ msgstr "語句を入れてEnterを押して下さい"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Search terms"
-msgstr ""
+msgstr "検索条件"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "Any time"
@@ -187,46 +187,46 @@ msgstr "完了"
 
 #: ../catfish/__init__.py:35
 msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr ""
+msgstr "デバッグメッセージを表示(-vv  catfish_libもデバッグ)"
 
 #: ../catfish/__init__.py:38
 msgid "Use large icons"
-msgstr ""
+msgstr "大きいなアイコンが使う"
 
 #: ../catfish/__init__.py:40
 msgid "Use thumbnails"
-msgstr ""
+msgstr "サムネが使う"
 
 #: ../catfish/__init__.py:42
 msgid "Display time in ISO format"
-msgstr ""
+msgstr "時間がISO形式を見せる"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:44
 msgid "Search in folder PATH"
-msgstr ""
+msgstr "PATH に捜す。"
 
 #. Translators: Do not translate FILEMAN, it is a variable.
 #: ../catfish/__init__.py:46
 msgid "Use FILEMAN as filemanager"
-msgstr ""
+msgstr "FILEMAN がファイルマネージャ"
 
 #. Translators: Do not translate WRAPPER, it is a variable.
 #: ../catfish/__init__.py:49
 msgid "Use WRAPPER to open files"
-msgstr ""
+msgstr "WRAPPERにはファイルを開けて"
 
 #: ../catfish/__init__.py:51
 msgid "Perform exact match"
-msgstr ""
+msgstr "パーぺきな匹儔"
 
 #: ../catfish/__init__.py:53
 msgid "Include hidden files"
-msgstr ""
+msgstr "隠しファイルを含める"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
-msgstr ""
+msgstr "全文検索する。"
 
 #: ../catfish/CatfishWindow.py:220
 msgid "Preview"
@@ -276,7 +276,7 @@ msgstr "Catfishにはデフォルトのファイルマネージャーが発見�
 #. Translators: This message will only appear when the default application for opening a file cannot be found.
 #: ../catfish/CatfishWindow.py:662
 msgid "Catfish could not find the default open wrapper."
-msgstr ""
+msgstr "Catfishにはデフォルトのオープンラッパーが発見できません。"
 
 #: ../catfish/CatfishWindow.py:676
 #, python-format
@@ -326,7 +326,7 @@ msgstr "ファイルが一つも見つかりません。"
 
 #: ../catfish/CatfishWindow.py:1009 ../catfish/CatfishWindow.py:1223
 msgid "1 file found."
-msgstr ""
+msgstr "一ファイルが見当た。"
 
 #: ../catfish/CatfishWindow.py:1011 ../catfish/CatfishWindow.py:1225
 #, python-format
