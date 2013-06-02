@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-27 12:22-0400\n"
-"PO-Revision-Date: 2013-04-29 19:20+0000\n"
+"PO-Revision-Date: 2013-06-01 15:16+0000\n"
 "Last-Translator: Cristian Marchi <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-28 05:56+0000\n"
-"X-Generator: Launchpad (build 16640)\n"
+"X-Launchpad-Export-Date: 2013-06-02 05:52+0000\n"
+"X-Generator: Launchpad (build 16660)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
@@ -69,7 +69,7 @@ msgstr "Inserire i termini da ricercare e premere INVIO"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Search terms"
-msgstr ""
+msgstr "Termini di ricerca"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "Any time"
@@ -192,42 +192,42 @@ msgstr "Mostra messaggi di debug (-vv debugs catfish_lib)"
 
 #: ../catfish/__init__.py:38
 msgid "Use large icons"
-msgstr ""
+msgstr "Usa icone grandi"
 
 #: ../catfish/__init__.py:40
 msgid "Use thumbnails"
-msgstr ""
+msgstr "Usa miniature"
 
 #: ../catfish/__init__.py:42
 msgid "Display time in ISO format"
-msgstr ""
+msgstr "Mostra l'ora in formato ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:44
 msgid "Search in folder PATH"
-msgstr ""
+msgstr "Cerca nella cartella PATH"
 
 #. Translators: Do not translate FILEMAN, it is a variable.
 #: ../catfish/__init__.py:46
 msgid "Use FILEMAN as filemanager"
-msgstr ""
+msgstr "Usa FILEMAN come gestore dei file"
 
 #. Translators: Do not translate WRAPPER, it is a variable.
 #: ../catfish/__init__.py:49
 msgid "Use WRAPPER to open files"
-msgstr ""
+msgstr "Usa WRAPPER per aprire i file"
 
 #: ../catfish/__init__.py:51
 msgid "Perform exact match"
-msgstr ""
+msgstr "Esegue una corrispondenza esatta"
 
 #: ../catfish/__init__.py:53
 msgid "Include hidden files"
-msgstr ""
+msgstr "Include i file nascosti"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
-msgstr ""
+msgstr "Esegue una ricerca completa"
 
 #: ../catfish/CatfishWindow.py:220
 msgid "Preview"
@@ -329,7 +329,7 @@ msgstr "Nessun file trovato."
 
 #: ../catfish/CatfishWindow.py:1009 ../catfish/CatfishWindow.py:1223
 msgid "1 file found."
-msgstr ""
+msgstr "Trovato 1 file."
 
 #: ../catfish/CatfishWindow.py:1011 ../catfish/CatfishWindow.py:1225
 #, python-format
