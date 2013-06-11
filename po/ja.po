@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-27 12:22-0400\n"
-"PO-Revision-Date: 2013-05-30 19:16+0000\n"
-"Last-Translator: Ryan Hagood <Unknown>\n"
+"PO-Revision-Date: 2013-06-10 09:41+0000\n"
+"Last-Translator: o-157 <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-31 06:16+0000\n"
-"X-Generator: Launchpad (build 16660)\n"
+"X-Launchpad-Export-Date: 2013-06-11 06:12+0000\n"
+"X-Generator: Launchpad (build 16667)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
@@ -191,34 +191,34 @@ msgstr "デバッグメッセージを表示(-vv  catfish_libもデバッグ)"
 
 #: ../catfish/__init__.py:38
 msgid "Use large icons"
-msgstr "大きいなアイコンが使う"
+msgstr "大きいアイコンを使う"
 
 #: ../catfish/__init__.py:40
 msgid "Use thumbnails"
-msgstr "サムネが使う"
+msgstr "サムネイルを使う"
 
 #: ../catfish/__init__.py:42
 msgid "Display time in ISO format"
-msgstr "時間がISO形式を見せる"
+msgstr "ISO形式で時間を表示する"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:44
 msgid "Search in folder PATH"
-msgstr "PATH に捜す。"
+msgstr "PATH フォルダ内で検索"
 
 #. Translators: Do not translate FILEMAN, it is a variable.
 #: ../catfish/__init__.py:46
 msgid "Use FILEMAN as filemanager"
-msgstr "FILEMAN がファイルマネージャ"
+msgstr "ファイルマネージャーとして FILEMAN を使用"
 
 #. Translators: Do not translate WRAPPER, it is a variable.
 #: ../catfish/__init__.py:49
 msgid "Use WRAPPER to open files"
-msgstr "WRAPPERにはファイルを開けて"
+msgstr "ファイルを開くときに WRAPPER を使用"
 
 #: ../catfish/__init__.py:51
 msgid "Perform exact match"
-msgstr "パーぺきな匹儔"
+msgstr "完全一致検索"
 
 #: ../catfish/__init__.py:53
 msgid "Include hidden files"
@@ -226,7 +226,7 @@ msgstr "隠しファイルを含める"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
-msgstr "全文検索する。"
+msgstr "全文検索"
 
 #: ../catfish/CatfishWindow.py:220
 msgid "Preview"
@@ -326,7 +326,7 @@ msgstr "ファイルが一つも見つかりません。"
 
 #: ../catfish/CatfishWindow.py:1009 ../catfish/CatfishWindow.py:1223
 msgid "1 file found."
-msgstr "一ファイルが見当た。"
+msgstr "1つのファイルを発見。"
 
 #: ../catfish/CatfishWindow.py:1011 ../catfish/CatfishWindow.py:1225
 #, python-format
