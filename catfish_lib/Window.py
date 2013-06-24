@@ -95,6 +95,7 @@ class Window(Gtk.Window):
     def on_destroy(self, widget, data=None):
         """Called when the CatfishWindow is closed."""
         self.search_engine.stop()
+        self.settings.write()
         Gtk.main_quit()
 
     def on_appmenu_button_clicked(self, widget):

@@ -34,7 +34,7 @@ import os
 import logging
 logger = logging.getLogger('catfish')
 
-from catfish_lib import Window
+from catfish_lib import Window, CatfishSettings
 from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishSearchEngine import *
 
@@ -158,6 +158,8 @@ class CatfishWindow(Window):
         self.sidebar.get_style_context().connect("changed", 
                                                  self.reload_symbolic_icons, 
                                                  builder)
+                                                 
+        self.settings = CatfishSettings.CatfishSettings()
         
     def reload_symbolic_icons(self, widget, builder):
         """Reload the symbolic icons on GTK or icon theme change."""
@@ -212,8 +214,9 @@ class CatfishWindow(Window):
             
         # Set search defaults.
         self.exact_match.set_active( self.options.exact )
-        self.hidden_files.set_active( self.options.hidden )
+        self.hidden_files.set_active( self.options.hidden or self.settings.get_setting('show-hidden-files') )
         self.fulltext.set_active( self.options.fulltext )
+        self.sidebar_toggle_menu.set_active( self.settings.get_setting('show-sidebar') )
         
         # Set the interface to standard or preview mode.
         if self.options.icons_large or self.options.thumbnails:
@@ -400,7 +403,9 @@ class CatfishWindow(Window):
         
     def on_menu_hidden_files_toggled(self, widget):
         """Toggle the hidden files settings."""
-        self.filter_format_toggled("hidden", widget.get_active())
+        active = widget.get_active()
+        self.filter_format_toggled("hidden", active)
+        self.settings.set_setting('show-hidden-files', active)
         
     def on_menu_fulltext_toggled(self, widget):
         """Toggle the fulltext settings, and restart the search."""
@@ -416,6 +421,7 @@ class CatfishWindow(Window):
     def on_sidebar_toggle_toggled(self, widget):
         """Toggle visibility of the sidebar."""
         active = widget.get_active()
+        self.settings.set_setting('show-sidebar', active)
         if active != self.sidebar.get_visible():
             self.sidebar.set_visible(active)
             
