@@ -1071,20 +1071,43 @@ class CatfishWindow(Window):
 
     def get_thumbnail(self, path, mime_type=None):
         """Try to fetch a thumbnail."""
-        uri = 'file://' + path
         if python3:
-            uri = uri.encode()
+            path = path.encode()
+        thumbnails_directory = os.path.expanduser('~/.thumbnails/normal')
+        uri = 'file://' + path
         md5_hash = hashlib.md5(uri).hexdigest()
-        for thumbnail_path in [os.path.join(self.folder_thumbnails, 'normal'),
-                               os.path.join(self.folder_thumbnails, 'small'),
-                               os.path.join(self.folder_thumbnails, 'large')]:
-            filename = os.path.join(thumbnail_path, '%s.png' % md5_hash)
-            if os.path.isfile(filename):
-                try:
-                    return GdkPixbuf.Pixbuf.new_from_file(filename)
-                except GError:
-                    pass
+        thumbnail_path = os.path.join(thumbnails_directory, '%s.png' % md5_hash)
+        if os.path.isfile(thumbnail_path):
+            try:
+                return GdkPixbuf.Pixbuf.new_from_file(thumbnail_path)
+            except GError:
+                pass
+        if mime_type.startswith('image'):
+            new_thumb = self.create_thumbnail(path, thumbnail_path)
+            if new_thumb:
+                return new_thumb
         return self.get_file_icon(path, mime_type)
+        
+    def create_thumbnail(self, filename, path):
+        try:
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file(filename)
+            pixbuf_w = pixbuf.get_width()
+            pixbuf_h = pixbuf.get_height()
+            if pixbuf_w < 128 and pixbuf_h < 128:
+                pixbuf.savev(path, "png", [], [])
+                return pixbuf
+            if pixbuf_w > pixbuf_h:
+                thumb_w = 128
+                thumb_h = int(pixbuf_h / (pixbuf_w / 128.0))
+            else:
+                thumb_h = 128
+                thumb_w = int(pixbuf_w / (pixbuf_h / 128.0))
+            thumb_pixbuf = pixbuf.scale_simple(thumb_w, thumb_h, GdkPixbuf.InterpType.BILINEAR)
+            thumb_pixbuf.savev(path, "png", [], [])
+            return thumb_pixbuf
+        except Exception as e:
+            print e
+            return None
 
     def get_file_icon(self, path, mime_type=None):
         """Retrieve the file icon."""
