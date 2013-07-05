@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-27 12:22-0400\n"
-"PO-Revision-Date: 2013-05-30 18:55+0000\n"
-"Last-Translator: Sean Davis <Unknown>\n"
+"PO-Revision-Date: 2013-07-04 08:56+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-01 05:35+0000\n"
-"X-Generator: Launchpad (build 16692)\n"
+"X-Launchpad-Export-Date: 2013-07-05 05:59+0000\n"
+"X-Generator: Launchpad (build 16696)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
@@ -192,30 +192,30 @@ msgstr "Mostrar mensajes de depuración (-vv depura catfish_lib también)"
 
 #: ../catfish/__init__.py:38
 msgid "Use large icons"
-msgstr ""
+msgstr "Usar iconos grandes"
 
 #: ../catfish/__init__.py:40
 msgid "Use thumbnails"
-msgstr ""
+msgstr "Usar miniaturas"
 
 #: ../catfish/__init__.py:42
 msgid "Display time in ISO format"
-msgstr ""
+msgstr "Mostrar la hora en formato ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:44
 msgid "Search in folder PATH"
-msgstr ""
+msgstr "Buscar en la carpeta PATH"
 
 #. Translators: Do not translate FILEMAN, it is a variable.
 #: ../catfish/__init__.py:46
 msgid "Use FILEMAN as filemanager"
-msgstr ""
+msgstr "Usar FILEMAN como el gestor de archivos"
 
 #. Translators: Do not translate WRAPPER, it is a variable.
 #: ../catfish/__init__.py:49
 msgid "Use WRAPPER to open files"
-msgstr ""
+msgstr "Usar WRAPPER para abrir los archivos"
 
 #: ../catfish/__init__.py:51
 msgid "Perform exact match"
@@ -327,12 +327,12 @@ msgstr "No se han encontrado archivos."
 
 #: ../catfish/CatfishWindow.py:1009 ../catfish/CatfishWindow.py:1223
 msgid "1 file found."
-msgstr ""
+msgstr "Se ha encontrado 1 archivo."
 
 #: ../catfish/CatfishWindow.py:1011 ../catfish/CatfishWindow.py:1225
 #, python-format
 msgid "%i files found."
-msgstr "%i archivos encontrados."
+msgstr "Se han encontrado %i archivos."
 
 #: ../catfish/CatfishWindow.py:1128
 #, python-format
