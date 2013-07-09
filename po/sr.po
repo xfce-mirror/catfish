@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-27 12:22-0400\n"
-"PO-Revision-Date: 2013-04-02 22:25+0000\n"
+"PO-Revision-Date: 2013-07-09 05:17+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-01 05:35+0000\n"
-"X-Generator: Launchpad (build 16692)\n"
+"X-Launchpad-Export-Date: 2013-07-09 05:43+0000\n"
+"X-Generator: Launchpad (build 16696)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
@@ -69,7 +69,7 @@ msgstr "Унесите услове претраге и притисните В�
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Search terms"
-msgstr ""
+msgstr "Услови претраге"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "Any time"
@@ -192,42 +192,42 @@ msgstr "Приказуј поруке праћења грешака (такођ�
 
 #: ../catfish/__init__.py:38
 msgid "Use large icons"
-msgstr ""
+msgstr "Користи велике иконице"
 
 #: ../catfish/__init__.py:40
 msgid "Use thumbnails"
-msgstr ""
+msgstr "Користи умањене сличице"
 
 #: ../catfish/__init__.py:42
 msgid "Display time in ISO format"
-msgstr ""
+msgstr "Приказуј време у ИСО облику"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:44
 msgid "Search in folder PATH"
-msgstr ""
+msgstr "Тражи у путањи фасцикле"
 
 #. Translators: Do not translate FILEMAN, it is a variable.
 #: ../catfish/__init__.py:46
 msgid "Use FILEMAN as filemanager"
-msgstr ""
+msgstr "Користи FILEMAN као управника датотека"
 
 #. Translators: Do not translate WRAPPER, it is a variable.
 #: ../catfish/__init__.py:49
 msgid "Use WRAPPER to open files"
-msgstr ""
+msgstr "Користи WRAPPER за отварање датотека"
 
 #: ../catfish/__init__.py:51
 msgid "Perform exact match"
-msgstr ""
+msgstr "Изведи потпуно слагање"
 
 #: ../catfish/__init__.py:53
 msgid "Include hidden files"
-msgstr ""
+msgstr "Укључи скривене датотеке"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
-msgstr ""
+msgstr "Изведи потпуну претрагу текста"
 
 #: ../catfish/CatfishWindow.py:220
 msgid "Preview"
@@ -328,7 +328,7 @@ msgstr "Нисам пронашао ни једну датотеку."
 
 #: ../catfish/CatfishWindow.py:1009 ../catfish/CatfishWindow.py:1223
 msgid "1 file found."
-msgstr ""
+msgstr "1 датотека је пронађена."
 
 #: ../catfish/CatfishWindow.py:1011 ../catfish/CatfishWindow.py:1225
 #, python-format
