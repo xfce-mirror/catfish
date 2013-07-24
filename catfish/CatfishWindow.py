@@ -74,9 +74,10 @@ class CatfishWindow(Window):
     start_date = datetime.datetime.now()
     end_date = datetime.datetime.now()
     
-    filter_formats = {  'documents': False, 'images': False, 'music': False,
-                        'videos': False, 'applications': False, 'other': False,
-                        'exact': False, 'hidden': False, 'fulltext': False }
+    filter_formats = {  'documents': False, 'folders': False, 'images': False, 
+                        'music': False, 'videos': False, 'applications': False, 
+                        'other': False, 'exact': False, 'hidden': False, 
+                        'fulltext': False }
                         
     filter_custom_mimetype = {  'category_text': "", 'category_id': -1,
                                 'type_text': "", 'type_id': -1 }
@@ -526,6 +527,9 @@ class CatfishWindow(Window):
     def on_documents_toggled(self, widget):
         self.filter_format_toggled("documents", widget.get_active())
         
+    def on_folders_toggled(self, widget):
+        self.filter_format_toggled("folders", widget.get_active())
+        
     def on_images_toggled(self, widget):
         self.filter_format_toggled("images", widget.get_active())
         
@@ -969,6 +973,10 @@ class CatfishWindow(Window):
         # mimetype
         mimetype = model[iter][5]
         use_filters = False
+        if self.filter_formats['folders']:
+            use_filters = True
+            if mimetype == 'inode/directory':
+                return True
         if self.filter_formats['images']:
             use_filters = True
             if mimetype.startswith("image"):

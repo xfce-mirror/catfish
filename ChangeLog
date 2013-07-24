@@ -1,3 +1,6 @@
+current:
+ + Add Folder filter
+
 v0.6.4:
  + Make singular files found message available.
  + Make Search terms placeholder text translateable (lp 1175201)
