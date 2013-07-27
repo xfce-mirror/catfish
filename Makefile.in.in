@@ -33,6 +33,7 @@ install: all
 	install catfish_lib/AboutDialog.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
 	install catfish_lib/Builder.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
 	install catfish_lib/catfishconfig.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/CatfishSettings.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
 	install catfish_lib/helpers.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
 	install catfish_lib/__init__.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
 	install catfish_lib/Window.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
