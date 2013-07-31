@@ -120,6 +120,7 @@ class CatfishSearchEngine:
         
         file_count = 0
         for method in self.methods:
+            logger.debug (method.method_name)
             for filename in method.run(keywords, path, regex):
                 if isinstance(filename, str) and path in filename:
                     if method.method_name == 'fulltext' or  \

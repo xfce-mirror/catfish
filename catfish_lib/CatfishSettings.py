@@ -33,7 +33,7 @@ class CatfishSettings:
         self.read()
             
     def get_setting(self, key):
-        if self.settings.has_key(key):
+        if key in self.settings:
             return self.settings[key]
         else:
             return None

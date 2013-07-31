@@ -63,6 +63,17 @@ def is_file_hidden(filename):
             return True
         splitpath = os.path.split(splitpath[0])
     return False
+    
+def surrogate_escape(text, replace=False):
+    try:
+        text.encode('utf-8')
+    except UnicodeEncodeError:
+        text = text.encode('utf-8', errors='surrogateescape').decode('utf-8', errors='replace')
+        if replace:
+            text = _("%s (invalid encoding)") % text
+    except UnicodeDecodeError:
+        text = text.decode('utf-8', errors='replace')
+    return text
 
 # See catfish_lib.Window.py for more details about how this class works
 class CatfishWindow(Window):
@@ -705,13 +716,16 @@ class CatfishWindow(Window):
     def on_menu_copy_location_activate(self, widget):
         """Copy the selected file name to the clipboard."""
         clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
-        text = str(os.linesep).join(self.selected_filenames)
+        locations = []
+        for filename in self.selected_filenames:
+            locations.append( surrogate_escape(filename) )
+        text = str(os.linesep).join(locations)
         clipboard.set_text(text, -1)
         clipboard.store()
         
     def on_menu_save_activate(self, widget):
         """Show a save dialog and possibly write the results to a file."""
-        filename = self.get_save_dialog(self.selected_filenames[0])
+        filename = self.get_save_dialog(surrogate_escape(self.selected_filenames[0]))
         if filename:
             try:
                 # Try to save the file.
@@ -761,7 +775,7 @@ class CatfishWindow(Window):
         dialog = Gtk.FileChooserDialog(_('Save "%s" as…') % basename, self,
                                        Gtk.FileChooserAction.SAVE, buttons)
         dialog.set_default_response(Gtk.ResponseType.REJECT)
-        dialog.set_current_name(basename)
+        dialog.set_current_name(basename.replace('�', '_'))
         dialog.set_do_overwrite_confirmation(True)
         response = dialog.run()
         save_as = dialog.get_filename()
@@ -798,7 +812,7 @@ class CatfishWindow(Window):
         dialog = Gtk.MessageDialog(self, 0,
                                    Gtk.MessageType.QUESTION, 
                                    Gtk.ButtonsType.NONE, "")
-        dialog.set_markup(dialog_text)
+        dialog.set_markup(surrogate_escape(dialog_text))
         
         dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.NO,
                            Gtk.STOCK_DELETE, Gtk.ResponseType.YES)
@@ -840,16 +854,9 @@ class CatfishWindow(Window):
         return True
         
     def treemodel_get_row_filename(self, model, row):
-        if self.options.icons_large or self.options.thumbnails:
-            filename = model[row][1].split('\n')[0]
-            filename = filename.split(' ')
-            filename = ' '.join(filename[:len(filename)-2])
-            filename = filename[3:-4]
-            filename = unescape(filename)
-        else:
-            filename = model[row][1]
-        folder = model[row][3]
-        return os.path.join( folder, filename )
+        index = model[row][8]
+        filename = self.file_paths[index]
+        return filename
         
     def treeview_get_selected_rows(self, treeview):
         sel = treeview.get_selection()
@@ -1114,7 +1121,7 @@ class CatfishWindow(Window):
             thumb_pixbuf.savev(path, "png", [], [])
             return thumb_pixbuf
         except Exception as e:
-            print e
+            print (e)
             return None
 
     def get_file_icon(self, path, mime_type=None):
@@ -1178,10 +1185,10 @@ class CatfishWindow(Window):
         # icon, name, size, path, modified, mimetype, hidden, exact
         if python3:
             model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, str, str, float, str, 
-                                  bool, bool)
+                                  bool, bool, int)
         else:
             model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, float, str,
-                                  bool, bool)
+                                  bool, bool, int)
         
         # Initialize the results filter.
         self.results_filter = model.filter_new()
@@ -1195,6 +1202,8 @@ class CatfishWindow(Window):
         folder = self.folderchooser.get_filename()
 
         results = []
+        counter = 0
+        self.file_paths = []
         
         # Check if this is a fulltext query or standard query.
         if self.filter_formats['fulltext']:
@@ -1229,6 +1238,8 @@ class CatfishWindow(Window):
                     exact = keywords in name
                     
                     results.append(filename)
+                    self.file_paths.append(filename)
+                    
                     
                     if self.options.icons_large or self.options.thumbnails:
                         displayed = '<b>%s</b> %s%s%s%s%s' % (escape(name),
@@ -1240,11 +1251,17 @@ class CatfishWindow(Window):
                     else:
                         displayed = name
                         
+                    displayed = surrogate_escape(displayed, True)
+                    path = surrogate_escape(path)
                     model.append([icon, displayed, size, path, modified, 
-                                  mimetype, hidden, exact])
+                                  mimetype, hidden, exact, counter])
                 except OSError:
                     # file no longer exists
                     pass
+                except Exception as e:
+                    logger.error("Exception encountered: ", str(e))
+                counter += 1
+            
             yield True
             continue
         
