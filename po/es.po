@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-23 21:21-0400\n"
-"PO-Revision-Date: 2013-07-04 08:56+0000\n"
+"PO-Revision-Date: 2013-08-04 09:59+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-25 05:41+0000\n"
-"X-Generator: Launchpad (build 16700)\n"
+"X-Launchpad-Export-Date: 2013-08-05 06:18+0000\n"
+"X-Generator: Launchpad (build 16718)\n"
 
 #: ../catfish.desktop.in.h:1
 msgid "Catfish File Search"
@@ -89,7 +89,7 @@ msgstr "Documentos"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Folders"
-msgstr ""
+msgstr "Carpetas"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Images"
@@ -219,7 +219,7 @@ msgstr "Usar WRAPPER para abrir los archivos"
 
 #: ../catfish/__init__.py:51
 msgid "Perform exact match"
-msgstr ""
+msgstr "Realizar coincidencia exacta"
 
 #: ../catfish/__init__.py:53
 msgid "Include hidden files"
@@ -227,7 +227,7 @@ msgstr "Incluir archivos ocultos"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
-msgstr ""
+msgstr "Realizar búsqueda de texto completo"
 
 #: ../catfish/CatfishWindow.py:224
 msgid "Preview"
