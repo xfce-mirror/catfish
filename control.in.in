@@ -3,7 +3,7 @@ Version: @version@
 Section: utils
 Priority: optional
 Architecture: all
-Depends: @python@-gi, gksu, findutils
+Depends: @python@-gi, findutils
 Suggests: @python@-zeitgeist | zeitgeist
 Installed-Size: 347
 Maintainer: Sean Davis <smd.seandavis@gmail.com>

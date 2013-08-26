@@ -36,7 +36,19 @@ install: all
 	install catfish_lib/CatfishSettings.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
 	install catfish_lib/helpers.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
 	install catfish_lib/__init__.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	install catfish_lib/SudoDialog.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
 	install catfish_lib/Window.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib
+	
+	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib/pexpect
+	install catfish_lib/pexpect/ANSI.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib/pexpect
+	install catfish_lib/pexpect/fdpexpect.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib/pexpect
+	install catfish_lib/pexpect/FSM.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib/pexpect
+	install catfish_lib/pexpect/__init__.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib/pexpect
+	install catfish_lib/pexpect/LICENSE $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib/pexpect
+	install catfish_lib/pexpect/psh.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib/pexpect
+	install catfish_lib/pexpect/pxssh.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib/pexpect
+	install catfish_lib/pexpect/README $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib/pexpect
+	install catfish_lib/pexpect/screen.py $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/catfish_lib/pexpect
 	
 	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/data
 	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/data/ui
