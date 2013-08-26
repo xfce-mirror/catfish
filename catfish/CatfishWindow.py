@@ -34,18 +34,17 @@ import os
 import logging
 logger = logging.getLogger('catfish')
 
-from catfish_lib import Window, CatfishSettings
+from catfish_lib import Window, CatfishSettings, SudoDialog, pexpect
 from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishSearchEngine import *
 
-from sys import version_info
-python3 = version_info[0] > 2
+import sys
+pyversion = float(str(sys.version_info[0]) + '.' + str(sys.version_info[1]))
 
 # Initialize Gtk, GObject, and mimetypes
 GObject.threads_init()
 GLib.threads_init()
 mimetypes.init()
-
 
 def application_in_PATH(application_name):
     """Return True if the application name is found in PATH."""
@@ -65,11 +64,14 @@ def is_file_hidden(filename):
     return False
     
 def surrogate_escape(text, replace=False):
+    """Replace non-UTF8 characters with something displayable.
+    If replace is True, display (invalid encoding) after the text."""
     try:
         text.encode('utf-8')
     except UnicodeEncodeError:
         text = text.encode('utf-8', errors='surrogateescape').decode('utf-8', errors='replace')
         if replace:
+            # Translators: this text is displayed next to a filename that is not utf-8 encoded.
             text = _("%s (invalid encoding)") % text
     except UnicodeDecodeError:
         text = text.decode('utf-8', errors='replace')
@@ -284,9 +286,27 @@ class CatfishWindow(Window):
         """Unlock admin rights and perform 'updatedb' query."""
         self.update_index_active = True
         
+        # Get the password for sudo
+        sudo_dialog = SudoDialog.SudoDialog(icon='catfish', name=_("Catfish File Search"), retries=3)
+        sudo_dialog.run()
+        sudo_dialog.hide()
+        password = sudo_dialog.get_password()
+        
+        if not password:
+            self.update_index_active = False
+            self.update_index_done.set_label(_("Authentication failed."))
+            self.update_index_done.show()
+            return False
+        
+        self.update_index_done.hide()
+        
         # Subprocess to check if query has completed yet, runs at end of func.
         def updatedb_subprocess():
-            done = self.updatedb_process.poll() != None
+            try:
+                self.updatedb_process.expect(pexpect.EOF)
+                done = True
+            except pexpect.TIMEOUT:
+                done = False
             if done:
                 self.update_index_active = False
                 self.update_index_close.set_label(Gtk.STOCK_CLOSE)
@@ -295,7 +315,7 @@ class CatfishWindow(Window):
                 self.update_index_close.set_sensitive(True)
                 self.update_index_unlock.hide()
                 self.update_index_unlock.set_sensitive(True)
-                return_code = self.updatedb_process.returncode
+                return_code = self.updatedb_process.exitstatus
                 if return_code == 0:
                     status = _('Locate database updated successfully.')
                 elif return_code == 1:
@@ -305,7 +325,7 @@ class CatfishWindow(Window):
                 elif return_code == 3:
                     status = _("Authentication failed.")
                 else:
-                    status = _("User aborted authentication.")
+                    status = _('Locate database updated successfully.')
                 self.update_index_done.set_label(status)
                 self.update_index_done.show()
             return not done
@@ -315,26 +335,21 @@ class CatfishWindow(Window):
         self.update_index_updating.show()
         self.update_index_close.set_sensitive(False)
         self.update_index_unlock.set_sensitive(False)
-        
-        # Start the query.  Use catfish.desktop to make popup safer-looking.
-        command = ['gksudo', 'updatedb']
-        
-        # Check for installed catfish.desktop file to make popup safer-looking.
-        for path in [os.path.expanduser('~/.local/share/applications'),
-                     '/usr/local/share/applications',
-                     '/usr/share/applications']:
-            desktop_file = os.path.join(path, 'catfish.desktop')
-            if os.path.isfile( desktop_file ):
-                command += ['--desktop', desktop_file]
-                break
             
-        self.updatedb_process = subprocess.Popen(command, 
-                                                 stdout=subprocess.PIPE, 
-                                                 stderr=subprocess.PIPE, 
-                                                 shell=False)
-        
-        # Poll every 1 second for completion.
-        GLib.timeout_add(1000, updatedb_subprocess)
+        self.updatedb_process = pexpect.spawn('sudo updatedb')
+        self.updatedb_process.timeout = 1
+        try:
+            # Check for password prompt or program exit.
+            self.updatedb_process.expect(".*ssword.*")
+            self.updatedb_process.sendline(password)
+            self.updatedb_process.expect(pexpect.EOF)
+        except pexpect.EOF:
+            # shell already has password, or its not needed
+            pass
+        except pexpect.TIMEOUT:
+            # Poll every 1 second for completion.
+            pass
+        GLib.timeout_add(1000, updatedb_subprocess)        
 
     # -- Search Entry -- #
     def on_search_entry_activate(self, widget):
@@ -668,6 +683,7 @@ class CatfishWindow(Window):
             
     def open_file(self, filename):
         """Open the specified filename in its default application."""
+        logger.debug("Opening %s" % filename)
         command = None
         if os.path.isdir(filename):
             if self.options.fileman:
@@ -705,6 +721,7 @@ class CatfishWindow(Window):
         
     def on_menu_filemanager_activate(self, widget):
         """Open the selected file in the default file manager."""
+        logger.debug("Opening file manager for %i path(s)" % len(self.selected_filenames))
         dirs = []
         for filename in self.selected_filenames:
             path = os.path.split(filename)[0]
@@ -715,6 +732,7 @@ class CatfishWindow(Window):
         
     def on_menu_copy_location_activate(self, widget):
         """Copy the selected file name to the clipboard."""
+        logger.debug("Copying %i filename(s) to the clipboard" % len(self.selected_filenames))
         clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         locations = []
         for filename in self.selected_filenames:
@@ -940,7 +958,7 @@ class CatfishWindow(Window):
     def cell_data_func_filesize(self, column, cell_renderer, 
                                 tree_model, tree_iter, id):
         """File size cell display function."""
-        if python3:
+        if pyversion >= 3.0:
             size = int(tree_model.get_value(tree_iter, id))
         else:
             size = long(tree_model.get_value(tree_iter, id))
@@ -1086,7 +1104,7 @@ class CatfishWindow(Window):
 
     def get_thumbnail(self, path, mime_type=None):
         """Try to fetch a thumbnail."""
-        if python3:
+        if pyversion >= 3.0:
             path = path.encode()
         thumbnails_directory = os.path.expanduser('~/.thumbnails/normal')
         uri = 'file://' + path
@@ -1183,18 +1201,14 @@ class CatfishWindow(Window):
         while Gtk.events_pending(): Gtk.main_iteration()
         
         # icon, name, size, path, modified, mimetype, hidden, exact
-        if python3:
-            model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, str, str, float, str, 
-                                  bool, bool, int)
-        else:
-            model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, long, str, float, str,
-                                  bool, bool, int)
+        model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, GObject.TYPE_LONG, str, float, str, 
+                              bool, bool, int)
         
         # Initialize the results filter.
         self.results_filter = model.filter_new()
         self.results_filter.set_visible_func(self.results_filter_func)
         sort = Gtk.TreeModelSort(model=self.results_filter)
-        if python3:
+        if pyversion >= 3.0:
             sort.set_sort_func(2, self.python_three_size_sort_func, None)
         self.treeview.set_model(sort)
         self.treeview.columns_autosize()
@@ -1218,8 +1232,8 @@ class CatfishWindow(Window):
                 try:
                     path, name = os.path.split(filename)
                     
-                    if python3: # FIXME overflows with larger file sizes
-                        size = str(os.path.getsize(filename))
+                    if pyversion >= 3.0:
+                        size = int(os.path.getsize(filename))
                     else:
                         size = long(os.path.getsize(filename))
                         
