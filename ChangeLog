@@ -1,5 +1,10 @@
-current:
+v0.8.0:
  + Add Folder filter
+ + Improved encoding support
+ + Improved Python3 support
+ + Remember sidebar visibility and hidden files toggled (lp 1188954)
+ + Enhanced image thumbnailer (lp 1193311)
+ + Use pexpect and SudoDialog to replace gksu dependency (lp 1202085)
 
 v0.6.4:
  + Make singular files found message available.
