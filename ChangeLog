@@ -1,3 +1,6 @@
+v0.8.1:
+ + Fix python2/3 error that prevented installation (lp 1217507)
+
 v0.8.0:
  + Add Folder filter
  + Improved encoding support
