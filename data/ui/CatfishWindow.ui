@@ -3,81 +3,6 @@
   <!-- interface-requires gtk+ 3.0 -->
   <!-- interface-requires catfish_window 1.0 -->
   <!-- interface-local-resource-path ../media -->
-  <object class="GtkMenu" id="appmenu">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <signal name="hide" handler="on_appmenu_hide" swapped="no"/>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_exact_match">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Exact Match</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_hidden_files">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Hidden Files</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_fulltext">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Fulltext Search</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem1">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_show_advanced">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Show Advanced Settings</property>
-        <property name="use_underline">True</property>
-        <accelerator key="F9" signal="activate"/>
-        <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem2">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_update_index">
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Update Search Index…</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image2</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_update_index_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_about">
-        <property name="label">gtk-about</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="use_stock">True</property>
-        <signal name="activate" handler="on_mnu_about_activate" swapped="no"/>
-      </object>
-    </child>
-  </object>
   <object class="CatfishWindow" id="catfish_window">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Catfish</property>
@@ -140,7 +65,7 @@
                     <property name="tooltip_text" translatable="yes">Enter search terms and press ENTER</property>
                     <property name="invisible_char">•</property>
                     <property name="caps_lock_warning">False</property>
-                    <property name="secondary_icon_stock">gtk-find</property>
+                    <property name="secondary_icon_name">edit-find-symbolic</property>
                     <property name="placeholder_text">Search terms</property>
                     <signal name="changed" handler="on_search_entry_changed" swapped="no"/>
                     <signal name="activate" handler="on_search_entry_activate" swapped="no"/>
@@ -237,6 +162,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
                                                 <property name="icon_name">document-open-recent-symbolic</property>
+                                                <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -287,6 +213,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
                                                 <property name="icon_name">document-open-recent-symbolic</property>
+                                                <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -342,6 +269,7 @@
                                                     <property name="can_focus">False</property>
                                                     <property name="pixel_size">16</property>
                                                     <property name="icon_name">document-open-recent-symbolic</property>
+                                                    <property name="use_fallback">True</property>
                                                   </object>
                                                   <packing>
                                                     <property name="expand">False</property>
@@ -385,6 +313,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
                                                 <property name="icon_name">document-properties-symbolic</property>
+                                                <property name="use_fallback">True</property>
                                               </object>
                                             </child>
                                           </object>
@@ -454,6 +383,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
                                                 <property name="icon_name">text-x-generic-symbolic</property>
+                                                <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -500,6 +430,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
                                                 <property name="icon_name">folder-symbolic</property>
+                                                <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -546,6 +477,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
                                                 <property name="icon_name">camera-photo-symbolic</property>
+                                                <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -592,6 +524,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
                                                 <property name="icon_name">audio-x-generic-symbolic</property>
+                                                <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -638,6 +571,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
                                                 <property name="icon_name">video-x-generic-symbolic</property>
+                                                <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -684,6 +618,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
                                                 <property name="icon_name">applications-utilities-symbolic</property>
+                                                <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -734,6 +669,7 @@
                                                     <property name="can_focus">False</property>
                                                     <property name="pixel_size">16</property>
                                                     <property name="icon_name">list-add-symbolic</property>
+                                                    <property name="use_fallback">True</property>
                                                   </object>
                                                   <packing>
                                                     <property name="expand">False</property>
@@ -776,6 +712,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
                                                 <property name="icon_name">document-properties-symbolic</property>
+                                                <property name="use_fallback">True</property>
                                               </object>
                                             </child>
                                           </object>
@@ -1346,25 +1283,148 @@
   <object class="GtkImage" id="image15">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="stock">gtk-directory</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">folder-symbolic</property>
+    <property name="use_fallback">True</property>
     <property name="icon-size">1</property>
   </object>
   <object class="GtkImage" id="image16">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="stock">gtk-copy</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">edit-copy-symbolic</property>
+    <property name="use_fallback">True</property>
     <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image18">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">22</property>
+    <property name="icon_name">locked</property>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">view-refresh-symbolic</property>
+    <property name="use_fallback">True</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image20">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">gtk-about-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkMenu" id="appmenu">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <signal name="hide" handler="on_appmenu_hide" swapped="no"/>
+    <child>
+      <object class="GtkCheckMenuItem" id="menu_exact_match">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Exact Match</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkCheckMenuItem" id="menu_hidden_files">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Hidden Files</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkCheckMenuItem" id="menu_fulltext">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Fulltext Search</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="menuitem1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkCheckMenuItem" id="menu_show_advanced">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Show Advanced Settings</property>
+        <property name="use_underline">True</property>
+        <accelerator key="F9" signal="activate"/>
+        <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="menuitem2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="menu_update_index">
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Update Search Index…</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">image2</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_update_index_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="menu_about">
+        <property name="label">_About</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">image20</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_mnu_about_activate" swapped="no"/>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image21">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">document-open-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="image22">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">document-save-as-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="image23">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">edit-delete-symbolic</property>
+    <property name="use_fallback">True</property>
   </object>
   <object class="GtkMenu" id="file_menu">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <child>
       <object class="GtkImageMenuItem" id="menu_open">
-        <property name="label">gtk-open</property>
+        <property name="label">_Open</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
-        <property name="use_stock">True</property>
+        <property name="image">image21</property>
+        <property name="use_stock">False</property>
         <signal name="activate" handler="on_menu_open_activate" swapped="no"/>
       </object>
     </child>
@@ -1398,11 +1458,11 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_save">
-        <property name="label">gtk-save-as</property>
+        <property name="label">_Save as...</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="use_stock">True</property>
+        <property name="image">image22</property>
+        <property name="use_stock">False</property>
         <signal name="activate" handler="on_menu_save_activate" swapped="no"/>
       </object>
     </child>
@@ -1414,26 +1474,14 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_delete">
-        <property name="label">gtk-delete</property>
+        <property name="label">_Delete</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="use_stock">True</property>
+        <property name="image">image23</property>
+        <property name="use_stock">False</property>
         <signal name="activate" handler="on_menu_delete_activate" swapped="no"/>
       </object>
     </child>
-  </object>
-  <object class="GtkImage" id="image18">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">22</property>
-    <property name="icon_name">locked</property>
-  </object>
-  <object class="GtkImage" id="image2">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-refresh</property>
-    <property name="icon-size">1</property>
   </object>
   <object class="GtkListStore" id="liststore1"/>
   <object class="GtkDialog" id="update_index_dialog">
