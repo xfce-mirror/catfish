@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-25 21:18-0400\n"
-"PO-Revision-Date: 2013-04-17 13:05+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
+"PO-Revision-Date: 2013-08-29 07:03+0000\n"
+"Last-Translator: Javier Antonio Nisa Avila <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-27 04:57+0000\n"
-"X-Generator: Launchpad (build 16738)\n"
+"X-Launchpad-Export-Date: 2013-08-30 05:22+0000\n"
+"X-Generator: Launchpad (build 16750)\n"
 
 #. Get the password for sudo
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:290
@@ -70,7 +70,7 @@ msgstr "Introduïu termes de cerca i premeu Retorn"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Any time"
-msgstr ""
+msgstr "Qualsevol moment"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "This week"
@@ -82,15 +82,15 @@ msgstr "Personalitzat"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "<b>Modified</b>"
-msgstr ""
+msgstr "<b>Modificat</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Documents"
-msgstr ""
+msgstr "Documents"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Folders"
-msgstr ""
+msgstr "Carpetes"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Images"
@@ -98,11 +98,11 @@ msgstr "Imatges"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "Music"
-msgstr ""
+msgstr "Música"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Videos"
-msgstr ""
+msgstr "Vídeos"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "Applications"
@@ -118,23 +118,23 @@ msgstr "<b>Tipus de fitxer</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "Custom Time Range"
-msgstr ""
+msgstr "Personalitzar Temps"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "Go to Today"
-msgstr ""
+msgstr "Anar a avui"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "<b>Start Date</b>"
-msgstr ""
+msgstr "<b>Data Inici</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgid "<b>End Date</b>"
-msgstr ""
+msgstr "<b>Data Final</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "Custom File Type"
-msgstr ""
+msgstr "Tipus d'arxiu personalitzat"
 
 #. The "mimetype" is the file type of the file, such as "application/octet-stream"
 #: ../data/ui/CatfishWindow.ui.h:32
@@ -158,11 +158,11 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "Update Search Index"
-msgstr ""
+msgstr "Actualitzar indexació de busqueda"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "Unlock"
-msgstr ""
+msgstr "Desbloqueig"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "<big><b>Update Search Index</b></big>"
@@ -178,11 +178,11 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Updating database…"
-msgstr ""
+msgstr "Actualitzant base de dades..."
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Done."
-msgstr ""
+msgstr "Fet"
 
 #: ../catfish/__init__.py:35
 msgid "Show debug messages (-vv debugs catfish_lib also)"
@@ -221,7 +221,7 @@ msgstr ""
 
 #: ../catfish/__init__.py:53
 msgid "Include hidden files"
-msgstr ""
+msgstr "Incloir fitxers ocults"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"

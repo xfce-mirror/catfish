@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-25 21:18-0400\n"
-"PO-Revision-Date: 2013-08-04 09:59+0000\n"
+"PO-Revision-Date: 2013-08-27 23:05+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-27 04:57+0000\n"
+"X-Launchpad-Export-Date: 2013-08-28 05:35+0000\n"
 "X-Generator: Launchpad (build 16738)\n"
 
 #. Get the password for sudo
@@ -234,7 +234,7 @@ msgstr "Realizar búsqueda de texto completo"
 #: ../catfish/CatfishWindow.py:75
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (codif. no válida)"
 
 #: ../catfish/CatfishWindow.py:237
 msgid "Preview"
