@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-25 21:18-0400\n"
-"PO-Revision-Date: 2013-05-28 20:17+0000\n"
-"Last-Translator: chapafogu1nho <4l3m4o.sh@gmail.com>\n"
+"PO-Revision-Date: 2013-09-04 16:02+0000\n"
+"Last-Translator: Rodrigo Zimmermann <bilufe@yahoo.com.br>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-27 04:57+0000\n"
-"X-Generator: Launchpad (build 16738)\n"
+"X-Launchpad-Export-Date: 2013-09-05 05:10+0000\n"
+"X-Generator: Launchpad (build 16758)\n"
 
 #. Get the password for sudo
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:290
@@ -90,7 +90,7 @@ msgstr "Documentos"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Folders"
-msgstr ""
+msgstr "Pastas"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Images"
@@ -193,11 +193,11 @@ msgstr "Mostrar mensagens de debug (-vv debugs catfish_lib também)"
 
 #: ../catfish/__init__.py:38
 msgid "Use large icons"
-msgstr ""
+msgstr "Usar icones grandes"
 
 #: ../catfish/__init__.py:40
 msgid "Use thumbnails"
-msgstr ""
+msgstr "Usar miniaturas"
 
 #: ../catfish/__init__.py:42
 msgid "Display time in ISO format"
@@ -206,12 +206,12 @@ msgstr ""
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:44
 msgid "Search in folder PATH"
-msgstr ""
+msgstr "Procurar na pasta PATH"
 
 #. Translators: Do not translate FILEMAN, it is a variable.
 #: ../catfish/__init__.py:46
 msgid "Use FILEMAN as filemanager"
-msgstr ""
+msgstr "Usar FILEMAN como gerenciador de arquivos"
 
 #. Translators: Do not translate WRAPPER, it is a variable.
 #: ../catfish/__init__.py:49
@@ -224,7 +224,7 @@ msgstr ""
 
 #: ../catfish/__init__.py:53
 msgid "Include hidden files"
-msgstr ""
+msgstr "Incluir arquivos ocultos"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
@@ -334,7 +334,7 @@ msgstr "Nenhum arquivo encontrado."
 
 #: ../catfish/CatfishWindow.py:1048 ../catfish/CatfishWindow.py:1291
 msgid "1 file found."
-msgstr ""
+msgstr "1 arquivo encontrado."
 
 #: ../catfish/CatfishWindow.py:1050 ../catfish/CatfishWindow.py:1293
 #, python-format
