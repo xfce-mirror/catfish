@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-25 21:18-0400\n"
-"PO-Revision-Date: 2013-07-16 14:31+0000\n"
+"PO-Revision-Date: 2013-09-06 02:00+0000\n"
 "Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-27 04:57+0000\n"
-"X-Generator: Launchpad (build 16738)\n"
+"X-Launchpad-Export-Date: 2013-09-06 06:02+0000\n"
+"X-Generator: Launchpad (build 16760)\n"
 
 #. Get the password for sudo
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:290
 msgid "Catfish File Search"
-msgstr "Catfish 檔案搜尋軟體"
+msgstr "Catfish 檔案搜尋"
 
 #: ../catfish.desktop.in.h:2
 msgid "Search the file system"
@@ -90,7 +90,7 @@ msgstr "文件"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Folders"
-msgstr ""
+msgstr "資料夾"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Images"
@@ -176,7 +176,7 @@ msgid ""
 "This requires sudo (admin) rights."
 msgstr ""
 "要重新整理搜尋程式 <i>locate</i> 的資料庫才能提供準確结果。\n"
-"這需要 sudo（系统管理員）許可。"
+"這需要 sudo (系统管理員) 權限。"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Updating database…"
@@ -233,7 +233,7 @@ msgstr "進行全文搜尋"
 #: ../catfish/CatfishWindow.py:75
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (編碼無效)"
 
 #: ../catfish/CatfishWindow.py:237
 msgid "Preview"
