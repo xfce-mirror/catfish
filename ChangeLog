@@ -1,3 +1,6 @@
+v0.8.2:
+ + Fix PyGObject deprecation warning (lp: #1228440)
+
 v0.8.1:
  + Fix python2/3 error that prevented installation (lp 1217507)
 

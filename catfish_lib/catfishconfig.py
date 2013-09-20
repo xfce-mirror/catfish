@@ -27,7 +27,7 @@ __all__ = [
 # files). By default, this is ../data, relative your trunk layout
 __catfish_data_directory__ = '../data/'
 __license__ = 'GPL-2'
-__version__ = '0.8.1'
+__version__ = '0.8.2'
 
 import os
 
