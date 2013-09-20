@@ -42,8 +42,9 @@ import sys
 pyversion = float(str(sys.version_info[0]) + '.' + str(sys.version_info[1]))
 
 # Initialize Gtk, GObject, and mimetypes
-GObject.threads_init()
-GLib.threads_init()
+if GObject.pygobject_version < (3,9,1):
+    GObject.threads_init()
+    GLib.threads_init()
 mimetypes.init()
 
 def application_in_PATH(application_name):

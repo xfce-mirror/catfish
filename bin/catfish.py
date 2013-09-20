@@ -46,6 +46,8 @@ if (os.path.exists(os.path.join(PROJECT_ROOT_DIRECTORY, 'catfish'))
 if python_path:
     os.putenv('PYTHONPATH', "%s:%s" % (os.getenv('PYTHONPATH', ''), ':'.join(python_path))) # for subprocesses
 
-GObject.threads_init()
+if GObject.pygobject_version < (3,9,1):
+    GObject.threads_init()
+
 import catfish
 catfish.main()
