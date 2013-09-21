@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-25 21:18-0400\n"
-"PO-Revision-Date: 2013-06-21 20:37+0000\n"
+"PO-Revision-Date: 2013-09-21 03:08+0000\n"
 "Last-Translator: Jackson Doak <Doak.jackson@gmail.com>\n"
 "Language-Team: English (Australia) <en_AU@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-27 04:57+0000\n"
-"X-Generator: Launchpad (build 16738)\n"
+"X-Launchpad-Export-Date: 2013-09-21 05:56+0000\n"
+"X-Generator: Launchpad (build 16765)\n"
 
 #. Get the password for sudo
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:290
@@ -90,7 +90,7 @@ msgstr "Documents"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Folders"
-msgstr ""
+msgstr "Folders"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Images"
@@ -234,7 +234,7 @@ msgstr "Perform fulltext search"
 #: ../catfish/CatfishWindow.py:75
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (invalid encoding)"
 
 #: ../catfish/CatfishWindow.py:237
 msgid "Preview"
