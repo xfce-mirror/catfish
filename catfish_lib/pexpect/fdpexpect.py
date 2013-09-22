@@ -1,3 +1,4 @@
+#!/usr/bin/python
 """This is like pexpect, but will work on any file descriptor that you pass it.
 So you are reponsible for opening and close the file descriptor.
 

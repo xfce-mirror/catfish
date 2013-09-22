@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """This class extends pexpect.spawn to specialize setting up SSH connections.
 This adds methods for login, logout, and expecting the shell prompt.
 

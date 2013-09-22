@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """This implements a virtual screen. This is used to support ANSI terminal
 emulation. The screen representation and state is implemented in this class.
 Most of the methods are inspired by ANSI screen control codes. The ANSI class

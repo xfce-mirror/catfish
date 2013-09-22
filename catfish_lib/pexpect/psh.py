@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """This is a utility class to make shell scripting easier in Python.
 It combines Pexpect and wraps many Standard Python Library functions
 to make them look more shell-like.

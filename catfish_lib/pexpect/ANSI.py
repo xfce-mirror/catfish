@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """This implements an ANSI (VT100) terminal emulator as a subclass of screen.
 
 $Id: ANSI.py 525 2010-10-31 14:30:37Z noah $
