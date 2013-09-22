@@ -1,3 +1,7 @@
+v0.8.3 (unreleased):
+ + Fix executable-not-elf-or-script when debian packaging
+ + Use "use_underline" property for SaveAs and Delete in popup menu
+
 v0.8.2:
  + Fix PyGObject deprecation warning (lp: #1228440)
  + Add fallback for all symbolic icons used in the application
