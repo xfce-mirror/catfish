@@ -132,9 +132,47 @@ class CatfishWindow(Window):
         self.button_format_custom = builder.get_object("button_format_custom")
         
         # -- Status Bar -- *
-        self.spinner = builder.get_object("spinner")
-        self.statusbar = builder.get_object("statusbar_label")
+        # Create a new GtkOverlay to hold the results list and Overlay Statusbar
+        overlay = Gtk.Overlay()
         
+        # Move the results list to the overlay and place the overlay in the window
+        scrolledwindow = builder.get_object("scrolledwindow2")
+        parent = scrolledwindow.get_parent()
+        scrolledwindow.reparent(overlay)
+        parent.add(overlay)
+        overlay.show()
+        
+        # Create the overlay statusbar
+        self.statusbar = Gtk.EventBox()
+        self.statusbar.get_style_context().add_class("floating-bar")
+        self.statusbar.connect("draw", self.on_floating_bar_draw)
+        self.statusbar.connect("enter-notify-event", self.on_floating_bar_enter_notify)
+        self.statusbar.set_halign(Gtk.Align.START)
+        self.statusbar.set_valign(Gtk.Align.END)
+        
+        # Put the statusbar in the overlay
+        overlay.add_overlay(self.statusbar)
+        
+        # Pack the spinner and label
+        self.spinner = Gtk.Spinner()
+        self.spinner.start()
+        self.statusbar_label = Gtk.Label()
+        self.statusbar_label.show()
+        
+        box = Gtk.Box()
+        box.set_orientation(Gtk.Orientation.HORIZONTAL)
+        box.pack_start(self.spinner, False, False, 0)
+        box.pack_start(self.statusbar_label, False, False, 0)
+        box.set_margin_left(6)
+        box.set_margin_top(3)
+        box.set_margin_right(6)
+        box.set_margin_bottom(3)
+        self.spinner.set_margin_right(3)
+        box.show()
+        
+        self.statusbar.add(box)
+        self.statusbar.show()
+
         # -- Treeview -- #
         self.row_activated = False
         self.treeview = builder.get_object("treeview")
@@ -176,6 +214,30 @@ class CatfishWindow(Window):
                                                  builder)
                                                  
         self.settings = CatfishSettings.CatfishSettings()
+        
+    def on_floating_bar_enter_notify(self, widget, event):
+        if widget.get_halign() == Gtk.Align.START:
+            widget.set_halign(Gtk.Align.END)
+        else:
+            widget.set_halign(Gtk.Align.START)
+        
+    def on_floating_bar_draw(self, widget, cairo_t):
+        context = widget.get_style_context()
+        
+        context.save()
+        context.set_state(widget.get_state_flags())
+        
+        Gtk.render_background(context, cairo_t, 0, 0, 
+                              widget.get_allocated_width(), 
+                              widget.get_allocated_height())
+        
+        Gtk.render_frame(context, cairo_t, 0, 0, 
+                              widget.get_allocated_width(), 
+                              widget.get_allocated_height())
+        
+        context.restore()
+        
+        return False
         
     def reload_symbolic_icons(self, widget, builder):
         """Reload the symbolic icons on GTK or icon theme change."""
@@ -1045,11 +1107,11 @@ class CatfishWindow(Window):
             self.results_filter.refilter()
             n_results = len(self.treeview.get_model())
             if n_results == 0:
-                self.statusbar.set_label( _("No files found.") )
+                self.statusbar_label.set_label( _("No files found.") )
             elif n_results == 1:
-                self.statusbar.set_label( _("1 file found.") )
+                self.statusbar_label.set_label( _("1 file found.") )
             else:
-                self.statusbar.set_label( _("%i files found.") % n_results )
+                self.statusbar_label.set_label( _("%i files found.") % n_results )
         except AttributeError:
             pass
         
@@ -1191,7 +1253,7 @@ class CatfishWindow(Window):
         self.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
         self.set_title( _("Searching for \"%s\"") % keywords )
         self.spinner.show()
-        self.statusbar.set_label( _("Searching…") )
+        self.statusbar_label.set_label( _("Searching…") )
         self.search_entry.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, 
                                               Gtk.STOCK_STOP)
         self.search_entry.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY,
@@ -1288,11 +1350,11 @@ class CatfishWindow(Window):
         
         n_results = len(self.treeview.get_model())
         if n_results == 0:
-            self.statusbar.set_label(_("No files found."))
+            self.statusbar_label.set_label(_("No files found."))
         elif n_results == 1:
-            self.statusbar.set_label( _("1 file found.") )
+            self.statusbar_label.set_label( _("1 file found.") )
         else:
-            self.statusbar.set_label(_("%i files found.") % n_results)
+            self.statusbar_label.set_label(_("%i files found.") % n_results)
             
         self.search_in_progress = False
         if len(self.search_entry.get_text()) == 0:
