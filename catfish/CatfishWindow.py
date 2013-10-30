@@ -257,7 +257,7 @@ class CatfishWindow(Window):
         
         # File format icons
         documents_icon = self.load_symbolic_icon('text-x-generic', 16)
-        photos_icon = self.load_symbolic_icon('camera-photo', 16)
+        photos_icon = self.load_symbolic_icon('image-x-generic', 16)
         music_icon = self.load_symbolic_icon('audio-x-generic', 16)
         videos_icon = self.load_symbolic_icon('video-x-generic', 16)
         apps_icon = self.load_symbolic_icon('applications-utilities', 16)
