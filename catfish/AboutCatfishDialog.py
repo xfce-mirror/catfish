@@ -24,6 +24,7 @@ from catfish_lib.AboutDialog import AboutDialog
 
 # See catfish_lib.AboutDialog.py for more details about how this class works.
 class AboutCatfishDialog(AboutDialog):
+    """Creates the about dialog for catfish"""
     __gtype_name__ = "AboutCatfishDialog"
 
     def finish_initializing(self, builder):  # pylint: disable=E1002
