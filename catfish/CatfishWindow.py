@@ -587,11 +587,12 @@ class CatfishWindow(Window):
         if dialog.run() == Gtk.ResponseType.APPLY:
             # Update the time range filter values.
             start_date = start_calendar.get_date()
-            self.start_date = datetime.datetime(start_date[0], start_date[1]+1,
+            self.start_date = datetime.datetime(start_date[0],
+                                                start_date[1] + 1,
                                                 start_date[2])
 
             end_date = end_calendar.get_date()
-            self.end_date = datetime.datetime(end_date[0], end_date[1]+1,
+            self.end_date = datetime.datetime(end_date[0], end_date[1] + 1,
                                               end_date[2])
 
             self.filter_timerange = (timegm(self.start_date.timetuple()),
@@ -608,11 +609,11 @@ class CatfishWindow(Window):
             self.refilter()
         else:
             # Reset the calendar widgets to their previous values.
-            start_calendar.select_month(self.start_date.month-1,
+            start_calendar.select_month(self.start_date.month - 1,
                                         self.start_date.year)
             start_calendar.select_day(self.start_date.day)
 
-            end_calendar.select_month(self.end_date.month-1,
+            end_calendar.select_month(self.end_date.month - 1,
                                       self.end_date.year)
             end_calendar.select_day(self.end_date.day)
 
@@ -621,7 +622,7 @@ class CatfishWindow(Window):
     def on_calendar_today_button_clicked(self, calendar_widget):
         """Change the calendar widget selected date to today."""
         today = datetime.datetime.now()
-        calendar_widget.select_month(today.month-1, today.year)
+        calendar_widget.select_month(today.month - 1, today.year)
         calendar_widget.select_day(today.day)
 
     # File Type toggles
@@ -782,7 +783,7 @@ class CatfishWindow(Window):
                 msg = _("Catfish could not find the default open wrapper.")
         if command:
             try:
-                p = subprocess.Popen(command, shell=False)
+                subprocess.Popen(command, shell=False)
                 return
             except Exception as msg:
                 logger.debug('Exception encountered while opening %s.' +
@@ -1147,7 +1148,7 @@ class CatfishWindow(Window):
         suffixIndex = 0
         while size > 1024:
             suffixIndex += 1
-            size = size/1024.0
+            size = size / 1024.0
         return "%.*f %s" % (precision, size, suffixes[suffixIndex])
 
     def guess_mimetype(self, filename):

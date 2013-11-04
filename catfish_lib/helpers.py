@@ -47,7 +47,7 @@ def get_builder(builder_file_name):
 def get_media_file(media_file_name):
     media_filename = get_data_file('media', '%s' % (media_file_name,))
     if os.path.exists(media_filename):
-        return "file:///"+media_filename
+        return "file:///" + media_filename
     return None
 
 

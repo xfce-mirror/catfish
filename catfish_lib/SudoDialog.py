@@ -84,7 +84,7 @@ class SudoDialog(Gtk.MessageDialog):
         # Use an alignment to move align the password widgets with the text.
         self.password_alignment = Gtk.Alignment()
         # Make an educated guess about how for to align.
-        left_align = Gtk.icon_size_lookup(Gtk.IconSize.DIALOG)[1]+16
+        left_align = Gtk.icon_size_lookup(Gtk.IconSize.DIALOG)[1] + 16
         self.password_alignment.set_padding(12, 12, left_align, 0)
 
         # Outer password box for incorrect password label and inner widgets.
