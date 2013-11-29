@@ -1,0 +1,353 @@
+# Bulgarian translation for catfish-search
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the catfish-search package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: catfish-search\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-25 21:18-0400\n"
+"PO-Revision-Date: 2013-11-28 13:45+0000\n"
+"Last-Translator: Atanas Kovachki <Unknown>\n"
+"Language-Team: Bulgarian <bg@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-11-29 05:27+0000\n"
+"X-Generator: Launchpad (build 16847)\n"
+
+#. Get the password for sudo
+#: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:290
+msgid "Catfish File Search"
+msgstr "Търсене на файлове Catfish"
+
+#: ../catfish.desktop.in.h:2
+msgid "Search the file system"
+msgstr "Търсене във файловата система"
+
+#: ../data/ui/AboutCatfishDialog.ui.h:1
+msgid "Catfish is a versatile file searching tool."
+msgstr "Catfish е универсален инструмент за търсене на файлове."
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:2
+msgid "_Exact Match"
+msgstr "_Точно совпадение"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:4
+msgid "_Hidden Files"
+msgstr "_Скрити файлове"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:6
+msgid "_Fulltext Search"
+msgstr "_Полнотекстно търсене"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:8
+msgid "_Show Advanced Settings"
+msgstr "Покажи _расширените настройки"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:10
+msgid "_Update Search Index…"
+msgstr "Обнови _индекса за търсене…"
+
+#: ../data/ui/CatfishWindow.ui.h:11
+msgid "Catfish"
+msgstr "Catfish"
+
+#: ../data/ui/CatfishWindow.ui.h:12
+msgid "Select a Directory"
+msgstr "Избери директория"
+
+#: ../data/ui/CatfishWindow.ui.h:13 ../catfish/CatfishWindow.py:377
+#: ../catfish/CatfishWindow.py:1302
+msgid "Enter search terms and press ENTER"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:14
+msgid "Any time"
+msgstr "По всяко време"
+
+#: ../data/ui/CatfishWindow.ui.h:15
+msgid "This week"
+msgstr "Тази седмица"
+
+#: ../data/ui/CatfishWindow.ui.h:16
+msgid "Custom"
+msgstr "Персонализиран"
+
+#: ../data/ui/CatfishWindow.ui.h:17
+msgid "<b>Modified</b>"
+msgstr "<b>Променен</b>"
+
+#: ../data/ui/CatfishWindow.ui.h:18
+msgid "Documents"
+msgstr "Документи"
+
+#: ../data/ui/CatfishWindow.ui.h:19
+msgid "Folders"
+msgstr "Папки"
+
+#: ../data/ui/CatfishWindow.ui.h:20
+msgid "Images"
+msgstr "Изображения"
+
+#: ../data/ui/CatfishWindow.ui.h:21
+msgid "Music"
+msgstr "Музика"
+
+#: ../data/ui/CatfishWindow.ui.h:22
+msgid "Videos"
+msgstr "Видеозаписи"
+
+#: ../data/ui/CatfishWindow.ui.h:23
+msgid "Applications"
+msgstr "Приложения"
+
+#: ../data/ui/CatfishWindow.ui.h:24
+msgid "Other"
+msgstr "Друго"
+
+#: ../data/ui/CatfishWindow.ui.h:25
+msgid "<b>File Type</b>"
+msgstr "<b>Вид на файла</b>"
+
+#: ../data/ui/CatfishWindow.ui.h:26
+msgid "Custom Time Range"
+msgstr "Изберете времеви период"
+
+#: ../data/ui/CatfishWindow.ui.h:27
+msgid "Go to Today"
+msgstr "Днес"
+
+#: ../data/ui/CatfishWindow.ui.h:28
+msgid "<b>Start Date</b>"
+msgstr "<b>Начална дата</b>"
+
+#: ../data/ui/CatfishWindow.ui.h:29
+msgid "<b>End Date</b>"
+msgstr "<b>Крайна дата</b>"
+
+#: ../data/ui/CatfishWindow.ui.h:30
+msgid "Custom File Type"
+msgstr "Изберете вида на файла"
+
+#. The "mimetype" is the file type of the file, such as "application/octet-stream"
+#: ../data/ui/CatfishWindow.ui.h:32
+msgid "Select existing mimetype"
+msgstr ""
+
+#. Enter "file extensions" such as .doc, .pdf
+#: ../data/ui/CatfishWindow.ui.h:34
+msgid "Enter file extensions"
+msgstr "Въведете разширението на файла"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#: ../data/ui/CatfishWindow.ui.h:36
+msgid "Show in _File Manager"
+msgstr ""
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#: ../data/ui/CatfishWindow.ui.h:38
+msgid "_Copy Location"
+msgstr "_Копирай местоположението"
+
+#: ../data/ui/CatfishWindow.ui.h:39
+msgid "Update Search Index"
+msgstr "Обнови индекса за търсене"
+
+#: ../data/ui/CatfishWindow.ui.h:40
+msgid "Unlock"
+msgstr "Отключи"
+
+#: ../data/ui/CatfishWindow.ui.h:41
+msgid "<big><b>Update Search Index</b></big>"
+msgstr "<big><b>Обновяване на индекса за търсене</b></big>"
+
+#. The term "locate" is a commandline application, so it should not be translated.
+#: ../data/ui/CatfishWindow.ui.h:43
+msgid ""
+"To provide accurate results, the <i>locate</i> database needs to be "
+"refreshed.\n"
+"This requires sudo (admin) rights."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:45
+msgid "Updating database…"
+msgstr "Обновяване на базата данни..."
+
+#: ../data/ui/CatfishWindow.ui.h:46
+msgid "Done."
+msgstr "Готово."
+
+#: ../catfish/__init__.py:35
+msgid "Show debug messages (-vv debugs catfish_lib also)"
+msgstr ""
+
+#: ../catfish/__init__.py:38
+msgid "Use large icons"
+msgstr "Използвай големи икони"
+
+#: ../catfish/__init__.py:40
+msgid "Use thumbnails"
+msgstr ""
+
+#: ../catfish/__init__.py:42
+msgid "Display time in ISO format"
+msgstr ""
+
+#. Translators: Do not translate PATH, it is a variable.
+#: ../catfish/__init__.py:44
+msgid "Search in folder PATH"
+msgstr ""
+
+#. Translators: Do not translate FILEMAN, it is a variable.
+#: ../catfish/__init__.py:46
+msgid "Use FILEMAN as filemanager"
+msgstr ""
+
+#. Translators: Do not translate WRAPPER, it is a variable.
+#: ../catfish/__init__.py:49
+msgid "Use WRAPPER to open files"
+msgstr ""
+
+#: ../catfish/__init__.py:51
+msgid "Perform exact match"
+msgstr ""
+
+#: ../catfish/__init__.py:53
+msgid "Include hidden files"
+msgstr ""
+
+#: ../catfish/__init__.py:55
+msgid "Perform fulltext search"
+msgstr ""
+
+#. Translators: this text is displayed next to a filename that is not utf-8 encoded.
+#: ../catfish/CatfishWindow.py:75
+#, python-format
+msgid "%s (invalid encoding)"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:237
+msgid "Preview"
+msgstr "Преглед"
+
+#: ../catfish/CatfishWindow.py:240 ../catfish/CatfishWindow.py:244
+msgid "Filename"
+msgstr "Име на файла"
+
+#: ../catfish/CatfishWindow.py:246
+msgid "Size"
+msgstr "Размер на файла"
+
+#: ../catfish/CatfishWindow.py:248
+msgid "Location"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:250
+msgid "Last modified"
+msgstr "Последна промяна"
+
+#: ../catfish/CatfishWindow.py:297 ../catfish/CatfishWindow.py:326
+msgid "Authentication failed."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:320 ../catfish/CatfishWindow.py:328
+msgid "Locate database updated successfully."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:322
+msgid "An error occurred while updating locatedb."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:324
+msgid "User aborted authentication."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:380 ../catfish/CatfishWindow.py:1309
+msgid "Clear search terms"
+msgstr ""
+
+#. Translators: This message will only appear when trying to open the default file manager but it cannot be found.
+#: ../catfish/CatfishWindow.py:693
+msgid "Catfish could not find the default file manager."
+msgstr ""
+
+#. Translators: This message will only appear when the default application for opening a file cannot be found.
+#: ../catfish/CatfishWindow.py:699
+msgid "Catfish could not find the default open wrapper."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:713
+#, python-format
+msgid "\"%s\" could not be opened."
+msgstr "\"%s\" не може да се отвори."
+
+#: ../catfish/CatfishWindow.py:756
+#, python-format
+msgid "\"%s\" could not be saved."
+msgstr "«%s» не може да се съхрани."
+
+#: ../catfish/CatfishWindow.py:781
+#, python-format
+msgid "\"%s\" could not be deleted."
+msgstr "«%s» не може да се изтрие."
+
+#: ../catfish/CatfishWindow.py:793
+#, python-format
+msgid "Save \"%s\" as…"
+msgstr "Съхрани «%s» като…"
+
+#: ../catfish/CatfishWindow.py:820
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete \"%s\"?"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:824
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete the %i selected files?"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:827
+msgid "If you delete a file, it is permanently lost."
+msgstr "Ако изтриете файла, той ще е безвъзвратно изгубен."
+
+#: ../catfish/CatfishWindow.py:1046 ../catfish/CatfishWindow.py:1289
+msgid "No files found."
+msgstr "Не са открити файлове."
+
+#: ../catfish/CatfishWindow.py:1048 ../catfish/CatfishWindow.py:1291
+msgid "1 file found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1050 ../catfish/CatfishWindow.py:1293
+#, python-format
+msgid "%i files found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1190
+#, python-format
+msgid "Searching for \"%s\""
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1192
+msgid "Searching…"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1196
+msgid "Stop Search"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1284
+#, python-format
+msgid "Search results for \"%s\""
+msgstr ""
