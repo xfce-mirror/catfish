@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-25 21:18-0400\n"
-"PO-Revision-Date: 2013-08-29 07:03+0000\n"
-"Last-Translator: Javier Antonio Nisa Avila <Unknown>\n"
+"PO-Revision-Date: 2013-12-07 12:38+0000\n"
+"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-24 05:44+0000\n"
-"X-Generator: Launchpad (build 16831)\n"
+"X-Launchpad-Export-Date: 2013-12-08 05:42+0000\n"
+"X-Generator: Launchpad (build 16869)\n"
 
 #. Get the password for sudo
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:290
@@ -118,55 +118,55 @@ msgstr "<b>Tipus de fitxer</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "Custom Time Range"
-msgstr "Personalitzar Temps"
+msgstr "Altre interval de temps"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "Go to Today"
-msgstr "Anar a avui"
+msgstr "Vés a avui"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "<b>Start Date</b>"
-msgstr "<b>Data Inici</b>"
+msgstr "<b>Data d’inici</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgid "<b>End Date</b>"
-msgstr "<b>Data Final</b>"
+msgstr "<b>Data final</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "Custom File Type"
-msgstr "Tipus d'arxiu personalitzat"
+msgstr "Tipus de fitxer personalitzat"
 
 #. The "mimetype" is the file type of the file, such as "application/octet-stream"
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select existing mimetype"
-msgstr ""
+msgstr "Trieu un tipus MIME existent"
 
 #. Enter "file extensions" such as .doc, .pdf
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Enter file extensions"
-msgstr ""
+msgstr "Introduïu extensions de fitxer"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Show in _File Manager"
-msgstr ""
+msgstr "Mostra-ho al gestor de _fitxers"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Copy Location"
-msgstr ""
+msgstr "_Copia la ubicació"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "Update Search Index"
-msgstr "Actualitzar indexació de busqueda"
+msgstr "Actualitza l’índex de la cerca"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "Unlock"
-msgstr "Desbloqueig"
+msgstr "Desbloca-ho"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "<big><b>Update Search Index</b></big>"
-msgstr ""
+msgstr "<big><b>Actualitza l’índex de la cerca</b></big>"
 
 #. The term "locate" is a commandline application, so it should not be translated.
 #: ../data/ui/CatfishWindow.ui.h:43
@@ -175,10 +175,13 @@ msgid ""
 "refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
+"Per proporcionar dades precises, heu d’actualitzar la base de dades del "
+"<i>locate</i>.\n"
+"Aquesta acció necessita privilegis administratius (sudo)."
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Updating database…"
-msgstr "Actualitzant base de dades..."
+msgstr "S’està actualitzant la base de dades…"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Done."
@@ -221,25 +224,25 @@ msgstr ""
 
 #: ../catfish/__init__.py:53
 msgid "Include hidden files"
-msgstr "Incloir fitxers ocults"
+msgstr "Inclou els fitxers ocults"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
-msgstr ""
+msgstr "Realitza una cerca de text complet"
 
 #. Translators: this text is displayed next to a filename that is not utf-8 encoded.
 #: ../catfish/CatfishWindow.py:75
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (codificació no vàlida)"
 
 #: ../catfish/CatfishWindow.py:237
 msgid "Preview"
-msgstr ""
+msgstr "Previsualitza"
 
 #: ../catfish/CatfishWindow.py:240 ../catfish/CatfishWindow.py:244
 msgid "Filename"
-msgstr ""
+msgstr "Nom del fitxer"
 
 #: ../catfish/CatfishWindow.py:246
 msgid "Size"
@@ -263,11 +266,11 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:322
 msgid "An error occurred while updating locatedb."
-msgstr ""
+msgstr "S’ha produït un error en actualitzar locatedb."
 
 #: ../catfish/CatfishWindow.py:324
 msgid "User aborted authentication."
-msgstr ""
+msgstr "L’usuari ha interromput l’autenticació."
 
 #: ../catfish/CatfishWindow.py:380 ../catfish/CatfishWindow.py:1309
 msgid "Clear search terms"
@@ -301,7 +304,7 @@ msgstr "No s’ha pogut suprimir «%s»."
 #: ../catfish/CatfishWindow.py:793
 #, python-format
 msgid "Save \"%s\" as…"
-msgstr "Desa «%s» com…"
+msgstr "Anomena i desa «%s»…"
 
 #: ../catfish/CatfishWindow.py:820
 #, python-format
@@ -331,7 +334,7 @@ msgstr "No s’ha trobat cap fitxer."
 
 #: ../catfish/CatfishWindow.py:1048 ../catfish/CatfishWindow.py:1291
 msgid "1 file found."
-msgstr ""
+msgstr "S’ha trobat un fitxer."
 
 #: ../catfish/CatfishWindow.py:1050 ../catfish/CatfishWindow.py:1293
 #, python-format
@@ -349,7 +352,7 @@ msgstr "S’està cercant…"
 
 #: ../catfish/CatfishWindow.py:1196
 msgid "Stop Search"
-msgstr ""
+msgstr "Atura la cerca"
 
 #: ../catfish/CatfishWindow.py:1284
 #, python-format
