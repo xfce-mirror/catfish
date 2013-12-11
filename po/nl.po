@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-25 21:18-0400\n"
-"PO-Revision-Date: 2013-10-09 19:32+0000\n"
+"PO-Revision-Date: 2013-12-09 22:43+0000\n"
 "Last-Translator: Pjotr12345 <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-24 05:44+0000\n"
-"X-Generator: Launchpad (build 16831)\n"
+"X-Launchpad-Export-Date: 2013-12-11 06:23+0000\n"
+"X-Generator: Launchpad (build 16869)\n"
 
 #. Get the password for sudo
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:290
@@ -53,7 +53,7 @@ msgstr "Toon de _geavanceerde instellingen"
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "_Update Search Index…"
-msgstr "Zoekindex _opnieuw samenstellen ..."
+msgstr "Zoekindex bijwerken..."
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "Catfish"
@@ -82,7 +82,7 @@ msgstr "Aangepast"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "<b>Modified</b>"
-msgstr "<b>Aangepast</b>"
+msgstr "<b>Veranderd</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Documents"
@@ -263,7 +263,7 @@ msgstr "Authenticatie is mislukt."
 
 #: ../catfish/CatfishWindow.py:320 ../catfish/CatfishWindow.py:328
 msgid "Locate database updated successfully."
-msgstr "Gegevensbank op harde schijf met succes bijgewerkt."
+msgstr "Gegevensbank op harde schijf is met succes bijgewerkt."
 
 #: ../catfish/CatfishWindow.py:322
 msgid "An error occurred while updating locatedb."
