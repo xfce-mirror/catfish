@@ -43,8 +43,8 @@ def get_builder(builder_file_name):
     return builder
 
 
-# Owais Lone : To get quick access to icons and stuff.
 def get_media_file(media_file_name):
+    """Return the path to the specified media file."""
     media_filename = get_data_file('media', '%s' % (media_file_name,))
     if os.path.exists(media_filename):
         return "file:///" + media_filename
@@ -52,11 +52,14 @@ def get_media_file(media_file_name):
 
 
 class NullHandler(logging.Handler):
+    """NullHander class."""
     def emit(self, record):
+        """Prohibit emission of signals."""
         pass
 
 
 def set_up_logging(opts):
+    """Set up the logging formatter."""
     # add a handler to prevent basicConfig
     root = logging.getLogger()
     null_handler = NullHandler()
@@ -90,6 +93,7 @@ def set_up_logging(opts):
 
 
 def get_help_uri(page=None):
+    """Return the URI for the documentation."""
     # help_uri from source tree - default language
     here = os.path.dirname(__file__)
     help_uri = os.path.abspath(os.path.join(here, '..', 'help', 'C'))
@@ -106,6 +110,7 @@ def get_help_uri(page=None):
 
 
 def show_uri(parent, link):
+    """Open the specified URI."""
     from gi.repository import Gtk  # pylint: disable=E0611
     screen = parent.get_screen()
     Gtk.show_uri(screen, link, Gtk.get_current_event_time())

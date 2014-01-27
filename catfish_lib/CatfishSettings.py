@@ -24,7 +24,9 @@ default_settings = {'show-hidden-files': False, 'show-sidebar': False}
 
 
 class CatfishSettings:
+    """CatfishSettings rc-file management."""
     def __init__(self, settings_file=default_settings_file):
+        """Initialize the CatfishSettings instance."""
         try:
             settings_dir = os.path.dirname(settings_file)
             if not os.path.exists(settings_dir):
@@ -35,18 +37,21 @@ class CatfishSettings:
         self.read()
 
     def get_setting(self, key):
+        """Return current setting for specified key."""
         if key in self.settings:
             return self.settings[key]
         else:
             return None
 
     def set_setting(self, key, value):
+        """Set the value for the specified key."""
         if key in self.settings:
             self.settings[key] = value
         else:
             pass
 
     def read(self):
+        """Read the settings rc-file into this settings instance."""
         self.settings = default_settings.copy()
         if os.path.isfile(self.settings_file):
             for line in open(self.settings_file):
@@ -61,9 +66,10 @@ class CatfishSettings:
                         pass
 
     def write(self):
+        """Write the current settings to the settings rc-file."""
         if self.settings_file:
             write_file = open(self.settings_file, 'w')
-            for key in self.settings.keys():
+            for key in list(self.settings.keys()):
                 value = self.settings[key]
                 if isinstance(value, bool):
                     value = str(value).lower()

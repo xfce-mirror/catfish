@@ -22,6 +22,7 @@ if len(sys.argv) < 2:
     print('No arguments supplied.')
     sys.exit(1)
 
+#lint:disable
 if sys.argv[1] == 'check':
     print('Checking module dependencies...')
     try:
@@ -40,15 +41,16 @@ if sys.argv[1] == 'check':
         from xml.sax.saxutils import escape, unescape
         from gi.repository import GObject, Gtk, Gdk, GdkPixbuf, Pango
         import zeitgeist  # optional
+#lint:enable
 
     except ImportError as msg:
-        print (str(msg))
+        print((str(msg)))
         module = str(msg).split()[-1]
         if not module in ('zeitgeist'):
-            print ('...Error: The required module %s is missing.' % module)
+            print(('...Error: The required module %s is missing.' % module))
             sys.exit(1)
         else:
-            print ('...Warning: The optional module %s is missing.' % module)
+            print(('...Warning: The optional module %s is missing.' % module))
     print ('...OK')
 
 elif sys.argv[1] == 'build':
@@ -57,14 +59,14 @@ elif sys.argv[1] == 'build':
     for filename in os.listdir('catfish_lib'):
         filename = 'catfish_lib/' + filename
         if filename.endswith('.py'):
-            print ('Compiling %s ...' % filename)
-            py_compile.compile(filename, filename+'c')
+            print(('Compiling %s ...' % filename))
+            py_compile.compile(filename, filename + 'c')
 
     for filename in os.listdir('catfish'):
         filename = 'catfish/' + filename
         if filename.endswith('.py'):
-            print ('Compiling %s ...' % filename)
-            py_compile.compile(filename, filename+'c')
+            print(('Compiling %s ...' % filename))
+            py_compile.compile(filename, filename + 'c')
 
     print ('Compiling bin/catfish ...')
     py_compile.compile('bin/catfish.py', 'bin/catfish.pyc')

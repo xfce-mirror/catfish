@@ -89,6 +89,7 @@ def surrogate_escape(text, replace=False):
 
 # See catfish_lib.Window.py for more details about how this class works
 class CatfishWindow(Window):
+    """The application window."""
     __gtype_name__ = "CatfishWindow"
 
     folder_thumbnails = os.path.expanduser('~/.thumbnails/')
@@ -228,12 +229,14 @@ class CatfishWindow(Window):
         self.settings = CatfishSettings.CatfishSettings()
 
     def on_floating_bar_enter_notify(self, widget, event):
+        """Move the floating statusbar when hovered."""
         if widget.get_halign() == Gtk.Align.START:
             widget.set_halign(Gtk.Align.END)
         else:
             widget.set_halign(Gtk.Align.START)
 
     def on_floating_bar_draw(self, widget, cairo_t):
+        """Draw the floating statusbar."""
         context = widget.get_style_context()
 
         context.save()
@@ -383,6 +386,7 @@ class CatfishWindow(Window):
 
         # Subprocess to check if query has completed yet, runs at end of func.
         def updatedb_subprocess():
+            """Subprocess run for the updatedb command."""
             try:
                 self.updatedb_process.expect(pexpect.EOF)
                 done = True
@@ -629,29 +633,37 @@ class CatfishWindow(Window):
 
     # File Type toggles
     def filter_format_toggled(self, filter_format, enabled):
+        """Update search filter when formats are modified."""
         self.filter_formats[filter_format] = enabled
         logger.debug("File type filters updated: %s", str(self.filter_formats))
         self.refilter()
 
     def on_documents_toggled(self, widget):
+        """Update search filter when documents is toggled."""
         self.filter_format_toggled("documents", widget.get_active())
 
     def on_folders_toggled(self, widget):
+        """Update search filter when folders is toggled."""
         self.filter_format_toggled("folders", widget.get_active())
 
     def on_images_toggled(self, widget):
+        """Update search filter when images is toggled."""
         self.filter_format_toggled("images", widget.get_active())
 
     def on_music_toggled(self, widget):
+        """Update search filter when music is toggled."""
         self.filter_format_toggled("music", widget.get_active())
 
     def on_videos_toggled(self, widget):
+        """Update search filter when videos is toggled."""
         self.filter_format_toggled("videos", widget.get_active())
 
     def on_applications_toggled(self, widget):
+        """Update search filter when applications is toggled."""
         self.filter_format_toggled("applications", widget.get_active())
 
     def on_other_format_toggled(self, widget):
+        """Update search filter when other format is toggled."""
         active = widget.get_active()
         self.filter_format_toggled("other", active)
         self.button_format_custom.set_sensitive(active)
@@ -675,18 +687,18 @@ class CatfishWindow(Window):
 
         # Lazily load the mimetypes.
         if len(self.mimetypes) == 0:
-            mimes = mimetypes.types_map.values()
+            mimes = list(mimetypes.types_map.values())
             if not isinstance(mimes, list):
                 mimes = list(mimes)
             mimes.sort()
             for mime in mimes:
                 category, mimetype = str(mime).split("/")
-                if category not in self.mimetypes.keys():
+                if category not in list(self.mimetypes.keys()):
                     self.mimetypes[category] = []
                 if mimetype not in self.mimetypes[category]:
                     self.mimetypes[category].append(mimetype)
 
-            keys = self.mimetypes.keys()
+            keys = list(self.mimetypes.keys())
             if not isinstance(keys, list):
                 keys = list(keys)
             keys.sort()
@@ -745,9 +757,11 @@ class CatfishWindow(Window):
         dialog.hide()
 
     def on_radio_custom_mimetype_toggled(self, widget):
+        """Make widgets sensitive when radio buttons are toggled."""
         self.format_mimetype_box.set_sensitive(widget.get_active())
 
     def on_radio_custom_extensions_toggled(self, widget):
+        """Make widgets sensitive when radio buttons are toggled."""
         self.extensions_entry.set_sensitive(widget.get_active())
 
     def on_mimetype_categories_changed(self, combobox):
@@ -947,6 +961,7 @@ class CatfishWindow(Window):
         self.open_file(self.selected_filenames[0])
 
     def on_treeview_drag_begin(self, treeview, context):
+        """Treeview DND Begin."""
         if len(self.selected_filenames) > 1:
             treesel = treeview.get_selection()
             for row in self.rows:
@@ -955,16 +970,19 @@ class CatfishWindow(Window):
 
     def on_treeview_drag_data_get(self, treeview, context, selection, info,
                                   time):
+        """Treeview DND Get."""
         text = str(os.linesep).join(self.selected_filenames)
         selection.set_text(text, -1)
         return True
 
     def treemodel_get_row_filename(self, model, row):
+        """Get the filename from a specified row."""
         index = model[row][8]
         filename = self.file_paths[index]
         return filename
 
     def treeview_get_selected_rows(self, treeview):
+        """Get the currently selected rows from the specified treeview."""
         sel = treeview.get_selection()
         model, rows = sel.get_selected_rows()
         data = []
@@ -1216,6 +1234,7 @@ class CatfishWindow(Window):
         return self.get_file_icon(path, mime_type)
 
     def create_thumbnail(self, filename, path):
+        """Create a thumbnail image and save it to the thumbnails directory."""
         try:
             pixbuf = GdkPixbuf.Pixbuf.new_from_file(filename)
             pixbuf_w = pixbuf.get_width()
@@ -1265,6 +1284,7 @@ class CatfishWindow(Window):
         return self.get_icon_pixbuf(icon_name)
 
     def python_three_size_sort_func(self, model, row1, row2, user_data):
+        """Sort function used in Python 3."""
         sort_column = 2
         value1 = int(model.get_value(row1, sort_column))
         value2 = int(model.get_value(row2, sort_column))

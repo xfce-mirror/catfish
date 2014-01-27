@@ -177,6 +177,7 @@ class CatfishSearchEngine:
                 yield False
 
     def set_exact(self, exact):
+        """Set method for exact"""
         # Only for fulltext engine
         for method in self.methods:
             method.exact = exact
@@ -192,15 +193,19 @@ class CatfishSearchMethod:
     methods."""
 
     def __init__(self, method_name):
+        """Base CatfishSearchMethod Initializer."""
         self.method_name = method_name
 
     def run(self, keywords, path, regex=False):
+        """Base CatfishSearchMethod run method."""
         return NotImplemented
 
     def stop(self):
+        """Base CatfishSearchMethod stop method."""
         return NotImplemented
 
     def is_running(self):
+        """Base CatfishSearchMethod is_running method."""
         return False
 
 
@@ -341,9 +346,11 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
     """Search Method utilziing python's Zeitgeist integration.  This is used
     to provide the fastest results, usually benefitting search suggestions."""
     def __init__(self):
+        """Initialize the Zeitgeist SearchMethod."""
         CatfishSearchMethod.__init__(self, "zeitgeist")
 
     def run(self, keywords, path, regex=False):
+        """Run the Zeitgeist SearchMethod."""
         self.stop_search = False
         event_template = Event()
         time_range = TimeRange.from_seconds_ago(60 * 3600 * 24)
@@ -376,9 +383,11 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
         self.stop_search = True
 
     def stop(self):
+        """Stop the Zeitgeist SearchMethod."""
         self.stop_search = True
 
     def is_running(self):
+        """Return True if the Zeitgeist SearchMethod is running."""
         return self.stop_search is False
 
 
@@ -394,6 +403,7 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
         self.process = None
 
     def assemble_query(self, keywords, path):
+        """Base assemble_query method."""
         return None
 
     def run(self, keywords, path, regex=False):
@@ -416,16 +426,18 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
         return self.process_output(self.process.stdout)
 
     def process_output(self, output):
+        """Return the output text."""
         return output
 
     def status(self):
+        """Return the current search status."""
         try:
             return self.process.poll()
         except AttributeError:
             return None
 
     def stop(self):
-        # Kill the command thread.
+        """Stop the command thread."""
         if self.process:
             self.process.terminate()
         if self.pid > 0:
@@ -436,14 +448,17 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
             self.pid = 0
 
     def is_running(self):
+        """Return True if the query is running."""
         return self.status() is not None
 
 
 class CatfishSearchMethod_Locate(CatfishSearchMethodExternal):
     """External Search Method utilizing the system command 'locate'."""
     def __init__(self):
+        """Initialize the Locate SearchMethod."""
         CatfishSearchMethodExternal.__init__(self, "locate")
         self.command = "locate -i %path*%keywords* --existing"
 
     def assemble_query(self, keywords, path):
+        """Assemble the search query."""
         return "locate --regex -i \"%s\"" % string_regex(keywords, path)

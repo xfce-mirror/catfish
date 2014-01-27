@@ -46,6 +46,7 @@ class SudoDialog(Gtk.MessageDialog):
     '''
     def __init__(self, parent=None, icon=None, message=None, name=None,
                  retries=-1):
+        """Initialize the SudoDialog."""
         # default dialog parameters
         flags = Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT
         message_type = Gtk.MessageType.QUESTION
