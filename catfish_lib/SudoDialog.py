@@ -21,7 +21,7 @@ import os
 
 from locale import gettext as _
 
-from . import pexpect
+import pexpect
 
 
 class SudoDialog(Gtk.MessageDialog):

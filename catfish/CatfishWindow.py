@@ -35,9 +35,11 @@ import os
 import logging
 logger = logging.getLogger('catfish')
 
-from catfish_lib import Window, CatfishSettings, SudoDialog, pexpect
+from catfish_lib import Window, CatfishSettings, SudoDialog
 from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishSearchEngine import *
+
+import pexpect
 
 import sys
 pyversion = float(str(sys.version_info[0]) + '.' + str(sys.version_info[1]))
