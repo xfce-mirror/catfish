@@ -1,6 +1,6 @@
 Catfish is a handy file searching tool for linux and unix. The interface is intentionally lightweight and simple, using only GTK+3. You can configure it to your needs by using several command line options.
 
-Dependencies: python-gi, gksu, python-pexpect
+Dependencies: python-gi, gksu, python-pexpect, locate | mlocate
 
 For installation instructions read INSTALL.
 
