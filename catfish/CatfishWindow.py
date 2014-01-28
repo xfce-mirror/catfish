@@ -183,7 +183,7 @@ class CatfishWindow(Window):
         box.show()
 
         self.statusbar.add(box)
-        self.statusbar.show()
+        self.statusbar.hide()
 
         # -- Treeview -- #
         self.row_activated = False
@@ -440,6 +440,7 @@ class CatfishWindow(Window):
     def on_search_entry_activate(self, widget):
         """If the search entry is not empty, perform the query."""
         if len(widget.get_text()) > 0:
+            self.statusbar.show()
             task = self.perform_query(widget.get_text())
             GLib.idle_add(next, task)
 
