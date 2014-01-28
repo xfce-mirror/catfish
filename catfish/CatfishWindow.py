@@ -1215,10 +1215,10 @@ class CatfishWindow(Window):
 
     def get_thumbnail(self, path, mime_type=None):
         """Try to fetch a thumbnail."""
-        if pyversion >= 3.0:
-            path = path.encode()
         thumbnails_directory = os.path.expanduser('~/.thumbnails/normal')
         uri = 'file://' + path
+        if pyversion >= 3.0:
+            uri = uri.encode('utf-8')
         md5_hash = hashlib.md5(uri).hexdigest()
         thumbnail_path = os.path.join(
             thumbnails_directory, '%s.png' % md5_hash)
