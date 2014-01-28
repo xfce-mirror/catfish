@@ -23,22 +23,6 @@ logger = logging.getLogger('catfish_lib')
 from . helpers import get_builder
 
 
-def detach_cb(menu, widget):
-    """Detach callback function for the AppMenu."""
-    menu.detach()
-
-
-def menu_position(self, menu, data=None, something_else=None):
-    """Menu positioning function for the AppMenu."""
-    widget = menu.get_attach_widget()
-    allocation = widget.get_allocation()
-    window_pos = widget.get_window().get_position()
-    x = window_pos[0] + allocation.x - menu.get_allocated_width() + \
-        widget.get_allocated_width()
-    y = window_pos[1] + allocation.y + allocation.height
-    return (x, y, True)
-
-
 class Window(Gtk.Window):
     """This class is meant to be subclassed by CatfishWindow. It provides
     common functions and some boilerplate."""
@@ -79,9 +63,19 @@ class Window(Gtk.Window):
 
         self.sidebar = self.builder.get_object('sidebar')
 
-        self.appmenu = self.builder.get_object('appmenu')
-        self.appmenu_button = self.builder.get_object('appmenu_button')
-        self.appmenu.attach_to_widget(self.appmenu_button, detach_cb)
+        # AppMenu
+        button = Gtk.MenuButton()
+        button.set_size_request(32, 32)
+        image = Gtk.Image.new_from_icon_name("emblem-system-symbolic",
+                                                 Gtk.IconSize.MENU)
+        button.set_image(image)
+
+        popup = builder.get_object('appmenu')
+        button.set_popup(popup)
+
+        box = builder.get_object('appmenu_placeholder')
+        box.add(button)
+        button.show_all()
 
     # Help not currently in use.
     #def on_mnu_contents_activate(self, widget, data=None):
@@ -99,17 +93,6 @@ class Window(Gtk.Window):
         self.search_engine.stop()
         self.settings.write()
         Gtk.main_quit()
-
-    def on_appmenu_button_clicked(self, widget):
-        """When the menu button is clicked, display the appmenu."""
-        if widget.get_active():
-            self.appmenu.popup(None, None, menu_position,
-                               self.appmenu, 3,
-                               Gtk.get_current_event_time())
-
-    def on_appmenu_hide(self, widget):
-        """Unclick the appmenu button when the menu is hidden."""
-        self.appmenu_button.set_active(False)
 
     def on_catfish_window_window_state_event(self, widget, event):
         """Properly handle window-manager fullscreen events."""

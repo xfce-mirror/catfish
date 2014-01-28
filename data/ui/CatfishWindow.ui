@@ -6,7 +6,6 @@
   <object class="GtkMenu" id="appmenu">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <signal name="hide" handler="on_appmenu_hide" swapped="no"/>
     <child>
       <object class="GtkCheckMenuItem" id="menu_exact_match">
         <property name="visible">True</property>
@@ -104,13 +103,18 @@
             <child>
               <object class="GtkToolItem" id="toolbutton2">
                 <property name="width_request">150</property>
+                <property name="height_request">32</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="margin_top">3</property>
+                <property name="margin_bottom">4</property>
                 <property name="is_important">True</property>
                 <child>
                   <object class="GtkFileChooserButton" id="folderchooser">
+                    <property name="height_request">32</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="margin_left">2</property>
                     <property name="orientation">vertical</property>
                     <property name="action">select-folder</property>
                     <property name="create_folders">False</property>
@@ -126,10 +130,11 @@
             </child>
             <child>
               <object class="GtkToolItem" id="toolbutton3">
+                <property name="height_request">32</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="margin_left">6</property>
-                <property name="margin_right">6</property>
+                <property name="margin_left">8</property>
+                <property name="margin_right">12</property>
                 <property name="is_important">True</property>
                 <child>
                   <object class="GtkEntry" id="search_entry">
@@ -155,13 +160,14 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToggleToolButton" id="appmenu_button">
+              <object class="GtkToolItem" id="appmenu_placeholder">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="is_important">True</property>
-                <property name="use_underline">True</property>
-                <property name="icon_name">document-properties</property>
-                <signal name="clicked" handler="on_appmenu_button_clicked" swapped="no"/>
+                <property name="margin_top">4</property>
+                <property name="margin_bottom">4</property>
+                <child>
+                  <placeholder/>
+                </child>
               </object>
               <packing>
                 <property name="expand">False</property>
