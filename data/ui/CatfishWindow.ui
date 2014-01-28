@@ -66,7 +66,7 @@
                     <property name="invisible_char">•</property>
                     <property name="caps_lock_warning">False</property>
                     <property name="secondary_icon_name">edit-find-symbolic</property>
-                    <property name="placeholder_text">Search terms</property>
+                    <property name="placeholder_text" translatable="yes">Search terms</property>
                     <signal name="changed" handler="on_search_entry_changed" swapped="no"/>
                     <signal name="activate" handler="on_search_entry_activate" swapped="no"/>
                     <signal name="icon-press" handler="on_search_entry_icon_press" swapped="no"/>
@@ -1333,7 +1333,7 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_about">
-        <property name="label">_About</property>
+        <property name="label" translatable="yes">_About</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
@@ -1369,7 +1369,7 @@
     <property name="can_focus">False</property>
     <child>
       <object class="GtkImageMenuItem" id="menu_open">
-        <property name="label">_Open</property>
+        <property name="label" translatable="yes">_Open</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
@@ -1408,7 +1408,7 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_save">
-        <property name="label">_Save as...</property>
+        <property name="label" translatable="yes">_Save as...</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
@@ -1425,7 +1425,7 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="menu_delete">
-        <property name="label">_Delete</property>
+        <property name="label" translatable="yes">_Delete</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
