@@ -154,6 +154,7 @@ class CatfishWindow(Window):
 
         # Create the overlay statusbar
         self.statusbar = Gtk.EventBox()
+        self.statusbar.get_style_context().add_class("background")
         self.statusbar.get_style_context().add_class("floating-bar")
         self.statusbar.connect("draw", self.on_floating_bar_draw)
         self.statusbar.connect("enter-notify-event",
