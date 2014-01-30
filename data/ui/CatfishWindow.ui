@@ -186,6 +186,7 @@
                         <property name="xalign">0</property>
                         <property name="active">True</property>
                         <property name="draw_indicator">False</property>
+                        <signal name="toggled" handler="on_treeview_list_toggled" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -206,6 +207,7 @@
                         <property name="active">True</property>
                         <property name="draw_indicator">False</property>
                         <property name="group">view_list</property>
+                        <signal name="toggled" handler="on_treeview_thumbnails_toggled" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>

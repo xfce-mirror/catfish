@@ -184,6 +184,11 @@ class CatfishWindow(Window):
         self.statusbar.add(box)
         self.statusbar.hide()
 
+        self.icon_cache_size = 0
+
+        self.list_toggle = builder.get_object('view_list')
+        self.thumbnail_toggle = builder.get_object('view_thumbnails')
+
         # -- Treeview -- #
         self.row_activated = False
         self.treeview = builder.get_object("treeview")
@@ -313,6 +318,8 @@ class CatfishWindow(Window):
         self.sidebar_toggle_menu.set_active(
             self.settings.get_setting('show-sidebar'))
 
+        self.show_thumbnail = self.options.thumbnails
+
         # Set the interface to standard or preview mode.
         if self.options.icons_large or self.options.thumbnails:
             # Make the Preview Column
@@ -333,6 +340,7 @@ class CatfishWindow(Window):
             column.set_cell_data_func(cell, self.thumbnail_cell_data_func, None)
             self.treeview.append_column(column)
             self.icon_size = Gtk.IconSize.DIALOG
+            self.thumbnail_toggle.set_active(True)
 
         else:
             self.treeview.append_column(self.new_column(_('Filename'), 1,
@@ -345,14 +353,24 @@ class CatfishWindow(Window):
                                                         'date', 1))
             self.icon_size = Gtk.IconSize.MENU
 
+            self.list_toggle.set_active(True)
+
     def preview_cell_data_func(self, col, renderer, model, treeiter, data):
         """Cell Renderer Function for the preview."""
         icon_name = model[treeiter][0]
+        filename = model[treeiter][1]
 
         if os.path.isfile(icon_name):
             # Load from thumbnail file.
-            pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon_name)
-        else:
+            if self.show_thumbnail:
+                pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon_name)
+                icon_name = None
+            else:
+                # Get the mimetype image..
+                mimetype, override = self.guess_mimetype(filename)
+                icon_name = self.get_file_icon(filename, mimetype)
+
+        if icon_name is not None:
             pixbuf = self.get_icon_pixbuf(icon_name)
 
         renderer.set_property('pixbuf', pixbuf)
@@ -982,6 +1000,47 @@ class CatfishWindow(Window):
         dialog.destroy()
         return response == Gtk.ResponseType.YES
 
+    def on_treeview_list_toggled(self, widget):
+        """Switch to the details view."""
+        if widget.get_active():
+            for column in self.treeview.get_columns():
+                self.treeview.remove_column(column)
+            self.treeview.append_column(self.new_column(_('Filename'), 1,
+                                                        'icon', 1))
+            self.treeview.append_column(self.new_column(_('Size'), 2,
+                                                        'filesize'))
+            self.treeview.append_column(self.new_column(_('Location'), 3,
+                                                        'ellipsize'))
+            self.treeview.append_column(self.new_column(_('Last modified'), 4,
+                                                        'date', 1))
+            self.icon_size = Gtk.IconSize.MENU
+            self.show_thumbnail = False
+
+    def on_treeview_thumbnails_toggled(self, widget):
+        """Switch to the preview view."""
+        if widget.get_active():
+            for column in self.treeview.get_columns():
+                self.treeview.remove_column(column)
+            # Make the Preview Column
+            cell = Gtk.CellRendererPixbuf()
+            column = Gtk.TreeViewColumn(_('Preview'), cell)
+            self.treeview.append_column(column)
+
+            column.set_cell_data_func(cell, self.preview_cell_data_func, None)
+
+            # Make the Details Column
+            cell = Gtk.CellRendererText()
+            column = Gtk.TreeViewColumn(_("Filename"), cell, markup=1)
+
+            column.set_sort_column_id(1)
+            column.set_resizable(True)
+            column.set_expand(True)
+
+            column.set_cell_data_func(cell, self.thumbnail_cell_data_func, None)
+            self.treeview.append_column(column)
+            self.icon_size = Gtk.IconSize.DIALOG
+            self.show_thumbnail = True
+
     # -- Treeview -- #
     def on_treeview_row_activated(self, treeview, path, user_data):
         """Catch row activations by keyboard or mouse double-click."""
@@ -1245,6 +1304,10 @@ class CatfishWindow(Window):
     def get_icon_pixbuf(self, name):
         """Return a pixbuf for the icon name from the default icon theme."""
         try:
+            # Clear the icon cache if the current size is not the cached size.
+            if self.icon_cache_size != self.icon_size:
+                self.icon_cache.clear()
+                self.icon_cache_size = self.icon_size
             return self.icon_cache[name]
         except KeyError:
             icon_size = Gtk.icon_size_lookup(self.icon_size)[1]
@@ -1385,10 +1448,7 @@ class CatfishWindow(Window):
                     modified = os.path.getmtime(filename)
 
                     mimetype, override = self.guess_mimetype(filename)
-                    if self.options.thumbnails:
-                        icon = self.get_thumbnail(filename, mimetype)
-                    else:
-                        icon = self.get_file_icon(filename, mimetype)
+                    icon = self.get_thumbnail(filename, mimetype)
                     if override:
                         mimetype = override
 
