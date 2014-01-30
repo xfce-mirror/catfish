@@ -71,6 +71,7 @@ class Window(Gtk.Window):
         button.set_image(image)
 
         popup = builder.get_object('appmenu')
+        popup.set_property("halign", Gtk.Align.CENTER)
         button.set_popup(popup)
 
         box = builder.get_object('appmenu_placeholder')
