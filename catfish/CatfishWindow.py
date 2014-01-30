@@ -19,7 +19,6 @@
 from locale import gettext as _
 
 from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, GLib, Pango
-from gi.repository.GLib import GError
 
 from xml.sax.saxutils import escape
 from shutil import copy2, rmtree
@@ -316,12 +315,25 @@ class CatfishWindow(Window):
 
         # Set the interface to standard or preview mode.
         if self.options.icons_large or self.options.thumbnails:
-            self.treeview.append_column(Gtk.TreeViewColumn(_('Preview'),
-                                        Gtk.CellRendererPixbuf(),
-                                        pixbuf=0))
-            self.treeview.append_column(self.new_column(_('Filename'), 1,
-                                                        markup=True))
+            # Make the Preview Column
+            cell = Gtk.CellRendererPixbuf()
+            column = Gtk.TreeViewColumn(_('Preview'), cell)
+            self.treeview.append_column(column)
+
+            column.set_cell_data_func(cell, self.preview_cell_data_func, None)
+
+            # Make the Details Column
+            cell = Gtk.CellRendererText()
+            column = Gtk.TreeViewColumn(_("Filename"), cell, markup=1)
+
+            column.set_sort_column_id(1)
+            column.set_resizable(True)
+            column.set_expand(True)
+
+            column.set_cell_data_func(cell, self.thumbnail_cell_data_func, None)
+            self.treeview.append_column(column)
             self.icon_size = Gtk.IconSize.DIALOG
+
         else:
             self.treeview.append_column(self.new_column(_('Filename'), 1,
                                                         'icon', 1))
@@ -332,6 +344,32 @@ class CatfishWindow(Window):
             self.treeview.append_column(self.new_column(_('Last modified'), 4,
                                                         'date', 1))
             self.icon_size = Gtk.IconSize.MENU
+
+    def preview_cell_data_func(self, col, renderer, model, treeiter, data):
+        """Cell Renderer Function for the preview."""
+        icon_name = model[treeiter][0]
+
+        if os.path.isfile(icon_name):
+            # Load from thumbnail file.
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon_name)
+        else:
+            pixbuf = self.get_icon_pixbuf(icon_name)
+
+        renderer.set_property('pixbuf', pixbuf)
+        return
+
+    def thumbnail_cell_data_func(self, col, renderer, model, treeiter, data):
+        """Cell Renderer Function to Thumbnails View."""
+        icon, name, size, path, modified, mime, hidden, exact, counter = \
+                                                        model[treeiter][:]
+        name = escape(name)
+        size = self.format_size(size)
+        path = escape(path)
+        modified = time.strftime(self.time_format, time.gmtime(int(modified)))
+        displayed = '<b>%s</b> %s%s%s%s%s' % (name, size, os.linesep, path,
+                                            os.linesep, modified)
+        renderer.set_property('markup', displayed)
+        return
 
     def load_symbolic_icon(self, icon_name, size, state=Gtk.StateFlags.ACTIVE):
         """Return the symbolic version of icon_name, or the non-symbolic
@@ -1038,7 +1076,7 @@ class CatfishWindow(Window):
             column = Gtk.TreeViewColumn(label)
             cell = Gtk.CellRendererPixbuf()
             column.pack_start(cell, False)
-            column.add_attribute(cell, 'pixbuf', 0)
+            column.set_cell_data_func(cell, self.preview_cell_data_func, None)
             cell = Gtk.CellRendererText()
             column.pack_start(cell, False)
             column.add_attribute(cell, 'text', id)
@@ -1210,7 +1248,10 @@ class CatfishWindow(Window):
             return self.icon_cache[name]
         except KeyError:
             icon_size = Gtk.icon_size_lookup(self.icon_size)[1]
-            icon = self.icon_theme.load_icon(name, icon_size, 0)
+            if self.icon_theme.has_icon(name):
+                icon = self.icon_theme.load_icon(name, icon_size, 0)
+            else:
+                icon = self.icon_theme.load_icon('image-missing', icon_size, 0)
             self.icon_cache[name] = icon
             return icon
 
@@ -1224,18 +1265,16 @@ class CatfishWindow(Window):
         thumbnail_path = os.path.join(
             thumbnails_directory, '%s.png' % md5_hash)
         if os.path.isfile(thumbnail_path):
-            try:
-                return GdkPixbuf.Pixbuf.new_from_file(thumbnail_path)
-            except GError:
-                pass
+            return thumbnail_path
         if mime_type.startswith('image'):
             new_thumb = self.create_thumbnail(path, thumbnail_path)
             if new_thumb:
-                return new_thumb
+                return thumbnail_path
         return self.get_file_icon(path, mime_type)
 
     def create_thumbnail(self, filename, path):
-        """Create a thumbnail image and save it to the thumbnails directory."""
+        """Create a thumbnail image and save it to the thumbnails directory.
+        Return True if successful."""
         try:
             pixbuf = GdkPixbuf.Pixbuf.new_from_file(filename)
             pixbuf_w = pixbuf.get_width()
@@ -1252,37 +1291,26 @@ class CatfishWindow(Window):
             thumb_pixbuf = pixbuf.scale_simple(
                 thumb_w, thumb_h, GdkPixbuf.InterpType.BILINEAR)
             thumb_pixbuf.savev(path, "png", [], [])
-            return thumb_pixbuf
+            return True
         except Exception as e:
             print (e)
-            return None
+            return False
 
     def get_file_icon(self, path, mime_type=None):
         """Retrieve the file icon."""
         if mime_type:
             if mime_type == 'inode/directory':
-                icon_name = Gtk.STOCK_DIRECTORY
+                return Gtk.STOCK_DIRECTORY
             else:
                 mime_type = mime_type.split('/')
                 if mime_type is not None:
-                    try:
-                        # Get icon from mimetype
-                        media, subtype = mime_type
-                        icon_name = 'gnome-mime-%s-%s' % (media, subtype)
-                        return self.get_icon_pixbuf(icon_name)
-                    except GError:
-                        try:
-                            # Then try generic icon
-                            icon_name = 'gnome-mime-%s' % media
-                            return self.get_icon_pixbuf(icon_name)
-                        except GError:
-                            # Use default icon
-                            icon_name = Gtk.STOCK_FILE
-                else:
-                    icon_name = Gtk.STOCK_FILE
-        else:
-            icon_name = Gtk.STOCK_FILE
-        return self.get_icon_pixbuf(icon_name)
+                    # Get icon from mimetype
+                    media, subtype = mime_type
+                    for icon_name in ['gnome-mime-%s-%s' % (media, subtype),
+                                      'gnome-mime-%s' % media]:
+                        if self.icon_theme.has_icon(icon_name):
+                            return icon_name
+        return Gtk.STOCK_FILE
 
     def python_three_size_sort_func(self, model, row1, row2, user_data):
         """Sort function used in Python 3."""
@@ -1318,7 +1346,7 @@ class CatfishWindow(Window):
             Gtk.main_iteration()
 
         # icon, name, size, path, modified, mimetype, hidden, exact
-        model = Gtk.ListStore(GdkPixbuf.Pixbuf, str, GObject.TYPE_LONG,
+        model = Gtk.ListStore(str, str, GObject.TYPE_LONG,
                               str, float, str, bool, bool, int)
 
         # Initialize the results filter.
@@ -1371,17 +1399,7 @@ class CatfishWindow(Window):
                     results.append(filename)
                     self.file_paths.append(filename)
 
-                    if self.options.icons_large or self.options.thumbnails:
-                        displayed = '<b>%s</b> %s%s%s%s%s' % (escape(name),
-                                    self.format_size(size), os.linesep,
-                                    escape(path), os.linesep,
-                                    time.strftime(self.time_format,
-                                                  time.gmtime(int(modified))))
-
-                    else:
-                        displayed = name
-
-                    displayed = surrogate_escape(displayed, True)
+                    displayed = surrogate_escape(name, True)
                     path = surrogate_escape(path)
                     model.append([icon, displayed, size, path, modified,
                                   mimetype, hidden, exact, counter])
