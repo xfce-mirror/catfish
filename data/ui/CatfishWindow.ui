@@ -78,6 +78,27 @@
       </object>
     </child>
   </object>
+  <object class="GtkImage" id="image23">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">edit-delete-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="image24">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">view-list-compact-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="image25">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">view-list-images-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
   <object class="CatfishWindow" id="catfish_window">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Catfish</property>
@@ -97,24 +118,18 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="show_arrow">False</property>
-            <style>
-              <class name="primary-toolbar"/>
-            </style>
             <child>
               <object class="GtkToolItem" id="toolbutton2">
                 <property name="width_request">150</property>
                 <property name="height_request">32</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="margin_top">3</property>
-                <property name="margin_bottom">4</property>
                 <property name="is_important">True</property>
                 <child>
                   <object class="GtkFileChooserButton" id="folderchooser">
                     <property name="height_request">32</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="margin_left">2</property>
                     <property name="orientation">vertical</property>
                     <property name="action">select-folder</property>
                     <property name="create_folders">False</property>
@@ -133,7 +148,7 @@
                 <property name="height_request">32</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="margin_left">8</property>
+                <property name="margin_left">6</property>
                 <property name="margin_right">12</property>
                 <property name="is_important">True</property>
                 <child>
@@ -164,13 +179,10 @@
                 <property name="height_request">32</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="margin_top">4</property>
-                <property name="margin_bottom">4</property>
                 <child>
                   <object class="GtkBox" id="box2">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="margin_right">8</property>
                     <style>
                       <class name="linked"/>
                     </style>
@@ -226,8 +238,7 @@
               <object class="GtkToolItem" id="appmenu_placeholder">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="margin_top">4</property>
-                <property name="margin_bottom">4</property>
+                <property name="margin_left">6</property>
                 <child>
                   <placeholder/>
                 </child>
@@ -241,6 +252,17 @@
             <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSeparator" id="separator1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
           </packing>
         </child>
         <child>
@@ -321,6 +343,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="xalign">0</property>
                                                 <property name="label" translatable="yes">Any time</property>
+                                                <property name="ellipsize">end</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -372,6 +395,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="xalign">0</property>
                                                 <property name="label" translatable="yes">This week</property>
+                                                <property name="ellipsize">end</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -428,6 +452,7 @@
                                                     <property name="can_focus">False</property>
                                                     <property name="xalign">0</property>
                                                     <property name="label" translatable="yes">Custom</property>
+                                                    <property name="ellipsize">end</property>
                                                   </object>
                                                   <packing>
                                                     <property name="expand">False</property>
@@ -541,6 +566,7 @@
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Documents</property>
+                                                <property name="ellipsize">end</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -588,6 +614,7 @@
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Folders</property>
+                                                <property name="ellipsize">end</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -635,6 +662,7 @@
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Images</property>
+                                                <property name="ellipsize">end</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -682,6 +710,7 @@
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Music</property>
+                                                <property name="ellipsize">end</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -729,6 +758,7 @@
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Videos</property>
+                                                <property name="ellipsize">end</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -776,6 +806,7 @@
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Applications</property>
+                                                <property name="ellipsize">end</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -827,6 +858,7 @@
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
                                                     <property name="label" translatable="yes">Other</property>
+                                                    <property name="ellipsize">end</property>
                                                   </object>
                                                   <packing>
                                                     <property name="expand">False</property>
@@ -917,7 +949,6 @@
                     <property name="reorderable">True</property>
                     <property name="rules_hint">True</property>
                     <property name="rubber_banding">True</property>
-                    <property name="enable_grid_lines">vertical</property>
                     <signal name="row-activated" handler="on_treeview_row_activated" swapped="no"/>
                     <signal name="drag-data-get" handler="on_treeview_drag_data_get" swapped="no"/>
                     <signal name="button-release-event" handler="on_treeview_button_press_event" swapped="no"/>
@@ -939,7 +970,7 @@
           <packing>
             <property name="expand">True</property>
             <property name="fill">True</property>
-            <property name="position">1</property>
+            <property name="position">2</property>
           </packing>
         </child>
       </object>
@@ -1375,64 +1406,6 @@
       <action-widget response="-10">button6</action-widget>
     </action-widgets>
   </object>
-  <object class="GtkImage" id="image15">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">folder-symbolic</property>
-    <property name="use_fallback">True</property>
-    <property name="icon-size">1</property>
-  </object>
-  <object class="GtkImage" id="image16">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">edit-copy-symbolic</property>
-    <property name="use_fallback">True</property>
-    <property name="icon-size">1</property>
-  </object>
-  <object class="GtkImage" id="image18">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">22</property>
-    <property name="icon_name">locked</property>
-  </object>
-  <object class="GtkImage" id="image2">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">view-refresh-symbolic</property>
-    <property name="use_fallback">True</property>
-    <property name="icon-size">1</property>
-  </object>
-  <object class="GtkImage" id="image20">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">gtk-about-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="image21">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">document-open-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="image22">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">document-save-as-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="image23">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">edit-delete-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
   <object class="GtkMenu" id="file_menu">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -1504,18 +1477,55 @@
       </object>
     </child>
   </object>
-  <object class="GtkImage" id="image24">
+  <object class="GtkImage" id="image15">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="pixel_size">16</property>
-    <property name="icon_name">view-list-compact-symbolic</property>
+    <property name="icon_name">folder-symbolic</property>
+    <property name="use_fallback">True</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image16">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">edit-copy-symbolic</property>
+    <property name="use_fallback">True</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image18">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">22</property>
+    <property name="icon_name">locked</property>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">view-refresh-symbolic</property>
+    <property name="use_fallback">True</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image20">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">gtk-about-symbolic</property>
     <property name="use_fallback">True</property>
   </object>
-  <object class="GtkImage" id="image25">
+  <object class="GtkImage" id="image21">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="pixel_size">16</property>
-    <property name="icon_name">view-list-images-symbolic</property>
+    <property name="icon_name">document-open-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="image22">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">document-save-as-symbolic</property>
     <property name="use_fallback">True</property>
   </object>
   <object class="GtkListStore" id="liststore1"/>

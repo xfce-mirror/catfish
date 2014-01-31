@@ -281,6 +281,7 @@ class CatfishWindow(Window):
         music_icon = self.load_symbolic_icon('audio-x-generic', 16)
         videos_icon = self.load_symbolic_icon('video-x-generic', 16)
         apps_icon = self.load_symbolic_icon('applications-utilities', 16)
+        folder_icon = self.load_symbolic_icon('folder', 16)
         custom_format_icon = self.load_symbolic_icon('list-add', 16)
         builder.get_object("image1").set_from_pixbuf(documents_icon)
         builder.get_object("image3").set_from_pixbuf(photos_icon)
@@ -288,6 +289,7 @@ class CatfishWindow(Window):
         builder.get_object("image5").set_from_pixbuf(videos_icon)
         builder.get_object("image6").set_from_pixbuf(apps_icon)
         builder.get_object("image7").set_from_pixbuf(custom_format_icon)
+        builder.get_object("image19").set_from_pixbuf(folder_icon)
 
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
@@ -322,38 +324,18 @@ class CatfishWindow(Window):
         self.show_thumbnail = self.options.thumbnails
 
         # Set the interface to standard or preview mode.
-        if self.options.icons_large or self.options.thumbnails:
-            # Make the Preview Column
-            cell = Gtk.CellRendererPixbuf()
-            column = Gtk.TreeViewColumn(_('Preview'), cell)
-            self.treeview.append_column(column)
 
-            column.set_cell_data_func(cell, self.preview_cell_data_func, None)
-
-            # Make the Details Column
-            cell = Gtk.CellRendererText()
-            column = Gtk.TreeViewColumn(_("Filename"), cell, markup=1)
-
-            column.set_sort_column_id(1)
-            column.set_resizable(True)
-            column.set_expand(True)
-
-            column.set_cell_data_func(cell, self.thumbnail_cell_data_func, None)
-            self.treeview.append_column(column)
-            self.icon_size = Gtk.IconSize.DIALOG
+        if self.options.icons_large:
+            self.show_thumbnail = False
+            self.setup_large_view()
+            self.list_toggle.set_active(True)
+        elif self.options.thumbnails:
+            self.show_thumbnail = True
+            self.setup_large_view()
             self.thumbnail_toggle.set_active(True)
-
         else:
-            self.treeview.append_column(self.new_column(_('Filename'), 1,
-                                                        'icon', 1))
-            self.treeview.append_column(self.new_column(_('Size'), 2,
-                                                        'filesize'))
-            self.treeview.append_column(self.new_column(_('Location'), 3,
-                                                        'ellipsize'))
-            self.treeview.append_column(self.new_column(_('Last modified'), 4,
-                                                        'date', 1))
-            self.icon_size = Gtk.IconSize.MENU
-
+            self.show_thumbnail = False
+            self.setup_small_view()
             self.list_toggle.set_active(True)
 
     def preview_cell_data_func(self, col, renderer, model, treeiter, data):
@@ -1001,46 +983,57 @@ class CatfishWindow(Window):
         dialog.destroy()
         return response == Gtk.ResponseType.YES
 
+    def setup_small_view(self):
+        """Prepare the list view in the results pane."""
+        for column in self.treeview.get_columns():
+            self.treeview.remove_column(column)
+        self.treeview.append_column(self.new_column(_('Filename'), 1,
+                                                    'icon', 1))
+        self.treeview.append_column(self.new_column(_('Size'), 2,
+                                                    'filesize'))
+        self.treeview.append_column(self.new_column(_('Location'), 3,
+                                                    'ellipsize'))
+        self.treeview.append_column(self.new_column(_('Modified'), 4,
+                                                    'date', 1))
+        self.icon_size = Gtk.IconSize.MENU
+
+    def setup_large_view(self):
+        """Prepare the extended list view in the results pane."""
+        for column in self.treeview.get_columns():
+            self.treeview.remove_column(column)
+        # Make the Preview Column
+        cell = Gtk.CellRendererPixbuf()
+        column = Gtk.TreeViewColumn(_('Preview'), cell)
+        self.treeview.append_column(column)
+
+        column.set_cell_data_func(cell, self.preview_cell_data_func, None)
+
+        # Make the Details Column
+        cell = Gtk.CellRendererText()
+        column = Gtk.TreeViewColumn(_("Filename"), cell, markup=1)
+
+        column.set_sort_column_id(1)
+        column.set_resizable(True)
+        column.set_expand(True)
+
+        column.set_cell_data_func(cell, self.thumbnail_cell_data_func, None)
+        self.treeview.append_column(column)
+        self.icon_size = Gtk.IconSize.DIALOG
+
     def on_treeview_list_toggled(self, widget):
         """Switch to the details view."""
         if widget.get_active():
-            for column in self.treeview.get_columns():
-                self.treeview.remove_column(column)
-            self.treeview.append_column(self.new_column(_('Filename'), 1,
-                                                        'icon', 1))
-            self.treeview.append_column(self.new_column(_('Size'), 2,
-                                                        'filesize'))
-            self.treeview.append_column(self.new_column(_('Location'), 3,
-                                                        'ellipsize'))
-            self.treeview.append_column(self.new_column(_('Last modified'), 4,
-                                                        'date', 1))
-            self.icon_size = Gtk.IconSize.MENU
             self.show_thumbnail = False
+            if self.options.icons_large:
+                self.setup_large_view()
+            else:
+                self.setup_small_view()
 
     def on_treeview_thumbnails_toggled(self, widget):
         """Switch to the preview view."""
         if widget.get_active():
-            for column in self.treeview.get_columns():
-                self.treeview.remove_column(column)
-            # Make the Preview Column
-            cell = Gtk.CellRendererPixbuf()
-            column = Gtk.TreeViewColumn(_('Preview'), cell)
-            self.treeview.append_column(column)
-
-            column.set_cell_data_func(cell, self.preview_cell_data_func, None)
-
-            # Make the Details Column
-            cell = Gtk.CellRendererText()
-            column = Gtk.TreeViewColumn(_("Filename"), cell, markup=1)
-
-            column.set_sort_column_id(1)
-            column.set_resizable(True)
-            column.set_expand(True)
-
-            column.set_cell_data_func(cell, self.thumbnail_cell_data_func, None)
-            self.treeview.append_column(column)
-            self.icon_size = Gtk.IconSize.DIALOG
             self.show_thumbnail = True
+            self.setup_large_view()
 
     # -- Treeview -- #
     def on_treeview_row_activated(self, treeview, path, user_data):
@@ -1150,6 +1143,7 @@ class CatfishWindow(Window):
                 column.set_min_width(120)
                 cell.set_property('ellipsize', Pango.EllipsizeMode.START)
             elif special == 'filesize':
+                cell.set_property('xalign', 1.0)
                 column.set_cell_data_func(cell,
                                           self.cell_data_func_filesize, id)
             elif special == 'date':
@@ -1263,12 +1257,15 @@ class CatfishWindow(Window):
         """Make a file size human readable."""
         if isinstance(size, str):
             size = int(size)
-        suffixes = ['B', 'KB', 'MB', 'GB', 'TB']
+        suffixes = [_('bytes'), 'kB', 'MB', 'GB', 'TB']
         suffixIndex = 0
-        while size > 1024:
-            suffixIndex += 1
-            size = size / 1024.0
-        return "%.*f %s" % (precision, size, suffixes[suffixIndex])
+        if size > 1024:
+            while size > 1024:
+                suffixIndex += 1
+                size = size / 1024.0
+            return "%.*f %s" % (precision, size, suffixes[suffixIndex])
+        else:
+            return "%i %s" % (size, suffixes[0])
 
     def guess_mimetype(self, filename):
         """Guess the mimetype of the specified filename.
