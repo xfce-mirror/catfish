@@ -59,9 +59,10 @@ def application_in_PATH(application_name):
     return False
 
 
-def is_file_hidden(filename):
+def is_file_hidden(folder, filename):
     """Return TRUE if file is hidden or in a hidden directory."""
-    splitpath = os.path.split(filename)
+    relative = filename.lstrip(folder)
+    splitpath = os.path.split(relative)
     while splitpath[1] != '':
         if splitpath[1][0] == '.':
             return True
@@ -543,7 +544,7 @@ class CatfishWindow(Window):
                 if name not in results:
                     try:
                         # Determine if file is hidden
-                        hidden = is_file_hidden(filename)
+                        hidden = is_file_hidden(folder, filename)
 
                         if not hidden or show_hidden:
                             results.append(name)
@@ -1474,7 +1475,7 @@ class CatfishWindow(Window):
                     if override:
                         mimetype = override
 
-                    hidden = is_file_hidden(filename)
+                    hidden = is_file_hidden(folder, filename)
 
                     exact = keywords in name
 
