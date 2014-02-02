@@ -988,7 +988,8 @@
                                   <object class="GtkImage" id="image13">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="icon_name">calendar</property>
+                                    <property name="icon_name">x-office-calendar</property>
+                                    <property name="use_fallback">True</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -1078,7 +1079,8 @@
                                   <object class="GtkImage" id="image14">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="icon_name">calendar</property>
+                                    <property name="icon_name">x-office-calendar</property>
+                                    <property name="use_fallback">True</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -1318,6 +1320,77 @@
       <action-widget response="-10">button6</action-widget>
     </action-widgets>
   </object>
+  <object class="GtkMenu" id="file_menu">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkImageMenuItem" id="menu_open">
+        <property name="label" translatable="yes">_Open</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">image21</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_open_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="menu_filemanager">
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete">Show in _File Manager</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">image15</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_filemanager_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="menuitem3">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="menu_copy_location">
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete">_Copy Location</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">image16</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_copy_location_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="menu_save">
+        <property name="label" translatable="yes">_Save as...</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">image22</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_save_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="menuitem5">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="menu_delete">
+        <property name="label" translatable="yes">_Delete</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">image23</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_delete_activate" swapped="no"/>
+      </object>
+    </child>
+  </object>
   <object class="GtkImage" id="image15">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -1338,7 +1411,8 @@
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="pixel_size">22</property>
-    <property name="icon_name">locked</property>
+    <property name="icon_name">dialog-password</property>
+    <property name="use_fallback">True</property>
   </object>
   <object class="GtkImage" id="image2">
     <property name="visible">True</property>
@@ -1450,77 +1524,6 @@
     <property name="pixel_size">16</property>
     <property name="icon_name">edit-delete-symbolic</property>
     <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkMenu" id="file_menu">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_open">
-        <property name="label" translatable="yes">_Open</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image21</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_open_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_filemanager">
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete">Show in _File Manager</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image15</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_filemanager_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem3">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_copy_location">
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete">_Copy Location</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image16</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_copy_location_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_save">
-        <property name="label" translatable="yes">_Save as...</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image22</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_save_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem5">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_delete">
-        <property name="label" translatable="yes">_Delete</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image23</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_delete_activate" swapped="no"/>
-      </object>
-    </child>
   </object>
   <object class="GtkImage" id="image24">
     <property name="visible">True</property>
