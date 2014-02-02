@@ -3,95 +3,6 @@
   <!-- interface-requires gtk+ 3.0 -->
   <!-- interface-requires catfish_window 1.0 -->
   <!-- interface-local-resource-path ../media -->
-  <object class="GtkMenu" id="appmenu">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_exact_match">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Exact Match</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_hidden_files">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Hidden Files</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_fulltext">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Fulltext Search</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem1">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_show_advanced">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Show Advanced Settings</property>
-        <property name="use_underline">True</property>
-        <accelerator key="F9" signal="activate"/>
-        <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem2">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_update_index">
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Update Search Index…</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image2</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_update_index_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_about">
-        <property name="label" translatable="yes">_About</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image20</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_mnu_about_activate" swapped="no"/>
-      </object>
-    </child>
-  </object>
-  <object class="GtkImage" id="image24">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">view-list-compact-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="image25">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">view-list-images-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
   <object class="CatfishWindow" id="catfish_window">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Catfish</property>
@@ -123,12 +34,10 @@
                 <property name="can_focus">False</property>
                 <property name="valign">center</property>
                 <property name="margin_left">2</property>
-                <property name="margin_top">3</property>
-                <property name="margin_bottom">3</property>
                 <property name="is_important">True</property>
                 <child>
                   <object class="GtkFileChooserButton" id="folderchooser">
-                    <property name="height_request">34</property>
+                    <property name="height_request">32</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
@@ -152,8 +61,6 @@
                 <property name="valign">center</property>
                 <property name="margin_left">6</property>
                 <property name="margin_right">12</property>
-                <property name="margin_top">3</property>
-                <property name="margin_bottom">3</property>
                 <property name="is_important">True</property>
                 <child>
                   <object class="GtkEntry" id="search_entry">
@@ -186,8 +93,6 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="valign">center</property>
-                <property name="margin_top">3</property>
-                <property name="margin_bottom">3</property>
                 <child>
                   <object class="GtkBox" id="box2">
                     <property name="visible">True</property>
@@ -250,8 +155,6 @@
                 <property name="valign">center</property>
                 <property name="margin_left">6</property>
                 <property name="margin_right">4</property>
-                <property name="margin_top">3</property>
-                <property name="margin_bottom">3</property>
                 <child>
                   <placeholder/>
                 </child>
@@ -275,7 +178,7 @@
             <property name="position_set">True</property>
             <child>
               <object class="GtkScrolledWindow" id="sidebar">
-                <property name="width_request">150</property>
+                <property name="width_request">154</property>
                 <property name="app_paintable">True</property>
                 <property name="can_focus">True</property>
                 <property name="no_show_all">True</property>
@@ -294,10 +197,8 @@
                       <object class="GtkBox" id="sidebar_box">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="margin_left">6</property>
-                        <property name="margin_top">6</property>
+                        <property name="margin_left">12</property>
                         <property name="orientation">vertical</property>
-                        <property name="spacing">12</property>
                         <child>
                           <object class="GtkFrame" id="frame1">
                             <property name="visible">True</property>
@@ -308,7 +209,7 @@
                               <object class="GtkAlignment" id="alignment2">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="left_padding">12</property>
+                                <property name="left_padding">6</property>
                                 <child>
                                   <object class="GtkBox" id="box4">
                                     <property name="visible">True</property>
@@ -327,7 +228,7 @@
                                           <object class="GtkBox" id="box14">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="spacing">3</property>
+                                            <property name="spacing">4</property>
                                             <child>
                                               <object class="GtkImage" id="image9">
                                                 <property name="visible">True</property>
@@ -379,7 +280,7 @@
                                           <object class="GtkBox" id="box15">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="spacing">3</property>
+                                            <property name="spacing">4</property>
                                             <child>
                                               <object class="GtkImage" id="image10">
                                                 <property name="visible">True</property>
@@ -436,7 +337,7 @@
                                               <object class="GtkBox" id="box16">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="spacing">3</property>
+                                                <property name="spacing">4</property>
                                                 <child>
                                                   <object class="GtkImage" id="image11">
                                                     <property name="visible">True</property>
@@ -511,6 +412,7 @@
                             </child>
                             <child type="label">
                               <object class="GtkLabel" id="label1">
+                                <property name="height_request">32</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="label" translatable="yes">&lt;b&gt;Modified&lt;/b&gt;</property>
@@ -534,7 +436,7 @@
                               <object class="GtkAlignment" id="alignment3">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="left_padding">12</property>
+                                <property name="left_padding">6</property>
                                 <child>
                                   <object class="GtkBox" id="box5">
                                     <property name="visible">True</property>
@@ -551,13 +453,13 @@
                                           <object class="GtkBox" id="box6">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="spacing">3</property>
+                                            <property name="spacing">4</property>
                                             <child>
                                               <object class="GtkImage" id="image1">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
-                                                <property name="icon_name">text-x-generic-symbolic</property>
+                                                <property name="icon_name">folder-documents-symbolic</property>
                                                 <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
@@ -599,7 +501,7 @@
                                           <object class="GtkBox" id="box22">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="spacing">3</property>
+                                            <property name="spacing">4</property>
                                             <child>
                                               <object class="GtkImage" id="image19">
                                                 <property name="visible">True</property>
@@ -647,13 +549,13 @@
                                           <object class="GtkBox" id="box7">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="spacing">3</property>
+                                            <property name="spacing">4</property>
                                             <child>
                                               <object class="GtkImage" id="image3">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
-                                                <property name="icon_name">image-x-generic-symbolic</property>
+                                                <property name="icon_name">folder-pictures-symbolic</property>
                                                 <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
@@ -695,13 +597,13 @@
                                           <object class="GtkBox" id="box8">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="spacing">3</property>
+                                            <property name="spacing">4</property>
                                             <child>
                                               <object class="GtkImage" id="image4">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
-                                                <property name="icon_name">audio-x-generic-symbolic</property>
+                                                <property name="icon_name">folder-music-symbolic</property>
                                                 <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
@@ -743,13 +645,13 @@
                                           <object class="GtkBox" id="box9">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="spacing">3</property>
+                                            <property name="spacing">4</property>
                                             <child>
                                               <object class="GtkImage" id="image5">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
-                                                <property name="icon_name">video-x-generic-symbolic</property>
+                                                <property name="icon_name">folder-videos-symbolic</property>
                                                 <property name="use_fallback">True</property>
                                               </object>
                                               <packing>
@@ -791,7 +693,7 @@
                                           <object class="GtkBox" id="box10">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="spacing">3</property>
+                                            <property name="spacing">4</property>
                                             <child>
                                               <object class="GtkImage" id="image6">
                                                 <property name="visible">True</property>
@@ -843,7 +745,7 @@
                                               <object class="GtkBox" id="box12">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="spacing">3</property>
+                                                <property name="spacing">4</property>
                                                 <child>
                                                   <object class="GtkImage" id="image7">
                                                     <property name="visible">True</property>
@@ -917,6 +819,7 @@
                             </child>
                             <child type="label">
                               <object class="GtkLabel" id="label2">
+                                <property name="height_request">32</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="label" translatable="yes">&lt;b&gt;File Type&lt;/b&gt;</property>
@@ -1448,6 +1351,81 @@
     <property name="icon_name">gtk-about-symbolic</property>
     <property name="use_fallback">True</property>
   </object>
+  <object class="GtkMenu" id="appmenu">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkCheckMenuItem" id="menu_exact_match">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Exact Match</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkCheckMenuItem" id="menu_hidden_files">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Hidden Files</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkCheckMenuItem" id="menu_fulltext">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Fulltext Search</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="menuitem1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkCheckMenuItem" id="menu_show_advanced">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Show Advanced Settings</property>
+        <property name="use_underline">True</property>
+        <accelerator key="F9" signal="activate"/>
+        <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="menuitem2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="menu_update_index">
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Update Search Index…</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">image2</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_update_index_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="menu_about">
+        <property name="label" translatable="yes">_About</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">image20</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_mnu_about_activate" swapped="no"/>
+      </object>
+    </child>
+  </object>
   <object class="GtkImage" id="image21">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -1539,6 +1517,20 @@
         <signal name="activate" handler="on_menu_delete_activate" swapped="no"/>
       </object>
     </child>
+  </object>
+  <object class="GtkImage" id="image24">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">view-list-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="image25">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">folder-pictures-symbolic</property>
+    <property name="use_fallback">True</property>
   </object>
   <object class="GtkListStore" id="liststore1"/>
   <object class="GtkDialog" id="update_index_dialog">

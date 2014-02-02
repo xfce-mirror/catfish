@@ -276,10 +276,10 @@ class CatfishWindow(Window):
         self.document_settings_image.set_from_pixbuf(settings_icon)
 
         # File format icons
-        documents_icon = self.load_symbolic_icon('text-x-generic', 16)
-        photos_icon = self.load_symbolic_icon('image-x-generic', 16)
-        music_icon = self.load_symbolic_icon('audio-x-generic', 16)
-        videos_icon = self.load_symbolic_icon('video-x-generic', 16)
+        documents_icon = self.load_symbolic_icon('folder-documents', 16)
+        photos_icon = self.load_symbolic_icon('folder-pictures', 16)
+        music_icon = self.load_symbolic_icon('folder-music', 16)
+        videos_icon = self.load_symbolic_icon('folder-videos', 16)
         apps_icon = self.load_symbolic_icon('applications-utilities', 16)
         folder_icon = self.load_symbolic_icon('folder', 16)
         custom_format_icon = self.load_symbolic_icon('list-add', 16)
