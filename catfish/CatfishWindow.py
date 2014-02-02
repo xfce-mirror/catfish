@@ -1186,6 +1186,7 @@ class CatfishWindow(Window):
         return
 
     def get_date_string(self, modification_int):
+        """Return the date string in the preferred format."""
         if self.time_format is not None:
             modified = time.strftime(self.time_format,
                                      time.gmtime(modification_int))
