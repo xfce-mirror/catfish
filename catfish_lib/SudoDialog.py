@@ -48,13 +48,16 @@ class SudoDialog(Gtk.MessageDialog):
                  retries=-1):
         """Initialize the SudoDialog."""
         # default dialog parameters
-        flags = Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT
         message_type = Gtk.MessageType.QUESTION
         buttons = Gtk.ButtonsType.NONE
 
         # initialize the dialog
-        super(SudoDialog, self).__init__(parent, flags, message_type, buttons,
-                                         message_format='')
+        super(SudoDialog, self).__init__(transient_for=parent,
+                                        modal=True,
+                                        destroy_with_parent=True,
+                                        message_type=message_type,
+                                        buttons=buttons,
+                                        text='')
         self.set_dialog_icon(icon)
         self.connect("show", self.on_show)
 
@@ -65,6 +68,7 @@ class SudoDialog(Gtk.MessageDialog):
         ok_button.connect("clicked", self.on_ok_clicked)
         ok_button.set_receives_default(True)
         ok_button.set_can_default(True)
+        self.set_default(ok_button)
         button_box.pack_start(ok_button, False, False, 0)
 
         # add primary and secondary text
@@ -89,16 +93,18 @@ class SudoDialog(Gtk.MessageDialog):
         self.password_alignment.set_padding(12, 12, left_align, 0)
 
         # Outer password box for incorrect password label and inner widgets.
-        password_outer = Gtk.Box(Gtk.Orientation.VERTICAL, 12)
+        password_outer = Gtk.Box(orientation=Gtk.Orientation.VERTICAL,
+                                    spacing=12)
         password_outer.set_orientation(Gtk.Orientation.VERTICAL)
         # Password error label, only displayed when unsuccessful.
-        self.password_info = Gtk.Label("")
+        self.password_info = Gtk.Label(label="")
         self.password_info.set_markup("<b>%s</b>" %
                                       _("Incorrect password... try again."))
 
         # Inner password box for Password: label and password entry.
-        password_box = Gtk.Box(Gtk.Orientation.HORIZONTAL, 12)
-        password_label = Gtk.Label(_("Password:"))
+        password_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL,
+                                    spacing=12)
+        password_label = Gtk.Label(label=_("Password:"))
         self.password_entry = Gtk.Entry()
         self.password_entry.set_visibility(False)
         self.password_entry.set_activates_default(True)

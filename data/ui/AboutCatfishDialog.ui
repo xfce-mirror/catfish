@@ -9,7 +9,7 @@
     <property name="icon_name">catfish</property>
     <property name="type_hint">normal</property>
     <property name="program_name">Catfish</property>
-    <property name="version">0.8.2</property>
+    <property name="version">1.0.0</property>
     <property name="copyright">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 Copyright (C) 2012-2014 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
     <property name="comments" translatable="yes">Catfish is a versatile file searching tool.</property>
@@ -31,26 +31,7 @@ with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
 </property>
     <property name="authors">Copyright (C) 2007-2012 Christian Dywan &lt;christian@twotoasts.de&gt;
 Copyright (C) 2012-2014 Sean Davis &lt;smd.seandavis@gmail.com&gt;</property>
-    <property name="translator_credits">be: Mikalai Udodau
-cs: Jan Žárský &lt;jan.zarsky@gmail.com&gt;
-de: Simon Steinbeiß &lt;ochosi@shimmerproject.org&gt;
-el: Nikos Aggelis &lt;nikosaggelis@hotmail.gr&gt;
-es: Adolfo Jayme Barrientos &lt;fitoschido@gmail.com&gt;, David Segura M
-eu: Asier Iturralde Sarasola
-fi: Pasi Lallinaho &lt;pasi@shimmerproject.org&gt;
-fr: Fabrice Colin &lt;fabrice.colin@gmail.com&gt;, Simon Steinbeiß &lt;ochosi@shimmerproject.org&gt;, honeyshell &lt;honeyshell@honeyshell.com&gt;
-it: Matteo Costa
-ja: Ryan Hagood
-nl: Pjotr12345, markov35 &lt;sintsixtus@gmail.com&gt;
-pl: Piotr Sokół &lt;psokol@jabster.pl&gt;
-pt_BR: Bleno Lopes &lt;blenolopes@gmail.com&gt;, Lucas S. B. Mastella &lt;lucas@bello.li&gt;
-ru: Aleksey Kabanov
-sk: DAG Software
-sr: Саша Петровић &lt;salepetronije@gmail.com&gt;
-tr: Utku BERBEROĞLU, doktor deman &lt;doktordeman@hotmail.com&gt;
-uk: Олександр
-zh_TW: Howard Chan &lt;smartboyhw@gmail.com&gt;, Walter Cheuk &lt;wwycheuk@gmail.com&gt;
-</property>
+    <property name="translator_credits">Launchpad Translators, https://translations.launchpad.net/catfish-search</property>
     <property name="artists">Nancy Runge &lt;nancy@twotoasts.de&gt;</property>
     <property name="logo_icon_name">catfish</property>
     <property name="license_type">gpl-2-0</property>
