@@ -183,6 +183,7 @@ class CatfishWindow(Window):
         box.show()
 
         self.statusbar.add(box)
+        self.statusbar.set_halign(Gtk.Align.END)
         self.statusbar.hide()
 
         self.icon_cache_size = 0
@@ -310,7 +311,7 @@ class CatfishWindow(Window):
         if self.options.time_iso:
             self.time_format = '%Y-%m-%d %H:%M'
         else:
-            self.time_format = '%x %X'
+            self.time_format = None
 
         # Set search defaults.
         self.exact_match.set_active(self.options.exact)
@@ -366,7 +367,7 @@ class CatfishWindow(Window):
         name = escape(name)
         size = self.format_size(size)
         path = escape(path)
-        modified = time.strftime(self.time_format, time.gmtime(int(modified)))
+        modified = self.get_date_string(modified)
         displayed = '<b>%s</b> %s%s%s%s%s' % (name, size, os.linesep, path,
                                             os.linesep, modified)
         renderer.set_property('markup', displayed)
@@ -480,6 +481,13 @@ class CatfishWindow(Window):
         """If the search entry is not empty, perform the query."""
         if len(widget.get_text()) > 0:
             self.statusbar.show()
+
+            # Store search start time for displaying friendly dates
+            now = datetime.datetime.now()
+            self.today = datetime.datetime(now.year, now.month, now.day)
+            self.yesterday = self.today - datetime.timedelta(days=1)
+            self.this_week = self.today - datetime.timedelta(days=6)
+
             task = self.perform_query(widget.get_text())
             GLib.idle_add(next, task)
 
@@ -1171,10 +1179,26 @@ class CatfishWindow(Window):
                                 tree_model, tree_iter, id):
         """Modification date cell display function."""
         modification_int = int(tree_model.get_value(tree_iter, id))
-        modified = time.strftime(self.time_format,
-                                 time.gmtime(modification_int))
+        modified = self.get_date_string(modification_int)
+
         cell_renderer.set_property('text', modified)
         return
+
+    def get_date_string(self, modification_int):
+        if self.time_format is not None:
+            modified = time.strftime(self.time_format,
+                                     time.gmtime(modification_int))
+        else:
+            item_date = datetime.datetime.fromtimestamp(modification_int)
+            if item_date >= self.today:
+                modified = _("Today")
+            elif item_date >= self.yesterday:
+                modified = _("Yesterday")
+            elif item_date >= self.this_week:
+                modified = time.strftime("%A", time.gmtime(modification_int))
+            else:
+                modified = time.strftime("%x", time.gmtime(modification_int))
+        return modified
 
     def results_filter_func(self, model, iter, user_data):
         """Filter function for search results."""
