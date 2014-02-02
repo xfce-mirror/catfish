@@ -78,13 +78,6 @@
       </object>
     </child>
   </object>
-  <object class="GtkImage" id="image23">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">edit-delete-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
   <object class="GtkImage" id="image24">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -115,19 +108,27 @@
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkToolbar" id="toolbar">
+            <property name="height_request">45</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="show_arrow">False</property>
+            <style>
+              <class name="primary-toolbar"/>
+            </style>
             <child>
               <object class="GtkToolItem" id="toolbutton2">
                 <property name="width_request">150</property>
                 <property name="height_request">32</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="valign">center</property>
+                <property name="margin_left">2</property>
+                <property name="margin_top">3</property>
+                <property name="margin_bottom">3</property>
                 <property name="is_important">True</property>
                 <child>
                   <object class="GtkFileChooserButton" id="folderchooser">
-                    <property name="height_request">32</property>
+                    <property name="height_request">34</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
@@ -148,17 +149,22 @@
                 <property name="height_request">32</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="valign">center</property>
                 <property name="margin_left">6</property>
                 <property name="margin_right">12</property>
+                <property name="margin_top">3</property>
+                <property name="margin_bottom">3</property>
                 <property name="is_important">True</property>
                 <child>
                   <object class="GtkEntry" id="search_entry">
+                    <property name="height_request">28</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="has_focus">True</property>
                     <property name="can_default">True</property>
                     <property name="has_default">True</property>
                     <property name="tooltip_text" translatable="yes">Enter search terms and press ENTER</property>
+                    <property name="valign">center</property>
                     <property name="invisible_char">•</property>
                     <property name="caps_lock_warning">False</property>
                     <property name="secondary_icon_name">edit-find-symbolic</property>
@@ -179,6 +185,9 @@
                 <property name="height_request">32</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="valign">center</property>
+                <property name="margin_top">3</property>
+                <property name="margin_bottom">3</property>
                 <child>
                   <object class="GtkBox" id="box2">
                     <property name="visible">True</property>
@@ -238,7 +247,11 @@
               <object class="GtkToolItem" id="appmenu_placeholder">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="valign">center</property>
                 <property name="margin_left">6</property>
+                <property name="margin_right">4</property>
+                <property name="margin_top">3</property>
+                <property name="margin_bottom">3</property>
                 <child>
                   <placeholder/>
                 </child>
@@ -255,17 +268,6 @@
           </packing>
         </child>
         <child>
-          <object class="GtkSeparator" id="separator1">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">1</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkPaned" id="paned">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -278,6 +280,9 @@
                 <property name="can_focus">True</property>
                 <property name="no_show_all">True</property>
                 <property name="hscrollbar_policy">never</property>
+                <style>
+                  <class name="sidebar"/>
+                </style>
                 <child>
                   <object class="GtkViewport" id="viewport1">
                     <property name="visible">True</property>
@@ -1406,6 +1411,64 @@
       <action-widget response="-10">button6</action-widget>
     </action-widgets>
   </object>
+  <object class="GtkImage" id="image15">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">folder-symbolic</property>
+    <property name="use_fallback">True</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image16">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">edit-copy-symbolic</property>
+    <property name="use_fallback">True</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image18">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">22</property>
+    <property name="icon_name">locked</property>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">view-refresh-symbolic</property>
+    <property name="use_fallback">True</property>
+    <property name="icon-size">1</property>
+  </object>
+  <object class="GtkImage" id="image20">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">gtk-about-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="image21">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">document-open-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="image22">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">document-save-as-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="image23">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">edit-delete-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
   <object class="GtkMenu" id="file_menu">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -1476,57 +1539,6 @@
         <signal name="activate" handler="on_menu_delete_activate" swapped="no"/>
       </object>
     </child>
-  </object>
-  <object class="GtkImage" id="image15">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">folder-symbolic</property>
-    <property name="use_fallback">True</property>
-    <property name="icon-size">1</property>
-  </object>
-  <object class="GtkImage" id="image16">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">edit-copy-symbolic</property>
-    <property name="use_fallback">True</property>
-    <property name="icon-size">1</property>
-  </object>
-  <object class="GtkImage" id="image18">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">22</property>
-    <property name="icon_name">locked</property>
-  </object>
-  <object class="GtkImage" id="image2">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">view-refresh-symbolic</property>
-    <property name="use_fallback">True</property>
-    <property name="icon-size">1</property>
-  </object>
-  <object class="GtkImage" id="image20">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">gtk-about-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="image21">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">document-open-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="image22">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">document-save-as-symbolic</property>
-    <property name="use_fallback">True</property>
   </object>
   <object class="GtkListStore" id="liststore1"/>
   <object class="GtkDialog" id="update_index_dialog">
