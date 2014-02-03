@@ -1,6 +1,14 @@
-v0.8.3 (unreleased):
+v1.0.0:
+ + Interface refresh, mimicking common gnome applications.
  + Fix executable-not-elf-or-script when debian packaging
  + Use "use_underline" property for SaveAs and Delete in popup menu
+ + Fix "--thumbnail" startup option (lp: #1230245)
+ + Remove embedded copy of pexpect (lp: #1257500)
+ + Fix image loading issues, use icon names available in gnome-icon-theme (lp: #1258713)
+ + Fix untranslatable strings (lp: #1261181)
+ + Fix sidebar width (lp: #1261185)
+ + Fix sidebar coloration (lp: #1261185)
+ + Fix searching mounted shares (lp: 1274378)
 
 v0.8.2:
  + Fix PyGObject deprecation warning (lp: #1228440)
