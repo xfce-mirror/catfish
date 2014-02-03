@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-01-31 07:26-0500\n"
+"POT-Creation-Date: 2014-02-02 10:26-0500\n"
 "PO-Revision-Date: 2013-12-07 12:38+0000\n"
 "Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-02-01 06:49+0000\n"
+"X-Launchpad-Export-Date: 2014-02-03 05:53+0000\n"
 "X-Generator: Launchpad (build 16916)\n"
 
-#: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:413
+#: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:414
 msgid "Catfish File Search"
 msgstr "Cerca de fitxers Catfish"
 
@@ -29,133 +29,133 @@ msgstr "Cerca en el sistema de fitxers"
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish és una eina versàtil per cercar fitxers."
 
-#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
-#: ../data/ui/CatfishWindow.ui.h:2
-msgid "_Exact Match"
-msgstr "Coincidència _exacta"
-
-#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
-#: ../data/ui/CatfishWindow.ui.h:4
-msgid "_Hidden Files"
-msgstr "Fitxers _ocults"
-
-#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
-#: ../data/ui/CatfishWindow.ui.h:6
-msgid "_Fulltext Search"
-msgstr "Cerca de tot el _text"
-
-#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
-#: ../data/ui/CatfishWindow.ui.h:8
-msgid "_Show Advanced Settings"
-msgstr "_Mostra paràmetres avançats"
-
-#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
-#: ../data/ui/CatfishWindow.ui.h:10
-msgid "_Update Search Index…"
-msgstr "_Actualitza l’índex de cerca…"
-
-#: ../data/ui/CatfishWindow.ui.h:11
-msgid "_About"
-msgstr ""
-
-#: ../data/ui/CatfishWindow.ui.h:12
+#: ../data/ui/CatfishWindow.ui.h:1
 msgid "Catfish"
 msgstr "Catfish"
 
-#: ../data/ui/CatfishWindow.ui.h:13
+#: ../data/ui/CatfishWindow.ui.h:2
 msgid "Select a Directory"
 msgstr "Trieu un directori"
 
-#: ../data/ui/CatfishWindow.ui.h:14 ../catfish/CatfishWindow.py:502
-#: ../catfish/CatfishWindow.py:1494
+#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:510
+#: ../catfish/CatfishWindow.py:1518
 msgid "Enter search terms and press ENTER"
 msgstr "Introduïu termes de cerca i premeu Retorn"
 
-#: ../data/ui/CatfishWindow.ui.h:15
+#: ../data/ui/CatfishWindow.ui.h:4
 msgid "Compact List"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:16
+#: ../data/ui/CatfishWindow.ui.h:5
 msgid "Thumbnails"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:17
+#: ../data/ui/CatfishWindow.ui.h:6
 msgid "Any time"
 msgstr "Qualsevol moment"
 
-#: ../data/ui/CatfishWindow.ui.h:18
+#: ../data/ui/CatfishWindow.ui.h:7
 msgid "This week"
 msgstr "Aquesta setmana"
 
-#: ../data/ui/CatfishWindow.ui.h:19
+#: ../data/ui/CatfishWindow.ui.h:8
 msgid "Custom"
 msgstr "Personalitzat"
 
-#: ../data/ui/CatfishWindow.ui.h:20
+#: ../data/ui/CatfishWindow.ui.h:9
 msgid "<b>Modified</b>"
 msgstr "<b>Modificat</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:21
+#: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
 msgstr "Documents"
 
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:11
 msgid "Folders"
 msgstr "Carpetes"
 
-#: ../data/ui/CatfishWindow.ui.h:23
+#: ../data/ui/CatfishWindow.ui.h:12
 msgid "Images"
 msgstr "Imatges"
 
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:13
 msgid "Music"
 msgstr "Música"
 
-#: ../data/ui/CatfishWindow.ui.h:25
+#: ../data/ui/CatfishWindow.ui.h:14
 msgid "Videos"
 msgstr "Vídeos"
 
-#: ../data/ui/CatfishWindow.ui.h:26
+#: ../data/ui/CatfishWindow.ui.h:15
 msgid "Applications"
 msgstr "Programari"
 
-#: ../data/ui/CatfishWindow.ui.h:27
+#: ../data/ui/CatfishWindow.ui.h:16
 msgid "Other"
 msgstr "Altres"
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:17
 msgid "<b>File Type</b>"
 msgstr "<b>Tipus de fitxer</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:18
 msgid "Custom Time Range"
 msgstr "Altre interval de temps"
 
-#: ../data/ui/CatfishWindow.ui.h:30
+#: ../data/ui/CatfishWindow.ui.h:19
 msgid "Go to Today"
 msgstr "Vés a avui"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:20
 msgid "<b>Start Date</b>"
 msgstr "<b>Data d’inici</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:32
+#: ../data/ui/CatfishWindow.ui.h:21
 msgid "<b>End Date</b>"
 msgstr "<b>Data final</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "Custom File Type"
 msgstr "Tipus de fitxer personalitzat"
 
 #. The "mimetype" is the file type of the file, such as "application/octet-stream"
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Select existing mimetype"
 msgstr "Trieu un tipus MIME existent"
 
 #. Enter "file extensions" such as .doc, .pdf
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "Enter file extensions"
 msgstr "Introduïu extensions de fitxer"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:28
+msgid "_Exact Match"
+msgstr "Coincidència _exacta"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:30
+msgid "_Hidden Files"
+msgstr "Fitxers _ocults"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:32
+msgid "_Fulltext Search"
+msgstr "Cerca de tot el _text"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:34
+msgid "_Show Advanced Settings"
+msgstr "_Mostra paràmetres avançats"
+
+#. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
+#: ../data/ui/CatfishWindow.ui.h:36
+msgid "_Update Search Index…"
+msgstr "_Actualitza l’índex de cerca…"
+
+#: ../data/ui/CatfishWindow.ui.h:37
+msgid "_About"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Open"
@@ -260,59 +260,59 @@ msgstr "Realitza una cerca de text complet"
 msgid "%s (invalid encoding)"
 msgstr "%s (codificació no vàlida)"
 
-#: ../catfish/CatfishWindow.py:420 ../catfish/CatfishWindow.py:450
+#: ../catfish/CatfishWindow.py:421 ../catfish/CatfishWindow.py:451
 msgid "Authentication failed."
 msgstr "Ha fallat l’autenticació."
 
-#: ../catfish/CatfishWindow.py:444 ../catfish/CatfishWindow.py:452
+#: ../catfish/CatfishWindow.py:445 ../catfish/CatfishWindow.py:453
 msgid "Locate database updated successfully."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:446
+#: ../catfish/CatfishWindow.py:447
 msgid "An error occurred while updating locatedb."
 msgstr "S’ha produït un error en actualitzar locatedb."
 
-#: ../catfish/CatfishWindow.py:448
+#: ../catfish/CatfishWindow.py:449
 msgid "User aborted authentication."
 msgstr "L’usuari ha interromput l’autenticació."
 
-#: ../catfish/CatfishWindow.py:505 ../catfish/CatfishWindow.py:1501
+#: ../catfish/CatfishWindow.py:513 ../catfish/CatfishWindow.py:1525
 msgid "Clear search terms"
 msgstr "Neteja els termes de cerca"
 
 #. Translators: This message will only appear when trying to
 #. open the default file manager but it cannot be found.
-#: ../catfish/CatfishWindow.py:832
+#: ../catfish/CatfishWindow.py:840
 msgid "Catfish could not find the default file manager."
 msgstr "Catfish no ha pogut trobar el gestor de fitxers predeterminat."
 
 #. Translators: This message will only appear when the default
 #. application for opening a file cannot be found.
-#: ../catfish/CatfishWindow.py:839
+#: ../catfish/CatfishWindow.py:847
 msgid "Catfish could not find the default open wrapper."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:853
+#: ../catfish/CatfishWindow.py:861
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "No s’ha pogut obrir «%s»."
 
-#: ../catfish/CatfishWindow.py:899
+#: ../catfish/CatfishWindow.py:907
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "No s’ha pogut desar «%s»."
 
-#: ../catfish/CatfishWindow.py:924
+#: ../catfish/CatfishWindow.py:932
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "No s’ha pogut suprimir «%s»."
 
-#: ../catfish/CatfishWindow.py:936
+#: ../catfish/CatfishWindow.py:944
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "Anomena i desa «%s»…"
 
-#: ../catfish/CatfishWindow.py:963
+#: ../catfish/CatfishWindow.py:971
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -321,7 +321,7 @@ msgstr ""
 "Esteu segur que voleu suprimir\n"
 "permanentment «%s»?"
 
-#: ../catfish/CatfishWindow.py:967
+#: ../catfish/CatfishWindow.py:975
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -330,61 +330,69 @@ msgstr ""
 "Esteu segur que voleu suprimir\n"
 "permanentment els %i fitxers seleccionats?"
 
-#: ../catfish/CatfishWindow.py:970
+#: ../catfish/CatfishWindow.py:978
 msgid "If you delete a file, it is permanently lost."
 msgstr "Si suprimiu un fitxer, es perdrà permanentment."
 
-#: ../catfish/CatfishWindow.py:990 ../catfish/CatfishWindow.py:1013
+#: ../catfish/CatfishWindow.py:998 ../catfish/CatfishWindow.py:1021
 msgid "Filename"
 msgstr "Nom del fitxer"
 
-#: ../catfish/CatfishWindow.py:992
+#: ../catfish/CatfishWindow.py:1000
 msgid "Size"
 msgstr "Mida"
 
-#: ../catfish/CatfishWindow.py:994
+#: ../catfish/CatfishWindow.py:1002
 msgid "Location"
 msgstr "Ubicació"
 
-#: ../catfish/CatfishWindow.py:996
+#: ../catfish/CatfishWindow.py:1004
 msgid "Modified"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1006
+#: ../catfish/CatfishWindow.py:1014
 msgid "Preview"
 msgstr "Previsualitza"
 
-#: ../catfish/CatfishWindow.py:1247 ../catfish/CatfishWindow.py:1481
+#: ../catfish/CatfishWindow.py:1194
+msgid "Today"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1196
+msgid "Yesterday"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1271 ../catfish/CatfishWindow.py:1505
 msgid "No files found."
 msgstr "No s’ha trobat cap fitxer."
 
-#: ../catfish/CatfishWindow.py:1249 ../catfish/CatfishWindow.py:1483
+#: ../catfish/CatfishWindow.py:1273 ../catfish/CatfishWindow.py:1507
 msgid "1 file found."
 msgstr "S’ha trobat un fitxer."
 
-#: ../catfish/CatfishWindow.py:1252 ../catfish/CatfishWindow.py:1485
+#: ../catfish/CatfishWindow.py:1276 ../catfish/CatfishWindow.py:1509
 #, python-format
 msgid "%i files found."
 msgstr "S’han trobat %i fitxers."
 
-#: ../catfish/CatfishWindow.py:1260
+#: ../catfish/CatfishWindow.py:1284
 msgid "bytes"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1395
+#: ../catfish/CatfishWindow.py:1419
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "S’està cercant «%s»"
 
-#: ../catfish/CatfishWindow.py:1397
+#: ../catfish/CatfishWindow.py:1421
 msgid "Searching…"
 msgstr "S’està cercant…"
 
-#: ../catfish/CatfishWindow.py:1401
+#: ../catfish/CatfishWindow.py:1425
 msgid "Stop Search"
 msgstr "Atura la cerca"
 
-#: ../catfish/CatfishWindow.py:1476
+#: ../catfish/CatfishWindow.py:1500
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Resultats de la cerca «%s»"
