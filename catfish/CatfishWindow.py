@@ -605,7 +605,7 @@ class CatfishWindow(Window):
             self.filter_timerange = (week, 9999999999.0)
             logger.debug(
                 "Time Range: %s -> Eternity",
-                time.strftime(self.time_format, time.gmtime(int(week))))
+                time.strftime("%x %X", time.gmtime(int(week))))
             self.refilter()
 
     def on_radio_time_custom_toggled(self, widget):
@@ -619,9 +619,9 @@ class CatfishWindow(Window):
                                      timegm(self.end_date.timetuple()))
             logger.debug(
                 "Time Range: %s -> %s",
-                time.strftime(self.time_format,
+                time.strftime("%x %X",
                               time.gmtime(int(self.filter_timerange[0]))),
-                time.strftime(self.time_format,
+                time.strftime("%x %X",
                               time.gmtime(int(self.filter_timerange[1]))))
 
             self.refilter()
@@ -655,9 +655,9 @@ class CatfishWindow(Window):
 
             logger.debug(
                 "Time Range: %s -> %s",
-                time.strftime(self.time_format,
+                time.strftime("%x %X",
                               time.gmtime(int(self.filter_timerange[0]))),
-                time.strftime(self.time_format,
+                time.strftime("%x %X",
                               time.gmtime(int(self.filter_timerange[1]))))
 
             # Reload the results filter.
@@ -1020,7 +1020,7 @@ class CatfishWindow(Window):
         # Make the Details Column
         cell = Gtk.CellRendererText()
         cell.set_property("ellipsize", Pango.EllipsizeMode.END)
-        column = Gtk.TreeViewColumn(_("Filename"), cell, markup=1)
+        column = Gtk.TreeViewColumn(_("Details"), cell, markup=1)
 
         column.set_sort_column_id(1)
         column.set_resizable(True)
