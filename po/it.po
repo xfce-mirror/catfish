@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-02-03 22:30-0500\n"
-"PO-Revision-Date: 2014-02-13 17:31+0000\n"
-"Last-Translator: Cristian Marchi <Unknown>\n"
+"PO-Revision-Date: 2014-02-14 09:01+0000\n"
+"Last-Translator: Marchi Cristian <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-02-14 07:41+0000\n"
+"X-Launchpad-Export-Date: 2014-02-15 07:33+0000\n"
 "X-Generator: Launchpad (build 16916)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:415
@@ -73,11 +73,11 @@ msgstr "Inserire i termini da ricercare e premere INVIO"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "Compact List"
-msgstr ""
+msgstr "Elenco compatto"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Thumbnails"
-msgstr ""
+msgstr "Anteprime"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "Any time"
@@ -159,7 +159,7 @@ msgstr "Inserire l'estensione del file"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Open"
-msgstr ""
+msgstr "_Apri"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:40
@@ -173,11 +173,11 @@ msgstr "_Copia posizione"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "_Save as..."
-msgstr ""
+msgstr "_Salva come..."
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "_Delete"
-msgstr ""
+msgstr "_Elimina"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Update Search Index"
@@ -350,7 +350,7 @@ msgstr "Posizione"
 
 #: ../catfish/CatfishWindow.py:1005
 msgid "Modified"
-msgstr ""
+msgstr "Modificato"
 
 #: ../catfish/CatfishWindow.py:1015
 msgid "Preview"
@@ -358,15 +358,15 @@ msgstr "Anteprima"
 
 #: ../catfish/CatfishWindow.py:1023
 msgid "Details"
-msgstr ""
+msgstr "Dettagli"
 
 #: ../catfish/CatfishWindow.py:1197
 msgid "Today"
-msgstr ""
+msgstr "Oggi"
 
 #: ../catfish/CatfishWindow.py:1199
 msgid "Yesterday"
-msgstr ""
+msgstr "Ieri"
 
 #: ../catfish/CatfishWindow.py:1274 ../catfish/CatfishWindow.py:1508
 msgid "No files found."
@@ -383,7 +383,7 @@ msgstr "Trovati %i file."
 
 #: ../catfish/CatfishWindow.py:1287
 msgid "bytes"
-msgstr ""
+msgstr "byte"
 
 #: ../catfish/CatfishWindow.py:1422
 #, python-format
