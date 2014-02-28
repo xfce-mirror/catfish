@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-%python% %prefix%/share/catfish.py "$@"
+%python% %prefix%/share/catfish/bin/catfish.py "$@"
