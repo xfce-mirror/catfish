@@ -29,17 +29,6 @@ PROJECT_ROOT_DIRECTORY = os.path.abspath(
     os.path.dirname(os.path.dirname(os.path.realpath(sys.argv[0]))))
 
 python_path = []
-if os.path.abspath(__file__).startswith('/opt'):
-    locale.bindtextdomain(
-        'catfish', '/opt/extras.ubuntu.com/catfish/share/locale')
-    syspath = sys.path[:]  # copy to avoid infinite loop in pending objects
-    for path in syspath:
-        opt_path = path.replace('/usr', '/opt/extras.ubuntu.com/catfish')
-        python_path.insert(0, opt_path)
-        sys.path.insert(0, opt_path)
-    os.putenv("XDG_DATA_DIRS",
-              "%s:%s" % ("/opt/extras.ubuntu.com/catfish/share/", os.getenv(
-                  "XDG_DATA_DIRS", "/usr/local/share/:/usr/share/")))
 if (os.path.exists(os.path.join(PROJECT_ROOT_DIRECTORY, 'catfish'))
         and PROJECT_ROOT_DIRECTORY not in sys.path):
     python_path.insert(0, PROJECT_ROOT_DIRECTORY)
