@@ -462,7 +462,8 @@ class CatfishWindow(Window):
         self.update_index_close.set_sensitive(False)
         self.update_index_unlock.set_sensitive(False)
 
-        self.updatedb_process = pexpect.spawn('sudo updatedb')
+        self.updatedb_process = pexpect.spawn('sudo updatedb',
+                                                            env={"LANG": "C"})
         self.updatedb_process.timeout = 1
         try:
             # Check for password prompt or program exit.
