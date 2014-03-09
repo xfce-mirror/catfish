@@ -6,11 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-02-03 22:30-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-09 09:26-0400\n"
 "PO-Revision-Date: 2014-02-14 21:33+0000\n"
 "Last-Translator: Urien Desterres <urien.desterres@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -66,8 +67,8 @@ msgstr "Catfish"
 msgid "Select a Directory"
 msgstr "Sélectionnez un répertoire"
 
-#: ../data/ui/CatfishWindow.ui.h:14 ../catfish/CatfishWindow.py:511
-#: ../catfish/CatfishWindow.py:1521
+#: ../data/ui/CatfishWindow.ui.h:14 ../catfish/CatfishWindow.py:513
+#: ../catfish/CatfishWindow.py:1531
 msgid "Enter search terms and press ENTER"
 msgstr "Entrez les termes recherchés et appuyez sur ENTRÉE"
 
@@ -260,49 +261,49 @@ msgstr "Rechercher plein texte"
 msgid "%s (invalid encoding)"
 msgstr "%s (encodage non valide)"
 
-#: ../catfish/CatfishWindow.py:422 ../catfish/CatfishWindow.py:452
+#: ../catfish/CatfishWindow.py:423 ../catfish/CatfishWindow.py:453
 msgid "Authentication failed."
 msgstr "Échec de l'authentification."
 
-#: ../catfish/CatfishWindow.py:446 ../catfish/CatfishWindow.py:454
+#: ../catfish/CatfishWindow.py:447 ../catfish/CatfishWindow.py:455
 msgid "Locate database updated successfully."
 msgstr "La base de données locate a été mise à jour."
 
-#: ../catfish/CatfishWindow.py:448
+#: ../catfish/CatfishWindow.py:449
 msgid "An error occurred while updating locatedb."
 msgstr "Une erreur est survenue pendant la mise à jour de locatedb."
 
-#: ../catfish/CatfishWindow.py:450
+#: ../catfish/CatfishWindow.py:451
 msgid "User aborted authentication."
 msgstr "Authentification annulée par l'utilisateur."
 
-#: ../catfish/CatfishWindow.py:514 ../catfish/CatfishWindow.py:1528
+#: ../catfish/CatfishWindow.py:516 ../catfish/CatfishWindow.py:1538
 msgid "Clear search terms"
 msgstr "Effacer les termes de recherche"
 
 #. Translators: This message will only appear when trying to
 #. open the default file manager but it cannot be found.
-#: ../catfish/CatfishWindow.py:841
+#: ../catfish/CatfishWindow.py:843
 msgid "Catfish could not find the default file manager."
 msgstr "Catfish n'a pas trouvé le gestionnaire de fichiers par défaut."
 
 #. Translators: This message will only appear when the default
 #. application for opening a file cannot be found.
-#: ../catfish/CatfishWindow.py:848
+#: ../catfish/CatfishWindow.py:850
 msgid "Catfish could not find the default open wrapper."
 msgstr "Catfish n'a pas trouvé l'application par défaut."
 
-#: ../catfish/CatfishWindow.py:862
+#: ../catfish/CatfishWindow.py:864
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Impossible d'ouvrir \"%s\"."
 
-#: ../catfish/CatfishWindow.py:908
+#: ../catfish/CatfishWindow.py:910
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Impossible d'enregistrer \"%s\"."
 
-#: ../catfish/CatfishWindow.py:933
+#: ../catfish/CatfishWindow.py:935
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Impossible de supprimer \"%s\"."
@@ -312,7 +313,7 @@ msgstr "Impossible de supprimer \"%s\"."
 msgid "Save \"%s\" as…"
 msgstr "Enregistrer \"%s\" sous..."
 
-#: ../catfish/CatfishWindow.py:972
+#: ../catfish/CatfishWindow.py:980
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -321,7 +322,7 @@ msgstr ""
 "Êtes-vous sûr de vouloir\n"
 "supprimer définitivement \"%s\" ?"
 
-#: ../catfish/CatfishWindow.py:976
+#: ../catfish/CatfishWindow.py:984
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -330,73 +331,73 @@ msgstr ""
 "Êtes-vous sûr de vouloir\n"
 "supprimer définitivement les \"%i\" fichiers sélectionnés ?"
 
-#: ../catfish/CatfishWindow.py:979
+#: ../catfish/CatfishWindow.py:987
 msgid "If you delete a file, it is permanently lost."
 msgstr "Si vous supprimez un fichier, il sera définitivement perdu."
 
-#: ../catfish/CatfishWindow.py:999
+#: ../catfish/CatfishWindow.py:1010
 msgid "Filename"
 msgstr "Nom de fichier"
 
-#: ../catfish/CatfishWindow.py:1001
+#: ../catfish/CatfishWindow.py:1012
 msgid "Size"
 msgstr "Taille"
 
-#: ../catfish/CatfishWindow.py:1003
+#: ../catfish/CatfishWindow.py:1014
 msgid "Location"
 msgstr "Emplacement"
 
-#: ../catfish/CatfishWindow.py:1005
+#: ../catfish/CatfishWindow.py:1016
 msgid "Modified"
 msgstr "Dernière modification"
 
-#: ../catfish/CatfishWindow.py:1015
+#: ../catfish/CatfishWindow.py:1026
 msgid "Preview"
 msgstr "Aperçu"
 
-#: ../catfish/CatfishWindow.py:1023
+#: ../catfish/CatfishWindow.py:1034
 msgid "Details"
 msgstr "Détails"
 
-#: ../catfish/CatfishWindow.py:1197
+#: ../catfish/CatfishWindow.py:1207
 msgid "Today"
 msgstr "Aujourd’hui"
 
-#: ../catfish/CatfishWindow.py:1199
+#: ../catfish/CatfishWindow.py:1209
 msgid "Yesterday"
 msgstr "Hier"
 
-#: ../catfish/CatfishWindow.py:1274 ../catfish/CatfishWindow.py:1508
+#: ../catfish/CatfishWindow.py:1284 ../catfish/CatfishWindow.py:1518
 msgid "No files found."
 msgstr "Aucun fichier trouvé."
 
-#: ../catfish/CatfishWindow.py:1276 ../catfish/CatfishWindow.py:1510
+#: ../catfish/CatfishWindow.py:1286 ../catfish/CatfishWindow.py:1520
 msgid "1 file found."
 msgstr "1 fichier trouvé."
 
-#: ../catfish/CatfishWindow.py:1279 ../catfish/CatfishWindow.py:1512
+#: ../catfish/CatfishWindow.py:1289 ../catfish/CatfishWindow.py:1522
 #, python-format
 msgid "%i files found."
 msgstr "%i fichiers trouvés."
 
-#: ../catfish/CatfishWindow.py:1287
+#: ../catfish/CatfishWindow.py:1297
 msgid "bytes"
 msgstr "octets"
 
-#: ../catfish/CatfishWindow.py:1422
+#: ../catfish/CatfishWindow.py:1432
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Recherche de \"%s\""
 
-#: ../catfish/CatfishWindow.py:1424
+#: ../catfish/CatfishWindow.py:1434
 msgid "Searching…"
 msgstr "Recherche en cours…"
 
-#: ../catfish/CatfishWindow.py:1428
+#: ../catfish/CatfishWindow.py:1438
 msgid "Stop Search"
 msgstr "Arrêter la recherche"
 
-#: ../catfish/CatfishWindow.py:1503
+#: ../catfish/CatfishWindow.py:1513
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Rechercher les résultats pour \"%s\""

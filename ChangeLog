@@ -1,3 +1,10 @@
+v1.0.2:
+ + Update to latest SudoDialog
+ + Cleanup remaining quickly template cruft
+ + Use LANG=C with pexpect calls for better reliable with non-english locales
+ + Fix list logic, item selection
+ + Fix dialog API changes
+
 v1.0.1:
  + Fix CVE-2014-2093 CVE-2014-2094 CVE-2014-2095 CVE-2014-2096
    - Debian #739958
