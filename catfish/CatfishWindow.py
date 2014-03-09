@@ -416,6 +416,7 @@ class CatfishWindow(Window):
         sudo_dialog.run()
         sudo_dialog.hide()
         password = sudo_dialog.get_password()
+        sudo_dialog.destroy()
 
         if not password:
             self.update_index_active = False
@@ -941,10 +942,11 @@ class CatfishWindow(Window):
         Return the filename, or None if cancelled."""
         basename = os.path.basename(filename)
 
-        buttons = (Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
-                   Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT)
-        dialog = Gtk.FileChooserDialog(_('Save "%s" as…') % basename, self,
-                                       Gtk.FileChooserAction.SAVE, buttons)
+        dialog = Gtk.FileChooserDialog(title=_('Save "%s" as…') % basename,
+                                        transient_for=self,
+                                        action=Gtk.FileChooserAction.SAVE)
+        dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
+                           Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT)
         dialog.set_default_response(Gtk.ResponseType.REJECT)
         dialog.set_current_name(basename.replace('�', '_'))
         dialog.set_do_overwrite_confirmation(True)
@@ -960,8 +962,13 @@ class CatfishWindow(Window):
         dialog_text = "<big><b>%s</b></big>\n\n%s" % (escape(primary),
                                                       escape(secondary))
 
-        dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR,
-                                   Gtk.ButtonsType.OK, "")
+        dialog = Gtk.MessageDialog(transient_for=self,
+                                    modal=True,
+                                    destroy_with_parent=True,
+                                    message_type=Gtk.MessageType.ERROR,
+                                    buttons=Gtk.ButtonsType.OK,
+                                    text="")
+
         dialog.set_markup(dialog_text)
         dialog.set_default_response(Gtk.ResponseType.OK)
         dialog.run()
@@ -980,9 +987,12 @@ class CatfishWindow(Window):
         secondary = _("If you delete a file, it is permanently lost.")
 
         dialog_text = "<big><b>%s</b></big>\n\n%s" % (primary, secondary)
-        dialog = Gtk.MessageDialog(self, 0,
-                                   Gtk.MessageType.QUESTION,
-                                   Gtk.ButtonsType.NONE, "")
+        dialog = Gtk.MessageDialog(transient_for=self,
+                                    modal=True,
+                                    destroy_with_parent=True,
+                                    message_type=Gtk.MessageType.QUESTION,
+                                    buttons=Gtk.ButtonsType.NONE,
+                                    text="")
         dialog.set_markup(surrogate_escape(dialog_text))
 
         dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.NO,
