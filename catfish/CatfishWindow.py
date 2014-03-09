@@ -363,7 +363,7 @@ class CatfishWindow(Window):
 
     def thumbnail_cell_data_func(self, col, renderer, model, treeiter, data):
         """Cell Renderer Function to Thumbnails View."""
-        icon, name, size, path, modified, mime, hidden, exact, counter = \
+        icon, name, size, path, modified, mime, hidden, exact = \
                                                         model[treeiter][:]
         name = escape(name)
         size = self.format_size(size)
@@ -1080,8 +1080,7 @@ class CatfishWindow(Window):
 
     def treemodel_get_row_filename(self, model, row):
         """Get the filename from a specified row."""
-        index = model[row][8]
-        filename = self.file_paths[index]
+        filename = os.path.join(model[row][3], model[row][1])
         return filename
 
     def treeview_get_selected_rows(self, treeview):
@@ -1436,7 +1435,7 @@ class CatfishWindow(Window):
 
         # icon, name, size, path, modified, mimetype, hidden, exact
         model = Gtk.ListStore(str, str, GObject.TYPE_LONG,
-                              str, float, str, bool, bool, int)
+                              str, float, str, bool, bool)
 
         # Initialize the results filter.
         self.results_filter = model.filter_new()
@@ -1454,8 +1453,6 @@ class CatfishWindow(Window):
         folder = self.folderchooser.get_filename()
 
         results = []
-        counter = 0
-        self.file_paths = []
 
         # Check if this is a fulltext query or standard query.
         if self.filter_formats['fulltext']:
@@ -1487,18 +1484,16 @@ class CatfishWindow(Window):
                     exact = keywords in name
 
                     results.append(filename)
-                    self.file_paths.append(filename)
 
                     displayed = surrogate_escape(name, True)
                     path = surrogate_escape(path)
                     model.append([icon, displayed, size, path, modified,
-                                  mimetype, hidden, exact, counter])
+                                  mimetype, hidden, exact])
                 except OSError:
                     # file no longer exists
                     pass
                 except Exception as e:
                     logger.error("Exception encountered: ", str(e))
-                counter += 1
 
             yield True
             continue
