@@ -1,21 +1,21 @@
 # Polish translation for catfish-search
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the catfish-search package.
-# Piotr Sokół <psokol@jabster.pl>,2012, 2013.
+# Piotr Sokół <psokol@jabster.pl>, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish-search 0.6.0\n"
+"Project-Id-Version: catfish-search 1.0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-09 09:26-0400\n"
-"PO-Revision-Date: 2014-03-05 18:41+0000\n"
-"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
+"PO-Revision-Date: 2014-04-15 05:10+0000\n"
+"Last-Translator: Piotr Sokół <Unknown>\n"
 "Language-Team: polski <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-03-10 06:03+0000\n"
-"X-Generator: Launchpad (build 16948)\n"
+"X-Launchpad-Export-Date: 2014-04-15 07:45+0000\n"
+"X-Generator: Launchpad (build 16976)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:415
 msgid "Catfish File Search"
@@ -32,7 +32,7 @@ msgstr "Umożliwia kompleksowe wyszukiwanie plików."
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "_Exact Match"
-msgstr "_Dokładny wynik"
+msgstr "_Dokładne dopasowanie"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:4
@@ -42,21 +42,21 @@ msgstr "_Ukryte pliki"
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Fulltext Search"
-msgstr "_Szukanie pełnotekstowe"
+msgstr "Wyszukiwanie p_ełnego tekstu"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "_Show Advanced Settings"
-msgstr "_Pokaż ustawienia zaawansowane"
+msgstr "Ustawienia _zaawansowane"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "_Update Search Index…"
-msgstr "_Aktualizuj indeks szukania..."
+msgstr "Z_aktualizuj indeks wyszukiwania…"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "_About"
-msgstr "O _programie"
+msgstr "_O programie"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Catfish"
@@ -64,7 +64,7 @@ msgstr "Catfish"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "Select a Directory"
-msgstr "Wybierz katalog"
+msgstr "Wybór katalogu"
 
 #: ../data/ui/CatfishWindow.ui.h:14 ../catfish/CatfishWindow.py:513
 #: ../catfish/CatfishWindow.py:1531
@@ -73,11 +73,11 @@ msgstr "Wyszukuje wyrażenie po wciśnięciu klawisza ENTER"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "Compact List"
-msgstr "Lista kompaktowa"
+msgstr "Wyświetla wyniki na zwartej liście"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Thumbnails"
-msgstr "Miniatury"
+msgstr "Wyświetla wyniki jako miniatury"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "Any time"
@@ -164,7 +164,7 @@ msgstr "_Otwórz"
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "Show in _File Manager"
-msgstr "Pokaż w _menedżerze plików"
+msgstr "Wyświetl w _menedżerze plików"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:42
@@ -198,8 +198,8 @@ msgid ""
 "refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
-"Aby zapewnić trafne wyniki wyszukiwania, należy uaktualnić <i>lokalną</i> "
-"bazę danych.\n"
+"Aby zapewnić trafne wyniki wyszukiwania, należy uaktualnić bazę danych "
+"<i>wyszukiwania</i>.\n"
 "Do tego celu wymagane są uprawnienia administratora."
 
 #: ../data/ui/CatfishWindow.ui.h:51
@@ -218,49 +218,49 @@ msgstr ""
 
 #: ../catfish/__init__.py:40
 msgid "Use large icons"
-msgstr "Użyj dużych ikon"
+msgstr "Używa dużych ikon"
 
 #: ../catfish/__init__.py:42
 msgid "Use thumbnails"
-msgstr "Użyj miniatur"
+msgstr "Używa miniatur"
 
 #: ../catfish/__init__.py:44
 msgid "Display time in ISO format"
-msgstr "Wyświetl czas w formacie ISO"
+msgstr "Wypisuje czas w formacie ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:46
 msgid "Search in folder PATH"
-msgstr "Szukaj w katalogu PATH"
+msgstr "Wyszukuje zawartości w położeniu PATH"
 
 #. Translators: Do not translate FILEMAN, it is a variable.
 #: ../catfish/__init__.py:48
 msgid "Use FILEMAN as filemanager"
-msgstr "Użyj FILEMAN jako menedżera plików"
+msgstr "Używa FILEMAN jako menedżera plików"
 
 #. Translators: Do not translate WRAPPER, it is a variable
 #: ../catfish/__init__.py:51
 msgid "Use WRAPPER to open files"
-msgstr "Użyj WRAPPER do otwarcia plików"
+msgstr "Używa WRAPPER do otwierania plików"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
-msgstr "Przeprowadź dokładne dopasowanie"
+msgstr "Przeprowadza dokładne dopasowanie"
 
 #: ../catfish/__init__.py:55
 msgid "Include hidden files"
-msgstr "Uwzględnij pliki ukryte"
+msgstr "Uwzględnia pliki ukryte"
 
 #: ../catfish/__init__.py:57
 msgid "Perform fulltext search"
-msgstr "Przeprowadź szukanie pełnotekstowe"
+msgstr "Wyszukuje pełny tekst"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
 #: ../catfish/CatfishWindow.py:84
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr "%s (błędne kodowanie)"
+msgstr "%s (nieprawidłowe kodowanie)"
 
 #: ../catfish/CatfishWindow.py:423 ../catfish/CatfishWindow.py:453
 msgid "Authentication failed."
@@ -268,7 +268,7 @@ msgstr "Nieudane uwierzytelnianie."
 
 #: ../catfish/CatfishWindow.py:447 ../catfish/CatfishWindow.py:455
 msgid "Locate database updated successfully."
-msgstr "Zaktualizowano bazę nazw plików."
+msgstr "Uaktualniono bazę nazw plików."
 
 #: ../catfish/CatfishWindow.py:449
 msgid "An error occurred while updating locatedb."
@@ -371,7 +371,7 @@ msgstr "Nie odnaleziono plików."
 
 #: ../catfish/CatfishWindow.py:1286 ../catfish/CatfishWindow.py:1520
 msgid "1 file found."
-msgstr "Znaleziono 1 plik."
+msgstr "Odnaleziono 1 plik."
 
 #: ../catfish/CatfishWindow.py:1289 ../catfish/CatfishWindow.py:1522
 #, python-format
