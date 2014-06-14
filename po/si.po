@@ -8,51 +8,51 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-03-09 09:26-0400\n"
-"PO-Revision-Date: 2014-06-13 03:27+0000\n"
-"Last-Translator: Poorni <Poorni.dayananda@gmail.com>\n"
+"PO-Revision-Date: 2014-06-13 19:02+0000\n"
+"Last-Translator: Rowena Fernando <fernandorowena@ymail.com>\n"
 "Language-Team: Sinhalese <si@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-13 06:55+0000\n"
+"X-Launchpad-Export-Date: 2014-06-14 06:40+0000\n"
 "X-Generator: Launchpad (build 17045)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:415
 msgid "Catfish File Search"
-msgstr "කැට් ෆිශ් ලිපි ගොනු සෙවුම"
+msgstr "කැට් ෆිෂ් ලිපි ගොනු සෙවීම"
 
 #: ../catfish.desktop.in.h:2
 msgid "Search the file system"
-msgstr ""
+msgstr "ලිපි ගොනු පද්ධතිය සෙවීම"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
-msgstr ""
+msgstr "කැට් ෆිෂ්, විවිධ ලිපි ගොනු සෙවීමේ උපකරණයකි"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "_Exact Match"
-msgstr ""
+msgstr "නිවැරදි ගැලපීම"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "_Hidden Files"
-msgstr ""
+msgstr "සැඟවු ලිපි ගොනු"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Fulltext Search"
-msgstr ""
+msgstr "සම්පුර්ණ අකුරු සෙවීම"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "_Show Advanced Settings"
-msgstr ""
+msgstr "උසස් පසුතල පෙන්වීම"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "_Update Search Index…"
-msgstr ""
+msgstr "යාවත්කාලීන දර්ශක සෙවීම"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "_About"
@@ -64,20 +64,20 @@ msgstr "කැට් ෆිෂ්"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "Select a Directory"
-msgstr ""
+msgstr "නාමාවලියක් තෝරා ගැනීම"
 
 #: ../data/ui/CatfishWindow.ui.h:14 ../catfish/CatfishWindow.py:513
 #: ../catfish/CatfishWindow.py:1531
 msgid "Enter search terms and press ENTER"
-msgstr "සෙවීම් නියමයන් ඇතුලත් කර  ENTER ඔබන්න"
+msgstr "සෙවීම් නියම ඇතුලත් කරන්න සහ \"ඇතුලත් කිරීම\"   ඔබන්න"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "Compact List"
-msgstr ""
+msgstr "ගිවිසුම් ලේඛනය"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Thumbnails"
-msgstr "කුඩා රූ"
+msgstr "සංක්ෂිප්තයන්"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "Any time"
@@ -85,11 +85,11 @@ msgstr "ඕනෑම වේලාවක"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "This week"
-msgstr "මෙම සතිය"
+msgstr "මේ සතිය"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Custom"
-msgstr "ව්‍යවහාර"
+msgstr "භාවිතය"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "<b>Modified</b>"
@@ -97,15 +97,15 @@ msgstr "<b>වෙනස් කරන ලදී</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "Documents"
-msgstr "ලේඛන"
+msgstr "ලියකියවිලි"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Folders"
-msgstr "බහාලුම්"
+msgstr "පත්‍රිකා"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "Images"
-msgstr "පින්තූර"
+msgstr "ප්‍රතිබිම්බ"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Music"
@@ -117,7 +117,7 @@ msgstr "වීඩියෝ"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "Applications"
-msgstr "වැඩසටහන්"
+msgstr "භාවිතය"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "Other"
@@ -125,15 +125,15 @@ msgstr "වෙනත්"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "<b>File Type</b>"
-msgstr ""
+msgstr "<b>ලිපිගොනු වර්ගය</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgid "Custom Time Range"
-msgstr ""
+msgstr "භාවිත කාල පරාසය"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "Go to Today"
-msgstr "අද දිනය වෙත යන්න"
+msgstr "අද දිනයට යන්න"
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "<b>Start Date</b>"
@@ -145,17 +145,17 @@ msgstr "<b>අවසාන දිනය</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Custom File Type"
-msgstr "ලිපිගොනු වර්ග ක්‍රමය"
+msgstr "ලිපිගොනු වර්ග භාවිතය"
 
 #. The "mimetype" is the file type of the file, such as "application/octet-stream"
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Select existing mimetype"
-msgstr "පවතින mimetype තේරීම"
+msgstr "පවතින අනුකාර වර්ග තෝරා ගැනීම"
 
 #. Enter "file extensions" such as .doc, .pdf
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "Enter file extensions"
-msgstr "ලිපිගොනු   විස්තාරය ඇතුලත් කිරීම"
+msgstr "ලිපිගොනු දීර්ඝ කිරීම් ඇතුලත් කිරීම"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Open"
@@ -173,15 +173,15 @@ msgstr "_ස්ථානය පිටපත්කරන්න"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "_Save as..."
-msgstr "ලෙස සුරකින්න"
+msgstr "වගේ සුරකින්න"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "_Delete"
-msgstr "මකන්න(_D)"
+msgstr "කපා ඉවත් කරන්න"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Update Search Index"
-msgstr "සෙවුම් ලැයිස්තුව යාවත්කාලීන කිරීම"
+msgstr "සෙවුම් දර්ශකය යාවත්කාලීන කිරීම"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Unlock"
@@ -189,7 +189,7 @@ msgstr "අගුළු හරින්න"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "<big><b>Update Search Index</b></big>"
-msgstr "<big><b>සෙවුම් ලැයිස්තුව යාවත්කාලීන කිරීම/b></big>"
+msgstr "<big><b>සෙවුම් දර්ශකය යාවත්කාලීන කිරීම/b></big>"
 
 #. The term "locate" is a commandline application, so it should not be translated.
 #: ../data/ui/CatfishWindow.ui.h:49
@@ -198,24 +198,24 @@ msgid ""
 "refreshed.\n"
 "This requires sudo (admin) rights."
 msgstr ""
-"නිවැරදි ප්‍රතිඑල සැපයීම සඳහා  <i>locate</i> දත්ත ගබඩාව නැවත ප්‍රාණවත් කළ "
-"යුතුය. sudo (admin) අයිතීන් මෙයට අවශ්‍ය වේ."
+"නිවැරදි ප්‍රතිඑල සැපයීමට  <i>locate</i> පරිගණක දත්ත ගබඩාව නැවත ප්‍රාණවත් "
+"කිරීම අවශ්‍යය වේ. sudo (පරිපාලක) අයිතීන් මෙයට අවශ්‍ය වේ."
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid "Updating database…"
-msgstr "දත්ත ගබඩාව  යාවත්කාලීන කිරීම"
+msgstr "පරිගණක දත්ත ගබඩාව යාවත්කාලීන කිරීම"
 
 #: ../data/ui/CatfishWindow.ui.h:52
 msgid "Done."
-msgstr "නිම කළා."
+msgstr "අවසන් කලා"
 
 #: ../catfish/__init__.py:37
 msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr "නිවැරදි කිරිමේ  පණිවුඩ පෙන්වන්න"
+msgstr "පරිගණක නිදොස් කිරීමේ පණිවුඩ පෙන්වන්න"
 
 #: ../catfish/__init__.py:40
 msgid "Use large icons"
-msgstr "විශාල සලකුණු භාවිතා කරන්න"
+msgstr "විශාල සංකේතයන් පාවිච්චි කරන්න"
 
 #: ../catfish/__init__.py:42
 msgid "Use thumbnails"
@@ -223,30 +223,30 @@ msgstr "සංක්ෂිප්තයන් භාවිතා කරන්න"
 
 #: ../catfish/__init__.py:44
 msgid "Display time in ISO format"
-msgstr "කාලය ISO ආකෘතියෙන් පෙන්වන්න"
+msgstr "කාලය ISO ප්‍රමිති ආකෘතියෙන් පෙන්වන්න"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:46
 msgid "Search in folder PATH"
-msgstr ""
+msgstr "පත්‍රිකාවේ මඟ තුලින් සොයන්න"
 
 #. Translators: Do not translate FILEMAN, it is a variable.
 #: ../catfish/__init__.py:48
 msgid "Use FILEMAN as filemanager"
-msgstr "ගොනු කළමනාකරු ලෙස FILEMAN භාවිතා කරන්න"
+msgstr "ලිපි ගොනු කළමනාකරු ලෙස ලිපි ගොනු සපයන්නා භාවිතා කරන්න"
 
 #. Translators: Do not translate WRAPPER, it is a variable
 #: ../catfish/__init__.py:51
 msgid "Use WRAPPER to open files"
-msgstr "ලිපිගොනු විවෘත කිරිම සඳහා WRAPPER භාවිතා කරන්න"
+msgstr "ලිපිගොනු විවෘත කිරිමට වැස්ම යොදා ගන්න"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
-msgstr "නිවැරදිම ගැලපිම කරන්න"
+msgstr "නිවැරදිම ගැලපිම  ඉටු කරන්න"
 
 #: ../catfish/__init__.py:55
 msgid "Include hidden files"
-msgstr "සැඟවුණු ලිපිගොනු අතුලත් කරන්න"
+msgstr "සැඟවුණු ලිපිගොනු ඇතුලත් කරන්න"
 
 #: ../catfish/__init__.py:57
 msgid "Perform fulltext search"
@@ -261,15 +261,15 @@ msgstr "%s (අවලංගු කේතීකරණයකි)"
 
 #: ../catfish/CatfishWindow.py:423 ../catfish/CatfishWindow.py:453
 msgid "Authentication failed."
-msgstr "අවසරදීම අසාර්ථකයි."
+msgstr "සත්‍ය බවට සහතික කිරීම අසාර්ථකයි."
 
 #: ../catfish/CatfishWindow.py:447 ../catfish/CatfishWindow.py:455
 msgid "Locate database updated successfully."
-msgstr "locate දත්ත ගබඩාව \tසාර්ථක ලෙස යාවත්කාලීන කරන ලදී."
+msgstr "පරිගණක දත්ත ගබඩාව සාර්ථක ලෙස යාවත්කාලීන  කිරීම පිහිටු වන්න"
 
 #: ../catfish/CatfishWindow.py:449
 msgid "An error occurred while updating locatedb."
-msgstr "locatedb  යාවත්කාලීන කරන අතරතුර ගැටළුවක් පැන නගින ලදී."
+msgstr "ස්ථාන ගත කල පරිගණක දත්ත ගබඩාව යාවත්කාලීන කරන අතරතුර වරදක් සිදු වි ඇත"
 
 #: ../catfish/CatfishWindow.py:451
 msgid "User aborted authentication."
@@ -283,7 +283,7 @@ msgstr "සෙවීම් නියමයන් ඉවත් කරන්න"
 #. open the default file manager but it cannot be found.
 #: ../catfish/CatfishWindow.py:843
 msgid "Catfish could not find the default file manager."
-msgstr "කැට් ෆිෂ් හට අමතර ගොනු කළමනාකරණය කල නොහැක."
+msgstr "කැට් ෆිෂ් මෘදුකාංගයට අමතර ගොනු කළමනාකරණය සොයා ගත නොහැක"
 
 #. Translators: This message will only appear when the default
 #. application for opening a file cannot be found.
@@ -294,7 +294,7 @@ msgstr "කැට් ෆිෂ් හට අනාවරණය ලිපි ග�
 #: ../catfish/CatfishWindow.py:864
 #, python-format
 msgid "\"%s\" could not be opened."
-msgstr "\"%s\" ප්‍රමාණයක් අනාවරණය කල නොහැක"
+msgstr "\"%s\" විවෘත කල නොහැක"
 
 #: ../catfish/CatfishWindow.py:910
 #, python-format
@@ -327,11 +327,11 @@ msgstr "මෙම තෝරාගත්  ලිපි ගොනු %i සදහ�
 
 #: ../catfish/CatfishWindow.py:987
 msgid "If you delete a file, it is permanently lost."
-msgstr "ඔබ මෙම ලිපි ගොනුව විනාශ කල හොත් එය සදහටම නැති වේ."
+msgstr "ඔබ ලිපි ගොනුවක් විනාශ කල හොත්, එය සදහටම නැති වේ."
 
 #: ../catfish/CatfishWindow.py:1010
 msgid "Filename"
-msgstr "ගොනු නාමය"
+msgstr "ලිපි ගොනු  නාමය"
 
 #: ../catfish/CatfishWindow.py:1012
 msgid "Size"
@@ -355,33 +355,33 @@ msgstr "විස්තර"
 
 #: ../catfish/CatfishWindow.py:1207
 msgid "Today"
-msgstr "අද දිනය"
+msgstr "අද"
 
 #: ../catfish/CatfishWindow.py:1209
 msgid "Yesterday"
-msgstr "පෙර දින"
+msgstr "ඊයේ"
 
 #: ../catfish/CatfishWindow.py:1284 ../catfish/CatfishWindow.py:1518
 msgid "No files found."
-msgstr "ගොනු හමු නොවිනි."
+msgstr "ලිපිගොනු ආරම්භ කර නැත"
 
 #: ../catfish/CatfishWindow.py:1286 ../catfish/CatfishWindow.py:1520
 msgid "1 file found."
-msgstr "1 ගොනුවක් හමු විය"
+msgstr "1 වන ලිපිගොනුව ආරම්භ කරන්න"
 
 #: ../catfish/CatfishWindow.py:1289 ../catfish/CatfishWindow.py:1522
 #, python-format
 msgid "%i files found."
-msgstr "%i ගොනු"
+msgstr "%i ලිපිගොනුව ආරම්භ කරන්න"
 
 #: ../catfish/CatfishWindow.py:1297
 msgid "bytes"
-msgstr "බයිට්"
+msgstr "බයිට"
 
 #: ../catfish/CatfishWindow.py:1432
 #, python-format
 msgid "Searching for \"%s\""
-msgstr "\"%s\" සදහා විමසුම් කරයි"
+msgstr "\"%s\" සෙවීම  සදහා"
 
 #: ../catfish/CatfishWindow.py:1434
 msgid "Searching…"
@@ -394,7 +394,7 @@ msgstr "සෙවීම නවතන්න"
 #: ../catfish/CatfishWindow.py:1513
 #, python-format
 msgid "Search results for \"%s\""
-msgstr "\"%s\" සදහා ප්‍රතිපල සොයයි."
+msgstr "\"%s\" සදහා ප්‍රතිඵල සොයයි"
 
 #~ msgid "Last modified"
 #~ msgstr "අවසාන වෙනස් කළ දිනය"
