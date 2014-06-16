@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-03-09 09:26-0400\n"
-"PO-Revision-Date: 2014-06-13 19:02+0000\n"
-"Last-Translator: Rowena Fernando <fernandorowena@ymail.com>\n"
+"PO-Revision-Date: 2014-06-15 17:26+0000\n"
+"Last-Translator: Poorni <Poorni.dayananda@gmail.com>\n"
 "Language-Team: Sinhalese <si@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-14 06:40+0000\n"
+"X-Launchpad-Export-Date: 2014-06-16 06:06+0000\n"
 "X-Generator: Launchpad (build 17045)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:415
@@ -93,7 +93,7 @@ msgstr "භාවිතය"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "<b>Modified</b>"
-msgstr "<b>වෙනස් කරන ලදී</b>"
+msgstr "<b>විකරණය කළ</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "Documents"
@@ -105,7 +105,7 @@ msgstr "පත්‍රිකා"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "Images"
-msgstr "ප්‍රතිබිම්බ"
+msgstr "පින්තූර"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Music"
@@ -117,7 +117,7 @@ msgstr "වීඩියෝ"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "Applications"
-msgstr "භාවිතය"
+msgstr "යෙදුම්"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "Other"
@@ -203,11 +203,11 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid "Updating database…"
-msgstr "පරිගණක දත්ත ගබඩාව යාවත්කාලීන කිරීම"
+msgstr "දත්ත ගබඩාව යාවත්කාලීන කිරීම"
 
 #: ../data/ui/CatfishWindow.ui.h:52
 msgid "Done."
-msgstr "අවසන් කලා"
+msgstr "නිම කළා."
 
 #: ../catfish/__init__.py:37
 msgid "Show debug messages (-vv debugs catfish_lib also)"
@@ -233,12 +233,12 @@ msgstr "පත්‍රිකාවේ මඟ තුලින් සොයන්
 #. Translators: Do not translate FILEMAN, it is a variable.
 #: ../catfish/__init__.py:48
 msgid "Use FILEMAN as filemanager"
-msgstr "ලිපි ගොනු කළමනාකරු ලෙස ලිපි ගොනු සපයන්නා භාවිතා කරන්න"
+msgstr "ලිපි ගොනු කළමනාකරු ලෙස FILEMAN භාවිතා කරන්න"
 
 #. Translators: Do not translate WRAPPER, it is a variable
 #: ../catfish/__init__.py:51
 msgid "Use WRAPPER to open files"
-msgstr "ලිපිගොනු විවෘත කිරිමට වැස්ම යොදා ගන්න"
+msgstr "ලිපිගොනු විවෘත කිරිමට WRAPPER යොදා ගන්න"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
