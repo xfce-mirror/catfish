@@ -385,7 +385,7 @@ class CatfishWindow(Window):
                                                     icon_lookup_flags)
             color = context.get_color(state)
             icon = icon_info.load_symbolic(color, color, color, color)[0]
-        except AttributeError:
+        except (AttributeError, GLib.GError):
             icon_lookup_flags = Gtk.IconLookupFlags.FORCE_SVG | \
                 Gtk.IconLookupFlags.USE_BUILTIN | \
                 Gtk.IconLookupFlags.GENERIC_FALLBACK
