@@ -19,6 +19,7 @@
 import logging
 logger = logging.getLogger('catfish_search')
 
+import io
 import os
 import signal
 import subprocess
@@ -399,7 +400,7 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
         """Initialize the external method class."""
         CatfishSearchMethod.__init__(self, method_name)
         self.pid = -1
-        self.command = None
+        self.command = []
         self.process = None
 
     def assemble_query(self, keywords, path):
@@ -417,17 +418,21 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
         if regex:
             command = self.assemble_query(keywords, path)
         if not command:
-            command = self.command.replace('%keywords', keywords.lower())
-        if '%path' in command:
-            command = command.replace('%path', path)
+            command = [item.replace('%keywords', keywords.lower())
+                       for item in self.command]
+        command = [item.replace('%path', path) for item in command]
         self.process = subprocess.Popen(command, stdout=subprocess.PIPE,
-                                        stderr=subprocess.PIPE, shell=True)
+                                        stderr=subprocess.PIPE, shell=False)
         self.pid = self.process.pid
         return self.process_output(self.process.stdout)
 
     def process_output(self, output):
         """Return the output text."""
-        return output
+        if isinstance(output, io.BufferedReader):
+            return map(lambda s: s.decode(encoding='UTF8').strip(),
+                       output.readlines())
+        else:
+            return output
 
     def status(self):
         """Return the current search status."""
@@ -457,8 +462,9 @@ class CatfishSearchMethod_Locate(CatfishSearchMethodExternal):
     def __init__(self):
         """Initialize the Locate SearchMethod."""
         CatfishSearchMethodExternal.__init__(self, "locate")
-        self.command = "locate -i %path*%keywords* --existing"
+        self.command = ["locate", "-i", "%path*%keywords*", "--existing"]
 
     def assemble_query(self, keywords, path):
         """Assemble the search query."""
-        return "locate --regex -i \"%s\"" % string_regex(keywords, path)
+        return ["locate", "--regex", "-i", "{}".format(string_regex(keywords,
+                                                                    path))]
