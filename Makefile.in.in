@@ -6,6 +6,7 @@ DESTDIR=
 
 all: $(LANGUAGE_FILES)
 	intltool-merge -d po catfish.desktop.in catfish.desktop
+	intltool-merge -d po --xml-style data/appdata/catfish.appdata.xml.in data/appdata/catfish.appdata.xml
 	chmod +x catfish.desktop
 	sed -e s,%prefix%,$(PREFIX), bin/$(APPNAME).in.in > bin/$(APPNAME).in
 	sed -e s,%python%,$(PYTHON), bin/$(APPNAME).in > bin/$(APPNAME)
@@ -57,6 +58,9 @@ install: all
 	install INSTALL $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
 	install README $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
 
+	install -d $(DESTDIR)/$(PREFIX)/share/appdata
+	install data/appdata/catfish.appdata.xml $(DESTDIR)/$(PREFIX)/share/appdata/catfish.appdata.xml
+
 	install -d $(DESTDIR)/$(PREFIX)/share/applications
 	install --mode=644 $(APPNAME).desktop $(DESTDIR)/$(PREFIX)/share/applications
 
@@ -68,6 +72,7 @@ uninstall:
 	rm -rf $(DESTDIR)/$(PREFIX)/share/$(APPNAME)
 	rm -rf $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps/$(APPNAME).svg
 	rm -rf $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+	rm -f $(DESTDIR)/$(PREFIX)/share/appdata/catfish.appdata.xml
 	# FIXME: Uninstall locales
 	rm -f $(DESTDIR)/$(PREFIX)/bin/$(APPNAME)
 
@@ -79,6 +84,7 @@ clean:
 	rm -f bin/$(APPNAME).in
 	rm -f bin/$(APPNAME)
 	rm -f catfish.desktop
+	rm -f data/appdata/catfish.appdata.xml
 	rm -f Makefile.in
 	rm -f Makefile
 	rm -f control.in

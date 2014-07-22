@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-09 09:26-0400\n"
+"POT-Creation-Date: 2014-07-22 16:01-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -392,4 +392,38 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:1513
 #, python-format
 msgid "Search results for \"%s\""
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:1
+msgid "Versatile file searching tool"
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:2
+msgid ""
+"Catfish is a small, fast, and powerful file search utility. Featuring a "
+"minimal interface with an emphasis on results, it helps users find the files "
+"they need without a file manager. With powerful filters such as modification "
+"date, file type, and file contents, users will no longer be dependent on the "
+"file manager or organization skills."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:3
+msgid ""
+"This stable release improved the reliability of the password dialog, cleaned "
+"up unused code, and fixed potential issues with the list and item selection."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:4
+msgid ""
+"This release fixed a potential security issue with program startup and fixed "
+"a regression with selecting multiple items."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:5
+msgid ""
+"The first release in the 1.0.x series introduced a refreshed interface and "
+"fixed a number of long-standing bugs. Improvements to the default "
+"permissions eliminated a number of warnings when packaging for "
+"distributions. Accessibility was enhanced as all strings have been made "
+"translatable and keyboard accelerators have been improved."
 msgstr ""

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Sean Davis <smd.seandavis@gmail.com> -->
+<application>
+  <id type="desktop">catfish.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>Catfish</name>
+  <_summary>Versatile file searching tool</_summary>
+
+  <description>
+    <_p>
+    Catfish is a small, fast, and powerful file search utility. Featuring a 
+    minimal interface with an emphasis on results, it helps users find the files
+    they need without a file manager. With powerful filters such as modification
+    date, file type, and file contents, users will no longer be dependent on the
+    file manager or organization skills.
+    </_p>
+  </description>
+
+  <screenshots>
+    <screenshot type="default" width="960" height="540">http://screenshots.smdavis.us/catfish/catfish.png</screenshot>
+    <screenshot width="960" height="540">http://screenshots.smdavis.us/catfish/catfish-filters.png</screenshot>
+  </screenshots>
+
+  <url type="homepage">https://launchpad.net/catfish-search/</url>
+  <url type="bugtracker">https://bugs.launchpad.net/catfish-search/</url>
+  <url type="help">http://docs.xfce.org/apps/parole/start</url>
+
+  <updatecontact>smd-seandavis@ubuntu.com</updatecontact>
+
+  <provides>
+    <binary>catfish</binary>
+  </provides>
+
+  <releases>
+    <release version="1.0.2" timestamp="1394371980">
+      <description>
+        <_p>This stable release improved the reliability of the password dialog,
+        cleaned up unused code, and fixed potential issues with the list and 
+        item selection.
+        </_p>
+      </description>
+    </release>
+
+    <release version="1.0.1" timestamp="1393562520">
+      <description>
+        <_p>This release fixed a potential security issue with program startup
+        and fixed a regression with selecting multiple items.
+        </_p>
+      </description>
+    </release>
+
+    <release version="1.0.0" timestamp="1391569020">
+      <description>
+        <_p>The first release in the 1.0.x series introduced a refreshed
+        interface and fixed a number of long-standing bugs. Improvements to
+        the default permissions eliminated a number of warnings when packaging
+        for distributions. Accessibility was enhanced as all strings have been
+        made translatable and keyboard accelerators have been improved.
+        </_p>
+      </description>
+    </release>
+  </releases>
+
+</application>
