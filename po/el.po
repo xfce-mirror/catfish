@@ -8,63 +8,63 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-07-22 16:01-0400\n"
-"PO-Revision-Date: 2013-02-24 00:59+0000\n"
-"Last-Translator: Sean Davis <Unknown>\n"
+"PO-Revision-Date: 2014-07-25 08:15+0000\n"
+"Last-Translator: krometis <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-07-23 06:54+0000\n"
-"X-Generator: Launchpad (build 17114)\n"
+"X-Launchpad-Export-Date: 2014-07-26 07:09+0000\n"
+"X-Generator: Launchpad (build 17131)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:415
 msgid "Catfish File Search"
-msgstr ""
+msgstr "Αναζήτηση αρχείων Catfish"
 
 #: ../catfish.desktop.in.h:2
 msgid "Search the file system"
-msgstr ""
+msgstr "Αναζήτηση στο σύστημα αρχείων"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
-msgstr ""
+msgstr "Catfish είναι ένα ευέλικτο εργαλείο αναζήτησης αρχείων."
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "_Exact Match"
-msgstr ""
+msgstr "Ακριβές ταίριασμα"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "_Hidden Files"
-msgstr ""
+msgstr "_Κρυφά αρχεία"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Fulltext Search"
-msgstr ""
+msgstr "_Αναζήτηση πλήρους κειμένου"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "_Show Advanced Settings"
-msgstr ""
+msgstr "_Εμφάνιση ρυθμίσεων για προχωρημένους"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "_Update Search Index…"
-msgstr ""
+msgstr "_Ενημέρωση αναζήτησης ευρετηρίου ..."
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "_About"
-msgstr ""
+msgstr "_Περί"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Catfish"
-msgstr ""
+msgstr "Catfish"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "Select a Directory"
-msgstr ""
+msgstr "Επιλογή ενός καταλόγου"
 
 #: ../data/ui/CatfishWindow.ui.h:14 ../catfish/CatfishWindow.py:513
 #: ../catfish/CatfishWindow.py:1531
@@ -73,27 +73,27 @@ msgstr "Εισάγετε τους όρους αναζήτησης και πιέ�
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "Compact List"
-msgstr ""
+msgstr "Συμπαγής λίστα"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Thumbnails"
-msgstr ""
+msgstr "Μικρογραφίες"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "Any time"
-msgstr "Κάθε φορά"
+msgstr "Οποιαδήποτε ώρα"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "This week"
-msgstr ""
+msgstr "Αυτήν την εβδομάδα"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Custom"
-msgstr ""
+msgstr "Προσαρμοσμένη"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "<b>Modified</b>"
-msgstr ""
+msgstr "<b>τροποποιημένο</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "Documents"
@@ -101,7 +101,7 @@ msgstr "Έγγραφα"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Folders"
-msgstr ""
+msgstr "Φάκελοι"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "Images"
@@ -125,7 +125,7 @@ msgstr "Άλλο"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "<b>File Type</b>"
-msgstr ""
+msgstr "<b>Τύπος Αρχείου</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgid "Custom Time Range"
@@ -133,15 +133,15 @@ msgstr "Προσαρμοσμένο εύρος χρόνου"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "Go to Today"
-msgstr ""
+msgstr "Μετάβαση στο σήμερα"
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "<b>Start Date</b>"
-msgstr ""
+msgstr "<b>Αρχική ημερομηνία</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "<b>End Date</b>"
-msgstr ""
+msgstr "<b>Τελική ημερομηνία</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Custom File Type"
