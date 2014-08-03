@@ -35,9 +35,8 @@
   <releases>
     <release version="1.0.3" timestamp="">
       <description>
-        <_p>This stable release improved the reliability of the password dialog,
-        cleaned up unused code, and fixed potential issues with the list and 
-        item selection.
+        <_p>This release fixes two issues where locate would not be properly
+        executed and improves handling of missing symbolic icons.
         </_p>
       </description>
     </release>
