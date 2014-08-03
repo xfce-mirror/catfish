@@ -1,3 +1,9 @@
+v1.0.3:
+ + Fix external file search methods (e.g. locate) (lp: #1329801)
+ + Improved handling for missing symbolic icons
+ + Add AppData files (lp: #1323747)
+ + Use LANG only when needed, disable updatedb if not in sudoers (lp: #1320777)
+
 v1.0.2:
  + Update to latest SudoDialog
  + Cleanup remaining quickly template cruft

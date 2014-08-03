@@ -24,15 +24,24 @@
 
   <url type="homepage">https://launchpad.net/catfish-search/</url>
   <url type="bugtracker">https://bugs.launchpad.net/catfish-search/</url>
-  <url type="help">http://docs.xfce.org/apps/parole/start</url>
+  <url type="help">https://answers.launchpad.net/catfish-search</url>
 
-  <updatecontact>smd-seandavis@ubuntu.com</updatecontact>
+  <updatecontact>smd.seandavis@gmail.com</updatecontact>
 
   <provides>
     <binary>catfish</binary>
   </provides>
 
   <releases>
+    <release version="1.0.3" timestamp="">
+      <description>
+        <_p>This stable release improved the reliability of the password dialog,
+        cleaned up unused code, and fixed potential issues with the list and 
+        item selection.
+        </_p>
+      </description>
+    </release>
+
     <release version="1.0.2" timestamp="1394371980">
       <description>
         <_p>This stable release improved the reliability of the password dialog,
