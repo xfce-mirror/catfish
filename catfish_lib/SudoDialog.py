@@ -24,6 +24,58 @@ from locale import gettext as _
 import pexpect
 
 
+# Check if the LANG variable needs to be set
+use_env = False
+
+
+def check_dependencies(commands=[]):
+    """Check for the existence of required commands, and sudo access"""
+    # Check for sudo
+    if pexpect.which("sudo") is None:
+        return False
+
+    # Check for required commands
+    for command in commands:
+        if pexpect.which(command) is None:
+            return False
+
+    # Check for LANG requirements
+    child = env_spawn('sudo -v', 1)
+    if child.expect([".*ssword.*", "Sorry", pexpect.EOF, pexpect.TIMEOUT]) == 3:
+        global use_env
+        use_env = True
+    child.close()
+
+    # Check for sudo rights
+    child = env_spawn('sudo -v', 1)
+    try:
+        index = child.expect([".*ssword.*", "Sorry", pexpect.EOF,
+                                                     pexpect.TIMEOUT])
+        child.close()
+        if index == 0 or index == 2:
+            # User in sudoers, or already admin
+            return True
+        elif index == 1 or index == 3:
+            # User not in sudoers
+            return False
+
+    except:
+        # Something else went wrong.
+        child.close()
+
+    return False
+
+
+def env_spawn(command, timeout):
+    """Use pexpect.spawn, adapt for timeout and env requirements."""
+    if use_env:
+        child = pexpect.spawn(command, env={"LANG": "C"})
+    else:
+        child = pexpect.spawn(command)
+    child.timeout = timeout
+    return child
+
+
 class SudoDialog(Gtk.MessageDialog):
     '''
     Creates a new SudoDialog. This is a replacement for using gksudo which
@@ -217,8 +269,7 @@ class SudoDialog(Gtk.MessageDialog):
         Return True if successful.
         '''
         # Set the pexpect variables and spawn the process.
-        child = pexpect.spawn('sudo /bin/true', env={"LANG": "C"})
-        child.timeout = 1
+        child = env_spawn('sudo /bin/true', 1)
         try:
             # Check for password prompt or program exit.
             child.expect([".*ssword.*", pexpect.EOF])

@@ -204,15 +204,19 @@ class CatfishWindow(Window):
         self.file_menu_save = builder.get_object("menu_save")
         self.file_menu_delete = builder.get_object("menu_delete")
 
-        # -- Update Search Index dialog -- #
-        self.update_index_dialog = builder.get_object("update_index_dialog")
-        self.update_index_spinner = builder.get_object("update_index_spinner")
-        self.update_index_updating = builder.get_object(
-            "update_index_updating")
-        self.update_index_done = builder.get_object("update_index_done")
-        self.update_index_close = builder.get_object("update_index_close")
-        self.update_index_unlock = builder.get_object("update_index_unlock")
-        self.update_index_active = False
+        # -- Update Search Index Dialog -- #
+        menuitem = builder.get_object('menu_update_index')
+        if SudoDialog.check_dependencies(['updatedb']):
+            self.update_index_dialog = builder.get_object("update_index_dialog")
+            self.update_index_spinner = builder.get_object("update_index_spinner")
+            self.update_index_updating = builder.get_object(
+                "update_index_updating")
+            self.update_index_done = builder.get_object("update_index_done")
+            self.update_index_close = builder.get_object("update_index_close")
+            self.update_index_unlock = builder.get_object("update_index_unlock")
+            self.update_index_active = False
+        else:
+            menuitem.hide()
 
         self.format_mimetype_box = builder.get_object("format_mimetype_box")
         self.extensions_entry = builder.get_object("extensions")
@@ -463,9 +467,7 @@ class CatfishWindow(Window):
         self.update_index_close.set_sensitive(False)
         self.update_index_unlock.set_sensitive(False)
 
-        self.updatedb_process = pexpect.spawn('sudo updatedb',
-                                                            env={"LANG": "C"})
-        self.updatedb_process.timeout = 1
+        self.updatedb_process = SudoDialog.env_spawn('sudo updatedb', 1)
         try:
             # Check for password prompt or program exit.
             self.updatedb_process.expect(".*ssword.*")
