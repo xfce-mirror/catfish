@@ -238,6 +238,7 @@ class CatfishWindow(Window):
                                                  builder)
 
         self.settings = CatfishSettings.CatfishSettings()
+        self.refresh_search_entry()
 
     def on_floating_bar_enter_notify(self, widget, event):
         """Move the floating statusbar when hovered."""
@@ -482,6 +483,46 @@ class CatfishWindow(Window):
         GLib.timeout_add(1000, updatedb_subprocess)
 
     # -- Search Entry -- #
+    def refresh_search_entry(self):
+        """Update the appearance of the search entry based on the application's
+        current state."""
+        # Default Appearance, used for blank entry
+        query = None
+        icon_name = None
+        button_tooltip_text = None
+        entry_tooltip_text = _("Enter search terms and press Enter to begin.")
+
+        # Search running
+        if self.search_in_progress:
+            icon_name = "process-stop"
+            button_tooltip_text = _('Stop Search')
+            entry_tooltip_text = _("Search is in progress..."
+                "\nPress the cancel button or the Escape key to stop.")
+
+        # Search not running
+        else:
+            entry_text = self.search_entry.get_text()
+            # Search not running, value in terms
+            if len(entry_text) > 0:
+                icon_name = "media-playback-start-symbolic"
+                button_tooltip_text = _('Begin Search')
+                query = entry_text
+
+        # Enable the Search/Stop button
+        sensitive = icon_name is not None
+
+        self.search_entry.set_icon_from_icon_name(
+            Gtk.EntryIconPosition.SECONDARY, icon_name)
+        self.search_entry.set_icon_tooltip_text(
+            Gtk.EntryIconPosition.SECONDARY, button_tooltip_text)
+        self.search_entry.set_tooltip_text(entry_tooltip_text)
+        self.search_entry.set_icon_activatable(
+            Gtk.EntryIconPosition.SECONDARY, sensitive)
+        self.search_entry.set_icon_sensitive(
+            Gtk.EntryIconPosition.SECONDARY, sensitive)
+
+        return query
+
     def on_search_entry_activate(self, widget):
         """If the search entry is not empty, perform the query."""
         if len(widget.get_text()) > 0:
@@ -497,27 +538,19 @@ class CatfishWindow(Window):
             GLib.idle_add(next, task)
 
     def on_search_entry_icon_press(self, widget, event, user_data):
-        """If search in progress, stop the search, otherwise, clear the search
-        entry field."""
+        """If search in progress, stop the search, otherwise, start."""
         if not self.search_in_progress:
-            widget.set_text("")
+            self.on_search_entry_activate(self.search_entry)
         else:
             self.stop_search = True
             self.search_engine.stop()
 
     def on_search_entry_changed(self, widget):
         """Update the search entry icon and run suggestions."""
-        text = widget.get_text()
+        text = self.refresh_search_entry()
 
-        if not self.search_in_progress:
-            if len(text) == 0:
-                icon = Gtk.STOCK_FIND
-                msg = _('Enter search terms and press ENTER')
-            else:
-                icon = Gtk.STOCK_CLEAR
-                msg = _('Clear search terms')
-            widget.set_icon_from_stock(Gtk.EntryIconPosition.SECONDARY, icon)
-            widget.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, msg)
+        if text is None:
+            return
 
         task = self.get_suggestions(text)
         GLib.idle_add(next, task)
@@ -1434,12 +1467,9 @@ class CatfishWindow(Window):
         self.set_title(_("Searching for \"%s\"") % keywords)
         self.spinner.show()
         self.statusbar_label.set_label(_("Searching…"))
-        self.search_entry.set_icon_from_stock(
-            Gtk.EntryIconPosition.SECONDARY, Gtk.STOCK_STOP)
-        self.search_entry.set_icon_tooltip_text(
-            Gtk.EntryIconPosition.SECONDARY, _('Stop Search'))
 
         self.search_in_progress = True
+        self.refresh_search_entry()
 
         # Be thread friendly.
         while Gtk.events_pending():
@@ -1524,20 +1554,7 @@ class CatfishWindow(Window):
             self.statusbar_label.set_label(_("%i files found.") % n_results)
 
         self.search_in_progress = False
-        if len(self.search_entry.get_text()) == 0:
-            self.search_entry.set_icon_from_stock(
-                Gtk.EntryIconPosition.SECONDARY,
-                Gtk.STOCK_FIND)
-            self.search_entry.set_icon_tooltip_text(
-                Gtk.EntryIconPosition.SECONDARY,
-                _('Enter search terms and press ENTER'))
-        else:
-            self.search_entry.set_icon_from_stock(
-                Gtk.EntryIconPosition.SECONDARY,
-                Gtk.STOCK_CLEAR)
-            self.search_entry.set_icon_tooltip_text(
-                Gtk.EntryIconPosition.SECONDARY,
-                _('Clear search terms'))
+        self.refresh_search_entry()
 
         self.stop_search = False
         yield False
