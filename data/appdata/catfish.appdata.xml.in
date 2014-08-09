@@ -33,7 +33,7 @@
   </provides>
 
   <releases>
-    <release version="1.0.3" timestamp="">
+    <release version="1.0.3" timestamp="1407562200">
       <description>
         <_p>This release fixes two issues where locate would not be properly
         executed and improves handling of missing symbolic icons.
