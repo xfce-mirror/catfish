@@ -209,10 +209,11 @@ class CatfishWindow(Window):
         menuitem = builder.get_object('menu_update_index')
         if SudoDialog.check_dependencies(['updatedb']):
             self.update_index_dialog = builder.get_object("update_index_dialog")
-            self.update_index_spinner = builder.get_object("update_index_spinner")
-            self.update_index_updating = builder.get_object(
-                "update_index_updating")
-            self.update_index_done = builder.get_object("update_index_done")
+            self.update_index_database = builder.get_object("database_label")
+            self.update_index_modified = builder.get_object("updated_label")
+            self.update_index_infobar = builder.get_object("update_status")
+            self.update_index_icon = builder.get_object("update_status_icon")
+            self.update_index_label = builder.get_object("update_status_label")
             self.update_index_close = builder.get_object("update_index_close")
             self.update_index_unlock = builder.get_object("update_index_unlock")
             self.update_index_active = False
@@ -220,8 +221,12 @@ class CatfishWindow(Window):
             now = datetime.datetime.now()
             self.today = datetime.datetime(now.year, now.month, now.day)
             locate, locate_path, locate_date = self.check_locate()
-            #if locate_date < self.today - datetime.timedelta(days=7):
-            if True:
+
+            self.update_index_database.set_label("<tt>%s</tt>" % locate_path)
+            modified = locate_date.strftime("%x %X")
+            self.update_index_modified.set_label("<tt>%s</tt>" % modified)
+
+            if locate_date < self.today - datetime.timedelta(days=7):
                 infobar = builder.get_object("locate_infobar")
                 infobar.show()
         else:
@@ -426,7 +431,7 @@ class CatfishWindow(Window):
         else:
             modified = 0
         item_date = datetime.datetime.fromtimestamp(modified)
-        return (locate, path, item_date)
+        return (locate, db, item_date)
 
     # -- Update Search Index dialog -- #
     def on_update_index_dialog_close(self, widget=None, event=None,
@@ -435,11 +440,38 @@ class CatfishWindow(Window):
         if not self.update_index_active:
             self.update_index_dialog.hide()
             self.update_index_close.set_label(Gtk.STOCK_CANCEL)
+            self.update_index_infobar.hide()
             self.update_index_unlock.show()
-            self.update_index_updating.set_sensitive(True)
-            self.update_index_updating.hide()
-            self.update_index_done.hide()
         return True
+
+    def show_update_status_infobar(self, status_code):
+        """Display the update status infobar based on the status code."""
+        # Error
+        if status_code in [1, 3]:
+            icon = "dialog-error"
+            msg_type = Gtk.MessageType.WARNING
+            if status_code == 1:
+                status = _('An error occurred while updating the database.')
+            elif status_code == 3:
+                status = _("Authentication failed.")
+
+        # Warning
+        elif status_code == 2:
+            icon = "dialog-warning"
+            msg_type = Gtk.MessageType.WARNING
+            status = _("User aborted authentication.")
+
+        # Info
+        else:
+            icon = "dialog-information"
+            msg_type = Gtk.MessageType.INFO
+            status = _('Search database updated successfully.')
+
+        self.update_index_infobar.set_message_type(msg_type)
+        self.update_index_icon.set_from_icon_name(icon, Gtk.IconSize.BUTTON)
+        self.update_index_label.set_label(status)
+
+        self.update_index_infobar.show()
 
     def on_update_index_unlock_clicked(self, widget):
         """Unlock admin rights and perform 'updatedb' query."""
@@ -448,18 +480,25 @@ class CatfishWindow(Window):
         # Get the password for sudo
         sudo_dialog = SudoDialog.SudoDialog(
             icon='catfish', name=_("Catfish File Search"), retries=3)
-        sudo_dialog.run()
+        response = sudo_dialog.run()
         sudo_dialog.hide()
         password = sudo_dialog.get_password()
         sudo_dialog.destroy()
 
-        if not password:
+        if response in [Gtk.ResponseType.NONE, Gtk.ResponseType.CANCEL]:
             self.update_index_active = False
-            self.update_index_done.set_label(_("Authentication failed."))
-            self.update_index_done.show()
+            self.show_update_status_infobar(2)
             return False
 
-        self.update_index_done.hide()
+        elif response == Gtk.ResponseType.REJECT:
+            self.update_index_active = False
+            self.show_update_status_infobar(3)
+            return False
+
+        if not password:
+            self.update_index_active = False
+            self.show_update_status_infobar(2)
+            return False
 
         # Subprocess to check if query has completed yet, runs at end of func.
         def updatedb_subprocess():
@@ -472,29 +511,17 @@ class CatfishWindow(Window):
             if done:
                 self.update_index_active = False
                 self.update_index_close.set_label(Gtk.STOCK_CLOSE)
-                self.update_index_updating.set_sensitive(False)
-                self.update_index_spinner.hide()
+                modified = self.check_locate()[2].strftime("%x %X")
+                self.update_index_modified.set_label("<tt>%s</tt>" % modified)
                 self.update_index_close.set_sensitive(True)
                 self.update_index_unlock.hide()
                 self.update_index_unlock.set_sensitive(True)
                 return_code = self.updatedb_process.exitstatus
-                if return_code == 0:
-                    status = _('Locate database updated successfully.')
-                elif return_code == 1:
-                    status = _('An error occurred while updating locatedb.')
-                elif return_code == 2:
-                    status = _("User aborted authentication.")
-                elif return_code == 3:
-                    status = _("Authentication failed.")
-                else:
-                    status = _('Locate database updated successfully.')
-                self.update_index_done.set_label(status)
-                self.update_index_done.show()
+                self.show_update_status_infobar(return_code)
             return not done
 
         # Set the dialog status to running.
-        self.update_index_spinner.show()
-        self.update_index_updating.show()
+        self.update_index_modified.set_label("<tt>%s</tt>" % _("Updating..."))
         self.update_index_close.set_sensitive(False)
         self.update_index_unlock.set_sensitive(False)
 
