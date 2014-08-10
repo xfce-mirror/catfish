@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 -->
 <interface>
-  <!-- interface-requires about_catfish_dialog 1.0 -->
-  <!-- interface-requires gtk+ 3.0 -->
+  <requires lib="gtk+" version="3.6"/>
+  <requires lib="about_catfish_dialog" version="1.0"/>
   <object class="AboutCatfishDialog" id="about_catfish_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>

@@ -34,17 +34,14 @@ import os
 import logging
 logger = logging.getLogger('catfish')
 
-from catfish_lib import Window, CatfishSettings, SudoDialog
+from catfish_lib import Window, CatfishSettings, SudoDialog, helpers
 from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishSearchEngine import *
 
 import pexpect
 
-import sys
-pyversion = float(str(sys.version_info[0]) + '.' + str(sys.version_info[1]))
-
 # Initialize Gtk, GObject, and mimetypes
-if GObject.pygobject_version < (3, 9, 1):
+if not helpers.check_gobject_version(3, 9, 1):
     GObject.threads_init()
     GLib.threads_init()
 mimetypes.init()
@@ -1213,7 +1210,7 @@ class CatfishWindow(Window):
     def cell_data_func_filesize(self, column, cell_renderer,
                                 tree_model, tree_iter, id):
         """File size cell display function."""
-        if pyversion >= 3.0:
+        if helpers.check_python_version(3, 0):
             size = int(tree_model.get_value(tree_iter, id))
         else:
             size = long(tree_model.get_value(tree_iter, id))
@@ -1392,7 +1389,7 @@ class CatfishWindow(Window):
         """Try to fetch a thumbnail."""
         thumbnails_directory = os.path.expanduser('~/.thumbnails/normal')
         uri = 'file://' + path
-        if pyversion >= 3.0:
+        if helpers.check_python_version(3, 0):
             uri = uri.encode('utf-8')
         md5_hash = hashlib.md5(uri).hexdigest()
         thumbnail_path = os.path.join(
@@ -1483,7 +1480,7 @@ class CatfishWindow(Window):
         self.results_filter = model.filter_new()
         self.results_filter.set_visible_func(self.results_filter_func)
         sort = Gtk.TreeModelSort(model=self.results_filter)
-        if pyversion >= 3.0:
+        if helpers.check_python_version(3, 0):
             sort.set_sort_func(2, self.python_three_size_sort_func, None)
         self.treeview.set_model(sort)
         self.treeview.columns_autosize()
@@ -1509,7 +1506,7 @@ class CatfishWindow(Window):
                 try:
                     path, name = os.path.split(filename)
 
-                    if pyversion >= 3.0:
+                    if helpers.check_python_version(3, 0):
                         size = int(os.path.getsize(filename))
                     else:
                         size = long(os.path.getsize(filename))

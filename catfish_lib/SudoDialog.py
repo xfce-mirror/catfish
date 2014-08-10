@@ -23,6 +23,13 @@ from locale import gettext as _
 
 import pexpect
 
+gtk_version = (Gtk.get_major_version(),
+               Gtk.get_minor_version(),
+               Gtk.get_micro_version())
+
+def check_gtk_version(major_version, minor_version, micro=0):
+    """Return true if running gtk >= requested version"""
+    return gtk_version >= (major_version, minor_version, micro)
 
 # Check if the LANG variable needs to be set
 use_env = False
@@ -122,7 +129,10 @@ class SudoDialog(Gtk.MessageDialog):
         ok_button.set_can_default(True)
         ok_button.set_sensitive(False)
         self.set_default(ok_button)
-        button_box.pack_start(ok_button, False, False, 0)
+        if check_gtk_version(3,12):
+            button_box.pack_start(ok_button, True, True, 0)
+        else:
+            button_box.pack_start(ok_button, False, False, 0)
 
         # add primary and secondary text
         if message:
@@ -189,6 +199,7 @@ class SudoDialog(Gtk.MessageDialog):
         '''
         label = self.get_message_area().get_children()[0]
         label.set_text(message_format)
+        label.set_halign(Gtk.Align.START)
 
     def set_dialog_icon(self, icon=None):
         '''
