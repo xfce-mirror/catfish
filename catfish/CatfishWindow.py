@@ -47,13 +47,17 @@ if not helpers.check_gobject_version(3, 9, 1):
 mimetypes.init()
 
 
-def application_in_PATH(application_name):
-    """Return True if the application name is found in PATH."""
+def get_application_path(application_name):
     for path in os.getenv('PATH').split(':'):
         if os.path.isdir(path):
             if application_name in os.listdir(path):
-                return True
-    return False
+                return os.path.join(path, application_name)
+    return None
+
+
+def application_in_PATH(application_name):
+    """Return True if the application name is found in PATH."""
+    return get_application_path(application_name) is not None
 
 
 def is_file_hidden(folder, filename):
@@ -212,6 +216,14 @@ class CatfishWindow(Window):
             self.update_index_close = builder.get_object("update_index_close")
             self.update_index_unlock = builder.get_object("update_index_unlock")
             self.update_index_active = False
+
+            now = datetime.datetime.now()
+            self.today = datetime.datetime(now.year, now.month, now.day)
+            locate, locate_path, locate_date = self.check_locate()
+            #if locate_date < self.today - datetime.timedelta(days=7):
+            if True:
+                infobar = builder.get_object("locate_infobar")
+                infobar.show()
         else:
             menuitem.hide()
 
@@ -236,6 +248,11 @@ class CatfishWindow(Window):
 
         self.settings = CatfishSettings.CatfishSettings()
         self.refresh_search_entry()
+
+    def on_update_infobar_response(self, widget, response_id):
+        if response_id == Gtk.ResponseType.OK:
+            self.on_menu_update_index_activate(widget)
+        widget.hide()
 
     def on_floating_bar_enter_notify(self, widget, event):
         """Move the floating statusbar when hovered."""
@@ -394,6 +411,22 @@ class CatfishWindow(Window):
             icon = self.icon_theme.load_icon(
                 icon_name, size, icon_lookup_flags)
         return icon
+
+    def check_locate(self):
+        """Evaluate which locate binary is in use, its path, and modification
+        date. Return these values in a tuple."""
+        path = get_application_path('locate')
+        if path is None:
+            return None
+        path = os.path.realpath(path)
+        locate = os.path.basename(path)
+        db = os.path.join('/var/lib', locate, locate + '.db')
+        if os.path.isfile(db):
+            modified = os.path.getmtime(db)
+        else:
+            modified = 0
+        item_date = datetime.datetime.fromtimestamp(modified)
+        return (locate, path, item_date)
 
     # -- Update Search Index dialog -- #
     def on_update_index_dialog_close(self, widget=None, event=None,
