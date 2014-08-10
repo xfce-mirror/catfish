@@ -109,7 +109,7 @@ class CatfishSearchEngine:
         self.keywords = keywords
 
         wildcard_chunks = []
-        for key in self.keywords.split(' '):
+        for key in self.keywords.split():
             if '*' in key:
                 wildcard_chunks.append(key.split('*'))
 
@@ -227,7 +227,8 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         True if still running."""
         self.running = True
         if isinstance(keywords, str):
-            keywords = keywords.split(', ')
+            keywords = keywords.replace(',', ' ')
+            keywords = keywords.split()
         for root, dirs, files in os.walk(path):
             if not self.running:
                 break
@@ -276,7 +277,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
             # Split the keywords into a list if they are not already.
             if isinstance(keywords, str):
                 keywords = keywords.replace(',', ' ')
-                keywords = keywords.split(' ')
+                keywords = keywords.split()
 
             for keyword in keywords:
                 if keyword.lower() not in find_keywords_backup:
