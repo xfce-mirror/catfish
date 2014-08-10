@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-10 19:39-0400\n"
+"POT-Creation-Date: 2014-08-10 19:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,26 +183,22 @@ msgid "<b>File Type</b>"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:46
-msgid "Update Search Index"
-msgstr ""
-
-#: ../data/ui/CatfishWindow.ui.h:47
 msgid "Unlock"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid "<b>Database:</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:48
 msgid "<b>Updated:</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:49
 msgid "<big><b>Update Search Database</b></big>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:50
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This process requires an administrator account and password."
