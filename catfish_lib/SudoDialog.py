@@ -27,6 +27,7 @@ gtk_version = (Gtk.get_major_version(),
                Gtk.get_minor_version(),
                Gtk.get_micro_version())
 
+
 def check_gtk_version(major_version, minor_version, micro=0):
     """Return true if running gtk >= requested version"""
     return gtk_version >= (major_version, minor_version, micro)
@@ -48,7 +49,9 @@ def check_dependencies(commands=[]):
 
     # Check for LANG requirements
     child = env_spawn('sudo -v', 1)
-    if child.expect([".*ssword.*", "Sorry", pexpect.EOF, pexpect.TIMEOUT]) == 3:
+    if child.expect([".*ssword.*", "Sorry",
+                     pexpect.EOF,
+                     pexpect.TIMEOUT]) == 3:
         global use_env
         use_env = True
     child.close()
@@ -56,8 +59,8 @@ def check_dependencies(commands=[]):
     # Check for sudo rights
     child = env_spawn('sudo -v', 1)
     try:
-        index = child.expect([".*ssword.*", "Sorry", pexpect.EOF,
-                                                     pexpect.TIMEOUT])
+        index = child.expect([".*ssword.*", "Sorry",
+                              pexpect.EOF, pexpect.TIMEOUT])
         child.close()
         if index == 0 or index == 2:
             # User in sudoers, or already admin
@@ -112,11 +115,11 @@ class SudoDialog(Gtk.MessageDialog):
 
         # initialize the dialog
         super(SudoDialog, self).__init__(transient_for=parent,
-                                        modal=True,
-                                        destroy_with_parent=True,
-                                        message_type=message_type,
-                                        buttons=buttons,
-                                        text='')
+                                         modal=True,
+                                         destroy_with_parent=True,
+                                         message_type=message_type,
+                                         buttons=buttons,
+                                         text='')
         self.set_dialog_icon(icon)
         self.connect("show", self.on_show)
 
@@ -129,7 +132,7 @@ class SudoDialog(Gtk.MessageDialog):
         ok_button.set_can_default(True)
         ok_button.set_sensitive(False)
         self.set_default(ok_button)
-        if check_gtk_version(3,12):
+        if check_gtk_version(3, 12):
             button_box.pack_start(ok_button, True, True, 0)
         else:
             button_box.pack_start(ok_button, False, False, 0)
@@ -157,7 +160,7 @@ class SudoDialog(Gtk.MessageDialog):
 
         # Outer password box for incorrect password label and inner widgets.
         password_outer = Gtk.Box(orientation=Gtk.Orientation.VERTICAL,
-                                    spacing=12)
+                                 spacing=12)
         password_outer.set_orientation(Gtk.Orientation.VERTICAL)
         # Password error label, only displayed when unsuccessful.
         self.password_info = Gtk.Label(label="")
@@ -166,13 +169,13 @@ class SudoDialog(Gtk.MessageDialog):
 
         # Inner password box for Password: label and password entry.
         password_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL,
-                                    spacing=12)
+                               spacing=12)
         password_label = Gtk.Label(label=_("Password:"))
         self.password_entry = Gtk.Entry()
         self.password_entry.set_visibility(False)
         self.password_entry.set_activates_default(True)
         self.password_entry.connect("changed", self.on_password_changed,
-                                                                    ok_button)
+                                    ok_button)
 
         # Pack all the widgets.
         password_box.pack_start(password_label, False, False, 0)
@@ -255,6 +258,7 @@ class SudoDialog(Gtk.MessageDialog):
             self.password_alignment.set_padding(0, bottom, left, right)
             self.password_info.show()
             self.set_password('')
+            self.password_entry.grab_focus()
             if self.attempted_logins == self.max_attempted_logins:
                 self.attempted_logins = 0
                 self.emit("response", Gtk.ResponseType.REJECT)

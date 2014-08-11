@@ -31,6 +31,7 @@ gtk_version = (Gtk.get_major_version(),
                Gtk.get_minor_version(),
                Gtk.get_micro_version())
 
+
 def check_python_version(major_version, minor_version, micro=0):
     """Return true if running python >= requested version"""
     return python_version >= (major_version, minor_version, micro)

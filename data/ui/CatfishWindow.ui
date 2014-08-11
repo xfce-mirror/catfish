@@ -394,6 +394,7 @@
                         <property name="sensitive">False</property>
                         <property name="can_focus">True</property>
                         <property name="invisible_char">•</property>
+                        <property name="caps_lock_warning">False</property>
                       </object>
                     </child>
                   </object>

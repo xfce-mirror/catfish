@@ -234,10 +234,10 @@ def dict_from_callback_obj(callback_obj):
     aliased_methods = [x[1] for x in methods if hasattr(x[1], 'aliases')]
 
     # a method may have several aliases
-    #~ @alias('on_btn_foo_clicked')
-    #~ @alias('on_tool_foo_activate')
-    #~ on_menu_foo_activate():
-        #~ pass
+    # ~ @alias('on_btn_foo_clicked')
+    # ~ @alias('on_tool_foo_activate')
+    # ~ on_menu_foo_activate():
+    # ~ pass
     alias_groups = [(x.aliases, x) for x in aliased_methods]
 
     aliases = []

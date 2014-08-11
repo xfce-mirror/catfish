@@ -207,15 +207,17 @@ class CatfishWindow(Window):
 
         # -- Update Search Index Dialog -- #
         menuitem = builder.get_object('menu_update_index')
-        if SudoDialog.check_dependencies(['updatedb']):
-            self.update_index_dialog = builder.get_object("update_index_dialog")
+        if SudoDialog.check_dependencies(['locate', 'updatedb']):
+            self.update_index_dialog = \
+                builder.get_object("update_index_dialog")
             self.update_index_database = builder.get_object("database_label")
             self.update_index_modified = builder.get_object("updated_label")
             self.update_index_infobar = builder.get_object("update_status")
             self.update_index_icon = builder.get_object("update_status_icon")
             self.update_index_label = builder.get_object("update_status_label")
             self.update_index_close = builder.get_object("update_index_close")
-            self.update_index_unlock = builder.get_object("update_index_unlock")
+            self.update_index_unlock = \
+                builder.get_object("update_index_unlock")
             self.update_index_active = False
 
             now = datetime.datetime.now()
@@ -391,13 +393,13 @@ class CatfishWindow(Window):
     def thumbnail_cell_data_func(self, col, renderer, model, treeiter, data):
         """Cell Renderer Function to Thumbnails View."""
         icon, name, size, path, modified, mime, hidden, exact = \
-                                                        model[treeiter][:]
+            model[treeiter][:]
         name = escape(name)
         size = self.format_size(size)
         path = escape(path)
         modified = self.get_date_string(modified)
         displayed = '<b>%s</b> %s%s%s%s%s' % (name, size, os.linesep, path,
-                                            os.linesep, modified)
+                                              os.linesep, modified)
         renderer.set_property('markup', displayed)
         return
 
@@ -556,8 +558,8 @@ class CatfishWindow(Window):
         if self.search_in_progress:
             icon_name = "process-stop"
             button_tooltip_text = _('Stop Search')
-            entry_tooltip_text = _("Search is in progress..."
-                "\nPress the cancel button or the Escape key to stop.")
+            entry_tooltip_text = _("Search is in progress...\nPress the "
+                                   "cancel button or the Escape key to stop.")
 
         # Search not running
         else:
@@ -1038,8 +1040,8 @@ class CatfishWindow(Window):
         basename = os.path.basename(filename)
 
         dialog = Gtk.FileChooserDialog(title=_('Save "%s" as…') % basename,
-                                        transient_for=self,
-                                        action=Gtk.FileChooserAction.SAVE)
+                                       transient_for=self,
+                                       action=Gtk.FileChooserAction.SAVE)
         dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
                            Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT)
         dialog.set_default_response(Gtk.ResponseType.REJECT)
@@ -1058,11 +1060,11 @@ class CatfishWindow(Window):
                                                       escape(secondary))
 
         dialog = Gtk.MessageDialog(transient_for=self,
-                                    modal=True,
-                                    destroy_with_parent=True,
-                                    message_type=Gtk.MessageType.ERROR,
-                                    buttons=Gtk.ButtonsType.OK,
-                                    text="")
+                                   modal=True,
+                                   destroy_with_parent=True,
+                                   message_type=Gtk.MessageType.ERROR,
+                                   buttons=Gtk.ButtonsType.OK,
+                                   text="")
 
         dialog.set_markup(dialog_text)
         dialog.set_default_response(Gtk.ResponseType.OK)
@@ -1083,11 +1085,11 @@ class CatfishWindow(Window):
 
         dialog_text = "<big><b>%s</b></big>\n\n%s" % (primary, secondary)
         dialog = Gtk.MessageDialog(transient_for=self,
-                                    modal=True,
-                                    destroy_with_parent=True,
-                                    message_type=Gtk.MessageType.QUESTION,
-                                    buttons=Gtk.ButtonsType.NONE,
-                                    text="")
+                                   modal=True,
+                                   destroy_with_parent=True,
+                                   message_type=Gtk.MessageType.QUESTION,
+                                   buttons=Gtk.ButtonsType.NONE,
+                                   text="")
         dialog.set_markup(surrogate_escape(dialog_text))
 
         dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.NO,

@@ -292,7 +292,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                 if self.force_stop:
                     break
 
-                #If the filetype is known to not be text, ignore it and move on
+                # If the filetype is known to not be text, move along.
                 mime = guess_type(filename)[0]
                 if not mime or 'text' in mime:
                     try:

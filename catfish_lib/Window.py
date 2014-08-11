@@ -67,7 +67,7 @@ class Window(Gtk.Window):
         button = Gtk.MenuButton()
         button.set_size_request(32, 32)
         image = Gtk.Image.new_from_icon_name("emblem-system-symbolic",
-                                                 Gtk.IconSize.MENU)
+                                             Gtk.IconSize.MENU)
         button.set_image(image)
 
         popup = builder.get_object('appmenu')
@@ -77,10 +77,6 @@ class Window(Gtk.Window):
         box = builder.get_object('appmenu_placeholder')
         box.add(button)
         button.show_all()
-
-    # Help not currently in use.
-    #def on_mnu_contents_activate(self, widget, data=None):
-    #    show_uri(self, "ghelp:%s" % get_help_uri())
 
     def on_mnu_about_activate(self, widget, data=None):
         """Display the about box for catfish."""

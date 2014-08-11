@@ -23,7 +23,7 @@ if len(sys.argv) < 2:
     print('No arguments supplied.')
     sys.exit(1)
 
-#lint:disable
+# lint:disable
 if sys.argv[1] == 'check':
     print('Checking module dependencies...')
     try:
@@ -42,12 +42,12 @@ if sys.argv[1] == 'check':
         from xml.sax.saxutils import escape, unescape
         from gi.repository import GObject, Gtk, Gdk, GdkPixbuf, Pango
         import zeitgeist  # optional
-#lint:enable
+# lint:enable
 
     except ImportError as msg:
         print((str(msg)))
         module = str(msg).split()[-1]
-        if not module in ('zeitgeist'):
+        if module != 'zeitgeist':
             print(('...Error: The required module %s is missing.' % module))
             sys.exit(1)
         else:
