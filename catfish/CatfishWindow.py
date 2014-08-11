@@ -223,7 +223,10 @@ class CatfishWindow(Window):
             locate, locate_path, locate_date = self.check_locate()
 
             self.update_index_database.set_label("<tt>%s</tt>" % locate_path)
-            modified = locate_date.strftime("%x %X")
+            if os.path.isfile(locate_path):
+                modified = locate_date.strftime("%x %X")
+            else:
+                modified = _("Never")
             self.update_index_modified.set_label("<tt>%s</tt>" % modified)
 
             if locate_date < self.today - datetime.timedelta(days=7):
