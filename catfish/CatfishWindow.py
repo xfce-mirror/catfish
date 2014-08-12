@@ -483,8 +483,10 @@ class CatfishWindow(Window):
         self.update_index_active = True
 
         # Get the password for sudo
-        sudo_dialog = SudoDialog.SudoDialog(
-            icon='catfish', name=_("Catfish File Search"), retries=3)
+        sudo_dialog = SudoDialog.SudoDialog(parent=self.update_index_dialog,
+                                            icon='catfish',
+                                            name=_("Catfish File Search"),
+                                            retries=3)
         response = sudo_dialog.run()
         sudo_dialog.hide()
         password = sudo_dialog.get_password()

@@ -32,6 +32,7 @@ catfish_lib/AboutDialog.py
 catfish_lib/__init__.py
 catfish_lib/helpers.py
 catfish_lib/Window.py
+catfish_lib/SudoDialog.py
 
 # XML Files
 [type: gettext/xml]data/appdata/catfish.appdata.xml.in

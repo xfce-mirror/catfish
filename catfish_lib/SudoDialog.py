@@ -149,13 +149,16 @@ class SudoDialog(Gtk.Dialog):
 
         # Infobar
         self.infobar = Gtk.InfoBar.new()
+        self.infobar.set_margin_top(12)
+        self.infobar.set_message_type(Gtk.MessageType.WARNING)
         content_area = self.infobar.get_content_area()
         infobar_icon = Gtk.Image.new_from_icon_name("dialog-warning",
-                                            Gtk.IconSize.BUTTON)
+                                                    Gtk.IconSize.BUTTON)
         label = Gtk.Label.new(_("Incorrect password... try again."))
         content_area.add(infobar_icon)
         content_area.add(label)
         grid.attach(self.infobar, 0, 2, 2, 1)
+        content_area.show_all()
         self.infobar.set_no_show_all(True)
 
         # Password
@@ -163,11 +166,11 @@ class SudoDialog(Gtk.Dialog):
         label.set_use_markup(True)
         label.set_markup("<b>%s</b>" % _("Password:"))
         label.set_halign(Gtk.Align.START)
-        label.set_margin_top(24)
+        label.set_margin_top(12)
         self.password_entry = Gtk.Entry()
         self.password_entry.set_visibility(False)
         self.password_entry.set_activates_default(True)
-        self.password_entry.set_margin_top(24)
+        self.password_entry.set_margin_top(12)
         grid.attach(label, 0, 3, 1, 1)
         grid.attach(self.password_entry, 1, 3, 1, 1)
 
@@ -252,6 +255,7 @@ class SudoDialog(Gtk.Dialog):
     def on_show(self, widget):
         '''When the dialog is displayed, clear the password.'''
         self.set_password('')
+        self.password_valid = False
 
     def on_ok_clicked(self, widget):
         '''
@@ -275,6 +279,8 @@ class SudoDialog(Gtk.Dialog):
 
     def get_password(self):
         '''Return the currently entered password, or None if blank.'''
+        if not self.password_valid:
+            return None
         password = self.password_entry.get_text()
         if password == '':
             return None

@@ -1650,7 +1650,7 @@
     <property name="title" translatable="yes">Update Search Database</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
-    <property name="window_position">center</property>
+    <property name="window_position">center-on-parent</property>
     <property name="destroy_with_parent">True</property>
     <property name="icon_name">catfish</property>
     <property name="type_hint">dialog</property>
@@ -1685,6 +1685,9 @@
                 <property name="label" translatable="yes">Unlock</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="is_focus">True</property>
+                <property name="can_default">True</property>
+                <property name="has_default">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">image18</property>
                 <signal name="clicked" handler="on_update_index_unlock_clicked" swapped="no"/>
