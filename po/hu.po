@@ -8,18 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-09 17:45-0400\n"
+"POT-Creation-Date: 2014-08-10 20:02-0400\n"
 "PO-Revision-Date: 2013-04-17 01:12+0000\n"
 "Last-Translator: Gabor Kelemen <kelemeng@openscope.org>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-10 05:58+0000\n"
+"X-Launchpad-Export-Date: 2014-08-11 06:14+0000\n"
 "X-Generator: Launchpad (build 17156)\n"
 "Language: uk\n"
 
-#: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:420
+#: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:485
 msgid "Catfish File Search"
 msgstr "Catfish fájlkereső"
 
@@ -129,82 +129,86 @@ msgid "Thumbnails"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:32
+msgid "Update"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:33
+msgid "The search database is more than 7 days old.  Update now?"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "Any time"
 msgstr "Bármikor"
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "This week"
 msgstr "Ezen a héten"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "Custom"
 msgstr "Egyéni"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "<b>Modified</b>"
 msgstr "<b>Módosítás</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "Documents"
 msgstr "Dokumentumok"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Folders"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "Images"
 msgstr "Képek"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "Music"
 msgstr "Zene"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Videos"
 msgstr "Videók"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "Applications"
 msgstr "Alkalmazások"
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "Other"
 msgstr "Egyéb"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "<b>File Type</b>"
 msgstr "<b>Fájltípus</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:44
-msgid "Update Search Index"
-msgstr "Keresési index frissítése"
+#: ../data/ui/CatfishWindow.ui.h:46
+msgid "Update Search Database"
+msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid "Unlock"
 msgstr "Feloldás"
 
-#: ../data/ui/CatfishWindow.ui.h:46
-msgid "<big><b>Update Search Index</b></big>"
-msgstr "<big><b>Keresési index frissítése</b></big>"
-
-#. The term "locate" is a commandline application, so it should not be translated.
 #: ../data/ui/CatfishWindow.ui.h:48
-msgid ""
-"To provide accurate results, the <i>locate</i> database needs to be "
-"refreshed.\n"
-"This requires sudo (admin) rights."
+msgid "<b>Database:</b>"
 msgstr ""
-"Pontos eredmények érdekében frissíteni kell a <i>locate</i> adatbázist.\n"
-"Ehhez rendszergazdai jogok szükségesek."
+
+#: ../data/ui/CatfishWindow.ui.h:49
+msgid "<b>Updated:</b>"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:50
-msgid "Updating database…"
-msgstr "Adatbázis frissítése…"
+msgid "<big><b>Update Search Database</b></big>"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:51
-msgid "Done."
-msgstr "Kész."
+msgid ""
+"For faster search results, the search database needs to be refreshed.\n"
+"This process requires an administrator account and password."
+msgstr ""
 
 #: ../catfish/__init__.py:37
 msgid "Show debug messages (-vv debugs catfish_lib also)"
@@ -253,79 +257,88 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:84
+#: ../catfish/CatfishWindow.py:85
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:428 ../catfish/CatfishWindow.py:458
+#: ../catfish/CatfishWindow.py:229
+msgid "Never"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:457
+msgid "An error occurred while updating the database."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:459
 msgid "Authentication failed."
 msgstr "A hitelesítés meghiúsult."
 
-#: ../catfish/CatfishWindow.py:452 ../catfish/CatfishWindow.py:460
-msgid "Locate database updated successfully."
-msgstr "A locate adatbázis sikeresen frissült."
-
-#: ../catfish/CatfishWindow.py:454
-msgid "An error occurred while updating locatedb."
-msgstr "Hiba történt a locatedb frissítése közben."
-
-#: ../catfish/CatfishWindow.py:456
+#: ../catfish/CatfishWindow.py:465
 msgid "User aborted authentication."
 msgstr "A felhasználó megszakította a hitelesítést."
 
-#: ../catfish/CatfishWindow.py:493
+#: ../catfish/CatfishWindow.py:471
+msgid "Search database updated successfully."
+msgstr ""
+
+#. Set the dialog status to running.
+#: ../catfish/CatfishWindow.py:527
+msgid "Updating..."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:553
 msgid "Enter search terms and press Enter to begin."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:498
+#: ../catfish/CatfishWindow.py:558
 msgid "Stop Search"
 msgstr "Keresés leállítása"
 
-#: ../catfish/CatfishWindow.py:499
+#: ../catfish/CatfishWindow.py:559
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:508
+#: ../catfish/CatfishWindow.py:568
 msgid "Begin Search"
 msgstr ""
 
 #. Translators: This message will only appear when trying to
 #. open the default file manager but it cannot be found.
-#: ../catfish/CatfishWindow.py:878
+#: ../catfish/CatfishWindow.py:938
 msgid "Catfish could not find the default file manager."
 msgstr "A Catfish nem találja az alapértelmezett fájlkezelőt."
 
 #. Translators: This message will only appear when the default
 #. application for opening a file cannot be found.
-#: ../catfish/CatfishWindow.py:885
+#: ../catfish/CatfishWindow.py:945
 msgid "Catfish could not find the default open wrapper."
 msgstr ""
 "A Catfish nem találja az alapértelmezett alkalmazást a fájl megnyitásához."
 
-#: ../catfish/CatfishWindow.py:899
+#: ../catfish/CatfishWindow.py:959
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "„%s” nem nyitható meg."
 
-#: ../catfish/CatfishWindow.py:945
+#: ../catfish/CatfishWindow.py:1005
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "„%s” nem menthető."
 
-#: ../catfish/CatfishWindow.py:970
+#: ../catfish/CatfishWindow.py:1030
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "„%s” nem törölhető."
 
-#: ../catfish/CatfishWindow.py:980
+#: ../catfish/CatfishWindow.py:1040
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "„%s” mentése másként…"
 
-#: ../catfish/CatfishWindow.py:1015
+#: ../catfish/CatfishWindow.py:1075
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -334,7 +347,7 @@ msgstr ""
 "Biztos, hogy véglegesen törölni szeretné \n"
 "a(z) „%s” fájlt?"
 
-#: ../catfish/CatfishWindow.py:1019
+#: ../catfish/CatfishWindow.py:1079
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -343,69 +356,69 @@ msgstr ""
 "Biztos, hogy véglegesen törölni szeretné\n"
 "a kijelölt %i fájlt?"
 
-#: ../catfish/CatfishWindow.py:1022
+#: ../catfish/CatfishWindow.py:1082
 msgid "If you delete a file, it is permanently lost."
 msgstr "Ha töröl egy fájlt, az véglegesen elvész."
 
-#: ../catfish/CatfishWindow.py:1045
+#: ../catfish/CatfishWindow.py:1105
 msgid "Filename"
 msgstr "Fájlnév"
 
-#: ../catfish/CatfishWindow.py:1047
+#: ../catfish/CatfishWindow.py:1107
 msgid "Size"
 msgstr "Méret"
 
-#: ../catfish/CatfishWindow.py:1049
+#: ../catfish/CatfishWindow.py:1109
 msgid "Location"
 msgstr "Hely"
 
-#: ../catfish/CatfishWindow.py:1051
+#: ../catfish/CatfishWindow.py:1111
 msgid "Modified"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1061
+#: ../catfish/CatfishWindow.py:1121
 msgid "Preview"
 msgstr "Előnézet"
 
-#: ../catfish/CatfishWindow.py:1069
+#: ../catfish/CatfishWindow.py:1129
 msgid "Details"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1242
+#: ../catfish/CatfishWindow.py:1302
 msgid "Today"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1244
+#: ../catfish/CatfishWindow.py:1304
 msgid "Yesterday"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1319 ../catfish/CatfishWindow.py:1550
+#: ../catfish/CatfishWindow.py:1379 ../catfish/CatfishWindow.py:1610
 msgid "No files found."
 msgstr "Nem találhatók fájlok."
 
-#: ../catfish/CatfishWindow.py:1321 ../catfish/CatfishWindow.py:1552
+#: ../catfish/CatfishWindow.py:1381 ../catfish/CatfishWindow.py:1612
 msgid "1 file found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1324 ../catfish/CatfishWindow.py:1554
+#: ../catfish/CatfishWindow.py:1384 ../catfish/CatfishWindow.py:1614
 #, python-format
 msgid "%i files found."
 msgstr "%i fájl található."
 
-#: ../catfish/CatfishWindow.py:1332
+#: ../catfish/CatfishWindow.py:1392
 msgid "bytes"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1467
+#: ../catfish/CatfishWindow.py:1527
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "„%s” keresése"
 
-#: ../catfish/CatfishWindow.py:1469
+#: ../catfish/CatfishWindow.py:1529
 msgid "Searching…"
 msgstr "Keresés…"
 
-#: ../catfish/CatfishWindow.py:1545
+#: ../catfish/CatfishWindow.py:1605
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Találatok erre: „%s”"
@@ -453,8 +466,34 @@ msgstr ""
 #~ msgid "Enter search terms and press ENTER"
 #~ msgstr "Adja meg a keresési kifejezéseket, majd nyomja meg az Entert"
 
+#~ msgid "Update Search Index"
+#~ msgstr "Keresési index frissítése"
+
+#~ msgid "<big><b>Update Search Index</b></big>"
+#~ msgstr "<big><b>Keresési index frissítése</b></big>"
+
+#~ msgid ""
+#~ "To provide accurate results, the <i>locate</i> database needs to be "
+#~ "refreshed.\n"
+#~ "This requires sudo (admin) rights."
+#~ msgstr ""
+#~ "Pontos eredmények érdekében frissíteni kell a <i>locate</i> adatbázist.\n"
+#~ "Ehhez rendszergazdai jogok szükségesek."
+
+#~ msgid "Updating database…"
+#~ msgstr "Adatbázis frissítése…"
+
+#~ msgid "Done."
+#~ msgstr "Kész."
+
 #~ msgid "Last modified"
 #~ msgstr "Utolsó módosítás"
+
+#~ msgid "Locate database updated successfully."
+#~ msgstr "A locate adatbázis sikeresen frissült."
+
+#~ msgid "An error occurred while updating locatedb."
+#~ msgstr "Hiba történt a locatedb frissítése közben."
 
 #~ msgid "Clear search terms"
 #~ msgstr "Keresési kifejezések törlése"
