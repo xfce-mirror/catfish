@@ -304,7 +304,7 @@ class SudoDialog(Gtk.Dialog):
         try:
             # Check for password prompt or program exit.
             child.expect([".*ssword.*", pexpect.EOF])
-            child.sendline(self.get_password())
+            child.sendline(self.password_entry.get_text())
             child.expect(pexpect.EOF)
         except pexpect.TIMEOUT:
             # If we timeout, that means the password was unsuccessful.
