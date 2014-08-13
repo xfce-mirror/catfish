@@ -444,9 +444,21 @@ class CatfishWindow(Window):
         """Close the Update Search Index dialog, resetting to default."""
         if not self.update_index_active:
             self.update_index_dialog.hide()
-            self.update_index_close.set_label(Gtk.STOCK_CANCEL)
-            self.update_index_infobar.hide()
+
+            # Restore Unlock button
             self.update_index_unlock.show()
+            self.update_index_unlock.set_can_default(True)
+            self.update_index_unlock.set_receives_default(True)
+            self.update_index_unlock.grab_focus()
+            self.update_index_unlock.grab_default()
+
+            # Restore Cancel button
+            self.update_index_close.set_label(Gtk.STOCK_CANCEL)
+            self.update_index_close.set_can_default(False)
+            self.update_index_close.set_receives_default(False)
+
+            self.update_index_infobar.hide()
+
         return True
 
     def show_update_status_infobar(self, status_code):
@@ -517,12 +529,22 @@ class CatfishWindow(Window):
                 done = False
             if done:
                 self.update_index_active = False
-                self.update_index_close.set_label(Gtk.STOCK_CLOSE)
                 modified = self.check_locate()[2].strftime("%x %X")
                 self.update_index_modified.set_label("<tt>%s</tt>" % modified)
-                self.update_index_close.set_sensitive(True)
-                self.update_index_unlock.hide()
+
+                # Hide the Unlock button
                 self.update_index_unlock.set_sensitive(True)
+                self.update_index_unlock.set_receives_default(False)
+                self.update_index_unlock.hide()
+
+                # Update the Cancel button to Close, make it default
+                self.update_index_close.set_label(Gtk.STOCK_CLOSE)
+                self.update_index_close.set_sensitive(True)
+                self.update_index_close.set_can_default(True)
+                self.update_index_close.set_receives_default(True)
+                self.update_index_close.grab_focus()
+                self.update_index_close.grab_default()
+
                 return_code = self.updatedb_process.exitstatus
                 self.show_update_status_infobar(return_code)
             return not done
