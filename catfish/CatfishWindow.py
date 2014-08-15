@@ -574,7 +574,8 @@ class CatfishWindow(Window):
         current state."""
         # Default Appearance, used for blank entry
         query = None
-        icon_name = None
+        icon_name = "edit-find-symbolic"
+        sensitive = True
         button_tooltip_text = None
         entry_tooltip_text = _("Enter search terms and press Enter to begin.")
 
@@ -590,12 +591,10 @@ class CatfishWindow(Window):
             entry_text = self.search_entry.get_text()
             # Search not running, value in terms
             if len(entry_text) > 0:
-                icon_name = "media-playback-start-symbolic"
                 button_tooltip_text = _('Begin Search')
                 query = entry_text
-
-        # Enable the Search/Stop button
-        sensitive = icon_name is not None
+            else:
+                sensitive = False
 
         self.search_entry.set_icon_from_icon_name(
             Gtk.EntryIconPosition.SECONDARY, icon_name)
