@@ -1,4 +1,4 @@
-.TH CATFISH "1" "February 2014" "catfish 1.0.1" "User Commands"
+.TH CATFISH "1" "August 2014" "catfish 1.2.0" "User Commands"
 .SH NAME
 catfish \- File searching tool which is configurable via the command line
 .SH "DESCRIPTION"
@@ -6,6 +6,9 @@ catfish \- File searching tool which is configurable via the command line
 is a handy file searching tool for Linux and UNIX. 
 The interface is intentionally lightweight and simple, using only Gtk+3. 
 You can configure it to your needs by using several command line options.
+.SH SYNOPSIS
+.B catfish
+[\fI\,options\/\fR] \fI\,path query\/\fR
 .SH OPTIONS
 .TP
 \fB\-\-version\fR
@@ -26,15 +29,6 @@ Use thumbnails
 \fB\-\-iso\-time\fR
 Display time in ISO format
 .TP
-\fB\-\-path\fR=\fIPATH\fR
-Search in folder PATH
-.TP
-\fB\-\-fileman\fR=\fIFILEMAN\fR
-Use FILEMAN as filemanager
-.TP
-\fB\-\-wrapper\fR=\fIWRAPPER\fR
-Use WRAPPER to open files
-.TP
 \fB\-\-exact\fR
 Perform exact match
 .TP
@@ -43,3 +37,7 @@ Include hidden files
 .TP
 \fB\-\-fulltext\fR
 Perform fulltext search
+.TP
+\fB\-\-start\fR
+If path and query are provided, start searching when the
+application is displayed.

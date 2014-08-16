@@ -1,3 +1,12 @@
+v1.2.0:
+ + Added Search button to start search with the mouse (LP: #1300158)
+ + Added "--start" command line flag to start searching on startup
+ + Removed "--fileman" and "--wrapper" flags, xdg-open is sufficient
+ + Results are now cleared when starting a new search
+ + An InfoBar is now displayed when the locate database is out-of-date
+ + Improved updatedb and password dialogs
+ + Fixed searching for multiple terms (LP: #1353546)
+
 v1.0.3:
  + Fix external file search methods (e.g. locate) (lp: #1329801)
  + Improved handling for missing symbolic icons
