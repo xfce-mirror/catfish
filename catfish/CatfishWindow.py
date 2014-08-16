@@ -326,11 +326,6 @@ class CatfishWindow(Window):
         """Parse commandline arguments into Catfish runtime settings."""
         self.options = options
 
-        if not application_in_PATH(self.options.fileman):
-            self.options.fileman = None
-        if not application_in_PATH(self.options.open_wrapper):
-            self.options.open_wrapper = None
-
         # Set the selected folder path.
         self.folderchooser.set_filename(self.options.path)
 
@@ -953,33 +948,14 @@ class CatfishWindow(Window):
     def open_file(self, filename):
         """Open the specified filename in its default application."""
         logger.debug("Opening %s" % filename)
-        command = None
-        if os.path.isdir(filename):
-            if self.options.fileman:
-                command = [self.options.fileman, filename]
-            else:
-                # Translators: This message will only appear when trying to
-                # open the default file manager but it cannot be found.
-                msg = _("Catfish could not find the default file manager.")
-        else:
-            if self.options.open_wrapper:
-                command = [self.options.open_wrapper, filename]
-            else:
-                # Translators: This message will only appear when the default
-                # application for opening a file cannot be found.
-                msg = _("Catfish could not find the default open wrapper.")
-        if command:
-            try:
-                subprocess.Popen(command, shell=False)
-                return
-            except Exception as msg:
-                logger.debug('Exception encountered while opening %s.' +
-                             '\n  Exception: %s' +
-                             '\n  The wrapper was %s.' +
-                             '\n  The filemanager was %s.',
-                             filename, msg,
-                             str(self.options.open_wrapper),
-                             str(self.options.fileman))
+        command = ['xdg-open', filename]
+        try:
+            subprocess.Popen(command, shell=False)
+            return
+        except Exception as msg:
+            logger.debug('Exception encountered while opening %s.' +
+                         '\n  Exception: %s' +
+                         filename, msg)
 
         self.get_error_dialog(_('\"%s\" could not be opened.') %
                               os.path.basename(filename), str(msg))

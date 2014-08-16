@@ -44,11 +44,6 @@ def parse_options():
                       dest='time_iso', help=_('Display time in ISO format'))
     # Translators: Do not translate PATH, it is a variable.
     parser.add_option('', '--path', help=_('Search in folder PATH'))
-    # Translators: Do not translate FILEMAN, it is a variable.
-    parser.add_option('', '--fileman', help=_('Use FILEMAN as filemanager'))
-    parser.add_option('', '--wrapper', metavar='WRAPPER',
-                      # Translators: Do not translate WRAPPER, it is a variable
-                      dest='open_wrapper', help=_('Use WRAPPER to open files'))
     parser.add_option('', '--exact', action='store_true',
                       help=_('Perform exact match'))
     parser.add_option('', '--hidden', action='store_true',
@@ -56,9 +51,8 @@ def parse_options():
     parser.add_option('', '--fulltext', action='store_true',
                       help=_('Perform fulltext search'))
     parser.set_defaults(icons_large=0, thumbnails=0, time_iso=0,
-                        path=os.path.expanduser('~'), fileman='xdg-open',
-                        exact=0, hidden=0, fulltext=0, file_action='open',
-                        open_wrapper='xdg-open')
+                        path=os.path.expanduser('~'),
+                        exact=0, hidden=0, fulltext=0, file_action='open')
 
     (options, args) = parser.parse_args()
 
