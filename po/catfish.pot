@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-16 16:23-0400\n"
+"POT-Creation-Date: 2014-08-16 17:17-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -205,7 +205,7 @@ msgstr ""
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
-"This process requires an administrator account and password."
+"This action requires administrative rights."
 msgstr ""
 
 #: ../catfish/__init__.py:34
@@ -266,7 +266,7 @@ msgid "Authentication failed."
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:500
-msgid "User aborted authentication."
+msgid "Authentication cancelled."
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:506
@@ -366,15 +366,15 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1408 ../catfish/CatfishWindow.py:1643
+#: ../catfish/CatfishWindow.py:1408 ../catfish/CatfishWindow.py:1644
 msgid "No files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1410 ../catfish/CatfishWindow.py:1645
+#: ../catfish/CatfishWindow.py:1410 ../catfish/CatfishWindow.py:1646
 msgid "1 file found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1413 ../catfish/CatfishWindow.py:1647
+#: ../catfish/CatfishWindow.py:1413 ../catfish/CatfishWindow.py:1648
 #, python-format
 msgid "%i files found."
 msgstr ""
@@ -392,7 +392,7 @@ msgstr ""
 msgid "Searching…"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1636
+#: ../catfish/CatfishWindow.py:1637
 #, python-format
 msgid "Search results for \"%s\""
 msgstr ""

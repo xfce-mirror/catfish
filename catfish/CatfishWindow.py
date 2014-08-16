@@ -497,7 +497,7 @@ class CatfishWindow(Window):
         elif status_code == 2:
             icon = "dialog-warning"
             msg_type = Gtk.MessageType.WARNING
-            status = _("User aborted authentication.")
+            status = _("Authentication cancelled.")
 
         # Info
         else:
@@ -1575,6 +1575,7 @@ class CatfishWindow(Window):
         if helpers.check_python_version(3, 0):
             sort.set_sort_func(2, self.python_three_size_sort_func, None)
         self.treeview.set_model(sort)
+        sort.get_model().get_model().clear()
         self.treeview.columns_autosize()
 
         # Enable multiple-selection
