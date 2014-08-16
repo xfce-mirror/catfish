@@ -31,7 +31,9 @@ import os
 
 def parse_options():
     """Support for command line options"""
-    parser = optparse.OptionParser(version="catfish %s" % get_version())
+    usage = _("Usage: %prog [options] path query")
+    parser = optparse.OptionParser(version="catfish %s" % get_version(),
+                                   usage=usage)
     parser.add_option(
         "-v", "--verbose", action="count", dest="verbose",
         help=_("Show debug messages (-vv debugs catfish_lib also)"))
@@ -43,7 +45,7 @@ def parse_options():
     parser.add_option('', '--iso-time', action='store_true',
                       dest='time_iso', help=_('Display time in ISO format'))
     # Translators: Do not translate PATH, it is a variable.
-    parser.add_option('', '--path', help=_('Search in folder PATH'))
+    parser.add_option('', '--path', help=optparse.SUPPRESS_HELP)
     parser.add_option('', '--exact', action='store_true',
                       help=_('Perform exact match'))
     parser.add_option('', '--hidden', action='store_true',
@@ -51,7 +53,7 @@ def parse_options():
     parser.add_option('', '--fulltext', action='store_true',
                       help=_('Perform fulltext search'))
     parser.set_defaults(icons_large=0, thumbnails=0, time_iso=0,
-                        path=os.path.expanduser('~'),
+                        path=None,
                         exact=0, hidden=0, fulltext=0, file_action='open')
 
     (options, args) = parser.parse_args()

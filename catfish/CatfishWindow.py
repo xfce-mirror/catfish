@@ -326,7 +326,30 @@ class CatfishWindow(Window):
         """Parse commandline arguments into Catfish runtime settings."""
         self.options = options
 
-        # Set the selected folder path.
+        # Set the selected folder path. Allow legacy --path option.
+        path = None
+
+        # New format, first argument
+        if self.options.path is None:
+            if len(args) > 0:
+                if os.path.isdir(os.path.realpath(args[0])):
+                    path = args.pop(0)
+
+        # Old format, --path
+        else:
+            if os.path.isdir(os.path.realpath(self.options.path)):
+                path = self.options.path
+
+        # Make sure there is a valid path.
+        if path is None:
+            path = os.path.expanduser("~")
+            if os.path.isdir(os.path.realpath(path)):
+                self.options.path = path
+            else:
+                path = "/"
+        else:
+            self.options.path = path
+
         self.folderchooser.set_filename(self.options.path)
 
         # Set non-flags as search keywords.
