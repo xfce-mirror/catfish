@@ -387,6 +387,9 @@ class CatfishWindow(Window):
             self.setup_small_view()
             self.list_toggle.set_active(True)
 
+        if self.options.start:
+            self.on_search_entry_activate(self.search_entry)
+
     def preview_cell_data_func(self, col, renderer, model, treeiter, data):
         """Cell Renderer Function for the preview."""
         icon_name = model[treeiter][0]
@@ -559,7 +562,7 @@ class CatfishWindow(Window):
                 self.update_index_close.set_label(Gtk.STOCK_CLOSE)
                 self.update_index_close.set_sensitive(True)
                 self.update_index_close.set_can_default(True)
-                self.update_index_close.set_receives_default(True)
+                self.update_index_close.set_receives_defsault(True)
                 self.update_index_close.grab_focus()
                 self.update_index_close.grab_default()
 
@@ -674,8 +677,10 @@ class CatfishWindow(Window):
         if len(keywords) != 0 and keywords[0] == '.':
             show_hidden = True
 
-        model = self.search_entry.get_completion().get_model()
-        model.clear()
+        completion = self.search_entry.get_completion()
+        if completion is not None:
+            model = completion.get_model()
+            model.clear()
         results = []
 
         for filename in self.suggestions_engine.run(keywords, folder, 10):
@@ -1625,11 +1630,15 @@ class CatfishWindow(Window):
             continue
 
         # Return to Non-Search Mode.
-        self.get_window().set_cursor(None)
+        window = self.get_window()
+        if window is not None:
+            window.set_cursor(None)
         self.set_title(_('Search results for \"%s\"') % keywords)
         self.spinner.hide()
 
-        n_results = len(self.treeview.get_model())
+        n_results = 0
+        if self.treeview.get_model() is not None:
+            n_results = len(self.treeview.get_model())
         if n_results == 0:
             self.statusbar_label.set_label(_("No files found."))
         elif n_results == 1:

@@ -38,7 +38,7 @@ def parse_options():
         "-v", "--verbose", action="count", dest="verbose",
         help=_("Show debug messages (-vv debugs catfish_lib also)"))
 
-    parser.add_option('', '--large-icons', action='store_true',
+    parser.add_option('-l', '--large-icons', action='store_true',
                       dest='icons_large', help=_('Use large icons'))
     parser.add_option('', '--thumbnails', action='store_true',
                       dest='thumbnails', help=_('Use thumbnails'))
@@ -52,8 +52,11 @@ def parse_options():
                       help=_('Include hidden files'))
     parser.add_option('', '--fulltext', action='store_true',
                       help=_('Perform fulltext search'))
+    parser.add_option('', '--start', action='store_true',
+                      help=_("If path and query are provided, start searching "
+                             "when the application is displayed."))
     parser.set_defaults(icons_large=0, thumbnails=0, time_iso=0,
-                        path=None,
+                        path=None, start=False,
                         exact=0, hidden=0, fulltext=0, file_action='open')
 
     (options, args) = parser.parse_args()
