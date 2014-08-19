@@ -1,3 +1,7 @@
+v1.2.1:
+ + Fix regression introduced in 1.2.0 that prevents the application from
+   starting (Debian: #758652)
+
 v1.2.0:
  + Added Search button to start search with the mouse (LP: #1300158)
  + Added "--start" command line flag to start searching on startup
