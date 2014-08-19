@@ -19,7 +19,7 @@
 from gi.repository import Gtk  # pylint: disable=E0611
 
 from . helpers import get_builder
-from catfishconfig import get_version
+from . catfishconfig import get_version
 
 
 class AboutDialog(Gtk.AboutDialog):
