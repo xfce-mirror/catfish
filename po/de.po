@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-16 18:08-0400\n"
-"PO-Revision-Date: 2014-08-19 23:54+0000\n"
-"Last-Translator: Simon Steinbeiß <ochosi@shimmerproject.org>\n"
+"PO-Revision-Date: 2014-08-23 14:26+0000\n"
+"Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-20 06:11+0000\n"
+"X-Launchpad-Export-Date: 2014-08-24 06:39+0000\n"
 "X-Generator: Launchpad (build 17163)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:521
@@ -132,7 +132,7 @@ msgstr "Aktualisieren"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr "Die Suchdatenbank ist älter als 7 Tage. Jetzt updaten?"
+msgstr "Die Suchdatenbank ist älter als 7 Tage. Jetzt aktualisieren?"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Any time"
@@ -184,7 +184,7 @@ msgstr "<b>Dateityp</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Update Search Database"
-msgstr "Suchdatenbank updaten"
+msgstr "Suchdatenbank aktualisieren"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Unlock"
@@ -196,19 +196,19 @@ msgstr "<b>Datenbank:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "<b>Updated:</b>"
-msgstr "<b>Upgedated:</b>"
+msgstr "<b>Aktualisiert:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "<big><b>Update Search Database</b></big>"
-msgstr "<big><b>Suchdatenbank updaten</b></big>"
+msgstr "<big><b>Suchdatenbank aktualisieren</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
-"Für schnellere Suchergebnisse muss die Suchdatenbank upgedated werden.\n"
-"Dieser Vorgang benötigt Administratorrechte."
+"Für schnellere Suchergebnisse, muss die Suchdatenbank aufgefrischt werden.\n"
+"Dieser Vorgang benötigt Systemverwalterrechte."
 
 #: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
@@ -262,7 +262,7 @@ msgstr "Niemals"
 
 #: ../catfish/CatfishWindow.py:492
 msgid "An error occurred while updating the database."
-msgstr "Beim Updaten der Datenbank ist ein Fehler passiert."
+msgstr "Beim Aktualisieren der Datenbank ist ein Fehler aufgetreten."
 
 #: ../catfish/CatfishWindow.py:494
 msgid "Authentication failed."
@@ -270,11 +270,11 @@ msgstr "Legitimierung fehlgeschlagen."
 
 #: ../catfish/CatfishWindow.py:500
 msgid "Authentication cancelled."
-msgstr "Authentifizierung abgebrochen."
+msgstr "Legitimierung abgebrochen."
 
 #: ../catfish/CatfishWindow.py:506
 msgid "Search database updated successfully."
-msgstr "Die Suchdatenbank wurde erfolgreich upgedated."
+msgstr "Die Suchdatenbank wurde erfolgreich aktualisiert."
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:574
@@ -283,7 +283,9 @@ msgstr "Aktualisierung wird durchgeführt …"
 
 #: ../catfish/CatfishWindow.py:601
 msgid "Enter search terms and press Enter to begin."
-msgstr "Suchbegriffe eingeben und Enter drücken um die Suche zu beginnen."
+msgstr ""
+"Bitte Suchbegriffe eingeben und die Eingabetaste drücken, um mit der Suche "
+"zu beginnen."
 
 #: ../catfish/CatfishWindow.py:606
 msgid "Stop Search"
@@ -294,8 +296,8 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
-"Suchvorgang läuft...\n"
-"Abbrechen klicken oder die Escape Taste drücken um abzubrechen."
+"Suchvorgang läuft …\n"
+"Abbrechen klicken oder die die Escape-Taste drücken, um abzubrechen."
 
 #: ../catfish/CatfishWindow.py:615
 msgid "Begin Search"
@@ -412,7 +414,7 @@ msgstr "Passwort erforderlich"
 
 #: ../catfish_lib/SudoDialog.py:157
 msgid "Incorrect password... try again."
-msgstr "Falsches Passwort... erneut versuchen."
+msgstr "Falsches Passwort … bitte erneut versuchen."
 
 #: ../catfish_lib/SudoDialog.py:167
 msgid "Password:"
@@ -432,7 +434,7 @@ msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
-"Passwort eingeben um\n"
+"Passwort eingeben, um\n"
 "administrative Aufgaben durchzuführen."
 
 #: ../catfish_lib/SudoDialog.py:204
@@ -441,8 +443,8 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
-"Die Anwendung '%s' ermöglicht die\n"
-"Veränderung von essentiellen Teilen Ihres Betriebssystems."
+"Die Anwendung »%s« ermöglicht die\n"
+"Veränderung von wesentlichen Teilen Ihres Betriebssystems."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
@@ -457,11 +459,11 @@ msgid ""
 "file manager or organization skills."
 msgstr ""
 "Catfish ist ein kleines, schnelles und leistungsfähiges Suchprogramm. Die "
-"minimale Nutzeroberfläche stellt die Suchergebnisse in den Vordergrund und "
-"hilft dem Benutzer, die Dateien, die er sucht, zu finden ohne einen "
-"Dateimanager zu verwenden. Durch nützliche Filter wie etwa Änderungsdatum, "
-"Dateityp oder die Volltextsuche werden Benutzer unabhängiger vom "
-"Dateimanager und ihrem Organisationstalent."
+"kleine Benutzeroberfläche stellt die Suchergebnisse in den Vordergrund und "
+"hilft dem Benutzer, die Dateien die er sucht, zu finden, ohne eine "
+"Dateiverwaltung zu verwenden. Durch nützliche Filter wie etwa "
+"Änderungsdatum, Dateityp oder die Volltextsuche werden Benutzer unabhängiger "
+"von der Dateiverwaltung und ihrem Organisationstalent."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid ""
@@ -512,9 +514,6 @@ msgstr ""
 #~ msgid "<big><b>Update Search Index</b></big>"
 #~ msgstr "<big><b>Suchindex aktualisieren</b></big>"
 
-#~ msgid "User aborted authentication."
-#~ msgstr "Die Authentifizierung wurde durch den Benutzer abgebrochen."
-
 #~ msgid "Enter search terms and press ENTER"
 #~ msgstr "Suchbegriffen eingeben und Eingabetaste drücken"
 
@@ -542,3 +541,6 @@ msgstr ""
 
 #~ msgid "Catfish could not find the default open wrapper."
 #~ msgstr "Catfish konnte den vorgegebenen open-wrapper nicht finden."
+
+#~ msgid "User aborted authentication."
+#~ msgstr "Die Legitimierung wurde durch den Benutzer abgebrochen."
