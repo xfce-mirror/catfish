@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-16 18:08-0400\n"
-"PO-Revision-Date: 2014-04-08 16:42+0000\n"
-"Last-Translator: Kentaro Kazuhama <Unknown>\n"
+"PO-Revision-Date: 2014-09-05 06:46+0000\n"
+"Last-Translator: Kiyotaka Nemoto <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-17 06:28+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-09-05 07:35+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:521
 msgid "Catfish File Search"
@@ -39,11 +39,11 @@ msgstr "今日へ移動"
 
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "<b>Start Date</b>"
-msgstr "<b>開始日時</b>"
+msgstr "開始日"
 
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "<b>End Date</b>"
-msgstr "<b>終了日時</b>"
+msgstr "<b>終了日</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "Custom File Type"
@@ -104,7 +104,7 @@ msgstr "位置のコピー(_C)"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "_Save as..."
-msgstr ""
+msgstr "別名で保存(_S)..."
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "_Delete"
@@ -120,7 +120,7 @@ msgstr "フォルダを選択"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "Compact List"
-msgstr ""
+msgstr "一覧"
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Thumbnails"
@@ -128,11 +128,11 @@ msgstr "サムネイル"
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Update"
-msgstr ""
+msgstr "アップデート"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr ""
+msgstr "検索データベースは７日以上更新されていません。今すぐアップデートしますか？"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Any time"
@@ -184,29 +184,31 @@ msgstr "<b>ファイルタイプ</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Update Search Database"
-msgstr ""
+msgstr "検索データベースのアップデート"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Unlock"
-msgstr "アンロック"
+msgstr "ロックの解除"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "<b>Database:</b>"
-msgstr ""
+msgstr "<b>データベース:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "<b>Updated:</b>"
-msgstr ""
+msgstr "<b>アップデート:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>検索データベースのアップデート</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"検索結果を速く表示するために、検索データベースを更新する必要があります。\n"
+"このためには管理者権限が必要です。"
 
 #: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
@@ -251,7 +253,7 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:85
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (無効なエンコーディング)"
 
 #: ../catfish/CatfishWindow.py:231
 msgid "Never"
@@ -259,7 +261,7 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:492
 msgid "An error occurred while updating the database."
-msgstr ""
+msgstr "データベースのアップデート中にエラーが発生しました。"
 
 #: ../catfish/CatfishWindow.py:494
 msgid "Authentication failed."
@@ -267,20 +269,20 @@ msgstr "認証に失敗しました。"
 
 #: ../catfish/CatfishWindow.py:500
 msgid "Authentication cancelled."
-msgstr ""
+msgstr "認証はキャンセルされました。"
 
 #: ../catfish/CatfishWindow.py:506
 msgid "Search database updated successfully."
-msgstr ""
+msgstr "検索データベースはアップデートされました。"
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:574
 msgid "Updating..."
-msgstr ""
+msgstr "アップデート中..."
 
 #: ../catfish/CatfishWindow.py:601
 msgid "Enter search terms and press Enter to begin."
-msgstr ""
+msgstr "検索ワードを入力し、Enterを押してください。"
 
 #: ../catfish/CatfishWindow.py:606
 msgid "Stop Search"
@@ -291,10 +293,12 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
+"検索中...\n"
+"中止するにはキャンセルボタンをクリックするかEscキーを押してください。"
 
 #: ../catfish/CatfishWindow.py:615
 msgid "Begin Search"
-msgstr ""
+msgstr "検索を開始"
 
 #: ../catfish/CatfishWindow.py:988
 #, python-format
@@ -344,7 +348,7 @@ msgstr "ファイル名"
 
 #: ../catfish/CatfishWindow.py:1136
 msgid "Size"
-msgstr "大きさ"
+msgstr "サイズ"
 
 #: ../catfish/CatfishWindow.py:1138
 msgid "Location"
@@ -385,7 +389,7 @@ msgstr "%i つのファイルを発見。"
 
 #: ../catfish/CatfishWindow.py:1421
 msgid "bytes"
-msgstr ""
+msgstr "bytes"
 
 #: ../catfish/CatfishWindow.py:1556
 #, python-format
@@ -407,26 +411,28 @@ msgstr ""
 
 #: ../catfish_lib/SudoDialog.py:157
 msgid "Incorrect password... try again."
-msgstr ""
+msgstr "パスワードが正しくありません... 再入力してください。"
 
 #: ../catfish_lib/SudoDialog.py:167
 msgid "Password:"
-msgstr ""
+msgstr "パスワード:"
 
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:178
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: ../catfish_lib/SudoDialog.py:181
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../catfish_lib/SudoDialog.py:202
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
+"管理者権限が必要な操作を実行するため\n"
+"パスワードを入力してください。"
 
 #: ../catfish_lib/SudoDialog.py:204
 #, python-format
@@ -434,10 +440,12 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
+"アプリケーション '%s' はシステムの\n"
+"主要な部分を修正しました。"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr ""
+msgstr "多機能なファイル検索ツール"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:2
 msgid ""
@@ -447,6 +455,9 @@ msgid ""
 "date, file type, and file contents, users will no longer be dependent on the "
 "file manager or organization skills."
 msgstr ""
+"Catfishは軽量で速いにもかかわらず強力なファイル検索ユーティリティーです。インターフェースは検索結果に重点を起いた最小限な構成となっており、ユーザー"
+"がファイルマネージャーを使わずにフィルを見つけることを助けます。ファイルの変更日、ファイルタイプ、ファイルの内容といった強力なフィルターがあることによって"
+"、ユーザーはファイルマネージャーやファイルの整理スキルに頼る必要がなくなります。"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid ""
@@ -454,6 +465,8 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
+"このリリースでは複数のキーワードでの検索ができなくなっていた問題を解決しました。検索データベースが古くなると情報バーが表示されるようにもなり、データベース"
+"のアップデートについてのダイアログも改善されました。"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
@@ -466,6 +479,7 @@ msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
+"この安定版のリリースでは、パスワードダイアログの信頼性を改善し、未使用のコードを削除し、リスト選択とアイテム選択に関する潜在的な問題を修正しました。"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:6
 msgid ""
@@ -481,6 +495,8 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"1.0.xシリーズの最初のリリースでは、インターフェースを刷新し、長年あったバグを修正しました。デフォルトのパーミッションを改善したことでディストリビュー"
+"ション用のパッケージングの際に出る警告が減りました。アクセシビリティも強化され、すべての文字列が翻訳可能となり、キーボードショートカットも改善されました。"
 
 #~ msgid "Done."
 #~ msgstr "完了"
