@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-16 18:08-0400\n"
-"PO-Revision-Date: 2013-03-18 12:20+0000\n"
-"Last-Translator: DAG Software <Unknown>\n"
+"PO-Revision-Date: 2014-09-05 09:31+0000\n"
+"Last-Translator: Petr Šimáček <petr.simacek@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-17 06:28+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-09-06 07:24+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:521
 msgid "Catfish File Search"
@@ -23,11 +23,11 @@ msgstr "Vyhledávač souborů Catfish"
 
 #: ../catfish.desktop.in.h:2
 msgid "Search the file system"
-msgstr ""
+msgstr "Prohledat souborový systém"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
-msgstr ""
+msgstr "Catfish je univerzální nástroj pro vyhledávání souborů."
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "Custom Time Range"
@@ -47,55 +47,55 @@ msgstr "<b>Koncové datum</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "Custom File Type"
-msgstr ""
+msgstr "Vlastní typ souboru"
 
 #. The "mimetype" is the file type of the file, such as "application/octet-stream"
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "Select existing mimetype"
-msgstr ""
+msgstr "Vybrat stávající MIME typ"
 
 #. Enter "file extensions" such as .doc, .pdf
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "Enter file extensions"
-msgstr ""
+msgstr "Vložit koncovku souboru"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "_Exact Match"
-msgstr ""
+msgstr "_Přesná shoda"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "_Hidden Files"
-msgstr ""
+msgstr "_Skryté soubory"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "_Fulltext Search"
-msgstr ""
+msgstr "_Fulltextové vyhledávání"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "_Show Advanced Settings"
-msgstr ""
+msgstr "_Zobrazit pokročilé nastavení"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "_Update Search Index…"
-msgstr ""
+msgstr "_Obnovit vyhledávací index…"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "_About"
-msgstr ""
+msgstr "_O aplikaci"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "_Open"
-msgstr ""
+msgstr "_Otevřít"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "Show in _File Manager"
-msgstr ""
+msgstr "Zobrazit ve _Správci souborů"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:25
@@ -104,11 +104,11 @@ msgstr "_Kopírovat umístění"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "_Save as..."
-msgstr ""
+msgstr "_Uložit jako..."
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "_Delete"
-msgstr ""
+msgstr "_Vymazat"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "Catfish"
@@ -120,19 +120,19 @@ msgstr "Vyber složku"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "Compact List"
-msgstr ""
+msgstr "Kompaktní seznam"
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Thumbnails"
-msgstr ""
+msgstr "Náhledy"
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Update"
-msgstr ""
+msgstr "Obnovit"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr ""
+msgstr "Vyhledávací databáze je stará víc jak 7 dnů. Chcete ji obnovit?"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Any time"
@@ -148,7 +148,7 @@ msgstr "Vlastní"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "<b>Modified</b>"
-msgstr ""
+msgstr "<b>Změněno</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "Documents"
@@ -156,7 +156,7 @@ msgstr "Dokumenty"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "Folders"
-msgstr ""
+msgstr "Složky"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "Images"
@@ -184,7 +184,7 @@ msgstr "<b>Typ souboru</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Update Search Database"
-msgstr ""
+msgstr "Obnovit databázi vyhledávání"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Unlock"
@@ -192,21 +192,23 @@ msgstr "Odemknout"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "<b>Database:</b>"
-msgstr ""
+msgstr "<b>Databáze:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "<b>Updated:</b>"
-msgstr ""
+msgstr "<b>Obnoveno:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>Obnovit databázi vyhledávání</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"Pro rychlejší výsledky vyhledávání musí být vyhledávací databáze obnovena.\n"
+"To vyžaduje práva administrátora."
 
 #: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
@@ -218,11 +220,11 @@ msgstr ""
 
 #: ../catfish/__init__.py:42
 msgid "Use large icons"
-msgstr ""
+msgstr "Použít velké ikony"
 
 #: ../catfish/__init__.py:44
 msgid "Use thumbnails"
-msgstr ""
+msgstr "Použít náhledy"
 
 #: ../catfish/__init__.py:46
 msgid "Display time in ISO format"

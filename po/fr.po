@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-16 18:08-0400\n"
-"PO-Revision-Date: 2014-08-21 21:24+0000\n"
-"Last-Translator: RM <l4rt1st-1nc0nnu@laposte.net>\n"
+"PO-Revision-Date: 2014-09-05 08:26+0000\n"
+"Last-Translator: Benoit THIBAUD <frombenny@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-22 07:10+0000\n"
-"X-Generator: Launchpad (build 17163)\n"
+"X-Launchpad-Export-Date: 2014-09-06 07:24+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:521
 msgid "Catfish File Search"
@@ -133,6 +133,8 @@ msgstr "Mise à jour"
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
+"La base des données recherchées date de plus de 7 jours. La mettre à jour "
+"maintenant ?"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Any time"
@@ -184,7 +186,7 @@ msgstr "<b>Type de fichier</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Update Search Database"
-msgstr ""
+msgstr "Mettre à jour la base des données recherchées"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Unlock"
@@ -200,17 +202,19 @@ msgstr "<b>Mis à jour :</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>Mettre à jour la base des données recherchées</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"Pour des résultats de recherche plus rapides, la base des données "
+"recherchées a besoin d'être actualisée."
 
 #: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
-msgstr ""
+msgstr "Utilisation : %prog [options] path query"
 
 #: ../catfish/__init__.py:39
 msgid "Show debug messages (-vv debugs catfish_lib also)"
@@ -245,6 +249,8 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
+"Si le chemin et la requête sont fournis, commencer à chercher lorsque "
+"l'application est affichée."
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -454,6 +460,12 @@ msgid ""
 "date, file type, and file contents, users will no longer be dependent on the "
 "file manager or organization skills."
 msgstr ""
+"Catfish est un utilitaire de recherche de fichiers petit, rapide et "
+"puissant. Doté d'une interface minimaliste orientée résultats, il aide "
+"l'utilisateur à trouver les fichiers dont il a besoin sans gestionnaire de "
+"fichiers. Avec des filtres puissants tels que la date de modification, le "
+"type de fichier ou son contenu, l'utilisateur n'est plus dépendant d'un "
+"gestionnaire de fichiers ou de ses capacités d'organisation."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid ""
@@ -461,24 +473,35 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
+"Cette version corrige une régression où plusieurs termes de recherche "
+"n'étaient plus pris en charge. Une barre d'informations s'affiche désormais "
+"lorsque la base des données recherchées n'est pas à jour. De plus, la boîte "
+"de dialogue de mise à jour de la base de données a été améliorée."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
+"Cette version corrige deux problèmes où la localisation n'était pas exécutée "
+"correctement et améliore la gestion des icônes symboliques manquantes."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
+"Cette version stable a amélioré la fiabilité de la boîte de dialogue du mot "
+"de passe, nettoyé le code inutilisé, et corrige les problèmes potentiels "
+"lors de la sélection des listes et des items."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:6
 msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
 msgstr ""
+"Cette version a corrigé une faille de sécurité potentielle sur le programme "
+"de démarrage ainsi qu'une régression avec la sélection multiples d'items ."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid ""
@@ -488,6 +511,12 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"La première version de la série 1.0.x a introduit une nouvelle interface et "
+"a corrigé un certain nombre de bogues de longue date. Les améliorations "
+"apportées aux autorisations par défaut ont supprimé un certain nombre "
+"d'avertissements lors de l'empaquetage pour les distributions. "
+"L'accessibilité a été renforcée, toutes les chaînes ont été rendues "
+"traduisibles et les raccourcis clavier ont été améliorés."
 
 #~ msgid "Last modified"
 #~ msgstr "Dernière modification"
