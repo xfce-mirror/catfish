@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-16 18:08-0400\n"
-"PO-Revision-Date: 2014-09-08 06:43+0000\n"
+"PO-Revision-Date: 2014-09-08 07:17+0000\n"
 "Last-Translator: Petr Šimáček <petr.simacek@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-08 06:51+0000\n"
+"X-Launchpad-Export-Date: 2014-09-09 07:45+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:521
@@ -212,7 +212,7 @@ msgstr ""
 
 #: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
-msgstr ""
+msgstr "Použití: %prog [volby] dotaz cesta"
 
 #: ../catfish/__init__.py:39
 msgid "Show debug messages (-vv debugs catfish_lib also)"
@@ -327,6 +327,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
+"Jste si jisti, že chcete \n"
+"trvale smazat \"%s\"?"
 
 #: ../catfish/CatfishWindow.py:1108
 #, python-format
@@ -334,6 +336,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
+"Jste si jisti, že chcete \n"
+"trvale smazat \"%i\" označených souborů?"
 
 #: ../catfish/CatfishWindow.py:1111
 msgid "If you delete a file, it is permanently lost."
@@ -353,7 +357,7 @@ msgstr "Umístění"
 
 #: ../catfish/CatfishWindow.py:1140
 msgid "Modified"
-msgstr ""
+msgstr "Změněno"
 
 #: ../catfish/CatfishWindow.py:1150
 msgid "Preview"
@@ -361,15 +365,15 @@ msgstr "Náhled"
 
 #: ../catfish/CatfishWindow.py:1158
 msgid "Details"
-msgstr ""
+msgstr "Podrobnosti"
 
 #: ../catfish/CatfishWindow.py:1331
 msgid "Today"
-msgstr ""
+msgstr "Dnes"
 
 #: ../catfish/CatfishWindow.py:1333
 msgid "Yesterday"
-msgstr ""
+msgstr "včera"
 
 #: ../catfish/CatfishWindow.py:1408 ../catfish/CatfishWindow.py:1644
 msgid "No files found."
@@ -377,16 +381,16 @@ msgstr "Nebyly nalezeny žádné soubory."
 
 #: ../catfish/CatfishWindow.py:1410 ../catfish/CatfishWindow.py:1646
 msgid "1 file found."
-msgstr ""
+msgstr "Nalezen jeden soubor"
 
 #: ../catfish/CatfishWindow.py:1413 ../catfish/CatfishWindow.py:1648
 #, python-format
 msgid "%i files found."
-msgstr ""
+msgstr "%i souborů bylo nalezeno."
 
 #: ../catfish/CatfishWindow.py:1421
 msgid "bytes"
-msgstr ""
+msgstr "bajty"
 
 #: ../catfish/CatfishWindow.py:1556
 #, python-format
@@ -404,30 +408,32 @@ msgstr "Výsledek hledání \"%s\""
 
 #: ../catfish_lib/SudoDialog.py:120
 msgid "Password Required"
-msgstr ""
+msgstr "Je vyžadováno heslo"
 
 #: ../catfish_lib/SudoDialog.py:157
 msgid "Incorrect password... try again."
-msgstr ""
+msgstr "Špatné heslo... zkuste to znovu."
 
 #: ../catfish_lib/SudoDialog.py:167
 msgid "Password:"
-msgstr ""
+msgstr "Heslo:"
 
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:178
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit:"
 
 #: ../catfish_lib/SudoDialog.py:181
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../catfish_lib/SudoDialog.py:202
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
+"Vložte své heslo\n"
+"k provádění administrativních úkolů."
 
 #: ../catfish_lib/SudoDialog.py:204
 #, python-format
@@ -435,10 +441,12 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
+"Program '%s' vám dovolí\n"
+"upravit základní části systému."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr ""
+msgstr "Univerzální nástroj pro hledání souborů"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:2
 msgid ""
@@ -448,6 +456,11 @@ msgid ""
 "date, file type, and file contents, users will no longer be dependent on the "
 "file manager or organization skills."
 msgstr ""
+"Catfish je malý, rychlý a výkonný vyhledávač souborů. Díky minimalistickému "
+"rozhraní s důrazem na výsledky, pomáhá uživatelům najít soubory, které "
+"potřebují, aniž by otevřeli správce souborů. S výkonnými filtry jako je "
+"datum změny, typ souboru a obsah souboru už uživatelé nebudou závislí na "
+"správci souborů nebo svých organizačních schopnostech."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid ""
@@ -455,24 +468,34 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
+"Tato verze opravuje regrese, kdy nebylo podporováno více hledaných výrazů. "
+"Informační panel se nyní zobrazí, když je vyhledávací databáze zastaralá, a "
+"byly vylepšeny dialogy používané k aktualizaci databáze."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
+"Tato verze opravuje dva problémy, kdy vyhledání nebylo řádně provedeno a "
+"zlepšuje manipulaci s chybějícími symbolickými ikonami."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
+"Tato stabilní verze zlepšila spolehlivost dialogu heslo, byl pročištěn "
+"nepoužívaný kód a opraveny potenciální problémy se seznamem a výběrem "
+"položky."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:6
 msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
 msgstr ""
+"Toto vydání opravuje potenciální bezpečnostní problém se spuštěním programu "
+"a opravuje regresi s výběrem více položek."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid ""
@@ -482,6 +505,10 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"První vydání v sérii 1.0.x  představilo obnovené rozhraní a opravenou řadu "
+"dlouhodobých chyb. Zlepšení ve výchozím oprávnění eliminuje řadu varování "
+"při balíčkování pro distribuci. Dostupnost byla rozšířena tím, že byly "
+"zlepšeny překladatelské řetězce a  vylepšeny klávesové zkratky."
 
 #~ msgid "Last modified"
 #~ msgstr "Naposledy změněno"
