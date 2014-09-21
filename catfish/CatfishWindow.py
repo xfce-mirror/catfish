@@ -204,6 +204,7 @@ class CatfishWindow(Window):
         self.file_menu = builder.get_object("file_menu")
         self.file_menu_save = builder.get_object("menu_save")
         self.file_menu_delete = builder.get_object("menu_delete")
+        self.treeview_click_on = False
 
         # -- Update Search Index Dialog -- #
         menuitem = builder.get_object('menu_update_index')
@@ -1232,6 +1233,9 @@ class CatfishWindow(Window):
             Left Click:     Ignore.
             Middle Click:   Open the selected file.
             Right Click:    Show the popup menu."""
+        self.treeview_click_on = not self.treeview_click_on
+        if self.treeview_click_on:
+            return False
 
         model, self.rows, self.selected_filenames = \
             self.treeview_get_selected_rows(treeview)

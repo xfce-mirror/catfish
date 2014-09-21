@@ -1,5 +1,6 @@
 v1.2.2:
  + Fix typo in CatfishWindow.py (LP: #1372166)
+ + Fix right-click activating previous item (LP: #1372165)
  + Updated translations.
 
 v1.2.1:

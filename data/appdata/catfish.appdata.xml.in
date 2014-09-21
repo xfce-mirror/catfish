@@ -33,10 +33,9 @@
   </provides>
 
   <releases>
-    <release version="1.2.2" timestamp="1411333200">
+    <release version="1.2.2" timestamp="1411335000">
       <description>
-        <_p>This release fixes a typo that causes Catfish to fail and
-        includes updated translations.
+        <_p>This release fixes two new bugs and includes updated translations.
         </_p>
       </description>
     </release>
