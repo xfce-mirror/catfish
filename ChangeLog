@@ -1,3 +1,7 @@
+v1.2.2:
+ + Fix typo in CatfishWindow.py (LP: #1372166)
+ + Updated translations.
+
 v1.2.1:
  + Fix regression introduced in 1.2.0 that prevents the application from
    starting (Debian: #758652)

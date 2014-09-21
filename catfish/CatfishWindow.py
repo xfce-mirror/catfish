@@ -562,7 +562,7 @@ class CatfishWindow(Window):
                 self.update_index_close.set_label(Gtk.STOCK_CLOSE)
                 self.update_index_close.set_sensitive(True)
                 self.update_index_close.set_can_default(True)
-                self.update_index_close.set_receives_defsault(True)
+                self.update_index_close.set_receives_default(True)
                 self.update_index_close.grab_focus()
                 self.update_index_close.grab_default()
 
