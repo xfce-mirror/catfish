@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-21 17:26-0400\n"
-"PO-Revision-Date: 2014-09-05 08:26+0000\n"
-"Last-Translator: Benoit THIBAUD <frombenny@gmail.com>\n"
+"PO-Revision-Date: 2014-09-24 16:11+0000\n"
+"Last-Translator: Yannick Le Guen <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-22 06:56+0000\n"
+"X-Launchpad-Export-Date: 2014-09-25 06:37+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:522
@@ -470,12 +470,16 @@ msgstr ""
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
+"Cette version corrige deux nouveaux bogues et comporte des mises à jour de "
+"traductions."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
+"Cette version corrige une régression qui empêchait l'application de démarrer "
+"sur certains systèmes."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
