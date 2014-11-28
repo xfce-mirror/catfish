@@ -158,6 +158,23 @@ class Builder(Gtk.Builder):
                 auto_connect_by_name(callback_obj, self)
 
         return result
+        
+    def add_name_mapping(self, mapping):
+        '''Add a mapping for use with get_named_object.'''
+        self._mapping = mapping
+        
+    def get_named_object(self, name):
+        '''Retrieve the named object from the builder.'''
+        if self._mapping is None:
+            return None
+        
+        item = self._mapping
+        try:
+            for segment in name.split('.'):
+                item = item[segment]
+            return self.get_object(item)
+        except:
+            return None
 
 
 # pylint: disable=R0903

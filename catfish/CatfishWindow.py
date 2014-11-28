@@ -39,6 +39,7 @@ from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishSearchEngine import *
 
 import pexpect
+    
 
 # Initialize Gtk, GObject, and mimetypes
 if not helpers.check_gobject_version(3, 9, 1):
@@ -118,12 +119,14 @@ class CatfishWindow(Window):
         self.set_wmclass("Catfish", "Catfish")
 
         self.AboutDialog = AboutCatfishDialog
+        
+        
 
         # -- Folder Chooser Combobox -- #
-        self.folderchooser = builder.get_object("folderchooser")
+        self.folderchooser = builder.get_named_object("toolbar.folderchooser")
 
         # -- Search Entry and Completion -- #
-        self.search_entry = builder.get_object("search_entry")
+        self.search_entry = builder.get_named_object("toolbar.search")
         self.suggestions_engine = CatfishSearchEngine(['zeitgeist'])
         completion = Gtk.EntryCompletion()
         self.search_entry.set_completion(completion)
@@ -132,14 +135,14 @@ class CatfishWindow(Window):
         completion.set_text_column(0)
 
         # -- App Menu -- #
-        self.exact_match = builder.get_object("menu_exact_match")
-        self.hidden_files = builder.get_object("menu_hidden_files")
-        self.fulltext = builder.get_object("menu_fulltext")
+        self.exact_match = builder.get_named_object("menus.application.exact")
+        self.hidden_files = builder.get_named_object("menus.application.hidden")
+        self.fulltext = builder.get_named_object("menus.application.fulltext")
+        self.sidebar_toggle_menu = builder.get_named_object("menus.application.advanced")
 
         # -- Sidebar -- #
-        self.sidebar_toggle_menu = builder.get_object("menu_show_advanced")
-        self.button_time_custom = builder.get_object("button_time_custom")
-        self.button_format_custom = builder.get_object("button_format_custom")
+        self.button_time_custom = builder.get_named_object("sidebar.modified.options")
+        self.button_format_custom = builder.get_named_object("sidebar.filetype.options")
 
         # -- Status Bar -- *
         # Create a new GtkOverlay to hold the
@@ -148,7 +151,7 @@ class CatfishWindow(Window):
 
         # Move the results list to the overlay and
         # place the overlay in the window
-        scrolledwindow = builder.get_object("scrolledwindow2")
+        scrolledwindow = builder.get_named_object("results.scrolled_window")
         parent = scrolledwindow.get_parent()
         scrolledwindow.reparent(overlay)
         parent.add(overlay)
@@ -190,35 +193,41 @@ class CatfishWindow(Window):
 
         self.icon_cache_size = 0
 
-        self.list_toggle = builder.get_object('view_list')
-        self.thumbnail_toggle = builder.get_object('view_thumbnails')
+        self.list_toggle = builder.get_named_object("toolbar.view.list")
+        self.thumbnail_toggle = builder.get_named_object("toolbar.view.thumbs")
 
         # -- Treeview -- #
         self.row_activated = False
-        self.treeview = builder.get_object("treeview")
+        self.treeview = builder.get_named_object("results.treeview")
         self.treeview.enable_model_drag_source(
             Gdk.ModifierType.BUTTON1_MASK,
             [('text/plain', Gtk.TargetFlags.OTHER_APP, 0)],
             Gdk.DragAction.DEFAULT | Gdk.DragAction.COPY)
         self.treeview.drag_source_add_text_targets()
-        self.file_menu = builder.get_object("file_menu")
-        self.file_menu_save = builder.get_object("menu_save")
-        self.file_menu_delete = builder.get_object("menu_delete")
+        self.file_menu = builder.get_named_object("menus.file.menu")
+        self.file_menu_save = builder.get_named_object("menus.file.save")
+        self.file_menu_delete = builder.get_named_object("menus.file.delete")
         self.treeview_click_on = False
 
         # -- Update Search Index Dialog -- #
-        menuitem = builder.get_object('menu_update_index')
+        menuitem = builder.get_named_object("menus.application.update")
         if SudoDialog.check_dependencies(['locate', 'updatedb']):
             self.update_index_dialog = \
-                builder.get_object("update_index_dialog")
-            self.update_index_database = builder.get_object("database_label")
-            self.update_index_modified = builder.get_object("updated_label")
-            self.update_index_infobar = builder.get_object("update_status")
-            self.update_index_icon = builder.get_object("update_status_icon")
-            self.update_index_label = builder.get_object("update_status_label")
-            self.update_index_close = builder.get_object("update_index_close")
+                builder.get_named_object("dialogs.update.dialog")
+            self.update_index_database = \
+                builder.get_named_object("dialogs.update.database_label")
+            self.update_index_modified = \
+                builder.get_named_object("dialogs.update.modified_label")
+            self.update_index_infobar = \
+                builder.get_named_object("dialogs.update.status_infobar")
+            self.update_index_icon = \
+                builder.get_named_object("dialogs.update.status_icon")
+            self.update_index_label = \
+                builder.get_named_object("dialogs.update.status_label")
+            self.update_index_close = \
+                builder.get_named_object("dialogs.update.close_button")
             self.update_index_unlock = \
-                builder.get_object("update_index_unlock")
+                builder.get_named_object("dialogs.update.unlock_button")
             self.update_index_active = False
 
             now = datetime.datetime.now()
@@ -233,13 +242,15 @@ class CatfishWindow(Window):
             self.update_index_modified.set_label("<tt>%s</tt>" % modified)
 
             if locate_date < self.today - datetime.timedelta(days=7):
-                infobar = builder.get_object("locate_infobar")
+                infobar = builder.get_named_object("infobar.infobar")
                 infobar.show()
         else:
             menuitem.hide()
 
-        self.format_mimetype_box = builder.get_object("format_mimetype_box")
-        self.extensions_entry = builder.get_object("extensions")
+        self.format_mimetype_box = \
+            builder.get_named_object("dialogs.filetype.mimetypes.box")
+        self.extensions_entry = \
+            builder.get_named_object("dialogs.filetype.extensions.entry")
 
         self.search_engine = CatfishSearchEngine()
 
@@ -295,15 +306,17 @@ class CatfishWindow(Window):
         """Reload the symbolic icons on GTK or icon theme change."""
         # Modification Time icons
         modified_icon = self.load_symbolic_icon('document-open-recent', 16)
-        builder.get_object("image9").set_from_pixbuf(modified_icon)
-        builder.get_object("image10").set_from_pixbuf(modified_icon)
-        builder.get_object("image11").set_from_pixbuf(modified_icon)
+        for name in ['any', 'week', 'custom']:
+            widget = builder.get_named_object('sidebar.modified.icons.' + name)
+            widget.set_from_pixbuf(modified_icon)
 
         # Configuration icons
         settings_icon = self.load_symbolic_icon('document-properties', 16,
                                                 Gtk.StateFlags.INSENSITIVE)
-        self.modified_settings_image = builder.get_object("image8")
-        self.document_settings_image = builder.get_object("image12")
+        self.modified_settings_image = \
+            builder.get_named_object('sidebar.modified.icons.options')
+        self.document_settings_image = \
+            builder.get_named_object('sidebar.filetype.icons.options')
         self.modified_settings_image.set_from_pixbuf(settings_icon)
         self.document_settings_image.set_from_pixbuf(settings_icon)
 
@@ -315,13 +328,20 @@ class CatfishWindow(Window):
         apps_icon = self.load_symbolic_icon('applications-utilities', 16)
         folder_icon = self.load_symbolic_icon('folder', 16)
         custom_format_icon = self.load_symbolic_icon('list-add', 16)
-        builder.get_object("image1").set_from_pixbuf(documents_icon)
-        builder.get_object("image3").set_from_pixbuf(photos_icon)
-        builder.get_object("image4").set_from_pixbuf(music_icon)
-        builder.get_object("image5").set_from_pixbuf(videos_icon)
-        builder.get_object("image6").set_from_pixbuf(apps_icon)
-        builder.get_object("image7").set_from_pixbuf(custom_format_icon)
-        builder.get_object("image19").set_from_pixbuf(folder_icon)
+        builder.get_named_object('sidebar.filetype.icons.documents').\
+            set_from_pixbuf(documents_icon)
+        builder.get_named_object('sidebar.filetype.icons.photos').\
+            set_from_pixbuf(photos_icon)
+        builder.get_named_object('sidebar.filetype.icons.music').\
+            set_from_pixbuf(music_icon)
+        builder.get_named_object('sidebar.filetype.icons.videos').\
+            set_from_pixbuf(videos_icon)
+        builder.get_named_object('sidebar.filetype.icons.applications').\
+            set_from_pixbuf(apps_icon)
+        builder.get_named_object('sidebar.filetype.icons.custom').\
+            set_from_pixbuf(custom_format_icon)
+        builder.get_named_object('sidebar.filetype.icons.folders').\
+            set_from_pixbuf(folder_icon)
 
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
@@ -780,9 +800,9 @@ class CatfishWindow(Window):
 
     def on_button_time_custom_clicked(self, widget):
         """Show the custom time range dialog."""
-        dialog = self.builder.get_object("custom_date_dialog")
-        start_calendar = self.builder.get_object("start_calendar")
-        end_calendar = self.builder.get_object("end_calendar")
+        dialog = self.builder.get_named_object("dialogs.date.dialog")
+        start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
+        end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
 
         dialog.show_all()
         if dialog.run() == Gtk.ResponseType.APPLY:
@@ -872,13 +892,13 @@ class CatfishWindow(Window):
 
     def on_button_format_custom_clicked(self, widget):
         """Show the custom formats dialog."""
-        dialog = self.builder.get_object("custom_format_dialog")
+        dialog = self.builder.get_named_object("dialogs.filetype.dialog")
 
-        radio_mimetypes = self.builder.get_object("radio_custom_mimetype")
-        categories = self.builder.get_object("mimetype_categories")
-        types = self.builder.get_object("mimetype_types")
+        radio_mimetypes = self.builder.get_named_object("dialogs.filetype.mimetypes.radio")
+        categories = self.builder.get_named_object("dialogs.filetype.mimetypes.categories")
+        types = self.builder.get_named_object("dialogs.filetype.mimetypes.types")
 
-        radio_extensions = self.builder.get_object("radio_custom_extensions")
+        radio_extensions = self.builder.get_named_object("dialogs.filetype.extensions.radio")
 
         # Lazily load the mimetypes.
         if len(self.mimetypes) == 0:
@@ -961,7 +981,7 @@ class CatfishWindow(Window):
 
     def on_mimetype_categories_changed(self, combobox):
         """Update the mime subtypes when a different category is selected."""
-        types = self.builder.get_object("mimetype_types")
+        types = self.builder.get_named_object("dialogs.filetype.mimetypes.types")
 
         # Remove all existing rows.
         types.remove_all()

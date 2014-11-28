@@ -4,7 +4,97 @@
   <requires lib="gtk+" version="3.6"/>
   <requires lib="catfish_window" version="1.0"/>
   <!-- interface-local-resource-path ../media -->
-  <object class="GtkDialog" id="custom_date_dialog">
+  <object class="GtkImage" id="application_menu_about_icon">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">gtk-about-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="application_menu_update_icon">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">view-refresh-symbolic</property>
+    <property name="use_fallback">True</property>
+    <property name="icon_size">1</property>
+  </object>
+  <object class="GtkMenu" id="application_menu">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkCheckMenuItem" id="application_menu_exact">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Exact Match</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkCheckMenuItem" id="application_menu_hidden">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Hidden Files</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkCheckMenuItem" id="application_menu_fulltext">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Fulltext Search</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="application_menu_sep1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkCheckMenuItem" id="application_menu_advanced">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Show Advanced Settings</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
+        <accelerator key="F9" signal="activate"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="application_menu_sep2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="application_menu_update">
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Update Search Index…</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">application_menu_update_icon</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_update_index_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="application_menu_about">
+        <property name="label" translatable="yes">_About</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">application_menu_about_icon</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_mnu_about_activate" swapped="no"/>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="date_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Custom Time Range</property>
@@ -21,7 +111,7 @@
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton" id="button4">
+              <object class="GtkButton" id="date_cancel">
                 <property name="label">gtk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -35,7 +125,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="button5">
+              <object class="GtkButton" id="date_apply">
                 <property name="label">gtk-apply</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -63,23 +153,23 @@
             <property name="border_width">5</property>
             <property name="spacing">12</property>
             <child>
-              <object class="GtkFrame" id="frame3">
+              <object class="GtkFrame" id="date_start_frame">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment" id="alignment1">
+                  <object class="GtkAlignment" id="date_start_align">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="left_padding">3</property>
                     <child>
-                      <object class="GtkBox" id="box17">
+                      <object class="GtkBox" id="date_start_box">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkCalendar" id="start_calendar">
+                          <object class="GtkCalendar" id="date_start_calendar">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                           </object>
@@ -90,18 +180,18 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="button2">
+                          <object class="GtkButton" id="date_start_today">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
-                            <signal name="clicked" handler="on_calendar_today_button_clicked" object="start_calendar" swapped="no"/>
+                            <signal name="clicked" handler="on_calendar_today_button_clicked" object="date_start_calendar" swapped="no"/>
                             <child>
                               <object class="GtkBox" id="box19">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="spacing">3</property>
                                 <child>
-                                  <object class="GtkImage" id="image13">
+                                  <object class="GtkImage" id="date_start_today_icon">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="icon_name">x-office-calendar</property>
@@ -114,7 +204,7 @@
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="label15">
+                                  <object class="GtkLabel" id="date_start_today_label">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="label" translatable="yes">Go to Today</property>
@@ -139,7 +229,7 @@
                   </object>
                 </child>
                 <child type="label">
-                  <object class="GtkLabel" id="label13">
+                  <object class="GtkLabel" id="date_start_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label" translatable="yes">&lt;b&gt;Start Date&lt;/b&gt;</property>
@@ -154,13 +244,13 @@
               </packing>
             </child>
             <child>
-              <object class="GtkFrame" id="frame4">
+              <object class="GtkFrame" id="date_end_frame">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment" id="alignment4">
+                  <object class="GtkAlignment" id="date_end_align">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="left_padding">3</property>
@@ -170,7 +260,7 @@
                         <property name="can_focus">False</property>
                         <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkCalendar" id="end_calendar">
+                          <object class="GtkCalendar" id="date_end_calendar">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                           </object>
@@ -181,18 +271,18 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="button3">
+                          <object class="GtkButton" id="date_end_today">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
-                            <signal name="clicked" handler="on_calendar_today_button_clicked" object="end_calendar" swapped="no"/>
+                            <signal name="clicked" handler="on_calendar_today_button_clicked" object="date_end_calendar" swapped="no"/>
                             <child>
                               <object class="GtkBox" id="box20">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="spacing">3</property>
                                 <child>
-                                  <object class="GtkImage" id="image14">
+                                  <object class="GtkImage" id="date_end_today_icon">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="icon_name">x-office-calendar</property>
@@ -205,7 +295,7 @@
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="label16">
+                                  <object class="GtkLabel" id="date_end_today_label">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="label" translatable="yes">Go to Today</property>
@@ -230,7 +320,7 @@
                   </object>
                 </child>
                 <child type="label">
-                  <object class="GtkLabel" id="label14">
+                  <object class="GtkLabel" id="date_end_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label" translatable="yes">&lt;b&gt;End Date&lt;/b&gt;</property>
@@ -254,11 +344,119 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="0">button4</action-widget>
-      <action-widget response="-10">button5</action-widget>
+      <action-widget response="0">date_cancel</action-widget>
+      <action-widget response="-10">date_apply</action-widget>
     </action-widgets>
   </object>
-  <object class="GtkDialog" id="custom_format_dialog">
+  <object class="GtkImage" id="file_menu_copy_location_icon">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">edit-copy-symbolic</property>
+    <property name="use_fallback">True</property>
+    <property name="icon_size">1</property>
+  </object>
+  <object class="GtkImage" id="file_menu_delete_icon">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">edit-delete-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="file_menu_open_icon">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">document-open-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="file_menu_open_location_icon">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">folder-symbolic</property>
+    <property name="use_fallback">True</property>
+    <property name="icon_size">1</property>
+  </object>
+  <object class="GtkImage" id="file_menu_save_icon">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">document-save-as-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkMenu" id="file_menu">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkImageMenuItem" id="file_menu_open">
+        <property name="label" translatable="yes">_Open</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">file_menu_open_icon</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_open_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="file_menu_open_location">
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete">Show in _File Manager</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">file_menu_open_location_icon</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_filemanager_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="file_menu_sep1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="file_menu_copy_location">
+        <property name="label" translatable="yes" comments="This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete">_Copy Location</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">file_menu_copy_location_icon</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_copy_location_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="file_menu_save">
+        <property name="label" translatable="yes">_Save as...</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">file_menu_save_icon</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_save_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="file_menu_sep2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="file_menu_delete">
+        <property name="label" translatable="yes">_Delete</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="use_underline">True</property>
+        <property name="image">file_menu_delete_icon</property>
+        <property name="use_stock">False</property>
+        <signal name="activate" handler="on_menu_delete_activate" swapped="no"/>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="filetype_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Custom File Type</property>
@@ -274,7 +472,7 @@
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton" id="button1">
+              <object class="GtkButton" id="filetype_cancel">
                 <property name="label">gtk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -288,7 +486,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="button6">
+              <object class="GtkButton" id="filetype_apply">
                 <property name="label">gtk-apply</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -317,22 +515,22 @@
             <property name="orientation">vertical</property>
             <property name="spacing">12</property>
             <child>
-              <object class="GtkFrame" id="frame5">
+              <object class="GtkFrame" id="filetype_mimetype_frame">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment" id="alignment_mimetype">
+                  <object class="GtkAlignment" id="filetype_mimetype_align">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="left_padding">24</property>
                     <child>
-                      <object class="GtkBox" id="format_mimetype_box">
+                      <object class="GtkBox" id="filetype_mimetype_box">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
-                          <object class="GtkComboBoxText" id="mimetype_categories">
+                          <object class="GtkComboBoxText" id="filetype_mimetype_categories">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <signal name="changed" handler="on_mimetype_categories_changed" swapped="no"/>
@@ -344,7 +542,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkComboBoxText" id="mimetype_types">
+                          <object class="GtkComboBoxText" id="filetype_mimetype_types">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                           </object>
@@ -359,7 +557,7 @@
                   </object>
                 </child>
                 <child type="label">
-                  <object class="GtkRadioButton" id="radio_custom_mimetype">
+                  <object class="GtkRadioButton" id="filetype_mimetype_radio">
                     <property name="label" translatable="yes" comments="The &quot;mimetype&quot; is the file type of the file, such as &quot;application/octet-stream&quot;">Select existing mimetype</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -378,18 +576,18 @@
               </packing>
             </child>
             <child>
-              <object class="GtkFrame" id="frame6">
+              <object class="GtkFrame" id="filetype_extension_frame">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment" id="alignment_extensions">
+                  <object class="GtkAlignment" id="filetype_extension_align">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="left_padding">24</property>
                     <child>
-                      <object class="GtkEntry" id="extensions">
+                      <object class="GtkEntry" id="filetype_extension_entry">
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">True</property>
@@ -400,7 +598,7 @@
                   </object>
                 </child>
                 <child type="label">
-                  <object class="GtkRadioButton" id="radio_custom_extensions">
+                  <object class="GtkRadioButton" id="filetype_extension_radio">
                     <property name="label" translatable="yes" comments="Enter &quot;file extensions&quot; such as .doc, .pdf">Enter file extensions</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -408,7 +606,7 @@
                     <property name="xalign">0</property>
                     <property name="active">True</property>
                     <property name="draw_indicator">True</property>
-                    <property name="group">radio_custom_mimetype</property>
+                    <property name="group">filetype_mimetype_radio</property>
                     <signal name="toggled" handler="on_radio_custom_extensions_toggled" swapped="no"/>
                   </object>
                 </child>
@@ -429,230 +627,25 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="0">button1</action-widget>
-      <action-widget response="-10">button6</action-widget>
+      <action-widget response="0">filetype_cancel</action-widget>
+      <action-widget response="-10">filetype_apply</action-widget>
     </action-widgets>
   </object>
-  <object class="GtkImage" id="image15">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">folder-symbolic</property>
-    <property name="use_fallback">True</property>
-    <property name="icon_size">1</property>
-  </object>
-  <object class="GtkImage" id="image16">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">edit-copy-symbolic</property>
-    <property name="use_fallback">True</property>
-    <property name="icon_size">1</property>
-  </object>
-  <object class="GtkImage" id="image18">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">22</property>
-    <property name="icon_name">dialog-password</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="image2">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">view-refresh-symbolic</property>
-    <property name="use_fallback">True</property>
-    <property name="icon_size">1</property>
-  </object>
-  <object class="GtkImage" id="image20">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">gtk-about-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkMenu" id="appmenu">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_exact_match">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Exact Match</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_hidden_files">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Hidden Files</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_fulltext">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Fulltext Search</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem1">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckMenuItem" id="menu_show_advanced">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Show Advanced Settings</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
-        <accelerator key="F9" signal="activate"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem2">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_update_index">
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Update Search Index…</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image2</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_update_index_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_about">
-        <property name="label" translatable="yes">_About</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image20</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_mnu_about_activate" swapped="no"/>
-      </object>
-    </child>
-  </object>
-  <object class="GtkImage" id="image21">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">document-open-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="image22">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">document-save-as-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="image23">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">edit-delete-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkMenu" id="file_menu">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_open">
-        <property name="label" translatable="yes">_Open</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image21</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_open_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_filemanager">
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete">Show in _File Manager</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image15</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_filemanager_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem3">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_copy_location">
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete">_Copy Location</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image16</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_copy_location_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_save">
-        <property name="label" translatable="yes">_Save as...</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image22</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_save_activate" swapped="no"/>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem5">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="menu_delete">
-        <property name="label" translatable="yes">_Delete</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">image23</property>
-        <property name="use_stock">False</property>
-        <signal name="activate" handler="on_menu_delete_activate" swapped="no"/>
-      </object>
-    </child>
-  </object>
-  <object class="GtkImage" id="image24">
+  <object class="GtkListStore" id="results_liststore"/>
+  <object class="GtkImage" id="toolbar_view_list_icon">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="pixel_size">16</property>
     <property name="icon_name">view-list-symbolic</property>
     <property name="use_fallback">True</property>
   </object>
-  <object class="GtkImage" id="image25">
+  <object class="GtkImage" id="toolbar_view_thumbnails_icon">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="pixel_size">16</property>
     <property name="icon_name">folder-pictures-symbolic</property>
     <property name="use_fallback">True</property>
   </object>
-  <object class="GtkListStore" id="liststore1"/>
   <object class="CatfishWindow" id="catfish_window">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Catfish</property>
@@ -663,18 +656,18 @@
     <signal name="key-press-event" handler="on_catfish_window_key_press_event" swapped="no"/>
     <signal name="window-state-event" handler="on_catfish_window_window_state_event" swapped="no"/>
     <child>
-      <object class="GtkBox" id="box1">
+      <object class="GtkBox" id="catfish_window_box">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkToolbar" id="toolbar">
+          <object class="GtkToolbar" id="catfish_window_toolbar">
             <property name="height_request">44</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="show_arrow">False</property>
             <child>
-              <object class="GtkToolItem" id="toolbutton2">
+              <object class="GtkToolItem" id="toolbar_custom_folderchooser">
                 <property name="width_request">150</property>
                 <property name="height_request">32</property>
                 <property name="visible">True</property>
@@ -682,7 +675,7 @@
                 <property name="valign">center</property>
                 <property name="is_important">True</property>
                 <child>
-                  <object class="GtkFileChooserButton" id="folderchooser">
+                  <object class="GtkFileChooserButton" id="toolbar_folderchooser">
                     <property name="height_request">32</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
@@ -699,7 +692,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolItem" id="toolbutton3">
+              <object class="GtkToolItem" id="toolbar_custom_search">
                 <property name="height_request">32</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -708,7 +701,7 @@
                 <property name="margin_right">12</property>
                 <property name="is_important">True</property>
                 <child>
-                  <object class="GtkEntry" id="search_entry">
+                  <object class="GtkEntry" id="toolbar_search">
                     <property name="height_request">28</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -736,24 +729,24 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolItem" id="toolbutton1">
+              <object class="GtkToolItem" id="toolbar_custom_view">
                 <property name="height_request">32</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="valign">center</property>
                 <child>
-                  <object class="GtkBox" id="box2">
+                  <object class="GtkBox" id="toolbar_view">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
-                      <object class="GtkRadioButton" id="view_list">
+                      <object class="GtkRadioButton" id="toolbar_view_list">
                         <property name="width_request">32</property>
                         <property name="height_request">32</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="receives_default">False</property>
                         <property name="tooltip_text" translatable="yes">Compact List</property>
-                        <property name="image">image24</property>
+                        <property name="image">toolbar_view_list_icon</property>
                         <property name="xalign">0</property>
                         <property name="active">True</property>
                         <property name="draw_indicator">False</property>
@@ -766,18 +759,18 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkRadioButton" id="view_thumbnails">
+                      <object class="GtkRadioButton" id="toolbar_view_thumbnails">
                         <property name="width_request">32</property>
                         <property name="height_request">32</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="receives_default">False</property>
                         <property name="tooltip_text" translatable="yes">Thumbnails</property>
-                        <property name="image">image25</property>
+                        <property name="image">toolbar_view_thumbnails_icon</property>
                         <property name="xalign">0</property>
                         <property name="active">True</property>
                         <property name="draw_indicator">False</property>
-                        <property name="group">view_list</property>
+                        <property name="group">toolbar_view_list</property>
                         <signal name="toggled" handler="on_treeview_thumbnails_toggled" swapped="no"/>
                       </object>
                       <packing>
@@ -798,7 +791,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolItem" id="appmenu_placeholder">
+              <object class="GtkToolItem" id="toolbar_custom_appmenu">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="valign">center</property>
@@ -823,7 +816,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkInfoBar" id="locate_infobar">
+          <object class="GtkInfoBar" id="catfish_window_infobar">
             <property name="app_paintable">True</property>
             <property name="can_focus">False</property>
             <property name="hexpand">True</property>
@@ -862,7 +855,7 @@
                 <property name="can_focus">False</property>
                 <property name="spacing">16</property>
                 <child>
-                  <object class="GtkImage" id="image26">
+                  <object class="GtkImage" id="infobar_icon">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="icon_name">dialog-information</property>
@@ -875,7 +868,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="label19">
+                  <object class="GtkLabel" id="infobar_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label" translatable="yes">The search database is more than 7 days old.  Update now?</property>
@@ -904,20 +897,20 @@
           </packing>
         </child>
         <child>
-          <object class="GtkPaned" id="paned">
+          <object class="GtkPaned" id="catfish_window_paned">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="position">150</property>
             <property name="position_set">True</property>
             <child>
-              <object class="GtkScrolledWindow" id="sidebar">
+              <object class="GtkScrolledWindow" id="catfish_window_sidebar">
                 <property name="width_request">154</property>
                 <property name="app_paintable">True</property>
                 <property name="can_focus">True</property>
                 <property name="no_show_all">True</property>
                 <property name="hscrollbar_policy">never</property>
                 <child>
-                  <object class="GtkViewport" id="viewport1">
+                  <object class="GtkViewport" id="sidebar_viewport">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -927,23 +920,23 @@
                         <property name="margin_left">12</property>
                         <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkFrame" id="frame1">
+                          <object class="GtkFrame" id="sidebar_modified">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="label_xalign">0</property>
                             <property name="shadow_type">none</property>
                             <child>
-                              <object class="GtkAlignment" id="alignment2">
+                              <object class="GtkAlignment" id="sidebar_modified_align">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="left_padding">6</property>
                                 <child>
-                                  <object class="GtkBox" id="box4">
+                                  <object class="GtkBox" id="sidebar_modified_align_box">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="orientation">vertical</property>
                                     <child>
-                                      <object class="GtkRadioButton" id="radio_time_any">
+                                      <object class="GtkRadioButton" id="sidebar_filter_modified_any">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -957,7 +950,7 @@
                                             <property name="can_focus">False</property>
                                             <property name="spacing">4</property>
                                             <child>
-                                              <object class="GtkImage" id="image9">
+                                              <object class="GtkImage" id="sidebar_filter_modified_any_icon">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
@@ -971,7 +964,7 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkLabel" id="label9">
+                                              <object class="GtkLabel" id="sidebar_filter_modified_any_label">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="xalign">0</property>
@@ -994,7 +987,7 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkRadioButton" id="radio_time_week">
+                                      <object class="GtkRadioButton" id="sidebar_filter_modified_week">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -1002,14 +995,14 @@
                                         <property name="xalign">0</property>
                                         <property name="active">True</property>
                                         <property name="draw_indicator">False</property>
-                                        <property name="group">radio_time_any</property>
+                                        <property name="group">sidebar_filter_modified_any</property>
                                         <child>
                                           <object class="GtkBox" id="box15">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="spacing">4</property>
                                             <child>
-                                              <object class="GtkImage" id="image10">
+                                              <object class="GtkImage" id="sidebar_filter_modified_week_icon">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
@@ -1023,7 +1016,7 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkLabel" id="label10">
+                                              <object class="GtkLabel" id="sidebar_filter_modified_week_label">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="xalign">0</property>
@@ -1050,7 +1043,7 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <child>
-                                          <object class="GtkRadioButton" id="radio_time_custom">
+                                          <object class="GtkRadioButton" id="sidebar_filter_custom_date">
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
@@ -1058,7 +1051,7 @@
                                             <property name="xalign">0</property>
                                             <property name="active">True</property>
                                             <property name="draw_indicator">False</property>
-                                            <property name="group">radio_time_any</property>
+                                            <property name="group">sidebar_filter_modified_any</property>
                                             <signal name="toggled" handler="on_radio_time_custom_toggled" swapped="no"/>
                                             <child>
                                               <object class="GtkBox" id="box16">
@@ -1066,7 +1059,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="spacing">4</property>
                                                 <child>
-                                                  <object class="GtkImage" id="image11">
+                                                  <object class="GtkImage" id="sidebar_filter_custom_date_icon">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
                                                     <property name="pixel_size">16</property>
@@ -1080,7 +1073,7 @@
                                                   </packing>
                                                 </child>
                                                 <child>
-                                                  <object class="GtkLabel" id="label11">
+                                                  <object class="GtkLabel" id="sidebar_filter_custom_date_label">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
                                                     <property name="xalign">0</property>
@@ -1103,7 +1096,7 @@
                                           </packing>
                                         </child>
                                         <child>
-                                          <object class="GtkButton" id="button_time_custom">
+                                          <object class="GtkButton" id="sidebar_filter_custom_date_options">
                                             <property name="visible">True</property>
                                             <property name="sensitive">False</property>
                                             <property name="can_focus">True</property>
@@ -1111,7 +1104,7 @@
                                             <property name="relief">none</property>
                                             <signal name="clicked" handler="on_button_time_custom_clicked" swapped="no"/>
                                             <child>
-                                              <object class="GtkImage" id="image8">
+                                              <object class="GtkImage" id="sidebar_filter_custom_date_options_icon">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
@@ -1138,7 +1131,7 @@
                               </object>
                             </child>
                             <child type="label">
-                              <object class="GtkLabel" id="label1">
+                              <object class="GtkLabel" id="sidebar_modified_label">
                                 <property name="height_request">32</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
@@ -1154,23 +1147,23 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkFrame" id="frame2">
+                          <object class="GtkFrame" id="sidebar_filetype">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="label_xalign">0</property>
                             <property name="shadow_type">none</property>
                             <child>
-                              <object class="GtkAlignment" id="alignment3">
+                              <object class="GtkAlignment" id="sidebar_filetype_align">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="left_padding">6</property>
                                 <child>
-                                  <object class="GtkBox" id="box5">
+                                  <object class="GtkBox" id="sidebar_filetype_align_box">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="orientation">vertical</property>
                                     <child>
-                                      <object class="GtkToggleButton" id="togglebutton1">
+                                      <object class="GtkToggleButton" id="sidebar_filter_documents">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
@@ -1182,7 +1175,7 @@
                                             <property name="can_focus">False</property>
                                             <property name="spacing">4</property>
                                             <child>
-                                              <object class="GtkImage" id="image1">
+                                              <object class="GtkImage" id="sidebar_filter_documents_icon">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
@@ -1196,7 +1189,7 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkLabel" id="label3">
+                                              <object class="GtkLabel" id="sidebar_filter_documents_label">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Documents</property>
@@ -1218,7 +1211,7 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkToggleButton" id="togglebutton7">
+                                      <object class="GtkToggleButton" id="sidebar_filter_folders">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <property name="receives_default">True</property>
@@ -1230,7 +1223,7 @@
                                             <property name="can_focus">False</property>
                                             <property name="spacing">4</property>
                                             <child>
-                                              <object class="GtkImage" id="image19">
+                                              <object class="GtkImage" id="sidebar_filter_folders_icon">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
@@ -1244,7 +1237,7 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkLabel" id="label18">
+                                              <object class="GtkLabel" id="sidebar_filter_folders_label">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Folders</property>
@@ -1266,7 +1259,7 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkToggleButton" id="togglebutton2">
+                                      <object class="GtkToggleButton" id="sidebar_filter_images">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
@@ -1278,7 +1271,7 @@
                                             <property name="can_focus">False</property>
                                             <property name="spacing">4</property>
                                             <child>
-                                              <object class="GtkImage" id="image3">
+                                              <object class="GtkImage" id="sidebar_filter_images_icon">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
@@ -1292,7 +1285,7 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkLabel" id="label4">
+                                              <object class="GtkLabel" id="sidebar_filter_images_label">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Images</property>
@@ -1314,7 +1307,7 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkToggleButton" id="togglebutton3">
+                                      <object class="GtkToggleButton" id="sidebar_filter_music">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
@@ -1326,7 +1319,7 @@
                                             <property name="can_focus">False</property>
                                             <property name="spacing">4</property>
                                             <child>
-                                              <object class="GtkImage" id="image4">
+                                              <object class="GtkImage" id="sidebar_filter_music_icon">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
@@ -1340,7 +1333,7 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkLabel" id="label5">
+                                              <object class="GtkLabel" id="sidebar_filter_music_label">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Music</property>
@@ -1362,7 +1355,7 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkToggleButton" id="togglebutton4">
+                                      <object class="GtkToggleButton" id="sidebar_filter_videos">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
@@ -1374,7 +1367,7 @@
                                             <property name="can_focus">False</property>
                                             <property name="spacing">4</property>
                                             <child>
-                                              <object class="GtkImage" id="image5">
+                                              <object class="GtkImage" id="sidebar_filter_videos_icon">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
@@ -1388,7 +1381,7 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkLabel" id="label6">
+                                              <object class="GtkLabel" id="sidebar_filter_videos_label">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Videos</property>
@@ -1410,7 +1403,7 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkToggleButton" id="togglebutton5">
+                                      <object class="GtkToggleButton" id="sidebar_filter_applications">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
@@ -1422,7 +1415,7 @@
                                             <property name="can_focus">False</property>
                                             <property name="spacing">4</property>
                                             <child>
-                                              <object class="GtkImage" id="image6">
+                                              <object class="GtkImage" id="sidebar_filter_applications_icon">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
@@ -1436,7 +1429,7 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkLabel" id="label7">
+                                              <object class="GtkLabel" id="sidebar_filter_applications_label">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="label" translatable="yes">Applications</property>
@@ -1462,7 +1455,7 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <child>
-                                          <object class="GtkToggleButton" id="togglebutton6">
+                                          <object class="GtkToggleButton" id="sidebar_filter_custom_filetype">
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">True</property>
@@ -1474,7 +1467,7 @@
                                                 <property name="can_focus">False</property>
                                                 <property name="spacing">4</property>
                                                 <child>
-                                                  <object class="GtkImage" id="image7">
+                                                  <object class="GtkImage" id="sidebar_filter_custom_filetype_icon">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
                                                     <property name="pixel_size">16</property>
@@ -1488,7 +1481,7 @@
                                                   </packing>
                                                 </child>
                                                 <child>
-                                                  <object class="GtkLabel" id="label8">
+                                                  <object class="GtkLabel" id="sidebar_filter_custom_filetype_label">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
                                                     <property name="label" translatable="yes">Other</property>
@@ -1510,7 +1503,7 @@
                                           </packing>
                                         </child>
                                         <child>
-                                          <object class="GtkButton" id="button_format_custom">
+                                          <object class="GtkButton" id="sidebar_filter_custom_options">
                                             <property name="visible">True</property>
                                             <property name="sensitive">False</property>
                                             <property name="can_focus">True</property>
@@ -1518,7 +1511,7 @@
                                             <property name="relief">none</property>
                                             <signal name="clicked" handler="on_button_format_custom_clicked" swapped="no"/>
                                             <child>
-                                              <object class="GtkImage" id="image12">
+                                              <object class="GtkImage" id="sidebar_filter_custom_options_icon">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="pixel_size">16</property>
@@ -1545,7 +1538,7 @@
                               </object>
                             </child>
                             <child type="label">
-                              <object class="GtkLabel" id="label2">
+                              <object class="GtkLabel" id="sidebar_filetype_label">
                                 <property name="height_request">32</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
@@ -1577,11 +1570,11 @@
               </packing>
             </child>
             <child>
-              <object class="GtkBox" id="box28">
+              <object class="GtkBox" id="catfish_window_results">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
-                  <object class="GtkSeparator" id="separator1">
+                  <object class="GtkSeparator" id="catfish_window_paned_separator">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
@@ -1593,7 +1586,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkScrolledWindow" id="scrolledwindow2">
+                  <object class="GtkScrolledWindow" id="results_scrolledwindow">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
@@ -1601,10 +1594,10 @@
                     <property name="min_content_width">400</property>
                     <property name="min_content_height">300</property>
                     <child>
-                      <object class="GtkTreeView" id="treeview">
+                      <object class="GtkTreeView" id="results_treeview">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="model">liststore1</property>
+                        <property name="model">results_liststore</property>
                         <property name="reorderable">True</property>
                         <property name="rules_hint">True</property>
                         <property name="rubber_banding">True</property>
@@ -1614,7 +1607,7 @@
                         <signal name="drag-data-get" handler="on_treeview_drag_data_get" swapped="no"/>
                         <signal name="row-activated" handler="on_treeview_row_activated" swapped="no"/>
                         <child internal-child="selection">
-                          <object class="GtkTreeSelection" id="treeview-selection1"/>
+                          <object class="GtkTreeSelection" id="results_treeview_selection"/>
                         </child>
                       </object>
                     </child>
@@ -1644,7 +1637,14 @@
       </object>
     </child>
   </object>
-  <object class="GtkDialog" id="update_index_dialog">
+  <object class="GtkImage" id="update_unlock_icon">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">22</property>
+    <property name="icon_name">dialog-password</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkDialog" id="update_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Update Search Database</property>
@@ -1666,7 +1666,7 @@
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton" id="update_index_close">
+              <object class="GtkButton" id="update_close">
                 <property name="label">gtk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -1681,7 +1681,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="update_index_unlock">
+              <object class="GtkButton" id="update_unlock">
                 <property name="label" translatable="yes">Unlock</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -1689,7 +1689,7 @@
                 <property name="can_default">True</property>
                 <property name="has_default">True</property>
                 <property name="receives_default">True</property>
-                <property name="image">image18</property>
+                <property name="image">update_unlock_icon</property>
                 <signal name="clicked" handler="on_update_index_unlock_clicked" swapped="no"/>
               </object>
               <packing>
@@ -1715,7 +1715,7 @@
             <property name="row_spacing">6</property>
             <property name="column_spacing">12</property>
             <child>
-              <object class="GtkImage" id="image17">
+              <object class="GtkImage" id="update_dialog_icon">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="icon_name">dialog-password</property>
@@ -1729,7 +1729,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label12">
+              <object class="GtkLabel" id="update_dialog_database_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_top">24</property>
@@ -1743,7 +1743,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label17">
+              <object class="GtkLabel" id="update_dialog_modified_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
@@ -1756,7 +1756,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label20">
+              <object class="GtkLabel" id="update_dialog_primary_text">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
@@ -1769,7 +1769,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label21">
+              <object class="GtkLabel" id="update_dialog_secondary_text">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_top">6</property>
@@ -1783,7 +1783,7 @@ This action requires administrative rights.</property>
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="database_label">
+              <object class="GtkLabel" id="update_dialog_database_details_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_top">24</property>
@@ -1798,7 +1798,7 @@ This action requires administrative rights.</property>
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="updated_label">
+              <object class="GtkLabel" id="update_dialog_modified_details_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
@@ -1810,7 +1810,7 @@ This action requires administrative rights.</property>
               </packing>
             </child>
             <child>
-              <object class="GtkInfoBar" id="update_status">
+              <object class="GtkInfoBar" id="update_dialog_infobar">
                 <property name="app_paintable">True</property>
                 <property name="can_focus">False</property>
                 <child internal-child="action_area">
@@ -1833,7 +1833,7 @@ This action requires administrative rights.</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">16</property>
                     <child>
-                      <object class="GtkImage" id="update_status_icon">
+                      <object class="GtkImage" id="update_dialog_infobar_icon">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="icon_name">dialog-information</property>
@@ -1846,7 +1846,7 @@ This action requires administrative rights.</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel" id="update_status_label">
+                      <object class="GtkLabel" id="update_dialog_infobar_label">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label">label</property>
@@ -1881,8 +1881,8 @@ This action requires administrative rights.</property>
       </object>
     </child>
     <action-widgets>
-      <action-widget response="0">update_index_close</action-widget>
-      <action-widget response="0">update_index_unlock</action-widget>
+      <action-widget response="0">update_close</action-widget>
+      <action-widget response="0">update_unlock</action-widget>
     </action-widgets>
   </object>
 </interface>
