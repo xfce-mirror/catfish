@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-21 17:26-0400\n"
-"PO-Revision-Date: 2014-02-15 14:42+0000\n"
+"PO-Revision-Date: 2014-12-07 19:47+0000\n"
 "Last-Translator: Rodion R. <rodikr2005@yandex.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-05 06:17+0000\n"
+"X-Launchpad-Export-Date: 2014-12-08 06:34+0000\n"
 "X-Generator: Launchpad (build 17274)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:522
@@ -128,11 +128,11 @@ msgstr "Миниатюры"
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Update"
-msgstr ""
+msgstr "Обновить"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr ""
+msgstr "Поисковая база данных старше 7 дней. Обновить?"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Any time"
@@ -184,7 +184,7 @@ msgstr "<b>Тип файла</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Update Search Database"
-msgstr ""
+msgstr "Обновить поисковую базу данных"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Unlock"
@@ -192,21 +192,23 @@ msgstr "Разблокировать"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "<b>Database:</b>"
-msgstr ""
+msgstr "<b>База данных:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "<b>Updated:</b>"
-msgstr ""
+msgstr "<b>Обновлено:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>Обновление поисковой базы данных</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"Для ускорения результатов, поисковая база данных должна быть обновлена.\n"
+"Действие требует прав администратора."
 
 #: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
@@ -255,11 +257,11 @@ msgstr "%s (неверная кодировка)"
 
 #: ../catfish/CatfishWindow.py:232
 msgid "Never"
-msgstr ""
+msgstr "Никогда"
 
 #: ../catfish/CatfishWindow.py:493
 msgid "An error occurred while updating the database."
-msgstr ""
+msgstr "Ошибка при обновлении базы данных."
 
 #: ../catfish/CatfishWindow.py:495
 msgid "Authentication failed."
@@ -271,16 +273,16 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:507
 msgid "Search database updated successfully."
-msgstr ""
+msgstr "Поисковая база данных успешно обновлена."
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:575
 msgid "Updating..."
-msgstr ""
+msgstr "Обновление..."
 
 #: ../catfish/CatfishWindow.py:602
 msgid "Enter search terms and press Enter to begin."
-msgstr ""
+msgstr "Введите условия поиска и нажмите Enter, чтобы начать."
 
 #: ../catfish/CatfishWindow.py:607
 msgid "Stop Search"
@@ -291,10 +293,12 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
+"Поиск...\n"
+"Нажмите «Отмена» или клавишу Escape, чтобы остановить процесс."
 
 #: ../catfish/CatfishWindow.py:616
 msgid "Begin Search"
-msgstr ""
+msgstr "Начать поиск"
 
 #: ../catfish/CatfishWindow.py:989
 #, python-format
@@ -403,30 +407,32 @@ msgstr "Результаты поиска «%s»"
 
 #: ../catfish_lib/SudoDialog.py:120
 msgid "Password Required"
-msgstr ""
+msgstr "Требуется пароль"
 
 #: ../catfish_lib/SudoDialog.py:157
 msgid "Incorrect password... try again."
-msgstr ""
+msgstr "Неверный пароль... Попробуйте ещё раз."
 
 #: ../catfish_lib/SudoDialog.py:167
 msgid "Password:"
-msgstr ""
+msgstr "Пароль:"
 
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:178
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: ../catfish_lib/SudoDialog.py:181
 msgid "OK"
-msgstr ""
+msgstr "ОК"
 
 #: ../catfish_lib/SudoDialog.py:202
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
+"Введите ваш пароль для выполнения\n"
+"административных задач."
 
 #: ../catfish_lib/SudoDialog.py:204
 #, python-format
@@ -434,10 +440,12 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
+"Приложение '%s' позволяет вам\n"
+"изменять важные части системы."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr ""
+msgstr "Гибкий инструмент поиска файлов"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:2
 msgid ""
@@ -447,16 +455,24 @@ msgid ""
 "date, file type, and file contents, users will no longer be dependent on the "
 "file manager or organization skills."
 msgstr ""
+"Catfish — это небольшая, быстрая и мощная программа поиска файлов. "
+"Минималистичный интерфейс, заточенный на результат, помогает пользователям "
+"находить нужные файлы. С такими мощными фильтрами, как: дата изменения, тип "
+"и содержимое файла пользователь более не зависит от файлового менеджера и "
+"организационных навыков."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
+"Этот релиз исправляет пару новых ошибок и включает обновлённый перевод."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
+"Этот релиз исправляет регрессию с невозможностью запуска приложения на "
+"некоторых системах."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
