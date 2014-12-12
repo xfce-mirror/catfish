@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-21 17:26-0400\n"
-"PO-Revision-Date: 2014-10-10 14:29+0000\n"
-"Last-Translator: Tobias Bannert <Unknown>\n"
+"PO-Revision-Date: 2014-12-11 10:02+0000\n"
+"Last-Translator: UweS <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-05 06:17+0000\n"
-"X-Generator: Launchpad (build 17274)\n"
+"X-Launchpad-Export-Date: 2014-12-12 06:30+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:522
 msgid "Catfish File Search"
@@ -67,7 +67,7 @@ msgstr "_Exakter Treffer"
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "_Hidden Files"
-msgstr "_Versteckte Dateien"
+msgstr "_Verborgene Dateien"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:15
@@ -86,7 +86,7 @@ msgstr "_Suchindex aktualisieren …"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "_About"
-msgstr "_Über"
+msgstr "_Info"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "_Open"
@@ -236,7 +236,7 @@ msgstr "Exakte Suche"
 
 #: ../catfish/__init__.py:52
 msgid "Include hidden files"
-msgstr "Versteckte Dateien einbeziehen"
+msgstr "Verborgene Dateien einbeziehen"
 
 #: ../catfish/__init__.py:54
 msgid "Perform fulltext search"
