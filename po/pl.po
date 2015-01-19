@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search 1.0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-21 17:26-0400\n"
-"PO-Revision-Date: 2015-01-03 17:27+0000\n"
+"PO-Revision-Date: 2015-01-18 12:38+0000\n"
 "Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: polski <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-04 06:23+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-01-19 06:08+0000\n"
+"X-Generator: Launchpad (build 17304)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:522
 msgid "Catfish File Search"
@@ -207,10 +207,13 @@ msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"Celem uzyskania szybszych wyników wyszukiwania należy odświeżyć bazę danych "
+"wyszukiwania.\n"
+"To działanie wymaga uprawnień administratora."
 
 #: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
-msgstr ""
+msgstr "Użycie: %prog [opcje] ścieżka zapytanie"
 
 #: ../catfish/__init__.py:39
 msgid "Show debug messages (-vv debugs catfish_lib also)"
@@ -247,6 +250,8 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
+"Jeśli podano ścieżkę i zapytanie, wyszukiwanie rozpoczyna się gdy program "
+"jest wyświetlony."
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -454,13 +459,15 @@ msgstr ""
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid "This release fixes two new bugs and includes updated translations."
-msgstr ""
+msgstr "To wydanie poprawia dwa nowe błędy i zawiera aktualizację tłumaczeń."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
+"To wydanie naprawia regresję, w wyniku której na niektórych systemach "
+"program nie był w stanie się uruchomić."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
