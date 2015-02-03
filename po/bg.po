@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-21 17:26-0400\n"
-"PO-Revision-Date: 2013-11-28 13:45+0000\n"
-"Last-Translator: Atanas Kovachki <Unknown>\n"
+"PO-Revision-Date: 2015-02-02 11:04+0000\n"
+"Last-Translator: cybercop <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-05 06:16+0000\n"
-"X-Generator: Launchpad (build 17274)\n"
+"X-Launchpad-Export-Date: 2015-02-03 07:51+0000\n"
+"X-Generator: Launchpad (build 17330)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:522
 msgid "Catfish File Search"
@@ -52,7 +52,7 @@ msgstr "Изберете вида на файла"
 #. The "mimetype" is the file type of the file, such as "application/octet-stream"
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "Select existing mimetype"
-msgstr ""
+msgstr "Изберете съществуващ MIME тип"
 
 #. Enter "file extensions" such as .doc, .pdf
 #: ../data/ui/CatfishWindow.ui.h:9
@@ -77,7 +77,7 @@ msgstr "_Полнотекстно търсене"
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "_Show Advanced Settings"
-msgstr "Покажи _расширените настройки"
+msgstr "Покажи _разширените настройки"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:19
@@ -86,11 +86,11 @@ msgstr "Обнови _индекса за търсене…"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "_About"
-msgstr ""
+msgstr "Относно"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "_Open"
-msgstr ""
+msgstr "_Отвори"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:23
@@ -104,11 +104,11 @@ msgstr "_Копирай местоположението"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "_Save as..."
-msgstr ""
+msgstr "_Запази като..."
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "_Delete"
-msgstr ""
+msgstr "_Изтриване"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "Catfish"
