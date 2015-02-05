@@ -2,26 +2,26 @@
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the catfish-search package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
-# Саша Петровић <salepetronije@gmail.com>, 2014.
+# Саша Петровић <salepetronije@gmail.com>, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-21 17:26-0400\n"
-"PO-Revision-Date: 2014-10-29 22:59+0000\n"
+"PO-Revision-Date: 2015-02-04 14:33+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
-"Language-Team: српски <српски <xfce-i18n@xfce.org>>\n"
+"Language-Team: српски <xfce4@xfce4.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-05 06:17+0000\n"
-"X-Generator: Launchpad (build 17274)\n"
+"X-Launchpad-Export-Date: 2015-02-05 06:22+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
 "Language: sr\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:522
 msgid "Catfish File Search"
-msgstr "Сом (Catfish) претрага датотека"
+msgstr "Сом претрага датотека (Catfish)"
 
 #: ../catfish.desktop.in.h:2
 msgid "Search the file system"
@@ -134,7 +134,7 @@ msgstr "Освежи"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr ""
+msgstr "Складиште података претраге је старије од 7 дана.  Освежити га сада?"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Any time"
@@ -186,7 +186,7 @@ msgstr "<b>Врста датотеке</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Update Search Database"
-msgstr ""
+msgstr "Освежи складиште података претраге"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Unlock"
@@ -194,25 +194,27 @@ msgstr "Откључај"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "<b>Database:</b>"
-msgstr ""
+msgstr "<b>Складиште података:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "<b>Updated:</b>"
-msgstr ""
+msgstr "<b>Освежено:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>Освежи складиште података претраге</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"Потребно је освежити складиште података претраге ради брже претраге.\n"
+"Ова радња захтева корена овлашћења."
 
 #: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
-msgstr ""
+msgstr "Употреба: %prog [могућности] путања упита"
 
 #: ../catfish/__init__.py:39
 msgid "Show debug messages (-vv debugs catfish_lib also)"
@@ -247,6 +249,7 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
+"Ако су путања и упит достављени, покрени претрагу пошто се прикаже програм."
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -261,19 +264,19 @@ msgstr "Никад"
 
 #: ../catfish/CatfishWindow.py:493
 msgid "An error occurred while updating the database."
-msgstr ""
+msgstr "Десила се грешка приликом освежавања складишта података."
 
 #: ../catfish/CatfishWindow.py:495
 msgid "Authentication failed."
-msgstr "Потврђивање идентитета није успело."
+msgstr "Потврда овлашћења није успела."
 
 #: ../catfish/CatfishWindow.py:501
 msgid "Authentication cancelled."
-msgstr ""
+msgstr "Потврда овлашћења је отказана."
 
 #: ../catfish/CatfishWindow.py:507
 msgid "Search database updated successfully."
-msgstr ""
+msgstr "Складиште претраге је успешно освежено."
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:575
@@ -282,7 +285,7 @@ msgstr "Освежавам..."
 
 #: ../catfish/CatfishWindow.py:602
 msgid "Enter search terms and press Enter to begin."
-msgstr ""
+msgstr "Унесите изразе претраге и притисните Унеси за почетак."
 
 #: ../catfish/CatfishWindow.py:607
 msgid "Stop Search"
@@ -293,10 +296,12 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
+"Претрага је у току...\n"
+"Притисните дугме откажи или Излаз за заустављање."
 
 #: ../catfish/CatfishWindow.py:616
 msgid "Begin Search"
-msgstr ""
+msgstr "Почни претрагу"
 
 #: ../catfish/CatfishWindow.py:989
 #, python-format
@@ -443,7 +448,7 @@ msgstr ""
 
 #: ../data/appdata/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr ""
+msgstr "Свестрани прибор за претрагу датотека"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:2
 msgid ""
@@ -453,16 +458,23 @@ msgid ""
 "date, file type, and file contents, users will no longer be dependent on the "
 "file manager or organization skills."
 msgstr ""
+"Сом је мали, брз и моћан прибор за претрагу датотека. Будући да има мало "
+"сучеље са нагласком на излазе претраге, помаже корисницима да пронађу "
+"датотеке без помоћи управника датотека. Са његовим моћним пропусницима као "
+"што су време измене, врста датотека и садржај датотека, корисници неће више "
+"зависити од уређивачких вештина управника датотека."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid "This release fixes two new bugs and includes updated translations."
-msgstr ""
+msgstr "Ово издање решава две нове бубе и укључује у себи освежене преводе."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
+"Ово издање решава губитак старих могућности, где програм није могао да се "
+"покрене на неким системима."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
@@ -470,24 +482,33 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
+"Ово издање решава губитак старих могућности вишеструких услова претраге. "
+"Трака обавештења се сада приказује када складиште података застари, а прозор "
+"који се користи за освежавање складишта података је побољшан."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:6
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
+"Ово издање исправља две појаве у којима се locate не извршава како треба, и "
+"побољшава баратање недостајућим знаковним иконицама."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
+"У овом стабилном издању је побољшана поузданост прозорчета лозинке, учишћен "
+"вишак кода, и исправљене могуће потешкоће са списком и избором ставки."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:8
 msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
 msgstr ""
+"У овом издању су исправљене могући безбедносни пропусти са самопокретањем "
+"програма и губитак старих могућности избора више ставки."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:9
 msgid ""
@@ -497,6 +518,11 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"У овом издању низа 1.0.x је представљено ново сучеље и исправљен одређени "
+"број упорних старих грешака. Побољшано је управљање подразумеваним "
+"овлашћењима које је отклонило појаву упозорења при прављењу дистрибуција. "
+"Приступачност је побољшана, свим нискама је омогућен превод и пречице "
+"дугмади су побољшане."
 
 #~ msgid "Last modified"
 #~ msgstr "Последња измена"
