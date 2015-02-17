@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-21 17:26-0400\n"
-"PO-Revision-Date: 2015-02-02 11:04+0000\n"
+"PO-Revision-Date: 2015-02-16 20:16+0000\n"
 "Last-Translator: cybercop <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-03 07:51+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-02-17 06:18+0000\n"
+"X-Generator: Launchpad (build 17341)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:522
 msgid "Catfish File Search"
@@ -62,7 +62,7 @@ msgstr "Въведете разширението на файла"
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "_Exact Match"
-msgstr "_Точно совпадение"
+msgstr "_Точно съвпадение"
 
 #. This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About
 #: ../data/ui/CatfishWindow.ui.h:13
@@ -120,19 +120,20 @@ msgstr "Избери директория"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "Compact List"
-msgstr ""
+msgstr "Компактен списък"
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Thumbnails"
-msgstr ""
+msgstr "Миниатюри"
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Update"
-msgstr ""
+msgstr "Обновяване"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
+"Базата за търсене не е актуализирана повече от 7 дни. Актуализиране сега ?"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Any time"
@@ -144,7 +145,7 @@ msgstr "Тази седмица"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Custom"
-msgstr "Персонализиран"
+msgstr "Потребителски"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "<b>Modified</b>"
@@ -184,11 +185,11 @@ msgstr "<b>Вид на файла</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Update Search Database"
-msgstr ""
+msgstr "Актуализиране на базата от данни"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Unlock"
-msgstr "Отключи"
+msgstr "Отключване"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "<b>Database:</b>"
@@ -196,7 +197,7 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "<b>Updated:</b>"
-msgstr ""
+msgstr "<b>Обновена:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "<big><b>Update Search Database</b></big>"
@@ -207,6 +208,8 @@ msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"За по- бързо търсене е необходимо да бъде актуализирана базата с данни.\n"
+"Това действие изисква администраторски права."
 
 #: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
@@ -222,11 +225,11 @@ msgstr "Използвай големи икони"
 
 #: ../catfish/__init__.py:44
 msgid "Use thumbnails"
-msgstr ""
+msgstr "Използвай умалени изображения"
 
 #: ../catfish/__init__.py:46
 msgid "Display time in ISO format"
-msgstr ""
+msgstr "Покажи времето в ISO формат"
 
 #: ../catfish/__init__.py:50
 msgid "Perform exact match"
@@ -276,25 +279,27 @@ msgstr ""
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:575
 msgid "Updating..."
-msgstr ""
+msgstr "Актуализиране…"
 
 #: ../catfish/CatfishWindow.py:602
 msgid "Enter search terms and press Enter to begin."
-msgstr ""
+msgstr "Въведете търсеният израз и натиснете Enter за стартиране"
 
 #: ../catfish/CatfishWindow.py:607
 msgid "Stop Search"
-msgstr ""
+msgstr "Спиране на търсенето"
 
 #: ../catfish/CatfishWindow.py:608
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
+"Извършва се търсене.\n"
+"Натиснете бутона за затваряне или клавиша Escape за да го спрете."
 
 #: ../catfish/CatfishWindow.py:616
 msgid "Begin Search"
-msgstr ""
+msgstr "Започни търсене"
 
 #: ../catfish/CatfishWindow.py:989
 #, python-format
@@ -322,6 +327,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
+"Сигурен ли сте, че искате да\n"
+"изтрите завинаги \"%s\"?"
 
 #: ../catfish/CatfishWindow.py:1109
 #, python-format
@@ -412,17 +419,19 @@ msgstr ""
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:178
 msgid "Cancel"
-msgstr ""
+msgstr "Отказ"
 
 #: ../catfish_lib/SudoDialog.py:181
 msgid "OK"
-msgstr ""
+msgstr "ОК"
 
 #: ../catfish_lib/SudoDialog.py:202
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
+"Въведете Вашата парола за да\n"
+"извършите действието с администраторски права"
 
 #: ../catfish_lib/SudoDialog.py:204
 #, python-format
