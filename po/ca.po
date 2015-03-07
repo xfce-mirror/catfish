@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-21 17:26-0400\n"
-"PO-Revision-Date: 2014-07-15 00:01+0000\n"
-"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
+"PO-Revision-Date: 2015-03-06 13:13+0000\n"
+"Last-Translator: Emilio <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-05 06:17+0000\n"
-"X-Generator: Launchpad (build 17274)\n"
+"X-Launchpad-Export-Date: 2015-03-07 05:37+0000\n"
+"X-Generator: Launchpad (build 17383)\n"
 
 #: ../catfish.desktop.in.h:1 ../catfish/CatfishWindow.py:522
 msgid "Catfish File Search"
@@ -128,7 +128,7 @@ msgstr "Miniatures"
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Update"
-msgstr ""
+msgstr "Actualitzar"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "The search database is more than 7 days old.  Update now?"
@@ -172,7 +172,7 @@ msgstr "Vídeos"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "Applications"
-msgstr "Programari"
+msgstr "Aplicacions"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "Other"
@@ -184,23 +184,23 @@ msgstr "<b>Tipus de fitxer</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Update Search Database"
-msgstr ""
+msgstr "Actualitza la base de dades de recerca"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Unlock"
-msgstr "Desbloca-ho"
+msgstr "Desbloqueja"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "<b>Database:</b>"
-msgstr ""
+msgstr "<b>Base de dades:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "<b>Updated:</b>"
-msgstr ""
+msgstr "<b>Actualitzat</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>Actulitza la Base de Dades de Recerca</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid ""
