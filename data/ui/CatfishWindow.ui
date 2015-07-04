@@ -1,96 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.18.3 -->
 <interface>
-  <requires lib="gtk+" version="3.6"/>
+  <requires lib="gtk+" version="3.12"/>
   <requires lib="catfish_window" version="1.0"/>
   <!-- interface-local-resource-path ../media -->
-  <object class="GtkImage" id="application_menu_about_icon">
+  <object class="GtkListBox" id="application_menu">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">help-about-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="application_menu_update_icon">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">view-refresh-symbolic</property>
-    <property name="use_fallback">True</property>
-    <property name="icon_size">1</property>
-  </object>
-  <object class="GtkMenu" id="application_menu">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
+    <property name="selection_mode">none</property>
     <child>
-      <object class="GtkCheckMenuItem" id="application_menu_exact">
+      <object class="GtkListBoxRow" id="listboxrow1">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Exact Match</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
+        <property name="can_focus">True</property>
+        <child>
+          <object class="GtkBox" id="toolbar_view">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <child>
+              <object class="GtkRadioButton" id="toolbar_view_list">
+                <property name="width_request">32</property>
+                <property name="height_request">32</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="tooltip_text" translatable="yes">Compact List</property>
+                <property name="image">toolbar_view_list_icon</property>
+                <property name="xalign">0.5</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">False</property>
+                <signal name="toggled" handler="on_treeview_list_toggled" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkRadioButton" id="toolbar_view_thumbnails">
+                <property name="width_request">32</property>
+                <property name="height_request">32</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="tooltip_text" translatable="yes">Thumbnails</property>
+                <property name="image">toolbar_view_thumbnails_icon</property>
+                <property name="xalign">0.5</property>
+                <property name="draw_indicator">False</property>
+                <property name="group">toolbar_view_list</property>
+                <signal name="toggled" handler="on_treeview_thumbnails_toggled" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <style>
+              <class name="linked"/>
+            </style>
+          </object>
+        </child>
       </object>
     </child>
     <child>
-      <object class="GtkCheckMenuItem" id="application_menu_hidden">
+      <object class="GtkListBoxRow" id="listboxrow2">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Hidden Files</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
+        <property name="can_focus">True</property>
+        <child>
+          <object class="GtkCheckButton" id="application_menu_hidden">
+            <property name="label" translatable="yes">Show _Hidden Files</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="use_underline">True</property>
+            <property name="xalign">0</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
+          </object>
+        </child>
       </object>
     </child>
     <child>
-      <object class="GtkCheckMenuItem" id="application_menu_fulltext">
+      <object class="GtkListBoxRow" id="listboxrow3">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Fulltext Search</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
+        <property name="can_focus">True</property>
+        <child>
+          <object class="GtkCheckButton" id="application_menu_fulltext">
+            <property name="label" translatable="yes">Search File _Contents</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="use_underline">True</property>
+            <property name="xalign">0</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
+          </object>
+        </child>
       </object>
     </child>
     <child>
-      <object class="GtkSeparatorMenuItem" id="application_menu_sep1">
+      <object class="GtkListBoxRow" id="listboxrow4">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can_focus">True</property>
+        <child>
+          <object class="GtkCheckButton" id="application_menu_exact">
+            <property name="label" translatable="yes">_Exact Match</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="use_underline">True</property>
+            <property name="xalign">0</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
+          </object>
+        </child>
       </object>
     </child>
     <child>
-      <object class="GtkCheckMenuItem" id="application_menu_advanced">
+      <object class="GtkListBoxRow" id="listboxrow5">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Show Advanced Settings</property>
-        <property name="use_underline">True</property>
-        <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
-        <accelerator key="F9" signal="activate"/>
+        <property name="can_focus">True</property>
+        <child>
+          <object class="GtkCheckButton" id="application_menu_advanced">
+            <property name="label" translatable="yes">Show _Sidebar</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="use_underline">True</property>
+            <property name="xalign">0</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
+          </object>
+        </child>
       </object>
     </child>
     <child>
-      <object class="GtkSeparatorMenuItem" id="application_menu_sep2">
+      <object class="GtkListBoxRow" id="listboxrow6">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkImageMenuItem" id="application_menu_update">
-        <property name="label" translatable="yes" comments="This menu contains the menu items: _Exact Match, _Hidden Files, _Fulltext Search, _Show Advanced Settings, _Update Search Index, _About">_Update Search Index…</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">application_menu_update_icon</property>
-        <property name="use_stock">False</property>
+        <property name="can_focus">True</property>
+        <property name="selectable">False</property>
         <signal name="activate" handler="on_menu_update_index_activate" swapped="no"/>
+        <child>
+          <object class="GtkBox" id="box1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkImage" id="image1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="icon_name">view-refresh-symbolic</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_left">5</property>
+                <property name="label" translatable="yes">_Update Search Index…</property>
+                <property name="use_underline">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+        </child>
       </object>
     </child>
     <child>
-      <object class="GtkImageMenuItem" id="application_menu_about">
-        <property name="label" translatable="yes">_About</property>
+      <object class="GtkListBoxRow" id="listboxrow7">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="use_underline">True</property>
-        <property name="image">application_menu_about_icon</property>
-        <property name="use_stock">False</property>
+        <property name="can_focus">True</property>
+        <property name="selectable">False</property>
         <signal name="activate" handler="on_mnu_about_activate" swapped="no"/>
+        <child>
+          <object class="GtkBox" id="box2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkImage" id="image2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="icon_name">help-about-symbolic</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_left">5</property>
+                <property name="label" translatable="yes">_About</property>
+                <property name="use_underline">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+        </child>
       </object>
     </child>
   </object>
@@ -632,20 +756,6 @@
     </action-widgets>
   </object>
   <object class="GtkListStore" id="results_liststore"/>
-  <object class="GtkImage" id="toolbar_view_list_icon">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">view-list-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
-  <object class="GtkImage" id="toolbar_view_thumbnails_icon">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixel_size">16</property>
-    <property name="icon_name">folder-pictures-symbolic</property>
-    <property name="use_fallback">True</property>
-  </object>
   <object class="CatfishWindow" id="catfish_window">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Catfish</property>
@@ -660,161 +770,6 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
-        <child>
-          <object class="GtkToolbar" id="catfish_window_toolbar">
-            <property name="height_request">44</property>
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="show_arrow">False</property>
-            <child>
-              <object class="GtkToolItem" id="toolbar_custom_folderchooser">
-                <property name="width_request">150</property>
-                <property name="height_request">32</property>
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="valign">center</property>
-                <property name="is_important">True</property>
-                <child>
-                  <object class="GtkFileChooserButton" id="toolbar_folderchooser">
-                    <property name="height_request">32</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="action">select-folder</property>
-                    <property name="create_folders">False</property>
-                    <property name="local_only">False</property>
-                    <property name="title" translatable="yes">Select a Directory</property>
-                  </object>
-                </child>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="homogeneous">True</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkToolItem" id="toolbar_custom_search">
-                <property name="height_request">32</property>
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="valign">center</property>
-                <property name="margin_left">6</property>
-                <property name="margin_right">12</property>
-                <property name="is_important">True</property>
-                <child>
-                  <object class="GtkEntry" id="toolbar_search">
-                    <property name="height_request">28</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="has_focus">True</property>
-                    <property name="can_default">True</property>
-                    <property name="has_default">True</property>
-                    <property name="valign">center</property>
-                    <property name="invisible_char">•</property>
-                    <property name="caps_lock_warning">False</property>
-                    <property name="secondary_icon_name">edit-find-symbolic</property>
-                    <property name="primary_icon_activatable">False</property>
-                    <property name="secondary_icon_activatable">False</property>
-                    <property name="primary_icon_sensitive">False</property>
-                    <property name="secondary_icon_sensitive">False</property>
-                    <property name="placeholder_text">Search terms</property>
-                    <signal name="activate" handler="on_search_entry_activate" swapped="no"/>
-                    <signal name="changed" handler="on_search_entry_changed" swapped="no"/>
-                    <signal name="icon-press" handler="on_search_entry_icon_press" swapped="no"/>
-                  </object>
-                </child>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="homogeneous">True</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkToolItem" id="toolbar_custom_view">
-                <property name="height_request">32</property>
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="valign">center</property>
-                <child>
-                  <object class="GtkBox" id="toolbar_view">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <child>
-                      <object class="GtkRadioButton" id="toolbar_view_list">
-                        <property name="width_request">32</property>
-                        <property name="height_request">32</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="receives_default">False</property>
-                        <property name="tooltip_text" translatable="yes">Compact List</property>
-                        <property name="image">toolbar_view_list_icon</property>
-                        <property name="xalign">0</property>
-                        <property name="active">True</property>
-                        <property name="draw_indicator">False</property>
-                        <signal name="toggled" handler="on_treeview_list_toggled" swapped="no"/>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkRadioButton" id="toolbar_view_thumbnails">
-                        <property name="width_request">32</property>
-                        <property name="height_request">32</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="receives_default">False</property>
-                        <property name="tooltip_text" translatable="yes">Thumbnails</property>
-                        <property name="image">toolbar_view_thumbnails_icon</property>
-                        <property name="xalign">0</property>
-                        <property name="active">True</property>
-                        <property name="draw_indicator">False</property>
-                        <property name="group">toolbar_view_list</property>
-                        <signal name="toggled" handler="on_treeview_thumbnails_toggled" swapped="no"/>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
-                    <style>
-                      <class name="linked"/>
-                    </style>
-                  </object>
-                </child>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="homogeneous">False</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkToolItem" id="toolbar_custom_appmenu">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="valign">center</property>
-                <property name="margin_left">6</property>
-                <child>
-                  <placeholder/>
-                </child>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="homogeneous">False</property>
-              </packing>
-            </child>
-            <style>
-              <class name="primary-toolbar"/>
-            </style>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
         <child>
           <object class="GtkInfoBar" id="catfish_window_infobar">
             <property name="app_paintable">True</property>
@@ -967,9 +922,9 @@
                                               <object class="GtkLabel" id="sidebar_filter_modified_any_label">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="xalign">0</property>
                                                 <property name="label" translatable="yes">Any time</property>
                                                 <property name="ellipsize">end</property>
+                                                <property name="xalign">0</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -1019,9 +974,9 @@
                                               <object class="GtkLabel" id="sidebar_filter_modified_week_label">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="xalign">0</property>
                                                 <property name="label" translatable="yes">This week</property>
                                                 <property name="ellipsize">end</property>
+                                                <property name="xalign">0</property>
                                               </object>
                                               <packing>
                                                 <property name="expand">False</property>
@@ -1076,9 +1031,9 @@
                                                   <object class="GtkLabel" id="sidebar_filter_custom_date_label">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
-                                                    <property name="xalign">0</property>
                                                     <property name="label" translatable="yes">Custom</property>
                                                     <property name="ellipsize">end</property>
+                                                    <property name="xalign">0</property>
                                                   </object>
                                                   <packing>
                                                     <property name="expand">False</property>
@@ -1637,6 +1592,48 @@
       </object>
     </child>
   </object>
+  <object class="GtkFileChooserButton" id="toolbar_folderchooser">
+    <property name="height_request">32</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="action">select-folder</property>
+    <property name="create_folders">False</property>
+    <property name="local_only">False</property>
+    <property name="title" translatable="yes">Select a Directory</property>
+  </object>
+  <object class="GtkEntry" id="toolbar_search">
+    <property name="height_request">28</property>
+    <property name="visible">True</property>
+    <property name="can_focus">True</property>
+    <property name="can_default">True</property>
+    <property name="has_default">True</property>
+    <property name="valign">center</property>
+    <property name="invisible_char">•</property>
+    <property name="caps_lock_warning">False</property>
+    <property name="secondary_icon_name">edit-find-symbolic</property>
+    <property name="primary_icon_activatable">False</property>
+    <property name="secondary_icon_activatable">False</property>
+    <property name="primary_icon_sensitive">False</property>
+    <property name="secondary_icon_sensitive">False</property>
+    <property name="placeholder_text">Search for files</property>
+    <signal name="activate" handler="on_search_entry_activate" swapped="no"/>
+    <signal name="changed" handler="on_search_entry_changed" swapped="no"/>
+    <signal name="icon-press" handler="on_search_entry_icon_press" swapped="no"/>
+  </object>
+  <object class="GtkImage" id="toolbar_view_list_icon">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">view-list-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
+  <object class="GtkImage" id="toolbar_view_thumbnails_icon">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixel_size">16</property>
+    <property name="icon_name">folder-pictures-symbolic</property>
+    <property name="use_fallback">True</property>
+  </object>
   <object class="GtkImage" id="update_unlock_icon">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -1733,9 +1730,9 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_top">24</property>
-                <property name="xalign">0</property>
                 <property name="label" translatable="yes">&lt;b&gt;Database:&lt;/b&gt;</property>
                 <property name="use_markup">True</property>
+                <property name="xalign">0</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
@@ -1746,9 +1743,9 @@
               <object class="GtkLabel" id="update_dialog_modified_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="xalign">0</property>
                 <property name="label" translatable="yes">&lt;b&gt;Updated:&lt;/b&gt;</property>
                 <property name="use_markup">True</property>
+                <property name="xalign">0</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
@@ -1759,9 +1756,9 @@
               <object class="GtkLabel" id="update_dialog_primary_text">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="xalign">0</property>
                 <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Update Search Database&lt;/b&gt;&lt;/big&gt;</property>
                 <property name="use_markup">True</property>
+                <property name="xalign">0</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -1773,9 +1770,9 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_top">6</property>
-                <property name="xalign">0</property>
                 <property name="label" translatable="yes">For faster search results, the search database needs to be refreshed.
 This action requires administrative rights.</property>
+                <property name="xalign">0</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -1787,10 +1784,10 @@ This action requires administrative rights.</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_top">24</property>
-                <property name="xalign">0</property>
                 <property name="label">&lt;tt&gt;/var/lib/mlocate/mlocate.db&lt;/tt&gt;</property>
                 <property name="use_markup">True</property>
                 <property name="selectable">True</property>
+                <property name="xalign">0</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -1801,8 +1798,8 @@ This action requires administrative rights.</property>
               <object class="GtkLabel" id="update_dialog_modified_details_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="xalign">0</property>
                 <property name="use_markup">True</property>
+                <property name="xalign">0</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>

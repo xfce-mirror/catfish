@@ -179,6 +179,15 @@ class Window(Gtk.Window):
 
         self.sidebar = builder.get_named_object("window.sidebar")
 
+        self.setup_headerbar()
+
+    def setup_headerbar(self):
+        headerbar = Gtk.HeaderBar.new()
+        headerbar.set_show_close_button(True)
+
+        chooser = self.builder.get_named_object("toolbar.folderchooser")
+        search = self.builder.get_named_object("toolbar.search")
+
         # AppMenu
         button = Gtk.MenuButton()
         button.set_size_request(32, 32)
@@ -186,13 +195,17 @@ class Window(Gtk.Window):
                                              Gtk.IconSize.MENU)
         button.set_image(image)
 
-        popup = builder.get_named_object("menus.application.menu")
-        popup.set_property("halign", Gtk.Align.CENTER)
-        button.set_popup(popup)
+        popover = Gtk.Popover.new(button)
+        appmenu = self.builder.get_named_object("menus.application.menu")
+        popover.add(appmenu)
+        button.set_popover(popover)
 
-        box = builder.get_named_object("menus.application.placeholder")
-        box.add(button)
-        button.show_all()
+        headerbar.pack_start(chooser)
+        headerbar.set_custom_title(search)
+        headerbar.pack_end(button)
+
+        self.set_titlebar(headerbar)
+        headerbar.show_all()
 
     def on_mnu_about_activate(self, widget, data=None):
         """Display the about box for catfish."""
