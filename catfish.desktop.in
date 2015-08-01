@@ -1,5 +1,6 @@
 [Desktop Entry]
 _Name=Catfish File Search
+_GenericName=File search
 _Comment=Search the file system
 Categories=GNOME;Utility;
 Exec=catfish
