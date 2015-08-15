@@ -120,8 +120,6 @@ class CatfishWindow(Window):
 
         self.AboutDialog = AboutCatfishDialog
         
-        
-
         # -- Folder Chooser Combobox -- #
         self.folderchooser = builder.get_named_object("toolbar.folderchooser")
 
@@ -259,17 +257,33 @@ class CatfishWindow(Window):
 
         self.selected_filenames = []
 
-        # Load the symbolic (or fallback) icons.
-        self.reload_symbolic_icons(self.icon_theme, builder)
-
-        # Update the symbolic icons when GTK or icon themes change.
-        self.icon_theme.connect("changed", self.reload_symbolic_icons, builder)
-        self.sidebar.get_style_context().connect("changed",
-                                                 self.reload_symbolic_icons,
-                                                 builder)
-
         self.settings = CatfishSettings.CatfishSettings()
         self.refresh_search_entry()
+        
+        filetype_filters = builder.get_object("filetype_options")
+        filetype_filters.connect("row-activated", self.on_file_filters_changed, builder)
+        
+        modified_filters = builder.get_object("modified_options")
+        modified_filters.connect("row-activated", self.on_modified_filters_changed, builder)
+        
+    def on_file_filters_changed(self, treeview, path, columns, builder):
+        model = treeview.get_model()
+        treeiter = model.get_iter(path)
+        row = model[treeiter]
+        row[3], row[4] = row[4], row[3]
+        if row[2] == 'other': row[5] = row[3]
+        self.set_modified_range(row[2])
+        self.filter_formats[row[2]] = row[3]
+        self.refilter()
+        
+    def on_modified_filters_changed(self, treeview, path, columns, builder):
+        model = treeview.get_model()
+        treeiter = model.get_iter_first()
+        while treeiter:
+            row = model[treeiter]
+            row[3], row[4] = 0, 1
+            treeiter = model.iter_next(treeiter)
+        self.on_file_filters_changed(treeview, path, columns, builder)
 
     def on_update_infobar_response(self, widget, response_id):
         if response_id == Gtk.ResponseType.OK:
@@ -301,47 +315,6 @@ class CatfishWindow(Window):
         context.restore()
 
         return False
-
-    def reload_symbolic_icons(self, widget, builder):
-        """Reload the symbolic icons on GTK or icon theme change."""
-        # Modification Time icons
-        modified_icon = self.load_symbolic_icon('document-open-recent', 16)
-        for name in ['any', 'week', 'custom']:
-            widget = builder.get_named_object('sidebar.modified.icons.' + name)
-            widget.set_from_pixbuf(modified_icon)
-
-        # Configuration icons
-        settings_icon = self.load_symbolic_icon('document-properties', 16,
-                                                Gtk.StateFlags.INSENSITIVE)
-        self.modified_settings_image = \
-            builder.get_named_object('sidebar.modified.icons.options')
-        self.document_settings_image = \
-            builder.get_named_object('sidebar.filetype.icons.options')
-        self.modified_settings_image.set_from_pixbuf(settings_icon)
-        self.document_settings_image.set_from_pixbuf(settings_icon)
-
-        # File format icons
-        documents_icon = self.load_symbolic_icon('folder-documents', 16)
-        photos_icon = self.load_symbolic_icon('folder-pictures', 16)
-        music_icon = self.load_symbolic_icon('folder-music', 16)
-        videos_icon = self.load_symbolic_icon('folder-videos', 16)
-        apps_icon = self.load_symbolic_icon('applications-utilities', 16)
-        folder_icon = self.load_symbolic_icon('folder', 16)
-        custom_format_icon = self.load_symbolic_icon('list-add', 16)
-        builder.get_named_object('sidebar.filetype.icons.documents').\
-            set_from_pixbuf(documents_icon)
-        builder.get_named_object('sidebar.filetype.icons.photos').\
-            set_from_pixbuf(photos_icon)
-        builder.get_named_object('sidebar.filetype.icons.music').\
-            set_from_pixbuf(music_icon)
-        builder.get_named_object('sidebar.filetype.icons.videos').\
-            set_from_pixbuf(videos_icon)
-        builder.get_named_object('sidebar.filetype.icons.applications').\
-            set_from_pixbuf(apps_icon)
-        builder.get_named_object('sidebar.filetype.icons.custom').\
-            set_from_pixbuf(custom_format_icon)
-        builder.get_named_object('sidebar.filetype.icons.folders').\
-            set_from_pixbuf(folder_icon)
 
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
@@ -479,6 +452,14 @@ class CatfishWindow(Window):
             modified = 0
         item_date = datetime.datetime.fromtimestamp(modified)
         return (locate, db, item_date)
+        
+    def on_filters_changed(self, box, row, user_data=None):
+        print ("test")
+        if row.is_selected():
+            box.unselect_row(row)
+        else:
+            box.select_row(row)
+        return True
 
     # -- Update Search Index dialog -- #
     def on_update_index_dialog_close(self, widget=None, event=None,
@@ -752,18 +733,11 @@ class CatfishWindow(Window):
         if active != self.sidebar.get_visible():
             self.sidebar.set_visible(active)
 
-    def on_radio_time_any_toggled(self, widget):
-        """Set the time range filter to allow for any modification time."""
-        if widget.get_active():
+    def set_modified_range(self, value):
+        if value == 'any':
             self.filter_timerange = (0.0, 9999999999.0)
             logger.debug("Time Range: Beginning of time -> Eternity")
-            self.refilter()
-
-    def on_radio_time_week_toggled(self, widget):
-        """Set the time range filter to allow for files modified since one week
-        ago until eternity (to account for newer files)."""
-        # Use one week ago for lower bounds, use eternity for upper.
-        if widget.get_active():
+        elif value == 'week':
             now = datetime.datetime.now()
             week = timegm((
                 datetime.datetime(now.year, now.month, now.day, 0, 0) -
@@ -772,15 +746,7 @@ class CatfishWindow(Window):
             logger.debug(
                 "Time Range: %s -> Eternity",
                 time.strftime("%x %X", time.gmtime(int(week))))
-            self.refilter()
-
-    def on_radio_time_custom_toggled(self, widget):
-        """Set the time range filter to the custom settings chosen in the date
-        chooser dialog."""
-        active = widget.get_active()
-        if active:
-            pixbuf = self.load_symbolic_icon('document-properties', 16)
-
+        elif value == 'custom':
             self.filter_timerange = (timegm(self.start_date.timetuple()),
                                      timegm(self.end_date.timetuple()))
             logger.debug(
@@ -789,14 +755,8 @@ class CatfishWindow(Window):
                               time.gmtime(int(self.filter_timerange[0]))),
                 time.strftime("%x %X",
                               time.gmtime(int(self.filter_timerange[1]))))
-
-            self.refilter()
         else:
-            pixbuf = self.load_symbolic_icon('document-properties', 16,
-                                             Gtk.StateFlags.INSENSITIVE)
-
-        self.button_time_custom.set_sensitive(active)
-        self.modified_settings_image.set_from_pixbuf(pixbuf)
+            return
 
     def on_button_time_custom_clicked(self, widget):
         """Show the custom time range dialog."""
