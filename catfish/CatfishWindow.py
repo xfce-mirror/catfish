@@ -105,10 +105,8 @@ class CatfishWindow(Window):
                       'other': False, 'exact': False, 'hidden': False,
                       'fulltext': False}
 
-    filter_custom_mimetype = {'category_text': "", 'category_id': -1,
-                              'type_text': "", 'type_id': -1}
     filter_custom_extensions = []
-    filter_custom_use_mimetype = True
+    filter_custom_use_mimetype = False
 
     mimetypes = dict()
     search_in_progress = False
@@ -266,24 +264,89 @@ class CatfishWindow(Window):
         modified_filters = builder.get_object("modified_options")
         modified_filters.connect("row-activated", self.on_modified_filters_changed, builder)
         
-    def on_file_filters_changed(self, treeview, path, columns, builder):
+        self.popovers = dict()
+        
+        extension_filter = builder.get_object("filter_extensions")
+        extension_filter.connect("search-changed", self.on_filter_extensions_changed)
+        
+        start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
+        end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
+        start_calendar.connect("day-selected", self.on_calendar_day_changed)
+        
+    def on_calendar_day_changed(self, widget):
+        start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
+        end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
+        
+        start_date = start_calendar.get_date()
+        self.start_date = datetime.datetime(start_date[0], start_date[1] + 1,
+                                            start_date[2])
+        
+        end_date = start_calendar.get_date()                                    
+        self.end_date = datetime.datetime(end_date[0], end_date[1] + 1,
+                                          end_date[2])
+                                          
+        self.filter_timerange = (timegm(self.start_date.timetuple()),
+                                 timegm(self.end_date.timetuple()))
+                                 
+        self.refilter()
+        
+    def on_file_filters_changed(self, treeview, path, column, builder):
         model = treeview.get_model()
         treeiter = model.get_iter(path)
         row = model[treeiter]
-        row[3], row[4] = row[4], row[3]
-        if row[2] == 'other': row[5] = row[3]
-        self.set_modified_range(row[2])
+        if treeview.get_column(2) == column:
+            if row[5]:
+                popover = self.get_popover(row[2], builder)
+                popover.show_all()
+                return
+            else:
+                row[3], row[4] = row[4], row[3]
+        else:
+            row[3], row[4] = row[4], row[3]
+        if row[2] == 'other' or row[2] == 'custom': row[5] = row[3]
         self.filter_formats[row[2]] = row[3]
         self.refilter()
         
-    def on_modified_filters_changed(self, treeview, path, columns, builder):
+    def get_popover(self, name, builder):
+        if name == "other":
+            popover_id = "filetype"
+        elif name == "custom":
+            popover_id = "modified"
+        else:
+            return False
+        if popover_id not in self.popovers.keys():
+            popover_content = builder.get_object(popover_id+"_popover")
+            popover = Gtk.Popover.new()
+            popover.connect("destroy", self.popover_content_destroy)
+            popover.add(builder.get_object(popover_id+"_popover"))
+            popover.set_relative_to(builder.get_object(name+"_helper"))
+            popover.set_position(Gtk.PositionType.BOTTOM)
+            self.popovers[popover_id] = popover
+        return self.popovers[popover_id]
+        
+    def popover_content_destroy(self, widget):
+        widget.hide()
+        return False
+        
+    def on_modified_filters_changed(self, treeview, path, column, builder):
         model = treeview.get_model()
+        treeiter = model.get_iter(path)
+        selected = model[treeiter]
         treeiter = model.get_iter_first()
         while treeiter:
             row = model[treeiter]
-            row[3], row[4] = 0, 1
+            row[3], row[4], row[5] = 0, 1, 0
             treeiter = model.iter_next(treeiter)
-        self.on_file_filters_changed(treeview, path, columns, builder)
+        selected[3], selected[4] = 1, 0
+        if selected[2] == "custom":
+            selected[5] = 1
+        if treeview.get_column(2) == column:
+            if selected[5]:
+                popover = self.get_popover(selected[2], builder)
+                popover.show_all()
+                return
+        self.set_modified_range(selected[2])
+        self.refilter()
 
     def on_update_infobar_response(self, widget, response_id):
         if response_id == Gtk.ResponseType.OK:
@@ -734,6 +797,7 @@ class CatfishWindow(Window):
             self.sidebar.set_visible(active)
 
     def set_modified_range(self, value):
+        print(value)
         if value == 'any':
             self.filter_timerange = (0.0, 9999999999.0)
             logger.debug("Time Range: Beginning of time -> Eternity")
@@ -755,50 +819,7 @@ class CatfishWindow(Window):
                               time.gmtime(int(self.filter_timerange[0]))),
                 time.strftime("%x %X",
                               time.gmtime(int(self.filter_timerange[1]))))
-        else:
-            return
-
-    def on_button_time_custom_clicked(self, widget):
-        """Show the custom time range dialog."""
-        dialog = self.builder.get_named_object("dialogs.date.dialog")
-        start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
-        end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
-
-        dialog.show_all()
-        if dialog.run() == Gtk.ResponseType.APPLY:
-            # Update the time range filter values.
-            start_date = start_calendar.get_date()
-            self.start_date = datetime.datetime(start_date[0],
-                                                start_date[1] + 1,
-                                                start_date[2])
-
-            end_date = end_calendar.get_date()
-            self.end_date = datetime.datetime(end_date[0], end_date[1] + 1,
-                                              end_date[2])
-
-            self.filter_timerange = (timegm(self.start_date.timetuple()),
-                                     timegm(self.end_date.timetuple()))
-
-            logger.debug(
-                "Time Range: %s -> %s",
-                time.strftime("%x %X",
-                              time.gmtime(int(self.filter_timerange[0]))),
-                time.strftime("%x %X",
-                              time.gmtime(int(self.filter_timerange[1]))))
-
-            # Reload the results filter.
-            self.refilter()
-        else:
-            # Reset the calendar widgets to their previous values.
-            start_calendar.select_month(self.start_date.month - 1,
-                                        self.start_date.year)
-            start_calendar.select_day(self.start_date.day)
-
-            end_calendar.select_month(self.end_date.month - 1,
-                                      self.end_date.year)
-            end_calendar.select_day(self.end_date.day)
-
-        dialog.hide()
+        self.refilter()
 
     def on_calendar_today_button_clicked(self, calendar_widget):
         """Change the calendar widget selected date to today."""
@@ -813,146 +834,19 @@ class CatfishWindow(Window):
         logger.debug("File type filters updated: %s", str(self.filter_formats))
         self.refilter()
 
-    def on_documents_toggled(self, widget):
-        """Update search filter when documents is toggled."""
-        self.filter_format_toggled("documents", widget.get_active())
+    def on_filter_extensions_changed(self, widget):
+        """Update the results when the extensions filter changed."""
+        self.filter_custom_extensions = []
+        extensions = widget.get_text().replace(',', ' ')
+        for ext in extensions.split():
+            ext = ext.strip()
+            if len(ext) > 0:
+                if ext[0] != '.':
+                    ext = "." + ext
+                self.filter_custom_extensions.append(ext)
 
-    def on_folders_toggled(self, widget):
-        """Update search filter when folders is toggled."""
-        self.filter_format_toggled("folders", widget.get_active())
-
-    def on_images_toggled(self, widget):
-        """Update search filter when images is toggled."""
-        self.filter_format_toggled("images", widget.get_active())
-
-    def on_music_toggled(self, widget):
-        """Update search filter when music is toggled."""
-        self.filter_format_toggled("music", widget.get_active())
-
-    def on_videos_toggled(self, widget):
-        """Update search filter when videos is toggled."""
-        self.filter_format_toggled("videos", widget.get_active())
-
-    def on_applications_toggled(self, widget):
-        """Update search filter when applications is toggled."""
-        self.filter_format_toggled("applications", widget.get_active())
-
-    def on_other_format_toggled(self, widget):
-        """Update search filter when other format is toggled."""
-        active = widget.get_active()
-        self.filter_format_toggled("other", active)
-        self.button_format_custom.set_sensitive(active)
-        if active:
-            pixbuf = self.load_symbolic_icon('document-properties', 16)
-
-        else:
-            pixbuf = self.load_symbolic_icon('document-properties', 16,
-                                             Gtk.StateFlags.INSENSITIVE)
-        self.document_settings_image.set_from_pixbuf(pixbuf)
-
-    def on_button_format_custom_clicked(self, widget):
-        """Show the custom formats dialog."""
-        dialog = self.builder.get_named_object("dialogs.filetype.dialog")
-
-        radio_mimetypes = self.builder.get_named_object("dialogs.filetype.mimetypes.radio")
-        categories = self.builder.get_named_object("dialogs.filetype.mimetypes.categories")
-        types = self.builder.get_named_object("dialogs.filetype.mimetypes.types")
-
-        radio_extensions = self.builder.get_named_object("dialogs.filetype.extensions.radio")
-
-        # Lazily load the mimetypes.
-        if len(self.mimetypes) == 0:
-            mimes = list(mimetypes.types_map.values())
-            if not isinstance(mimes, list):
-                mimes = list(mimes)
-            mimes.sort()
-            for mime in mimes:
-                category, mimetype = str(mime).split("/")
-                if category not in list(self.mimetypes.keys()):
-                    self.mimetypes[category] = []
-                if mimetype not in self.mimetypes[category]:
-                    self.mimetypes[category].append(mimetype)
-
-            keys = list(self.mimetypes.keys())
-            if not isinstance(keys, list):
-                keys = list(keys)
-            keys.sort()
-            for category in keys:
-                categories.append_text(category)
-
-            types.remove_all()
-
-        # Load instance defaults.
-        if self.filter_custom_mimetype['category_id'] == -1:
-            categories.set_active(0)
-        else:
-            categories.set_active(self.filter_custom_mimetype['category_id'])
-        if self.filter_custom_mimetype['type_id'] == -1:
-            types.set_active(0)
-        else:
-            types.set_active(self.filter_custom_mimetype['type_id'])
-        extensions_str = ', '.join(self.filter_custom_extensions)
-        self.extensions_entry.set_text(extensions_str)
-
-        if self.filter_custom_use_mimetype:
-            radio_mimetypes.set_active(True)
-        else:
-            radio_extensions.set_active(True)
-
-        dialog.show_all()
-
-        if dialog.run() == Gtk.ResponseType.APPLY:
-            # Update filter settings and instance defaults.
-            self.filter_custom_mimetype = {
-                'category_text': categories.get_active_text(),
-                'category_id': categories.get_active(),
-                'type_text': types.get_active_text(),
-                'type_id': types.get_active()}
-
-            self.filter_custom_extensions = []
-            extensions = self.extensions_entry.get_text().replace(',', ' ')
-            for ext in extensions.split():
-                ext = ext.rstrip().lstrip()
-                if len(ext) > 0:
-                    if ext[0] != '.':
-                        ext = "." + ext
-                    self.filter_custom_extensions.append(ext)
-
-            self.filter_custom_use_mimetype = radio_mimetypes.get_active()
-
-            logger.debug(
-                "Updated file type settings:" +
-                "\n  Mimetype:     " + str(self.filter_custom_mimetype) +
-                "\n  Extensions:   " + str(self.filter_custom_extensions) +
-                "\n  Use mimetype: " + str(self.filter_custom_use_mimetype))
-
-            # Reload the results filter.
-            self.refilter()
-
-        dialog.hide()
-
-    def on_radio_custom_mimetype_toggled(self, widget):
-        """Make widgets sensitive when radio buttons are toggled."""
-        self.format_mimetype_box.set_sensitive(widget.get_active())
-
-    def on_radio_custom_extensions_toggled(self, widget):
-        """Make widgets sensitive when radio buttons are toggled."""
-        self.extensions_entry.set_sensitive(widget.get_active())
-
-    def on_mimetype_categories_changed(self, combobox):
-        """Update the mime subtypes when a different category is selected."""
-        types = self.builder.get_named_object("dialogs.filetype.mimetypes.types")
-
-        # Remove all existing rows.
-        types.remove_all()
-
-        # Add each mimetype.
-        if combobox.get_active() != -1:
-            for mime in self.mimetypes[combobox.get_active_text()]:
-                types.append_text(mime)
-
-        # Set the combobox to the first item.
-        types.set_active(0)
+        # Reload the results filter.
+        self.refilter()
 
     def open_file(self, filename):
         """Open the specified filename in its default application."""
@@ -1368,15 +1262,9 @@ class CatfishWindow(Window):
             if mimetype.startswith("application"):
                 return True
         if self.filter_formats['other']:
-            use_filters = True
-            if self.filter_custom_use_mimetype:
-                if mimetype == self.filter_custom_mimetype['category_text'] + \
-                        "/" + self.filter_custom_mimetype['type_text']:
-                    return True
-            else:
-                extension = os.path.splitext(model[iter][1])[1]
-                if extension in self.filter_custom_extensions:
-                    return True
+            extension = os.path.splitext(model[iter][1])[1]
+            if extension in self.filter_custom_extensions:
+                return True
 
         if use_filters:
             return False
