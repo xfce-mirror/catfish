@@ -967,6 +967,7 @@
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="selection_mode">none</property>
+    <signal name="row-activated" handler="on_application_menu_row_activated" swapped="no"/>
     <child>
       <object class="GtkListBoxRow" id="listboxrow1">
         <property name="visible">True</property>
@@ -1101,7 +1102,6 @@
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <property name="selectable">False</property>
-        <signal name="activate" handler="on_menu_update_index_activate" swapped="no"/>
         <child>
           <object class="GtkBox" id="box1">
             <property name="visible">True</property>
@@ -1141,7 +1141,6 @@
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <property name="selectable">False</property>
-        <signal name="activate" handler="on_mnu_about_activate" swapped="no"/>
         <child>
           <object class="GtkBox" id="box2">
             <property name="visible">True</property>

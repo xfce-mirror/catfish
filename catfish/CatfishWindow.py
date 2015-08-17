@@ -273,6 +273,8 @@ class CatfishWindow(Window):
         end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
         start_calendar.connect("day-selected", self.on_calendar_day_changed)
         
+        self.app_menu_event = False
+        
     def on_calendar_day_changed(self, widget):
         start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
         end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
@@ -290,6 +292,17 @@ class CatfishWindow(Window):
                                  
         self.refilter()
         
+    def on_application_menu_row_activated(self, listbox, row):
+        self.app_menu_event = not self.app_menu_event
+        if not self.app_menu_event:
+            return
+        if listbox.get_row_at_index(5) == row:
+            listbox.get_parent().hide()
+            self.on_menu_update_index_activate(row)
+        if listbox.get_row_at_index(6) == row:
+            listbox.get_parent().hide()
+            self.on_mnu_about_activate(row)
+            
     def on_file_filters_changed(self, treeview, path, column, builder):
         model = treeview.get_model()
         treeiter = model.get_iter(path)
