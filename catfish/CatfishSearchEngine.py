@@ -23,12 +23,15 @@ import io
 import os
 import signal
 import subprocess
+import time
 from itertools import permutations
 
 from mimetypes import guess_type
 
 from sys import version_info
 python3 = version_info[0] > 2
+
+engine_count = 0
 
 try:
     from zeitgeist.client import ZeitgeistDBusInterface
@@ -78,7 +81,10 @@ class CatfishSearchEngine:
          walk             'os.walk' to search for files (like find).
          zeitgeist        Zeitgeist indexing service to search for files.
         """
-        logger.debug("methods: %s", str(methods))
+        global engine_count
+        engine_count += 1
+        self.engine_id = engine_count
+        logger.debug("[%i] engine initializing with methods: %s", self.engine_id, str(methods))
         self.methods = []
         if 'zeitgeist' in methods:
             if zeitgeist_support:
@@ -89,6 +95,14 @@ class CatfishSearchEngine:
             self.add_method(CatfishSearchMethod_Fulltext)
         if 'walk' in methods:
             self.add_method(CatfishSearchMethod_Walk)
+        initialized = []
+        for method in self.methods:
+            initialized.append(method.method_name)
+        logger.debug("[%i] engine initialized with methods: %s", self.engine_id, str(initialized))
+        self.start_time = 0.0
+        
+    def __del__(self):
+        logger.debug("[%i] engine destroyed", self.engine_id)
 
     def add_method(self, method_class):
         """Add a CatfishSearchMethod the the engine's search backends."""
@@ -102,8 +116,10 @@ class CatfishSearchEngine:
         This function is a generator.  With each filename reviewed, the
         filename is yielded if it matches the query.  False is also yielded
         afterwards to guarantee the interface does not lock up."""
+        self.start_time = time.clock()
 
-        logger.debug("path: %s", str(path))
+        logger.debug("[%i] path: %s, keywords: %s, limit: %i, regex: %s", 
+                     self.engine_id, str(path), str(keywords), limit, str(regex))
 
         keywords = keywords.replace(',', ' ')
         self.keywords = keywords
@@ -126,7 +142,7 @@ class CatfishSearchEngine:
 
         file_count = 0
         for method in self.methods:
-            logger.debug(method.method_name)
+            logger.debug("[%i] Starting search method: %s", self.engine_id, method.method_name)
             for filename in method.run(keywords, path, regex):
                 if isinstance(filename, str) and path in filename:
                     if method.method_name == 'fulltext' or  \
@@ -176,6 +192,7 @@ class CatfishSearchEngine:
                         self.stop()
                         return
                 yield False
+        self.stop()
 
     def set_exact(self, exact):
         """Set method for exact"""
@@ -187,6 +204,9 @@ class CatfishSearchEngine:
         """Stop all running methods."""
         for method in self.methods:
             method.stop()
+        self.stop_time = time.clock()
+        clock = self.stop_time - self.start_time
+        logger.debug("[%i] Last query: %f seconds", self.engine_id, clock)
 
 
 class CatfishSearchMethod:
