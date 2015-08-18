@@ -305,6 +305,7 @@ class CatfishWindow(Window):
         model = treeview.get_model()
         treeiter = model.get_iter(path)
         row = model[treeiter]
+        showPopup = row[2] == "other" and row[5] == 0
         if treeview.get_column(2) == column:
             if row[5]:
                 popover = self.get_popover(row[2], builder)
@@ -315,6 +316,9 @@ class CatfishWindow(Window):
         else:
             row[3], row[4] = row[4], row[3]
         if row[2] == 'other' or row[2] == 'custom': row[5] = row[3]
+        if showPopup and row[5]:
+            popover = self.get_popover(row[2], builder)
+            popover.show_all()
         self.filter_formats[row[2]] = row[3]
         self.refilter()
 
@@ -343,6 +347,7 @@ class CatfishWindow(Window):
         model = treeview.get_model()
         treeiter = model.get_iter(path)
         selected = model[treeiter]
+        showPopup = selected[2] == "custom" and selected[5] == 0
         treeiter = model.get_iter_first()
         while treeiter:
             row = model[treeiter]
@@ -353,9 +358,10 @@ class CatfishWindow(Window):
             selected[5] = 1
         if treeview.get_column(2) == column:
             if selected[5]:
-                popover = self.get_popover(selected[2], builder)
-                popover.show_all()
-                return
+                showPopup = True
+        if showPopup:
+            popover = self.get_popover(selected[2], builder)
+            popover.show_all()
         self.set_modified_range(selected[2])
         self.refilter()
 
