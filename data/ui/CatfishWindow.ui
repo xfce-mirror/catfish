@@ -870,30 +870,150 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkScrolledWindow" id="results_scrolledwindow">
+                  <object class="GtkBox" id="box3">
                     <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="hexpand">True</property>
-                    <property name="vexpand">True</property>
-                    <property name="min_content_width">400</property>
-                    <property name="min_content_height">300</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkTreeView" id="results_treeview">
+                      <object class="GtkBox" id="splash">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="model">results_liststore</property>
-                        <property name="reorderable">True</property>
-                        <property name="rules_hint">True</property>
-                        <property name="rubber_banding">True</property>
-                        <property name="enable_grid_lines">vertical</property>
-                        <signal name="button-release-event" handler="on_treeview_button_press_event" swapped="no"/>
-                        <signal name="drag-begin" handler="on_treeview_drag_begin" swapped="no"/>
-                        <signal name="drag-data-get" handler="on_treeview_drag_data_get" swapped="no"/>
-                        <signal name="row-activated" handler="on_treeview_row_activated" swapped="no"/>
-                        <child internal-child="selection">
-                          <object class="GtkTreeSelection" id="results_treeview_selection"/>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">6</property>
+                        <child>
+                          <object class="GtkLabel" id="splash_title">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="yalign">1</property>
+                            <property name="label" translatable="yes">Catfish File Search</property>
+                            <property name="justify">center</property>
+                            <attributes>
+                              <attribute name="scale" value="1.2"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="box5">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">3</property>
+                            <child>
+                              <object class="GtkLabel" id="splash_subtitle">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="yalign">0</property>
+                                <property name="label" translatable="yes" context="Full text: Enter your query above to find your files or click the [icon] icon for more options.">Enter your query above to find your files</property>
+                                <property name="justify">center</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox" id="splash_hide">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="halign">center</property>
+                                <child>
+                                  <object class="GtkLabel" id="label8">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes" context="Full text: Enter your query above to find your files or click the [icon] icon for more options.">or click the </property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkImage" id="image3">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="pixel_size">16</property>
+                                    <property name="icon_name">emblem-system-symbolic</property>
+                                    <property name="use_fallback">True</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="label9">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes" context="Full text: Enter your query above to find your files or click the [icon] icon for more options."> icon for more options.</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">2</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">False</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
                         </child>
                       </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkScrolledWindow" id="results_scrolledwindow">
+                        <property name="can_focus">True</property>
+                        <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
+                        <property name="min_content_width">400</property>
+                        <property name="min_content_height">300</property>
+                        <child>
+                          <object class="GtkTreeView" id="results_treeview">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="model">results_liststore</property>
+                            <property name="reorderable">True</property>
+                            <property name="rules_hint">True</property>
+                            <property name="rubber_banding">True</property>
+                            <property name="enable_grid_lines">vertical</property>
+                            <signal name="button-release-event" handler="on_treeview_button_press_event" swapped="no"/>
+                            <signal name="drag-begin" handler="on_treeview_drag_begin" swapped="no"/>
+                            <signal name="drag-data-get" handler="on_treeview_drag_data_get" swapped="no"/>
+                            <signal name="row-activated" handler="on_treeview_row_activated" swapped="no"/>
+                            <child internal-child="selection">
+                              <object class="GtkTreeSelection" id="results_treeview_selection"/>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
                     </child>
                   </object>
                   <packing>

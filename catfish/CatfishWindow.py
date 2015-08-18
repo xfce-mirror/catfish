@@ -1291,15 +1291,24 @@ class CatfishWindow(Window):
         try:
             self.results_filter.refilter()
             n_results = len(self.treeview.get_model())
-            if n_results == 0:
-                self.statusbar_label.set_label(_("No files found."))
-            elif n_results == 1:
-                self.statusbar_label.set_label(_("1 file found."))
-            else:
-                self.statusbar_label.set_label(
-                    _("%i files found.") % n_results)
+            self.show_results(n_results)
         except AttributeError:
             pass
+            
+    def show_results(self, count):
+        if count == 0:
+            self.builder.get_object("results_scrolledwindow").hide()
+            self.builder.get_object("splash").show()
+            self.builder.get_object("splash_title").set_text(_("No files found."))
+            self.builder.get_object("splash_subtitle").set_text(
+                _("Try making your search less specific\nor try another directory."))
+        else:
+            self.builder.get_object("splash").hide()
+            self.builder.get_object("results_scrolledwindow").show()
+            if count == 1:
+                self.statusbar_label.set_label(_("1 file found."))
+            else:
+                self.statusbar_label.set_label(_("%i files found.") % count)
 
     def format_size(self, size, precision=1):
         """Make a file size human readable."""
@@ -1440,6 +1449,14 @@ class CatfishWindow(Window):
         self.stop_search = False
 
         # Update the interface to Search Mode
+        self.builder.get_object("results_scrolledwindow").hide()
+        self.builder.get_object("splash").show()
+        self.builder.get_object("splash_title").set_text(_("Searching…"))
+        self.builder.get_object("splash_subtitle").set_text(
+            _("Results will be displayed as soon as they are found."))
+        self.builder.get_object("splash_hide").hide()
+        show_results = False
+
         self.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
         self.set_title(_("Searching for \"%s\"") % keywords)
         self.spinner.show()
@@ -1509,6 +1526,13 @@ class CatfishWindow(Window):
                     path = surrogate_escape(path)
                     model.append([icon, displayed, size, path, modified,
                                   mimetype, hidden, exact])
+                                  
+                    if not show_results:
+                        show_results = True
+                        if len(self.treeview.get_model()) > 0:
+                            self.builder.get_object("splash").hide()
+                            self.builder.get_object("results_scrolledwindow").show()
+                            
                 except OSError:
                     # file no longer exists
                     pass
@@ -1528,12 +1552,7 @@ class CatfishWindow(Window):
         n_results = 0
         if self.treeview.get_model() is not None:
             n_results = len(self.treeview.get_model())
-        if n_results == 0:
-            self.statusbar_label.set_label(_("No files found."))
-        elif n_results == 1:
-            self.statusbar_label.set_label(_("1 file found."))
-        else:
-            self.statusbar_label.set_label(_("%i files found.") % n_results)
+        self.show_results(n_results)
 
         self.search_in_progress = False
         self.refresh_search_entry()

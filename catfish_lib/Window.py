@@ -206,6 +206,8 @@ class Window(Gtk.Window):
 
         self.set_titlebar(headerbar)
         headerbar.show_all()
+        
+        search.grab_focus()
 
     def on_mnu_about_activate(self, widget, data=None):
         """Display the about box for catfish."""
