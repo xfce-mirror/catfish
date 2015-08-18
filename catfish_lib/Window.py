@@ -230,6 +230,9 @@ class Window(Gtk.Window):
     def on_catfish_window_key_press_event(self, widget, event):
         """Handle keypresses for the Catfish window."""
         key_name = Gdk.keyval_name(event.keyval)
+        if key_name == "Escape":
+            self.search_engine.stop()
+            return True
         if event.get_state() & Gdk.ModifierType.CONTROL_MASK:
             if key_name == 'q' or key_name == 'Q':
                 self.destroy()

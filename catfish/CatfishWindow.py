@@ -679,7 +679,6 @@ class CatfishWindow(Window):
         icon_name = "edit-find-symbolic"
         sensitive = True
         button_tooltip_text = None
-        entry_tooltip_text = _("Enter search terms and press Enter to begin.")
 
         # Search running
         if self.search_in_progress:
@@ -691,6 +690,7 @@ class CatfishWindow(Window):
         # Search not running
         else:
             entry_text = self.search_entry.get_text()
+            entry_tooltip_text = None
             # Search not running, value in terms
             if len(entry_text) > 0:
                 button_tooltip_text = _('Begin Search')
