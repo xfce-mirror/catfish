@@ -16,30 +16,28 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from locale import gettext as _
-
-from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, GLib, Pango
-
-from xml.sax.saxutils import escape
-from shutil import copy2, rmtree
-
-from calendar import timegm
 import datetime
-import time
-
-import mimetypes
 import hashlib
-import os
-
 import logging
-logger = logging.getLogger('catfish')
-
-from catfish_lib import Window, CatfishSettings, SudoDialog, helpers
-from catfish.AboutCatfishDialog import AboutCatfishDialog
-from catfish.CatfishSearchEngine import *
+import mimetypes
+import os
+import time
+from calendar import timegm
+from locale import gettext as _
+from shutil import copy2, rmtree
+from xml.sax.saxutils import escape
 
 import pexpect
-    
+from gi.repository import Gdk, GdkPixbuf, GLib, GObject, Gtk, Pango
+
+from catfish.AboutCatfishDialog import AboutCatfishDialog
+from catfish.CatfishSearchEngine import *
+from catfish_lib import CatfishSettings, SudoDialog, Window, helpers
+
+logger = logging.getLogger('catfish')
+
+
+
 
 # Initialize Gtk, GObject, and mimetypes
 if not helpers.check_gobject_version(3, 9, 1):
@@ -117,7 +115,7 @@ class CatfishWindow(Window):
         self.set_wmclass("Catfish", "Catfish")
 
         self.AboutDialog = AboutCatfishDialog
-        
+
         # -- Folder Chooser Combobox -- #
         self.folderchooser = builder.get_named_object("toolbar.folderchooser")
 
@@ -257,41 +255,41 @@ class CatfishWindow(Window):
 
         self.settings = CatfishSettings.CatfishSettings()
         self.refresh_search_entry()
-        
+
         filetype_filters = builder.get_object("filetype_options")
         filetype_filters.connect("row-activated", self.on_file_filters_changed, builder)
-        
+
         modified_filters = builder.get_object("modified_options")
         modified_filters.connect("row-activated", self.on_modified_filters_changed, builder)
-        
+
         self.popovers = dict()
-        
+
         extension_filter = builder.get_object("filter_extensions")
         extension_filter.connect("search-changed", self.on_filter_extensions_changed)
-        
+
         start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
         end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
         start_calendar.connect("day-selected", self.on_calendar_day_changed)
-        
+
         self.app_menu_event = False
-        
+
     def on_calendar_day_changed(self, widget):
         start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
         end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
-        
+
         start_date = start_calendar.get_date()
         self.start_date = datetime.datetime(start_date[0], start_date[1] + 1,
                                             start_date[2])
-        
-        end_date = start_calendar.get_date()                                    
+
+        end_date = end_calendar.get_date()
         self.end_date = datetime.datetime(end_date[0], end_date[1] + 1,
                                           end_date[2])
-                                          
+
         self.filter_timerange = (timegm(self.start_date.timetuple()),
                                  timegm(self.end_date.timetuple()))
-                                 
+
         self.refilter()
-        
+
     def on_application_menu_row_activated(self, listbox, row):
         self.app_menu_event = not self.app_menu_event
         if not self.app_menu_event:
@@ -302,7 +300,7 @@ class CatfishWindow(Window):
         if listbox.get_row_at_index(6) == row:
             listbox.get_parent().hide()
             self.on_mnu_about_activate(row)
-            
+
     def on_file_filters_changed(self, treeview, path, column, builder):
         model = treeview.get_model()
         treeiter = model.get_iter(path)
@@ -319,7 +317,7 @@ class CatfishWindow(Window):
         if row[2] == 'other' or row[2] == 'custom': row[5] = row[3]
         self.filter_formats[row[2]] = row[3]
         self.refilter()
-        
+
     def get_popover(self, name, builder):
         if name == "other":
             popover_id = "filetype"
@@ -336,11 +334,11 @@ class CatfishWindow(Window):
             popover.set_position(Gtk.PositionType.BOTTOM)
             self.popovers[popover_id] = popover
         return self.popovers[popover_id]
-        
+
     def popover_content_destroy(self, widget):
         widget.hide()
         return False
-        
+
     def on_modified_filters_changed(self, treeview, path, column, builder):
         model = treeview.get_model()
         treeiter = model.get_iter(path)
@@ -528,9 +526,8 @@ class CatfishWindow(Window):
             modified = 0
         item_date = datetime.datetime.fromtimestamp(modified)
         return (locate, db, item_date)
-        
+
     def on_filters_changed(self, box, row, user_data=None):
-        print ("test")
         if row.is_selected():
             box.unselect_row(row)
         else:
@@ -810,7 +807,6 @@ class CatfishWindow(Window):
             self.sidebar.set_visible(active)
 
     def set_modified_range(self, value):
-        print(value)
         if value == 'any':
             self.filter_timerange = (0.0, 9999999999.0)
             logger.debug("Time Range: Beginning of time -> Eternity")
@@ -1243,8 +1239,9 @@ class CatfishWindow(Window):
 
         # modified
         modified = model[iter][4]
-        if modified < self.filter_timerange[0] or \
-                modified > self.filter_timerange[1]:
+        if modified < self.filter_timerange[0]:
+            return False
+        if modified > self.filter_timerange[1]:
             return False
 
         # mimetype
