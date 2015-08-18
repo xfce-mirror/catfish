@@ -1283,6 +1283,7 @@ class CatfishWindow(Window):
             if mimetype.startswith("application"):
                 return True
         if self.filter_formats['other']:
+            use_filters = True
             extension = os.path.splitext(model[iter][1])[1]
             if extension in self.filter_custom_extensions:
                 return True
