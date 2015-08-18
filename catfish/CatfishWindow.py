@@ -1376,9 +1376,10 @@ class CatfishWindow(Window):
         if os.path.isfile(thumbnail_path):
             return thumbnail_path
         if mime_type.startswith('image'):
-            new_thumb = self.create_thumbnail(path, thumbnail_path)
-            if new_thumb:
-                return thumbnail_path
+            if mime_type not in ["image/x-photoshop","image/svg+xml"]:
+                new_thumb = self.create_thumbnail(path, thumbnail_path)
+                if new_thumb:
+                    return thumbnail_path
         return self.get_file_icon(path, mime_type)
 
     def create_thumbnail(self, filename, path):
