@@ -228,6 +228,9 @@ class Window(Gtk.Window):
     def on_catfish_window_key_press_event(self, widget, event):
         """Handle keypresses for the Catfish window."""
         key_name = Gdk.keyval_name(event.keyval)
+        if event.get_state() & Gdk.ModifierType.CONTROL_MASK:
+            if key_name == 'q' or key_name == 'Q':
+                self.destroy()
         if key_name == 'F9':
             self.on_sidebar_toggle_toggled(widget)
             return True
