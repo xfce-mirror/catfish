@@ -801,8 +801,13 @@ class CatfishWindow(Window):
     # -- Sidebar -- #
     def on_sidebar_toggle_toggled(self, widget):
         """Toggle visibility of the sidebar."""
-        active = widget.get_active()
+        if isinstance(widget, Gtk.CheckButton):
+            active = widget.get_active()
+        else:
+            active = not self.settings.get_setting('show-sidebar')
         self.settings.set_setting('show-sidebar', active)
+        if self.sidebar_toggle_menu.get_active() != active:
+            self.sidebar_toggle_menu.set_active(active)
         if active != self.sidebar.get_visible():
             self.sidebar.set_visible(active)
 

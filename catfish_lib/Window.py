@@ -203,11 +203,6 @@ class Window(Gtk.Window):
         headerbar.pack_start(chooser)
         headerbar.set_custom_title(search)
         headerbar.pack_end(button)
-        
-        for listbox in self.builder.get_object("sidebar_box").get_children():
-            for child in listbox.get_children():
-                ctx = child.get_style_context()
-                ctx.remove_class("button")
 
         self.set_titlebar(headerbar)
         headerbar.show_all()
@@ -234,7 +229,7 @@ class Window(Gtk.Window):
         """Handle keypresses for the Catfish window."""
         key_name = Gdk.keyval_name(event.keyval)
         if key_name == 'F9':
-            self.sidebar_toggle_menu.activate()
+            self.on_sidebar_toggle_toggled(widget)
             return True
         if key_name == 'F11':
             if self.window_is_fullscreen:
