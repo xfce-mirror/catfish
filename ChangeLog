@@ -14,6 +14,7 @@ v1.3.0:
    - Quit on Ctrl+Q (LP: #1447045)
    - Add GenericName to desktop file (LP: #1476401)
    - Use the correct locate.db file (LP: #1480064)
+   - Use unique GUI IDs (LP: #1389896)
 
 v1.2.2:
  + Fix typo in CatfishWindow.py (LP: #1372166)
