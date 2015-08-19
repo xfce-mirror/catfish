@@ -37,8 +37,6 @@ from catfish_lib import catfishconfig, CatfishSettings, SudoDialog, Window, help
 logger = logging.getLogger('catfish')
 
 
-
-
 # Initialize Gtk, GObject, and mimetypes
 if not helpers.check_gobject_version(3, 9, 1):
     GObject.threads_init()
@@ -89,6 +87,7 @@ def surrogate_escape(text, replace=False):
 
 # See catfish_lib.Window.py for more details about how this class works
 class CatfishWindow(Window):
+
     """The application window."""
     __gtype_name__ = "CatfishWindow"
 
@@ -130,13 +129,17 @@ class CatfishWindow(Window):
 
         # -- App Menu -- #
         self.exact_match = builder.get_named_object("menus.application.exact")
-        self.hidden_files = builder.get_named_object("menus.application.hidden")
+        self.hidden_files = builder.get_named_object(
+            "menus.application.hidden")
         self.fulltext = builder.get_named_object("menus.application.fulltext")
-        self.sidebar_toggle_menu = builder.get_named_object("menus.application.advanced")
+        self.sidebar_toggle_menu = builder.get_named_object(
+            "menus.application.advanced")
 
         # -- Sidebar -- #
-        self.button_time_custom = builder.get_named_object("sidebar.modified.options")
-        self.button_format_custom = builder.get_named_object("sidebar.filetype.options")
+        self.button_time_custom = builder.get_named_object(
+            "sidebar.modified.options")
+        self.button_format_custom = builder.get_named_object(
+            "sidebar.filetype.options")
 
         # -- Status Bar -- *
         # Create a new GtkOverlay to hold the
@@ -259,25 +262,32 @@ class CatfishWindow(Window):
         self.refresh_search_entry()
 
         filetype_filters = builder.get_object("filetype_options")
-        filetype_filters.connect("row-activated", self.on_file_filters_changed, builder)
+        filetype_filters.connect(
+            "row-activated", self.on_file_filters_changed, builder)
 
         modified_filters = builder.get_object("modified_options")
-        modified_filters.connect("row-activated", self.on_modified_filters_changed, builder)
+        modified_filters.connect(
+            "row-activated", self.on_modified_filters_changed, builder)
 
         self.popovers = dict()
 
         extension_filter = builder.get_object("filter_extensions")
-        extension_filter.connect("search-changed", self.on_filter_extensions_changed)
+        extension_filter.connect(
+            "search-changed", self.on_filter_extensions_changed)
 
-        start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
-        end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
+        start_calendar = self.builder.get_named_object(
+            "dialogs.date.start_calendar")
+        end_calendar = self.builder.get_named_object(
+            "dialogs.date.end_calendar")
         start_calendar.connect("day-selected", self.on_calendar_day_changed)
 
         self.app_menu_event = False
 
     def on_calendar_day_changed(self, widget):
-        start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
-        end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
+        start_calendar = self.builder.get_named_object(
+            "dialogs.date.start_calendar")
+        end_calendar = self.builder.get_named_object(
+            "dialogs.date.end_calendar")
 
         start_date = start_calendar.get_date()
         self.start_date = datetime.datetime(start_date[0], start_date[1] + 1,
@@ -317,7 +327,8 @@ class CatfishWindow(Window):
                 row[3], row[4] = row[4], row[3]
         else:
             row[3], row[4] = row[4], row[3]
-        if row[2] == 'other' or row[2] == 'custom': row[5] = row[3]
+        if row[2] == 'other' or row[2] == 'custom':
+            row[5] = row[3]
         if showPopup and row[5]:
             popover = self.get_popover(row[2], builder)
             popover.show_all()
@@ -332,11 +343,11 @@ class CatfishWindow(Window):
         else:
             return False
         if popover_id not in self.popovers.keys():
-            popover_content = builder.get_object(popover_id+"_popover")
+            popover_content = builder.get_object(popover_id + "_popover")
             popover = Gtk.Popover.new()
             popover.connect("destroy", self.popover_content_destroy)
-            popover.add(builder.get_object(popover_id+"_popover"))
-            popover.set_relative_to(builder.get_object(name+"_helper"))
+            popover.add(builder.get_object(popover_id + "_popover"))
+            popover.set_relative_to(builder.get_object(name + "_helper"))
             popover.set_position(Gtk.PositionType.BOTTOM)
             self.popovers[popover_id] = popover
         return self.popovers[popover_id]
@@ -1305,12 +1316,13 @@ class CatfishWindow(Window):
             self.show_results(n_results)
         except AttributeError:
             pass
-            
+
     def show_results(self, count):
         if count == 0:
             self.builder.get_object("results_scrolledwindow").hide()
             self.builder.get_object("splash").show()
-            self.builder.get_object("splash_title").set_text(_("No files found."))
+            self.builder.get_object(
+                "splash_title").set_text(_("No files found."))
             self.builder.get_object("splash_subtitle").set_text(
                 _("Try making your search less specific\nor try another directory."))
         else:
@@ -1396,7 +1408,7 @@ class CatfishWindow(Window):
         if os.path.isfile(thumbnail_path):
             return thumbnail_path
         if mime_type.startswith('image'):
-            if mime_type not in ["image/x-photoshop","image/svg+xml"]:
+            if mime_type not in ["image/x-photoshop", "image/svg+xml"]:
                 new_thumb = self.create_thumbnail(path, thumbnail_path)
                 if new_thumb:
                     return thumbnail_path
@@ -1537,13 +1549,14 @@ class CatfishWindow(Window):
                     path = surrogate_escape(path)
                     model.append([icon, displayed, size, path, modified,
                                   mimetype, hidden, exact])
-                                  
+
                     if not show_results:
                         if len(self.treeview.get_model()) > 0:
                             show_results = True
                             self.builder.get_object("splash").hide()
-                            self.builder.get_object("results_scrolledwindow").show()
-                            
+                            self.builder.get_object(
+                                "results_scrolledwindow").show()
+
                 except OSError:
                     # file no longer exists
                     pass

@@ -23,6 +23,7 @@ from . catfishconfig import get_version
 
 
 class AboutDialog(Gtk.AboutDialog):
+
     """Catfish AboutDialog"""
     __gtype_name__ = "AboutDialog"
 

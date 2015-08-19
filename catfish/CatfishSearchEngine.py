@@ -69,6 +69,7 @@ def string_regex(keywords, path):
 
 
 class CatfishSearchEngine:
+
     """CatfishSearchEngine is the collection of search backends that are used
     to perform a query.  Each backend is a CatfishSearchMethod"""
 
@@ -84,7 +85,8 @@ class CatfishSearchEngine:
         global engine_count
         engine_count += 1
         self.engine_id = engine_count
-        logger.debug("[%i] engine initializing with methods: %s", self.engine_id, str(methods))
+        logger.debug(
+            "[%i] engine initializing with methods: %s", self.engine_id, str(methods))
         self.methods = []
         if 'zeitgeist' in methods:
             if zeitgeist_support:
@@ -98,9 +100,10 @@ class CatfishSearchEngine:
         initialized = []
         for method in self.methods:
             initialized.append(method.method_name)
-        logger.debug("[%i] engine initialized with methods: %s", self.engine_id, str(initialized))
+        logger.debug(
+            "[%i] engine initialized with methods: %s", self.engine_id, str(initialized))
         self.start_time = 0.0
-        
+
     def __del__(self):
         logger.debug("[%i] engine destroyed", self.engine_id)
 
@@ -119,7 +122,7 @@ class CatfishSearchEngine:
         self.start_time = time.time()
         keywords = keywords.replace(',', ' ').strip().lower()
 
-        logger.debug("[%i] path: %s, keywords: %s, limit: %i, regex: %s", 
+        logger.debug("[%i] path: %s, keywords: %s, limit: %i, regex: %s",
                      self.engine_id, str(path), str(keywords), limit, str(regex))
 
         self.keywords = keywords
@@ -142,7 +145,8 @@ class CatfishSearchEngine:
 
         file_count = 0
         for method in self.methods:
-            logger.debug("[%i] Starting search method: %s", self.engine_id, method.method_name)
+            logger.debug(
+                "[%i] Starting search method: %s", self.engine_id, method.method_name)
             for filename in method.run(keywords, path, regex):
                 if isinstance(filename, str) and path in filename:
                     if method.method_name == 'fulltext' or  \
@@ -210,6 +214,7 @@ class CatfishSearchEngine:
 
 
 class CatfishSearchMethod:
+
     """The base CatfishSearchMethod class, to be inherited by defined
     methods."""
 
@@ -231,6 +236,7 @@ class CatfishSearchMethod:
 
 
 class CatfishSearchMethod_Walk(CatfishSearchMethod):
+
     """Search Method utilizing python 'os.walk'.  This is used as a replacement
     for the 'find' search method, which is difficult to interrupt and is slower
     than os.walk."""
@@ -269,6 +275,7 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
 
 
 class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
+
     """Search Method utilizing python 'os.walk' and 'file.readline'.  This is
     used as a replacement for the 'find' search method, which is difficult to
     interrupt and is slower than os.walk."""
@@ -360,8 +367,10 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
 
 
 class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
+
     """Search Method utilziing python's Zeitgeist integration.  This is used
     to provide the fastest results, usually benefitting search suggestions."""
+
     def __init__(self):
         """Initialize the Zeitgeist SearchMethod."""
         CatfishSearchMethod.__init__(self, "zeitgeist")
@@ -409,6 +418,7 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
 
 
 class CatfishSearchMethodExternal(CatfishSearchMethod):
+
     """The base CatfishSearchMethodExternal class, which is used for getting
     results from shell queries."""
 
@@ -474,7 +484,9 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
 
 
 class CatfishSearchMethod_Locate(CatfishSearchMethodExternal):
+
     """External Search Method utilizing the system command 'locate'."""
+
     def __init__(self):
         """Initialize the Locate SearchMethod."""
         CatfishSearchMethodExternal.__init__(self, "locate")

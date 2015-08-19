@@ -27,12 +27,12 @@ from . helpers import get_builder
 __builder__ = {
     # Builder name
     "ui_file": "CatfishWindow",
-    
+
     "window": {
         "main": "catfish_window",
         "sidebar": "catfish_window_sidebar",
     },
-    
+
     # Toolbar
     "toolbar": {
         "folderchooser": "toolbar_folderchooser",
@@ -42,7 +42,7 @@ __builder__ = {
             "thumbs": "toolbar_view_thumbnails"
         },
     },
-    
+
     # Menus
     "menus": {
         # Application (AppMenu)
@@ -62,12 +62,12 @@ __builder__ = {
             "delete": "file_menu_delete"
         }
     },
-    
+
     # Locate Infobar
     "infobar": {
         "infobar": "catfish_window_infobar"
     },
-    
+
     # Sidebar
     "sidebar": {
         "modified": {
@@ -93,13 +93,13 @@ __builder__ = {
             }
         }
     },
-    
+
     # Results Window
     "results": {
         "scrolled_window": "results_scrolledwindow",
         "treeview": "results_treeview"
     },
-    
+
     "dialogs": {
         # Custom Filetypes
         "filetype": {
@@ -115,14 +115,14 @@ __builder__ = {
                 "entry": "filetype_extension_entry"
             }
         },
-        
+
         # Custom Date Range
         "date": {
             "dialog": "date_dialog",
             "start_calendar": "date_start_calendar",
             "end_calendar": "date_end_calendar",
         },
-        
+
         # Update Search Index
         "update": {
             "dialog": "update_dialog",
@@ -139,6 +139,7 @@ __builder__ = {
 
 
 class Window(Gtk.Window):
+
     """This class is meant to be subclassed by CatfishWindow. It provides
     common functions and some boilerplate."""
     __gtype_name__ = "Window"
@@ -206,7 +207,7 @@ class Window(Gtk.Window):
 
         self.set_titlebar(headerbar)
         headerbar.show_all()
-        
+
         search.grab_focus()
 
     def on_mnu_about_activate(self, widget, data=None):

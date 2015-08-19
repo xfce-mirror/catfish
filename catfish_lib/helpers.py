@@ -73,7 +73,9 @@ def get_media_file(media_file_name):
 
 
 class NullHandler(logging.Handler):
+
     """NullHander class."""
+
     def emit(self, record):
         """Prohibit emission of signals."""
         pass

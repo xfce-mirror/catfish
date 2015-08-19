@@ -24,7 +24,9 @@ default_settings = {'show-hidden-files': False, 'show-sidebar': False}
 
 
 class CatfishSettings:
+
     """CatfishSettings rc-file management."""
+
     def __init__(self, settings_file=default_settings_file):
         """Initialize the CatfishSettings instance."""
         try:

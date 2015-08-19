@@ -35,6 +35,7 @@ import os
 
 
 class project_path_not_found(Exception):
+
     """Raised when we can't find the project directory."""
 
 

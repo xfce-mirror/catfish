@@ -37,6 +37,7 @@ from xml.etree.cElementTree import ElementTree
 # pylint: disable=R0904
 # the many public methods is a feature of Gtk.Builder
 class Builder(Gtk.Builder):
+
     ''' extra features
     connects glade defined handler to default_handler if necessary
     auto connects widget to handler with matching name or alias
@@ -158,16 +159,16 @@ class Builder(Gtk.Builder):
                 auto_connect_by_name(callback_obj, self)
 
         return result
-        
+
     def add_name_mapping(self, mapping):
         '''Add a mapping for use with get_named_object.'''
         self._mapping = mapping
-        
+
     def get_named_object(self, name):
         '''Retrieve the named object from the builder.'''
         if self._mapping is None:
             return None
-        
+
         item = self._mapping
         try:
             for segment in name.split('.'):
@@ -181,7 +182,9 @@ class Builder(Gtk.Builder):
 # this class deliberately does not provide any public interfaces
 # apart from the glade widgets
 class UiFactory():
+
     ''' provides an object with attributes as glade widgets'''
+
     def __init__(self, widget_dict):
         """Initialize the UiFactory instance."""
         self._widget_dict = widget_dict
