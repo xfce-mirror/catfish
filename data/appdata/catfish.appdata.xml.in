@@ -33,6 +33,13 @@
   </provides>
 
   <releases>
+    <release version="1.3.0" timestamp="1439949600">
+      <description>
+        <_p>This development release includes a significant UI refresh, improves
+        search speed, and fixes several bugs
+        </_p>
+      </description>
+    </release>
     <release version="1.2.2" timestamp="1411335000">
       <description>
         <_p>This release fixes two new bugs and includes updated translations.
