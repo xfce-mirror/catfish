@@ -20,11 +20,14 @@ __all__ = [
     'project_path_not_found',
     'get_data_file',
     'get_data_path',
+    'get_locate_db_path',
 ]
 
 # Where your project will look for your data (for instance, images and ui
 # files). By default, this is ../data, relative your trunk layout
 __catfish_data_directory__ = '../data/'
+# Location of locate.db file
+__locate_db_path__ = '/var/lib/mlocate/mlocate.db'
 __license__ = 'GPL-2'
 __version__ = '1.3.0'
 
@@ -62,6 +65,12 @@ def get_data_path():
         raise project_path_not_found
 
     return abs_data_path
+
+
+def get_locate_db_path():
+    """Return the location of the locate.db file
+    """
+    return __locate_db_path__
 
 
 def get_version():

@@ -11,8 +11,9 @@ v1.3.0:
  + Bug Fixes:
    - Photoshop and SVG thumbnail generation is now blacklisted since
      it resulted in less stability with recent library versions.
-   - Quit on Ctrl+Q (LP #1447045)
-   - Add GenericName to desktop file (LP #1476401)
+   - Quit on Ctrl+Q (LP: #1447045)
+   - Add GenericName to desktop file (LP: #1476401)
+   - Use the correct locate.db file (LP: #1480064)
 
 v1.2.2:
  + Fix typo in CatfishWindow.py (LP: #1372166)

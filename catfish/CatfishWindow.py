@@ -32,7 +32,7 @@ from gi.repository import Gdk, GdkPixbuf, GLib, GObject, Gtk, Pango
 
 from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishSearchEngine import *
-from catfish_lib import CatfishSettings, SudoDialog, Window, helpers
+from catfish_lib import catfishconfig, CatfishSettings, SudoDialog, Window, helpers
 
 logger = logging.getLogger('catfish')
 
@@ -229,7 +229,9 @@ class CatfishWindow(Window):
             locate, locate_path, locate_date = self.check_locate()
 
             self.update_index_database.set_label("<tt>%s</tt>" % locate_path)
-            if os.path.isfile(locate_path):
+            if not os.access(os.path.dirname(locate_path), os.R_OK):
+                modified = _("Unknown")
+            elif os.path.isfile(locate_path):
                 modified = locate_date.strftime("%x %X")
             else:
                 modified = _("Never")
@@ -525,8 +527,10 @@ class CatfishWindow(Window):
             return None
         path = os.path.realpath(path)
         locate = os.path.basename(path)
-        db = os.path.join('/var/lib', locate, locate + '.db')
-        if os.path.isfile(db):
+        db = catfishconfig.get_locate_db_path()
+        if not os.access(os.path.dirname(db), os.R_OK):
+            modified = time.time()
+        elif os.path.isfile(db):
             modified = os.path.getmtime(db)
         else:
             modified = 0
