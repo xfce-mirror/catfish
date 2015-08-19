@@ -12,7 +12,7 @@ v1.3.0:
    - Photoshop and SVG thumbnail generation is now blacklisted since
      it resulted in less stability with recent library versions.
    - Quit on Ctrl+Q (LP #1447045)
- + Notes:
+   - Add GenericName to desktop file (LP #1476401)
 
 v1.2.2:
  + Fix typo in CatfishWindow.py (LP: #1372166)
