@@ -116,12 +116,12 @@ class CatfishSearchEngine:
         This function is a generator.  With each filename reviewed, the
         filename is yielded if it matches the query.  False is also yielded
         afterwards to guarantee the interface does not lock up."""
-        self.start_time = time.clock()
+        self.start_time = time.time()
+        keywords = keywords.replace(',', ' ').strip().lower()
 
         logger.debug("[%i] path: %s, keywords: %s, limit: %i, regex: %s", 
                      self.engine_id, str(path), str(keywords), limit, str(regex))
 
-        keywords = keywords.replace(',', ' ')
         self.keywords = keywords
 
         wildcard_chunks = []
@@ -138,7 +138,7 @@ class CatfishSearchEngine:
         # Transform the keywords into a clean list.
         keys = []
         for key in keywords.split():
-            keys.append(key.rstrip().lstrip())
+            keys.append(key.strip())
 
         file_count = 0
         for method in self.methods:
@@ -146,7 +146,7 @@ class CatfishSearchEngine:
             for filename in method.run(keywords, path, regex):
                 if isinstance(filename, str) and path in filename:
                     if method.method_name == 'fulltext' or  \
-                            all(key.lower() in
+                            all(key in
                                 os.path.basename(filename).lower()
                                 for key in keys):
 
@@ -158,7 +158,7 @@ class CatfishSearchEngine:
                             filename = filename[:filename.index('?')]
 
                         # Remove whitespace from the filename.
-                        filename = filename.rstrip().lstrip()
+                        filename = filename.strip()
 
                         if len(wildcard_chunks) == 0 or \
                                 method.method_name == 'fulltext':
@@ -204,7 +204,7 @@ class CatfishSearchEngine:
         """Stop all running methods."""
         for method in self.methods:
             method.stop()
-        self.stop_time = time.clock()
+        self.stop_time = time.time()
         clock = self.stop_time - self.start_time
         logger.debug("[%i] Last query: %f seconds", self.engine_id, clock)
 
@@ -247,19 +247,15 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         True if still running."""
         self.running = True
         if isinstance(keywords, str):
-            keywords = keywords.replace(',', ' ')
-            keywords = keywords.split()
-        for root, dirs, files in os.walk(path):
+            keywords = keywords.replace(',', ' ').strip().split()
+        for root, dirs, files in os.walk(path, False):
             if not self.running:
                 break
-            for folder in dirs:
-                if any(keyword.lower() in folder.lower()
-                        for keyword in keywords):
-                    yield os.path.join(root, folder)
-            for filename in files:
-                if any(keyword.lower() in filename.lower()
-                        for keyword in keywords):
-                    yield os.path.join(root, filename)
+            paths = dirs + files
+            paths.sort()
+            for path in paths:
+                if any(keyword in path.lower() for keyword in keywords):
+                    yield os.path.join(root, path)
             yield True
         yield False
 
@@ -296,12 +292,11 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
         if not self.exact:
             # Split the keywords into a list if they are not already.
             if isinstance(keywords, str):
-                keywords = keywords.replace(',', ' ')
-                keywords = keywords.split()
+                keywords = keywords.replace(',', ' ').strip().split()
 
             for keyword in keywords:
-                if keyword.lower() not in find_keywords_backup:
-                    find_keywords_backup.append(keyword.lower())
+                if keyword not in find_keywords_backup:
+                    find_keywords_backup.append(keyword)
 
         # Start walking the folder structure.
         for root, dirs, files in os.walk(path):
@@ -331,7 +326,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                                         yield os.path.join(root, filename)
                                         break
                                 else:
-                                    if any(keyword.lower() in line.lower()
+                                    if any(keyword in line.lower()
                                             for keyword in keywords):
                                         found_keywords = []
                                         for find_keyword in find_keywords:
@@ -439,7 +434,7 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
         if regex:
             command = self.assemble_query(keywords, path)
         if not command:
-            command = [item.replace('%keywords', keywords.lower())
+            command = [item.replace('%keywords', keywords)
                        for item in self.command]
         command = [item.replace('%path', path) for item in command]
         self.process = subprocess.Popen(command, stdout=subprocess.PIPE,

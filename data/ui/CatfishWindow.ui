@@ -468,7 +468,7 @@
     <property name="title" translatable="yes">Catfish</property>
     <property name="window_position">center</property>
     <property name="default_width">760</property>
-    <property name="default_height">500</property>
+    <property name="default_height">520</property>
     <property name="icon_name">catfish</property>
     <signal name="key-press-event" handler="on_catfish_window_key_press_event" swapped="no"/>
     <signal name="window-state-event" handler="on_catfish_window_window_state_event" swapped="no"/>

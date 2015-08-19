@@ -1506,7 +1506,7 @@ class CatfishWindow(Window):
             self.search_engine = CatfishSearchEngine()
 
         for filename in self.search_engine.run(keywords, folder, regex=True):
-            if isinstance(filename, str) and not self.stop_search and \
+            if not self.stop_search and isinstance(filename, str) and \
                     filename not in results:
                 try:
                     path, name = os.path.split(filename)
@@ -1535,8 +1535,8 @@ class CatfishWindow(Window):
                                   mimetype, hidden, exact])
                                   
                     if not show_results:
-                        show_results = True
                         if len(self.treeview.get_model()) > 0:
+                            show_results = True
                             self.builder.get_object("splash").hide()
                             self.builder.get_object("results_scrolledwindow").show()
                             
