@@ -16,30 +16,28 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from locale import gettext as _
-
-from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, GLib, Pango
-
-from xml.sax.saxutils import escape
-from shutil import copy2, rmtree
-
-from calendar import timegm
 import datetime
-import time
-
-import mimetypes
 import hashlib
-import os
-
 import logging
-logger = logging.getLogger('catfish')
-
-from catfish_lib import Window, CatfishSettings, SudoDialog, helpers
-from catfish.AboutCatfishDialog import AboutCatfishDialog
-from catfish.CatfishSearchEngine import *
+import mimetypes
+import os
+import time
+from calendar import timegm
+from locale import gettext as _
+from shutil import copy2, rmtree
+from xml.sax.saxutils import escape
 
 import pexpect
-    
+from gi.repository import Gdk, GdkPixbuf, GLib, GObject, Gtk, Pango
+
+from catfish.AboutCatfishDialog import AboutCatfishDialog
+from catfish.CatfishSearchEngine import *
+from catfish_lib import CatfishSettings, SudoDialog, Window, helpers
+
+logger = logging.getLogger('catfish')
+
+
+
 
 # Initialize Gtk, GObject, and mimetypes
 if not helpers.check_gobject_version(3, 9, 1):
@@ -105,10 +103,8 @@ class CatfishWindow(Window):
                       'other': False, 'exact': False, 'hidden': False,
                       'fulltext': False}
 
-    filter_custom_mimetype = {'category_text': "", 'category_id': -1,
-                              'type_text': "", 'type_id': -1}
     filter_custom_extensions = []
-    filter_custom_use_mimetype = True
+    filter_custom_use_mimetype = False
 
     mimetypes = dict()
     search_in_progress = False
@@ -119,8 +115,6 @@ class CatfishWindow(Window):
         self.set_wmclass("Catfish", "Catfish")
 
         self.AboutDialog = AboutCatfishDialog
-        
-        
 
         # -- Folder Chooser Combobox -- #
         self.folderchooser = builder.get_named_object("toolbar.folderchooser")
@@ -259,17 +253,117 @@ class CatfishWindow(Window):
 
         self.selected_filenames = []
 
-        # Load the symbolic (or fallback) icons.
-        self.reload_symbolic_icons(self.icon_theme, builder)
-
-        # Update the symbolic icons when GTK or icon themes change.
-        self.icon_theme.connect("changed", self.reload_symbolic_icons, builder)
-        self.sidebar.get_style_context().connect("changed",
-                                                 self.reload_symbolic_icons,
-                                                 builder)
-
         self.settings = CatfishSettings.CatfishSettings()
         self.refresh_search_entry()
+
+        filetype_filters = builder.get_object("filetype_options")
+        filetype_filters.connect("row-activated", self.on_file_filters_changed, builder)
+
+        modified_filters = builder.get_object("modified_options")
+        modified_filters.connect("row-activated", self.on_modified_filters_changed, builder)
+
+        self.popovers = dict()
+
+        extension_filter = builder.get_object("filter_extensions")
+        extension_filter.connect("search-changed", self.on_filter_extensions_changed)
+
+        start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
+        end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
+        start_calendar.connect("day-selected", self.on_calendar_day_changed)
+
+        self.app_menu_event = False
+
+    def on_calendar_day_changed(self, widget):
+        start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
+        end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
+
+        start_date = start_calendar.get_date()
+        self.start_date = datetime.datetime(start_date[0], start_date[1] + 1,
+                                            start_date[2])
+
+        end_date = end_calendar.get_date()
+        self.end_date = datetime.datetime(end_date[0], end_date[1] + 1,
+                                          end_date[2])
+
+        self.filter_timerange = (timegm(self.start_date.timetuple()),
+                                 timegm(self.end_date.timetuple()))
+
+        self.refilter()
+
+    def on_application_menu_row_activated(self, listbox, row):
+        self.app_menu_event = not self.app_menu_event
+        if not self.app_menu_event:
+            return
+        if listbox.get_row_at_index(5) == row:
+            listbox.get_parent().hide()
+            self.on_menu_update_index_activate(row)
+        if listbox.get_row_at_index(6) == row:
+            listbox.get_parent().hide()
+            self.on_mnu_about_activate(row)
+
+    def on_file_filters_changed(self, treeview, path, column, builder):
+        model = treeview.get_model()
+        treeiter = model.get_iter(path)
+        row = model[treeiter]
+        showPopup = row[2] == "other" and row[5] == 0
+        if treeview.get_column(2) == column:
+            if row[5]:
+                popover = self.get_popover(row[2], builder)
+                popover.show_all()
+                return
+            else:
+                row[3], row[4] = row[4], row[3]
+        else:
+            row[3], row[4] = row[4], row[3]
+        if row[2] == 'other' or row[2] == 'custom': row[5] = row[3]
+        if showPopup and row[5]:
+            popover = self.get_popover(row[2], builder)
+            popover.show_all()
+        self.filter_formats[row[2]] = row[3]
+        self.refilter()
+
+    def get_popover(self, name, builder):
+        if name == "other":
+            popover_id = "filetype"
+        elif name == "custom":
+            popover_id = "modified"
+        else:
+            return False
+        if popover_id not in self.popovers.keys():
+            popover_content = builder.get_object(popover_id+"_popover")
+            popover = Gtk.Popover.new()
+            popover.connect("destroy", self.popover_content_destroy)
+            popover.add(builder.get_object(popover_id+"_popover"))
+            popover.set_relative_to(builder.get_object(name+"_helper"))
+            popover.set_position(Gtk.PositionType.BOTTOM)
+            self.popovers[popover_id] = popover
+        return self.popovers[popover_id]
+
+    def popover_content_destroy(self, widget):
+        widget.hide()
+        return False
+
+    def on_modified_filters_changed(self, treeview, path, column, builder):
+        model = treeview.get_model()
+        treeiter = model.get_iter(path)
+        selected = model[treeiter]
+        showPopup = selected[2] == "custom" and selected[5] == 0
+        treeiter = model.get_iter_first()
+        while treeiter:
+            row = model[treeiter]
+            row[3], row[4], row[5] = 0, 1, 0
+            treeiter = model.iter_next(treeiter)
+        selected[3], selected[4] = 1, 0
+        if selected[2] == "custom":
+            selected[5] = 1
+        if treeview.get_column(2) == column:
+            if selected[5]:
+                showPopup = True
+        if showPopup:
+            popover = self.get_popover(selected[2], builder)
+            popover.show_all()
+        self.set_modified_range(selected[2])
+        self.refilter()
 
     def on_update_infobar_response(self, widget, response_id):
         if response_id == Gtk.ResponseType.OK:
@@ -301,47 +395,6 @@ class CatfishWindow(Window):
         context.restore()
 
         return False
-
-    def reload_symbolic_icons(self, widget, builder):
-        """Reload the symbolic icons on GTK or icon theme change."""
-        # Modification Time icons
-        modified_icon = self.load_symbolic_icon('document-open-recent', 16)
-        for name in ['any', 'week', 'custom']:
-            widget = builder.get_named_object('sidebar.modified.icons.' + name)
-            widget.set_from_pixbuf(modified_icon)
-
-        # Configuration icons
-        settings_icon = self.load_symbolic_icon('document-properties', 16,
-                                                Gtk.StateFlags.INSENSITIVE)
-        self.modified_settings_image = \
-            builder.get_named_object('sidebar.modified.icons.options')
-        self.document_settings_image = \
-            builder.get_named_object('sidebar.filetype.icons.options')
-        self.modified_settings_image.set_from_pixbuf(settings_icon)
-        self.document_settings_image.set_from_pixbuf(settings_icon)
-
-        # File format icons
-        documents_icon = self.load_symbolic_icon('folder-documents', 16)
-        photos_icon = self.load_symbolic_icon('folder-pictures', 16)
-        music_icon = self.load_symbolic_icon('folder-music', 16)
-        videos_icon = self.load_symbolic_icon('folder-videos', 16)
-        apps_icon = self.load_symbolic_icon('applications-utilities', 16)
-        folder_icon = self.load_symbolic_icon('folder', 16)
-        custom_format_icon = self.load_symbolic_icon('list-add', 16)
-        builder.get_named_object('sidebar.filetype.icons.documents').\
-            set_from_pixbuf(documents_icon)
-        builder.get_named_object('sidebar.filetype.icons.photos').\
-            set_from_pixbuf(photos_icon)
-        builder.get_named_object('sidebar.filetype.icons.music').\
-            set_from_pixbuf(music_icon)
-        builder.get_named_object('sidebar.filetype.icons.videos').\
-            set_from_pixbuf(videos_icon)
-        builder.get_named_object('sidebar.filetype.icons.applications').\
-            set_from_pixbuf(apps_icon)
-        builder.get_named_object('sidebar.filetype.icons.custom').\
-            set_from_pixbuf(custom_format_icon)
-        builder.get_named_object('sidebar.filetype.icons.folders').\
-            set_from_pixbuf(folder_icon)
 
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
@@ -479,6 +532,13 @@ class CatfishWindow(Window):
             modified = 0
         item_date = datetime.datetime.fromtimestamp(modified)
         return (locate, db, item_date)
+
+    def on_filters_changed(self, box, row, user_data=None):
+        if row.is_selected():
+            box.unselect_row(row)
+        else:
+            box.select_row(row)
+        return True
 
     # -- Update Search Index dialog -- #
     def on_update_index_dialog_close(self, widget=None, event=None,
@@ -619,7 +679,6 @@ class CatfishWindow(Window):
         icon_name = "edit-find-symbolic"
         sensitive = True
         button_tooltip_text = None
-        entry_tooltip_text = _("Enter search terms and press Enter to begin.")
 
         # Search running
         if self.search_in_progress:
@@ -631,6 +690,7 @@ class CatfishWindow(Window):
         # Search not running
         else:
             entry_text = self.search_entry.get_text()
+            entry_tooltip_text = None
             # Search not running, value in terms
             if len(entry_text) > 0:
                 button_tooltip_text = _('Begin Search')
@@ -747,23 +807,21 @@ class CatfishWindow(Window):
     # -- Sidebar -- #
     def on_sidebar_toggle_toggled(self, widget):
         """Toggle visibility of the sidebar."""
-        active = widget.get_active()
+        if isinstance(widget, Gtk.CheckButton):
+            active = widget.get_active()
+        else:
+            active = not self.settings.get_setting('show-sidebar')
         self.settings.set_setting('show-sidebar', active)
+        if self.sidebar_toggle_menu.get_active() != active:
+            self.sidebar_toggle_menu.set_active(active)
         if active != self.sidebar.get_visible():
             self.sidebar.set_visible(active)
 
-    def on_radio_time_any_toggled(self, widget):
-        """Set the time range filter to allow for any modification time."""
-        if widget.get_active():
+    def set_modified_range(self, value):
+        if value == 'any':
             self.filter_timerange = (0.0, 9999999999.0)
             logger.debug("Time Range: Beginning of time -> Eternity")
-            self.refilter()
-
-    def on_radio_time_week_toggled(self, widget):
-        """Set the time range filter to allow for files modified since one week
-        ago until eternity (to account for newer files)."""
-        # Use one week ago for lower bounds, use eternity for upper.
-        if widget.get_active():
+        elif value == 'week':
             now = datetime.datetime.now()
             week = timegm((
                 datetime.datetime(now.year, now.month, now.day, 0, 0) -
@@ -772,15 +830,7 @@ class CatfishWindow(Window):
             logger.debug(
                 "Time Range: %s -> Eternity",
                 time.strftime("%x %X", time.gmtime(int(week))))
-            self.refilter()
-
-    def on_radio_time_custom_toggled(self, widget):
-        """Set the time range filter to the custom settings chosen in the date
-        chooser dialog."""
-        active = widget.get_active()
-        if active:
-            pixbuf = self.load_symbolic_icon('document-properties', 16)
-
+        elif value == 'custom':
             self.filter_timerange = (timegm(self.start_date.timetuple()),
                                      timegm(self.end_date.timetuple()))
             logger.debug(
@@ -789,56 +839,7 @@ class CatfishWindow(Window):
                               time.gmtime(int(self.filter_timerange[0]))),
                 time.strftime("%x %X",
                               time.gmtime(int(self.filter_timerange[1]))))
-
-            self.refilter()
-        else:
-            pixbuf = self.load_symbolic_icon('document-properties', 16,
-                                             Gtk.StateFlags.INSENSITIVE)
-
-        self.button_time_custom.set_sensitive(active)
-        self.modified_settings_image.set_from_pixbuf(pixbuf)
-
-    def on_button_time_custom_clicked(self, widget):
-        """Show the custom time range dialog."""
-        dialog = self.builder.get_named_object("dialogs.date.dialog")
-        start_calendar = self.builder.get_named_object("dialogs.date.start_calendar")
-        end_calendar = self.builder.get_named_object("dialogs.date.end_calendar")
-
-        dialog.show_all()
-        if dialog.run() == Gtk.ResponseType.APPLY:
-            # Update the time range filter values.
-            start_date = start_calendar.get_date()
-            self.start_date = datetime.datetime(start_date[0],
-                                                start_date[1] + 1,
-                                                start_date[2])
-
-            end_date = end_calendar.get_date()
-            self.end_date = datetime.datetime(end_date[0], end_date[1] + 1,
-                                              end_date[2])
-
-            self.filter_timerange = (timegm(self.start_date.timetuple()),
-                                     timegm(self.end_date.timetuple()))
-
-            logger.debug(
-                "Time Range: %s -> %s",
-                time.strftime("%x %X",
-                              time.gmtime(int(self.filter_timerange[0]))),
-                time.strftime("%x %X",
-                              time.gmtime(int(self.filter_timerange[1]))))
-
-            # Reload the results filter.
-            self.refilter()
-        else:
-            # Reset the calendar widgets to their previous values.
-            start_calendar.select_month(self.start_date.month - 1,
-                                        self.start_date.year)
-            start_calendar.select_day(self.start_date.day)
-
-            end_calendar.select_month(self.end_date.month - 1,
-                                      self.end_date.year)
-            end_calendar.select_day(self.end_date.day)
-
-        dialog.hide()
+        self.refilter()
 
     def on_calendar_today_button_clicked(self, calendar_widget):
         """Change the calendar widget selected date to today."""
@@ -853,146 +854,19 @@ class CatfishWindow(Window):
         logger.debug("File type filters updated: %s", str(self.filter_formats))
         self.refilter()
 
-    def on_documents_toggled(self, widget):
-        """Update search filter when documents is toggled."""
-        self.filter_format_toggled("documents", widget.get_active())
+    def on_filter_extensions_changed(self, widget):
+        """Update the results when the extensions filter changed."""
+        self.filter_custom_extensions = []
+        extensions = widget.get_text().replace(',', ' ')
+        for ext in extensions.split():
+            ext = ext.strip()
+            if len(ext) > 0:
+                if ext[0] != '.':
+                    ext = "." + ext
+                self.filter_custom_extensions.append(ext)
 
-    def on_folders_toggled(self, widget):
-        """Update search filter when folders is toggled."""
-        self.filter_format_toggled("folders", widget.get_active())
-
-    def on_images_toggled(self, widget):
-        """Update search filter when images is toggled."""
-        self.filter_format_toggled("images", widget.get_active())
-
-    def on_music_toggled(self, widget):
-        """Update search filter when music is toggled."""
-        self.filter_format_toggled("music", widget.get_active())
-
-    def on_videos_toggled(self, widget):
-        """Update search filter when videos is toggled."""
-        self.filter_format_toggled("videos", widget.get_active())
-
-    def on_applications_toggled(self, widget):
-        """Update search filter when applications is toggled."""
-        self.filter_format_toggled("applications", widget.get_active())
-
-    def on_other_format_toggled(self, widget):
-        """Update search filter when other format is toggled."""
-        active = widget.get_active()
-        self.filter_format_toggled("other", active)
-        self.button_format_custom.set_sensitive(active)
-        if active:
-            pixbuf = self.load_symbolic_icon('document-properties', 16)
-
-        else:
-            pixbuf = self.load_symbolic_icon('document-properties', 16,
-                                             Gtk.StateFlags.INSENSITIVE)
-        self.document_settings_image.set_from_pixbuf(pixbuf)
-
-    def on_button_format_custom_clicked(self, widget):
-        """Show the custom formats dialog."""
-        dialog = self.builder.get_named_object("dialogs.filetype.dialog")
-
-        radio_mimetypes = self.builder.get_named_object("dialogs.filetype.mimetypes.radio")
-        categories = self.builder.get_named_object("dialogs.filetype.mimetypes.categories")
-        types = self.builder.get_named_object("dialogs.filetype.mimetypes.types")
-
-        radio_extensions = self.builder.get_named_object("dialogs.filetype.extensions.radio")
-
-        # Lazily load the mimetypes.
-        if len(self.mimetypes) == 0:
-            mimes = list(mimetypes.types_map.values())
-            if not isinstance(mimes, list):
-                mimes = list(mimes)
-            mimes.sort()
-            for mime in mimes:
-                category, mimetype = str(mime).split("/")
-                if category not in list(self.mimetypes.keys()):
-                    self.mimetypes[category] = []
-                if mimetype not in self.mimetypes[category]:
-                    self.mimetypes[category].append(mimetype)
-
-            keys = list(self.mimetypes.keys())
-            if not isinstance(keys, list):
-                keys = list(keys)
-            keys.sort()
-            for category in keys:
-                categories.append_text(category)
-
-            types.remove_all()
-
-        # Load instance defaults.
-        if self.filter_custom_mimetype['category_id'] == -1:
-            categories.set_active(0)
-        else:
-            categories.set_active(self.filter_custom_mimetype['category_id'])
-        if self.filter_custom_mimetype['type_id'] == -1:
-            types.set_active(0)
-        else:
-            types.set_active(self.filter_custom_mimetype['type_id'])
-        extensions_str = ', '.join(self.filter_custom_extensions)
-        self.extensions_entry.set_text(extensions_str)
-
-        if self.filter_custom_use_mimetype:
-            radio_mimetypes.set_active(True)
-        else:
-            radio_extensions.set_active(True)
-
-        dialog.show_all()
-
-        if dialog.run() == Gtk.ResponseType.APPLY:
-            # Update filter settings and instance defaults.
-            self.filter_custom_mimetype = {
-                'category_text': categories.get_active_text(),
-                'category_id': categories.get_active(),
-                'type_text': types.get_active_text(),
-                'type_id': types.get_active()}
-
-            self.filter_custom_extensions = []
-            extensions = self.extensions_entry.get_text().replace(',', ' ')
-            for ext in extensions.split():
-                ext = ext.rstrip().lstrip()
-                if len(ext) > 0:
-                    if ext[0] != '.':
-                        ext = "." + ext
-                    self.filter_custom_extensions.append(ext)
-
-            self.filter_custom_use_mimetype = radio_mimetypes.get_active()
-
-            logger.debug(
-                "Updated file type settings:" +
-                "\n  Mimetype:     " + str(self.filter_custom_mimetype) +
-                "\n  Extensions:   " + str(self.filter_custom_extensions) +
-                "\n  Use mimetype: " + str(self.filter_custom_use_mimetype))
-
-            # Reload the results filter.
-            self.refilter()
-
-        dialog.hide()
-
-    def on_radio_custom_mimetype_toggled(self, widget):
-        """Make widgets sensitive when radio buttons are toggled."""
-        self.format_mimetype_box.set_sensitive(widget.get_active())
-
-    def on_radio_custom_extensions_toggled(self, widget):
-        """Make widgets sensitive when radio buttons are toggled."""
-        self.extensions_entry.set_sensitive(widget.get_active())
-
-    def on_mimetype_categories_changed(self, combobox):
-        """Update the mime subtypes when a different category is selected."""
-        types = self.builder.get_named_object("dialogs.filetype.mimetypes.types")
-
-        # Remove all existing rows.
-        types.remove_all()
-
-        # Add each mimetype.
-        if combobox.get_active() != -1:
-            for mime in self.mimetypes[combobox.get_active_text()]:
-                types.append_text(mime)
-
-        # Set the combobox to the first item.
-        types.set_active(0)
+        # Reload the results filter.
+        self.refilter()
 
     def open_file(self, filename):
         """Open the specified filename in its default application."""
@@ -1376,8 +1250,9 @@ class CatfishWindow(Window):
 
         # modified
         modified = model[iter][4]
-        if modified < self.filter_timerange[0] or \
-                modified > self.filter_timerange[1]:
+        if modified < self.filter_timerange[0]:
+            return False
+        if modified > self.filter_timerange[1]:
             return False
 
         # mimetype
@@ -1409,14 +1284,9 @@ class CatfishWindow(Window):
                 return True
         if self.filter_formats['other']:
             use_filters = True
-            if self.filter_custom_use_mimetype:
-                if mimetype == self.filter_custom_mimetype['category_text'] + \
-                        "/" + self.filter_custom_mimetype['type_text']:
-                    return True
-            else:
-                extension = os.path.splitext(model[iter][1])[1]
-                if extension in self.filter_custom_extensions:
-                    return True
+            extension = os.path.splitext(model[iter][1])[1]
+            if extension in self.filter_custom_extensions:
+                return True
 
         if use_filters:
             return False
@@ -1428,15 +1298,24 @@ class CatfishWindow(Window):
         try:
             self.results_filter.refilter()
             n_results = len(self.treeview.get_model())
-            if n_results == 0:
-                self.statusbar_label.set_label(_("No files found."))
-            elif n_results == 1:
-                self.statusbar_label.set_label(_("1 file found."))
-            else:
-                self.statusbar_label.set_label(
-                    _("%i files found.") % n_results)
+            self.show_results(n_results)
         except AttributeError:
             pass
+            
+    def show_results(self, count):
+        if count == 0:
+            self.builder.get_object("results_scrolledwindow").hide()
+            self.builder.get_object("splash").show()
+            self.builder.get_object("splash_title").set_text(_("No files found."))
+            self.builder.get_object("splash_subtitle").set_text(
+                _("Try making your search less specific\nor try another directory."))
+        else:
+            self.builder.get_object("splash").hide()
+            self.builder.get_object("results_scrolledwindow").show()
+            if count == 1:
+                self.statusbar_label.set_label(_("1 file found."))
+            else:
+                self.statusbar_label.set_label(_("%i files found.") % count)
 
     def format_size(self, size, precision=1):
         """Make a file size human readable."""
@@ -1513,9 +1392,10 @@ class CatfishWindow(Window):
         if os.path.isfile(thumbnail_path):
             return thumbnail_path
         if mime_type.startswith('image'):
-            new_thumb = self.create_thumbnail(path, thumbnail_path)
-            if new_thumb:
-                return thumbnail_path
+            if mime_type not in ["image/x-photoshop","image/svg+xml"]:
+                new_thumb = self.create_thumbnail(path, thumbnail_path)
+                if new_thumb:
+                    return thumbnail_path
         return self.get_file_icon(path, mime_type)
 
     def create_thumbnail(self, filename, path):
@@ -1576,6 +1456,14 @@ class CatfishWindow(Window):
         self.stop_search = False
 
         # Update the interface to Search Mode
+        self.builder.get_object("results_scrolledwindow").hide()
+        self.builder.get_object("splash").show()
+        self.builder.get_object("splash_title").set_text(_("Searching…"))
+        self.builder.get_object("splash_subtitle").set_text(
+            _("Results will be displayed as soon as they are found."))
+        self.builder.get_object("splash_hide").hide()
+        show_results = False
+
         self.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
         self.set_title(_("Searching for \"%s\"") % keywords)
         self.spinner.show()
@@ -1618,7 +1506,7 @@ class CatfishWindow(Window):
             self.search_engine = CatfishSearchEngine()
 
         for filename in self.search_engine.run(keywords, folder, regex=True):
-            if isinstance(filename, str) and not self.stop_search and \
+            if not self.stop_search and isinstance(filename, str) and \
                     filename not in results:
                 try:
                     path, name = os.path.split(filename)
@@ -1645,6 +1533,13 @@ class CatfishWindow(Window):
                     path = surrogate_escape(path)
                     model.append([icon, displayed, size, path, modified,
                                   mimetype, hidden, exact])
+                                  
+                    if not show_results:
+                        if len(self.treeview.get_model()) > 0:
+                            show_results = True
+                            self.builder.get_object("splash").hide()
+                            self.builder.get_object("results_scrolledwindow").show()
+                            
                 except OSError:
                     # file no longer exists
                     pass
@@ -1664,12 +1559,7 @@ class CatfishWindow(Window):
         n_results = 0
         if self.treeview.get_model() is not None:
             n_results = len(self.treeview.get_model())
-        if n_results == 0:
-            self.statusbar_label.set_label(_("No files found."))
-        elif n_results == 1:
-            self.statusbar_label.set_label(_("1 file found."))
-        else:
-            self.statusbar_label.set_label(_("%i files found.") % n_results)
+        self.show_results(n_results)
 
         self.search_in_progress = False
         self.refresh_search_entry()

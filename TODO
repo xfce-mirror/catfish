@@ -1,2 +1,12 @@
-Improve glade editing.  Where this update was based on quickly, glade has to be started as 'GLADE_CATALOG_SEARCH_PATH=./data/ui glade'
-    FIX: alias quickly_design='GLADE_CATALOG_SEARCH_PATH=./data/ui glade'
+Planned Features:
+* Better setup.py based installer
+* Optional CSD (Headerbars), configured by settings and build
+* Rename widgets for autopilot, including GtkWindow to CatfishWindow
+* Add support for Tracker
+* Allow editing of search methods used (locate, find, python-walk)
+* Install pkexec policy to run updatedb instead of own SudoDialog.
+  - Note that this will like require a new catfish-updatedb binary
+
+Other:
+* Improve glade editing. To edit the UI files, launch glade with:
+  'GLADE_CATALOG_SEARCH_PATH=./data/ui glade ./data/ui/*.ui'

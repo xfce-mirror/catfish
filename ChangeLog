@@ -1,3 +1,19 @@
+v1.3.0:
+ + This is a new development release.
+ + Features:
+   - Significant UI refresh. The buggy toolbar was CSD headerbars.
+     Sidebar was cleaned up and now more clearly indicates selected
+     options.
+   - Custom search dialogs were minimized, sped up, and replaced 
+     with Popover widgets.
+   - New splash screens were added for startup and when no files are
+     found.
+ + Bug Fixes:
+   - Photoshop and SVG thumbnail generation is now blacklisted since
+     it resulted in less stability with recent library versions.
+   - Quit on Ctrl+Q (LP #1447045)
+ + Notes:
+
 v1.2.2:
  + Fix typo in CatfishWindow.py (LP: #1372166)
  + Fix right-click activating previous item (LP: #1372165)
