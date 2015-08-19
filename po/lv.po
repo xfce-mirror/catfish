@@ -7,17 +7,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
 "PO-Revision-Date: 2013-06-22 10:48+0000\n"
 "Last-Translator: Rūdolfs Mazurs <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
-"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-09 06:08+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-19 05:50+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
+"Language: lv\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
 #: ../catfish/CatfishWindow.py:617
@@ -25,9 +25,8 @@ msgid "Catfish File Search"
 msgstr "Catfish datņu meklēšana"
 
 #: ../catfish.desktop.in.h:2
-#, fuzzy
 msgid "File search"
-msgstr "Catfish datņu meklēšana"
+msgstr ""
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -60,9 +59,8 @@ msgid "_Delete"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:8
-#, fuzzy
 msgid "File Extensions"
-msgstr "Ievadiet datnes paplašinājumu"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -73,9 +71,8 @@ msgid "Documents"
 msgstr "Dokumenti"
 
 #: ../data/ui/CatfishWindow.ui.h:11
-#, fuzzy
 msgid "documents"
-msgstr "Dokumenti"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
@@ -90,45 +87,40 @@ msgid "Images"
 msgstr "Attēli"
 
 #: ../data/ui/CatfishWindow.ui.h:15
-#, fuzzy
 msgid "images"
-msgstr "Attēli"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
 msgstr "Mūzika"
 
 #: ../data/ui/CatfishWindow.ui.h:17
-#, fuzzy
 msgid "music"
-msgstr "Mūzika"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
 msgstr "Video"
 
 #: ../data/ui/CatfishWindow.ui.h:19
-#, fuzzy
 msgid "videos"
-msgstr "Video"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "Lietotnes"
 
 #: ../data/ui/CatfishWindow.ui.h:21
-#, fuzzy
 msgid "applications"
-msgstr "Lietotnes"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "Citi"
 
 #: ../data/ui/CatfishWindow.ui.h:23
-#, fuzzy
 msgid "other"
-msgstr "Citi"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -143,9 +135,8 @@ msgid "This week"
 msgstr "Šajā nedēļā"
 
 #: ../data/ui/CatfishWindow.ui.h:27
-#, fuzzy
 msgid "week"
-msgstr "Šajā nedēļā"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "document-open-recent-symbolic"
@@ -156,9 +147,8 @@ msgid "Custom"
 msgstr "Pielāgots"
 
 #: ../data/ui/CatfishWindow.ui.h:30
-#, fuzzy
 msgid "custom"
-msgstr "Pielāgots"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Go to Today"
@@ -185,9 +175,8 @@ msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:37
-#, fuzzy
 msgid "File Type"
-msgstr "Pielāgots datņu tips"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "column"
@@ -231,14 +220,12 @@ msgid "Thumbnails"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:47
-#, fuzzy
 msgid "Show _Hidden Files"
-msgstr "_Slēptās datnes"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:48
-#, fuzzy
 msgid "Search File _Contents"
-msgstr "Meklēt datņu sistēmā"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Exact Match"
@@ -578,11 +565,8 @@ msgid ""
 "translatable and keyboard accelerators have been improved."
 msgstr ""
 
-#~ msgid "Custom Time Range"
-#~ msgstr "Pielāgots laika intervāls"
-
-#~ msgid "Select existing mimetype"
-#~ msgstr "Izvēlieties esošu mime tipu"
+#~ msgid "_Hidden Files"
+#~ msgstr "_Slēptās datnes"
 
 #~ msgid "_Fulltext Search"
 #~ msgstr "_Pilna teksta meklēšana"
@@ -590,14 +574,26 @@ msgstr ""
 #~ msgid "_Show Advanced Settings"
 #~ msgstr "Rādīt paplašināto_s iestatījumus"
 
+#~ msgid "Enter search terms and press ENTER"
+#~ msgstr "Ievadiet meklēšanas tekstu un spiediet ENTER"
+
 #~ msgid "<b>Modified</b>"
 #~ msgstr "<b>Mainīts</b>"
 
 #~ msgid "<b>File Type</b>"
 #~ msgstr "<b>Datnes tips</b>"
 
-#~ msgid "Enter search terms and press ENTER"
-#~ msgstr "Ievadiet meklēšanas tekstu un spiediet ENTER"
+#~ msgid "Custom Time Range"
+#~ msgstr "Pielāgots laika intervāls"
+
+#~ msgid "Custom File Type"
+#~ msgstr "Pielāgots datņu tips"
+
+#~ msgid "Select existing mimetype"
+#~ msgstr "Izvēlieties esošu mime tipu"
+
+#~ msgid "Enter file extensions"
+#~ msgstr "Ievadiet datnes paplašinājumu"
 
 #~ msgid "Update Search Index"
 #~ msgstr "Atjaunināt meklēšanas indeksu"

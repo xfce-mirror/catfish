@@ -6,17 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
 "PO-Revision-Date: 2015-03-06 13:13+0000\n"
 "Last-Translator: Emilio <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
-"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-09 06:08+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-19 05:50+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
 #: ../catfish/CatfishWindow.py:617
@@ -24,9 +23,8 @@ msgid "Catfish File Search"
 msgstr "Cerca de fitxers Catfish"
 
 #: ../catfish.desktop.in.h:2
-#, fuzzy
 msgid "File search"
-msgstr "Cerca de fitxers Catfish"
+msgstr ""
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -59,9 +57,8 @@ msgid "_Delete"
 msgstr "_Suprimeix"
 
 #: ../data/ui/CatfishWindow.ui.h:8
-#, fuzzy
 msgid "File Extensions"
-msgstr "Introduïu extensions de fitxer"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -72,63 +69,56 @@ msgid "Documents"
 msgstr "Documents"
 
 #: ../data/ui/CatfishWindow.ui.h:11
-#, fuzzy
 msgid "documents"
-msgstr "Documents"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
 msgstr "Carpetes"
 
 #: ../data/ui/CatfishWindow.ui.h:13
-#, fuzzy
 msgid "folders"
-msgstr "Carpetes"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
 msgstr "Imatges"
 
 #: ../data/ui/CatfishWindow.ui.h:15
-#, fuzzy
 msgid "images"
-msgstr "Imatges"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
 msgstr "Música"
 
 #: ../data/ui/CatfishWindow.ui.h:17
-#, fuzzy
 msgid "music"
-msgstr "Música"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
 msgstr "Vídeos"
 
 #: ../data/ui/CatfishWindow.ui.h:19
-#, fuzzy
 msgid "videos"
-msgstr "Vídeos"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "Aplicacions"
 
 #: ../data/ui/CatfishWindow.ui.h:21
-#, fuzzy
 msgid "applications"
-msgstr "Aplicacions"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "Altres"
 
 #: ../data/ui/CatfishWindow.ui.h:23
-#, fuzzy
 msgid "other"
-msgstr "Altres"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -143,9 +133,8 @@ msgid "This week"
 msgstr "Aquesta setmana"
 
 #: ../data/ui/CatfishWindow.ui.h:27
-#, fuzzy
 msgid "week"
-msgstr "Aquesta setmana"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "document-open-recent-symbolic"
@@ -156,9 +145,8 @@ msgid "Custom"
 msgstr "Personalitzat"
 
 #: ../data/ui/CatfishWindow.ui.h:30
-#, fuzzy
 msgid "custom"
-msgstr "Personalitzat"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Go to Today"
@@ -185,9 +173,8 @@ msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:37
-#, fuzzy
 msgid "File Type"
-msgstr "Tipus de fitxer personalitzat"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "column"
@@ -231,14 +218,12 @@ msgid "Thumbnails"
 msgstr "Miniatures"
 
 #: ../data/ui/CatfishWindow.ui.h:47
-#, fuzzy
 msgid "Show _Hidden Files"
-msgstr "Fitxers _ocults"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:48
-#, fuzzy
 msgid "Search File _Contents"
-msgstr "Cerca en el sistema de fitxers"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Exact Match"
@@ -578,26 +563,20 @@ msgid ""
 "translatable and keyboard accelerators have been improved."
 msgstr ""
 
-#~ msgid "Custom Time Range"
-#~ msgstr "Altre interval de temps"
-
-#~ msgid "Select existing mimetype"
-#~ msgstr "Trieu un tipus MIME existent"
-
 #~ msgid "_Fulltext Search"
 #~ msgstr "Cerca de tot el _text"
+
+#~ msgid "_Hidden Files"
+#~ msgstr "Fitxers _ocults"
 
 #~ msgid "_Show Advanced Settings"
 #~ msgstr "_Mostra paràmetres avançats"
 
-#~ msgid "<b>Modified</b>"
-#~ msgstr "<b>Modificat</b>"
+#~ msgid "Enter search terms and press ENTER"
+#~ msgstr "Introduïu termes de cerca i premeu Retorn"
 
 #~ msgid "<b>File Type</b>"
 #~ msgstr "<b>Tipus de fitxer</b>"
-
-#~ msgid "Enter search terms and press ENTER"
-#~ msgstr "Introduïu termes de cerca i premeu Retorn"
 
 #~ msgid "Last modified"
 #~ msgstr "Darrera modificació"
@@ -608,6 +587,9 @@ msgstr ""
 #~ msgid "Catfish could not find the default file manager."
 #~ msgstr "Catfish no ha pogut trobar el gestor de fitxers predeterminat."
 
+#~ msgid "<b>Modified</b>"
+#~ msgstr "<b>Modificat</b>"
+
 #~ msgid "Done."
 #~ msgstr "Fet"
 
@@ -616,6 +598,9 @@ msgstr ""
 
 #~ msgid "User aborted authentication."
 #~ msgstr "L’usuari ha interromput l’autenticació."
+
+#~ msgid "Custom Time Range"
+#~ msgstr "Altre interval de temps"
 
 #~ msgid "Update Search Index"
 #~ msgstr "Actualitza l’índex de la cerca"
@@ -634,3 +619,12 @@ msgstr ""
 
 #~ msgid "Updating database…"
 #~ msgstr "S’està actualitzant la base de dades…"
+
+#~ msgid "Custom File Type"
+#~ msgstr "Tipus de fitxer personalitzat"
+
+#~ msgid "Select existing mimetype"
+#~ msgstr "Trieu un tipus MIME existent"
+
+#~ msgid "Enter file extensions"
+#~ msgstr "Introduïu extensions de fitxer"

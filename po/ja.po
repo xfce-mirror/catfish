@@ -6,17 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
 "PO-Revision-Date: 2014-09-15 02:23+0000\n"
 "Last-Translator: Kiyotaka Nemoto <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
-"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-09 06:08+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-19 05:50+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
 #: ../catfish/CatfishWindow.py:617
@@ -24,9 +23,8 @@ msgid "Catfish File Search"
 msgstr "Catfish File Search"
 
 #: ../catfish.desktop.in.h:2
-#, fuzzy
 msgid "File search"
-msgstr "Catfish File Search"
+msgstr ""
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -59,9 +57,8 @@ msgid "_Delete"
 msgstr "削除(_D)"
 
 #: ../data/ui/CatfishWindow.ui.h:8
-#, fuzzy
 msgid "File Extensions"
-msgstr "拡張子を入力"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -72,63 +69,56 @@ msgid "Documents"
 msgstr "文書"
 
 #: ../data/ui/CatfishWindow.ui.h:11
-#, fuzzy
 msgid "documents"
-msgstr "文書"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
 msgstr "フォルダー"
 
 #: ../data/ui/CatfishWindow.ui.h:13
-#, fuzzy
 msgid "folders"
-msgstr "フォルダー"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
 msgstr "画像"
 
 #: ../data/ui/CatfishWindow.ui.h:15
-#, fuzzy
 msgid "images"
-msgstr "画像"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
 msgstr "音楽"
 
 #: ../data/ui/CatfishWindow.ui.h:17
-#, fuzzy
 msgid "music"
-msgstr "音楽"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
 msgstr "動画"
 
 #: ../data/ui/CatfishWindow.ui.h:19
-#, fuzzy
 msgid "videos"
-msgstr "動画"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "アプリケーション"
 
 #: ../data/ui/CatfishWindow.ui.h:21
-#, fuzzy
 msgid "applications"
-msgstr "アプリケーション"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "その他"
 
 #: ../data/ui/CatfishWindow.ui.h:23
-#, fuzzy
 msgid "other"
-msgstr "その他"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -143,9 +133,8 @@ msgid "This week"
 msgstr "今週"
 
 #: ../data/ui/CatfishWindow.ui.h:27
-#, fuzzy
 msgid "week"
-msgstr "今週"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "document-open-recent-symbolic"
@@ -156,9 +145,8 @@ msgid "Custom"
 msgstr "カスタム"
 
 #: ../data/ui/CatfishWindow.ui.h:30
-#, fuzzy
 msgid "custom"
-msgstr "カスタム"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Go to Today"
@@ -182,13 +170,11 @@ msgstr "アップデート"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr ""
-"検索データベースは７日以上更新されていません。今すぐアップデートしますか？"
+msgstr "検索データベースは７日以上更新されていません。今すぐアップデートしますか？"
 
 #: ../data/ui/CatfishWindow.ui.h:37
-#, fuzzy
 msgid "File Type"
-msgstr "カスタムファイルタイプ"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "column"
@@ -232,14 +218,12 @@ msgid "Thumbnails"
 msgstr "サムネイル"
 
 #: ../data/ui/CatfishWindow.ui.h:47
-#, fuzzy
 msgid "Show _Hidden Files"
-msgstr "隠しファイル(_H)"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:48
-#, fuzzy
 msgid "Search File _Contents"
-msgstr "ファイルシステムを検索"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Exact Match"
@@ -321,9 +305,7 @@ msgstr "全文検索"
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
-msgstr ""
-"パスと検索クエリが指定されているならば、プログラムが表示された時に検索を開始"
-"します。"
+msgstr "パスと検索クエリが指定されているならば、プログラムが表示された時に検索を開始します。"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -538,12 +520,9 @@ msgid ""
 "date, file type, and file contents, users will no longer be dependent on the "
 "file manager or organization skills."
 msgstr ""
-"Catfishは軽量で速いにもかかわらず強力なファイル検索ユーティリティーです。イン"
-"ターフェースは検索結果に重点を起いた最小限な構成となっており、ユーザーがファ"
-"イルマネージャーを使わずにフィルを見つけることを助けます。ファイルの変更日、"
-"ファイルタイプ、ファイルの内容といった強力なフィルターがあることによって、"
-"ユーザーはファイルマネージャーやファイルの整理スキルに頼る必要がなくなりま"
-"す。"
+"Catfishは軽量で速いにもかかわらず強力なファイル検索ユーティリティーです。インターフェースは検索結果に重点を起いた最小限な構成となっており、ユーザー"
+"がファイルマネージャーを使わずにフィルを見つけることを助けます。ファイルの変更日、ファイルタイプ、ファイルの内容といった強力なフィルターがあることによって"
+"、ユーザーはファイルマネージャーやファイルの整理スキルに頼る必要がなくなります。"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid ""
@@ -567,9 +546,8 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
-"このリリースでは複数のキーワードでの検索ができなくなっていた問題を解決しまし"
-"た。検索データベースが古くなると情報バーが表示されるようにもなり、データベー"
-"スのアップデートについてのダイアログも改善されました。"
+"このリリースでは複数のキーワードでの検索ができなくなっていた問題を解決しました。検索データベースが古くなると情報バーが表示されるようにもなり、データベース"
+"のアップデートについてのダイアログも改善されました。"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid ""
@@ -582,16 +560,13 @@ msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
-"この安定版のリリースでは、パスワードダイアログの信頼性を改善し、未使用のコー"
-"ドを削除し、リスト選択とアイテム選択に関する潜在的な問題を修正しました。"
+"この安定版のリリースでは、パスワードダイアログの信頼性を改善し、未使用のコードを削除し、リスト選択とアイテム選択に関する潜在的な問題を修正しました。"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:9
 msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
-msgstr ""
-"このリリースでは、起動時の潜在的なセキュリティの問題を修正しました。また、複"
-"数項目の選択に関する問題についても修正しました。"
+msgstr "このリリースでは、起動時の潜在的なセキュリティの問題を修正しました。また、複数項目の選択に関する問題についても修正しました。"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:10
 msgid ""
@@ -601,37 +576,41 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
-"1.0.xシリーズの最初のリリースでは、インターフェースを刷新し、長年あったバグを"
-"修正しました。デフォルトのパーミッションを改善したことでディストリビューショ"
-"ン用のパッケージングの際に出る警告が減りました。アクセシビリティも強化され、"
-"すべての文字列が翻訳可能となり、キーボードショートカットも改善されました。"
-
-#~ msgid "Custom Time Range"
-#~ msgstr "期間指定"
-
-#~ msgid "Select existing mimetype"
-#~ msgstr "既存のMIMEタイプを選択"
-
-#~ msgid "_Fulltext Search"
-#~ msgstr "全文検索(_F)"
-
-#~ msgid "_Show Advanced Settings"
-#~ msgstr "詳細設定(_S)"
-
-#~ msgid "<b>Modified</b>"
-#~ msgstr "<b>変更日時</b>"
-
-#~ msgid "<b>File Type</b>"
-#~ msgstr "<b>ファイルタイプ</b>"
-
-#~ msgid "Enter search terms and press Enter to begin."
-#~ msgstr "検索ワードを入力し、Enterを押してください。"
+"1.0.xシリーズの最初のリリースでは、インターフェースを刷新し、長年あったバグを修正しました。デフォルトのパーミッションを改善したことでディストリビュー"
+"ション用のパッケージングの際に出る警告が減りました。アクセシビリティも強化され、すべての文字列が翻訳可能となり、キーボードショートカットも改善されました。"
 
 #~ msgid "Done."
 #~ msgstr "完了"
 
+#~ msgid "_Show Advanced Settings"
+#~ msgstr "詳細設定(_S)"
+
+#~ msgid "_Fulltext Search"
+#~ msgstr "全文検索(_F)"
+
+#~ msgid "_Hidden Files"
+#~ msgstr "隠しファイル(_H)"
+
+#~ msgid "<b>Modified</b>"
+#~ msgstr "<b>変更日時</b>"
+
 #~ msgid "Enter search terms and press ENTER"
 #~ msgstr "語句を入れてEnterを押して下さい"
+
+#~ msgid "<b>File Type</b>"
+#~ msgstr "<b>ファイルタイプ</b>"
+
+#~ msgid "Custom File Type"
+#~ msgstr "カスタムファイルタイプ"
+
+#~ msgid "Custom Time Range"
+#~ msgstr "期間指定"
+
+#~ msgid "Enter file extensions"
+#~ msgstr "拡張子を入力"
+
+#~ msgid "Select existing mimetype"
+#~ msgstr "既存のMIMEタイプを選択"
 
 #~ msgid "Update Search Index"
 #~ msgstr "検索インデックスの更新"

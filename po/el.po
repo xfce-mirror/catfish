@@ -6,17 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
 "PO-Revision-Date: 2014-07-25 08:15+0000\n"
 "Last-Translator: krometis <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
-"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-09 06:08+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-19 05:50+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
 #: ../catfish/CatfishWindow.py:617
@@ -24,9 +23,8 @@ msgid "Catfish File Search"
 msgstr "Αναζήτηση αρχείων Catfish"
 
 #: ../catfish.desktop.in.h:2
-#, fuzzy
 msgid "File search"
-msgstr "Αναζήτηση αρχείων Catfish"
+msgstr ""
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -71,63 +69,56 @@ msgid "Documents"
 msgstr "Έγγραφα"
 
 #: ../data/ui/CatfishWindow.ui.h:11
-#, fuzzy
 msgid "documents"
-msgstr "Έγγραφα"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
 msgstr "Φάκελοι"
 
 #: ../data/ui/CatfishWindow.ui.h:13
-#, fuzzy
 msgid "folders"
-msgstr "Φάκελοι"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
 msgstr "Εικόνες"
 
 #: ../data/ui/CatfishWindow.ui.h:15
-#, fuzzy
 msgid "images"
-msgstr "Εικόνες"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
 msgstr "Μουσική"
 
 #: ../data/ui/CatfishWindow.ui.h:17
-#, fuzzy
 msgid "music"
-msgstr "Μουσική"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
 msgstr "Βίντεο"
 
 #: ../data/ui/CatfishWindow.ui.h:19
-#, fuzzy
 msgid "videos"
-msgstr "Βίντεο"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "Εφαρμογές"
 
 #: ../data/ui/CatfishWindow.ui.h:21
-#, fuzzy
 msgid "applications"
-msgstr "Εφαρμογές"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "Άλλο"
 
 #: ../data/ui/CatfishWindow.ui.h:23
-#, fuzzy
 msgid "other"
-msgstr "Άλλο"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -142,9 +133,8 @@ msgid "This week"
 msgstr "Αυτήν την εβδομάδα"
 
 #: ../data/ui/CatfishWindow.ui.h:27
-#, fuzzy
 msgid "week"
-msgstr "Αυτήν την εβδομάδα"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "document-open-recent-symbolic"
@@ -155,9 +145,8 @@ msgid "Custom"
 msgstr "Προσαρμοσμένη"
 
 #: ../data/ui/CatfishWindow.ui.h:30
-#, fuzzy
 msgid "custom"
-msgstr "Προσαρμοσμένη"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Go to Today"
@@ -184,9 +173,8 @@ msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:37
-#, fuzzy
 msgid "File Type"
-msgstr "<b>Τύπος Αρχείου</b>"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "column"
@@ -230,14 +218,12 @@ msgid "Thumbnails"
 msgstr "Μικρογραφίες"
 
 #: ../data/ui/CatfishWindow.ui.h:47
-#, fuzzy
 msgid "Show _Hidden Files"
-msgstr "_Κρυφά αρχεία"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:48
-#, fuzzy
 msgid "Search File _Contents"
-msgstr "Αναζήτηση στο σύστημα αρχείων"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Exact Match"
@@ -576,15 +562,6 @@ msgstr ""
 #~ msgid "Custom Time Range"
 #~ msgstr "Προσαρμοσμένο εύρος χρόνου"
 
-#~ msgid "_Fulltext Search"
-#~ msgstr "_Αναζήτηση πλήρους κειμένου"
-
-#~ msgid "_Show Advanced Settings"
-#~ msgstr "_Εμφάνιση ρυθμίσεων για προχωρημένους"
-
-#~ msgid "<b>Modified</b>"
-#~ msgstr "<b>τροποποιημένο</b>"
-
 #~ msgid "Done."
 #~ msgstr "Ολοκληρώθηκε."
 
@@ -606,3 +583,18 @@ msgstr ""
 
 #~ msgid "Locate database updated successfully."
 #~ msgstr "Η βάση δεδομένων εντοπισμού ενημερώθηκε με επιτυχία."
+
+#~ msgid "_Show Advanced Settings"
+#~ msgstr "_Εμφάνιση ρυθμίσεων για προχωρημένους"
+
+#~ msgid "_Fulltext Search"
+#~ msgstr "_Αναζήτηση πλήρους κειμένου"
+
+#~ msgid "_Hidden Files"
+#~ msgstr "_Κρυφά αρχεία"
+
+#~ msgid "<b>Modified</b>"
+#~ msgstr "<b>τροποποιημένο</b>"
+
+#~ msgid "<b>File Type</b>"
+#~ msgstr "<b>Τύπος Αρχείου</b>"

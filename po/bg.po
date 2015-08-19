@@ -6,17 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
 "PO-Revision-Date: 2015-02-16 20:16+0000\n"
 "Last-Translator: cybercop <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
-"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-09 06:08+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-19 05:50+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
 #: ../catfish/CatfishWindow.py:617
@@ -24,9 +23,8 @@ msgid "Catfish File Search"
 msgstr "Търсене на файлове Catfish"
 
 #: ../catfish.desktop.in.h:2
-#, fuzzy
 msgid "File search"
-msgstr "Търсене на файлове Catfish"
+msgstr ""
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -59,9 +57,8 @@ msgid "_Delete"
 msgstr "_Изтриване"
 
 #: ../data/ui/CatfishWindow.ui.h:8
-#, fuzzy
 msgid "File Extensions"
-msgstr "Въведете разширението на файла"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -72,63 +69,56 @@ msgid "Documents"
 msgstr "Документи"
 
 #: ../data/ui/CatfishWindow.ui.h:11
-#, fuzzy
 msgid "documents"
-msgstr "Документи"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
 msgstr "Папки"
 
 #: ../data/ui/CatfishWindow.ui.h:13
-#, fuzzy
 msgid "folders"
-msgstr "Папки"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
 msgstr "Изображения"
 
 #: ../data/ui/CatfishWindow.ui.h:15
-#, fuzzy
 msgid "images"
-msgstr "Изображения"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
 msgstr "Музика"
 
 #: ../data/ui/CatfishWindow.ui.h:17
-#, fuzzy
 msgid "music"
-msgstr "Музика"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
 msgstr "Видеозаписи"
 
 #: ../data/ui/CatfishWindow.ui.h:19
-#, fuzzy
 msgid "videos"
-msgstr "Видеозаписи"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "Приложения"
 
 #: ../data/ui/CatfishWindow.ui.h:21
-#, fuzzy
 msgid "applications"
-msgstr "Приложения"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "Друго"
 
 #: ../data/ui/CatfishWindow.ui.h:23
-#, fuzzy
 msgid "other"
-msgstr "Друго"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -143,9 +133,8 @@ msgid "This week"
 msgstr "Тази седмица"
 
 #: ../data/ui/CatfishWindow.ui.h:27
-#, fuzzy
 msgid "week"
-msgstr "Тази седмица"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "document-open-recent-symbolic"
@@ -156,9 +145,8 @@ msgid "Custom"
 msgstr "Потребителски"
 
 #: ../data/ui/CatfishWindow.ui.h:30
-#, fuzzy
 msgid "custom"
-msgstr "Потребителски"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Go to Today"
@@ -186,9 +174,8 @@ msgstr ""
 "Базата за търсене не е актуализирана повече от 7 дни. Актуализиране сега ?"
 
 #: ../data/ui/CatfishWindow.ui.h:37
-#, fuzzy
 msgid "File Type"
-msgstr "Изберете вида на файла"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "column"
@@ -232,14 +219,12 @@ msgid "Thumbnails"
 msgstr "Миниатюри"
 
 #: ../data/ui/CatfishWindow.ui.h:47
-#, fuzzy
 msgid "Show _Hidden Files"
-msgstr "_Скрити файлове"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:48
-#, fuzzy
 msgid "Search File _Contents"
-msgstr "Търсене във файловата система"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Exact Match"
@@ -583,17 +568,11 @@ msgid ""
 "translatable and keyboard accelerators have been improved."
 msgstr ""
 
-#~ msgid "Custom Time Range"
-#~ msgstr "Изберете времеви период"
-
-#~ msgid "Select existing mimetype"
-#~ msgstr "Изберете съществуващ MIME тип"
-
 #~ msgid "_Fulltext Search"
 #~ msgstr "_Полнотекстно търсене"
 
-#~ msgid "_Show Advanced Settings"
-#~ msgstr "Покажи _разширените настройки"
+#~ msgid "_Hidden Files"
+#~ msgstr "_Скрити файлове"
 
 #~ msgid "<b>Modified</b>"
 #~ msgstr "<b>Променен</b>"
@@ -601,8 +580,14 @@ msgstr ""
 #~ msgid "<b>File Type</b>"
 #~ msgstr "<b>Вид на файла</b>"
 
-#~ msgid "Enter search terms and press Enter to begin."
-#~ msgstr "Въведете търсеният израз и натиснете Enter за стартиране"
+#~ msgid "Custom File Type"
+#~ msgstr "Изберете вида на файла"
+
+#~ msgid "Custom Time Range"
+#~ msgstr "Изберете времеви период"
+
+#~ msgid "Enter file extensions"
+#~ msgstr "Въведете разширението на файла"
 
 #~ msgid "Done."
 #~ msgstr "Готово."
@@ -630,3 +615,9 @@ msgstr ""
 
 #~ msgid "Catfish could not find the default file manager."
 #~ msgstr "Catfish не може да намери файловият мениджър по подразбиране"
+
+#~ msgid "Select existing mimetype"
+#~ msgstr "Изберете съществуващ MIME тип"
+
+#~ msgid "_Show Advanced Settings"
+#~ msgstr "Покажи _разширените настройки"

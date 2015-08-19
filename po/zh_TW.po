@@ -6,17 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
 "PO-Revision-Date: 2013-09-06 02:00+0000\n"
 "Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-09 06:08+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-19 05:50+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
 #: ../catfish/CatfishWindow.py:617
@@ -24,9 +23,8 @@ msgid "Catfish File Search"
 msgstr "Catfish 檔案搜尋"
 
 #: ../catfish.desktop.in.h:2
-#, fuzzy
 msgid "File search"
-msgstr "Catfish 檔案搜尋"
+msgstr ""
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -59,9 +57,8 @@ msgid "_Delete"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:8
-#, fuzzy
 msgid "File Extensions"
-msgstr "輸入檔案延伸檔名"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -72,63 +69,56 @@ msgid "Documents"
 msgstr "文件"
 
 #: ../data/ui/CatfishWindow.ui.h:11
-#, fuzzy
 msgid "documents"
-msgstr "文件"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
 msgstr "資料夾"
 
 #: ../data/ui/CatfishWindow.ui.h:13
-#, fuzzy
 msgid "folders"
-msgstr "資料夾"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
 msgstr "圖片"
 
 #: ../data/ui/CatfishWindow.ui.h:15
-#, fuzzy
 msgid "images"
-msgstr "圖片"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
 msgstr "音樂"
 
 #: ../data/ui/CatfishWindow.ui.h:17
-#, fuzzy
 msgid "music"
-msgstr "音樂"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
 msgstr "影片"
 
 #: ../data/ui/CatfishWindow.ui.h:19
-#, fuzzy
 msgid "videos"
-msgstr "影片"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "應用程式"
 
 #: ../data/ui/CatfishWindow.ui.h:21
-#, fuzzy
 msgid "applications"
-msgstr "應用程式"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "其他"
 
 #: ../data/ui/CatfishWindow.ui.h:23
-#, fuzzy
 msgid "other"
-msgstr "其他"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -143,9 +133,8 @@ msgid "This week"
 msgstr "本週"
 
 #: ../data/ui/CatfishWindow.ui.h:27
-#, fuzzy
 msgid "week"
-msgstr "本週"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "document-open-recent-symbolic"
@@ -156,9 +145,8 @@ msgid "Custom"
 msgstr "自訂"
 
 #: ../data/ui/CatfishWindow.ui.h:30
-#, fuzzy
 msgid "custom"
-msgstr "自訂"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Go to Today"
@@ -185,9 +173,8 @@ msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:37
-#, fuzzy
 msgid "File Type"
-msgstr "自訂檔案類别"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "column"
@@ -231,14 +218,12 @@ msgid "Thumbnails"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:47
-#, fuzzy
 msgid "Show _Hidden Files"
-msgstr "隱藏檔案(_H)"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:48
-#, fuzzy
 msgid "Search File _Contents"
-msgstr "搜尋檔案系統"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Exact Match"
@@ -578,24 +563,6 @@ msgid ""
 "translatable and keyboard accelerators have been improved."
 msgstr ""
 
-#~ msgid "Custom Time Range"
-#~ msgstr "自訂時間範圍"
-
-#~ msgid "Select existing mimetype"
-#~ msgstr "選取現有MIME類型"
-
-#~ msgid "_Fulltext Search"
-#~ msgstr "全文搜尋(_F)"
-
-#~ msgid "_Show Advanced Settings"
-#~ msgstr "顯示進階設定(_S)"
-
-#~ msgid "<b>Modified</b>"
-#~ msgstr "<b>最後修改時間</b>"
-
-#~ msgid "<b>File Type</b>"
-#~ msgstr "<b>檔案類型</b>"
-
 #~ msgid "Update Search Index"
 #~ msgstr "更新搜尋索引"
 
@@ -605,14 +572,41 @@ msgstr ""
 #~ msgid "Locate database updated successfully."
 #~ msgstr "成功更新 locate 資料庫。"
 
+#~ msgid "<b>File Type</b>"
+#~ msgstr "<b>檔案類型</b>"
+
 #~ msgid "Done."
 #~ msgstr "完成。"
 
 #~ msgid "Last modified"
 #~ msgstr "最後修改時間"
 
+#~ msgid "_Fulltext Search"
+#~ msgstr "全文搜尋(_F)"
+
+#~ msgid "_Hidden Files"
+#~ msgstr "隱藏檔案(_H)"
+
+#~ msgid "_Show Advanced Settings"
+#~ msgstr "顯示進階設定(_S)"
+
+#~ msgid "<b>Modified</b>"
+#~ msgstr "<b>最後修改時間</b>"
+
 #~ msgid "Enter search terms and press ENTER"
 #~ msgstr "輸入要搜尋的東西並按「Enter」"
+
+#~ msgid "Custom File Type"
+#~ msgstr "自訂檔案類别"
+
+#~ msgid "Custom Time Range"
+#~ msgstr "自訂時間範圍"
+
+#~ msgid "Enter file extensions"
+#~ msgstr "輸入檔案延伸檔名"
+
+#~ msgid "Select existing mimetype"
+#~ msgstr "選取現有MIME類型"
 
 #~ msgid "<big><b>Update Search Index</b></big>"
 #~ msgstr "<big><b>更新搜尋索引</b></big>"

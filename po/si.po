@@ -6,17 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
 "PO-Revision-Date: 2014-06-15 17:26+0000\n"
 "Last-Translator: Poorni <Poorni.dayananda@gmail.com>\n"
 "Language-Team: Sinhalese <si@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-09 06:08+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-19 05:50+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
 #: ../catfish/CatfishWindow.py:617
@@ -24,9 +23,8 @@ msgid "Catfish File Search"
 msgstr "කැට් ෆිෂ් ලිපි ගොනු සෙවීම"
 
 #: ../catfish.desktop.in.h:2
-#, fuzzy
 msgid "File search"
-msgstr "කැට් ෆිෂ් ලිපි ගොනු සෙවීම"
+msgstr ""
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -59,9 +57,8 @@ msgid "_Delete"
 msgstr "කපා ඉවත් කරන්න"
 
 #: ../data/ui/CatfishWindow.ui.h:8
-#, fuzzy
 msgid "File Extensions"
-msgstr "ලිපිගොනු දීර්ඝ කිරීම් ඇතුලත් කිරීම"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -72,63 +69,56 @@ msgid "Documents"
 msgstr "ලියකියවිලි"
 
 #: ../data/ui/CatfishWindow.ui.h:11
-#, fuzzy
 msgid "documents"
-msgstr "ලියකියවිලි"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
 msgstr "පත්‍රිකා"
 
 #: ../data/ui/CatfishWindow.ui.h:13
-#, fuzzy
 msgid "folders"
-msgstr "පත්‍රිකා"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
 msgstr "පින්තූර"
 
 #: ../data/ui/CatfishWindow.ui.h:15
-#, fuzzy
 msgid "images"
-msgstr "පින්තූර"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
 msgstr "සංගීතය"
 
 #: ../data/ui/CatfishWindow.ui.h:17
-#, fuzzy
 msgid "music"
-msgstr "සංගීතය"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
 msgstr "වීඩියෝ"
 
 #: ../data/ui/CatfishWindow.ui.h:19
-#, fuzzy
 msgid "videos"
-msgstr "වීඩියෝ"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "යෙදුම්"
 
 #: ../data/ui/CatfishWindow.ui.h:21
-#, fuzzy
 msgid "applications"
-msgstr "යෙදුම්"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "වෙනත්"
 
 #: ../data/ui/CatfishWindow.ui.h:23
-#, fuzzy
 msgid "other"
-msgstr "වෙනත්"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -143,9 +133,8 @@ msgid "This week"
 msgstr "මේ සතිය"
 
 #: ../data/ui/CatfishWindow.ui.h:27
-#, fuzzy
 msgid "week"
-msgstr "මේ සතිය"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "document-open-recent-symbolic"
@@ -156,9 +145,8 @@ msgid "Custom"
 msgstr "භාවිතය"
 
 #: ../data/ui/CatfishWindow.ui.h:30
-#, fuzzy
 msgid "custom"
-msgstr "භාවිතය"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Go to Today"
@@ -185,9 +173,8 @@ msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:37
-#, fuzzy
 msgid "File Type"
-msgstr "ලිපිගොනු වර්ග භාවිතය"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "column"
@@ -231,14 +218,12 @@ msgid "Thumbnails"
 msgstr "සංක්ෂිප්තයන්"
 
 #: ../data/ui/CatfishWindow.ui.h:47
-#, fuzzy
 msgid "Show _Hidden Files"
-msgstr "සැඟවු ලිපි ගොනු"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:48
-#, fuzzy
 msgid "Search File _Contents"
-msgstr "ලිපි ගොනු පද්ධතිය සෙවීම"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Exact Match"
@@ -574,24 +559,6 @@ msgid ""
 "translatable and keyboard accelerators have been improved."
 msgstr ""
 
-#~ msgid "Custom Time Range"
-#~ msgstr "භාවිත කාල පරාසය"
-
-#~ msgid "Select existing mimetype"
-#~ msgstr "පවතින අනුකාර වර්ග තෝරා ගැනීම"
-
-#~ msgid "_Fulltext Search"
-#~ msgstr "සම්පුර්ණ අකුරු සෙවීම"
-
-#~ msgid "_Show Advanced Settings"
-#~ msgstr "උසස් පසුතල පෙන්වීම"
-
-#~ msgid "<b>Modified</b>"
-#~ msgstr "<b>විකරණය කළ</b>"
-
-#~ msgid "<b>File Type</b>"
-#~ msgstr "<b>ලිපිගොනු වර්ගය</b>"
-
 #~ msgid "Done."
 #~ msgstr "නිම කළා."
 
@@ -607,11 +574,35 @@ msgstr ""
 #~ msgid "Last modified"
 #~ msgstr "අවසාන වෙනස් කළ දිනය"
 
+#~ msgid "_Hidden Files"
+#~ msgstr "සැඟවු ලිපි ගොනු"
+
+#~ msgid "_Fulltext Search"
+#~ msgstr "සම්පුර්ණ අකුරු සෙවීම"
+
+#~ msgid "_Show Advanced Settings"
+#~ msgstr "උසස් පසුතල පෙන්වීම"
+
 #~ msgid "Enter search terms and press ENTER"
 #~ msgstr "සෙවීම් නියම ඇතුලත් කරන්න සහ \"ඇතුලත් කිරීම\"   ඔබන්න"
 
+#~ msgid "<b>File Type</b>"
+#~ msgstr "<b>ලිපිගොනු වර්ගය</b>"
+
+#~ msgid "Custom Time Range"
+#~ msgstr "භාවිත කාල පරාසය"
+
+#~ msgid "Custom File Type"
+#~ msgstr "ලිපිගොනු වර්ග භාවිතය"
+
 #~ msgid "Update Search Index"
 #~ msgstr "සෙවුම් දර්ශකය යාවත්කාලීන කිරීම"
+
+#~ msgid "Enter file extensions"
+#~ msgstr "ලිපිගොනු දීර්ඝ කිරීම් ඇතුලත් කිරීම"
+
+#~ msgid "Select existing mimetype"
+#~ msgstr "පවතින අනුකාර වර්ග තෝරා ගැනීම"
 
 #~ msgid "<big><b>Update Search Index</b></big>"
 #~ msgstr "<big><b>සෙවුම් දර්ශකය යාවත්කාලීන කිරීම/b></big>"
@@ -621,8 +612,8 @@ msgstr ""
 #~ "refreshed.\n"
 #~ "This requires sudo (admin) rights."
 #~ msgstr ""
-#~ "නිවැරදි ප්‍රතිඑල සැපයීමට  <i>locate</i> පරිගණක දත්ත ගබඩාව නැවත ප්‍රාණවත් කිරීම අවශ්‍යය "
-#~ "වේ. sudo (පරිපාලක) අයිතීන් මෙයට අවශ්‍ය වේ."
+#~ "නිවැරදි ප්‍රතිඑල සැපයීමට  <i>locate</i> පරිගණක දත්ත ගබඩාව නැවත ප්‍රාණවත් "
+#~ "කිරීම අවශ්‍යය වේ. sudo (පරිපාලක) අයිතීන් මෙයට අවශ්‍ය වේ."
 
 #~ msgid "An error occurred while updating locatedb."
 #~ msgstr "ස්ථාන ගත කල පරිගණක දත්ත ගබඩාව යාවත්කාලීන කරන අතරතුර වරදක් සිදු වි ඇත"
@@ -632,6 +623,9 @@ msgstr ""
 
 #~ msgid "Catfish could not find the default file manager."
 #~ msgstr "කැට් ෆිෂ් මෘදුකාංගයට අමතර ගොනු කළමනාකරණය සොයා ගත නොහැක"
+
+#~ msgid "<b>Modified</b>"
+#~ msgstr "<b>විකරණය කළ</b>"
 
 #~ msgid "Updating database…"
 #~ msgstr "දත්ත ගබඩාව යාවත්කාලීන කිරීම"
