@@ -612,29 +612,31 @@ class CatfishWindow(Window):
         self.update_index_active = True
 
         # Get the password for sudo
-        sudo_dialog = SudoDialog.SudoDialog(parent=self.update_index_dialog,
-                                            icon='catfish',
-                                            name=_("Catfish File Search"),
-                                            retries=3)
-        response = sudo_dialog.run()
-        sudo_dialog.hide()
-        password = sudo_dialog.get_password()
-        sudo_dialog.destroy()
+        if not SudoDialog.passwordless_sudo():
+            sudo_dialog = SudoDialog.SudoDialog(
+                parent=self.update_index_dialog,
+                icon='catfish',
+                name=_("Catfish File Search"),
+                retries=3)
+            response = sudo_dialog.run()
+            sudo_dialog.hide()
+            password = sudo_dialog.get_password()
+            sudo_dialog.destroy()
 
-        if response in [Gtk.ResponseType.NONE, Gtk.ResponseType.CANCEL]:
-            self.update_index_active = False
-            self.show_update_status_infobar(2)
-            return False
+            if response in [Gtk.ResponseType.NONE, Gtk.ResponseType.CANCEL]:
+                self.update_index_active = False
+                self.show_update_status_infobar(2)
+                return False
 
-        elif response == Gtk.ResponseType.REJECT:
-            self.update_index_active = False
-            self.show_update_status_infobar(3)
-            return False
+            elif response == Gtk.ResponseType.REJECT:
+                self.update_index_active = False
+                self.show_update_status_infobar(3)
+                return False
 
-        if not password:
-            self.update_index_active = False
-            self.show_update_status_infobar(2)
-            return False
+            if not password:
+                self.update_index_active = False
+                self.show_update_status_infobar(2)
+                return False
 
         # Subprocess to check if query has completed yet, runs at end of func.
         def updatedb_subprocess():

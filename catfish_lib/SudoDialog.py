@@ -21,6 +21,7 @@ import os
 
 from locale import gettext as _
 
+import subprocess
 import pexpect
 
 gtk_version = (Gtk.get_major_version(),
@@ -84,6 +85,13 @@ def env_spawn(command, timeout):
         child = pexpect.spawn(command)
     child.timeout = timeout
     return child
+
+
+def passwordless_sudo():
+    """Return true if no password required to use sudo."""
+    if subprocess.call(["sudo", "-n", "true"]) == 1:
+        return True
+    return False
 
 
 class SudoDialog(Gtk.Dialog):
