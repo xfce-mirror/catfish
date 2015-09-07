@@ -21,7 +21,6 @@ import os
 
 from locale import gettext as _
 
-import subprocess
 import pexpect
 
 gtk_version = (Gtk.get_major_version(),
@@ -89,9 +88,9 @@ def env_spawn(command, timeout):
 
 def passwordless_sudo():
     """Return true if no password required to use sudo."""
-    if subprocess.call(["sudo", "-n", "true"]) == 1:
-        return True
-    return False
+    p = env_spawn("sudo -n true", 2)
+    p.close()
+    return p.exitstatus == 1
 
 
 class SudoDialog(Gtk.Dialog):
@@ -218,8 +217,6 @@ class SudoDialog(Gtk.Dialog):
 
         self.attempted_logins = 0
         self.max_attempted_logins = retries
-
-        self.show_all()
 
     def on_password_changed(self, widget, button):
         """Set the apply button sensitivity based on password input."""

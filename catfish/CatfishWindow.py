@@ -618,6 +618,7 @@ class CatfishWindow(Window):
                 icon='catfish',
                 name=_("Catfish File Search"),
                 retries=3)
+            sudo_dialog.show_all()
             response = sudo_dialog.run()
             sudo_dialog.hide()
             password = sudo_dialog.get_password()
