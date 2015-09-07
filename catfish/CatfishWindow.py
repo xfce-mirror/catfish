@@ -280,6 +280,7 @@ class CatfishWindow(Window):
         end_calendar = self.builder.get_named_object(
             "dialogs.date.end_calendar")
         start_calendar.connect("day-selected", self.on_calendar_day_changed)
+        end_calendar.connect("day-selected", self.on_calendar_day_changed)
 
         self.app_menu_event = False
 
