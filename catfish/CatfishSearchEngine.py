@@ -42,6 +42,11 @@ try:
 except Exception:
     zeitgeist_support = False
 
+if subprocess.call(['which', 'locate']) == 0:
+    locate_support = True
+else:
+    locate_support = False
+
 
 def string_regex(keywords, path):
     """Returns a string with the regular expression containing all combinations
@@ -92,7 +97,8 @@ class CatfishSearchEngine:
             if zeitgeist_support:
                 self.add_method(CatfishSearchMethod_Zeitgeist)
         if 'locate' in methods:
-            self.add_method(CatfishSearchMethod_Locate)
+            if locate_support:
+                self.add_method(CatfishSearchMethod_Locate)
         if 'fulltext' in methods:
             self.add_method(CatfishSearchMethod_Fulltext)
         if 'walk' in methods:
