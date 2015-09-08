@@ -24,6 +24,8 @@ from . helpers import get_builder
 
 from locale import gettext as _
 
+from catfish_lib import CatfishSettings
+
 
 # GtkBuilder Mappings
 __builder__ = {
@@ -182,13 +184,10 @@ class Window(Gtk.Window):
 
         self.sidebar = builder.get_named_object("window.sidebar")
 
-        self.setup_headerbar()
-
-    def setup_headerbar(self):
-        headerbar = Gtk.HeaderBar.new()
-        headerbar.set_show_close_button(True)
-
+        # Widgets
+        # Folder Chooser
         chooser = self.builder.get_named_object("toolbar.folderchooser")
+        # Search
         search = self.builder.get_named_object("toolbar.search")
 
         # AppMenu
@@ -197,11 +196,22 @@ class Window(Gtk.Window):
         image = Gtk.Image.new_from_icon_name("emblem-system-symbolic",
                                              Gtk.IconSize.MENU)
         button.set_image(image)
-
         popover = Gtk.Popover.new(button)
         appmenu = self.builder.get_named_object("menus.application.menu")
         popover.add(appmenu)
         button.set_popover(popover)
+
+        settings = CatfishSettings.CatfishSettings()
+        if settings.get_setting('use-headerbar'):
+            self.setup_headerbar(chooser, search, button)
+        else:
+            self.setup_toolbar(chooser, search, button)
+
+        search.grab_focus()
+
+    def setup_headerbar(self, chooser, search, button):
+        headerbar = Gtk.HeaderBar.new()
+        headerbar.set_show_close_button(True)
 
         headerbar.pack_start(chooser)
         headerbar.set_title(_("Catfish"))
@@ -211,7 +221,28 @@ class Window(Gtk.Window):
         self.set_titlebar(headerbar)
         headerbar.show_all()
 
-        search.grab_focus()
+    def setup_toolbar(self, chooser, search, button):
+        toolbar = Gtk.Toolbar.new()
+
+        toolitem = Gtk.ToolItem.new()
+        toolitem.add(chooser)
+        toolitem.set_margin_right(6)
+        toolbar.insert(toolitem, 0)
+
+        toolitem = Gtk.ToolItem.new()
+        toolitem.add(search)
+        search.set_hexpand(True)
+        toolitem.set_expand(True)
+        toolitem.set_margin_right(6)
+        toolbar.insert(toolitem, 1)
+
+        toolitem = Gtk.ToolItem.new()
+        toolitem.add(button)
+        toolbar.insert(toolitem, 2)
+
+        self.get_children()[0].pack_start(toolbar, False, False, 0)
+        self.get_children()[0].reorder_child(toolbar, 0)
+        toolbar.show_all()
 
     def on_mnu_about_activate(self, widget, data=None):
         """Display the about box for catfish."""

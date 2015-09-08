@@ -20,7 +20,11 @@ import os
 
 default_settings_file = os.path.join(os.getenv('HOME'),
                                      '.config/catfish/catfish.rc')
-default_settings = {'show-hidden-files': False, 'show-sidebar': False}
+default_settings = {
+    'use-headerbar': True,
+    'show-hidden-files': False,
+    'show-sidebar': False
+}
 
 
 class CatfishSettings:
