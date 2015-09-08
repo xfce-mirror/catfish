@@ -1497,7 +1497,7 @@ class CatfishWindow(Window):
             Gtk.main_iteration()
 
         # icon, name, size, path, modified, mimetype, hidden, exact
-        model = Gtk.ListStore(str, str, GObject.TYPE_LONG,
+        model = Gtk.ListStore(str, str, GObject.TYPE_INT64,
                               str, float, str, bool, bool)
 
         # Initialize the results filter.
