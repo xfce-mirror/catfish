@@ -22,6 +22,8 @@ logger = logging.getLogger('catfish_lib')
 
 from . helpers import get_builder
 
+from locale import gettext as _
+
 
 # GtkBuilder Mappings
 __builder__ = {
@@ -202,6 +204,7 @@ class Window(Gtk.Window):
         button.set_popover(popover)
 
         headerbar.pack_start(chooser)
+        headerbar.set_title(_("Catfish"))
         headerbar.set_custom_title(search)
         headerbar.pack_end(button)
 
