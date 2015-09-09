@@ -1,3 +1,15 @@
+v1.3.1:
+ + This is a new development release.
+ + Features:
+   - Optional headerbars (enabled by default). 
+     Adjust the "use-headerbar" setting to change.
+ + Bug Fixes:
+   - Support for passwordless sudo (LP: #1395720)
+   - Detect availability of locate, disable if unavailable (LP: #1482919)
+   - Fix lookup of files over 2GB on 32bit installations (LP: #1442559)
+   - Fix broken modification date filter
+   - Set the window title to correctly display in window lists
+
 v1.3.0:
  + This is a new development release.
  + Features:
