@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
-"PO-Revision-Date: 2015-03-05 10:24+0000\n"
-"Last-Translator: Jouni \"rautamiekka\" Järvinen <Unknown>\n"
+"PO-Revision-Date: 2015-09-11 23:53+0000\n"
+"Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-20 05:54+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-09-12 05:31+0000\n"
+"X-Generator: Launchpad (build 17720)\n"
 "Language: fi\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
@@ -25,7 +25,7 @@ msgstr "Catfish-tiedostohaku"
 
 #: ../catfish.desktop.in.h:2
 msgid "File search"
-msgstr ""
+msgstr "Tiedostojen haku"
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -59,11 +59,11 @@ msgstr "_Poista tiedosto"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr ""
+msgstr "Tiedostopäätteet"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
-msgstr ""
+msgstr "odt, png, txt"
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
@@ -71,7 +71,7 @@ msgstr "Asiakirjat"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "documents"
-msgstr ""
+msgstr "asiakirjat"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
@@ -79,7 +79,7 @@ msgstr "Kansiot"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "folders"
-msgstr ""
+msgstr "kansiot"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
@@ -87,7 +87,7 @@ msgstr "Kuvat"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "images"
-msgstr ""
+msgstr "kuvat"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
@@ -95,7 +95,7 @@ msgstr "Musiikki"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "music"
-msgstr ""
+msgstr "musiikki"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
@@ -103,7 +103,7 @@ msgstr "Videot"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "videos"
-msgstr ""
+msgstr "videot"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
@@ -111,7 +111,7 @@ msgstr "Sovellukset"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "applications"
-msgstr ""
+msgstr "sovellukset"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
@@ -119,7 +119,7 @@ msgstr "Muu"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "other"
-msgstr ""
+msgstr "muut"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -127,7 +127,7 @@ msgstr "Koska tahansa"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "any"
-msgstr ""
+msgstr "mitä tahansa"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
@@ -135,7 +135,7 @@ msgstr "Tällä viikolla"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "week"
-msgstr ""
+msgstr "viikko"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "document-open-recent-symbolic"
@@ -147,7 +147,7 @@ msgstr "Mukautettu"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "custom"
-msgstr ""
+msgstr "mukautettu"
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Go to Today"
@@ -175,11 +175,11 @@ msgstr "Hakutietokanta on yli 7 päivää vanha. Päivitetäänkö se nyt?"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "File Type"
-msgstr ""
+msgstr "Tiedostotyyppi"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "column"
-msgstr ""
+msgstr "sarake"
 
 #: ../data/ui/CatfishWindow.ui.h:39 ../catfish/CatfishWindow.py:1050
 msgid "Modified"
@@ -190,21 +190,21 @@ msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr ""
+msgstr "Syötä hakusi yllä olevaan kenttään löytääksesi tiedostot"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "or click the "
-msgstr ""
+msgstr "tai napsauta "
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
-msgstr ""
+msgstr " -kuvaketta saadaksesi lisätietoja."
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "Select a Directory"
@@ -220,11 +220,11 @@ msgstr "Pikkukuvat"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Show _Hidden Files"
-msgstr ""
+msgstr "Näytä _piilotiedostot"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "Search File _Contents"
-msgstr ""
+msgstr "Hae _tiedostojen sisällöistä"
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Exact Match"
@@ -232,7 +232,7 @@ msgstr "_Tarkka osuma"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "Show _Sidebar"
-msgstr ""
+msgstr "Näytä _sivupalkki"
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid "_Update Search Index…"
@@ -319,7 +319,7 @@ msgstr "%s (virheellinen merkistökoodaus)"
 
 #: ../catfish/CatfishWindow.py:236
 msgid "Unknown"
-msgstr ""
+msgstr "Tuntematon"
 
 #: ../catfish/CatfishWindow.py:240
 msgid "Never"
@@ -441,6 +441,8 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
+"Yritä tehdä haustasi vähemmän yksityiskohtainen\n"
+"tai yritä toista hakemistoa."
 
 #: ../catfish/CatfishWindow.py:1332
 msgid "1 file found."
@@ -461,7 +463,7 @@ msgstr "Haetaan…"
 
 #: ../catfish/CatfishWindow.py:1479
 msgid "Results will be displayed as soon as they are found."
-msgstr ""
+msgstr "Tulokset näytetään heti kun niitä löydetään."
 
 #: ../catfish/CatfishWindow.py:1484
 #, python-format

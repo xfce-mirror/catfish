@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
-"PO-Revision-Date: 2015-03-07 19:01+0000\n"
-"Last-Translator: Alfonso <admin@alfonsomh.eu>\n"
+"PO-Revision-Date: 2015-09-11 21:39+0000\n"
+"Last-Translator: Eugenio González <eugeagb@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-20 05:54+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-09-12 05:31+0000\n"
+"X-Generator: Launchpad (build 17720)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
 #: ../catfish/CatfishWindow.py:617
@@ -24,7 +24,7 @@ msgstr "Buscador de archivos Catfish"
 
 #: ../catfish.desktop.in.h:2
 msgid "File search"
-msgstr ""
+msgstr "Búsqueda de archivos"
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -32,7 +32,7 @@ msgstr "Buscar en el sistema de archivos"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
-msgstr "Catfish es una herramienta versátil para busqueda de archivos"
+msgstr "Catfish es una herramienta versátil para búsqueda de archivos."
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
@@ -58,11 +58,11 @@ msgstr "_Eliminar"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr ""
+msgstr "Extensiones de archivo"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
-msgstr ""
+msgstr "odt, png, txt"
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
@@ -70,7 +70,7 @@ msgstr "Documentos"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "documents"
-msgstr ""
+msgstr "documentos"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
@@ -78,7 +78,7 @@ msgstr "Carpetas"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "folders"
-msgstr ""
+msgstr "carpetas"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
@@ -86,7 +86,7 @@ msgstr "Imágenes"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "images"
-msgstr ""
+msgstr "imágenes"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
@@ -94,7 +94,7 @@ msgstr "Música"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "music"
-msgstr ""
+msgstr "música"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
@@ -102,7 +102,7 @@ msgstr "Vídeos"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "videos"
-msgstr ""
+msgstr "vídeos"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
@@ -110,7 +110,7 @@ msgstr "Aplicaciones"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "applications"
-msgstr ""
+msgstr "aplicaciones"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
@@ -118,7 +118,7 @@ msgstr "Otro"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "other"
-msgstr ""
+msgstr "otro"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -134,7 +134,7 @@ msgstr "Esta semana"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "week"
-msgstr ""
+msgstr "semana"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "document-open-recent-symbolic"
@@ -146,7 +146,7 @@ msgstr "Personalizado"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "custom"
-msgstr ""
+msgstr "personalizado"
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Go to Today"
@@ -176,11 +176,11 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "File Type"
-msgstr ""
+msgstr "Tipo de archivo"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "column"
-msgstr ""
+msgstr "columna"
 
 #: ../data/ui/CatfishWindow.ui.h:39 ../catfish/CatfishWindow.py:1050
 msgid "Modified"
@@ -221,7 +221,7 @@ msgstr "Miniaturas"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Show _Hidden Files"
-msgstr ""
+msgstr "Mostrar archivos _ocultos"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "Search File _Contents"
@@ -233,7 +233,7 @@ msgstr "Coincidencia _exacta"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "Show _Sidebar"
-msgstr ""
+msgstr "Mostrar barra _lateral"
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid "_Update Search Index…"
@@ -261,7 +261,7 @@ msgstr "<b>Actualizar:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:57
 msgid "<big><b>Update Search Database</b></big>"
-msgstr "<big><b>Actualizar la base de datos para la busqueda</b></big>"
+msgstr "<big><b>Actualizar la base de datos para la búsqueda</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:58
 msgid ""
@@ -308,7 +308,7 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
-"Sí se proveé un directorio y una consulta , inicia la búsqueda cuando la "
+"Si se provee un directorio y una consulta , inicia la búsqueda cuando la "
 "aplicación se muestra."
 
 #. Translators: this text is displayed next to
