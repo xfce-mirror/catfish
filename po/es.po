@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
-"PO-Revision-Date: 2015-09-11 21:39+0000\n"
-"Last-Translator: Eugenio González <eugeagb@gmail.com>\n"
+"PO-Revision-Date: 2015-09-13 08:27+0000\n"
+"Last-Translator: Alfonso <admin@alfonsomh.eu>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-12 05:31+0000\n"
+"X-Launchpad-Export-Date: 2015-09-14 05:55+0000\n"
 "X-Generator: Launchpad (build 17720)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
@@ -126,7 +126,7 @@ msgstr "En cualquier momento"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "any"
-msgstr ""
+msgstr "cualquiera"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
@@ -191,7 +191,7 @@ msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr ""
+msgstr "Introduzca su consulta arriba para encontrar sus archivos"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgctxt ""
@@ -320,7 +320,7 @@ msgstr "%s (codif. no válida)"
 
 #: ../catfish/CatfishWindow.py:236
 msgid "Unknown"
-msgstr ""
+msgstr "Desconocido"
 
 #: ../catfish/CatfishWindow.py:240
 msgid "Never"
