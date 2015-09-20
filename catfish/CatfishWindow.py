@@ -85,13 +85,24 @@ def surrogate_escape(text, replace=False):
     return text
 
 
+def get_thumbnails_directory():
+    '''Return the thumbnail directory for the current user.'''
+    try:
+        major, minor, micro = GLib.glib_version
+        if (major >= 2 and minor >= 34):
+            print os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
+        else:
+            print os.path.join(GLib.get_home_dir(), '.thumbnails/')
+    except:
+        pass
+    return os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
+
+
 # See catfish_lib.Window.py for more details about how this class works
 class CatfishWindow(Window):
 
     """The application window."""
     __gtype_name__ = "CatfishWindow"
-
-    folder_thumbnails = os.path.expanduser('~/.thumbnails/')
 
     filter_timerange = (0.0, 9999999999.0)
     start_date = datetime.datetime.now()
@@ -1402,7 +1413,8 @@ class CatfishWindow(Window):
 
     def get_thumbnail(self, path, mime_type=None):
         """Try to fetch a thumbnail."""
-        thumbnails_directory = os.path.expanduser('~/.thumbnails/normal')
+        thumbnails_directory = os.path.join(get_thumbnails_directory(),
+                                            'normal')
         uri = 'file://' + path
         if helpers.check_python_version(3, 0):
             uri = uri.encode('utf-8')
