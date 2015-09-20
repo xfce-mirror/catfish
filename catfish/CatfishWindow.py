@@ -90,12 +90,12 @@ def get_thumbnails_directory():
     try:
         major, minor, micro = GLib.glib_version
         if (major >= 2 and minor >= 34):
-            print os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
+            thumbs = os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
         else:
-            print os.path.join(GLib.get_home_dir(), '.thumbnails/')
+            thumbs = os.path.join(GLib.get_home_dir(), '.thumbnails/')
     except:
-        pass
-    return os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
+        thumbs = os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
+    return thumbs
 
 
 # See catfish_lib.Window.py for more details about how this class works
