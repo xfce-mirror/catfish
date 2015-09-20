@@ -1,7 +1,15 @@
+v1.3.2:
+ + This is a new (minor) development release.
+ + Bug Fixes:
+   - Use correct thumbnails directory based on GLib version (LP: #1495098)
+   - Unmark icon name for translation
+ + Translation Updates:
+   - German, Finnish, French, Polish, Portuguese, Spanish
+
 v1.3.1:
  + This is a new development release.
  + Features:
-   - Optional headerbars (enabled by default). 
+   - Optional headerbars (enabled by default).
      Adjust the "use-headerbar" setting to change.
  + Bug Fixes:
    - Support for passwordless sudo (LP: #1395720)
@@ -16,7 +24,7 @@ v1.3.0:
    - Significant UI refresh. The buggy toolbar was CSD headerbars.
      Sidebar was cleaned up and now more clearly indicates selected
      options.
-   - Custom search dialogs were minimized, sped up, and replaced 
+   - Custom search dialogs were minimized, sped up, and replaced
      with Popover widgets.
    - New splash screens were added for startup and when no files are
      found.

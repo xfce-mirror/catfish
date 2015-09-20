@@ -33,6 +33,13 @@
   </provides>
 
   <releases>
+    <release version="1.3.2" timestamp="1442779200">
+      <description>
+        <_p>This development release now detects the correct thumbnails
+        directory to use and includes updated translations.
+        </_p>
+      </description>
+    </release>
     <release version="1.3.1" timestamp="1441846800">
       <description>
         <_p>This development release adds a new setting to use toggle headerbars
