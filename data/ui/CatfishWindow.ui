@@ -257,7 +257,7 @@
         <col id="5">False</col>
       </row>
       <row>
-        <col id="0" translatable="yes">document-open-recent-symbolic</col>
+        <col id="0">document-open-recent-symbolic</col>
         <col id="1" translatable="yes">Custom</col>
         <col id="2" translatable="yes">custom</col>
         <col id="3">False</col>
