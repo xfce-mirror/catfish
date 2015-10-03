@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
-"PO-Revision-Date: 2015-09-28 18:01+0000\n"
+"PO-Revision-Date: 2015-10-02 14:24+0000\n"
 "Last-Translator: Michael Misirlis <mmisirlis@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-29 06:04+0000\n"
-"X-Generator: Launchpad (build 17768)\n"
+"X-Launchpad-Export-Date: 2015-10-03 05:33+0000\n"
+"X-Generator: Launchpad (build 17783)\n"
 "Language: el\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
@@ -47,7 +47,7 @@ msgstr "Εμ_φάνιση στον Διαχειριστή Αρχείων"
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Copy Location"
-msgstr ""
+msgstr "Αντιγρα_φή Τοποθεσίας"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
@@ -127,7 +127,7 @@ msgstr "Οποιαδήποτε ώρα"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "any"
-msgstr ""
+msgstr "οποιοδήποτε"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
@@ -541,16 +541,22 @@ msgid ""
 "This development release includes a significant UI refresh, improves search "
 "speed, and fixes several bugs"
 msgstr ""
+"Αυτή η έκδοση ανάπτυξης περιλαμβάνει μια σημαντικής ανανέωση της διεπαφής "
+"χρήστη, βελτιώνει την ταχύτητα αναζήτησης, και διορθώνει διάφορα σφάλματα"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
+"Αυτή η έκδοση διορθώνει δύο νέα σφάλματα και περιλαμβάνει ενημερωμένες "
+"μεταφράσεις."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
+"Αυτή η έκδοση διορθώνει ένα σφάλμα που επανεμφανίστηκε, όπου η εφαρμογή δεν "
+"είναι σε θέση να ξεκινήσει σε ορισμένα συστήματα."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:6
 msgid ""
@@ -558,24 +564,38 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
+"Αυτή η έκδοση διορθώνει ένα σφάλμα που επανεμφανίστηκε όπου πολλαπλοί όροι "
+"αναζήτησης δεν υποστηρίζονταν πλέον. Μια γραμμή πληροφοριών εμφανίζεται "
+"πλέον όταν η βάση δεδομένων αναζήτησης είναι ξεπερασμένη, και έχουν "
+"βελτιωθεί τα παράθυρα διαλόγου που χρησιμοποιούνται για την ενημέρωση της "
+"βάσης δεδομένων."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
+"Αυτή η έκδοση διορθώνει δύο ζητήματα όπου το πρόγραμμα locate δεν μπορούσε "
+"να εκτελεστεί σωστά και βελτιώνει τη διαχείριση συμβολικών εικονιδίων που "
+"λείπουν."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:8
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
+"Αυτή η σταθερή έκδοση βελτιώσει την αξιοπιστία του παράθυρου διαλόγου "
+"κωδικού πρόσβασης, καθαρίζει αχρησιμοποίητο κώδικα, και διορθώνει πιθανά "
+"ζητήματα με την επιλογή λίστας και στοιχείων."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:9
 msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
 msgstr ""
+"Αυτή η έκδοση διορθώνει ένα πιθανό ζήτημα ασφάλειας με την εκκίνηση του "
+"προγράμματος και διορθώνει ένα σφάλμα που επανεμφανίστηκε σε σχέση με την "
+"επιλογή πολλών στοιχείων."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:10
 msgid ""
@@ -585,6 +605,11 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"Η πρώτη έκδοση της σειράς 1.0.x εισήγαγε μία ανανεωμένη διεπαφή και διόρθωσε "
+"πολλά σφάλματα που υπήρχαν πολύ καιρό. Οι βελτιώσεις στα προεπιλεγμένα "
+"δικαιώματα εξάλειψαν μια σειρά από προειδοποιήσεις όταν το πρόγραμμα "
+"συσκευαζόταν για διανομές. Ενισχύθηκε η προσβασιμότητα καθώς όλα τα κείμενα "
+"έχουν γίνει μεταφράσιμα και έχουν βελτιωθεί οι συντομεύσεις πληκτρολογίου."
 
 #~ msgid "Custom Time Range"
 #~ msgstr "Προσαρμοσμένο εύρος χρόνου"
