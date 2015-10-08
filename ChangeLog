@@ -1,3 +1,10 @@
+v1.3.3:
+ + This is a new (minor) development release.
+ + Bug Fixes:
+   - Hide `which` output on startup
+ + Translation Updates:
+   - French, Greek, Spanish
+
 v1.3.2:
  + This is a new (minor) development release.
  + Bug Fixes:

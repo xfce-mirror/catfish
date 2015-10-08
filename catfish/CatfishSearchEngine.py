@@ -42,11 +42,13 @@ try:
 except Exception:
     zeitgeist_support = False
 
-if subprocess.call(['which', 'locate']) == 0:
+FNULL = open(os.devnull, 'w')
+if subprocess.call(['which', 'locate'],
+                   stdout=FNULL, stderr=subprocess.STDOUT) == 0:
     locate_support = True
 else:
     locate_support = False
-
+FNULL.close()
 
 def string_regex(keywords, path):
     """Returns a string with the regular expression containing all combinations
