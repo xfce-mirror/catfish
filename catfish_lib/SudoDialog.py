@@ -89,8 +89,9 @@ def env_spawn(command, timeout):
 def passwordless_sudo():
     """Return true if no password required to use sudo."""
     p = env_spawn("sudo -n true", 2)
+    p.expect(pexpect.EOF)
     p.close()
-    return p.exitstatus == 1
+    return p.exitstatus == 0
 
 
 class SudoDialog(Gtk.Dialog):
