@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
-"PO-Revision-Date: 2013-04-17 01:12+0000\n"
-"Last-Translator: Gabor Kelemen <kelemeng@openscope.org>\n"
+"PO-Revision-Date: 2015-10-19 11:35+0000\n"
+"Last-Translator: rezso <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-20 05:54+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-10-20 05:35+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 "Language: uk\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
@@ -26,7 +26,7 @@ msgstr "Catfish fájlkereső"
 
 #: ../catfish.desktop.in.h:2
 msgid "File search"
-msgstr ""
+msgstr "Fájlkeresés"
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -38,7 +38,7 @@ msgstr "A Catfish egy rugalmas fájlkereső eszköz."
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
-msgstr ""
+msgstr "_Megnyitás"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
@@ -52,19 +52,19 @@ msgstr "Hely _másolása"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr ""
+msgstr "Menté_s másként..."
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
-msgstr ""
+msgstr "_Törlés"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr ""
+msgstr "Fájlkiterjesztések"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
-msgstr ""
+msgstr "odt, png, txt"
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
@@ -72,15 +72,15 @@ msgstr "Dokumentumok"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "documents"
-msgstr ""
+msgstr "dokumentumok"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
-msgstr ""
+msgstr "Mappák"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "folders"
-msgstr ""
+msgstr "mappák"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
@@ -88,7 +88,7 @@ msgstr "Képek"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "images"
-msgstr ""
+msgstr "képek"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
@@ -96,7 +96,7 @@ msgstr "Zene"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "music"
-msgstr ""
+msgstr "zene"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
@@ -104,7 +104,7 @@ msgstr "Videók"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "videos"
-msgstr ""
+msgstr "videók"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
@@ -112,7 +112,7 @@ msgstr "Alkalmazások"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "applications"
-msgstr ""
+msgstr "alkalmazások"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
@@ -120,7 +120,7 @@ msgstr "Egyéb"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "other"
-msgstr ""
+msgstr "egyéb"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -128,7 +128,7 @@ msgstr "Bármikor"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "any"
-msgstr ""
+msgstr "bármely"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
@@ -136,7 +136,7 @@ msgstr "Ezen a héten"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "week"
-msgstr ""
+msgstr "hét"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "document-open-recent-symbolic"
@@ -148,7 +148,7 @@ msgstr "Egyéni"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "custom"
-msgstr ""
+msgstr "egyéni"
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "Go to Today"
@@ -168,7 +168,7 @@ msgstr "Catfish"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Update"
-msgstr ""
+msgstr "Frissítés"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "The search database is more than 7 days old.  Update now?"
@@ -176,15 +176,15 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "File Type"
-msgstr ""
+msgstr "Fájl típus"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "column"
-msgstr ""
+msgstr "oszlop"
 
 #: ../data/ui/CatfishWindow.ui.h:39 ../catfish/CatfishWindow.py:1050
 msgid "Modified"
-msgstr ""
+msgstr "Módosítva"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgctxt ""
@@ -213,15 +213,15 @@ msgstr "Könyvtár kiválasztása"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Compact List"
-msgstr ""
+msgstr "Kompakt lista"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Thumbnails"
-msgstr ""
+msgstr "Előnézeti képek"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Show _Hidden Files"
-msgstr ""
+msgstr "_Rejtett fájlok megjelenítése"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "Search File _Contents"
@@ -241,7 +241,7 @@ msgstr "_Keresési index frissítése"
 
 #: ../data/ui/CatfishWindow.ui.h:52
 msgid "_About"
-msgstr ""
+msgstr "_Névjegy"
 
 #: ../data/ui/CatfishWindow.ui.h:53
 msgid "Update Search Database"
@@ -322,7 +322,7 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:240
 msgid "Never"
-msgstr ""
+msgstr "Soha"
 
 #: ../catfish/CatfishWindow.py:588
 msgid "An error occurred while updating the database."
@@ -343,7 +343,7 @@ msgstr ""
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:670
 msgid "Updating..."
-msgstr ""
+msgstr "Frissítés..."
 
 #: ../catfish/CatfishWindow.py:701
 msgid "Stop Search"
@@ -419,15 +419,15 @@ msgstr "Előnézet"
 
 #: ../catfish/CatfishWindow.py:1068
 msgid "Details"
-msgstr ""
+msgstr "Részletek"
 
 #: ../catfish/CatfishWindow.py:1244
 msgid "Today"
-msgstr ""
+msgstr "Ma"
 
 #: ../catfish/CatfishWindow.py:1246
 msgid "Yesterday"
-msgstr ""
+msgstr "Tegnap"
 
 #: ../catfish/CatfishWindow.py:1325
 msgid "No files found."
@@ -450,7 +450,7 @@ msgstr "%i fájl található."
 
 #: ../catfish/CatfishWindow.py:1340
 msgid "bytes"
-msgstr ""
+msgstr "bájt"
 
 #: ../catfish/CatfishWindow.py:1477 ../catfish/CatfishWindow.py:1486
 msgid "Searching…"
@@ -472,7 +472,7 @@ msgstr "Találatok erre: „%s”"
 
 #: ../catfish_lib/SudoDialog.py:122
 msgid "Password Required"
-msgstr ""
+msgstr "Jelszó szükséges"
 
 #: ../catfish_lib/SudoDialog.py:159
 msgid "Incorrect password... try again."
@@ -480,16 +480,16 @@ msgstr ""
 
 #: ../catfish_lib/SudoDialog.py:169
 msgid "Password:"
-msgstr ""
+msgstr "Jelszó:"
 
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:180
 msgid "Cancel"
-msgstr ""
+msgstr "Mégsem"
 
 #: ../catfish_lib/SudoDialog.py:183
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../catfish_lib/SudoDialog.py:204
 msgid ""
