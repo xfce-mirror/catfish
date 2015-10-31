@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-18 21:43-0400\n"
-"PO-Revision-Date: 2015-09-17 11:56+0000\n"
+"PO-Revision-Date: 2015-10-30 21:18+0000\n"
 "Last-Translator: Daniel Kessel <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-18 05:33+0000\n"
-"X-Generator: Launchpad (build 17746)\n"
+"X-Launchpad-Export-Date: 2015-10-31 05:29+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:40
 #: ../catfish/CatfishWindow.py:617
@@ -118,7 +118,7 @@ msgstr "Andere"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "other"
-msgstr ""
+msgstr "Andere"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -126,7 +126,7 @@ msgstr "Beliebige Zeit"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "any"
-msgstr ""
+msgstr "Beliebige Zeit"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
@@ -189,21 +189,21 @@ msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr ""
+msgstr "Geben Sie oben Ihre Abfrage ein, um Ihre Dateien zu finden"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "or click the "
-msgstr ""
+msgstr "oder klicken Sie auf das "
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
-msgstr ""
+msgstr " Symbol für mehr Optionen."
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "Select a Directory"
@@ -223,7 +223,7 @@ msgstr "_Verborgene Dateien anzeigen"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "Search File _Contents"
-msgstr ""
+msgstr "Dur_chsuche Dateiinhalte"
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Exact Match"
@@ -231,7 +231,7 @@ msgstr "_Exakter Treffer"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "Show _Sidebar"
-msgstr ""
+msgstr "_Zeige Seitenleiste"
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid "_Update Search Index…"
@@ -439,6 +439,8 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
+"Versuchen Sie, Ihre Suche weniger spezifisch zu machen\n"
+"oder versuchen Sie ein anderes Verzeichnis."
 
 #: ../catfish/CatfishWindow.py:1332
 msgid "1 file found."
@@ -459,7 +461,7 @@ msgstr "Suche läuft …"
 
 #: ../catfish/CatfishWindow.py:1479
 msgid "Results will be displayed as soon as they are found."
-msgstr ""
+msgstr "Ergebnisse werden angezeigt, sobald sie gefunden werden."
 
 #: ../catfish/CatfishWindow.py:1484
 #, python-format
@@ -533,6 +535,8 @@ msgid ""
 "This development release includes a significant UI refresh, improves search "
 "speed, and fixes several bugs"
 msgstr ""
+"Diese Entwicklungsveröffentlichung beinhaltet eine deutlich aufgefrischte "
+"Oberfläche, verbessert die Suchgeschwindigkeit und behebt mehrere Fehler"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid "This release fixes two new bugs and includes updated translations."
