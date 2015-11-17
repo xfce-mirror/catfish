@@ -1178,7 +1178,7 @@ class CatfishWindow(Window):
 
         # If middle click, open the selected file.
         if event.button == 2:
-            for filename in selected_filenames:
+            for filename in self.selected_filenames:
                 self.open_file(filename)
 
         # If right click, show the popup menu.
