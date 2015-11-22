@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-11-16 22:01-0500\n"
-"PO-Revision-Date: 2015-11-13 00:40+0000\n"
+"PO-Revision-Date: 2015-11-21 13:15+0000\n"
 "Last-Translator: Jean-Marc <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-18 05:25+0000\n"
-"X-Generator: Launchpad (build 17847)\n"
+"X-Launchpad-Export-Date: 2015-11-22 05:24+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:39
 #: ../catfish/CatfishWindow.py:631
@@ -343,7 +343,7 @@ msgstr "Base de données de recherche mise à jour avec succès."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:685
 msgid "Updating..."
-msgstr "Mise à jour en cours..."
+msgstr "Mise à jour..."
 
 #: ../catfish/CatfishWindow.py:716
 msgid "Stop Search"
