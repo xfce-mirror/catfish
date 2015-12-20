@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-11-16 22:01-0500\n"
-"PO-Revision-Date: 2015-11-22 17:12+0000\n"
+"PO-Revision-Date: 2015-12-19 13:57+0000\n"
 "Last-Translator: Jean-Marc <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-23 05:24+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-20 06:06+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:39
 #: ../catfish/CatfishWindow.py:631
@@ -167,8 +167,8 @@ msgstr "Mise à jour"
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
-"La base des données recherchées date de plus de 7 jours. La mettre à jour "
-"maintenant ?"
+"La base des données de recherche date de plus de 7 jours. La mettre à jour "
+"maintenant ?"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "File Type"
@@ -217,7 +217,7 @@ msgstr "Miniatures"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Show _Hidden Files"
-msgstr "Afficher les fichiers cachés"
+msgstr "Afficher les fic_hiers masqués"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Search File _Contents"
@@ -241,7 +241,7 @@ msgstr "À _propos"
 
 #: ../data/ui/CatfishWindow.ui.h:52
 msgid "Update Search Database"
-msgstr "Mettre à jour la base des données recherchées"
+msgstr "Mettre à jour la base des données de recherche"
 
 #: ../data/ui/CatfishWindow.ui.h:53
 msgid "Unlock"
@@ -249,23 +249,23 @@ msgstr "Déverrouiller"
 
 #: ../data/ui/CatfishWindow.ui.h:54
 msgid "<b>Database:</b>"
-msgstr "<b>Base de données :</b>"
+msgstr "<b>Base de données :</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:55
 msgid "<b>Updated:</b>"
-msgstr "<b>Mis à jour :</b>"
+msgstr "<b>Mis à jour :</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:56
 msgid "<big><b>Update Search Database</b></big>"
-msgstr "<big><b>Mettre à jour la base des données recherchées</b></big>"
+msgstr "<big><b>Mettre à jour la base des données de recherche</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:57
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
-"Pour des résultats de recherche plus rapides, la base des données "
-"recherchées a besoin d'être actualisée.\n"
+"Pour des résultats de recherche plus rapides, la base des données de "
+"recherche a besoin d'être actualisée.\n"
 "Cette action nécessite les droits administrateurs."
 
 #: ../catfish/__init__.py:34
@@ -274,7 +274,7 @@ msgstr "Utilisation : %prog [options] path query"
 
 #: ../catfish/__init__.py:39
 msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr "Montrer les messages de débogage (dont -vv debugs catfish_lib)"
+msgstr "Afficher les messages de débogage (dont -vv debugs catfish_lib)"
 
 #: ../catfish/__init__.py:42
 msgid "Use large icons"
@@ -294,7 +294,7 @@ msgstr "Expression exacte"
 
 #: ../catfish/__init__.py:52
 msgid "Include hidden files"
-msgstr "Inclure les fichiers cachés"
+msgstr "Inclure les fichiers masqués"
 
 #: ../catfish/__init__.py:54
 msgid "Perform fulltext search"
@@ -536,18 +536,24 @@ msgid ""
 "This development release hides the output of the `which` command on startup "
 "and includes updated translations."
 msgstr ""
+"Cette version de développement cache la sortie de la commande « which » au "
+"démarrage et inclut des mises à jour de traduction."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
 "This development release now detects the correct thumbnails directory to use "
 "and includes updated translations."
 msgstr ""
+"Cette version de développement détecte maintenant le bon répertoire des "
+"miniatures à utiliser et inclut des mises à jour de traduction."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
 "This development release adds a new setting to use toggle headerbars and "
 "fixes several bugs."
 msgstr ""
+"Cette version de développement ajoute un nouveau réglage pour alterner les "
+"barres de titre et résout plusieurs bogues."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:6
 msgid ""
