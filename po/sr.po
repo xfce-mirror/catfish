@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-11-16 22:01-0500\n"
-"PO-Revision-Date: 2015-02-04 14:33+0000\n"
+"PO-Revision-Date: 2015-12-26 09:28+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: српски <xfce4@xfce4.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-18 05:25+0000\n"
-"X-Generator: Launchpad (build 17847)\n"
+"X-Launchpad-Export-Date: 2015-12-27 05:24+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "Language: sr\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:39
@@ -26,7 +26,7 @@ msgstr "Сом претрага датотека (Catfish)"
 
 #: ../catfish.desktop.in.h:2
 msgid "File search"
-msgstr ""
+msgstr "Претрага датотека"
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -60,11 +60,11 @@ msgstr "_Обриши"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr ""
+msgstr "Наставци датотека"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
-msgstr ""
+msgstr "odt, png, txt"
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
@@ -72,7 +72,7 @@ msgstr "Документи"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "documents"
-msgstr ""
+msgstr "документа"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
@@ -80,7 +80,7 @@ msgstr "Фасцикле"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "folders"
-msgstr ""
+msgstr "фасцикле"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
@@ -88,7 +88,7 @@ msgstr "Слике"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "images"
-msgstr ""
+msgstr "слике"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
@@ -96,7 +96,7 @@ msgstr "Музика"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "music"
-msgstr ""
+msgstr "музика"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
@@ -104,7 +104,7 @@ msgstr "Видео"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "videos"
-msgstr ""
+msgstr "снимци"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
@@ -112,7 +112,7 @@ msgstr "Програми"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "applications"
-msgstr ""
+msgstr "програми"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
@@ -120,7 +120,7 @@ msgstr "Друго"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "other"
-msgstr ""
+msgstr "остало"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -128,7 +128,7 @@ msgstr "Било када"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "any"
-msgstr ""
+msgstr "било које"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
@@ -136,7 +136,7 @@ msgstr "Ове седмице"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "week"
-msgstr ""
+msgstr "седмица"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "Custom"
@@ -144,7 +144,7 @@ msgstr "Прилагођено"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgid "custom"
-msgstr ""
+msgstr "произвољно"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "Go to Today"
@@ -172,11 +172,11 @@ msgstr "Складиште података претраге је старије
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "File Type"
-msgstr ""
+msgstr "Врста датотеке"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "column"
-msgstr ""
+msgstr "колона"
 
 #: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1065
 msgid "Modified"
@@ -187,21 +187,21 @@ msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr ""
+msgstr "Унесите упит изнад ради претраге датотека"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "or click the "
-msgstr ""
+msgstr "на клик "
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
-msgstr ""
+msgstr " иконица за више могућности"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "Select a Directory"
@@ -217,11 +217,11 @@ msgstr "Умањене сличице"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Show _Hidden Files"
-msgstr ""
+msgstr "Прикажи _скривене датотеке"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Search File _Contents"
-msgstr ""
+msgstr "Тражи садржај датотека"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "_Exact Match"
@@ -229,7 +229,7 @@ msgstr "_Потпуно поклапање"
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "Show _Sidebar"
-msgstr ""
+msgstr "Приказуј бочну _површ"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "_Update Search Index…"
@@ -315,7 +315,7 @@ msgstr "%s (неисправно шифровање знакова)"
 
 #: ../catfish/CatfishWindow.py:247
 msgid "Unknown"
-msgstr ""
+msgstr "Непознато"
 
 #: ../catfish/CatfishWindow.py:251
 msgid "Never"
@@ -437,6 +437,8 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
+"Покушајте са мање одређеним упитима\n"
+"или тражите у другој фасцикли."
 
 #: ../catfish/CatfishWindow.py:1347
 msgid "1 file found."
@@ -457,7 +459,7 @@ msgstr "Тражим…"
 
 #: ../catfish/CatfishWindow.py:1495
 msgid "Results will be displayed as soon as they are found."
-msgstr ""
+msgstr "Излази ће се приказивати чим буду пронађени."
 
 #: ../catfish/CatfishWindow.py:1500
 #, python-format
@@ -530,24 +532,32 @@ msgid ""
 "This development release hides the output of the `which` command on startup "
 "and includes updated translations."
 msgstr ""
+"Ово развојно издање скрива излаз наредбе „which“ на покретању и садржи "
+"освежене преводе."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
 "This development release now detects the correct thumbnails directory to use "
 "and includes updated translations."
 msgstr ""
+"Ово развојно издање познаје тачне мапе умањених сличица и садржи освежене "
+"преводе."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
 "This development release adds a new setting to use toggle headerbars and "
 "fixes several bugs."
 msgstr ""
+"Ово развојно издање је добило нове поставке прекидача заглавних трака и "
+"исправке неколико грешака."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:6
 msgid ""
 "This development release includes a significant UI refresh, improves search "
 "speed, and fixes several bugs"
 msgstr ""
+"Ово развојно издање је добило значајне поправке корисничког сучеља, поправку "
+"брзине претраге и исправке неколико грешака."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid "This release fixes two new bugs and includes updated translations."
