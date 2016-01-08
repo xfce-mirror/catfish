@@ -593,16 +593,16 @@ class CatfishWindow(Window):
     def show_update_status_infobar(self, status_code):
         """Display the update status infobar based on the status code."""
         # Error
-        if status_code in [1, 3]:
+        if status_code in [1, 3, 127]:
             icon = "dialog-error"
             msg_type = Gtk.MessageType.WARNING
             if status_code == 1:
                 status = _('An error occurred while updating the database.')
-            elif status_code == 3:
+            elif status_code in [3, 127]:
                 status = _("Authentication failed.")
 
         # Warning
-        elif status_code == 2:
+        elif status_code in [2, 126]:
             icon = "dialog-warning"
             msg_type = Gtk.MessageType.WARNING
             status = _("Authentication cancelled.")
@@ -624,7 +624,8 @@ class CatfishWindow(Window):
         self.update_index_active = True
 
         # Get the password for sudo
-        if not SudoDialog.passwordless_sudo():
+        if not SudoDialog.prefer_pkexec() and \
+                not SudoDialog.passwordless_sudo():
             sudo_dialog = SudoDialog.SudoDialog(
                 parent=self.update_index_dialog,
                 icon='catfish',
@@ -686,18 +687,21 @@ class CatfishWindow(Window):
         self.update_index_close.set_sensitive(False)
         self.update_index_unlock.set_sensitive(False)
 
-        self.updatedb_process = SudoDialog.env_spawn('sudo updatedb', 1)
-        try:
-            # Check for password prompt or program exit.
-            self.updatedb_process.expect(".*ssword.*")
-            self.updatedb_process.sendline(password)
-            self.updatedb_process.expect(pexpect.EOF)
-        except pexpect.EOF:
-            # shell already has password, or its not needed
-            pass
-        except pexpect.TIMEOUT:
-            # Poll every 1 second for completion.
-            pass
+        if SudoDialog.prefer_pkexec():
+            self.updatedb_process = SudoDialog.env_spawn('pkexec updatedb', 1)
+        else:
+            self.updatedb_process = SudoDialog.env_spawn('sudo updatedb', 1)
+            try:
+                # Check for password prompt or program exit.
+                self.updatedb_process.expect(".*ssword.*")
+                self.updatedb_process.sendline(password)
+                self.updatedb_process.expect(pexpect.EOF)
+            except pexpect.EOF:
+                # shell already has password, or its not needed
+                pass
+            except pexpect.TIMEOUT:
+                # Poll every 1 second for completion.
+                pass
         GLib.timeout_add(1000, updatedb_subprocess)
 
     # -- Search Entry -- #

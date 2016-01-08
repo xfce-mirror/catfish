@@ -34,18 +34,23 @@ def check_gtk_version(major_version, minor_version, micro=0):
 
 # Check if the LANG variable needs to be set
 use_env = False
+use_pkexec = False
 
 
 def check_dependencies(commands=[]):
     """Check for the existence of required commands, and sudo access"""
-    # Check for sudo
-    if pexpect.which("sudo") is None:
-        return False
-
     # Check for required commands
     for command in commands:
         if pexpect.which(command) is None:
             return False
+
+    # Check for sudo or pkexec
+    if pexpect.which("pkexec") is not None:
+        use_pkexec = True
+        return True
+
+    if pexpect.which("sudo") is None:
+        return False
 
     # Check for LANG requirements
     child = env_spawn('sudo -v', 1)
@@ -92,6 +97,10 @@ def passwordless_sudo():
     p.expect(pexpect.EOF)
     p.close()
     return p.exitstatus == 0
+
+
+def prefer_pkexec():
+    return prefer_pkexec
 
 
 class SudoDialog(Gtk.Dialog):
