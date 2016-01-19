@@ -1,3 +1,12 @@
+v1.3.4 (INPROGRESS):
+ + Features:
+   - Initial polkit integration
+ + Bug Fixes:
+   - Fixed passwordless logic (LP: #1507765)
+   - Fixed crash in en_US locale for non-sudoer user (LP: #1501565)
+   - Replaced catfish launch script (LP: #1445739)
+   - Fixed middle-click activation
+
 v1.3.3:
  + This is a new (minor) development release.
  + Bug Fixes:
