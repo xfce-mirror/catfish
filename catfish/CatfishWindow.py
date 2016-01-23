@@ -238,9 +238,11 @@ class CatfishWindow(Window):
                 builder.get_named_object("dialogs.update.unlock_button")
             self.update_index_active = False
 
+            self.last_modified = 0
+
             now = datetime.datetime.now()
             self.today = datetime.datetime(now.year, now.month, now.day)
-            locate, locate_path, locate_date = self.check_locate()
+            locate, locate_path, locate_date = self.check_locate()[:3]
 
             self.update_index_database.set_label("<tt>%s</tt>" % locate_path)
             if not os.access(os.path.dirname(locate_path), os.R_OK):
@@ -557,8 +559,12 @@ class CatfishWindow(Window):
             modified = os.path.getmtime(db)
         else:
             modified = 0
+
+        changed = self.last_modified != modified
+        self.last_modified = modified
+
         item_date = datetime.datetime.fromtimestamp(modified)
-        return (locate, db, item_date)
+        return (locate, db, item_date, changed)
 
     def on_filters_changed(self, box, row, user_data=None):
         if row.is_selected():
@@ -662,7 +668,8 @@ class CatfishWindow(Window):
                 done = False
             if done:
                 self.update_index_active = False
-                modified = self.check_locate()[2].strftime("%x %X")
+                locate, locate_path, locate_date, changed = self.check_locate()
+                modified = locate_date.strftime("%x %X")
                 self.update_index_modified.set_label("<tt>%s</tt>" % modified)
 
                 # Hide the Unlock button
@@ -679,6 +686,8 @@ class CatfishWindow(Window):
                 self.update_index_close.grab_default()
 
                 return_code = self.updatedb_process.exitstatus
+                if return_code not in [1, 2, 3, 126, 127] and not changed:
+                    return_code = 1
                 self.show_update_status_infobar(return_code)
             return not done
 
