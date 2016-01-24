@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-22 22:51-0500\n"
+"POT-Creation-Date: 2016-01-24 12:19-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -156,7 +156,7 @@ msgstr ""
 msgid "<b>End Date</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish_lib/Window.py:217
+#: ../data/ui/CatfishWindow.ui.h:33 ../catfish_lib/Window.py:218
 msgid "Catfish"
 msgstr ""
 
@@ -176,7 +176,7 @@ msgstr ""
 msgid "column"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1078
+#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1084
 msgid "Modified"
 msgstr ""
 
@@ -361,99 +361,99 @@ msgstr ""
 msgid "\"%s\" could not be saved."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:997
+#: ../catfish/CatfishWindow.py:992
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1007
+#: ../catfish/CatfishWindow.py:1013
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1042
+#: ../catfish/CatfishWindow.py:1048
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1046
+#: ../catfish/CatfishWindow.py:1052
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1049
+#: ../catfish/CatfishWindow.py:1055
 msgid "If you delete a file, it is permanently lost."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1072
+#: ../catfish/CatfishWindow.py:1078
 msgid "Filename"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1074
+#: ../catfish/CatfishWindow.py:1080
 msgid "Size"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1076
+#: ../catfish/CatfishWindow.py:1082
 msgid "Location"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1088
+#: ../catfish/CatfishWindow.py:1094
 msgid "Preview"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1096
+#: ../catfish/CatfishWindow.py:1102
 msgid "Details"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1272
+#: ../catfish/CatfishWindow.py:1289
 msgid "Today"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1274
+#: ../catfish/CatfishWindow.py:1291
 msgid "Yesterday"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1353
+#: ../catfish/CatfishWindow.py:1370
 msgid "No files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1355
+#: ../catfish/CatfishWindow.py:1372
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1360
+#: ../catfish/CatfishWindow.py:1377
 msgid "1 file found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1362
+#: ../catfish/CatfishWindow.py:1379
 #, python-format
 msgid "%i files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1368
+#: ../catfish/CatfishWindow.py:1385
 msgid "bytes"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1506 ../catfish/CatfishWindow.py:1515
+#: ../catfish/CatfishWindow.py:1523 ../catfish/CatfishWindow.py:1532
 msgid "Searching…"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1508
+#: ../catfish/CatfishWindow.py:1525
 msgid "Results will be displayed as soon as they are found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1513
+#: ../catfish/CatfishWindow.py:1530
 #, python-format
 msgid "Searching for \"%s\""
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1602
+#: ../catfish/CatfishWindow.py:1619
 #, python-format
 msgid "Search results for \"%s\""
 msgstr ""

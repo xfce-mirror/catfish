@@ -208,6 +208,7 @@ class Window(Gtk.Window):
             self.setup_toolbar(chooser, search, button)
 
         search.grab_focus()
+        self.keys_pressed = []
 
     def setup_headerbar(self, chooser, search, button):
         headerbar = Gtk.HeaderBar.new()
@@ -262,22 +263,53 @@ class Window(Gtk.Window):
         self.window_is_fullscreen = bool(event.new_window_state &
                                          Gdk.WindowState.FULLSCREEN)
 
+    def get_keys_from_event(self, event):
+        keys = []
+        keys.append(Gdk.keyval_name(event.keyval))
+        if event.get_state() & Gdk.ModifierType.CONTROL_MASK:
+            keys.append("Control")
+        if event.get_state() & Gdk.ModifierType.SHIFT_MASK:
+            keys.append("Shift")
+        if event.get_state() & Gdk.ModifierType.SUPER_MASK:
+            keys.append("Super")
+        if event.get_state() & Gdk.ModifierType.MOD1_MASK:
+            keys.append("Alt")
+        return keys
+
+    def add_keys(self, keys):
+        ignore = ["Escape"]
+        for key in keys:
+            if key not in self.keys_pressed and key not in ignore:
+                self.keys_pressed.append(key)
+
+    def remove_keys(self, keys):
+        for key in keys:
+            if key in self.keys_pressed:
+                self.keys_pressed.remove(key)
+
     def on_catfish_window_key_press_event(self, widget, event):
         """Handle keypresses for the Catfish window."""
-        key_name = Gdk.keyval_name(event.keyval)
-        if key_name == "Escape":
+        keys = self.get_keys_from_event(event)
+        self.add_keys(keys)
+
+        if "Escape" in keys:
             self.search_engine.stop()
             return True
-        if event.get_state() & Gdk.ModifierType.CONTROL_MASK:
-            if key_name == 'q' or key_name == 'Q':
-                self.destroy()
-        if key_name == 'F9':
+        if "Control" in keys and ("q" in keys or "Q" in keys):
+            self.destroy()
+        if 'F9' in keys:
             self.on_sidebar_toggle_toggled(widget)
             return True
-        if key_name == 'F11':
+        if 'F11' in keys:
             if self.window_is_fullscreen:
                 self.unfullscreen()
             else:
                 self.fullscreen()
             return True
+        return False
+
+    def on_catfish_window_key_release_event(self, widget, event):
+        """Handle key releases for the Catfish window."""
+        keys = self.get_keys_from_event(event)
+        self.remove_keys(keys)
         return False

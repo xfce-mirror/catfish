@@ -974,6 +974,7 @@ class CatfishWindow(Window):
 
     def on_menu_delete_activate(self, widget):
         """Show a delete dialog and remove the file if accepted."""
+        filenames = []
         if self.get_delete_dialog(self.selected_filenames):
             for filename in self.selected_filenames:
                 try:
@@ -982,13 +983,7 @@ class CatfishWindow(Window):
                         rmtree(filename)
                     else:
                         os.remove(filename)
-
-                    # Remove the selected from from the treeview.
-                    model = self.treeview.get_model().get_model().get_model()
-                    path = self.treeview.get_cursor()[0]
-                    treeiter = model.get_iter(path)
-                    model.remove(treeiter)
-                    self.refilter()
+                    filenames.append(filename)
 
                 except Exception as msg:
                     # If the file cannot be deleted, throw an error.
@@ -997,6 +992,17 @@ class CatfishWindow(Window):
                     self.get_error_dialog(_("\"%s\" could not be deleted.") %
                                           os.path.basename(filename),
                                           str(msg))
+
+        # Clean up removed rows
+        model = self.treeview.get_model().get_model().get_model()
+        rows = self.rows
+        rows.reverse()
+        for path in rows:
+            treeiter = model.get_iter(path)
+            filename = os.path.join(model[treeiter][3], model[treeiter][1])
+            if not os.path.exists(filename):
+                model.remove(treeiter)
+        self.refilter()
 
     def get_save_dialog(self, filename):
         """Show the Save As FileChooserDialog.
@@ -1159,10 +1165,24 @@ class CatfishWindow(Window):
         """Get the currently selected rows from the specified treeview."""
         sel = treeview.get_selection()
         model, rows = sel.get_selected_rows()
+        count = treeview.get_selection().count_selected_rows()
         data = []
         for row in rows:
             data.append(self.treemodel_get_row_filename(model, row))
         return (model, rows, data)
+
+    def update_treeview_stats(self, treeview):
+        model, self.rows, self.selected_filenames = \
+            self.treeview_get_selected_rows(treeview)
+
+    def maintain_treeview_stats(self, treeview):
+        treesel = treeview.get_selection()
+        for row in self.rows:
+            treesel.select_path(row)
+
+    def on_treeview_cursor_changed(self, treeview):
+        if "Shift" in self.keys_pressed or "Control" in self.keys_pressed:
+            self.update_treeview_stats(treeview)
 
     def on_treeview_button_press_event(self, treeview, event):
         """Catch single mouse click events on the treeview and rows.
@@ -1170,15 +1190,9 @@ class CatfishWindow(Window):
             Left Click:     Ignore.
             Middle Click:   Open the selected file.
             Right Click:    Show the popup menu."""
-        self.treeview_click_on = not self.treeview_click_on
-        if self.treeview_click_on:
-            return False
-
-        model, self.rows, self.selected_filenames = \
-            self.treeview_get_selected_rows(treeview)
-
         # If left click, ignore.
         if event.button == 1:
+            self.update_treeview_stats(treeview)
             return False
 
         # Get the selected row path, raises TypeError if dead space.
@@ -1188,6 +1202,8 @@ class CatfishWindow(Window):
                 treeview.set_cursor(path)
             except TypeError:
                 return False
+
+        self.maintain_treeview_stats(treeview)
 
         # If middle click, open the selected file.
         if event.button == 2:
@@ -1206,6 +1222,7 @@ class CatfishWindow(Window):
             self.file_menu_delete.set_sensitive(writeable)
             self.file_menu.popup(None, None, None, None,
                                  event.button, event.time)
+
         return True
 
     def new_column(self, label, id, special=None, markup=False):
