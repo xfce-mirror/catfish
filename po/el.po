@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-22 22:51-0500\n"
+"POT-Creation-Date: 2016-01-24 12:24-0500\n"
 "PO-Revision-Date: 2015-11-20 22:12+0000\n"
 "Last-Translator: Michael Misirlis <mmisirlis@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-24 05:25+0000\n"
+"X-Launchpad-Export-Date: 2016-01-25 05:24+0000\n"
 "X-Generator: Launchpad (build 17902)\n"
 "Language: el\n"
 
@@ -157,7 +157,7 @@ msgstr "<b>Αρχική ημερομηνία</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>Τελική ημερομηνία</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish_lib/Window.py:217
+#: ../data/ui/CatfishWindow.ui.h:33 ../catfish_lib/Window.py:218
 msgid "Catfish"
 msgstr "Catfish"
 
@@ -178,7 +178,7 @@ msgstr "Τύπος Αρχείου"
 msgid "column"
 msgstr "στήλη"
 
-#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1078
+#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1084
 msgid "Modified"
 msgstr "Τροποποιήθηκε"
 
@@ -372,17 +372,17 @@ msgstr "Αδυναμία ανοίγματος \"%s\"."
 msgid "\"%s\" could not be saved."
 msgstr "Αδυναμία αποθήκευσης \"%s\"."
 
-#: ../catfish/CatfishWindow.py:997
+#: ../catfish/CatfishWindow.py:992
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Αδυναμία διαγραφής \"%s\"."
 
-#: ../catfish/CatfishWindow.py:1007
+#: ../catfish/CatfishWindow.py:1013
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "Αποθήκευση \"%s\" ως..."
 
-#: ../catfish/CatfishWindow.py:1042
+#: ../catfish/CatfishWindow.py:1048
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -391,7 +391,7 @@ msgstr ""
 "Είστε σίγουροι ότι θέλετε να \n"
 "διαγράψετε μόνιμα το \"%s\";"
 
-#: ../catfish/CatfishWindow.py:1046
+#: ../catfish/CatfishWindow.py:1052
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -400,43 +400,43 @@ msgstr ""
 "Είστε σίγουροι ότι θέλετε να \n"
 "διαγράψετε μόνιμα τα %i επιλεγμένα αρχεία;"
 
-#: ../catfish/CatfishWindow.py:1049
+#: ../catfish/CatfishWindow.py:1055
 msgid "If you delete a file, it is permanently lost."
 msgstr "Εάν διαγράψετε ένα αρχείο, χάνεται μόνιμα."
 
-#: ../catfish/CatfishWindow.py:1072
+#: ../catfish/CatfishWindow.py:1078
 msgid "Filename"
 msgstr "Όνομα αρχείου"
 
-#: ../catfish/CatfishWindow.py:1074
+#: ../catfish/CatfishWindow.py:1080
 msgid "Size"
 msgstr "Μέγεθος"
 
-#: ../catfish/CatfishWindow.py:1076
+#: ../catfish/CatfishWindow.py:1082
 msgid "Location"
 msgstr "Τοποθεσία"
 
-#: ../catfish/CatfishWindow.py:1088
+#: ../catfish/CatfishWindow.py:1094
 msgid "Preview"
 msgstr "Προεπισκόπιση"
 
-#: ../catfish/CatfishWindow.py:1096
+#: ../catfish/CatfishWindow.py:1102
 msgid "Details"
 msgstr "Λεπτομέρειες"
 
-#: ../catfish/CatfishWindow.py:1272
+#: ../catfish/CatfishWindow.py:1289
 msgid "Today"
 msgstr "Σήμερα"
 
-#: ../catfish/CatfishWindow.py:1274
+#: ../catfish/CatfishWindow.py:1291
 msgid "Yesterday"
 msgstr "Εχθές"
 
-#: ../catfish/CatfishWindow.py:1353
+#: ../catfish/CatfishWindow.py:1370
 msgid "No files found."
 msgstr "Δεν βρέθηκαν αρχεία."
 
-#: ../catfish/CatfishWindow.py:1355
+#: ../catfish/CatfishWindow.py:1372
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -444,33 +444,33 @@ msgstr ""
 "Δοκιμάστε να κάνετε την αναζήτησή σας πιο γενική\n"
 "ή δοκιμάστε έναν άλλο φάκελο."
 
-#: ../catfish/CatfishWindow.py:1360
+#: ../catfish/CatfishWindow.py:1377
 msgid "1 file found."
 msgstr "Βρέθηκε 1 αρχείο."
 
-#: ../catfish/CatfishWindow.py:1362
+#: ../catfish/CatfishWindow.py:1379
 #, python-format
 msgid "%i files found."
 msgstr "Βρέθηκαν %i αρχεία."
 
-#: ../catfish/CatfishWindow.py:1368
+#: ../catfish/CatfishWindow.py:1385
 msgid "bytes"
 msgstr "bytes"
 
-#: ../catfish/CatfishWindow.py:1506 ../catfish/CatfishWindow.py:1515
+#: ../catfish/CatfishWindow.py:1523 ../catfish/CatfishWindow.py:1532
 msgid "Searching…"
 msgstr "Αναζήτηση…"
 
-#: ../catfish/CatfishWindow.py:1508
+#: ../catfish/CatfishWindow.py:1525
 msgid "Results will be displayed as soon as they are found."
 msgstr "Τα αποτελέσματα θα εμφανίζονται αμέσως μόλις βρίσκονται."
 
-#: ../catfish/CatfishWindow.py:1513
+#: ../catfish/CatfishWindow.py:1530
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Αναζήτηση για \"%s\""
 
-#: ../catfish/CatfishWindow.py:1602
+#: ../catfish/CatfishWindow.py:1619
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Αποτελέσματα αναζήτησης για \"%s\""
