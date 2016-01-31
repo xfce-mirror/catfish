@@ -270,6 +270,7 @@ class CatfishWindow(Window):
         self.icon_theme = Gtk.IconTheme.get_default()
 
         self.selected_filenames = []
+        self.rows = []
 
         self.settings = CatfishSettings.CatfishSettings()
         self.refresh_search_entry()
