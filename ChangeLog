@@ -1,4 +1,6 @@
-v1.3.4 (INPROGRESS):
+v1.3.4:
+ + This is a new development release, probably the last before
+   v1.4.0 is released.
  + Features:
    - Initial polkit integration
  + Bug Fixes:
@@ -7,6 +9,10 @@ v1.3.4 (INPROGRESS):
    - Replaced catfish launch script (LP: #1445739)
    - Fixed middle-click activation
    - Fixed issues with multiple selections (LP: #1461072, #1508918)
+ + Translation Updates:
+   - Bulgarian, Chinese (Simplified), Chinese (Traditional), Dutch,
+     English (Australia), French, German, Greek, Icelandic,
+     Lithuanian, Serbian, Swedish, Ukrainian
 
 v1.3.3:
  + This is a new (minor) development release.

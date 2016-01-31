@@ -33,6 +33,14 @@
   </provides>
 
   <releases>
+      <release version="1.3.4" timestamp="1454283000">
+        <description>
+          <_p>This development release fixes a number of issues related
+          to password handling, application startup, and the results view.
+          It also includes a number of updated translations.
+          </_p>
+        </description>
+      </release>
     <release version="1.3.3" timestamp="1444304700">
       <description>
         <_p>This development release hides the output of the `which`
