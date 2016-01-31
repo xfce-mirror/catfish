@@ -8,19 +8,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-24 12:24-0500\n"
+"POT-Creation-Date: 2016-01-30 19:29-0500\n"
 "PO-Revision-Date: 2015-12-26 09:28+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: српски <xfce4@xfce4.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-25 05:24+0000\n"
-"X-Generator: Launchpad (build 17902)\n"
+"X-Launchpad-Export-Date: 2016-01-31 05:56+0000\n"
+"X-Generator: Launchpad (build 17908)\n"
 "Language: sr\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:39
-#: ../catfish/CatfishWindow.py:638
+#: ../catfish/CatfishWindow.py:639
 msgid "Catfish File Search"
 msgstr "Сом претрага датотека (Catfish)"
 
@@ -178,7 +178,7 @@ msgstr "Врста датотеке"
 msgid "column"
 msgstr "колона"
 
-#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1084
+#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1085
 msgid "Modified"
 msgstr "Измењено"
 
@@ -321,32 +321,32 @@ msgstr "Непознато"
 msgid "Never"
 msgstr "Никад"
 
-#: ../catfish/CatfishWindow.py:606
+#: ../catfish/CatfishWindow.py:607
 msgid "An error occurred while updating the database."
 msgstr "Десила се грешка приликом освежавања складишта података."
 
-#: ../catfish/CatfishWindow.py:608
+#: ../catfish/CatfishWindow.py:609
 msgid "Authentication failed."
 msgstr "Потврда овлашћења није успела."
 
-#: ../catfish/CatfishWindow.py:614
+#: ../catfish/CatfishWindow.py:615
 msgid "Authentication cancelled."
 msgstr "Потврда овлашћења је отказана."
 
-#: ../catfish/CatfishWindow.py:620
+#: ../catfish/CatfishWindow.py:621
 msgid "Search database updated successfully."
 msgstr "Складиште претраге је успешно освежено."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:695
+#: ../catfish/CatfishWindow.py:696
 msgid "Updating..."
 msgstr "Освежавам..."
 
-#: ../catfish/CatfishWindow.py:729
+#: ../catfish/CatfishWindow.py:730
 msgid "Stop Search"
 msgstr "Заустави претрагу"
 
-#: ../catfish/CatfishWindow.py:730
+#: ../catfish/CatfishWindow.py:731
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -354,31 +354,31 @@ msgstr ""
 "Претрага је у току...\n"
 "Притисните дугме откажи или Излаз за заустављање."
 
-#: ../catfish/CatfishWindow.py:739
+#: ../catfish/CatfishWindow.py:740
 msgid "Begin Search"
 msgstr "Почни претрагу"
 
-#: ../catfish/CatfishWindow.py:926
+#: ../catfish/CatfishWindow.py:927
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Нисам успео да отворим „%s“."
 
-#: ../catfish/CatfishWindow.py:972
+#: ../catfish/CatfishWindow.py:973
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Нисам успео да сачувам „%s“."
 
-#: ../catfish/CatfishWindow.py:992
+#: ../catfish/CatfishWindow.py:993
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Нисам успео да избришем „%s“."
 
-#: ../catfish/CatfishWindow.py:1013
+#: ../catfish/CatfishWindow.py:1014
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "Сачувај „%s“ као..."
 
-#: ../catfish/CatfishWindow.py:1048
+#: ../catfish/CatfishWindow.py:1049
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -387,7 +387,7 @@ msgstr ""
 "Да ли сте сигурни да желите да \n"
 "трајно избришете „%s“?"
 
-#: ../catfish/CatfishWindow.py:1052
+#: ../catfish/CatfishWindow.py:1053
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -396,43 +396,43 @@ msgstr ""
 "Да ли сте сигурни да желите да \n"
 "трајно избришете %i означених датотека?"
 
-#: ../catfish/CatfishWindow.py:1055
+#: ../catfish/CatfishWindow.py:1056
 msgid "If you delete a file, it is permanently lost."
 msgstr "Ако избришете датотеку, биће трајно изгубљена."
 
-#: ../catfish/CatfishWindow.py:1078
+#: ../catfish/CatfishWindow.py:1079
 msgid "Filename"
 msgstr "Назив датотеке"
 
-#: ../catfish/CatfishWindow.py:1080
+#: ../catfish/CatfishWindow.py:1081
 msgid "Size"
 msgstr "Величина"
 
-#: ../catfish/CatfishWindow.py:1082
+#: ../catfish/CatfishWindow.py:1083
 msgid "Location"
 msgstr "Место"
 
-#: ../catfish/CatfishWindow.py:1094
+#: ../catfish/CatfishWindow.py:1095
 msgid "Preview"
 msgstr "Преглед"
 
-#: ../catfish/CatfishWindow.py:1102
+#: ../catfish/CatfishWindow.py:1103
 msgid "Details"
 msgstr "Појединости"
 
-#: ../catfish/CatfishWindow.py:1289
+#: ../catfish/CatfishWindow.py:1290
 msgid "Today"
 msgstr "Данас"
 
-#: ../catfish/CatfishWindow.py:1291
+#: ../catfish/CatfishWindow.py:1292
 msgid "Yesterday"
 msgstr "Јуче"
 
-#: ../catfish/CatfishWindow.py:1370
+#: ../catfish/CatfishWindow.py:1371
 msgid "No files found."
 msgstr "Нисам пронашао ни једну датотеку."
 
-#: ../catfish/CatfishWindow.py:1372
+#: ../catfish/CatfishWindow.py:1373
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -440,33 +440,33 @@ msgstr ""
 "Покушајте са мање одређеним упитима\n"
 "или тражите у другој фасцикли."
 
-#: ../catfish/CatfishWindow.py:1377
+#: ../catfish/CatfishWindow.py:1378
 msgid "1 file found."
 msgstr "1 датотека је пронађена."
 
-#: ../catfish/CatfishWindow.py:1379
+#: ../catfish/CatfishWindow.py:1380
 #, python-format
 msgid "%i files found."
 msgstr "Нашао сам %i датотека."
 
-#: ../catfish/CatfishWindow.py:1385
+#: ../catfish/CatfishWindow.py:1386
 msgid "bytes"
 msgstr "бајта"
 
-#: ../catfish/CatfishWindow.py:1523 ../catfish/CatfishWindow.py:1532
+#: ../catfish/CatfishWindow.py:1524 ../catfish/CatfishWindow.py:1533
 msgid "Searching…"
 msgstr "Тражим…"
 
-#: ../catfish/CatfishWindow.py:1525
+#: ../catfish/CatfishWindow.py:1526
 msgid "Results will be displayed as soon as they are found."
 msgstr "Излази ће се приказивати чим буду пронађени."
 
-#: ../catfish/CatfishWindow.py:1530
+#: ../catfish/CatfishWindow.py:1531
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Тражим „%s“"
 
-#: ../catfish/CatfishWindow.py:1619
+#: ../catfish/CatfishWindow.py:1620
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Излаз претраге за „%s“"
