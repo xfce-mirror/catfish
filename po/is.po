@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-30 19:29-0500\n"
+"POT-Creation-Date: 2016-01-31 18:10-0500\n"
 "PO-Revision-Date: 2015-12-16 16:54+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <is@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-31 05:56+0000\n"
+"X-Launchpad-Export-Date: 2016-02-01 05:29+0000\n"
 "X-Generator: Launchpad (build 17908)\n"
 "Language: is\n"
 
@@ -528,64 +528,71 @@ msgstr ""
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid ""
-"This development release hides the output of the `which` command on startup "
-"and includes updated translations."
+"This development release fixes a number of issues related to password "
+"handling, application startup, and the results view. It also includes a "
+"number of updated translations."
 msgstr ""
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
-"This development release now detects the correct thumbnails directory to use "
+"This development release hides the output of the `which` command on startup "
 "and includes updated translations."
 msgstr ""
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
+"This development release now detects the correct thumbnails directory to use "
+"and includes updated translations."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:6
+msgid ""
 "This development release adds a new setting to use toggle headerbars and "
 "fixes several bugs."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:6
+#: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid ""
 "This development release includes a significant UI refresh, improves search "
 "speed, and fixes several bugs"
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:7
+#: ../data/appdata/catfish.appdata.xml.in.h:8
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:8
+#: ../data/appdata/catfish.appdata.xml.in.h:9
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:9
+#: ../data/appdata/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:10
+#: ../data/appdata/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:11
+#: ../data/appdata/catfish.appdata.xml.in.h:12
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:12
+#: ../data/appdata/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:13
+#: ../data/appdata/catfish.appdata.xml.in.h:14
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
