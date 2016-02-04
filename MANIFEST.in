@@ -1,6 +1,6 @@
 include AUTHORS ChangeLog COPYING catfish.1 catfish.desktop.in INSTALL README
 include bin/*
-recursive-include data *.svg *.ui
+recursive-include data *.svg *.ui *.in
 recursive-include catfish *.py
 recursive-include catfish_lib *.py
 recursive-include po *.po *.in

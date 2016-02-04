@@ -18,15 +18,16 @@
 
 import os
 import sys
+import subprocess
 
 try:
     import DistUtilsExtra.auto
 except ImportError:
     sys.stderr.write("To build catfish you need "
-          "https://launchpad.net/python-distutils-extra\n")
+                     "https://launchpad.net/python-distutils-extra\n")
     sys.exit(1)
 assert DistUtilsExtra.auto.__version__ >= '2.18', \
-        'needs DistUtilsExtra.auto >= 2.18'
+    'needs DistUtilsExtra.auto >= 2.18'
 
 
 def update_config(libdir, values={}):
@@ -57,11 +58,11 @@ def update_config(libdir, values={}):
 def move_icon_file(root, target_data, prefix):
     """Move the icon files to their installation prefix."""
     old_icon_path = os.path.normpath(
-    os.path.join(root, target_data, 'share', 'catfish', 'media'))
+        os.path.join(root, target_data, 'share', 'catfish', 'media'))
     old_icon_file = os.path.join(old_icon_path, 'catfish.svg')
     icon_path = os.path.normpath(
-            os.path.join(root, target_data, 'share', 'icons', 'hicolor',
-                         'scalable', 'apps'))
+        os.path.join(root, target_data, 'share', 'icons', 'hicolor',
+                     'scalable', 'apps'))
     icon_file = os.path.join(icon_path, 'catfish.svg')
 
     # Get the real paths.
@@ -88,7 +89,7 @@ def move_icon_file(root, target_data, prefix):
 def get_desktop_file(root, target_data, prefix):
     """Move the desktop file to its installation prefix."""
     desktop_path = os.path.realpath(
-            os.path.join(root, target_data, 'share', 'applications'))
+        os.path.join(root, target_data, 'share', 'applications'))
     desktop_file = os.path.join(desktop_path, 'catfish.desktop')
     return desktop_file
 
@@ -116,20 +117,49 @@ def update_desktop_file(filename, script_path):
         sys.exit(1)
 
 
+def get_appdata_file():
+    """Prebuild the appdata file so it can be installed."""
+    source = "data/appdata/catfish.appdata.xml.in"
+    target = "data/appdata/catfish.appdata.xml"
+    cmd = ["intltool-merge", "-d", "po", "--xml-style", source, target]
+    print(" ".join(cmd))
+    subprocess.call(cmd)
+    return target
+
+
+def cleanup_appdata_files(target_data):
+    appdata_dir = os.path.join(target_data, "appdata")
+    appdata_in = os.path.join(appdata_dir, "catfish.appdata.xml")
+    appdata = os.path.join(appdata_dir, "catfish.appdata.xml.in")
+    print("Removing %s and all files within." % appdata_dir)
+    if os.path.exists(appdata_in):
+        os.remove(appdata_in)
+    if os.path.exists(appdata):
+        os.remove(appdata)
+    if os.path.exists(appdata_dir):
+        os.rmdir(appdata_dir)
+
+
 class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
+
     """Command Class to install and update the directory."""
+
     def run(self):
         """Run the setup commands."""
+        appdata = get_appdata_file()
+
         DistUtilsExtra.auto.install_auto.run(self)
 
         print(("=== Installing %s, version %s ===" %
-            (self.distribution.get_name(), self.distribution.get_version())))
+               (self.distribution.get_name(),
+                self.distribution.get_version())))
 
         if not self.prefix:
             self.prefix = ''
 
         if self.root:
-            target_data = os.path.relpath(self.install_data, self.root) + os.sep
+            target_data = os.path.relpath(
+                self.install_data, self.root) + os.sep
             target_pkgdata = os.path.join(target_data, 'share', 'catfish', '')
             target_scripts = os.path.join(self.install_scripts, '')
 
@@ -167,18 +197,25 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
         move_icon_file(self.root, target_data, self.prefix)
         update_desktop_file(desktop_file, script_path)
 
+        cleanup_appdata_files(target_pkgdata)
+        os.remove(appdata)
+
+
 DistUtilsExtra.auto.setup(
     name='catfish',
     version='1.3.4',
     license='GPL-3+',
     author='Sean Davis',
     author_email='smd.seandavis@gmail.com',
-    description='file searching tool which is configurable via the command line',
+    description='file searching tool configurable via the command line',
     long_description='Catfish is a handy file searching tool for Linux and '
                      'UNIX. The interface is intentionally lightweight and '
                      'simple, using only Gtk+3. You can configure it to your '
                      'needs by using several command line options.',
     url='https://launchpad.net/catfish-search',
-    data_files=[('share/man/man1', ['catfish.1'])],
+    data_files=[
+        ('share/man/man1', ['catfish.1']),
+        ('share/appdata/', ['data/appdata/catfish.appdata.xml'])
+    ],
     cmdclass={'install': InstallAndUpdateDataDirectory}
-    )
+)
