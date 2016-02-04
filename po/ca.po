@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-31 18:10-0500\n"
-"PO-Revision-Date: 2015-03-06 13:13+0000\n"
-"Last-Translator: Emilio <Unknown>\n"
+"POT-Creation-Date: 2016-02-03 22:07-0500\n"
+"PO-Revision-Date: 2016-02-03 08:18+0000\n"
+"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-01 05:28+0000\n"
+"X-Launchpad-Export-Date: 2016-02-04 05:52+0000\n"
 "X-Generator: Launchpad (build 17908)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:39
@@ -24,7 +24,7 @@ msgstr "Cerca de fitxers Catfish"
 
 #: ../catfish.desktop.in.h:2
 msgid "File search"
-msgstr ""
+msgstr "Cerca de fitxers"
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -58,7 +58,7 @@ msgstr "_Suprimeix"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr ""
+msgstr "Extensions de fitxers"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -70,7 +70,7 @@ msgstr "Documents"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "documents"
-msgstr ""
+msgstr "documents"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
@@ -78,7 +78,7 @@ msgstr "Carpetes"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "folders"
-msgstr ""
+msgstr "carpetes"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
@@ -86,7 +86,7 @@ msgstr "Imatges"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "images"
-msgstr ""
+msgstr "imatges"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
@@ -94,7 +94,7 @@ msgstr "Música"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "music"
-msgstr ""
+msgstr "música"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
@@ -102,7 +102,7 @@ msgstr "Vídeos"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "videos"
-msgstr ""
+msgstr "vídeos"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
@@ -110,7 +110,7 @@ msgstr "Aplicacions"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "applications"
-msgstr ""
+msgstr "aplicacions"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
@@ -118,7 +118,7 @@ msgstr "Altres"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "other"
-msgstr ""
+msgstr "d’altres"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -126,7 +126,7 @@ msgstr "Qualsevol moment"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "any"
-msgstr ""
+msgstr "qualsevol"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
@@ -134,7 +134,7 @@ msgstr "Aquesta setmana"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "week"
-msgstr ""
+msgstr "setmana"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "Custom"
@@ -142,7 +142,7 @@ msgstr "Personalitzat"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgid "custom"
-msgstr ""
+msgstr "personalitzat"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "Go to Today"
@@ -162,19 +162,20 @@ msgstr "Catfish"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Update"
-msgstr "Actualitzar"
+msgstr "Actualitza"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
+"La base de dades de cerca té més de 7 dies. Voleu actualitzar-la ara?"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "File Type"
-msgstr ""
+msgstr "Tipus de fitxer"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "column"
-msgstr ""
+msgstr "columna"
 
 #: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1085
 msgid "Modified"
@@ -239,11 +240,11 @@ msgstr "_Quant a"
 
 #: ../data/ui/CatfishWindow.ui.h:52
 msgid "Update Search Database"
-msgstr "Actualitza la base de dades de recerca"
+msgstr "Actualitza la base de dades de cerca"
 
 #: ../data/ui/CatfishWindow.ui.h:53
 msgid "Unlock"
-msgstr "Desbloqueja"
+msgstr "Desbloca"
 
 #: ../data/ui/CatfishWindow.ui.h:54
 msgid "<b>Database:</b>"

@@ -1,16 +1,16 @@
-# Lithuanian translation for catfish-search
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Esperanto translation for catfish-search
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the catfish-search package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-03 22:07-0500\n"
-"PO-Revision-Date: 2015-11-19 21:20+0000\n"
-"Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian <lt@li.org>\n"
+"PO-Revision-Date: 2016-02-03 08:30+0000\n"
+"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
+"Language-Team: Esperanto <eo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,364 +20,356 @@ msgstr ""
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:39
 #: ../catfish/CatfishWindow.py:639
 msgid "Catfish File Search"
-msgstr "Catfish failų paieška"
+msgstr "Dosierserĉilo Catfish"
 
 #: ../catfish.desktop.in.h:2
 msgid "File search"
-msgstr "Failų paieška"
+msgstr "Dosierserĉilo"
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
-msgstr "Atlikite paiešką failų sistemoje"
+msgstr "Serĉi la dosiersistemon"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
-msgstr "Catfish yra universalus failų paieškos įrankis."
+msgstr "Catfish estas kapabla ilon por dosierserĉo."
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
-msgstr "_Atverti"
+msgstr ""
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
-msgstr "Rodyti _failų tvarkytuvėje"
+msgstr ""
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Copy Location"
-msgstr "_Kopijuoti vietą"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "Į_rašyti kaip..."
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
-msgstr "_Ištrinti"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr "Failo prievardžiai"
+msgstr "Dosiersufiksoj"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
-msgstr "odt, png, txt"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
-msgstr "Dokumentai"
+msgstr "Dokumentoj"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "documents"
-msgstr "dokumentai"
+msgstr "dokumentoj"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
-msgstr "Aplankai"
+msgstr "Dosierujoj"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "folders"
-msgstr "aplankai"
+msgstr "dosierujoj"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Images"
-msgstr "Paveikslai"
+msgstr "Bildoj"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "images"
-msgstr "paveikslai"
+msgstr "bildoj"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Music"
-msgstr "Muzika"
+msgstr "Muziko"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "music"
-msgstr "muzika"
+msgstr "muziko"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "Videos"
-msgstr "Vaizdo įrašai"
+msgstr "Videoj"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "videos"
-msgstr "vaizdo įrašai"
+msgstr "videoj"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
-msgstr "Programos"
+msgstr "Aplikaĵoj"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "applications"
-msgstr "programos"
+msgstr "aplikaĵoj"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
-msgstr "Kita"
+msgstr "Aliaj"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "other"
-msgstr "kita"
+msgstr "aliaj"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
-msgstr "Bet kada"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "any"
-msgstr "bet kokia"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
-msgstr "Šią savaitę"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "week"
-msgstr "savaitė"
+msgstr "semajno"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "Custom"
-msgstr "Pasirinktinai"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgid "custom"
-msgstr "pasirinktinai"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgid "Go to Today"
-msgstr "Pereiti į šiandieną"
+msgstr "Iri al hodiaŭ"
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgid "<b>Start Date</b>"
-msgstr "<b>Pradžios data</b>"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "<b>End Date</b>"
-msgstr "<b>Pabaigos data</b>"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:33 ../catfish_lib/Window.py:218
 msgid "Catfish"
-msgstr "Catfish"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Update"
-msgstr "Atnaujinti"
+msgstr "Ĝisdatigi"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
-"Paieškos duomenų bazei yra daugiau kaip 7 dienos. Atnaujinti ją dabar?"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "File Type"
-msgstr "Failo tipas"
+msgstr "Dosiertipo"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "column"
-msgstr "stulpelis"
+msgstr "kolumno"
 
 #: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1085
 msgid "Modified"
-msgstr "Keista"
+msgstr "Ŝanĝita"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr "Norėdami rasti savo failus, viršuje įveskite užklausą"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "or click the "
-msgstr "arba spustelėkite "
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
-msgstr " piktogramą, kad pamatytumėte daugiau parinkčių."
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "Select a Directory"
-msgstr "Pasirinkite Katalogą"
+msgstr "Elektu dosierujon"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "Compact List"
-msgstr "Glaudintas sąrašas"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Thumbnails"
-msgstr "Miniatiūros"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Show _Hidden Files"
-msgstr "Rodyti _paslėptus failus"
+msgstr "Montri _kaŝitajn dosierojn"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Search File _Contents"
-msgstr "Ieškoti failų _turinį"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "_Exact Match"
-msgstr "Tiksli _atitiktis"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "Show _Sidebar"
-msgstr "Rodyti šoninę _juostą"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "_Update Search Index…"
-msgstr "Atnaujinti paieškos _indeksą..."
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:51
 msgid "_About"
-msgstr "Api_e"
+msgstr "_Pri"
 
 #: ../data/ui/CatfishWindow.ui.h:52
 msgid "Update Search Database"
-msgstr "Atnaujinti Paieškos Duomenų Bazę"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:53
 msgid "Unlock"
-msgstr "Atrakinti"
+msgstr "Malŝlosi"
 
 #: ../data/ui/CatfishWindow.ui.h:54
 msgid "<b>Database:</b>"
-msgstr "<b>Duomenų bazė:</b>"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:55
 msgid "<b>Updated:</b>"
-msgstr "<b>Atnaujinta:</b>"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:56
 msgid "<big><b>Update Search Database</b></big>"
-msgstr "<big><b>Paieškos Duomenų Bazės Atnaujinimas</b></big>"
+msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:57
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
-"Siekiant greitesnių paieškos rezultatų, paieškos duomenų bazė\n"
-"turi būti įkelta iš naujo.\n"
-"Šis veiksmas reikalauja administratoriaus teisių."
 
 #: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
-msgstr "Naudojimas: %prog [parinktys] kelias užklausa"
+msgstr ""
 
 #: ../catfish/__init__.py:39
 msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr "Rodyti derinimo pranešimus (-vv taip pat derina catfish_lib)"
+msgstr ""
 
 #: ../catfish/__init__.py:42
 msgid "Use large icons"
-msgstr "Naudoti dideles piktogramas"
+msgstr ""
 
 #: ../catfish/__init__.py:44
 msgid "Use thumbnails"
-msgstr "Naudoti miniatiūras"
+msgstr ""
 
 #: ../catfish/__init__.py:46
 msgid "Display time in ISO format"
-msgstr "Rodyti laiką ISO formatu"
+msgstr ""
 
 #: ../catfish/__init__.py:50
 msgid "Perform exact match"
-msgstr "Atlikti tikslią atitiktį"
+msgstr ""
 
 #: ../catfish/__init__.py:52
 msgid "Include hidden files"
-msgstr "Įtraukti paslėptus failus"
+msgstr ""
 
 #: ../catfish/__init__.py:54
 msgid "Perform fulltext search"
-msgstr "Atlikti pilno teksto paiešką"
+msgstr ""
 
 #: ../catfish/__init__.py:56
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
-"Jei yra pateiktas kelias ir užklausa, pradėti paiešką, kai programa yra "
-"rodoma."
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
 #: ../catfish/CatfishWindow.py:82
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr "%s (neteisinga koduotė)"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:249
 msgid "Unknown"
-msgstr "Nežinoma"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:253
 msgid "Never"
-msgstr "Niekada"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:607
 msgid "An error occurred while updating the database."
-msgstr "Atnaujinant duomenų bazę, įvyko klaida."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:609
 msgid "Authentication failed."
-msgstr "Nepavyko nustatyti tapatybės."
+msgstr "Aŭtentokontrolo malsukcesis."
 
 #: ../catfish/CatfishWindow.py:615
 msgid "Authentication cancelled."
-msgstr "Tapatybės nustatymas atšauktas."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:621
 msgid "Search database updated successfully."
-msgstr "Paieškos duomenų bazė sėkmingai atnaujinta."
+msgstr ""
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:696
 msgid "Updating..."
-msgstr "Atnaujinama..."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:730
 msgid "Stop Search"
-msgstr "Stabdyti paiešką"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:731
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
-"Paieška yra vykdoma...\n"
-"Norėdami sustabdyti, spauskite atšaukimo arba Escape mygtuką."
 
 #: ../catfish/CatfishWindow.py:740
 msgid "Begin Search"
-msgstr "Pradėti paiešką"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:927
 #, python-format
 msgid "\"%s\" could not be opened."
-msgstr "Nepavyko atverti \"%s\"."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:973
 #, python-format
 msgid "\"%s\" could not be saved."
-msgstr "Nepavyko įrašyti \"%s\"."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:993
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr "Nepavyko ištrinti \"%s\"."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:1014
 #, python-format
 msgid "Save \"%s\" as…"
-msgstr "Įrašyti \"%s\" kaip…"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:1049
 #, python-format
@@ -385,8 +377,6 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
-"Ar tikrai norite negrįžtamai \n"
-"ištrinti \"%s\"?"
 
 #: ../catfish/CatfishWindow.py:1053
 #, python-format
@@ -394,113 +384,106 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
-"Ar tikrai norite negrįžtamai ištrinti \n"
-"%i pasirinktus failus?"
 
 #: ../catfish/CatfishWindow.py:1056
 msgid "If you delete a file, it is permanently lost."
-msgstr "Jeigu ištrinsite failą, jis bus negrįžtamai prarastas."
+msgstr "Se vi forigas dosieron, ĝi estas definitive perdata."
 
 #: ../catfish/CatfishWindow.py:1079
 msgid "Filename"
-msgstr "Failo pavadinimas"
+msgstr "Dosiernomo"
 
 #: ../catfish/CatfishWindow.py:1081
 msgid "Size"
-msgstr "Dydis"
+msgstr "Grandeco"
 
 #: ../catfish/CatfishWindow.py:1083
 msgid "Location"
-msgstr "Vieta"
+msgstr "Loko"
 
 #: ../catfish/CatfishWindow.py:1095
 msgid "Preview"
-msgstr "Peržiūra"
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:1103
 msgid "Details"
-msgstr "Išsamesnė informacija"
+msgstr "Detaloj"
 
 #: ../catfish/CatfishWindow.py:1290
 msgid "Today"
-msgstr "Šiandien"
+msgstr "Hodiaŭ"
 
 #: ../catfish/CatfishWindow.py:1292
 msgid "Yesterday"
-msgstr "Vakar"
+msgstr "Hieraŭ"
 
 #: ../catfish/CatfishWindow.py:1371
 msgid "No files found."
-msgstr "Failų nerasta."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:1373
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
-"Pabandykite vykdyti ne tokią konkrečią paiešką\n"
-"arba pabandykite kitą katalogą."
 
 #: ../catfish/CatfishWindow.py:1378
 msgid "1 file found."
-msgstr "Rastas 1 failas."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:1380
 #, python-format
 msgid "%i files found."
-msgstr "Rasta %i failų."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:1386
 msgid "bytes"
-msgstr "baitų"
+msgstr "oktetoj"
 
 #: ../catfish/CatfishWindow.py:1524 ../catfish/CatfishWindow.py:1533
 msgid "Searching…"
-msgstr "Ieškoma..."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:1526
 msgid "Results will be displayed as soon as they are found."
-msgstr "Rezultatai bus rodomi iš karto, kai tik bus rasti."
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:1531
 #, python-format
 msgid "Searching for \"%s\""
-msgstr "Ieškoma \"%s\""
+msgstr ""
 
 #: ../catfish/CatfishWindow.py:1620
 #, python-format
 msgid "Search results for \"%s\""
-msgstr "\"%s\" paieškos rezultatai"
+msgstr ""
 
 #: ../catfish_lib/SudoDialog.py:139
 msgid "Password Required"
-msgstr "Reikalingas Slaptažodis"
+msgstr "Pasvorto bezonata"
 
 #: ../catfish_lib/SudoDialog.py:176
 msgid "Incorrect password... try again."
-msgstr "Neteisingas slaptažodis... bandykite dar kartą."
+msgstr "Pasvorto malkorekta… Provu denove."
 
 #: ../catfish_lib/SudoDialog.py:186
 msgid "Password:"
-msgstr "Slaptažodis:"
+msgstr "Pasvorto:"
 
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:197
 msgid "Cancel"
-msgstr "Atsisakyti"
+msgstr ""
 
 #: ../catfish_lib/SudoDialog.py:200
 msgid "OK"
-msgstr "Gerai"
+msgstr ""
 
 #: ../catfish_lib/SudoDialog.py:221
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
-"Įveskite savo slaptažodį,\n"
-"kad galėtumėte atlikti \n"
-"administratoriaus užduotis."
 
 #: ../catfish_lib/SudoDialog.py:223
 #, python-format
@@ -508,12 +491,10 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
-"Programa '%s' leidžia jums\n"
-"modifikuoti svarbiausias jūsų sistemos dalis."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr "Universalus failų paieškos įrankis"
+msgstr ""
 
 #: ../data/appdata/catfish.appdata.xml.in.h:2
 msgid ""
@@ -523,12 +504,6 @@ msgid ""
 "date, file type, and file contents, users will no longer be dependent on the "
 "file manager or organization skills."
 msgstr ""
-"Catfish yra maža, greita ir galinga failų paieškos paslaugų programa. "
-"Minimalios sąsajos, kurioje visas dėmesys sutelkiamas į rezultatus, dėka, "
-"programa padeda naudotojams, be failų tvarkytuvės pagalbos, rasti ieškomus "
-"failus. Galingų filtrų, tokių kaip keitimo data, failo tipas ir failo "
-"turinys, dėka, naudotojai daugiau nebus priklausomi nuo failų tvarkytuvės ar "
-"organizuotumo įgūdžių."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid ""
@@ -542,45 +517,34 @@ msgid ""
 "This development release hides the output of the `which` command on startup "
 "and includes updated translations."
 msgstr ""
-"Ši kūrimo laida paslepia komandos \"which\" išvestį paleidimo metu ir "
-"pristato atnaujintus vertimus."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
 "This development release now detects the correct thumbnails directory to use "
 "and includes updated translations."
 msgstr ""
-"Ši kūrimo laida dabar naudojimui aptinka teisinga miniatiūrų katalogą ir "
-"pristato atnaujintus vertimus."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:6
 msgid ""
 "This development release adds a new setting to use toggle headerbars and "
 "fixes several bugs."
 msgstr ""
-"Šioje kūrimo laidoje yra pridedamas naujas nustatymas, skirtas antraščių "
-"juostos perjungimui ir ištaisomos kelios klaidos."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid ""
 "This development release includes a significant UI refresh, improves search "
 "speed, and fixes several bugs"
 msgstr ""
-"Šioje kūrimo laidoje yra žymus naudotojo sąsajos atnaujinimas, pagerinamas "
-"paieškos greitis ir ištaisomos kelios klaidos"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:8
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
-"Šioje laidoje ištaisomos dvi naujos klaidos ir yra atnaujinami vertimai."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:9
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
-"Šioje laidoje yra ištaisyta regresija, dėl kurios kai kuriose sistemose buvo "
-"neįmanoma paleisti programos."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:10
 msgid ""
@@ -588,37 +552,24 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
-"Šioje laidoje yra ištaisoma regresija, dėl kurios keli paieškos terminai "
-"būdavo nebepalaikomi. Dabar, kai paieškos duomenų bazė yra pasenusi, yra "
-"rodoma informacinė juosta, o taip pat yra patobulinti duomenų bazės "
-"atnaujinimo dialogai."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
-"Šioje laidoje yra ištaisoma regresija, kuomet nebuvo tinkamai vykdomas "
-"vietos nustatymas, o taip pat patobulinamas trūkstamų simbolinių piktogramų "
-"apdorojimas."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:12
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
-"Ši stabili laida pagerino slaptažodžio dialogo patikimumą, buvo išvalytas "
-"nebenaudojamas kodas ir ištaisytos potencialios, su sąrašo ir elemento "
-"pasirinkimu susijusios, klaidos."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
 msgstr ""
-"Šioje laidoje ištaisyta potenciali saugumo problema, susijusi su programos "
-"paleidimu, o taip pat ištaisyta, su kelių elementų pasirinkimu susijusi, "
-"regresija."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:14
 msgid ""
@@ -628,78 +579,3 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
-"Pirma laida 1.0.x serijoje pristatė atnaujintą sąsają ir daugelį ištaisytų "
-"ilgai trukusių problemų. Numatytųjų leidimų patobulinimai pašalino daugybę "
-"įspėjimų, atsirandančių pakavimo distribucijoms metu."
-
-#~ msgid "<b>File Type</b>"
-#~ msgstr "<b>Failo tipas</b>"
-
-#~ msgid "<b>Modified</b>"
-#~ msgstr "<b>Keista</b>"
-
-#~ msgid "Custom File Type"
-#~ msgstr "Pasirinktinis failo tipas"
-
-#~ msgid "_Fulltext Search"
-#~ msgstr "P_ilno teksto paieška"
-
-#~ msgid "_Hidden Files"
-#~ msgstr "_Paslėpti failai"
-
-#~ msgid "_Show Advanced Settings"
-#~ msgstr "_Rodyti išplėstinius nustatymus"
-
-#~ msgid "Custom Time Range"
-#~ msgstr "Pasirinktinis laiko rėžis"
-
-#~ msgid "Done."
-#~ msgstr "Atlikta."
-
-#~ msgid "An error occurred while updating locatedb."
-#~ msgstr "Atnaujinant locatedb, įvyko klaida."
-
-#~ msgid "User aborted authentication."
-#~ msgstr "Naudotojas nutraukė tapatybės nustatymą."
-
-#~ msgid "Clear search terms"
-#~ msgstr "Išvalyti paieškos užklausas"
-
-#~ msgid "Enter search terms and press ENTER"
-#~ msgstr "Įveskite paieškos užklausas ir spauskite ENTER"
-
-#~ msgid "Last modified"
-#~ msgstr "Paskutinis keitimas"
-
-#~ msgid "Updating database…"
-#~ msgstr "Atnaujinama duomenų bazė..."
-
-#~ msgid "Update Search Index"
-#~ msgstr "Atnaujinti paieškos indeksą"
-
-#~ msgid "Locate database updated successfully."
-#~ msgstr "Locate duomenų bazė sėkmingai atnaujinta."
-
-#~ msgid "<big><b>Update Search Index</b></big>"
-#~ msgstr "<big><b>Paieškos Indekso Atnaujinimas</b></big>"
-
-#~ msgid ""
-#~ "To provide accurate results, the <i>locate</i> database needs to be "
-#~ "refreshed.\n"
-#~ "This requires sudo (admin) rights."
-#~ msgstr ""
-#~ "Norint pateikti tikslesnius rezultatus, privalo būti iš naujo įkelta "
-#~ "<i>locate</i> duomenų bazė.\n"
-#~ "Tai reikalauja sudo (administratoriaus) teisių."
-
-#~ msgid "Catfish could not find the default file manager."
-#~ msgstr "Catfish nepavyko rasti numatytosios failų tvarkytuvės."
-
-#~ msgid "Enter file extensions"
-#~ msgstr "Įveskite failų prievardžius"
-
-#~ msgid "Select existing mimetype"
-#~ msgstr "Pasirinkite esamus MIME tipus"
-
-#~ msgid "Catfish could not find the default open wrapper."
-#~ msgstr "Catfish nepavyko rasti numatytosios atvėrimo programos."
