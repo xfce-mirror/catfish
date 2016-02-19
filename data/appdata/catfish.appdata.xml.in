@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014-2015 Sean Davis <smd.seandavis@gmail.com> -->
+<!-- Copyright 2014-2016 Sean Davis <smd.seandavis@gmail.com> -->
 <application>
   <id type="desktop">catfish.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
-  <name>Catfish</name>
+  <_name>Catfish</_name>
   <_summary>Versatile file searching tool</_summary>
 
   <description>
@@ -26,49 +26,24 @@
   <url type="bugtracker">https://bugs.launchpad.net/catfish-search/</url>
   <url type="help">https://answers.launchpad.net/catfish-search</url>
 
-  <updatecontact>smd.seandavis@gmail.com</updatecontact>
+  <update_contact>smd.seandavis@gmail.com</update_contact>
 
   <provides>
     <binary>catfish</binary>
   </provides>
 
   <releases>
-      <release version="1.3.4" timestamp="1454283000">
+      <release version="1.4.0" timestamp="">
         <description>
-          <_p>This development release fixes a number of issues related
-          to password handling, application startup, and the results view.
-          It also includes a number of updated translations.
+          <_p>This release includes a significant interface refresh, 
+          improves search speed, and fixes several bugs. The workflow 
+          has been improved, utilizing some of the latest features 
+          of the GTK+ toolkit, including optional headerbars and
+          popover widgets. Password handling has been improved with
+          the integration of PolicyKit when available.
           </_p>
         </description>
       </release>
-    <release version="1.3.3" timestamp="1444304700">
-      <description>
-        <_p>This development release hides the output of the `which`
-        command on startup and includes updated translations.
-        </_p>
-      </description>
-    </release>
-    <release version="1.3.2" timestamp="1442779200">
-      <description>
-        <_p>This development release now detects the correct thumbnails
-        directory to use and includes updated translations.
-        </_p>
-      </description>
-    </release>
-    <release version="1.3.1" timestamp="1441846800">
-      <description>
-        <_p>This development release adds a new setting to use toggle headerbars
-        and fixes several bugs.
-        </_p>
-      </description>
-    </release>
-    <release version="1.3.0" timestamp="1439949600">
-      <description>
-        <_p>This development release includes a significant UI refresh, improves
-        search speed, and fixes several bugs
-        </_p>
-      </description>
-    </release>
     <release version="1.2.2" timestamp="1411335000">
       <description>
         <_p>This release fixes two new bugs and includes updated translations.
