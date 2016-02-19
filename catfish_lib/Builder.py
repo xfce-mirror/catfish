@@ -23,9 +23,9 @@ from gi.repository import GObject, Gtk  # pylint: disable=E0611
 import inspect
 import functools
 import logging
-logger = logging.getLogger('catfish_lib')
-
 from xml.etree.cElementTree import ElementTree
+
+logger = logging.getLogger('catfish_lib')
 
 # this module is big so uses some conventional prefixes and postfixes
 # *s list, except self.widgets is a dictionary

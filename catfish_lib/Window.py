@@ -18,14 +18,12 @@
 
 from gi.repository import Gtk, Gdk  # pylint: disable=E0611
 import logging
-logger = logging.getLogger('catfish_lib')
-
-from . helpers import get_builder
-
 from locale import gettext as _
 
+from . helpers import get_builder
 from catfish_lib import CatfishSettings
 
+logger = logging.getLogger('catfish_lib')
 
 # GtkBuilder Mappings
 __builder__ = {

@@ -16,6 +16,8 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import os
+
 __all__ = [
     'project_path_not_found',
     'get_data_file',
@@ -30,8 +32,6 @@ __catfish_data_directory__ = '../data/'
 __locate_db_path__ = '/var/lib/mlocate/mlocate.db'
 __license__ = 'GPL-2'
 __version__ = '1.3.4'
-
-import os
 
 
 class project_path_not_found(Exception):

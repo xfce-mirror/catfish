@@ -17,9 +17,10 @@
 #   with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
-logger = logging.getLogger('catfish')
 
 from catfish_lib.AboutDialog import AboutDialog
+
+logger = logging.getLogger('catfish')
 
 
 # See catfish_lib.AboutDialog.py for more details about how this class works.

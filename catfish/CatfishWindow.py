@@ -32,7 +32,8 @@ from gi.repository import Gdk, GdkPixbuf, GLib, GObject, Gtk, Pango
 
 from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishSearchEngine import *
-from catfish_lib import catfishconfig, CatfishSettings, SudoDialog, Window, helpers
+from catfish_lib import catfishconfig, helpers
+from catfish_lib import CatfishSettings, SudoDialog, Window
 
 logger = logging.getLogger('catfish')
 
@@ -1370,7 +1371,8 @@ class CatfishWindow(Window):
             self.builder.get_object(
                 "splash_title").set_text(_("No files found."))
             self.builder.get_object("splash_subtitle").set_text(
-                _("Try making your search less specific\nor try another directory."))
+                _("Try making your search less specific\n"
+                  "or try another directory."))
         else:
             self.builder.get_object("splash").hide()
             self.builder.get_object("results_scrolledwindow").show()
@@ -1482,7 +1484,7 @@ class CatfishWindow(Window):
             thumb_pixbuf.savev(path, "png", [], [])
             return True
         except Exception as e:
-            print (e)
+            print(e)
             return False
 
     def get_file_icon(self, path, mime_type=None):

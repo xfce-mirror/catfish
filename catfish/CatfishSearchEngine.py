@@ -17,7 +17,6 @@
 #   with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
-logger = logging.getLogger('catfish_search')
 
 import io
 import os
@@ -29,9 +28,6 @@ from itertools import permutations
 from mimetypes import guess_type
 
 from sys import version_info
-python3 = version_info[0] > 2
-
-engine_count = 0
 
 try:
     from zeitgeist.client import ZeitgeistDBusInterface
@@ -42,6 +38,10 @@ try:
 except Exception:
     zeitgeist_support = False
 
+logger = logging.getLogger('catfish_search')
+python3 = version_info[0] > 2
+engine_count = 0
+
 FNULL = open(os.devnull, 'w')
 if subprocess.call(['which', 'locate'],
                    stdout=FNULL, stderr=subprocess.STDOUT) == 0:
@@ -49,6 +49,7 @@ if subprocess.call(['which', 'locate'],
 else:
     locate_support = False
 FNULL.close()
+
 
 def string_regex(keywords, path):
     """Returns a string with the regular expression containing all combinations
@@ -93,7 +94,8 @@ class CatfishSearchEngine:
         engine_count += 1
         self.engine_id = engine_count
         logger.debug(
-            "[%i] engine initializing with methods: %s", self.engine_id, str(methods))
+            "[%i] engine initializing with methods: %s",
+            self.engine_id, str(methods))
         self.methods = []
         if 'zeitgeist' in methods:
             if zeitgeist_support:
@@ -109,7 +111,8 @@ class CatfishSearchEngine:
         for method in self.methods:
             initialized.append(method.method_name)
         logger.debug(
-            "[%i] engine initialized with methods: %s", self.engine_id, str(initialized))
+            "[%i] engine initialized with methods: %s",
+            self.engine_id, str(initialized))
         self.start_time = 0.0
 
     def __del__(self):
@@ -131,7 +134,8 @@ class CatfishSearchEngine:
         keywords = keywords.replace(',', ' ').strip().lower()
 
         logger.debug("[%i] path: %s, keywords: %s, limit: %i, regex: %s",
-                     self.engine_id, str(path), str(keywords), limit, str(regex))
+                     self.engine_id, str(path), str(keywords), limit,
+                     str(regex))
 
         self.keywords = keywords
 
@@ -154,7 +158,8 @@ class CatfishSearchEngine:
         file_count = 0
         for method in self.methods:
             logger.debug(
-                "[%i] Starting search method: %s", self.engine_id, method.method_name)
+                "[%i] Starting search method: %s",
+                self.engine_id, method.method_name)
             for filename in method.run(keywords, path, regex):
                 if isinstance(filename, str) and path in filename:
                     if method.method_name == 'fulltext' or  \
