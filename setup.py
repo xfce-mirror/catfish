@@ -16,9 +16,11 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import codecs
 import os
 import sys
 import subprocess
+
 
 try:
     import DistUtilsExtra.auto
@@ -35,8 +37,8 @@ def update_config(libdir, values={}):
     filename = os.path.join(libdir, 'catfish_lib', 'catfishconfig.py')
     oldvalues = {}
     try:
-        fin = open(filename, 'r', encoding='utf-8')
-        fout = open(filename + '.new', 'w', encoding='utf-8')
+        fin = codecs.open(filename, 'r', encoding='utf-8')
+        fout = codecs.open(filename + '.new', 'w', encoding='utf-8')
 
         for line in fin:
             fields = line.split(' = ')  # Separate variable from value
@@ -97,8 +99,8 @@ def get_desktop_file(root, target_data, prefix):
 def update_desktop_file(filename, script_path):
     """Update the desktop file with prefixed paths."""
     try:
-        fin = open(filename, 'r', encoding='utf-8')
-        fout = open(filename + '.new', 'w', encoding='utf-8')
+        fin = codecs.open(filename, 'r', encoding='utf-8')
+        fout = codecs.open(filename + '.new', 'w', encoding='utf-8')
 
         for line in fin:
             if 'Exec=' in line:
