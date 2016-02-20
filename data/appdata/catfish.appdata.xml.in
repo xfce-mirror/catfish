@@ -33,7 +33,7 @@
   </provides>
 
   <releases>
-      <release version="1.4.0" timestamp="">
+      <release version="1.4.0" timestamp="1455933600">
         <description>
           <_p>This release includes a significant interface refresh, 
           improves search speed, and fixes several bugs. The workflow 

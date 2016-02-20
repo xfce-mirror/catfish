@@ -1,7 +1,9 @@
-v1.4.0 (INPROGRESS):
+v1.4.0:
  + Bug Fixes:
    - Fix installation with Python 2 (LP: #1540211)
    - Install appdata again (broke in 1.3.4)
+ + Translation Updates:
+   - Catalan, Esperanto, French, Lithuanian, Spanish, Swedish
 
 v1.3.4:
  + This is a new development release, probably the last before
