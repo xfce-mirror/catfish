@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 20:59-0500\n"
+"POT-Creation-Date: 2016-02-22 22:58-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -304,16 +304,16 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:83
+#: ../catfish/CatfishWindow.py:82
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:250
+#: ../catfish/CatfishWindow.py:249
 msgid "Unknown"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:254
+#: ../catfish/CatfishWindow.py:253
 msgid "Never"
 msgstr ""
 

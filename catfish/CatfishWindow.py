@@ -22,7 +22,6 @@ import logging
 import mimetypes
 import os
 import time
-from calendar import timegm
 from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
@@ -312,9 +311,10 @@ class CatfishWindow(Window):
         end_date = end_calendar.get_date()
         self.end_date = datetime.datetime(end_date[0], end_date[1] + 1,
                                           end_date[2])
+        self.end_date = self.end_date + datetime.timedelta(days=1, seconds=-1)
 
-        self.filter_timerange = (timegm(self.start_date.timetuple()),
-                                 timegm(self.end_date.timetuple()))
+        self.filter_timerange = (time.mktime(self.start_date.timetuple()),
+                                 time.mktime(self.end_date.timetuple()))
 
         self.refilter()
 
@@ -868,7 +868,7 @@ class CatfishWindow(Window):
             logger.debug("Time Range: Beginning of time -> Eternity")
         elif value == 'week':
             now = datetime.datetime.now()
-            week = timegm((
+            week = time.mktime((
                 datetime.datetime(now.year, now.month, now.day, 0, 0) -
                 datetime.timedelta(7)).timetuple())
             self.filter_timerange = (week, 9999999999.0)
@@ -876,8 +876,8 @@ class CatfishWindow(Window):
                 "Time Range: %s -> Eternity",
                 time.strftime("%x %X", time.gmtime(int(week))))
         elif value == 'custom':
-            self.filter_timerange = (timegm(self.start_date.timetuple()),
-                                     timegm(self.end_date.timetuple()))
+            self.filter_timerange = (time.mktime(self.start_date.timetuple()),
+                                     time.mktime(self.end_date.timetuple()))
             logger.debug(
                 "Time Range: %s -> %s",
                 time.strftime("%x %X",
