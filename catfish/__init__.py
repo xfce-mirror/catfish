@@ -27,6 +27,7 @@ from catfish import CatfishWindow
 from catfish_lib import set_up_logging, get_version
 
 import os
+import signal
 
 
 def parse_options():
@@ -73,4 +74,7 @@ def main():
     window = CatfishWindow.CatfishWindow()
     window.parse_options(options, args)
     window.show()
+
+    # Allow application shutdown with Ctrl-C in terminal
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
     Gtk.main()
