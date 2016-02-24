@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-22 22:58-0500\n"
+"POT-Creation-Date: 2016-02-23 22:18-0500\n"
 "PO-Revision-Date: 2014-11-03 10:41+0000\n"
 "Last-Translator: Petr Šimáček <petr.simacek@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-23 05:58+0000\n"
+"X-Launchpad-Export-Date: 2016-02-24 05:40+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:39
-#: ../catfish/CatfishWindow.py:640
+#: ../catfish/CatfishWindow.py:639
 msgid "Catfish File Search"
 msgstr "Vyhledávač souborů Catfish"
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "column"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1086
+#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1085
 msgid "Modified"
 msgstr "Změněno"
 
@@ -266,39 +266,39 @@ msgstr ""
 "Pro rychlejší výsledky vyhledávání musí být vyhledávací databáze obnovena.\n"
 "To vyžaduje práva administrátora."
 
-#: ../catfish/__init__.py:34
+#: ../catfish/__init__.py:35
 msgid "Usage: %prog [options] path query"
 msgstr "Použití: %prog [volby] dotaz cesta"
 
-#: ../catfish/__init__.py:39
+#: ../catfish/__init__.py:40
 msgid "Show debug messages (-vv debugs catfish_lib also)"
 msgstr "Zobrazit chybové zprávy (-vv debugs catfish_lib also)"
 
-#: ../catfish/__init__.py:42
+#: ../catfish/__init__.py:43
 msgid "Use large icons"
 msgstr "Použít velké ikony"
 
-#: ../catfish/__init__.py:44
+#: ../catfish/__init__.py:45
 msgid "Use thumbnails"
 msgstr "Použít náhledy"
 
-#: ../catfish/__init__.py:46
+#: ../catfish/__init__.py:47
 msgid "Display time in ISO format"
 msgstr "Zobrazit čas v ISO formatu"
 
-#: ../catfish/__init__.py:50
+#: ../catfish/__init__.py:51
 msgid "Perform exact match"
 msgstr "Provést přesné shody"
 
-#: ../catfish/__init__.py:52
+#: ../catfish/__init__.py:53
 msgid "Include hidden files"
 msgstr "Zahrnout skryté soubory"
 
-#: ../catfish/__init__.py:54
+#: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
 msgstr "Provést fulltextové hledání"
 
-#: ../catfish/__init__.py:56
+#: ../catfish/__init__.py:57
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
@@ -312,40 +312,40 @@ msgstr ""
 msgid "%s (invalid encoding)"
 msgstr "%s (neplatné kódování)"
 
-#: ../catfish/CatfishWindow.py:249
+#: ../catfish/CatfishWindow.py:248
 msgid "Unknown"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:253
+#: ../catfish/CatfishWindow.py:252
 msgid "Never"
 msgstr "Nikdy"
 
-#: ../catfish/CatfishWindow.py:608
+#: ../catfish/CatfishWindow.py:607
 msgid "An error occurred while updating the database."
 msgstr "Při obnovování databáze došlo k chybě."
 
-#: ../catfish/CatfishWindow.py:610
+#: ../catfish/CatfishWindow.py:609
 msgid "Authentication failed."
 msgstr "Ověření selhalo."
 
-#: ../catfish/CatfishWindow.py:616
+#: ../catfish/CatfishWindow.py:615
 msgid "Authentication cancelled."
 msgstr "Ověření zrušeno."
 
-#: ../catfish/CatfishWindow.py:622
+#: ../catfish/CatfishWindow.py:621
 msgid "Search database updated successfully."
 msgstr "Databáze prohledávání byla úspěšně aktualizována."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:697
+#: ../catfish/CatfishWindow.py:696
 msgid "Updating..."
 msgstr "Obnovuje se…"
 
-#: ../catfish/CatfishWindow.py:731
+#: ../catfish/CatfishWindow.py:730
 msgid "Stop Search"
 msgstr "Ukončit hledání"
 
-#: ../catfish/CatfishWindow.py:732
+#: ../catfish/CatfishWindow.py:731
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -353,31 +353,31 @@ msgstr ""
 "Probíhá vyhledávání...\n"
 "Stiskněte tlačítko Storno nebo klávesu Esc k ukončení."
 
-#: ../catfish/CatfishWindow.py:741
+#: ../catfish/CatfishWindow.py:740
 msgid "Begin Search"
 msgstr "Zahájit hledání"
 
-#: ../catfish/CatfishWindow.py:928
+#: ../catfish/CatfishWindow.py:927
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" nelze otevřít."
 
-#: ../catfish/CatfishWindow.py:974
+#: ../catfish/CatfishWindow.py:973
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" nemohlo být uloženo."
 
-#: ../catfish/CatfishWindow.py:994
+#: ../catfish/CatfishWindow.py:993
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" nemohlo být vymazáno."
 
-#: ../catfish/CatfishWindow.py:1015
+#: ../catfish/CatfishWindow.py:1014
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "Uložit \"%s\" jako…"
 
-#: ../catfish/CatfishWindow.py:1050
+#: ../catfish/CatfishWindow.py:1049
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -386,7 +386,7 @@ msgstr ""
 "Jste si jisti, že chcete \n"
 "trvale smazat \"%s\"?"
 
-#: ../catfish/CatfishWindow.py:1054
+#: ../catfish/CatfishWindow.py:1053
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -395,75 +395,75 @@ msgstr ""
 "Jste si jisti, že chcete \n"
 "trvale smazat \"%i\" označených souborů?"
 
-#: ../catfish/CatfishWindow.py:1057
+#: ../catfish/CatfishWindow.py:1056
 msgid "If you delete a file, it is permanently lost."
 msgstr "Smažete-li soubor, bude nenávratně ztracen."
 
-#: ../catfish/CatfishWindow.py:1080
+#: ../catfish/CatfishWindow.py:1079
 msgid "Filename"
 msgstr "Jméno souboru"
 
-#: ../catfish/CatfishWindow.py:1082
+#: ../catfish/CatfishWindow.py:1081
 msgid "Size"
 msgstr "Velikost"
 
-#: ../catfish/CatfishWindow.py:1084
+#: ../catfish/CatfishWindow.py:1083
 msgid "Location"
 msgstr "Umístění"
 
-#: ../catfish/CatfishWindow.py:1096
+#: ../catfish/CatfishWindow.py:1095
 msgid "Preview"
 msgstr "Náhled"
 
-#: ../catfish/CatfishWindow.py:1104
+#: ../catfish/CatfishWindow.py:1103
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: ../catfish/CatfishWindow.py:1291
+#: ../catfish/CatfishWindow.py:1322
 msgid "Today"
 msgstr "Dnes"
 
-#: ../catfish/CatfishWindow.py:1293
+#: ../catfish/CatfishWindow.py:1324
 msgid "Yesterday"
 msgstr "včera"
 
-#: ../catfish/CatfishWindow.py:1372
+#: ../catfish/CatfishWindow.py:1403
 msgid "No files found."
 msgstr "Nebyly nalezeny žádné soubory."
 
-#: ../catfish/CatfishWindow.py:1374
+#: ../catfish/CatfishWindow.py:1405
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1380
+#: ../catfish/CatfishWindow.py:1411
 msgid "1 file found."
 msgstr "Nalezen jeden soubor"
 
-#: ../catfish/CatfishWindow.py:1382
+#: ../catfish/CatfishWindow.py:1413
 #, python-format
 msgid "%i files found."
 msgstr "%i souborů bylo nalezeno."
 
-#: ../catfish/CatfishWindow.py:1388
+#: ../catfish/CatfishWindow.py:1419
 msgid "bytes"
 msgstr "bajty"
 
-#: ../catfish/CatfishWindow.py:1526 ../catfish/CatfishWindow.py:1535
+#: ../catfish/CatfishWindow.py:1557 ../catfish/CatfishWindow.py:1566
 msgid "Searching…"
 msgstr "Hledá se…"
 
-#: ../catfish/CatfishWindow.py:1528
+#: ../catfish/CatfishWindow.py:1559
 msgid "Results will be displayed as soon as they are found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1533
+#: ../catfish/CatfishWindow.py:1564
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Vyhledává se \"%s\""
 
-#: ../catfish/CatfishWindow.py:1622
+#: ../catfish/CatfishWindow.py:1653
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Výsledek hledání \"%s\""
