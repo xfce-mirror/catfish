@@ -973,36 +973,52 @@ class CatfishWindow(Window):
                 self.get_error_dialog(_('\"%s\" could not be saved.') %
                                       os.path.basename(filename), str(msg))
 
+    def delete_file(self, filename):
+        try:
+            # Delete the file.
+            if not os.path.exists(filename):
+                return True
+            elif os.path.isdir(filename):
+                rmtree(filename)
+            else:
+                os.remove(filename)
+            return True
+        except Exception as msg:
+            # If the file cannot be deleted, throw an error.
+            logger.debug('Exception encountered while deleting %s.' +
+                         '\n  Exception: %s', filename, msg)
+            self.get_error_dialog(_("\"%s\" could not be deleted.") %
+                                  os.path.basename(filename),
+                                  str(msg))
+        return False
+
+    def remove_filenames_from_treeview(self, filenames):
+        removed = []
+        model = self.treeview.get_model().get_model().get_model()
+        treeiter = model.get_iter_first()
+        while treeiter is not None:
+            nextiter = model.iter_next(treeiter)
+            row = model[treeiter]
+            found = os.path.join(row[3], row[1])
+            if found in filenames:
+                model.remove(treeiter)
+                removed.append(found)
+            if len(removed) == len(filenames):
+                return True
+            treeiter = nextiter
+        return False
+
     def on_menu_delete_activate(self, widget):
         """Show a delete dialog and remove the file if accepted."""
         filenames = []
         if self.get_delete_dialog(self.selected_filenames):
-            for filename in self.selected_filenames:
-                try:
-                    # Delete the file.
-                    if os.path.isdir(filename):
-                        rmtree(filename)
-                    else:
-                        os.remove(filename)
+            delete = self.selected_filenames
+            delete.sort()
+            delete.reverse()
+            for filename in delete:
+                if self.delete_file(filename):
                     filenames.append(filename)
-
-                except Exception as msg:
-                    # If the file cannot be deleted, throw an error.
-                    logger.debug('Exception encountered while deleting %s.' +
-                                 '\n  Exception: %s', filename, msg)
-                    self.get_error_dialog(_("\"%s\" could not be deleted.") %
-                                          os.path.basename(filename),
-                                          str(msg))
-
-        # Clean up removed rows
-        model = self.treeview.get_model().get_model().get_model()
-        rows = self.rows
-        rows.reverse()
-        for path in rows:
-            treeiter = model.get_iter(path)
-            filename = os.path.join(model[treeiter][3], model[treeiter][1])
-            if not os.path.exists(filename):
-                model.remove(treeiter)
+        self.remove_filenames_from_treeview(filenames)
         self.refilter()
 
     def get_save_dialog(self, filename):
@@ -1238,6 +1254,7 @@ class CatfishWindow(Window):
         return True
 
     def treeview_alt_clicked(self, treeview, event=None):
+        self.update_treeview_stats(treeview, event)
         return False
 
     def on_treeview_button_press_event(self, treeview, event):
