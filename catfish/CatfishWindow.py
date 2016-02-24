@@ -205,7 +205,6 @@ class CatfishWindow(Window):
         self.thumbnail_toggle = builder.get_named_object("toolbar.view.thumbs")
 
         # -- Treeview -- #
-        self.row_activated = False
         self.treeview = builder.get_named_object("results.treeview")
         self.treeview.enable_model_drag_source(
             Gdk.ModifierType.BUTTON1_MASK,
@@ -1129,12 +1128,6 @@ class CatfishWindow(Window):
     # -- Treeview -- #
     def on_treeview_row_activated(self, treeview, path, user_data):
         """Catch row activations by keyboard or mouse double-click."""
-        if self.row_activated:
-            self.row_activated = False
-            return
-        else:
-            self.row_activated = True
-
         # Get the filename from the row.
         model = treeview.get_model()
         file_path = self.treemodel_get_row_filename(model, path)
@@ -1173,18 +1166,79 @@ class CatfishWindow(Window):
             data.append(self.treemodel_get_row_filename(model, row))
         return (model, rows, data)
 
-    def update_treeview_stats(self, treeview):
+    def check_treeview_stats(self, treeview):
+        if len(self.rows) == 0:
+            return -1
+        model, rows, selected_filenames = \
+            self.treeview_get_selected_rows(treeview)
+        for row in rows:
+            if row not in self.rows:
+                return 2
+        if self.rows != rows:
+            return 1
+        return 0
+
+    def update_treeview_stats(self, treeview, event=None):
+        if event:
+            self.treeview_set_cursor_if_unset(treeview,
+                                              int(event.x),
+                                              int(event.y))
         model, self.rows, self.selected_filenames = \
             self.treeview_get_selected_rows(treeview)
 
-    def maintain_treeview_stats(self, treeview):
-        treesel = treeview.get_selection()
-        for row in self.rows:
-            treesel.select_path(row)
+    def maintain_treeview_stats(self, treeview, event=None):
+        if len(self.selected_filenames) == 0:
+            self.update_treeview_stats(treeview, event)
+        elif self.check_treeview_stats(treeview) == 2:
+            self.update_treeview_stats(treeview, event)
+        else:
+            treesel = treeview.get_selection()
+            for row in self.rows:
+                treesel.select_path(row)
 
     def on_treeview_cursor_changed(self, treeview):
         if "Shift" in self.keys_pressed or "Control" in self.keys_pressed:
             self.update_treeview_stats(treeview)
+
+    def treeview_set_cursor_if_unset(self, treeview, x=0, y=0):
+        if treeview.get_selection().count_selected_rows() < 1:
+            self.treeview_set_cursor_at_pos(treeview, x, y)
+
+    def treeview_set_cursor_at_pos(self, treeview, x, y):
+        try:
+            path = treeview.get_path_at_pos(int(x), int(y))[0]
+            treeview.set_cursor(path)
+        except TypeError:
+            return False
+        return True
+
+    def treeview_left_click(self, treeview, event=None):
+        self.update_treeview_stats(treeview, event)
+        return False
+
+    def treeview_middle_click(self, treeview, event=None):
+        self.maintain_treeview_stats(treeview, event)
+        self.treeview_set_cursor_if_unset(treeview, int(event.x), int(event.y))
+        for filename in self.selected_filenames:
+            self.open_file(filename)
+        return True
+
+    def treeview_right_click(self, treeview, event=None):
+        self.maintain_treeview_stats(treeview, event)
+        show_save_option = len(self.selected_filenames) == 1 and not \
+            os.path.isdir(self.selected_filenames[0])
+        self.file_menu_save.set_visible(show_save_option)
+        writeable = True
+        for filename in self.selected_filenames:
+            if not os.access(filename, os.W_OK):
+                writeable = False
+        self.file_menu_delete.set_sensitive(writeable)
+        self.file_menu.popup(None, None, None, None,
+                             event.button, event.time)
+        return True
+
+    def treeview_alt_clicked(self, treeview, event=None):
+        return False
 
     def on_treeview_button_press_event(self, treeview, event):
         """Catch single mouse click events on the treeview and rows.
@@ -1192,40 +1246,17 @@ class CatfishWindow(Window):
             Left Click:     Ignore.
             Middle Click:   Open the selected file.
             Right Click:    Show the popup menu."""
-        # If left click, ignore.
-        if event.button == 1:
-            self.update_treeview_stats(treeview)
-            return False
-
-        # Get the selected row path, raises TypeError if dead space.
-        if treeview.get_selection().count_selected_rows() <= 1:
-            try:
-                path = treeview.get_path_at_pos(int(event.x), int(event.y))[0]
-                treeview.set_cursor(path)
-            except TypeError:
-                return False
-
-        self.maintain_treeview_stats(treeview)
-
-        # If middle click, open the selected file.
-        if event.button == 2:
-            for filename in self.selected_filenames:
-                self.open_file(filename)
-
-        # If right click, show the popup menu.
-        if event.button == 3:
-            show_save_option = len(self.selected_filenames) == 1 and not \
-                os.path.isdir(self.selected_filenames[0])
-            self.file_menu_save.set_visible(show_save_option)
-            writeable = True
-            for filename in self.selected_filenames:
-                if not os.access(filename, os.W_OK):
-                    writeable = False
-            self.file_menu_delete.set_sensitive(writeable)
-            self.file_menu.popup(None, None, None, None,
-                                 event.button, event.time)
-
-        return True
+        if "Shift" in self.keys_pressed or "Control" in self.keys_pressed:
+            handled = self.treeview_alt_clicked(treeview, event)
+        elif event.button == 1:
+            handled = self.treeview_left_click(treeview, event)
+        elif event.button == 2:
+            handled = self.treeview_middle_click(treeview, event)
+        elif event.button == 3:
+            handled = self.treeview_right_click(treeview, event)
+        else:
+            handled = False
+        return handled
 
     def new_column(self, label, id, special=None, markup=False):
         """New Column function for creating TreeView columns easily."""

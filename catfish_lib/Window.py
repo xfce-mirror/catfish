@@ -274,16 +274,35 @@ class Window(Gtk.Window):
             keys.append("Alt")
         return keys
 
+    def map_key(self, key):
+        if key.endswith("_L"):
+            return key.replace("_L", "")
+        elif key.endswith("_R"):
+            return key.replace("_R", "")
+        return key
+
     def add_keys(self, keys):
-        ignore = ["Escape"]
         for key in keys:
-            if key not in self.keys_pressed and key not in ignore:
-                self.keys_pressed.append(key)
+            self.add_key(key)
+
+    def add_key(self, key):
+        key = self.map_key(key)
+        ignore = ["Escape"]
+        if key not in self.keys_pressed and key not in ignore:
+            self.keys_pressed.append(key)
 
     def remove_keys(self, keys):
         for key in keys:
             if key in self.keys_pressed:
-                self.keys_pressed.remove(key)
+                self.remove_key(key)
+                self.remove_key(key.upper())
+
+    def remove_key(self, key):
+        key = self.map_key(key)
+        try:
+            self.keys_pressed.remove(key)
+        except ValueError:
+            pass
 
     def on_catfish_window_key_press_event(self, widget, event):
         """Handle keypresses for the Catfish window."""
