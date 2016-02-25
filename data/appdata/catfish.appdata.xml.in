@@ -33,17 +33,27 @@
   </provides>
 
   <releases>
-      <release version="1.4.0" timestamp="1455933600">
-        <description>
-          <_p>This release includes a significant interface refresh, 
-          improves search speed, and fixes several bugs. The workflow 
-          has been improved, utilizing some of the latest features 
-          of the GTK+ toolkit, including optional headerbars and
-          popover widgets. Password handling has been improved with
-          the integration of PolicyKit when available.
-          </_p>
-        </description>
-      </release>
+    <release version="1.4.1" timestamp="1456363800">
+      <description>
+        <_p>This release fixes several bugs related to the results
+        window. Files are once again removed from the results list
+        when deleted. Middle- and right-click functionality has been
+        restored. Date range filters are now applied according to
+        timezone instead of Universal Coordinated Time (UTC).
+        </_p>
+      </description>
+    </release>
+    <release version="1.4.0" timestamp="1455933600">
+      <description>
+        <_p>This release includes a significant interface refresh,
+        improves search speed, and fixes several bugs. The workflow
+        has been improved, utilizing some of the latest features
+        of the GTK+ toolkit, including optional headerbars and
+        popover widgets. Password handling has been improved with
+        the integration of PolicyKit when available.
+        </_p>
+      </description>
+    </release>
     <release version="1.2.2" timestamp="1411335000">
       <description>
         <_p>This release fixes two new bugs and includes updated translations.

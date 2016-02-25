@@ -1,11 +1,7 @@
 Planned Features:
-* Better setup.py based installer
-* Optional CSD (Headerbars), configured by settings and build
 * Rename widgets for autopilot, including GtkWindow to CatfishWindow
 * Add support for Tracker
 * Allow editing of search methods used (locate, find, python-walk)
-* Install pkexec policy to run updatedb instead of own SudoDialog.
-  - Note that this will like require a new catfish-updatedb binary
 
 Other:
 * Improve glade editing. To edit the UI files, launch glade with:

@@ -1,3 +1,14 @@
+v1.4.1:
+ + Bug Fixes:
+   - Fix end date calculation with custom date ranges (LP: #1514018)
+   - Fix issues double-click activation (LP: #1523164)
+   - Fix middle/right-click activation on startup (LP: #1547807)
+   - Fix issues with deleted files not being removed from results
+   - Use localtime for date range comparisons
+   - Correctly close the application with Ctrl-C via the terminal.
+ + Translation Updates:
+   - French
+
 v1.4.0:
  + Bug Fixes:
    - Fix installation with Python 2 (LP: #1540211)

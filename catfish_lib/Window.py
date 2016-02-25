@@ -286,9 +286,12 @@ class Window(Gtk.Window):
             self.add_key(key)
 
     def add_key(self, key):
+        if key is None:
+            return
         key = self.map_key(key)
-        ignore = ["Escape"]
-        if key not in self.keys_pressed and key not in ignore:
+        if key in ["Escape"]:
+            return
+        if key not in self.keys_pressed:
             self.keys_pressed.append(key)
 
     def remove_keys(self, keys):
@@ -298,6 +301,8 @@ class Window(Gtk.Window):
                 self.remove_key(key.upper())
 
     def remove_key(self, key):
+        if key is None:
+            return
         key = self.map_key(key)
         try:
             self.keys_pressed.remove(key)
