@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-24 20:10-0500\n"
+"POT-Creation-Date: 2016-03-30 22:23-0400\n"
 "PO-Revision-Date: 2016-03-25 03:16+0000\n"
 "Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-26 05:37+0000\n"
+"X-Launchpad-Export-Date: 2016-03-31 05:43+0000\n"
 "X-Generator: Launchpad (build 17967)\n"
 
-#: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:39
+#: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish/CatfishWindow.py:639
 msgid "Catfish File Search"
 msgstr "Catfish-Dateisuche"
@@ -69,196 +69,152 @@ msgid "Documents"
 msgstr "Dokumente"
 
 #: ../data/ui/CatfishWindow.ui.h:11
-msgid "documents"
-msgstr "Dokumente"
-
-#: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
 msgstr "Ordner"
 
-#: ../data/ui/CatfishWindow.ui.h:13
-msgid "folders"
-msgstr "Ordner"
-
-#: ../data/ui/CatfishWindow.ui.h:14
+#: ../data/ui/CatfishWindow.ui.h:12
 msgid "Images"
 msgstr "Bilder"
 
-#: ../data/ui/CatfishWindow.ui.h:15
-msgid "images"
-msgstr "Bilder"
-
-#: ../data/ui/CatfishWindow.ui.h:16
+#: ../data/ui/CatfishWindow.ui.h:13
 msgid "Music"
 msgstr "Musik"
 
-#: ../data/ui/CatfishWindow.ui.h:17
-msgid "music"
-msgstr "Musik"
-
-#: ../data/ui/CatfishWindow.ui.h:18
+#: ../data/ui/CatfishWindow.ui.h:14
 msgid "Videos"
 msgstr "Videos"
 
-#: ../data/ui/CatfishWindow.ui.h:19
-msgid "videos"
-msgstr "Videos"
-
-#: ../data/ui/CatfishWindow.ui.h:20
+#: ../data/ui/CatfishWindow.ui.h:15
 msgid "Applications"
 msgstr "Anwendungen"
 
-#: ../data/ui/CatfishWindow.ui.h:21
-msgid "applications"
-msgstr "Anwendungen"
-
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:16
 msgid "Other"
 msgstr "Andere"
 
-#: ../data/ui/CatfishWindow.ui.h:23
-msgid "other"
-msgstr "Andere"
-
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:17
 msgid "Any time"
 msgstr "Beliebige Zeit"
 
-#: ../data/ui/CatfishWindow.ui.h:25
-msgid "any"
-msgstr "Beliebige Zeit"
-
-#: ../data/ui/CatfishWindow.ui.h:26
+#: ../data/ui/CatfishWindow.ui.h:18
 msgid "This week"
 msgstr "Diese Woche"
 
-#: ../data/ui/CatfishWindow.ui.h:27
-msgid "week"
-msgstr "Woche"
-
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:19
 msgid "Custom"
 msgstr "Angepasst"
 
-#: ../data/ui/CatfishWindow.ui.h:29
-msgid "custom"
-msgstr "angepasst"
-
-#: ../data/ui/CatfishWindow.ui.h:30
+#: ../data/ui/CatfishWindow.ui.h:20
 msgid "Go to Today"
 msgstr "Zum heutigen Tag gehen"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:21
 msgid "<b>Start Date</b>"
 msgstr "<b>Anfangsdatum</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:32
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "<b>End Date</b>"
 msgstr "<b>Enddatum</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish_lib/Window.py:216
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:216
 #: ../data/appdata/catfish.appdata.xml.in.h:1
 msgid "Catfish"
 msgstr "Catfish"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Update"
 msgstr "Aktualisieren"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:25
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr "Die Suchdatenbank ist älter als 7 Tage. Jetzt aktualisieren?"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "File Type"
 msgstr "Dateityp"
 
-#: ../data/ui/CatfishWindow.ui.h:37
-msgid "column"
-msgstr "Spalte"
-
-#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1101
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1101
 msgid "Modified"
 msgstr "Verändert"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:29
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
 msgstr "Bitte oben Ihre Abfrage eingeben, um Ihre Dateien zu finden"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:30
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "or click the "
 msgstr "oder auf das "
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:31
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
 msgstr " Symbol für mehr Optionen klicken."
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
 msgstr "Verzeichnis auswählen"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Compact List"
 msgstr "Kompakte Liste"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "Thumbnails"
 msgstr "Vorschaubilder"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show _Hidden Files"
 msgstr "_Verborgene Dateien anzeigen"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
 msgstr "_Dateiinhalte suchen"
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Exact Match"
 msgstr "_Genaue Übereinstimmung"
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "Show _Sidebar"
 msgstr "Seitenleiste _anzeigen"
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Update Search Index…"
 msgstr "_Suchindex aktualisieren …"
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "_About"
 msgstr "_Info"
 
-#: ../data/ui/CatfishWindow.ui.h:52
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
 msgstr "Suchdatenbank aktualisieren"
 
-#: ../data/ui/CatfishWindow.ui.h:53
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Unlock"
 msgstr "Entsprerren"
 
-#: ../data/ui/CatfishWindow.ui.h:54
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "<b>Database:</b>"
 msgstr "<b>Datenbank:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:55
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
 msgstr "<b>Aktualisiert:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:56
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Suchdatenbank aktualisieren</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:57
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -681,3 +637,36 @@ msgstr ""
 
 #~ msgid "_Hidden Files"
 #~ msgstr "_Verborgene Dateien"
+
+#~ msgid "music"
+#~ msgstr "Musik"
+
+#~ msgid "images"
+#~ msgstr "Bilder"
+
+#~ msgid "applications"
+#~ msgstr "Anwendungen"
+
+#~ msgid "videos"
+#~ msgstr "Videos"
+
+#~ msgid "folders"
+#~ msgstr "Ordner"
+
+#~ msgid "documents"
+#~ msgstr "Dokumente"
+
+#~ msgid "week"
+#~ msgstr "Woche"
+
+#~ msgid "column"
+#~ msgstr "Spalte"
+
+#~ msgid "any"
+#~ msgstr "Beliebige Zeit"
+
+#~ msgid "other"
+#~ msgstr "Andere"
+
+#~ msgid "custom"
+#~ msgstr "angepasst"

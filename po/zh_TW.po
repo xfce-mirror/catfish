@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-24 20:10-0500\n"
+"POT-Creation-Date: 2016-03-30 22:23-0400\n"
 "PO-Revision-Date: 2015-12-19 03:39+0000\n"
 "Last-Translator: Hsiu-Ming Chang <cges30901@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-26 05:21+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-31 05:43+0000\n"
+"X-Generator: Launchpad (build 17967)\n"
 
-#: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:39
+#: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish/CatfishWindow.py:639
 msgid "Catfish File Search"
 msgstr "Catfish 檔案搜尋"
@@ -69,196 +69,152 @@ msgid "Documents"
 msgstr "文件"
 
 #: ../data/ui/CatfishWindow.ui.h:11
-msgid "documents"
-msgstr "文件"
-
-#: ../data/ui/CatfishWindow.ui.h:12
 msgid "Folders"
 msgstr "資料夾"
 
-#: ../data/ui/CatfishWindow.ui.h:13
-msgid "folders"
-msgstr "資料夾"
-
-#: ../data/ui/CatfishWindow.ui.h:14
+#: ../data/ui/CatfishWindow.ui.h:12
 msgid "Images"
 msgstr "圖片"
 
-#: ../data/ui/CatfishWindow.ui.h:15
-msgid "images"
-msgstr "圖片"
-
-#: ../data/ui/CatfishWindow.ui.h:16
+#: ../data/ui/CatfishWindow.ui.h:13
 msgid "Music"
 msgstr "音樂"
 
-#: ../data/ui/CatfishWindow.ui.h:17
-msgid "music"
-msgstr "音樂"
-
-#: ../data/ui/CatfishWindow.ui.h:18
+#: ../data/ui/CatfishWindow.ui.h:14
 msgid "Videos"
 msgstr "影片"
 
-#: ../data/ui/CatfishWindow.ui.h:19
-msgid "videos"
-msgstr "影片"
-
-#: ../data/ui/CatfishWindow.ui.h:20
+#: ../data/ui/CatfishWindow.ui.h:15
 msgid "Applications"
 msgstr "應用程式"
 
-#: ../data/ui/CatfishWindow.ui.h:21
-msgid "applications"
-msgstr "應用程式"
-
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:16
 msgid "Other"
 msgstr "其他"
 
-#: ../data/ui/CatfishWindow.ui.h:23
-msgid "other"
-msgstr "其他"
-
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:17
 msgid "Any time"
 msgstr "任何時間"
 
-#: ../data/ui/CatfishWindow.ui.h:25
-msgid "any"
-msgstr "任何"
-
-#: ../data/ui/CatfishWindow.ui.h:26
+#: ../data/ui/CatfishWindow.ui.h:18
 msgid "This week"
 msgstr "本週"
 
-#: ../data/ui/CatfishWindow.ui.h:27
-msgid "week"
-msgstr "週"
-
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:19
 msgid "Custom"
 msgstr "自訂"
 
-#: ../data/ui/CatfishWindow.ui.h:29
-msgid "custom"
-msgstr "自訂"
-
-#: ../data/ui/CatfishWindow.ui.h:30
+#: ../data/ui/CatfishWindow.ui.h:20
 msgid "Go to Today"
 msgstr "移至今天"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:21
 msgid "<b>Start Date</b>"
 msgstr "<b>開始日期</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:32
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "<b>End Date</b>"
 msgstr "<b>結束日期</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish_lib/Window.py:216
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:216
 #: ../data/appdata/catfish.appdata.xml.in.h:1
 msgid "Catfish"
 msgstr "Catfish"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Update"
 msgstr "更新"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:25
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "File Type"
 msgstr "檔案類型"
 
-#: ../data/ui/CatfishWindow.ui.h:37
-msgid "column"
-msgstr ""
-
-#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:1101
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1101
 msgid "Modified"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:29
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:30
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "or click the "
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:31
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
 msgstr "選取目錄"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Compact List"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "Thumbnails"
 msgstr "縮圖"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show _Hidden Files"
 msgstr "顯示隱藏檔(_H)"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
 msgstr "搜尋檔案內容(_C)"
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Exact Match"
 msgstr "完全符合(_E)"
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "Show _Sidebar"
 msgstr "顯示側邊欄"
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Update Search Index…"
 msgstr "更新搜尋索引(_U)…"
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../data/ui/CatfishWindow.ui.h:52
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:53
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Unlock"
 msgstr "解除鎖定"
 
-#: ../data/ui/CatfishWindow.ui.h:54
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "<b>Database:</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:55
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:56
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:57
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -643,3 +599,33 @@ msgstr ""
 #~ msgstr ""
 #~ "要重新整理搜尋程式 <i>locate</i> 的資料庫才能提供準確结果。\n"
 #~ "這需要 sudo (系统管理員) 權限。"
+
+#~ msgid "folders"
+#~ msgstr "資料夾"
+
+#~ msgid "documents"
+#~ msgstr "文件"
+
+#~ msgid "week"
+#~ msgstr "週"
+
+#~ msgid "custom"
+#~ msgstr "自訂"
+
+#~ msgid "applications"
+#~ msgstr "應用程式"
+
+#~ msgid "any"
+#~ msgstr "任何"
+
+#~ msgid "other"
+#~ msgstr "其他"
+
+#~ msgid "music"
+#~ msgstr "音樂"
+
+#~ msgid "images"
+#~ msgstr "圖片"
+
+#~ msgid "videos"
+#~ msgstr "影片"
