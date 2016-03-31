@@ -169,7 +169,7 @@
       <row>
         <col id="0">folder-documents-symbolic</col>
         <col id="1" translatable="yes">Documents</col>
-        <col id="2" translatable="yes">documents</col>
+        <col id="2">documents</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>
@@ -177,7 +177,7 @@
       <row>
         <col id="0">folder-symbolic</col>
         <col id="1" translatable="yes">Folders</col>
-        <col id="2" translatable="yes">folders</col>
+        <col id="2">folders</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>
@@ -185,7 +185,7 @@
       <row>
         <col id="0">folder-pictures-symbolic</col>
         <col id="1" translatable="yes">Images</col>
-        <col id="2" translatable="yes">images</col>
+        <col id="2">images</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>
@@ -193,7 +193,7 @@
       <row>
         <col id="0">folder-music-symbolic</col>
         <col id="1" translatable="yes">Music</col>
-        <col id="2" translatable="yes">music</col>
+        <col id="2">music</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>
@@ -201,7 +201,7 @@
       <row>
         <col id="0">folder-videos-symbolic</col>
         <col id="1" translatable="yes">Videos</col>
-        <col id="2" translatable="yes">videos</col>
+        <col id="2">videos</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>
@@ -209,7 +209,7 @@
       <row>
         <col id="0">applications-utilities-symbolic</col>
         <col id="1" translatable="yes">Applications</col>
-        <col id="2" translatable="yes">applications</col>
+        <col id="2">applications</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>
@@ -217,7 +217,7 @@
       <row>
         <col id="0">preferences-other-symbolic</col>
         <col id="1" translatable="yes">Other</col>
-        <col id="2" translatable="yes">other</col>
+        <col id="2">other</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>
@@ -243,7 +243,7 @@
       <row>
         <col id="0">document-open-recent-symbolic</col>
         <col id="1" translatable="yes">Any time</col>
-        <col id="2" translatable="yes">any</col>
+        <col id="2">any</col>
         <col id="3">True</col>
         <col id="4">False</col>
         <col id="5">False</col>
@@ -251,7 +251,7 @@
       <row>
         <col id="0">document-open-recent-symbolic</col>
         <col id="1" translatable="yes">This week</col>
-        <col id="2" translatable="yes">week</col>
+        <col id="2">week</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>
@@ -259,7 +259,7 @@
       <row>
         <col id="0">document-open-recent-symbolic</col>
         <col id="1" translatable="yes">Custom</col>
-        <col id="2" translatable="yes">custom</col>
+        <col id="2">custom</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>
@@ -620,7 +620,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkTreeViewColumn" id="treeviewcolumn1">
-                                    <property name="title" translatable="yes">column</property>
+                                    <property name="title">column</property>
                                     <child>
                                       <object class="GtkCellRendererToggle" id="cellrenderertoggle1">
                                         <property name="width">34</property>
@@ -649,7 +649,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkTreeViewColumn" id="treeviewcolumn2">
-                                    <property name="title" translatable="yes">column</property>
+                                    <property name="title">column</property>
                                     <property name="expand">True</property>
                                     <child>
                                       <object class="GtkCellRendererText" id="cellrenderertext1">
@@ -663,7 +663,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkTreeViewColumn" id="treeviewcolumn6">
-                                    <property name="title" translatable="yes">column</property>
+                                    <property name="title">column</property>
                                     <child>
                                       <object class="GtkCellRendererPixbuf" id="cellrendererpixbuf3">
                                         <property name="icon_name">document-properties-symbolic</property>
@@ -747,7 +747,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkTreeViewColumn" id="treeviewcolumn3">
-                                    <property name="title" translatable="yes">column</property>
+                                    <property name="title">column</property>
                                     <child>
                                       <object class="GtkCellRendererPixbuf" id="cellrendererpixbuf2">
                                         <property name="width">34</property>
@@ -777,7 +777,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkTreeViewColumn" id="treeviewcolumn4">
-                                    <property name="title" translatable="yes">column</property>
+                                    <property name="title">column</property>
                                     <property name="expand">True</property>
                                     <child>
                                       <object class="GtkCellRendererText" id="cellrenderertext2">
@@ -791,7 +791,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkTreeViewColumn" id="treeviewcolumn5">
-                                    <property name="title" translatable="yes">column</property>
+                                    <property name="title">column</property>
                                     <child>
                                       <object class="GtkCellRendererPixbuf" id="cellrendererpixbuf4">
                                         <property name="icon_name">document-properties-symbolic</property>
