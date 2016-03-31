@@ -873,16 +873,16 @@ class CatfishWindow(Window):
             self.filter_timerange = (week, 9999999999.0)
             logger.debug(
                 "Time Range: %s -> Eternity",
-                time.strftime("%x %X", time.gmtime(int(week))))
+                time.strftime("%x %X", time.localtime(int(week))))
         elif value == 'custom':
             self.filter_timerange = (time.mktime(self.start_date.timetuple()),
                                      time.mktime(self.end_date.timetuple()))
             logger.debug(
                 "Time Range: %s -> %s",
                 time.strftime("%x %X",
-                              time.gmtime(int(self.filter_timerange[0]))),
+                              time.localtime(int(self.filter_timerange[0]))),
                 time.strftime("%x %X",
-                              time.gmtime(int(self.filter_timerange[1]))))
+                              time.localtime(int(self.filter_timerange[1]))))
         self.refilter()
 
     def on_calendar_today_button_clicked(self, calendar_widget):
@@ -1332,7 +1332,7 @@ class CatfishWindow(Window):
         """Return the date string in the preferred format."""
         if self.time_format is not None:
             modified = time.strftime(self.time_format,
-                                     time.gmtime(modification_int))
+                                     time.localtime(modification_int))
         else:
             item_date = datetime.datetime.fromtimestamp(modification_int)
             if item_date >= self.today:
@@ -1340,9 +1340,9 @@ class CatfishWindow(Window):
             elif item_date >= self.yesterday:
                 modified = _("Yesterday")
             elif item_date >= self.this_week:
-                modified = time.strftime("%A", time.gmtime(modification_int))
+                modified = time.strftime("%A", time.localtime(modification_int))
             else:
-                modified = time.strftime("%x", time.gmtime(modification_int))
+                modified = time.strftime("%x", time.localtime(modification_int))
         return modified
 
     def results_filter_func(self, model, iter, user_data):
