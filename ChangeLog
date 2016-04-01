@@ -1,3 +1,10 @@
+v1.4.2:
+ + Bug Fixes:
+   - Fixed file timestamps being displayed as UTC instead of local time
+   - Unmark strings that should not be translated (LP: #1562578)
+ + Translation Updates:
+   - Dutch, German, Finnish, French, Japanese, Lithuanian, Swedish
+
 v1.4.1:
  + Bug Fixes:
    - Fix end date calculation with custom date ranges (LP: #1514018)
