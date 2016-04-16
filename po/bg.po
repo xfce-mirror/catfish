@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-03-31 23:24-0400\n"
-"PO-Revision-Date: 2016-01-21 10:00+0000\n"
+"PO-Revision-Date: 2016-04-15 08:32+0000\n"
 "Last-Translator: cybercop <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-02 06:19+0000\n"
-"X-Generator: Launchpad (build 17972)\n"
+"X-Launchpad-Export-Date: 2016-04-16 05:40+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish/CatfishWindow.py:639
@@ -24,7 +24,7 @@ msgstr "Търсене на файлове Catfish"
 
 #: ../catfish.desktop.in.h:2
 msgid "File search"
-msgstr ""
+msgstr "Търсене на файлове"
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
@@ -58,7 +58,7 @@ msgstr "_Изтриване"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr ""
+msgstr "Файлови разширения"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -143,7 +143,7 @@ msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr ""
+msgstr "Въведете вашето запитване по- горе за да намерите търсените файлове"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgctxt ""
@@ -157,11 +157,11 @@ msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
-msgstr ""
+msgstr " Икона за повече опции"
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
-msgstr "Избери директория"
+msgstr "Изберете директория"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Compact List"
@@ -173,11 +173,11 @@ msgstr "Миниатюри"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show _Hidden Files"
-msgstr ""
+msgstr "Показване на _скритите файлове"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
-msgstr ""
+msgstr "Търсене в _съдържанието на файл"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Exact Match"
@@ -185,7 +185,7 @@ msgstr "_Точно съвпадение"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "Show _Sidebar"
-msgstr ""
+msgstr "Покажи страничната лента"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Update Search Index…"
@@ -205,7 +205,7 @@ msgstr "Отключване"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "<b>Database:</b>"
-msgstr ""
+msgstr "<b>База с данни:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
@@ -213,7 +213,7 @@ msgstr "<b>Обновена:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>Актуализиране на базата с данни</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
@@ -245,52 +245,54 @@ msgstr "Покажи времето в ISO формат"
 
 #: ../catfish/__init__.py:51
 msgid "Perform exact match"
-msgstr ""
+msgstr "Извършва се проверка за съвпадение"
 
 #: ../catfish/__init__.py:53
 msgid "Include hidden files"
-msgstr ""
+msgstr "Включване на скритите файлове"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
-msgstr ""
+msgstr "Протича търсене за пълен текст"
 
 #: ../catfish/__init__.py:57
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
+"Ако пътят и заявката са зададени, стартирайте търсенето, когато приложението "
+"се появи."
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
 #: ../catfish/CatfishWindow.py:82
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (невалидна кодировка)"
 
 #: ../catfish/CatfishWindow.py:248
 msgid "Unknown"
-msgstr ""
+msgstr "Непознато"
 
 #: ../catfish/CatfishWindow.py:252
 msgid "Never"
-msgstr ""
+msgstr "Никога"
 
 #: ../catfish/CatfishWindow.py:607
 msgid "An error occurred while updating the database."
-msgstr ""
+msgstr "Възникна грешка при актуализирането на базата с данни."
 
 #: ../catfish/CatfishWindow.py:609
 msgid "Authentication failed."
-msgstr ""
+msgstr "Идентификацията е неуспешна."
 
 #: ../catfish/CatfishWindow.py:615
 msgid "Authentication cancelled."
-msgstr ""
+msgstr "Идентификацията е отменена"
 
 #: ../catfish/CatfishWindow.py:621
 msgid "Search database updated successfully."
-msgstr ""
+msgstr "Базата с данни е актуализирана успешно."
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:696
@@ -348,6 +350,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
+"Сигурен ли сте, че искате да\n"
+"изтриете завинаги %i избрани файла?"
 
 #: ../catfish/CatfishWindow.py:1072
 msgid "If you delete a file, it is permanently lost."
@@ -371,15 +375,15 @@ msgstr "Преглед"
 
 #: ../catfish/CatfishWindow.py:1119
 msgid "Details"
-msgstr ""
+msgstr "Детайли"
 
 #: ../catfish/CatfishWindow.py:1339
 msgid "Today"
-msgstr ""
+msgstr "Днес"
 
 #: ../catfish/CatfishWindow.py:1341
 msgid "Yesterday"
-msgstr ""
+msgstr "Вчера"
 
 #: ../catfish/CatfishWindow.py:1420
 msgid "No files found."
@@ -390,49 +394,51 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
+"Опитайте търсене с по- малко подробности\n"
+"или потърсете в друга директория."
 
 #: ../catfish/CatfishWindow.py:1428
 msgid "1 file found."
-msgstr ""
+msgstr "Открит е един файл."
 
 #: ../catfish/CatfishWindow.py:1430
 #, python-format
 msgid "%i files found."
-msgstr ""
+msgstr "Открити са %i файла."
 
 #: ../catfish/CatfishWindow.py:1436
 msgid "bytes"
-msgstr ""
+msgstr "байта"
 
 #: ../catfish/CatfishWindow.py:1574 ../catfish/CatfishWindow.py:1583
 msgid "Searching…"
-msgstr ""
+msgstr "Търсене…"
 
 #: ../catfish/CatfishWindow.py:1576
 msgid "Results will be displayed as soon as they are found."
-msgstr ""
+msgstr "Резултатите ще бъдат показани скоро или, когато бъдат открити."
 
 #: ../catfish/CatfishWindow.py:1581
 #, python-format
 msgid "Searching for \"%s\""
-msgstr ""
+msgstr "Търсене за \"%s\""
 
 #: ../catfish/CatfishWindow.py:1670
 #, python-format
 msgid "Search results for \"%s\""
-msgstr ""
+msgstr "Резултати от търсенето за \"%s\""
 
 #: ../catfish_lib/SudoDialog.py:139
 msgid "Password Required"
-msgstr ""
+msgstr "Изисква се парола"
 
 #: ../catfish_lib/SudoDialog.py:176
 msgid "Incorrect password... try again."
-msgstr ""
+msgstr "Неправилна парола... опитайте отново."
 
 #: ../catfish_lib/SudoDialog.py:186
 msgid "Password:"
-msgstr ""
+msgstr "Парола:"
 
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:197
@@ -457,10 +463,12 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
+"Програмата '%s' ви позволява\n"
+"да променяте основни части от вашата система."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:2
 msgid "Versatile file searching tool"
-msgstr ""
+msgstr "Гъвкав инструмент за търсене на файлове"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid ""
@@ -470,12 +478,20 @@ msgid ""
 "date, file type, and file contents, users will no longer be dependent on the "
 "file manager or organization skills."
 msgstr ""
+"Catfish е малък, бърз и мощен инструмент за търсене на файлове.  Отличаващ "
+"се с минимален интерфейс и с акцент върху резултатите, той помага на "
+"потребителите да намират файловете, от които се нуждаят, без файлов "
+"мениджър. С мощни филтри, като например, търсене по  дата на промяна, тип "
+"файл и съдържание на файла, потребителите вече няма да бъдат зависими от "
+"файловия мениджър или организационни умения."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
+"Тази версия вече показва всички файлови времеви отпечатъци според часовата "
+"зона вместо универсално координирано време (UTC)."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
@@ -497,6 +513,7 @@ msgstr ""
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
+"Тази версия поправя две нови грешки и включва актуализиране на преводите."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:8
 msgid ""
