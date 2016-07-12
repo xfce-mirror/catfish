@@ -463,7 +463,7 @@
     </child>
   </object>
   <object class="GtkListStore" id="results_liststore"/>
-  <object class="CatfishWindow" id="catfish_window">
+  <object class="CatfishWindow" id="Catfish">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Catfish</property>
     <property name="window_position">center</property>
@@ -1316,7 +1316,7 @@
     <property name="destroy_with_parent">True</property>
     <property name="icon_name">catfish</property>
     <property name="type_hint">dialog</property>
-    <property name="transient_for">catfish_window</property>
+    <property name="transient_for">Catfish</property>
     <signal name="delete-event" handler="on_update_index_dialog_close" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog_vbox3">

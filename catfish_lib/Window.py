@@ -31,7 +31,7 @@ __builder__ = {
     "ui_file": "CatfishWindow",
 
     "window": {
-        "main": "catfish_window",
+        "main": "Catfish",
         "sidebar": "catfish_window_sidebar",
     },
 
