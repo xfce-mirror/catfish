@@ -1,0 +1,530 @@
+# Afrikaans translation for catfish-search
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the catfish-search package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: catfish-search\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-07-12 18:16-0400\n"
+"PO-Revision-Date: 2016-09-08 15:46+0000\n"
+"Last-Translator: Tristan B. Kildaire <deavmi@gmail.com>\n"
+"Language-Team: Afrikaans <af@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-09-09 06:25+0000\n"
+"X-Generator: Launchpad (build 18184)\n"
+
+#: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
+#: ../catfish/CatfishWindow.py:639
+msgid "Catfish File Search"
+msgstr ""
+
+#: ../catfish.desktop.in.h:2
+msgid "File search"
+msgstr ""
+
+#: ../catfish.desktop.in.h:3
+msgid "Search the file system"
+msgstr ""
+
+#: ../data/ui/AboutCatfishDialog.ui.h:1
+msgid "Catfish is a versatile file searching tool."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:1
+msgid "_Open"
+msgstr "Maak oop"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#: ../data/ui/CatfishWindow.ui.h:3
+msgid "Show in _File Manager"
+msgstr ""
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#: ../data/ui/CatfishWindow.ui.h:5
+msgid "_Copy Location"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:6
+msgid "_Save as..."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:7
+msgid "_Delete"
+msgstr "_Skrap"
+
+#: ../data/ui/CatfishWindow.ui.h:8
+msgid "File Extensions"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:9
+msgid "odt, png, txt"
+msgstr "odt, png, txt"
+
+#: ../data/ui/CatfishWindow.ui.h:10
+msgid "Documents"
+msgstr "Dokumente"
+
+#: ../data/ui/CatfishWindow.ui.h:11
+msgid "Folders"
+msgstr "Vouers"
+
+#: ../data/ui/CatfishWindow.ui.h:12
+msgid "Images"
+msgstr "Prente"
+
+#: ../data/ui/CatfishWindow.ui.h:13
+msgid "Music"
+msgstr "Musiek"
+
+#: ../data/ui/CatfishWindow.ui.h:14
+msgid "Videos"
+msgstr "Videos"
+
+#: ../data/ui/CatfishWindow.ui.h:15
+msgid "Applications"
+msgstr "Programme"
+
+#: ../data/ui/CatfishWindow.ui.h:16
+msgid "Other"
+msgstr "Ander"
+
+#: ../data/ui/CatfishWindow.ui.h:17
+msgid "Any time"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:18
+msgid "This week"
+msgstr "Hierdie week"
+
+#: ../data/ui/CatfishWindow.ui.h:19
+msgid "Custom"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:20
+msgid "Go to Today"
+msgstr "Gaan na Vandag"
+
+#: ../data/ui/CatfishWindow.ui.h:21
+msgid "<b>Start Date</b>"
+msgstr "<b>Begindatum</b>"
+
+#: ../data/ui/CatfishWindow.ui.h:22
+msgid "<b>End Date</b>"
+msgstr "<b>Einddatum</b>"
+
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:216
+#: ../data/appdata/catfish.appdata.xml.in.h:1
+msgid "Catfish"
+msgstr "Catfish"
+
+#: ../data/ui/CatfishWindow.ui.h:24
+msgid "Update"
+msgstr "Opdateer"
+
+#: ../data/ui/CatfishWindow.ui.h:25
+msgid "The search database is more than 7 days old.  Update now?"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:26
+msgid "File Type"
+msgstr "Lêer Tipe"
+
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1101
+msgid "Modified"
+msgstr "Aangepas"
+
+#: ../data/ui/CatfishWindow.ui.h:29
+msgctxt ""
+"Full text: Enter your query above to find your files or click the [icon] "
+"icon for more options."
+msgid "Enter your query above to find your files"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:30
+msgctxt ""
+"Full text: Enter your query above to find your files or click the [icon] "
+"icon for more options."
+msgid "or click the "
+msgstr "of druk die "
+
+#: ../data/ui/CatfishWindow.ui.h:31
+msgctxt ""
+"Full text: Enter your query above to find your files or click the [icon] "
+"icon for more options."
+msgid " icon for more options."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:32
+msgid "Select a Directory"
+msgstr "Kies 'n Vouer"
+
+#: ../data/ui/CatfishWindow.ui.h:33
+msgid "Compact List"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:34
+msgid "Thumbnails"
+msgstr "Duimnaelskets"
+
+#: ../data/ui/CatfishWindow.ui.h:35
+msgid "Show _Hidden Files"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:36
+msgid "Search File _Contents"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:37
+msgid "_Exact Match"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:38
+msgid "Show _Sidebar"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:39
+msgid "_Update Search Index…"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:40
+msgid "_About"
+msgstr "_Oor"
+
+#: ../data/ui/CatfishWindow.ui.h:41
+msgid "Update Search Database"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:42
+msgid "Unlock"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:43
+msgid "<b>Database:</b>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:44
+msgid "<b>Updated:</b>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:45
+msgid "<big><b>Update Search Database</b></big>"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:46
+msgid ""
+"For faster search results, the search database needs to be refreshed.\n"
+"This action requires administrative rights."
+msgstr ""
+
+#: ../catfish/__init__.py:35
+msgid "Usage: %prog [options] path query"
+msgstr ""
+
+#: ../catfish/__init__.py:40
+msgid "Show debug messages (-vv debugs catfish_lib also)"
+msgstr ""
+
+#: ../catfish/__init__.py:43
+msgid "Use large icons"
+msgstr ""
+
+#: ../catfish/__init__.py:45
+msgid "Use thumbnails"
+msgstr ""
+
+#: ../catfish/__init__.py:47
+msgid "Display time in ISO format"
+msgstr ""
+
+#: ../catfish/__init__.py:51
+msgid "Perform exact match"
+msgstr ""
+
+#: ../catfish/__init__.py:53
+msgid "Include hidden files"
+msgstr ""
+
+#: ../catfish/__init__.py:55
+msgid "Perform fulltext search"
+msgstr ""
+
+#: ../catfish/__init__.py:57
+msgid ""
+"If path and query are provided, start searching when the application is "
+"displayed."
+msgstr ""
+
+#. Translators: this text is displayed next to
+#. a filename that is not utf-8 encoded.
+#: ../catfish/CatfishWindow.py:82
+#, python-format
+msgid "%s (invalid encoding)"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:248
+msgid "Unknown"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:252
+msgid "Never"
+msgstr "Nooit"
+
+#: ../catfish/CatfishWindow.py:607
+msgid "An error occurred while updating the database."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:609
+msgid "Authentication failed."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:615
+msgid "Authentication cancelled."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:621
+msgid "Search database updated successfully."
+msgstr ""
+
+#. Set the dialog status to running.
+#: ../catfish/CatfishWindow.py:696
+msgid "Updating..."
+msgstr "Besig om op te dateer..."
+
+#: ../catfish/CatfishWindow.py:730
+msgid "Stop Search"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:731
+msgid ""
+"Search is in progress...\n"
+"Press the cancel button or the Escape key to stop."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:740
+msgid "Begin Search"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:927
+#, python-format
+msgid "\"%s\" could not be opened."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:973
+#, python-format
+msgid "\"%s\" could not be saved."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:990
+#, python-format
+msgid "\"%s\" could not be deleted."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1030
+#, python-format
+msgid "Save \"%s\" as…"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1065
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete \"%s\"?"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1069
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete the %i selected files?"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1072
+msgid "If you delete a file, it is permanently lost."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1095
+msgid "Filename"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1097
+msgid "Size"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1099
+msgid "Location"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1111
+msgid "Preview"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1119
+msgid "Details"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1339
+msgid "Today"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1341
+msgid "Yesterday"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1420
+msgid "No files found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1422
+msgid ""
+"Try making your search less specific\n"
+"or try another directory."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1428
+msgid "1 file found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1430
+#, python-format
+msgid "%i files found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1436
+msgid "bytes"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1574 ../catfish/CatfishWindow.py:1583
+msgid "Searching…"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1576
+msgid "Results will be displayed as soon as they are found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1581
+#, python-format
+msgid "Searching for \"%s\""
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1670
+#, python-format
+msgid "Search results for \"%s\""
+msgstr ""
+
+#: ../catfish_lib/SudoDialog.py:139
+msgid "Password Required"
+msgstr ""
+
+#: ../catfish_lib/SudoDialog.py:176
+msgid "Incorrect password... try again."
+msgstr ""
+
+#: ../catfish_lib/SudoDialog.py:186
+msgid "Password:"
+msgstr ""
+
+#. Buttons
+#: ../catfish_lib/SudoDialog.py:197
+msgid "Cancel"
+msgstr ""
+
+#: ../catfish_lib/SudoDialog.py:200
+msgid "OK"
+msgstr ""
+
+#: ../catfish_lib/SudoDialog.py:221
+msgid ""
+"Enter your password to\n"
+"perform administrative tasks."
+msgstr ""
+
+#: ../catfish_lib/SudoDialog.py:223
+#, python-format
+msgid ""
+"The application '%s' lets you\n"
+"modify essential parts of your system."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:2
+msgid "Versatile file searching tool"
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:3
+msgid ""
+"Catfish is a small, fast, and powerful file search utility. Featuring a "
+"minimal interface with an emphasis on results, it helps users find the files "
+"they need without a file manager. With powerful filters such as modification "
+"date, file type, and file contents, users will no longer be dependent on the "
+"file manager or organization skills."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:4
+msgid ""
+"This release now displays all file timestamps according to timezone instead "
+"of Universal Coordinated Time (UTC)."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:5
+msgid ""
+"This release fixes several bugs related to the results window. Files are "
+"once again removed from the results list when deleted. Middle- and right-"
+"click functionality has been restored. Date range filters are now applied "
+"according to timezone instead of Universal Coordinated Time (UTC)."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:6
+msgid ""
+"This release includes a significant interface refresh, improves search "
+"speed, and fixes several bugs. The workflow has been improved, utilizing "
+"some of the latest features of the GTK+ toolkit, including optional "
+"headerbars and popover widgets. Password handling has been improved with the "
+"integration of PolicyKit when available."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:7
+msgid "This release fixes two new bugs and includes updated translations."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:8
+msgid ""
+"This release fixes a regression where the application is unable to start on "
+"some systems."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:9
+msgid ""
+"This release fixes a regression where multiple search terms were no longer "
+"supported. An InfoBar is now displayed when the search database is outdated, "
+"and the dialogs used to update the database have been improved."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:10
+msgid ""
+"This release fixes two issues where locate would not be properly executed "
+"and improves handling of missing symbolic icons."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:11
+msgid ""
+"This stable release improved the reliability of the password dialog, cleaned "
+"up unused code, and fixed potential issues with the list and item selection."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:12
+msgid ""
+"This release fixed a potential security issue with program startup and fixed "
+"a regression with selecting multiple items."
+msgstr ""
+
+#: ../data/appdata/catfish.appdata.xml.in.h:13
+msgid ""
+"The first release in the 1.0.x series introduced a refreshed interface and "
+"fixed a number of long-standing bugs. Improvements to the default "
+"permissions eliminated a number of warnings when packaging for "
+"distributions. Accessibility was enhanced as all strings have been made "
+"translatable and keyboard accelerators have been improved."
+msgstr ""
