@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-12 18:16-0400\n"
-"PO-Revision-Date: 2016-01-30 08:05+0000\n"
-"Last-Translator: Utku BERBEROĞLU <Unknown>\n"
+"PO-Revision-Date: 2017-01-14 11:38+0000\n"
+"Last-Translator: Kudret EMRE <kudretemre@hotmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-13 05:33+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2017-01-15 06:16+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish/CatfishWindow.py:639
@@ -36,7 +36,7 @@ msgstr "Catfish çok yönlü bir dosya arama aracıdır."
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
-msgstr ""
+msgstr "_Aç"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
@@ -50,15 +50,15 @@ msgstr "Konumu _Kopyala"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr ""
+msgstr "_Farklı kaydet..."
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
-msgstr ""
+msgstr "_Sil"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr ""
+msgstr "Dosya Uzantıları"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -102,7 +102,7 @@ msgstr "Bu hafta"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Custom"
-msgstr ""
+msgstr "Özel"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Go to Today"
@@ -123,7 +123,7 @@ msgstr "Kedibalığı"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Update"
-msgstr ""
+msgstr "Güncelle"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "The search database is more than 7 days old.  Update now?"
@@ -135,28 +135,28 @@ msgstr "Dosya Tipi"
 
 #: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1101
 msgid "Modified"
-msgstr ""
+msgstr "Değiştirildi"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr ""
+msgstr "Dosyalarınızı aramak için sorgunuzu yukarıya girin"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "or click the "
-msgstr ""
+msgstr "ya da daha fazla seçenek için "
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
-msgstr ""
+msgstr " simgesine tıklayın."
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
@@ -168,15 +168,15 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Thumbnails"
-msgstr ""
+msgstr "Küçük resimler"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show _Hidden Files"
-msgstr ""
+msgstr "_Gizli Dosyaları Göster"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
-msgstr ""
+msgstr "Dosya İçeriklerini Ara"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Exact Match"
@@ -184,7 +184,7 @@ msgstr "_Tam Eşleşme"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "Show _Sidebar"
-msgstr ""
+msgstr "Kenar Çubuğunu Göster"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Update Search Index…"
@@ -192,11 +192,11 @@ msgstr "_Arama İndeksini Güncelle"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_About"
-msgstr ""
+msgstr "_Hakkında"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
-msgstr ""
+msgstr "Arama Veritabanını Güncelle"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgid "Unlock"
@@ -204,25 +204,27 @@ msgstr "Kilidi Aç"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "<b>Database:</b>"
-msgstr ""
+msgstr "<b>Veritabanı:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
-msgstr ""
+msgstr "<b>Güncellendi:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>Arama Veritabanını Güncelle</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"Aramaların daha hızlı sonuçlanması için veritabanının yenilenmesi gerekir.\n"
+"Bu eylem yönetici yetkileri gerektirir."
 
 #: ../catfish/__init__.py:35
 msgid "Usage: %prog [options] path query"
-msgstr ""
+msgstr "Kullanım şekli: %prog [options] path query"
 
 #: ../catfish/__init__.py:40
 msgid "Show debug messages (-vv debugs catfish_lib also)"
@@ -250,7 +252,7 @@ msgstr "Gizli dosyaları içer"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
-msgstr "Tam metin aramasını içer"
+msgstr "Tam metin araması uygula"
 
 #: ../catfish/__init__.py:57
 msgid ""
@@ -263,19 +265,19 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:82
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (geçersiz kodlama)"
 
 #: ../catfish/CatfishWindow.py:248
 msgid "Unknown"
-msgstr ""
+msgstr "Bilinmeyen"
 
 #: ../catfish/CatfishWindow.py:252
 msgid "Never"
-msgstr ""
+msgstr "Hiçbir zaman"
 
 #: ../catfish/CatfishWindow.py:607
 msgid "An error occurred while updating the database."
-msgstr ""
+msgstr "Veritabanı güncellenirken bir hata oluştu."
 
 #: ../catfish/CatfishWindow.py:609
 msgid "Authentication failed."
@@ -283,16 +285,16 @@ msgstr "Doğrulamala başarısız oldu."
 
 #: ../catfish/CatfishWindow.py:615
 msgid "Authentication cancelled."
-msgstr ""
+msgstr "Doğrulama iptal edildi."
 
 #: ../catfish/CatfishWindow.py:621
 msgid "Search database updated successfully."
-msgstr ""
+msgstr "Arama veritabanı başarıyla güncellendi."
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:696
 msgid "Updating..."
-msgstr ""
+msgstr "Güncelleniyor..."
 
 #: ../catfish/CatfishWindow.py:730
 msgid "Stop Search"
@@ -302,11 +304,11 @@ msgstr "Aramayı Durdur"
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
-msgstr ""
+msgstr "Arama yapılıyor..."
 
 #: ../catfish/CatfishWindow.py:740
 msgid "Begin Search"
-msgstr ""
+msgstr "Aramayı başlat"
 
 #: ../catfish/CatfishWindow.py:927
 #, python-format
@@ -368,15 +370,15 @@ msgstr "Önizleme"
 
 #: ../catfish/CatfishWindow.py:1119
 msgid "Details"
-msgstr ""
+msgstr "Detaylar"
 
 #: ../catfish/CatfishWindow.py:1339
 msgid "Today"
-msgstr ""
+msgstr "Bugün"
 
 #: ../catfish/CatfishWindow.py:1341
 msgid "Yesterday"
-msgstr ""
+msgstr "Dün"
 
 #: ../catfish/CatfishWindow.py:1420
 msgid "No files found."
@@ -399,7 +401,7 @@ msgstr "%i dosya bulundu."
 
 #: ../catfish/CatfishWindow.py:1436
 msgid "bytes"
-msgstr ""
+msgstr "bayt"
 
 #: ../catfish/CatfishWindow.py:1574 ../catfish/CatfishWindow.py:1583
 msgid "Searching…"
@@ -407,7 +409,7 @@ msgstr "Aranıyor..."
 
 #: ../catfish/CatfishWindow.py:1576
 msgid "Results will be displayed as soon as they are found."
-msgstr ""
+msgstr "Sonuçlar bulunduğu anda gösterilecek."
 
 #: ../catfish/CatfishWindow.py:1581
 #, python-format
@@ -421,24 +423,24 @@ msgstr "\"%s\" için arama sonuçları"
 
 #: ../catfish_lib/SudoDialog.py:139
 msgid "Password Required"
-msgstr ""
+msgstr "Parola Gerekiyor"
 
 #: ../catfish_lib/SudoDialog.py:176
 msgid "Incorrect password... try again."
-msgstr ""
+msgstr "Yanlış parola... yeniden deneyin."
 
 #: ../catfish_lib/SudoDialog.py:186
 msgid "Password:"
-msgstr ""
+msgstr "Parola:"
 
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:197
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 #: ../catfish_lib/SudoDialog.py:200
 msgid "OK"
-msgstr ""
+msgstr "Tamam"
 
 #: ../catfish_lib/SudoDialog.py:221
 msgid ""
