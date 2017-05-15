@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-12 18:16-0400\n"
-"PO-Revision-Date: 2016-08-28 22:03+0000\n"
-"Last-Translator: Robert Antoni Buj Gelonch <Unknown>\n"
+"PO-Revision-Date: 2017-05-14 18:30+0000\n"
+"Last-Translator: toniem <toni.estevez@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-29 06:30+0000\n"
-"X-Generator: Launchpad (build 18179)\n"
+"X-Launchpad-Export-Date: 2017-05-15 06:24+0000\n"
+"X-Generator: Launchpad (build 18373)\n"
+"Language: ca\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish/CatfishWindow.py:639
@@ -41,7 +42,7 @@ msgstr "_Obre"
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
-msgstr "Mostra-ho al gestor de _fitxers"
+msgstr "Mostra en el gestor de _fitxers"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:5
@@ -58,7 +59,7 @@ msgstr "_Suprimeix"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr "Extensions de fitxers"
+msgstr "Extensions de fitxer"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -102,15 +103,15 @@ msgstr "Aquesta setmana"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Custom"
-msgstr "Personalitzat"
+msgstr "Personalitza"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Go to Today"
-msgstr "Vés a avui"
+msgstr "Vés a la data d'avui"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "<b>Start Date</b>"
-msgstr "<b>Data d’inici</b>"
+msgstr "<b>Data inicial</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "<b>End Date</b>"
@@ -127,8 +128,7 @@ msgstr "Actualitza"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr ""
-"La base de dades de cerca té més de 7 dies. Voleu actualitzar-la ara?"
+msgstr "L'índex de cerca té més de 7 dies. Voleu actualitzar-lo ara?"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "File Type"
@@ -136,21 +136,21 @@ msgstr "Tipus de fitxer"
 
 #: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1101
 msgid "Modified"
-msgstr "Modificat"
+msgstr "Data de modificació"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr "Introduïu la vosta consulta a dalt per trobar els vostres fitxers"
+msgstr "Introduïu a dalt la vostra consulta per cercar fitxers"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "or click the "
-msgstr "feu clic a la icona "
+msgstr "o feu clic a la icona "
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgctxt ""
@@ -161,7 +161,7 @@ msgstr " per a més opcions."
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
-msgstr "Trieu un directori"
+msgstr "Selecciona una carpeta"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Compact List"
@@ -177,7 +177,7 @@ msgstr "Mostra els fitxers _ocults"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
-msgstr "Cerca al _contingut dels fitxers"
+msgstr "Cerca en el _contingut dels fitxers"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Exact Match"
@@ -185,11 +185,11 @@ msgstr "Coincidència _exacta"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "Show _Sidebar"
-msgstr "Mostra la barra de de_splaçament"
+msgstr "Mostra la barra _lateral"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Update Search Index…"
-msgstr "_Actualitza l’índex de cerca…"
+msgstr "_Actualitza l'índex de cerca…"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_About"
@@ -205,7 +205,7 @@ msgstr "Desbloqueja"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "<b>Database:</b>"
-msgstr "<b>Base de dades:</b>"
+msgstr "<b>Índex de cerca:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
@@ -213,16 +213,15 @@ msgstr "<b>Actualització:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
-msgstr "<big><b>Actualització de la base de dades de cerca</b></big>"
+msgstr "<big><b>Índex de cerca</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
-"Cal refrescar la base de dades de cerca per a resultats de cerca més "
-"ràpids.\n"
-"Aquesta acció requereix permisos d'administració."
+"Per obtenir resultats més ràpid, cal actualitzar l'índex de cerca.\n"
+"Aquesta acció requereix permisos d'administrador."
 
 #: ../catfish/__init__.py:35
 msgid "Usage: %prog [options] path query"
@@ -230,7 +229,7 @@ msgstr "Ús: %prog [opcions] camí consulta"
 
 #: ../catfish/__init__.py:40
 msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr "Mostra els missatges de depuració (-vv també depura catfish_lib)"
+msgstr "Mostra els missatges de depuració (-vv depura també catfish_lib)"
 
 #: ../catfish/__init__.py:43
 msgid "Use large icons"
@@ -246,7 +245,7 @@ msgstr "Mostra l'hora en format ISO"
 
 #: ../catfish/__init__.py:51
 msgid "Perform exact match"
-msgstr "Realitza la coincidència exacta"
+msgstr "Busca una coincidència exacta"
 
 #: ../catfish/__init__.py:53
 msgid "Include hidden files"
@@ -254,14 +253,14 @@ msgstr "Inclou els fitxers ocults"
 
 #: ../catfish/__init__.py:55
 msgid "Perform fulltext search"
-msgstr "Realitza una cerca de text complet"
+msgstr "Cerca el text complet"
 
 #: ../catfish/__init__.py:57
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
-"Si es proporcionen el camí i la consulta, comença la cerca quan es mostra "
+"Si es proporcionen el camí i la consulta, la cerca comença quan es mostra "
 "l'aplicació."
 
 #. Translators: this text is displayed next to
@@ -269,7 +268,7 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:82
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr "%s (codificació no vàlida)"
+msgstr "%s (codif. no vàlida)"
 
 #: ../catfish/CatfishWindow.py:248
 msgid "Unknown"
@@ -281,19 +280,19 @@ msgstr "Mai"
 
 #: ../catfish/CatfishWindow.py:607
 msgid "An error occurred while updating the database."
-msgstr "S'ha produït un error mentre s'actualitzava la base de dades."
+msgstr "S'ha produït un error en actualitzar l'índex de cerca."
 
 #: ../catfish/CatfishWindow.py:609
 msgid "Authentication failed."
-msgstr "Ha fallat l’autenticació."
+msgstr "Ha fallat l'autenticació."
 
 #: ../catfish/CatfishWindow.py:615
 msgid "Authentication cancelled."
-msgstr "Autenticació cancel·lada."
+msgstr "S'ha cancel·lat l'autenticació."
 
 #: ../catfish/CatfishWindow.py:621
 msgid "Search database updated successfully."
-msgstr "S'ha actualitzat correctament la base de dades de cerca."
+msgstr "L'índex de cerca s'ha actualitzat correctament."
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:696
@@ -308,7 +307,9 @@ msgstr "Atura la cerca"
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
-msgstr "Cerca en progrés...."
+msgstr ""
+"Cerca en curs...\n"
+"Premeu el botó de cancel·lació o la tecla Esc per aturar."
 
 #: ../catfish/CatfishWindow.py:740
 msgid "Begin Search"
@@ -317,17 +318,17 @@ msgstr "Comença la cerca"
 #: ../catfish/CatfishWindow.py:927
 #, python-format
 msgid "\"%s\" could not be opened."
-msgstr "No s’ha pogut obrir «%s»."
+msgstr "No s'ha pogut obrir «%s»."
 
 #: ../catfish/CatfishWindow.py:973
 #, python-format
 msgid "\"%s\" could not be saved."
-msgstr "No s’ha pogut desar «%s»."
+msgstr "No s'ha pogut desar «%s»."
 
 #: ../catfish/CatfishWindow.py:990
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr "No s’ha pogut suprimir «%s»."
+msgstr "No s'ha pogut suprimir «%s»."
 
 #: ../catfish/CatfishWindow.py:1030
 #, python-format
@@ -340,7 +341,7 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
-"Esteu segur que voleu suprimir\n"
+"Segur que voleu suprimir \n"
 "permanentment «%s»?"
 
 #: ../catfish/CatfishWindow.py:1069
@@ -349,7 +350,7 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
-"Esteu segur que voleu suprimir\n"
+"Segur que voleu suprimir \n"
 "permanentment els %i fitxers seleccionats?"
 
 #: ../catfish/CatfishWindow.py:1072
@@ -358,7 +359,7 @@ msgstr "Si suprimiu un fitxer, es perdrà permanentment."
 
 #: ../catfish/CatfishWindow.py:1095
 msgid "Filename"
-msgstr "Nom del fitxer"
+msgstr "Nom"
 
 #: ../catfish/CatfishWindow.py:1097
 msgid "Size"
@@ -370,7 +371,7 @@ msgstr "Ubicació"
 
 #: ../catfish/CatfishWindow.py:1111
 msgid "Preview"
-msgstr "Previsualitza"
+msgstr "Vista prèvia"
 
 #: ../catfish/CatfishWindow.py:1119
 msgid "Details"
@@ -386,7 +387,7 @@ msgstr "Ahir"
 
 #: ../catfish/CatfishWindow.py:1420
 msgid "No files found."
-msgstr "No s’ha trobat cap fitxer."
+msgstr "No s'ha trobat cap fitxer."
 
 #: ../catfish/CatfishWindow.py:1422
 msgid ""
@@ -398,12 +399,12 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:1428
 msgid "1 file found."
-msgstr "S’ha trobat un fitxer."
+msgstr "S'ha trobat un fitxer."
 
 #: ../catfish/CatfishWindow.py:1430
 #, python-format
 msgid "%i files found."
-msgstr "S’han trobat %i fitxers."
+msgstr "S'han trobat %i fitxers."
 
 #: ../catfish/CatfishWindow.py:1436
 msgid "bytes"
@@ -411,7 +412,7 @@ msgstr "bytes"
 
 #: ../catfish/CatfishWindow.py:1574 ../catfish/CatfishWindow.py:1583
 msgid "Searching…"
-msgstr "S’està cercant…"
+msgstr "S'està cercant…"
 
 #: ../catfish/CatfishWindow.py:1576
 msgid "Results will be displayed as soon as they are found."
@@ -420,7 +421,7 @@ msgstr "Els resultats es mostraran tan aviat com es trobin."
 #: ../catfish/CatfishWindow.py:1581
 #, python-format
 msgid "Searching for \"%s\""
-msgstr "S’està cercant «%s»"
+msgstr "S'està cercant «%s»"
 
 #: ../catfish/CatfishWindow.py:1670
 #, python-format
@@ -433,7 +434,7 @@ msgstr "Es requereix una contrasenya"
 
 #: ../catfish_lib/SudoDialog.py:176
 msgid "Incorrect password... try again."
-msgstr "Contrasenya incorrecta... Intenteu-ho de nou."
+msgstr "Contrasenya incorrecta... Torna a intentar-ho."
 
 #: ../catfish_lib/SudoDialog.py:186
 msgid "Password:"
@@ -446,14 +447,14 @@ msgstr "Cancel·la"
 
 #: ../catfish_lib/SudoDialog.py:200
 msgid "OK"
-msgstr "D’acord"
+msgstr "D'acord"
 
 #: ../catfish_lib/SudoDialog.py:221
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
-"Introduïu la vostra contrasenya per\n"
+"Introduïu la contrasenya per\n"
 "realitzar tasques administratives."
 
 #: ../catfish_lib/SudoDialog.py:223
@@ -462,7 +463,7 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
-"L’aplicació «%s» us permet\n"
+"L'aplicació «%s» us permet\n"
 "modificar parts essencials del sistema."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:2
@@ -478,11 +479,11 @@ msgid ""
 "file manager or organization skills."
 msgstr ""
 "Catfish és una utilitat de cerca de fitxers petita, ràpida i potent. Amb una "
-"interfície minimalista, amb èmfasi en els resultats, que ajuda els usuaris a "
-"trobar els fitxers que necessiten sense un gestor de fitxers. Amb filtres "
-"potents, com ara la data de modificació, el tipus de fitxer i el contingut "
-"dels fitxers, els usuaris ja no depenen més del gestor de fitxers o de les "
-"habilitats organitzatives."
+"interfície minima que destaca els resultats, ajuda els usuaris a trobar els "
+"fitxers que necessiten sense un gestor de fitxers. Amb filtres potents, com "
+"ara la data de modificació, el tipus de fitxer i el contingut del fitxer, "
+"els usuaris ja no depenen del gestor de fitxers ni de les seves habilitats "
+"d'organització."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
@@ -499,11 +500,11 @@ msgid ""
 "click functionality has been restored. Date range filters are now applied "
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
-"Aquest llançament corregeix diversos errors greus relacionats amb la "
-"finestra dels resultats. Els fitxers s'eliminen una vegada més de la llista "
-"dels resultats quan se suprimeixen. La funcionalitat del botó dret i del mig "
-"ha estat restaurada. Els filtres d'intervals de dates s'apliquen ara d'acord "
-"amb la zona horària en lloc de l'UTC (Universal Coordinated Time)."
+"Aquesta versió corregeix diversos errors relacionats amb la finestra de "
+"resultats. Els fitxers s'eliminen de la llista de resultats quan se "
+"suprimeixen. S'ha restaurat la funcionalitat del botó central i del botó "
+"dret del ratolí. El filtre de data de modificació s'aplica ara d'acord amb "
+"la zona horària en lloc de amb el temps universal coordinat (UTC)."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:6
 msgid ""
@@ -513,26 +514,25 @@ msgid ""
 "headerbars and popover widgets. Password handling has been improved with the "
 "integration of PolicyKit when available."
 msgstr ""
-"Aquest llançament inclou un refresc significatiu de la interfície, millora "
-"la velocitat de cerca i corregeix diversos errors. El flux de treball s'ha "
-"millorat mitjançant algunes de les últimes característiques del conjunt "
-"d'eines de GTK +, incloent-hi les barres de capçaleres opcionals i els "
-"estris emergents. El tractament de les contrasenyes ha estat millorat amb la "
-"integració de PolicyKit quan estigui disponible."
+"Aquesta versió inclou una actualització significativa de la interfície, "
+"millora la velocitat de cerca i corregeix diversos errors. El flux de "
+"treball s'ha millorat mitjançant l'ús d'algunes de les últimes "
+"característiques del conjunt d'eines GTK+, incloent les barres de capçalera "
+"opcionals i els elements gràfics emergents. La gestió de contrasenyes s'ha "
+"millorat amb la integració de PolicyKit quan estigui disponible."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
-"Aquest llançament corregeix dos errors nous i inclou l'actualització de les "
-"traduccions."
+"Aquesta versió corregeix dos errors nous i inclou traduccions actualitzades."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:8
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
-"Aquest llançament corregeix una regressió on l'aplicació no era capaç "
-"d'iniciar-se en alguns sistemes."
+"Aquesta versió corregeix una regressió que impedia que l'aplicació s'iniciés "
+"en alguns sistemes."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:9
 msgid ""
@@ -540,19 +540,17 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
-"Aquest llançament corregeix una regressió on ja no s'admetien diversos "
-"termes de cerca. Ara es mostra una barra d'informació quan la base de dades "
-"de cerca és obsoleta, i s'han millorat els diàlegs utilitzats per "
-"actualitzar la base de dades."
+"Aquesta versió corregeix una regressió que impedia especificar diversos "
+"termes de cerca. Ara es mostra una barra d'informació quan l'índex de cerca "
+"està desactualitzat i s'han millorat els diàlegs per actualitzar-lo."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
-"Aquest llançament corregeix dues incidències, la localització no es va "
-"executar correctament i es millora la gestió de les icones simbòliques que "
-"falten."
+"Aquesta versió corregeix dos problemes que impedien executar l'ordre locate "
+"correctament i millora la gestió de la manca d'icones simbòlics."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:11
 msgid ""
@@ -568,8 +566,8 @@ msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
 msgstr ""
-"Aquest llançament ha corregit un problema de seguretat potencial amb l'inici "
-"del programa i ha corregit una regressió amb la selecció de diversos "
+"Aquesta actualització soluciona un possible problema de seguretat amb "
+"l'inici del programa i corregeix una regressió en seleccionar múltiples "
 "elements."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:13
@@ -580,11 +578,11 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
-"El primer llançament a la sèrie 1.0.x ha introduït una interfície renovada i "
-"corregeix una sèrie d'errors de llarga durada. Millores en els permisos "
-"predeterminats que han eliminat una sèrie d'advertències quan s'empaqueta "
-"per a les distribucions. L'accessibilitat s'ha millorat, ja que totes les "
-"cadenes s'han fet traduïbles i s'han millorat els acceleradors de teclat."
+"La primera versió de la sèrie 1.0.x introdueix una interfície renovada i "
+"corregeix una sèrie d'errors antics. Les millores en els permisos "
+"predeterminats han eliminat una sèrie d'advertències en empaquetar per a les "
+"distribucions. L'accessibilitat s'ha millorat, ja que totes les cadenes "
+"s'han fet traduïbles, i s'han millorat les tecles acceleradores."
 
 #~ msgid "_Fulltext Search"
 #~ msgstr "Cerca de tot el _text"

@@ -8,19 +8,20 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-12 18:16-0400\n"
-"PO-Revision-Date: 2017-04-22 17:46+0000\n"
+"PO-Revision-Date: 2017-05-14 18:31+0000\n"
 "Last-Translator: toniem <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-04-23 05:40+0000\n"
-"X-Generator: Launchpad (build 18361)\n"
+"X-Launchpad-Export-Date: 2017-05-15 06:24+0000\n"
+"X-Generator: Launchpad (build 18373)\n"
+"Language: es\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish/CatfishWindow.py:639
 msgid "Catfish File Search"
-msgstr "Buscador de archivos Catfish"
+msgstr "Búsqueda de archivos Catfish"
 
 #: ../catfish.desktop.in.h:2
 msgid "File search"
@@ -32,7 +33,7 @@ msgstr "Buscar en el sistema de archivos"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
-msgstr "Catfish es una herramienta versatil de búsqueda de archivos."
+msgstr "Catfish es una herramienta versátil de búsqueda de archivos."
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
@@ -62,7 +63,7 @@ msgstr "Extensiones de archivo"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
-msgstr "odt, png, txt"
+msgstr "odt, png y txt"
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
@@ -94,7 +95,7 @@ msgstr "Otros"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "Any time"
-msgstr "Cualquier"
+msgstr "En cualquier momento"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "This week"
@@ -143,7 +144,7 @@ msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr "Introduzca su consulta arriba para encontrar archivos"
+msgstr "Introduzca arriba su consulta para buscar archivos"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgctxt ""
@@ -161,7 +162,7 @@ msgstr " para más opciones."
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
-msgstr "Seleccionar carpeta"
+msgstr "Seleccionar una carpeta"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Compact List"
@@ -177,7 +178,7 @@ msgstr "Mostrar archivos _ocultos"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
-msgstr "Buscar en el _contenido del archivo"
+msgstr "Buscar en _contenido de archivos"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Exact Match"
@@ -197,7 +198,7 @@ msgstr "_Acerca de"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
-msgstr "Actualizar el índice de búsqueda"
+msgstr "Actualizar índice de búsqueda"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgid "Unlock"
@@ -222,7 +223,7 @@ msgid ""
 msgstr ""
 "Para obtener resultados más rápido, es necesario actualizar el índice de "
 "búsqueda.\n"
-"Esta acción requiere de permisos administrativos."
+"Esta acción requiere permisos de administrador."
 
 #: ../catfish/__init__.py:35
 msgid "Usage: %prog [options] path query"
@@ -230,7 +231,7 @@ msgstr "Uso: %prog [opciones] ruta consulta"
 
 #: ../catfish/__init__.py:40
 msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr "Mostrar mensajes de depuración (-vv depura catfish_lib también)"
+msgstr "Mostrar mensajes de depuración (-vv depura también catfish_lib)"
 
 #: ../catfish/__init__.py:43
 msgid "Use large icons"
@@ -261,7 +262,7 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
-"Si se proporciona la ruta y la consulta, la búsqueda comienza cuando se "
+"Si se proporcionan la ruta y la consulta, la búsqueda comienza cuando se "
 "muestra la aplicación"
 
 #. Translators: this text is displayed next to
@@ -285,11 +286,11 @@ msgstr "Se ha producido un error al actualizar el índice de búsqueda."
 
 #: ../catfish/CatfishWindow.py:609
 msgid "Authentication failed."
-msgstr "La autenticación ha fallado."
+msgstr "Error de autenticación."
 
 #: ../catfish/CatfishWindow.py:615
 msgid "Authentication cancelled."
-msgstr "La autenticación ha sido cancelada."
+msgstr "Se ha cancelado la autenticación."
 
 #: ../catfish/CatfishWindow.py:621
 msgid "Search database updated successfully."
@@ -310,7 +311,7 @@ msgid ""
 "Press the cancel button or the Escape key to stop."
 msgstr ""
 "Búsqueda en curso...\n"
-"Presione la tecla Escape o Suprimir para detener."
+"Pulse el botón de cancelación o la tecla Esc para detener."
 
 #: ../catfish/CatfishWindow.py:740
 msgid "Begin Search"
@@ -360,7 +361,7 @@ msgstr "Si elimina un archivo, se perderá permanentemente."
 
 #: ../catfish/CatfishWindow.py:1095
 msgid "Filename"
-msgstr "Nombre de archivo"
+msgstr "Nombre"
 
 #: ../catfish/CatfishWindow.py:1097
 msgid "Size"
@@ -479,20 +480,20 @@ msgid ""
 "date, file type, and file contents, users will no longer be dependent on the "
 "file manager or organization skills."
 msgstr ""
-"Catfish es una pequeña, rápida y poderosa utilidad de búsqueda archivos. "
-"Posee una interfaz minimalista con énfasis en los resultados, ayuda a los "
-"usuarios a encontrar los archivos que necesitan sin necesidad de un "
-"administrador de archivos. Con filtros poderosos como fechas de "
-"modificación, tipo de archivo y contenido de archivo, los usuarios ya no "
-"dependerán del administrador de archivos o habilidades organizativas."
+"Catfish es una utilidad de búsqueda de archivos pequeña, rápida y potente. "
+"Con una interfaz mínima que destaca los resultados, ayuda a los usuarios a "
+"encontrar los archivos que necesitan sin un administrador de archivos. Con "
+"filtros potentes como la fecha de modificación, el tipo de archivo y el "
+"contenido de archivo, los usuarios ya no dependen del administrador de "
+"archivos ni de sus habilidades de organización."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:4
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
-"Esta versión muestra ahora todas las marcas de tiempo de acuerdo con la zona "
-"horaria en lugar de Tiempo Universal Coordinado (UTC)."
+"Esta versión muestra ahora todas las marcas de tiempo de los archivos de "
+"acuerdo con la zona horaria en lugar del tiempo universal coordinado (UTC)."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
@@ -502,11 +503,11 @@ msgid ""
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
 "Esta versión corrige varios errores relacionados con la ventana de "
-"resultados. Los archivos se quitan también de la lista de resultados cuando "
-"se eliminan. Se ha restaurado la funcionalidad del botón del medio y del "
-"botón derecho del ratón. El filtro de fecha de modificación se aplica ahora "
-"de acuerdo con la zona horaria en lugar de con el tiempo coordinado "
-"universal (UTC)."
+"resultados. Los archivos se quitan de la lista de resultados cuando se "
+"eliminan. Se ha restaurado la funcionalidad del botón central y del botón "
+"derecho del ratón. El filtro de fecha de modificación se aplica ahora de "
+"acuerdo con la zona horaria en lugar de con el tiempo universal coordinado "
+"(UTC)."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:6
 msgid ""
@@ -516,12 +517,12 @@ msgid ""
 "headerbars and popover widgets. Password handling has been improved with the "
 "integration of PolicyKit when available."
 msgstr ""
-"Esta versión incluye una actualización importante de la interfaz, mejora la "
-"velocidad de búsqueda y corrige varios errores. El flujo de trabajo se ha "
+"Esta versión incluye una actualización significativa de la interfaz, mejora "
+"la velocidad de búsqueda y corrige varios errores. El flujo de trabajo se ha "
 "mejorado mediante el uso de algunas de las últimas características del "
-"conjunto de herramientas GTK +, incluyendo barras de encabezado opcionales y "
-"elementos gráficos emergentes. El manejo de contraseñas se ha mejorado con "
-"la integración de PolicyKit cuando está disponible."
+"conjunto de herramientas GTK +, incluyendo las barras de encabezado "
+"opcionales y los elementos gráficos emergentes. El manejo de contraseñas se "
+"ha mejorado con la integración de PolicyKit cuando esté disponible."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid "This release fixes two new bugs and includes updated translations."
@@ -560,9 +561,9 @@ msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
-"Esta versión estable ha mejorado la fiabilidad del diálogo de la contraseña, "
-"ha eliminado código no utilizado y ha corregido posibles problemas con la "
-"lista y la selección de elementos."
+"Esta versión estable mejora la fiabilidad del diálogo de la contraseña, "
+"elimina código no utilizado y corrige posibles problemas con la lista y la "
+"selección de elementos."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:12
 msgid ""
@@ -580,11 +581,11 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
-"La primera versión de la serie 1.0.x ha introducido una interfaz renovada y "
-"ha corregido una serie de errores antiguos. Las mejoras en los permisos "
+"La primera versión de la serie 1.0.x introduce una interfaz renovada y "
+"corrige una serie de errores antiguos. Las mejoras en los permisos "
 "predeterminados han eliminado una serie de advertencias al empaquetar para "
-"distribuciones. La accesibilidad se ha mejorado ya que todas las cadenas se "
-"han hecho traducibles y se han mejorado las teclas aceleradoras."
+"las distribuciones. La accesibilidad se ha mejorado, ya que todas las "
+"cadenas se han hecho traducibles, y se han mejorado las teclas aceleradoras."
 
 #~ msgid "Custom Time Range"
 #~ msgstr "Intervalo de tiempo personalizado"
