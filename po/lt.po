@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-12 18:16-0400\n"
-"PO-Revision-Date: 2016-04-01 13:09+0000\n"
+"PO-Revision-Date: 2017-07-08 13:34+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-13 05:33+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2017-07-09 06:09+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish/CatfishWindow.py:639
@@ -28,7 +28,7 @@ msgstr "Failų paieška"
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
-msgstr "Atlikite paiešką failų sistemoje"
+msgstr "Atlikti paiešką failų sistemoje"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
