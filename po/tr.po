@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-01-18 05:08+0000\n"
-"PO-Revision-Date: 2017-01-14 11:38+0000\n"
-"Last-Translator: Kudret EMRE <kudretemre@hotmail.com>\n"
+"POT-Creation-Date: 2018-01-19 05:28+0000\n"
+"PO-Revision-Date: 2018-01-19 15:34+0000\n"
+"Last-Translator: Ali Orhun Akkirman <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-19 05:27+0000\n"
+"X-Launchpad-Export-Date: 2018-01-20 05:27+0000\n"
 "X-Generator: Launchpad (build 18532)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
@@ -164,7 +164,7 @@ msgstr "Bir Dizin Seçin"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Compact List"
-msgstr ""
+msgstr "Kompakt Liste"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Thumbnails"
@@ -259,6 +259,7 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
+"Yol ve sorgu sağlanırsa, uygulama görüntülendiğinde aramaya başlayın."
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -389,6 +390,8 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
+"Aramanızı daha az özel yapmayı deneyin\n"
+"veya farklı dizin deneyin."
 
 #: ../catfish/CatfishWindow.py:1428
 msgid "1 file found."
@@ -447,6 +450,8 @@ msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
+"Şifrenizi girin\n"
+"idari görevleri yerine getirmek için."
 
 #: ../catfish_lib/SudoDialog.py:223
 #, python-format
@@ -454,10 +459,12 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
+"'%s' uygulaması size izin veriyor\n"
+"sisteminizin önemli parçalarını değiştirebilmek için."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:2
 msgid "Versatile file searching tool"
-msgstr ""
+msgstr "Çok yönlü dosya arama aracı"
 
 #: ../data/appdata/catfish.appdata.xml.in.h:3
 msgid ""
@@ -473,6 +480,8 @@ msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
+"Bu sürüm şimdi Evrensel Eşgüdümlı Zaman (UTC) yerine saat dilimine göre tüm "
+"dosya zaman damgalarını görüntüler."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:5
 msgid ""
@@ -494,12 +503,14 @@ msgstr ""
 #: ../data/appdata/catfish.appdata.xml.in.h:7
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
+"Bu sürüm, iki yeni hatayı düzeltir ve güncellenmiş çevirileri içerir."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:8
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
+"Bu sürüm, uygulamanın bazı sistemlerde başlatılamadığı gerilemeyi düzeltir."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:9
 msgid ""
@@ -513,6 +524,8 @@ msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
+"Bu sürüm, locate'ın düzgün yürütülmeyeceği ve eksik simgesel simgelerin "
+"işlenmesini geliştirdiği iki sorunu giderir."
 
 #: ../data/appdata/catfish.appdata.xml.in.h:11
 msgid ""
