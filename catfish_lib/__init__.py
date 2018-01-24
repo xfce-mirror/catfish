@@ -19,6 +19,6 @@
 '''facade - makes catfish_lib package easy to refactor
 
 while keeping its api constant'''
-from . helpers import set_up_logging  # lint:ok
-from . Window import Window  # lint:ok
-from . catfishconfig import get_version  # lint:ok
+from . helpers import set_up_logging  # noqa
+from . Window import Window  # noqa
+from . catfishconfig import get_version  # noqa

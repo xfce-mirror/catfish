@@ -122,7 +122,7 @@ class CatfishSearchEngine:
         """Add a CatfishSearchMethod the the engine's search backends."""
         self.methods.append(method_class())
 
-    def run(self, keywords, path, limit=-1, regex=False):
+    def run(self, keywords, path, limit=-1, regex=False): # noqa
         """Run the CatfishSearchEngine.
 
         Each method is run sequentially in the order they are added.
@@ -334,7 +334,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
         self.running = False
         self.exact = False
 
-    def run(self, keywords, path, regex=False):
+    def run(self, keywords, path, regex=False): # noqa
         """Run the search method using keywords and path.  regex is not used
         by this search method.
 

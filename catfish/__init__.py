@@ -26,7 +26,6 @@ from catfish import CatfishWindow
 
 from catfish_lib import set_up_logging, get_version
 
-import os
 import signal
 
 

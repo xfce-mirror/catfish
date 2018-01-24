@@ -32,9 +32,9 @@ def check_gtk_version(major_version, minor_version, micro=0):
     """Return true if running gtk >= requested version"""
     return gtk_version >= (major_version, minor_version, micro)
 
+
 # Check if the LANG variable needs to be set
 use_env = False
-use_pkexec = False
 
 
 def check_dependencies(commands=[]):
@@ -46,7 +46,6 @@ def check_dependencies(commands=[]):
 
     # Check for sudo or pkexec
     if pexpect.which("pkexec") is not None:
-        use_pkexec = True
         return True
 
     if pexpect.which("sudo") is None:
@@ -74,7 +73,7 @@ def check_dependencies(commands=[]):
             # User not in sudoers
             return False
 
-    except:
+    except Exception:
         # Something else went wrong.
         child.close()
 

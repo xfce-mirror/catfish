@@ -38,7 +38,7 @@ class CatfishSettings:
             if not os.path.exists(settings_dir):
                 os.makedirs(settings_dir)
             self.settings_file = settings_file
-        except:
+        except Exception:
             self.settings_file = None
         self.read()
 
@@ -68,7 +68,7 @@ class CatfishSettings:
                             if value.strip().lower() in ['true', 'false']:
                                 value = value.strip().lower() == 'true'
                             self.settings[prop] = value
-                    except:
+                    except Exception:
                         pass
 
     def write(self):

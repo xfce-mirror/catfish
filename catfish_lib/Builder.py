@@ -174,7 +174,7 @@ class Builder(Gtk.Builder):
             for segment in name.split('.'):
                 item = item[segment]
             return self.get_object(item)
-        except:
+        except Exception:
             return None
 
 
@@ -239,7 +239,7 @@ def getmembers(obj, check):
     for k in dir(obj):
         try:
             attr = getattr(obj, k)
-        except:
+        except Exception:
             continue
         if check(attr):
             members.append((k, attr))

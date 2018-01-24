@@ -21,6 +21,7 @@ import hashlib
 import logging
 import mimetypes
 import os
+import subprocess
 import time
 from locale import gettext as _
 from shutil import copy2, rmtree
@@ -30,7 +31,7 @@ import pexpect
 from gi.repository import Gdk, GdkPixbuf, GLib, GObject, Gtk, Pango
 
 from catfish.AboutCatfishDialog import AboutCatfishDialog
-from catfish.CatfishSearchEngine import *
+from catfish.CatfishSearchEngine import CatfishSearchEngine
 from catfish_lib import catfishconfig, helpers
 from catfish_lib import CatfishSettings, SudoDialog, Window
 
@@ -93,7 +94,7 @@ def get_thumbnails_directory():
             thumbs = os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
         else:
             thumbs = os.path.join(GLib.get_home_dir(), '.thumbnails/')
-    except:
+    except Exception:
         thumbs = os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
     return thumbs
 
@@ -358,7 +359,7 @@ class CatfishWindow(Window):
         else:
             return False
         if popover_id not in self.popovers.keys():
-            popover_content = builder.get_object(popover_id + "_popover")
+            builder.get_object(popover_id + "_popover")
             popover = Gtk.Popover.new()
             popover.connect("destroy", self.popover_content_destroy)
             popover.add(builder.get_object(popover_id + "_popover"))
@@ -424,10 +425,7 @@ class CatfishWindow(Window):
 
         return False
 
-    def parse_options(self, options, args):
-        """Parse commandline arguments into Catfish runtime settings."""
-        self.options = options
-
+    def parse_path_option(self, options, args):
         # Set the selected folder path. Allow legacy --path option.
         path = None
 
@@ -446,11 +444,16 @@ class CatfishWindow(Window):
         if path is None:
             path = os.path.expanduser("~")
             if os.path.isdir(os.path.realpath(path)):
-                self.options.path = path
+                return path
             else:
-                path = "/"
+                return "/"
         else:
-            self.options.path = path
+            return path
+
+    def parse_options(self, options, args):
+        """Parse commandline arguments into Catfish runtime settings."""
+        self.options = options
+        self.options.path = self.parse_path_option(options, args)
 
         self.folderchooser.set_filename(self.options.path)
 
@@ -626,7 +629,7 @@ class CatfishWindow(Window):
 
         self.update_index_infobar.show()
 
-    def on_update_index_unlock_clicked(self, widget):
+    def on_update_index_unlock_clicked(self, widget): # noqa
         """Unlock admin rights and perform 'updatedb' query."""
         self.update_index_active = True
 
@@ -923,9 +926,8 @@ class CatfishWindow(Window):
             logger.debug('Exception encountered while opening %s.' +
                          '\n  Exception: %s' +
                          filename, msg)
-
-        self.get_error_dialog(_('\"%s\" could not be opened.') %
-                              os.path.basename(filename), str(msg))
+            self.get_error_dialog(_('\"%s\" could not be opened.') %
+                                  os.path.basename(filename), str(msg))
 
     # -- File Popup Menu -- #
     def on_menu_open_activate(self, widget):
@@ -1176,7 +1178,6 @@ class CatfishWindow(Window):
         """Get the currently selected rows from the specified treeview."""
         sel = treeview.get_selection()
         model, rows = sel.get_selected_rows()
-        count = treeview.get_selection().count_selected_rows()
         data = []
         for row in rows:
             data.append(self.treemodel_get_row_filename(model, row))
@@ -1313,7 +1314,7 @@ class CatfishWindow(Window):
         if helpers.check_python_version(3, 0):
             size = int(tree_model.get_value(tree_iter, id))
         else:
-            size = long(tree_model.get_value(tree_iter, id))
+            size = long(tree_model.get_value(tree_iter, id)) # noqa
 
         filesize = self.format_size(size)
         cell_renderer.set_property('text', filesize)
@@ -1340,12 +1341,14 @@ class CatfishWindow(Window):
             elif item_date >= self.yesterday:
                 modified = _("Yesterday")
             elif item_date >= self.this_week:
-                modified = time.strftime("%A", time.localtime(modification_int))
+                modified = time.strftime("%A",
+                                         time.localtime(modification_int))
             else:
-                modified = time.strftime("%x", time.localtime(modification_int))
+                modified = time.strftime("%x",
+                                         time.localtime(modification_int))
         return modified
 
-    def results_filter_func(self, model, iter, user_data):
+    def results_filter_func(self, model, iter, user_data): # noqa
         """Filter function for search results."""
         # hidden
         if model[iter][6]:
@@ -1572,7 +1575,7 @@ class CatfishWindow(Window):
             return 1
 
     # -- Searching -- #
-    def perform_query(self, keywords):
+    def perform_query(self, keywords): # noqa
         """Run the search query with the specified keywords."""
         self.stop_search = False
 
@@ -1635,7 +1638,7 @@ class CatfishWindow(Window):
                     if helpers.check_python_version(3, 0):
                         size = int(os.path.getsize(filename))
                     else:
-                        size = long(os.path.getsize(filename))
+                        size = long(os.path.getsize(filename))  # noqa
 
                     modified = os.path.getmtime(filename)
 
