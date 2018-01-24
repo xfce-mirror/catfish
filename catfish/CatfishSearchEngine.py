@@ -157,6 +157,15 @@ class CatfishSearchEngine:
         for key in keywords.split():
             keys.append(key.strip())
 
+        # Path exclusions for efficiency
+        exclude = []
+        cache_path = os.path.expanduser("~/.cache")
+        if cache_path not in path:
+            exclude.append(cache_path)
+        gvfs_path = os.path.expanduser("~/.gvfs")
+        if gvfs_path not in path:
+            exclude.append(gvfs_path)
+
         file_count = 0
         for method in self.methods:
             if self.stop_time > 0:
@@ -167,6 +176,17 @@ class CatfishSearchEngine:
                 self.engine_id, method.method_name)
             for filename in method.run(keywords, path, regex):
                 if isinstance(filename, str) and path in filename:
+                    found_bad = False
+                    for filepath in exclude:
+                        if filepath in filename:
+                            if self.stop_time > 0:
+                                logger.debug("Engine is stopped")
+                                return
+                            found_bad = True
+                    if found_bad:
+                        yield True
+                        continue
+
                     if method.method_name == 'fulltext' or  \
                             all(key in
                                 os.path.basename(filename).lower()
@@ -269,10 +289,19 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
 
         This function is a generator and will yield files as they are found or
         True if still running."""
+        exclude = []
+        cache_path = os.path.expanduser("~/.cache")
+        if cache_path not in path:
+            exclude.append(cache_path)
+        gvfs_path = os.path.expanduser("~/.gvfs")
+        if gvfs_path not in path:
+            exclude.append(gvfs_path)
+
         self.running = True
         if isinstance(keywords, str):
             keywords = keywords.replace(',', ' ').strip().split()
         for root, dirs, files in os.walk(path, False):
+            dirs[:] = [d for d in dirs if os.path.join(root, d) not in exclude]
             if not self.running:
                 break
             paths = dirs + files
@@ -512,5 +541,5 @@ class CatfishSearchMethod_Locate(CatfishSearchMethodExternal):
 
     def assemble_query(self, keywords, path):
         """Assemble the search query."""
-        return ["locate", "--regex", "-i", "{}".format(string_regex(keywords,
-                                                                    path))]
+        return ["locate", "--regex", "--basename", "-i",
+                "{}".format(string_regex(keywords, path))]
