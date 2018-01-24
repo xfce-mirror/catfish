@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-01-22 05:30+0000\n"
+"POT-Creation-Date: 2018-01-23 22:05-0500\n"
 "PO-Revision-Date: 2018-01-19 15:34+0000\n"
 "Last-Translator: Ali Orhun Akkirman <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-23 05:37+0000\n"
+"X-Launchpad-Export-Date: 2018-01-24 04:48+0000\n"
 "X-Generator: Launchpad (build 18532)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:639
+#: ../catfish/CatfishWindow.py:642
 msgid "Catfish File Search"
 msgstr "Catfish Dosya Arama"
 
@@ -133,7 +133,7 @@ msgstr "Arama veritabanı 7 günden daha eski. Şimdi güncellensin mi?"
 msgid "File Type"
 msgstr "Dosya Tipi"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1101
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1103
 msgid "Modified"
 msgstr "Değiştirildi"
 
@@ -222,39 +222,39 @@ msgstr ""
 "Aramaların daha hızlı sonuçlanması için veritabanının yenilenmesi gerekir.\n"
 "Bu eylem yönetici yetkileri gerektirir."
 
-#: ../catfish/__init__.py:35
+#: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
 msgstr "Kullanım şekli: %prog [options] path query"
 
-#: ../catfish/__init__.py:40
+#: ../catfish/__init__.py:39
 msgid "Show debug messages (-vv debugs catfish_lib also)"
 msgstr "Hata ayıklama iletilerini göster (-vv debugs catfish_lib also)"
 
-#: ../catfish/__init__.py:43
+#: ../catfish/__init__.py:42
 msgid "Use large icons"
 msgstr "Büyük simgeler kullan"
 
-#: ../catfish/__init__.py:45
+#: ../catfish/__init__.py:44
 msgid "Use thumbnails"
 msgstr "Küçük resimler kullan"
 
-#: ../catfish/__init__.py:47
+#: ../catfish/__init__.py:46
 msgid "Display time in ISO format"
 msgstr "Zamanı ISO biçiminde göster"
 
-#: ../catfish/__init__.py:51
+#: ../catfish/__init__.py:50
 msgid "Perform exact match"
 msgstr "Tam eşleşme uygula"
 
-#: ../catfish/__init__.py:53
+#: ../catfish/__init__.py:52
 msgid "Include hidden files"
 msgstr "Gizli dosyaları içer"
 
-#: ../catfish/__init__.py:55
+#: ../catfish/__init__.py:54
 msgid "Perform fulltext search"
 msgstr "Tam metin araması uygula"
 
-#: ../catfish/__init__.py:57
+#: ../catfish/__init__.py:56
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
@@ -263,75 +263,75 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:82
+#: ../catfish/CatfishWindow.py:83
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (geçersiz kodlama)"
 
-#: ../catfish/CatfishWindow.py:248
+#: ../catfish/CatfishWindow.py:249
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: ../catfish/CatfishWindow.py:252
+#: ../catfish/CatfishWindow.py:253
 msgid "Never"
 msgstr "Hiçbir zaman"
 
-#: ../catfish/CatfishWindow.py:607
+#: ../catfish/CatfishWindow.py:610
 msgid "An error occurred while updating the database."
 msgstr "Veritabanı güncellenirken bir hata oluştu."
 
-#: ../catfish/CatfishWindow.py:609
+#: ../catfish/CatfishWindow.py:612
 msgid "Authentication failed."
 msgstr "Doğrulamala başarısız oldu."
 
-#: ../catfish/CatfishWindow.py:615
+#: ../catfish/CatfishWindow.py:618
 msgid "Authentication cancelled."
 msgstr "Doğrulama iptal edildi."
 
-#: ../catfish/CatfishWindow.py:621
+#: ../catfish/CatfishWindow.py:624
 msgid "Search database updated successfully."
 msgstr "Arama veritabanı başarıyla güncellendi."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:696
+#: ../catfish/CatfishWindow.py:699
 msgid "Updating..."
 msgstr "Güncelleniyor..."
 
-#: ../catfish/CatfishWindow.py:730
+#: ../catfish/CatfishWindow.py:733
 msgid "Stop Search"
 msgstr "Aramayı Durdur"
 
-#: ../catfish/CatfishWindow.py:731
+#: ../catfish/CatfishWindow.py:734
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr "Arama yapılıyor..."
 
-#: ../catfish/CatfishWindow.py:740
+#: ../catfish/CatfishWindow.py:743
 msgid "Begin Search"
 msgstr "Aramayı başlat"
 
-#: ../catfish/CatfishWindow.py:927
+#: ../catfish/CatfishWindow.py:929
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" açılamadı."
 
-#: ../catfish/CatfishWindow.py:973
+#: ../catfish/CatfishWindow.py:975
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" kaydedilemedi."
 
-#: ../catfish/CatfishWindow.py:990
+#: ../catfish/CatfishWindow.py:992
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" silinemedi."
 
-#: ../catfish/CatfishWindow.py:1030
+#: ../catfish/CatfishWindow.py:1032
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "%s 'i Farklı Kaydet"
 
-#: ../catfish/CatfishWindow.py:1065
+#: ../catfish/CatfishWindow.py:1067
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -340,7 +340,7 @@ msgstr ""
 "%s dosyasını kalıcı olarak silmek \n"
 "istediğinizden emin misiniz?"
 
-#: ../catfish/CatfishWindow.py:1069
+#: ../catfish/CatfishWindow.py:1071
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -349,43 +349,43 @@ msgstr ""
 "%i seçili dosyayı kalıcı olarak silmek \n"
 "istediğinizden emin misiniz?"
 
-#: ../catfish/CatfishWindow.py:1072
+#: ../catfish/CatfishWindow.py:1074
 msgid "If you delete a file, it is permanently lost."
 msgstr "Bir dosya silerseniz, kalıcı olarak kaybedilir."
 
-#: ../catfish/CatfishWindow.py:1095
+#: ../catfish/CatfishWindow.py:1097
 msgid "Filename"
 msgstr "Dosya Adı"
 
-#: ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:1099
 msgid "Size"
 msgstr "Boyut"
 
-#: ../catfish/CatfishWindow.py:1099
+#: ../catfish/CatfishWindow.py:1101
 msgid "Location"
 msgstr "Konum"
 
-#: ../catfish/CatfishWindow.py:1111
+#: ../catfish/CatfishWindow.py:1113
 msgid "Preview"
 msgstr "Önizleme"
 
-#: ../catfish/CatfishWindow.py:1119
+#: ../catfish/CatfishWindow.py:1121
 msgid "Details"
 msgstr "Detaylar"
 
-#: ../catfish/CatfishWindow.py:1339
+#: ../catfish/CatfishWindow.py:1340
 msgid "Today"
 msgstr "Bugün"
 
-#: ../catfish/CatfishWindow.py:1341
+#: ../catfish/CatfishWindow.py:1342
 msgid "Yesterday"
 msgstr "Dün"
 
-#: ../catfish/CatfishWindow.py:1420
+#: ../catfish/CatfishWindow.py:1423
 msgid "No files found."
 msgstr "Hiç dosya bulunamadı."
 
-#: ../catfish/CatfishWindow.py:1422
+#: ../catfish/CatfishWindow.py:1425
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -393,59 +393,59 @@ msgstr ""
 "Aramanızı daha az özel yapmayı deneyin\n"
 "veya farklı dizin deneyin."
 
-#: ../catfish/CatfishWindow.py:1428
+#: ../catfish/CatfishWindow.py:1431
 msgid "1 file found."
 msgstr "1 dosya bulundu."
 
-#: ../catfish/CatfishWindow.py:1430
+#: ../catfish/CatfishWindow.py:1433
 #, python-format
 msgid "%i files found."
 msgstr "%i dosya bulundu."
 
-#: ../catfish/CatfishWindow.py:1436
+#: ../catfish/CatfishWindow.py:1439
 msgid "bytes"
 msgstr "bayt"
 
-#: ../catfish/CatfishWindow.py:1574 ../catfish/CatfishWindow.py:1583
+#: ../catfish/CatfishWindow.py:1585 ../catfish/CatfishWindow.py:1594
 msgid "Searching…"
 msgstr "Aranıyor..."
 
-#: ../catfish/CatfishWindow.py:1576
+#: ../catfish/CatfishWindow.py:1587
 msgid "Results will be displayed as soon as they are found."
 msgstr "Sonuçlar bulunduğu anda gösterilecek."
 
-#: ../catfish/CatfishWindow.py:1581
+#: ../catfish/CatfishWindow.py:1592
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "\"%s\" aranıyor"
 
-#: ../catfish/CatfishWindow.py:1670
+#: ../catfish/CatfishWindow.py:1681
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "\"%s\" için arama sonuçları"
 
-#: ../catfish_lib/SudoDialog.py:139
+#: ../catfish_lib/SudoDialog.py:138
 msgid "Password Required"
 msgstr "Parola Gerekiyor"
 
-#: ../catfish_lib/SudoDialog.py:176
+#: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
 msgstr "Yanlış parola... yeniden deneyin."
 
-#: ../catfish_lib/SudoDialog.py:186
+#: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"
 msgstr "Parola:"
 
 #. Buttons
-#: ../catfish_lib/SudoDialog.py:197
+#: ../catfish_lib/SudoDialog.py:196
 msgid "Cancel"
 msgstr "İptal"
 
-#: ../catfish_lib/SudoDialog.py:200
+#: ../catfish_lib/SudoDialog.py:199
 msgid "OK"
 msgstr "Tamam"
 
-#: ../catfish_lib/SudoDialog.py:221
+#: ../catfish_lib/SudoDialog.py:220
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
@@ -453,7 +453,7 @@ msgstr ""
 "Şifrenizi girin\n"
 "idari görevleri yerine getirmek için."
 
-#: ../catfish_lib/SudoDialog.py:223
+#: ../catfish_lib/SudoDialog.py:222
 #, python-format
 msgid ""
 "The application '%s' lets you\n"

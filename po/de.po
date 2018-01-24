@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-01-22 05:30+0000\n"
+"POT-Creation-Date: 2018-01-23 22:05-0500\n"
 "PO-Revision-Date: 2016-03-25 03:16+0000\n"
 "Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-23 05:37+0000\n"
+"X-Launchpad-Export-Date: 2018-01-24 04:48+0000\n"
 "X-Generator: Launchpad (build 18532)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:639
+#: ../catfish/CatfishWindow.py:642
 msgid "Catfish File Search"
 msgstr "Catfish-Dateisuche"
 
@@ -133,7 +133,7 @@ msgstr "Die Suchdatenbank ist älter als 7 Tage. Jetzt aktualisieren?"
 msgid "File Type"
 msgstr "Dateityp"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1101
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1103
 msgid "Modified"
 msgstr "Verändert"
 
@@ -222,39 +222,39 @@ msgstr ""
 "Für schnellere Suchergebnisse, muss die Suchdatenbank aufgefrischt werden.\n"
 "Dieser Vorgang benötigt Systemverwalterrechte."
 
-#: ../catfish/__init__.py:35
+#: ../catfish/__init__.py:34
 msgid "Usage: %prog [options] path query"
 msgstr "Nutzung: %prog [Optionen] Pfad Suchbegriff"
 
-#: ../catfish/__init__.py:40
+#: ../catfish/__init__.py:39
 msgid "Show debug messages (-vv debugs catfish_lib also)"
 msgstr "Fehlerdiagnosenachrichten anzeigen (-vv debugs catfish_lib also)"
 
-#: ../catfish/__init__.py:43
+#: ../catfish/__init__.py:42
 msgid "Use large icons"
 msgstr "Große Symbole verwenden"
 
-#: ../catfish/__init__.py:45
+#: ../catfish/__init__.py:44
 msgid "Use thumbnails"
 msgstr "Vorschaubilder verwenden"
 
-#: ../catfish/__init__.py:47
+#: ../catfish/__init__.py:46
 msgid "Display time in ISO format"
 msgstr "Zeit im ISO-Format anzeigen"
 
-#: ../catfish/__init__.py:51
+#: ../catfish/__init__.py:50
 msgid "Perform exact match"
 msgstr "Exakte Suche"
 
-#: ../catfish/__init__.py:53
+#: ../catfish/__init__.py:52
 msgid "Include hidden files"
 msgstr "Verborgene Dateien einbeziehen"
 
-#: ../catfish/__init__.py:55
+#: ../catfish/__init__.py:54
 msgid "Perform fulltext search"
 msgstr "Volltextsuche"
 
-#: ../catfish/__init__.py:57
+#: ../catfish/__init__.py:56
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
@@ -263,45 +263,45 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:82
+#: ../catfish/CatfishWindow.py:83
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (ungültige Kodierung)"
 
-#: ../catfish/CatfishWindow.py:248
+#: ../catfish/CatfishWindow.py:249
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: ../catfish/CatfishWindow.py:252
+#: ../catfish/CatfishWindow.py:253
 msgid "Never"
 msgstr "Niemals"
 
-#: ../catfish/CatfishWindow.py:607
+#: ../catfish/CatfishWindow.py:610
 msgid "An error occurred while updating the database."
 msgstr "Beim Aktualisieren der Datenbank ist ein Fehler aufgetreten."
 
-#: ../catfish/CatfishWindow.py:609
+#: ../catfish/CatfishWindow.py:612
 msgid "Authentication failed."
 msgstr "Legitimierung fehlgeschlagen."
 
-#: ../catfish/CatfishWindow.py:615
+#: ../catfish/CatfishWindow.py:618
 msgid "Authentication cancelled."
 msgstr "Legitimierung abgebrochen."
 
-#: ../catfish/CatfishWindow.py:621
+#: ../catfish/CatfishWindow.py:624
 msgid "Search database updated successfully."
 msgstr "Die Suchdatenbank wurde erfolgreich aktualisiert."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:696
+#: ../catfish/CatfishWindow.py:699
 msgid "Updating..."
 msgstr "Aktualisierung wird durchgeführt …"
 
-#: ../catfish/CatfishWindow.py:730
+#: ../catfish/CatfishWindow.py:733
 msgid "Stop Search"
 msgstr "Suche beenden"
 
-#: ../catfish/CatfishWindow.py:731
+#: ../catfish/CatfishWindow.py:734
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -309,31 +309,31 @@ msgstr ""
 "Suchvorgang läuft …\n"
 "Abbrechen klicken oder die die Escape-Taste drücken, um abzubrechen."
 
-#: ../catfish/CatfishWindow.py:740
+#: ../catfish/CatfishWindow.py:743
 msgid "Begin Search"
 msgstr "Suche beginnen"
 
-#: ../catfish/CatfishWindow.py:927
+#: ../catfish/CatfishWindow.py:929
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "»%s« konnte nicht geöffnet werden."
 
-#: ../catfish/CatfishWindow.py:973
+#: ../catfish/CatfishWindow.py:975
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "»%s« konnte nicht gespeichert werden."
 
-#: ../catfish/CatfishWindow.py:990
+#: ../catfish/CatfishWindow.py:992
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "»%s« konnte nicht gelöscht werden."
 
-#: ../catfish/CatfishWindow.py:1030
+#: ../catfish/CatfishWindow.py:1032
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "»%s« speichern unter …"
 
-#: ../catfish/CatfishWindow.py:1065
+#: ../catfish/CatfishWindow.py:1067
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -342,7 +342,7 @@ msgstr ""
 "Soll »%s« wirklich dauerhaft \n"
 "gelöscht werden?"
 
-#: ../catfish/CatfishWindow.py:1069
+#: ../catfish/CatfishWindow.py:1071
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -351,43 +351,43 @@ msgstr ""
 "Sollen die %i ausgewählten Dateien wirklich \n"
 "dauerthaft gelöscht werden?"
 
-#: ../catfish/CatfishWindow.py:1072
+#: ../catfish/CatfishWindow.py:1074
 msgid "If you delete a file, it is permanently lost."
 msgstr "Wenn Sie eine Datei löschen, ist sie dauerhaft verloren."
 
-#: ../catfish/CatfishWindow.py:1095
+#: ../catfish/CatfishWindow.py:1097
 msgid "Filename"
 msgstr "Dateiname"
 
-#: ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:1099
 msgid "Size"
 msgstr "Größe"
 
-#: ../catfish/CatfishWindow.py:1099
+#: ../catfish/CatfishWindow.py:1101
 msgid "Location"
 msgstr "Ort"
 
-#: ../catfish/CatfishWindow.py:1111
+#: ../catfish/CatfishWindow.py:1113
 msgid "Preview"
 msgstr "Vorschau"
 
-#: ../catfish/CatfishWindow.py:1119
+#: ../catfish/CatfishWindow.py:1121
 msgid "Details"
 msgstr "Details"
 
-#: ../catfish/CatfishWindow.py:1339
+#: ../catfish/CatfishWindow.py:1340
 msgid "Today"
 msgstr "Heute"
 
-#: ../catfish/CatfishWindow.py:1341
+#: ../catfish/CatfishWindow.py:1342
 msgid "Yesterday"
 msgstr "Gestern"
 
-#: ../catfish/CatfishWindow.py:1420
+#: ../catfish/CatfishWindow.py:1423
 msgid "No files found."
 msgstr "Keine Dateien gefunden."
 
-#: ../catfish/CatfishWindow.py:1422
+#: ../catfish/CatfishWindow.py:1425
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -395,59 +395,59 @@ msgstr ""
 "Versuchen Sie, Ihre Suche weniger genau zu machen\n"
 "oder versuchen Sie ein anderes Verzeichnis."
 
-#: ../catfish/CatfishWindow.py:1428
+#: ../catfish/CatfishWindow.py:1431
 msgid "1 file found."
 msgstr "1 Datei gefunden."
 
-#: ../catfish/CatfishWindow.py:1430
+#: ../catfish/CatfishWindow.py:1433
 #, python-format
 msgid "%i files found."
 msgstr "%i Dateien gefunden."
 
-#: ../catfish/CatfishWindow.py:1436
+#: ../catfish/CatfishWindow.py:1439
 msgid "bytes"
 msgstr "Bytes"
 
-#: ../catfish/CatfishWindow.py:1574 ../catfish/CatfishWindow.py:1583
+#: ../catfish/CatfishWindow.py:1585 ../catfish/CatfishWindow.py:1594
 msgid "Searching…"
 msgstr "Suche läuft …"
 
-#: ../catfish/CatfishWindow.py:1576
+#: ../catfish/CatfishWindow.py:1587
 msgid "Results will be displayed as soon as they are found."
 msgstr "Ergebnisse werden angezeigt, sobald sie gefunden werden."
 
-#: ../catfish/CatfishWindow.py:1581
+#: ../catfish/CatfishWindow.py:1592
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Nach »%s« wird gesucht"
 
-#: ../catfish/CatfishWindow.py:1670
+#: ../catfish/CatfishWindow.py:1681
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Suchergebnisse für »%s«"
 
-#: ../catfish_lib/SudoDialog.py:139
+#: ../catfish_lib/SudoDialog.py:138
 msgid "Password Required"
 msgstr "Passwort erforderlich"
 
-#: ../catfish_lib/SudoDialog.py:176
+#: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
 msgstr "Falsches Passwort … bitte erneut versuchen."
 
-#: ../catfish_lib/SudoDialog.py:186
+#: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"
 msgstr "Passwort:"
 
 #. Buttons
-#: ../catfish_lib/SudoDialog.py:197
+#: ../catfish_lib/SudoDialog.py:196
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ../catfish_lib/SudoDialog.py:200
+#: ../catfish_lib/SudoDialog.py:199
 msgid "OK"
 msgstr "OK"
 
-#: ../catfish_lib/SudoDialog.py:221
+#: ../catfish_lib/SudoDialog.py:220
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
@@ -455,7 +455,7 @@ msgstr ""
 "Passwort eingeben, um\n"
 "administrative Aufgaben durchzuführen."
 
-#: ../catfish_lib/SudoDialog.py:223
+#: ../catfish_lib/SudoDialog.py:222
 #, python-format
 msgid ""
 "The application '%s' lets you\n"
