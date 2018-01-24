@@ -131,6 +131,8 @@ class CatfishSearchEngine:
         filename is yielded if it matches the query.  False is also yielded
         afterwards to guarantee the interface does not lock up."""
         self.start_time = time.time()
+        self.stop_time = 0
+
         keywords = keywords.replace(',', ' ').strip().lower()
 
         logger.debug("[%i] path: %s, keywords: %s, limit: %i, regex: %s",
@@ -157,6 +159,9 @@ class CatfishSearchEngine:
 
         file_count = 0
         for method in self.methods:
+            if self.stop_time > 0:
+                logger.debug("Engine is stopped")
+                return
             logger.debug(
                 "[%i] Starting search method: %s",
                 self.engine_id, method.method_name)

@@ -1516,8 +1516,12 @@ class CatfishWindow(Window):
         Return True if successful."""
         try:
             pixbuf = GdkPixbuf.Pixbuf.new_from_file(filename)
+            if pixbuf is None:
+                return False
             pixbuf_w = pixbuf.get_width()
             pixbuf_h = pixbuf.get_height()
+            if pixbuf_w < 1 or pixbuf_h < 1:
+                return False
             if pixbuf_w < 128 and pixbuf_h < 128:
                 pixbuf.savev(path, "png", [], [])
                 return pixbuf
@@ -1527,12 +1531,16 @@ class CatfishWindow(Window):
             else:
                 thumb_h = 128
                 thumb_w = int(pixbuf_w / (pixbuf_h / 128.0))
+            if thumb_w < 1 or thumb_h < 1:
+                return False
             thumb_pixbuf = pixbuf.scale_simple(
                 thumb_w, thumb_h, GdkPixbuf.InterpType.BILINEAR)
+            if thumb_pixbuf is None:
+                return False
             thumb_pixbuf.savev(path, "png", [], [])
             return True
         except Exception as e:
-            print(e)
+            print("Exception: ", e)
             return False
 
     def get_file_icon(self, path, mime_type=None):
