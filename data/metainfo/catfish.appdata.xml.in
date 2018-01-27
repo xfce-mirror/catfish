@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014-2018 Sean Davis <smd.seandavis@gmail.com> -->
-<application>
-  <id type="desktop">catfish.desktop</id>
+<component type="desktop-application">
+  <id>catfish</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
-  <_name>Catfish</_name>
+  <name>Catfish</name>
   <_summary>Versatile file searching tool</_summary>
 
   <description>
@@ -17,9 +17,15 @@
     </_p>
   </description>
 
+  <launchable type="desktop-id">catfish.desktop</launchable>
+
   <screenshots>
-    <screenshot type="default" width="960" height="540">http://screenshots.bluesabre.org/catfish/catfish.png</screenshot>
-    <screenshot width="960" height="540">http://screenshots.bluesabre.org/catfish/catfish-filters.png</screenshot>
+    <screenshot type="default">
+      <image>http://screenshots.bluesabre.org/catfish/catfish.png</image>
+    </screenshot>
+    <screenshot>
+      <image>http://screenshots.bluesabre.org/catfish/catfish-filters.png</image>
+    </screenshot>
   </screenshots>
 
   <url type="homepage">https://launchpad.net/catfish-search/</url>
@@ -33,21 +39,21 @@
   </provides>
 
   <releases>
-    <release version="1.4.3" timestamp="1517052600">
+    <release version="1.4.3" date="2018-01-27">
       <description>
         <_p>This release features several performance improvements
         and numerous translation updates.
         </_p>
       </description>
     </release>
-    <release version="1.4.2" timestamp="1459438200">
+    <release version="1.4.2" date="2016-03-31">
       <description>
         <_p>This release now displays all file timestamps according to
         timezone instead of Universal Coordinated Time (UTC).
         </_p>
       </description>
     </release>
-    <release version="1.4.1" timestamp="1456363800">
+    <release version="1.4.1" date="2016-02-24">
       <description>
         <_p>This release fixes several bugs related to the results
         window. Files are once again removed from the results list
@@ -57,7 +63,7 @@
         </_p>
       </description>
     </release>
-    <release version="1.4.0" timestamp="1455933600">
+    <release version="1.4.0" date="2016-02-19">
       <description>
         <_p>This release includes a significant interface refresh,
         improves search speed, and fixes several bugs. The workflow
@@ -68,20 +74,20 @@
         </_p>
       </description>
     </release>
-    <release version="1.2.2" timestamp="1411335000">
+    <release version="1.2.2" date="2014-09-21">
       <description>
         <_p>This release fixes two new bugs and includes updated translations.
         </_p>
       </description>
     </release>
-    <release version="1.2.1" timestamp="1408492800">
+    <release version="1.2.1" date="2014-08-19">
       <description>
         <_p>This release fixes a regression where the application is unable
         to start on some systems.
         </_p>
       </description>
     </release>
-    <release version="1.2.0" timestamp="1408185000">
+    <release version="1.2.0" date="2018-08-16">
       <description>
         <_p>This release fixes a regression where multiple search terms were
         no longer supported. An InfoBar is now displayed when the search
@@ -91,7 +97,7 @@
       </description>
     </release>
 
-    <release version="1.0.3" timestamp="1407562200">
+    <release version="1.0.3" date="2014-08-09">
       <description>
         <_p>This release fixes two issues where locate would not be properly
         executed and improves handling of missing symbolic icons.
@@ -99,7 +105,7 @@
       </description>
     </release>
 
-    <release version="1.0.2" timestamp="1394371980">
+    <release version="1.0.2" date="2014-03-09">
       <description>
         <_p>This stable release improved the reliability of the password dialog,
         cleaned up unused code, and fixed potential issues with the list and
@@ -108,7 +114,7 @@
       </description>
     </release>
 
-    <release version="1.0.1" timestamp="1393562520">
+    <release version="1.0.1" date="2014-02-27">
       <description>
         <_p>This release fixed a potential security issue with program startup
         and fixed a regression with selecting multiple items.
@@ -116,7 +122,7 @@
       </description>
     </release>
 
-    <release version="1.0.0" timestamp="1391569020">
+    <release version="1.0.0" date="2014-02-04">
       <description>
         <_p>The first release in the 1.0.x series introduced a refreshed
         interface and fixed a number of long-standing bugs. Improvements to
@@ -128,4 +134,4 @@
     </release>
   </releases>
 
-</application>
+</component>

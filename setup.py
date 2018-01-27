@@ -119,27 +119,27 @@ def update_desktop_file(filename, script_path):
         sys.exit(1)
 
 
-def get_appdata_file():
-    """Prebuild the appdata file so it can be installed."""
-    source = "data/appdata/catfish.appdata.xml.in"
-    target = "data/appdata/catfish.appdata.xml"
+def get_metainfo_file():
+    """Prebuild the metainfo file so it can be installed."""
+    source = "data/metainfo/catfish.appdata.xml.in"
+    target = "data/metainfo/catfish.appdata.xml"
     cmd = ["intltool-merge", "-d", "po", "--xml-style", source, target]
     print(" ".join(cmd))
     subprocess.call(cmd)
     return target
 
 
-def cleanup_appdata_files(target_data):
-    appdata_dir = os.path.join(target_data, "appdata")
-    appdata_in = os.path.join(appdata_dir, "catfish.appdata.xml")
-    appdata = os.path.join(appdata_dir, "catfish.appdata.xml.in")
-    print("Removing %s and all files within." % appdata_dir)
-    if os.path.exists(appdata_in):
-        os.remove(appdata_in)
-    if os.path.exists(appdata):
-        os.remove(appdata)
-    if os.path.exists(appdata_dir):
-        os.rmdir(appdata_dir)
+def cleanup_metainfo_files(root, target_data):
+    metainfo_dir = os.path.normpath(
+        os.path.join(root, target_data, 'share', 'catfish', 'metainfo'))
+    metainfo_in = os.path.join(metainfo_dir, "catfish.appdata.xml")
+    metainfo = os.path.join(metainfo_dir, "catfish.appdata.xml.in")
+    if os.path.exists(metainfo_in):
+        os.remove(metainfo_in)
+    if os.path.exists(metainfo):
+        os.remove(metainfo)
+    if os.path.exists(metainfo_dir):
+        os.rmdir(metainfo_dir)
 
 
 class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
@@ -148,7 +148,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
     def run(self):
         """Run the setup commands."""
-        appdata = get_appdata_file()
+        metainfo = get_metainfo_file()
 
         DistUtilsExtra.auto.install_auto.run(self)
 
@@ -164,6 +164,8 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
                 self.install_data, self.root) + os.sep
             target_pkgdata = os.path.join(target_data, 'share', 'catfish', '')
             target_scripts = os.path.join(self.install_scripts, '')
+
+            target_pkgdata = os.path.realpath(target_pkgdata)
 
             data_dir = os.path.join(self.prefix, 'share', 'catfish', '')
             script_path = os.path.join(self.prefix, 'bin')
@@ -199,8 +201,8 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
         move_icon_file(self.root, target_data, self.prefix)
         update_desktop_file(desktop_file, script_path)
 
-        cleanup_appdata_files(target_pkgdata)
-        os.remove(appdata)
+        cleanup_metainfo_files(self.root, target_data)
+        os.remove(metainfo)
 
 
 DistUtilsExtra.auto.setup(
@@ -217,7 +219,7 @@ DistUtilsExtra.auto.setup(
     url='https://launchpad.net/catfish-search',
     data_files=[
         ('share/man/man1', ['catfish.1']),
-        ('share/appdata/', ['data/appdata/catfish.appdata.xml'])
+        ('share/metainfo/', ['data/metainfo/catfish.appdata.xml'])
     ],
     cmdclass={'install': InstallAndUpdateDataDirectory}
 )
