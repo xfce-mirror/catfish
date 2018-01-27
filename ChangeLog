@@ -1,3 +1,11 @@
+v1.4.4:
+ + General:
+   - Added Keywords key to desktop file to cleanup Debian lintian warning
+   - Added GTK to the Categories key based on desktop-file-validate
+     recommendation
+   - Updated appdata requirements and installation directory
+   - Cleaned up the setup.py installer
+
 v1.4.3:
  + General:
    - Renamed window to Catfish for easier styling

@@ -39,7 +39,7 @@
   </provides>
 
   <releases>
-    <release version="1.4.3" date="2018-01-27">
+    <release version="1.4.4" date="2018-01-27">
       <description>
         <_p>This release features several performance improvements
         and numerous translation updates.

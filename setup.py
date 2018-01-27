@@ -198,7 +198,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 DistUtilsExtra.auto.setup(
     name='catfish',
-    version='1.4.3',
+    version='1.4.4',
     license='GPL-2+',
     author='Sean Davis',
     author_email='smd.seandavis@gmail.com',
