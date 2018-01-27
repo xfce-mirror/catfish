@@ -18,6 +18,7 @@
 
 import codecs
 import os
+import shutil
 import sys
 import subprocess
 
@@ -52,7 +53,7 @@ def update_config(libdir, values={}):
         fin.close()
         os.rename(fout.name, fin.name)
     except (OSError, IOError):
-        print(("ERROR: Can't find %s" % filename))
+        sys.stderr.write("ERROR: Can't find %s" % filename)
         sys.exit(1)
     return oldvalues
 
@@ -72,17 +73,17 @@ def move_icon_file(root, target_data, prefix):
     icon_file = os.path.realpath(icon_file)
 
     if not os.path.exists(old_icon_file):
-        print(("ERROR: Can't find", old_icon_file))
+        sys.stderr.write("ERROR: Can't find", old_icon_file)
         sys.exit(1)
     if not os.path.exists(icon_path):
         os.makedirs(icon_path)
     if old_icon_file != icon_file:
-        print(("Moving icon file: %s -> %s" % (old_icon_file, icon_file)))
+        print("Moving icon file: %s -> %s" % (old_icon_file, icon_file))
         os.rename(old_icon_file, icon_file)
 
     # Media is now empty
     if len(os.listdir(old_icon_path)) == 0:
-        print(("Removing empty directory: %s" % old_icon_path))
+        print("Removing empty directory: %s" % old_icon_path)
         os.rmdir(old_icon_path)
 
     return icon_file
@@ -115,7 +116,7 @@ def update_desktop_file(filename, script_path):
         fin.close()
         os.rename(fout.name, fin.name)
     except (OSError, IOError):
-        print(("ERROR: Can't find %s" % filename))
+        sys.stderr.write("ERROR: Can't find %s" % filename)
         sys.exit(1)
 
 
@@ -132,14 +133,8 @@ def get_metainfo_file():
 def cleanup_metainfo_files(root, target_data):
     metainfo_dir = os.path.normpath(
         os.path.join(root, target_data, 'share', 'catfish', 'metainfo'))
-    metainfo_in = os.path.join(metainfo_dir, "catfish.appdata.xml")
-    metainfo = os.path.join(metainfo_dir, "catfish.appdata.xml.in")
-    if os.path.exists(metainfo_in):
-        os.remove(metainfo_in)
-    if os.path.exists(metainfo):
-        os.remove(metainfo)
     if os.path.exists(metainfo_dir):
-        os.rmdir(metainfo_dir)
+        shutil.rmtree(metainfo_dir)
 
 
 class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
@@ -162,10 +157,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
         if self.root:
             target_data = os.path.relpath(
                 self.install_data, self.root) + os.sep
-            target_pkgdata = os.path.join(target_data, 'share', 'catfish', '')
             target_scripts = os.path.join(self.install_scripts, '')
-
-            target_pkgdata = os.path.realpath(target_pkgdata)
 
             data_dir = os.path.join(self.prefix, 'share', 'catfish', '')
             script_path = os.path.join(self.prefix, 'bin')
@@ -188,7 +180,6 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
         print(("Prefix: %s\n" % self.prefix))
 
         print(("Target Data:    %s" % target_data))
-        print(("Target PkgData: %s" % target_pkgdata))
         print(("Target Scripts: %s\n" % target_scripts))
         print(("Catfish Data Directory: %s" % data_dir))
 
