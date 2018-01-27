@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014-2016 Sean Davis <smd.seandavis@gmail.com> -->
+<!-- Copyright 2014-2018 Sean Davis <smd.seandavis@gmail.com> -->
 <application>
   <id type="desktop">catfish.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -18,8 +18,8 @@
   </description>
 
   <screenshots>
-    <screenshot type="default" width="960" height="540">http://screenshots.smdavis.us/catfish/catfish.png</screenshot>
-    <screenshot width="960" height="540">http://screenshots.smdavis.us/catfish/catfish-filters.png</screenshot>
+    <screenshot type="default" width="960" height="540">http://screenshots.bluesabre.org/catfish/catfish.png</screenshot>
+    <screenshot width="960" height="540">http://screenshots.bluesabre.org/catfish/catfish-filters.png</screenshot>
   </screenshots>
 
   <url type="homepage">https://launchpad.net/catfish-search/</url>
@@ -33,6 +33,13 @@
   </provides>
 
   <releases>
+    <release version="1.4.3" timestamp="1517052600">
+      <description>
+        <_p>This release features several performance improvements
+        and numerous translation updates.
+        </_p>
+      </description>
+    </release>
     <release version="1.4.2" timestamp="1459438200">
       <description>
         <_p>This release now displays all file timestamps according to

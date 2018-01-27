@@ -2,7 +2,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #   Catfish - a versatile file searching tool
 #   Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
-#   Copyright (C) 2012-2016 Sean Davis <smd.seandavis@gmail.com>
+#   Copyright (C) 2012-2018 Sean Davis <smd.seandavis@gmail.com>
 #
 #   This program is free software: you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License version 2, as published
@@ -20,7 +20,10 @@ import optparse
 
 from locale import gettext as _
 
-from gi.repository import Gtk  # pylint: disable=E0611
+import gi
+gi.require_version('Gtk', '3.0')  # noqa
+
+from gi.repository import Gtk
 
 from catfish import CatfishWindow
 

@@ -1,3 +1,20 @@
+v1.4.3:
+ + General:
+   - Renamed window to Catfish for easier styling
+   - Improved error handling with thumbnails
+   - Improved search performance by excluding .cache and .gvfs when not needed
+   - Improved locate method performance with the addition of the --basename
+     flag
+   - Update references of smdavis.us to bluesabre.org
+   - Several pycodestyle improvements
+ + Bug Fixes:
+   - Stop all search methods when engine is stopped
+ + Translation Updates:
+   - Afrikaans, Brazilian Portuguese, Bulgarian, Catalan,
+     Chinese (Traditional), Croatian, Czech, Danish, Dutch, French, Greek,
+     Italian, Kurdish, Lithuanian, Portuguese, Serbian, Slovak, Spanish,
+     Swedish, Turkish, Ukrainian
+
 v1.4.2:
  + Bug Fixes:
    - Fixed file timestamps being displayed as UTC instead of local time
