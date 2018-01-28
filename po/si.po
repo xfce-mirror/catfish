@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-01-26 06:11+0000\n"
+"POT-Creation-Date: 2018-01-27 16:37-0500\n"
 "PO-Revision-Date: 2014-06-15 17:26+0000\n"
 "Last-Translator: Poorni <Poorni.dayananda@gmail.com>\n"
 "Language-Team: Sinhalese <si@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-01-27 05:28+0000\n"
+"X-Launchpad-Export-Date: 2018-01-28 05:25+0000\n"
 "X-Generator: Launchpad (build 18534)\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
@@ -29,6 +29,11 @@ msgstr ""
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
 msgstr "ලිපි ගොනු පද්ධතිය සෙවීම"
+
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: ../catfish.desktop.in.h:5
+msgid "files;find;locate;lookup;search;"
+msgstr ""
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
@@ -117,7 +122,6 @@ msgid "<b>End Date</b>"
 msgstr "<b>අවසාන දිනය</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:216
-#: ../data/appdata/catfish.appdata.xml.in.h:1
 msgid "Catfish"
 msgstr "කැට් ෆිෂ්"
 
@@ -220,39 +224,39 @@ msgid ""
 "This action requires administrative rights."
 msgstr ""
 
-#: ../catfish/__init__.py:34
+#: ../catfish/__init__.py:37
 msgid "Usage: %prog [options] path query"
 msgstr ""
 
-#: ../catfish/__init__.py:39
+#: ../catfish/__init__.py:42
 msgid "Show debug messages (-vv debugs catfish_lib also)"
 msgstr "පරිගණක නිදොස් කිරීමේ පණිවුඩ පෙන්වන්න"
 
-#: ../catfish/__init__.py:42
+#: ../catfish/__init__.py:45
 msgid "Use large icons"
 msgstr "විශාල සංකේතයන් පාවිච්චි කරන්න"
 
-#: ../catfish/__init__.py:44
+#: ../catfish/__init__.py:47
 msgid "Use thumbnails"
 msgstr "සංක්ෂිප්තයන් භාවිතා කරන්න"
 
-#: ../catfish/__init__.py:46
+#: ../catfish/__init__.py:49
 msgid "Display time in ISO format"
 msgstr "කාලය ISO ප්‍රමිති ආකෘතියෙන් පෙන්වන්න"
 
-#: ../catfish/__init__.py:50
+#: ../catfish/__init__.py:53
 msgid "Perform exact match"
 msgstr "නිවැරදිම ගැලපිම  ඉටු කරන්න"
 
-#: ../catfish/__init__.py:52
+#: ../catfish/__init__.py:55
 msgid "Include hidden files"
 msgstr "සැඟවුණු ලිපිගොනු ඇතුලත් කරන්න"
 
-#: ../catfish/__init__.py:54
+#: ../catfish/__init__.py:57
 msgid "Perform fulltext search"
 msgstr "පූර්ණ වගන්ති සෙවුම් කරන්න"
 
-#: ../catfish/__init__.py:56
+#: ../catfish/__init__.py:59
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
@@ -449,11 +453,11 @@ msgid ""
 "modify essential parts of your system."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:2
+#: ../data/metainfo/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:3
+#: ../data/metainfo/catfish.appdata.xml.in.h:2
 msgid ""
 "Catfish is a small, fast, and powerful file search utility. Featuring a "
 "minimal interface with an emphasis on results, it helps users find the files "
@@ -462,13 +466,19 @@ msgid ""
 "file manager or organization skills."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:4
+#: ../data/metainfo/catfish.appdata.xml.in.h:3
+msgid ""
+"This release features several performance improvements and numerous "
+"translation updates."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:5
+#: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -476,7 +486,7 @@ msgid ""
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -485,42 +495,42 @@ msgid ""
 "integration of PolicyKit when available."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
 msgstr ""
 
-#: ../data/appdata/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
