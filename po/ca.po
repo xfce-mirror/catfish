@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-02-09 05:36+0000\n"
-"PO-Revision-Date: 2017-05-16 21:08+0000\n"
+"POT-Creation-Date: 2018-02-10 05:49+0000\n"
+"PO-Revision-Date: 2018-02-10 18:34+0000\n"
 "Last-Translator: toniem <toni.estevez@gmail.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-02-10 05:47+0000\n"
+"X-Launchpad-Export-Date: 2018-02-11 05:47+0000\n"
 "X-Generator: Launchpad (build 18544)\n"
 "Language: ca\n"
 
@@ -29,12 +29,12 @@ msgstr "Cerca de fitxers"
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
-msgstr "Cerca en el sistema de fitxers"
+msgstr "Cerqueu al sistema de fitxers"
 
 #. TRANSLATORS: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "fitxers;cercar;buscar;recerca;"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
@@ -181,7 +181,7 @@ msgstr "Mostra els fitxers _ocults"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
-msgstr "Cerca en el _contingut dels fitxers"
+msgstr "Cerca al _contingut dels fitxers"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Exact Match"
@@ -193,7 +193,7 @@ msgstr "Mostra la barra _lateral"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Update Search Index…"
-msgstr "_Actualitza l'índex de cerca…"
+msgstr "Act_ualitza la base de dades de cerques..."
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_About"
@@ -201,7 +201,7 @@ msgstr "_Quant a"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
-msgstr "Actualitza la base de dades de cerca"
+msgstr "Actualitza l'índex de cerca"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgid "Unlock"
@@ -217,7 +217,7 @@ msgstr "<b>Actualització:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
-msgstr "<big><b>Índex de cerca</b></big>"
+msgstr "<big><b>Actualització de l'índex de cerca</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
@@ -284,7 +284,7 @@ msgstr "Mai"
 
 #: ../catfish/CatfishWindow.py:610
 msgid "An error occurred while updating the database."
-msgstr "S'ha produït un error en actualitzar l'índex de cerca."
+msgstr "S'ha produït un error mentre s'actualitzava l'índex de cerca."
 
 #: ../catfish/CatfishWindow.py:612
 msgid "Authentication failed."
@@ -494,6 +494,8 @@ msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
+"Aquest llançament inclou diverses millores de rendiment i moltes "
+"actualitzacions en les traduccions."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
@@ -552,7 +554,8 @@ msgid ""
 msgstr ""
 "Aquesta versió corregeix una regressió que impedia especificar diversos "
 "termes de cerca. Ara es mostra una barra d'informació quan l'índex de cerca "
-"està obsolet i s'han millorat els diàlegs per actualitzar-lo."
+"és obsolet, també s'han millorat els diàlegs per actualitzar la base de "
+"dades."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
