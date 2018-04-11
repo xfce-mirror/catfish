@@ -39,6 +39,12 @@
   </provides>
 
   <releases>
+    <release version="1.4.5" date="2018-04-11">
+      <description>
+        <_p>This is a minor translations-only release.
+        </_p>
+      </description>
+    </release>
     <release version="1.4.4" date="2018-01-27">
       <description>
         <_p>This release features several performance improvements

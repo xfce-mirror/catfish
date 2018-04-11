@@ -1,3 +1,7 @@
+v1.4.5:
+ + Translation Updates:
+   - Catalan, Danish, Dutch, Lithuanian, Spanish, Swedish, Turkish
+
 v1.4.4:
  + General:
    - Added Keywords key to desktop file to cleanup Debian lintian warning
