@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-04-10 05:43+0000\n"
+"POT-Creation-Date: 2018-04-11 22:19+0000\n"
 "PO-Revision-Date: 2018-01-29 20:07+0000\n"
 "Last-Translator: Påvel Nicklasson <Unknown>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-11 05:38+0000\n"
+"X-Launchpad-Export-Date: 2018-04-12 05:37+0000\n"
 "X-Generator: Launchpad (build 18609)\n"
 "Language: sv\n"
 
@@ -489,6 +489,10 @@ msgstr ""
 "filhanteraren eller organisationsförmåga."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
+msgid "This is a minor translations-only release."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -496,7 +500,7 @@ msgstr ""
 "Den här utgåvan tillhandahåller prestandaförbättringar och flera "
 "översättningsuppdateringar."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:4
+#: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -504,7 +508,7 @@ msgstr ""
 "Denna version visar nu alla filtidsstämplar efter tidszon istället för "
 "Universal Coordinated Time (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:5
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -516,7 +520,7 @@ msgstr ""
 "högerklicksfunktionalitet har blivit återställd. Datumintervallsfilter "
 "tillämpas nu enligt tidszon istället för Universal Coordinated Time (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -530,13 +534,13 @@ msgstr ""
 "inkluderande valfria rubrikrader och popover widgets. Lösenordshantering har "
 "förbättrats med integrationen av PolicyKit då detta är tillgängligt."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Denna version rättar till två nya fel och innehåller uppdaterade "
 "översättningar."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -544,7 +548,7 @@ msgstr ""
 "Denna version ordnar en regression som gjorde att programmet inte gick att "
 "starta på en del system."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated, "
@@ -554,7 +558,7 @@ msgstr ""
 "längre stöddes. En Inforad visas nu då sökdatabasen är föråldrad, och "
 "dialogerna som används för att uppdatera databasen har förbättrats."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -562,7 +566,7 @@ msgstr ""
 "Denna version ordnar två problem då lokalisering inte gjordes på rätt sätt "
 "och förbättrar hantering av saknade symboliska ikoner."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
@@ -571,7 +575,7 @@ msgstr ""
 "rensade upp oanvänd kod, och ordnade eventuella problem med list- och "
 "objektmarkering."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
@@ -579,7 +583,7 @@ msgstr ""
 "Denna version ordnade ett möjligt säkerhetsproblem med programstart och "
 "ordnade en regression med markering av flera objekt."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
