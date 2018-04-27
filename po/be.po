@@ -7,67 +7,68 @@ msgid ""
 msgstr ""
 "Project-Id-Version: catfish-search\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-04-25 05:37+0000\n"
-"PO-Revision-Date: 2012-08-20 20:56+0000\n"
-"Last-Translator: Mikalai Udodau <Unknown>\n"
+"POT-Creation-Date: 2018-04-26 05:37+0000\n"
+"PO-Revision-Date: 2018-04-26 20:24+0000\n"
+"Last-Translator: Zmicer Turok <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-26 05:36+0000\n"
+"X-Launchpad-Export-Date: 2018-04-27 05:40+0000\n"
 "X-Generator: Launchpad (build 18623)\n"
+"Language: be\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish/CatfishWindow.py:642
 msgid "Catfish File Search"
-msgstr ""
+msgstr "Пошукавец файлаў Catfish"
 
 #: ../catfish.desktop.in.h:2
 msgid "File search"
-msgstr ""
+msgstr "Пошук файлаў"
 
 #: ../catfish.desktop.in.h:3
 msgid "Search the file system"
-msgstr ""
+msgstr "Пошук у файлавай сістэме"
 
 #. TRANSLATORS: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "files;find;locate;lookup;search;"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
-msgstr ""
+msgstr "Catfish - універсальная прылада для пошуку файлаў."
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
-msgstr ""
+msgstr "_Адкрыць"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
-msgstr ""
+msgstr "Паказаць у _кіраўніку файлаў"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Copy Location"
-msgstr ""
+msgstr "_Скапіраваць месцазнаходжанне"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr ""
+msgstr "_Захаваць як..."
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
-msgstr ""
+msgstr "В_ыдаліць"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr ""
+msgstr "Пашырэнні файлаў"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
-msgstr ""
+msgstr "odt, png, txt"
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
@@ -75,7 +76,7 @@ msgstr "Дакументы"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "Folders"
-msgstr ""
+msgstr "Каталогі"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Images"
@@ -95,7 +96,7 @@ msgstr "Праграмы"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Other"
-msgstr "Іншы"
+msgstr "Іншыя"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "Any time"
@@ -103,234 +104,240 @@ msgstr "Любы час"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "This week"
-msgstr ""
+msgstr "Гэты тыдзень"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Custom"
-msgstr ""
+msgstr "Адвольна"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Go to Today"
-msgstr ""
+msgstr "Сёння"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "<b>Start Date</b>"
-msgstr ""
+msgstr "<b>Дата пачатку</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "<b>End Date</b>"
-msgstr ""
+msgstr "<b>Дата завяршэння</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:216
 msgid "Catfish"
-msgstr ""
+msgstr "Catfish"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Update"
-msgstr ""
+msgstr "Абнаўленне"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr ""
+msgstr "База даных пошуку старэйшая за 7 дзён.  Абнавіць?"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "File Type"
-msgstr ""
+msgstr "Тып файлаў"
 
 #: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1103
 msgid "Modified"
-msgstr ""
+msgstr "Зменена"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr ""
+msgstr "Для пошуку файлаў увядзіце запыт вышэй"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "or click the "
-msgstr ""
+msgstr "альбо пстрыкніце на "
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
-msgstr ""
+msgstr " значок для дадатковых параметраў."
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
-msgstr ""
+msgstr "Абярыце каталог"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Compact List"
-msgstr ""
+msgstr "Скарочаны спіс"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Thumbnails"
-msgstr ""
+msgstr "Мініяцюры"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show _Hidden Files"
-msgstr ""
+msgstr "Паказваць с_хаваныя фалы"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
-msgstr ""
+msgstr "Шукаць па _змесціву файла"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Exact Match"
-msgstr ""
+msgstr "_Дакладнае супадзенне"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "Show _Sidebar"
-msgstr ""
+msgstr "Паказваць _бакавую панэль"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Update Search Index…"
-msgstr ""
+msgstr "_Абнавіць індэкс пошуку…"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_About"
-msgstr ""
+msgstr "Пра _праграму"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
-msgstr ""
+msgstr "Абнавіць базу даных пошуку"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgid "Unlock"
-msgstr ""
+msgstr "Разблакаваць"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "<b>Database:</b>"
-msgstr ""
+msgstr "<b>База даных:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
-msgstr ""
+msgstr "<b>Абноўлена:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>Абнаўленне базы даных пошуку</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"Для паскарэння атрымання вынікаў пошуку неабходна абнавіць базу даных "
+"пошуку.\n"
+"На гэта патрабуюцца правы адміністратара."
 
 #: ../catfish/__init__.py:37
 msgid "Usage: %prog [options] path query"
-msgstr ""
+msgstr "Выкарыстанне: %prog [параметры] шлях запыту"
 
 #: ../catfish/__init__.py:42
 msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr ""
+msgstr "Паказваць паведамленні адладкі (-vv адладжвае таксама catfish_lib)"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
-msgstr ""
+msgstr "Выкарыстоўваць буйныя значкі"
 
 #: ../catfish/__init__.py:47
 msgid "Use thumbnails"
-msgstr ""
+msgstr "Выкарыстоўваць мініяцюры"
 
 #: ../catfish/__init__.py:49
 msgid "Display time in ISO format"
-msgstr ""
+msgstr "Адлюстроўваць час у фармаце ISO"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
-msgstr ""
+msgstr "Дакладнае супадзенне"
 
 #: ../catfish/__init__.py:55
 msgid "Include hidden files"
-msgstr ""
+msgstr "Уключаць схаваныя файлы"
 
 #: ../catfish/__init__.py:57
 msgid "Perform fulltext search"
-msgstr ""
+msgstr "Выконваць пошук усяго тэксту"
 
 #: ../catfish/__init__.py:59
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
+"Калі шлях і запыт зададзеныя, пачынаць пошук падчас запуску праграмы."
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
 #: ../catfish/CatfishWindow.py:83
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (хібнае кадаванне)"
 
 #: ../catfish/CatfishWindow.py:249
 msgid "Unknown"
-msgstr ""
+msgstr "Невядома"
 
 #: ../catfish/CatfishWindow.py:253
 msgid "Never"
-msgstr ""
+msgstr "Ніколі"
 
 #: ../catfish/CatfishWindow.py:610
 msgid "An error occurred while updating the database."
-msgstr ""
+msgstr "Памылка пры абнаўленні базы даных."
 
 #: ../catfish/CatfishWindow.py:612
 msgid "Authentication failed."
-msgstr ""
+msgstr "Памылка аўтэнтыфікацыі."
 
 #: ../catfish/CatfishWindow.py:618
 msgid "Authentication cancelled."
-msgstr ""
+msgstr "Аўтэнтыфікацыя скасавана."
 
 #: ../catfish/CatfishWindow.py:624
 msgid "Search database updated successfully."
-msgstr ""
+msgstr "База даных пошуку паспяхова абноўлена."
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:699
 msgid "Updating..."
-msgstr ""
+msgstr "Абнаўленне..."
 
 #: ../catfish/CatfishWindow.py:733
 msgid "Stop Search"
-msgstr ""
+msgstr "Спыніць пошук"
 
 #: ../catfish/CatfishWindow.py:734
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
+"Адбываецца пошук...\n"
+"Націсніце \"Скасаваць\" альбо клавішу Escape для спынення."
 
 #: ../catfish/CatfishWindow.py:743
 msgid "Begin Search"
-msgstr ""
+msgstr "Распачаць пошук"
 
 #: ../catfish/CatfishWindow.py:929
 #, python-format
 msgid "\"%s\" could not be opened."
-msgstr ""
+msgstr "\"%s\" немагчыма адкрыць."
 
 #: ../catfish/CatfishWindow.py:975
 #, python-format
 msgid "\"%s\" could not be saved."
-msgstr ""
+msgstr "\"%s\" немагчыма захаваць."
 
 #: ../catfish/CatfishWindow.py:992
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr ""
+msgstr "\"%s\" немагчыма выдаліць."
 
 #: ../catfish/CatfishWindow.py:1032
 #, python-format
 msgid "Save \"%s\" as…"
-msgstr ""
+msgstr "Захаваць \"%s\" як…"
 
 #: ../catfish/CatfishWindow.py:1067
 #, python-format
@@ -338,6 +345,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
+"Вы ўпэўнены, што хочаце назаўсёды \n"
+"выдаліць \"%s\"?"
 
 #: ../catfish/CatfishWindow.py:1071
 #, python-format
@@ -345,10 +354,12 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
+"Вы ўпэўнены, што хочаце назаўсёды \n"
+"выдаліць %i абраныя(ых) файлы(аў)?"
 
 #: ../catfish/CatfishWindow.py:1074
 msgid "If you delete a file, it is permanently lost."
-msgstr ""
+msgstr "Калі вы выдаліце файл, ён будзе назаўсёды згублены."
 
 #: ../catfish/CatfishWindow.py:1097
 msgid "Filename"
@@ -364,19 +375,19 @@ msgstr "Размяшчэнне"
 
 #: ../catfish/CatfishWindow.py:1113
 msgid "Preview"
-msgstr "Перадпрагляд"
+msgstr "Папярэдні прагляд"
 
 #: ../catfish/CatfishWindow.py:1121
 msgid "Details"
-msgstr ""
+msgstr "Падрабязнасці"
 
 #: ../catfish/CatfishWindow.py:1340
 msgid "Today"
-msgstr ""
+msgstr "Сёння"
 
 #: ../catfish/CatfishWindow.py:1342
 msgid "Yesterday"
-msgstr ""
+msgstr "Учора"
 
 #: ../catfish/CatfishWindow.py:1423
 msgid "No files found."
@@ -387,27 +398,29 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
+"Паспрабуйце ўвесці больш канкрэтны запыт\n"
+"альбо паспрабуйце іншы каталог."
 
 #: ../catfish/CatfishWindow.py:1431
 msgid "1 file found."
-msgstr ""
+msgstr "знойдзены 1 файл."
 
 #: ../catfish/CatfishWindow.py:1433
 #, python-format
 msgid "%i files found."
-msgstr ""
+msgstr "%i файлаў знойдзена."
 
 #: ../catfish/CatfishWindow.py:1439
 msgid "bytes"
-msgstr ""
+msgstr "байтаў"
 
 #: ../catfish/CatfishWindow.py:1585 ../catfish/CatfishWindow.py:1594
 msgid "Searching…"
-msgstr ""
+msgstr "Пошук…"
 
 #: ../catfish/CatfishWindow.py:1587
 msgid "Results will be displayed as soon as they are found."
-msgstr ""
+msgstr "Вынік адлюструецца як будзе знойдзены."
 
 #: ../catfish/CatfishWindow.py:1592
 #, python-format
@@ -421,30 +434,32 @@ msgstr "Вынікі пошуку для \"%s\""
 
 #: ../catfish_lib/SudoDialog.py:138
 msgid "Password Required"
-msgstr ""
+msgstr "Патрабуецца пароль"
 
 #: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
-msgstr ""
+msgstr "Хібны пароль... паспрабуйце зноў."
 
 #: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"
-msgstr ""
+msgstr "Пароль:"
 
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:196
 msgid "Cancel"
-msgstr ""
+msgstr "Скасаваць"
 
 #: ../catfish_lib/SudoDialog.py:199
 msgid "OK"
-msgstr ""
+msgstr "Добра"
 
 #: ../catfish_lib/SudoDialog.py:220
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
+"Увядзіце ваш пароль\n"
+"для выканання задач адміністратара."
 
 #: ../catfish_lib/SudoDialog.py:222
 #, python-format
@@ -452,10 +467,12 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
+"Праграма '%s' дазволіць вам\n"
+"змяняць важныя часткі сістэмы."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr ""
+msgstr "Універсальная прылада для пошуку"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:2
 msgid ""
@@ -465,22 +482,31 @@ msgid ""
 "date, file type, and file contents, users will no longer be dependent on the "
 "file manager or organization skills."
 msgstr ""
+"Catfish - невялічкая, хуткая і магутная праграма для пошуку файлаў. Дзякуючы "
+"мінімальнаму інтэрфейсу з акцэнтам на выніках, дапамагае карыстальнікам "
+"зручна знаходзіць неабходныя файлы. З магутнымі фільтрамі (дата мадыфікацыі, "
+"тып файла, змесціва файла) карыстальнікі больш не будуць залежаць ад "
+"кіраўніка файлаў."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "This is a minor translations-only release."
-msgstr ""
+msgstr "Гэта нязначны выпуск з абнаўленнем перакладаў."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
+"Гэты выпуск ўключае ў сябе некалькі паляпшэнняў прадукцыйнасці і шматлікія "
+"абнаўленні перакладу."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
+"У гэтым выпуску длюстроўваюцца ўсе адбіткі часу файлаў у адпаведнасці з "
+"часавым поясам замест універсальнага зкаардынаванага часу (UTC)."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
@@ -489,6 +515,11 @@ msgid ""
 "click functionality has been restored. Date range filters are now applied "
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
+"У гэтым выпуску выпраўлены шэраг хібаў, звязаных з акном вынікаў. Пасля "
+"выдалення файлы зноў выдаляюцца са спіса вынікаў. Была адноўлена "
+"функцыянальнасць правай і сярэдняй кнопкі мышы . Фільтры дыяпазону дат цяпер "
+"ужываюцца ў адпаведнасці з часавым поясам замест універсальнага "
+"зкаардынаванага часу (UTC)."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
@@ -498,16 +529,22 @@ msgid ""
 "headerbars and popover widgets. Password handling has been improved with the "
 "integration of PolicyKit when available."
 msgstr ""
+"Гэты выпуск ўключае ў сябе значнае абнаўленне інтэрфейсу, павышае хуткасць "
+"пошуку і выпраўляе шэраг хібаў. Працоўны працэс быў удасканалены з дапамогаю "
+"некаторых з апошніх магчымасцяў GTK + , уключаючы дадатковыя панэлі і "
+"віджэты. Апрацоўка пароляў была палепшана з дапамогаю PolicyKit."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid "This release fixes two new bugs and includes updated translations."
-msgstr ""
+msgstr "У гэтым выпуску выпраўлены дзве новыя хібы і абноўлены пераклады."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
+"У гэтым выпуску выпраўлена рэгрэсія, калі праграму немагчыма запусціць у "
+"некаторых сістэмах."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
@@ -515,24 +552,35 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated, "
 "and the dialogs used to update the database have been improved."
 msgstr ""
+"У гэтым выпуску выпраўлена рэгрэсія, калі некалькі тэрмінаў пошуку больш не "
+"падтрымліваецца. Інфармацыйная панэль зараз адлюстроўваюцца, калі база даных "
+"пошуку састарэла, і дыялогавыя вокны, якія выкарыстоўваюцца для абнаўлення "
+"базы даных, былі палепшаны."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
+"У гэтым выпуску выпраўлены дзве праблемы: месцазнаходжанне не вызначалася "
+"належным чынам, паляпшана апрацоўка знікшых сімвалічных значкоў."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned "
 "up unused code, and fixed potential issues with the list and item selection."
 msgstr ""
+"У гэтым стабільным выпуску павышана надзейнасць дыялога паролю, ачышчаны "
+"невыкарыстоўваемы код і выпраўлены патэнцыйныя праблемы са спісам і выбарам "
+"элементаў."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixed a potential security issue with program startup and fixed "
 "a regression with selecting multiple items."
 msgstr ""
+"У гэтым выпуску выпраўлены патэнцыйная праблема бяспекі пры запуску праграмы "
+"і рэгрэсія выбару некалькіх элементаў."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
@@ -542,6 +590,11 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"У першым выпуск серыі 1.0.x прадстаўлены абноўлены інтэрфейс і выпраўлены "
+"шэраг даўніх хібаў. Пераразмеркаванне прадвызначаных дазволаў дапамагло "
+"ліквідаваць шэраг папярэджанняў пры стварэнні пакункаў. Былі палепшаны "
+"спецыяльныя магчымасці: усе радкі можна перакласці і перароблены "
+"паскаральнікі клавіятуры."
 
 #~ msgid "Last modified"
 #~ msgstr "Апошнія змены"
