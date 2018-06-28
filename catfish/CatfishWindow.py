@@ -34,6 +34,7 @@ from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishSearchEngine import CatfishSearchEngine
 from catfish_lib import catfishconfig, helpers
 from catfish_lib import CatfishSettings, SudoDialog, Window
+from catfish_lib import Thumbnailer
 
 logger = logging.getLogger('catfish')
 
@@ -84,19 +85,6 @@ def surrogate_escape(text, replace=False):
     except UnicodeDecodeError:
         text = text.decode('utf-8', errors='replace')
     return text
-
-
-def get_thumbnails_directory():
-    '''Return the thumbnail directory for the current user.'''
-    try:
-        major, minor, micro = GLib.glib_version
-        if (major >= 2 and minor >= 34):
-            thumbs = os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
-        else:
-            thumbs = os.path.join(GLib.get_home_dir(), '.thumbnails/')
-    except Exception:
-        thumbs = os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
-    return thumbs
 
 
 # See catfish_lib.Window.py for more details about how this class works
@@ -297,6 +285,8 @@ class CatfishWindow(Window):
         end_calendar.connect("day-selected", self.on_calendar_day_changed)
 
         self.app_menu_event = False
+
+        self.thumbnailer = Thumbnailer.Thumbnailer()
 
     def on_calendar_day_changed(self, widget):
         start_calendar = self.builder.get_named_object(
@@ -1497,54 +1487,10 @@ class CatfishWindow(Window):
 
     def get_thumbnail(self, path, mime_type=None):
         """Try to fetch a thumbnail."""
-        thumbnails_directory = os.path.join(get_thumbnails_directory(),
-                                            'normal')
-        uri = 'file://' + path
-        if helpers.check_python_version(3, 0):
-            uri = uri.encode('utf-8')
-        md5_hash = hashlib.md5(uri).hexdigest()
-        thumbnail_path = os.path.join(
-            thumbnails_directory, '%s.png' % md5_hash)
-        if os.path.isfile(thumbnail_path):
-            return thumbnail_path
-        if mime_type.startswith('image'):
-            if mime_type not in ["image/x-photoshop", "image/svg+xml"]:
-                new_thumb = self.create_thumbnail(path, thumbnail_path)
-                if new_thumb:
-                    return thumbnail_path
+        thumb = self.thumbnailer.get_thumbnail(path, mime_type)
+        if thumb:
+            return thumb
         return self.get_file_icon(path, mime_type)
-
-    def create_thumbnail(self, filename, path):
-        """Create a thumbnail image and save it to the thumbnails directory.
-        Return True if successful."""
-        try:
-            pixbuf = GdkPixbuf.Pixbuf.new_from_file(filename)
-            if pixbuf is None:
-                return False
-            pixbuf_w = pixbuf.get_width()
-            pixbuf_h = pixbuf.get_height()
-            if pixbuf_w < 1 or pixbuf_h < 1:
-                return False
-            if pixbuf_w < 128 and pixbuf_h < 128:
-                pixbuf.savev(path, "png", [], [])
-                return pixbuf
-            if pixbuf_w > pixbuf_h:
-                thumb_w = 128
-                thumb_h = int(pixbuf_h / (pixbuf_w / 128.0))
-            else:
-                thumb_h = 128
-                thumb_w = int(pixbuf_w / (pixbuf_h / 128.0))
-            if thumb_w < 1 or thumb_h < 1:
-                return False
-            thumb_pixbuf = pixbuf.scale_simple(
-                thumb_w, thumb_h, GdkPixbuf.InterpType.BILINEAR)
-            if thumb_pixbuf is None:
-                return False
-            thumb_pixbuf.savev(path, "png", [], [])
-            return True
-        except Exception as e:
-            print("Exception: ", e)
-            return False
 
     def get_file_icon(self, path, mime_type=None):
         """Retrieve the file icon."""
