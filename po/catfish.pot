@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 22:02-0400\n"
+"POT-Creation-Date: 2018-06-29 21:38-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -401,20 +401,20 @@ msgstr ""
 msgid "bytes"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1531 ../catfish/CatfishWindow.py:1540
+#: ../catfish/CatfishWindow.py:1537 ../catfish/CatfishWindow.py:1546
 msgid "Searching…"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1533
+#: ../catfish/CatfishWindow.py:1539
 msgid "Results will be displayed as soon as they are found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1538
+#: ../catfish/CatfishWindow.py:1544
 #, python-format
 msgid "Searching for \"%s\""
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1627
+#: ../catfish/CatfishWindow.py:1633
 #, python-format
 msgid "Search results for \"%s\""
 msgstr ""

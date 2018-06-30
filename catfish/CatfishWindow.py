@@ -1496,17 +1496,23 @@ class CatfishWindow(Window):
         """Retrieve the file icon."""
         if mime_type:
             if mime_type == 'inode/directory':
-                return Gtk.STOCK_DIRECTORY
+                return "folder"
             else:
                 mime_type = mime_type.split('/')
                 if mime_type is not None:
                     # Get icon from mimetype
                     media, subtype = mime_type
-                    for icon_name in ['gnome-mime-%s-%s' % (media, subtype),
-                                      'gnome-mime-%s' % media]:
+
+                    variations = ['%s-%s' % (media, subtype),
+                                  '%s-x-%s' % (media, subtype)]
+                    if media == "application":
+                        variations.append('application-x-executable')
+                    variations.append('%s-x-generic' % media)
+
+                    for icon_name in variations:
                         if self.icon_theme.has_icon(icon_name):
                             return icon_name
-        return Gtk.STOCK_FILE
+        return "text-x-generic"
 
     def python_three_size_sort_func(self, model, row1, row2, user_data):
         """Sort function used in Python 3."""
