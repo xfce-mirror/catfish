@@ -93,7 +93,7 @@
         </_p>
       </description>
     </release>
-    <release version="1.2.0" date="2018-08-16">
+    <release version="1.2.0" date="2014-08-16">
       <description>
         <_p>This release fixes a regression where multiple search terms were
         no longer supported. An InfoBar is now displayed when the search
