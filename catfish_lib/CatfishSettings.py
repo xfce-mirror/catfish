@@ -60,16 +60,19 @@ class CatfishSettings:
         """Read the settings rc-file into this settings instance."""
         self.settings = default_settings.copy()
         if os.path.isfile(self.settings_file):
-            for line in open(self.settings_file):
-                if not line.startswith('#'):
-                    try:
-                        prop, value = line.split('=')
-                        if prop in self.settings:
-                            if value.strip().lower() in ['true', 'false']:
-                                value = value.strip().lower() == 'true'
-                            self.settings[prop] = value
-                    except Exception:
-                        pass
+            try:
+                for line in open(self.settings_file):
+                    if not line.startswith('#'):
+                        try:
+                            prop, value = line.split('=')
+                            if prop in self.settings:
+                                if value.strip().lower() in ['true', 'false']:
+                                    value = value.strip().lower() == 'true'
+                                self.settings[prop] = value
+                        except Exception:
+                            pass
+            except Exception:
+                pass
 
     def write(self):
         """Write the current settings to the settings rc-file."""
