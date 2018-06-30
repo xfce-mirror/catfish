@@ -61,12 +61,12 @@ def application_in_PATH(application_name):
 
 def is_file_hidden(folder, filename):
     """Return TRUE if file is hidden or in a hidden directory."""
-    relative = filename.lstrip(folder)
-    splitpath = os.path.split(relative)
-    while splitpath[1] != '':
-        if splitpath[1][0] == '.':
+    folder = os.path.abspath(folder)
+    filename = os.path.abspath(filename)
+    relpath = os.path.relpath(filename, folder)
+    for piece in relpath.split(os.sep):
+        if piece.startswith("."):
             return True
-        splitpath = os.path.split(splitpath[0])
     return False
 
 
