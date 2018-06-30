@@ -33,6 +33,7 @@ __builder__ = {
     "window": {
         "main": "Catfish",
         "sidebar": "catfish_window_sidebar",
+        "paned": "catfish_window_paned"
     },
 
     # Toolbar
@@ -335,3 +336,11 @@ class Window(Gtk.Window):
         keys = self.get_keys_from_event(event)
         self.remove_keys(keys)
         return False
+
+    def on_catfish_window_size_allocate(self, widget, allocation):
+        paned =self.builder.get_named_object("window.paned")
+        allocation = paned.get_allocation()
+        self.settings.set_setting('window-height', allocation.height)
+        self.settings.set_setting('window-width', allocation.width)
+        paned.set_property('height_request', -1)
+        paned.set_property('width_request', -1)

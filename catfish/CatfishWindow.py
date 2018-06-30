@@ -261,6 +261,10 @@ class CatfishWindow(Window):
         self.rows = []
 
         self.settings = CatfishSettings.CatfishSettings()
+        paned = builder.get_named_object("window.paned")
+        paned.set_property('height_request', self.settings.get_setting('window-height'))
+        paned.set_property('width_request', self.settings.get_setting('window-width'))
+
         self.refresh_search_entry()
 
         filetype_filters = builder.get_object("filetype_options")

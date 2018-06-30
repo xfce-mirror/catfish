@@ -23,7 +23,9 @@ default_settings_file = os.path.join(os.getenv('HOME'),
 default_settings = {
     'use-headerbar': True,
     'show-hidden-files': False,
-    'show-sidebar': False
+    'show-sidebar': False,
+    'window-width': 760,
+    'window-height': 520
 }
 
 
@@ -45,6 +47,8 @@ class CatfishSettings:
     def get_setting(self, key):
         """Return current setting for specified key."""
         if key in self.settings:
+            if (key in ['window-height', 'window-width']):
+                return int(self.settings[key])
             return self.settings[key]
         else:
             return None
