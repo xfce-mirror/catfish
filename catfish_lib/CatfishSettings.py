@@ -74,12 +74,15 @@ class CatfishSettings:
     def write(self):
         """Write the current settings to the settings rc-file."""
         if self.settings_file:
-            write_file = open(self.settings_file, 'w')
-            for key in list(self.settings.keys()):
-                value = self.settings[key]
-                if isinstance(value, bool):
-                    value = str(value).lower()
-                else:
-                    value = str(value)
-                write_file.write('%s=%s\n' % (key, value))
-            write_file.close()
+            try:
+                write_file = open(self.settings_file, 'w')
+                for key in list(self.settings.keys()):
+                    value = self.settings[key]
+                    if isinstance(value, bool):
+                        value = str(value).lower()
+                    else:
+                        value = str(value)
+                    write_file.write('%s=%s\n' % (key, value))
+                write_file.close()
+            except PermissionError:
+                pass
