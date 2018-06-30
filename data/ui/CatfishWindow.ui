@@ -468,6 +468,7 @@
     <property name="title" translatable="yes">Catfish</property>
     <property name="window_position">center</property>
     <property name="icon_name">catfish</property>
+    <signal name="configure-event" handler="on_catfish_window_configure_event" swapped="no"/>
     <signal name="key-press-event" handler="on_catfish_window_key_press_event" swapped="no"/>
     <signal name="key-release-event" handler="on_catfish_window_key_press_event" swapped="no"/>
     <signal name="size-allocate" handler="on_catfish_window_size_allocate" swapped="no"/>

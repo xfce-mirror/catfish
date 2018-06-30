@@ -265,6 +265,25 @@ class CatfishWindow(Window):
         paned.set_property('height_request', self.settings.get_setting('window-height'))
         paned.set_property('width_request', self.settings.get_setting('window-width'))
 
+        window_width = self.settings.get_setting('window-width')
+        window_height = self.settings.get_setting('window-height')
+        window_x = self.settings.get_setting('window-x')
+        window_y = self.settings.get_setting('window-y')
+        (screen_width, screen_height) = self.get_screen_size()
+        (display_width, display_height) = self.get_display_size()
+
+        if (window_height > screen_height or window_width > screen_width):
+            window_width = min(display_width, 650)
+            window_height = min(display_height, 470)
+
+        paned.set_property('height_request', window_height)
+        paned.set_property('width_request', window_width)
+
+        if (window_x >= 0 and window_y >= 0):
+            if (window_x + window_width <= screen_width) and \
+               (window_y + window_height <= screen_height):
+                self.move(window_x, window_y)
+
         self.refresh_search_entry()
 
         filetype_filters = builder.get_object("filetype_options")
@@ -291,6 +310,16 @@ class CatfishWindow(Window):
         self.app_menu_event = False
 
         self.thumbnailer = Thumbnailer.Thumbnailer()
+
+    def get_screen_size(self):
+        s = Gdk.Screen.get_default()
+        return (s.get_width(), s.get_height())
+
+    def get_display_size(self):
+        s = self.get_screen()
+        m = s.get_monitor_at_window(s.get_active_window())
+        monitor = s.get_monitor_geometry(m)
+        return (monitor.width, monitor.height)
 
     def on_calendar_day_changed(self, widget):
         start_calendar = self.builder.get_named_object(

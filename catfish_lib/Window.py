@@ -344,3 +344,8 @@ class Window(Gtk.Window):
         self.settings.set_setting('window-width', allocation.width)
         paned.set_property('height_request', -1)
         paned.set_property('width_request', -1)
+
+    def on_catfish_window_configure_event(self, widget, event):
+        pos = self.get_position()
+        self.settings.set_setting('window-x', pos.root_x)
+        self.settings.set_setting('window-y', pos.root_y)
