@@ -908,7 +908,10 @@ class CatfishWindow(Window):
     def open_file(self, filename):
         """Open the specified filename in its default application."""
         logger.debug("Opening %s" % filename)
-        command = ['xdg-open', filename]
+        if filename.endswith('.AppImage') and os.access(filename, os.X_OK):
+            command = [filename]
+        else:
+            command = ['xdg-open', filename]
         try:
             subprocess.Popen(command, shell=False)
             return
