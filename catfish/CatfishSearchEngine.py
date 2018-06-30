@@ -502,7 +502,7 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
     def process_output(self, output):
         """Return the output text."""
         if isinstance(output, io.BufferedReader):
-            return map(lambda s: s.decode(encoding='UTF8').strip(),
+            return map(lambda s: s.decode(encoding='UTF8', errors='replace').strip(),
                        output.readlines())
         else:
             return output
