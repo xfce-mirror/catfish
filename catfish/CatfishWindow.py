@@ -943,6 +943,9 @@ class CatfishWindow(Window):
         logger.debug("Opening %s" % filename)
         if filename.endswith('.AppImage') and os.access(filename, os.X_OK):
             command = [filename]
+        elif os.path.isdir(filename) and \
+                os.environ.get("XDG_CURRENT_DESKTOP").lower() == 'xfce':
+            command = ['exo-open', '--launch', 'FileManager', filename]
         else:
             command = ['xdg-open', filename]
         try:
