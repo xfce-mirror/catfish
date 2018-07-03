@@ -1,24 +1,25 @@
-# English (Australia) translation for catfish-search
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the catfish-search package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-04-26 05:37+0000\n"
-"PO-Revision-Date: 2015-11-22 20:29+0000\n"
-"Last-Translator: Jackson Doak <noskcaj@ubuntu.com>\n"
-"Language-Team: English (Australia) <en_AU@li.org>\n"
+"Project-Id-Version: catfish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-03 14:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>, 2018\n"
+"Language-Team: English (Australia) (https://www.transifex.com/xfce/teams/16840/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-27 05:40+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"Language: en_AU\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:642
+#: ../catfish/CatfishWindow.py:665
 msgid "Catfish File Search"
 msgstr "Catfish File Search"
 
@@ -30,7 +31,8 @@ msgstr "File search"
 msgid "Search the file system"
 msgstr "Search the file system"
 
-#. TRANSLATORS: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
 msgstr ""
@@ -43,12 +45,14 @@ msgstr "Catfish is a versatile file searching tool."
 msgid "_Open"
 msgstr "_Open"
 
-#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
 msgstr "Show in _File Manager"
 
-#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Copy Location"
 msgstr "_Copy Location"
@@ -121,7 +125,7 @@ msgstr "<b>Start Date</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>End Date</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:216
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:217
 msgid "Catfish"
 msgstr "Catfish"
 
@@ -137,7 +141,7 @@ msgstr "The search database is more than 7 days old.  Update now?"
 msgid "File Type"
 msgstr "File Type"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1103
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1132
 msgid "Modified"
 msgstr "Modified"
 
@@ -268,45 +272,45 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:83
+#: ../catfish/CatfishWindow.py:84
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (invalid encoding)"
 
-#: ../catfish/CatfishWindow.py:249
+#: ../catfish/CatfishWindow.py:237
 msgid "Unknown"
 msgstr "Unknown"
 
-#: ../catfish/CatfishWindow.py:253
+#: ../catfish/CatfishWindow.py:241
 msgid "Never"
 msgstr "Never"
 
-#: ../catfish/CatfishWindow.py:610
+#: ../catfish/CatfishWindow.py:633
 msgid "An error occurred while updating the database."
 msgstr "An error occurred while updating the database."
 
-#: ../catfish/CatfishWindow.py:612
+#: ../catfish/CatfishWindow.py:635
 msgid "Authentication failed."
 msgstr "Authentication failed."
 
-#: ../catfish/CatfishWindow.py:618
+#: ../catfish/CatfishWindow.py:641
 msgid "Authentication cancelled."
 msgstr "Authentication cancelled."
 
-#: ../catfish/CatfishWindow.py:624
+#: ../catfish/CatfishWindow.py:647
 msgid "Search database updated successfully."
 msgstr "Search database updated successfully."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:699
+#: ../catfish/CatfishWindow.py:722
 msgid "Updating..."
 msgstr "Updating..."
 
-#: ../catfish/CatfishWindow.py:733
+#: ../catfish/CatfishWindow.py:756
 msgid "Stop Search"
 msgstr "Stop Search"
 
-#: ../catfish/CatfishWindow.py:734
+#: ../catfish/CatfishWindow.py:757
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -314,31 +318,31 @@ msgstr ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 
-#: ../catfish/CatfishWindow.py:743
+#: ../catfish/CatfishWindow.py:766
 msgid "Begin Search"
 msgstr "Begin Search"
 
-#: ../catfish/CatfishWindow.py:929
+#: ../catfish/CatfishWindow.py:958
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" could not be opened."
 
-#: ../catfish/CatfishWindow.py:975
+#: ../catfish/CatfishWindow.py:1004
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" could not be saved."
 
-#: ../catfish/CatfishWindow.py:992
+#: ../catfish/CatfishWindow.py:1021
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" could not be deleted."
 
-#: ../catfish/CatfishWindow.py:1032
+#: ../catfish/CatfishWindow.py:1061
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "Save \"%s\" as…"
 
-#: ../catfish/CatfishWindow.py:1067
+#: ../catfish/CatfishWindow.py:1096
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -347,7 +351,7 @@ msgstr ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 
-#: ../catfish/CatfishWindow.py:1071
+#: ../catfish/CatfishWindow.py:1100
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -356,75 +360,75 @@ msgstr ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 
-#: ../catfish/CatfishWindow.py:1074
+#: ../catfish/CatfishWindow.py:1103
 msgid "If you delete a file, it is permanently lost."
 msgstr "If you delete a file, it is permanently lost."
 
-#: ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:1126
 msgid "Filename"
 msgstr "Filename"
 
-#: ../catfish/CatfishWindow.py:1099
+#: ../catfish/CatfishWindow.py:1128
 msgid "Size"
 msgstr "Size"
 
-#: ../catfish/CatfishWindow.py:1101
+#: ../catfish/CatfishWindow.py:1130
 msgid "Location"
 msgstr "Location"
 
-#: ../catfish/CatfishWindow.py:1113
+#: ../catfish/CatfishWindow.py:1142
 msgid "Preview"
 msgstr "Preview"
 
-#: ../catfish/CatfishWindow.py:1121
+#: ../catfish/CatfishWindow.py:1150
 msgid "Details"
 msgstr "Details"
 
-#: ../catfish/CatfishWindow.py:1340
+#: ../catfish/CatfishWindow.py:1369
 msgid "Today"
 msgstr "Today"
 
-#: ../catfish/CatfishWindow.py:1342
+#: ../catfish/CatfishWindow.py:1371
 msgid "Yesterday"
 msgstr "Yesterday"
 
-#: ../catfish/CatfishWindow.py:1423
+#: ../catfish/CatfishWindow.py:1452
 msgid "No files found."
 msgstr "No files found."
 
-#: ../catfish/CatfishWindow.py:1425
+#: ../catfish/CatfishWindow.py:1454
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1431
+#: ../catfish/CatfishWindow.py:1460
 msgid "1 file found."
 msgstr "1 file found."
 
-#: ../catfish/CatfishWindow.py:1433
+#: ../catfish/CatfishWindow.py:1462
 #, python-format
 msgid "%i files found."
 msgstr "%i files found."
 
-#: ../catfish/CatfishWindow.py:1439
+#: ../catfish/CatfishWindow.py:1468
 msgid "bytes"
 msgstr "bytes"
 
-#: ../catfish/CatfishWindow.py:1585 ../catfish/CatfishWindow.py:1594
+#: ../catfish/CatfishWindow.py:1576 ../catfish/CatfishWindow.py:1585
 msgid "Searching…"
 msgstr "Searching…"
 
-#: ../catfish/CatfishWindow.py:1587
+#: ../catfish/CatfishWindow.py:1578
 msgid "Results will be displayed as soon as they are found."
 msgstr "Results will be displayed as soon as they are found."
 
-#: ../catfish/CatfishWindow.py:1592
+#: ../catfish/CatfishWindow.py:1583
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Searching for \"%s\""
 
-#: ../catfish/CatfishWindow.py:1681
+#: ../catfish/CatfishWindow.py:1672
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Search results for \"%s\""
@@ -474,16 +478,16 @@ msgstr "Versatile file searching tool"
 #: ../data/metainfo/catfish.appdata.xml.in.h:2
 msgid ""
 "Catfish is a small, fast, and powerful file search utility. Featuring a "
-"minimal interface with an emphasis on results, it helps users find the files "
-"they need without a file manager. With powerful filters such as modification "
-"date, file type, and file contents, users will no longer be dependent on the "
-"file manager or organization skills."
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
 msgstr ""
 "Catfish is a small, fast, and powerful file search utility. Featuring a "
-"minimal interface with an emphasis on results, it helps users find the files "
-"they need without a file manager. With powerful filters such as modification "
-"date, file type, and file contents, users will no longer be dependent on the "
-"file manager or organization skills."
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "This is a minor translations-only release."
@@ -514,8 +518,8 @@ msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
 "some of the latest features of the GTK+ toolkit, including optional "
-"headerbars and popover widgets. Password handling has been improved with the "
-"integration of PolicyKit when available."
+"headerbars and popover widgets. Password handling has been improved with the"
+" integration of PolicyKit when available."
 msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
@@ -533,12 +537,12 @@ msgstr ""
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
-"supported. An InfoBar is now displayed when the search database is outdated, "
-"and the dialogs used to update the database have been improved."
+"supported. An InfoBar is now displayed when the search database is outdated,"
+" and the dialogs used to update the database have been improved."
 msgstr ""
 "This release fixes a regression where multiple search terms were no longer "
-"supported. An InfoBar is now displayed when the search database is outdated, "
-"and the dialogs used to update the database have been improved."
+"supported. An InfoBar is now displayed when the search database is outdated,"
+" and the dialogs used to update the database have been improved."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
@@ -550,19 +554,21 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
-"This stable release improved the reliability of the password dialog, cleaned "
-"up unused code, and fixed potential issues with the list and item selection."
+"This stable release improved the reliability of the password dialog, cleaned"
+" up unused code, and fixed potential issues with the list and item "
+"selection."
 msgstr ""
-"This stable release improved the reliability of the password dialog, cleaned "
-"up unused code, and fixed potential issues with the list and item selection."
+"This stable release improved the reliability of the password dialog, cleaned"
+" up unused code, and fixed potential issues with the list and item "
+"selection."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
-"This release fixed a potential security issue with program startup and fixed "
-"a regression with selecting multiple items."
+"This release fixed a potential security issue with program startup and fixed"
+" a regression with selecting multiple items."
 msgstr ""
-"This release fixed a potential security issue with program startup and fixed "
-"a regression with selecting multiple items."
+"This release fixed a potential security issue with program startup and fixed"
+" a regression with selecting multiple items."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
@@ -577,75 +583,3 @@ msgstr ""
 "permissions eliminated a number of warnings when packaging for "
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
-
-#~ msgid "_Hidden Files"
-#~ msgstr "_Hidden Files"
-
-#~ msgid "_Fulltext Search"
-#~ msgstr "_Fulltext Search"
-
-#~ msgid "_Show Advanced Settings"
-#~ msgstr "_Show Advanced Settings"
-
-#~ msgid "<b>Modified</b>"
-#~ msgstr "<b>Modified</b>"
-
-#~ msgid "Enter search terms and press ENTER"
-#~ msgstr "Enter search terms and press ENTER"
-
-#~ msgid "<b>File Type</b>"
-#~ msgstr "<b>File Type</b>"
-
-#~ msgid "Custom File Type"
-#~ msgstr "Custom File Type"
-
-#~ msgid "Custom Time Range"
-#~ msgstr "Custom Time Range"
-
-#~ msgid "Enter file extensions"
-#~ msgstr "Enter file extensions"
-
-#~ msgid "Select existing mimetype"
-#~ msgstr "Select existing mimetype"
-
-#~ msgid "Done."
-#~ msgstr "Done."
-
-#~ msgid "Update Search Index"
-#~ msgstr "Update Search Index"
-
-#~ msgid "<big><b>Update Search Index</b></big>"
-#~ msgstr "<big><b>Update Search Index</b></big>"
-
-#~ msgid "Updating database…"
-#~ msgstr "Updating database…"
-
-#~ msgid ""
-#~ "To provide accurate results, the <i>locate</i> database needs to be "
-#~ "refreshed.\n"
-#~ "This requires sudo (admin) rights."
-#~ msgstr ""
-#~ "To provide accurate results, the <i>locate</i> database needs to be "
-#~ "refreshed.\n"
-#~ "This requires sudo (admin) rights."
-
-#~ msgid "Catfish could not find the default open wrapper."
-#~ msgstr "Catfish could not find the default open wrapper."
-
-#~ msgid "User aborted authentication."
-#~ msgstr "User aborted authentication."
-
-#~ msgid "An error occurred while updating locatedb."
-#~ msgstr "An error occurred while updating locatedb."
-
-#~ msgid "Clear search terms"
-#~ msgstr "Clear search terms"
-
-#~ msgid "Locate database updated successfully."
-#~ msgstr "Locate database updated successfully."
-
-#~ msgid "Last modified"
-#~ msgstr "Last modified"
-
-#~ msgid "Catfish could not find the default file manager."
-#~ msgstr "Catfish could not find the default file manager."
