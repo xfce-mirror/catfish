@@ -1,24 +1,25 @@
-# Dutch translation for catfish-search
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the catfish-search package.
-# Pjotr <pjotrvertaalt@gmail.com>, 2013.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-04-26 05:37+0000\n"
-"PO-Revision-Date: 2018-02-04 19:01+0000\n"
-"Last-Translator: Pjotr12345 <Unknown>\n"
-"Language-Team: Dutch <nl@li.org>\n"
+"Project-Id-Version: catfish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-03 14:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2018\n"
+"Language-Team: Dutch (https://www.transifex.com/xfce/teams/16840/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-27 05:40+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:642
+#: ../catfish/CatfishWindow.py:665
 msgid "Catfish File Search"
 msgstr "Catfish bestandenzoeker"
 
@@ -30,7 +31,8 @@ msgstr "Bestanden zoeken"
 msgid "Search the file system"
 msgstr "Doorzoek het bestandssysteem"
 
-#. TRANSLATORS: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
 msgstr "bestanden;zoeken;vinden;opzoeken;doorzoeken;"
@@ -43,12 +45,14 @@ msgstr "Catfish is een veelzijdig gereedschap voor het zoeken van bestanden."
 msgid "_Open"
 msgstr "_Openen"
 
-#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
 msgstr "Toon in bestandbeheerder"
 
-#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Copy Location"
 msgstr "Locatie kopiëren"
@@ -121,7 +125,7 @@ msgstr "<b>Begindatum</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>Einddatum</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:216
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:217
 msgid "Catfish"
 msgstr "Catfish"
 
@@ -138,7 +142,7 @@ msgstr ""
 msgid "File Type"
 msgstr "Bestandsoort"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1103
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1132
 msgid "Modified"
 msgstr "Gewijzigd"
 
@@ -224,8 +228,7 @@ msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
-"Voor snellere zoekresultaten dient u de gegevensbank met zoekgegevens te "
-"verversen.\n"
+"Voor snellere zoekresultaten dient u de gegevensbank met zoekgegevens te verversen.\n"
 "Deze ingreep vergt beheerdersbevoegdheid."
 
 #: ../catfish/__init__.py:37
@@ -271,45 +274,45 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:83
+#: ../catfish/CatfishWindow.py:84
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (ongeldige codering)"
 
-#: ../catfish/CatfishWindow.py:249
+#: ../catfish/CatfishWindow.py:237
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: ../catfish/CatfishWindow.py:253
+#: ../catfish/CatfishWindow.py:241
 msgid "Never"
 msgstr "Nooit"
 
-#: ../catfish/CatfishWindow.py:610
+#: ../catfish/CatfishWindow.py:633
 msgid "An error occurred while updating the database."
 msgstr "Er is een fout opgetreden bij het bijwerken van de gegevensbank."
 
-#: ../catfish/CatfishWindow.py:612
+#: ../catfish/CatfishWindow.py:635
 msgid "Authentication failed."
 msgstr "Authenticatie is mislukt."
 
-#: ../catfish/CatfishWindow.py:618
+#: ../catfish/CatfishWindow.py:641
 msgid "Authentication cancelled."
 msgstr "Authenticatie geannuleerd."
 
-#: ../catfish/CatfishWindow.py:624
+#: ../catfish/CatfishWindow.py:647
 msgid "Search database updated successfully."
 msgstr "De gegevensbank met zoekgegevens is met succes bijgewerkt."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:699
+#: ../catfish/CatfishWindow.py:722
 msgid "Updating..."
 msgstr "Aan het bijwerken…"
 
-#: ../catfish/CatfishWindow.py:733
+#: ../catfish/CatfishWindow.py:756
 msgid "Stop Search"
 msgstr "Staak zoektocht"
 
-#: ../catfish/CatfishWindow.py:734
+#: ../catfish/CatfishWindow.py:757
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -317,31 +320,31 @@ msgstr ""
 "Doorzoeking is gaande...\n"
 "Druk op de knop Annuleren of op de Esc-toets om te stoppen."
 
-#: ../catfish/CatfishWindow.py:743
+#: ../catfish/CatfishWindow.py:766
 msgid "Begin Search"
 msgstr "Begin doorzoeking"
 
-#: ../catfish/CatfishWindow.py:929
+#: ../catfish/CatfishWindow.py:958
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "‘%s’ kon niet geopend worden."
 
-#: ../catfish/CatfishWindow.py:975
+#: ../catfish/CatfishWindow.py:1004
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "'%s' kon niet opgeslagen worden."
 
-#: ../catfish/CatfishWindow.py:992
+#: ../catfish/CatfishWindow.py:1021
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "'%s' kon niet gewist worden."
 
-#: ../catfish/CatfishWindow.py:1032
+#: ../catfish/CatfishWindow.py:1061
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "'%s' opslaan als..."
 
-#: ../catfish/CatfishWindow.py:1067
+#: ../catfish/CatfishWindow.py:1096
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -350,7 +353,7 @@ msgstr ""
 "Weet u zeker dat u '%s' \n"
 "blijvend wil verwijderen?"
 
-#: ../catfish/CatfishWindow.py:1071
+#: ../catfish/CatfishWindow.py:1100
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -359,43 +362,43 @@ msgstr ""
 "Weet u zeker dat u de %i gekozen \n"
 "bestanden blijvend wil verwijderen?"
 
-#: ../catfish/CatfishWindow.py:1074
+#: ../catfish/CatfishWindow.py:1103
 msgid "If you delete a file, it is permanently lost."
 msgstr "Als u een bestand verwijdert, is het voorgoed verloren."
 
-#: ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:1126
 msgid "Filename"
 msgstr "Bestandnaam"
 
-#: ../catfish/CatfishWindow.py:1099
+#: ../catfish/CatfishWindow.py:1128
 msgid "Size"
 msgstr "Grootte"
 
-#: ../catfish/CatfishWindow.py:1101
+#: ../catfish/CatfishWindow.py:1130
 msgid "Location"
 msgstr "Locatie"
 
-#: ../catfish/CatfishWindow.py:1113
+#: ../catfish/CatfishWindow.py:1142
 msgid "Preview"
 msgstr "Voorbeeldweergave"
 
-#: ../catfish/CatfishWindow.py:1121
+#: ../catfish/CatfishWindow.py:1150
 msgid "Details"
 msgstr "Bijzonderheden"
 
-#: ../catfish/CatfishWindow.py:1340
+#: ../catfish/CatfishWindow.py:1369
 msgid "Today"
 msgstr "Vandaag"
 
-#: ../catfish/CatfishWindow.py:1342
+#: ../catfish/CatfishWindow.py:1371
 msgid "Yesterday"
 msgstr "Gisteren"
 
-#: ../catfish/CatfishWindow.py:1423
+#: ../catfish/CatfishWindow.py:1452
 msgid "No files found."
 msgstr "Geen bestanden gevonden."
 
-#: ../catfish/CatfishWindow.py:1425
+#: ../catfish/CatfishWindow.py:1454
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -404,33 +407,33 @@ msgstr ""
 "specifiek te maken of probeer\n"
 "een andere map."
 
-#: ../catfish/CatfishWindow.py:1431
+#: ../catfish/CatfishWindow.py:1460
 msgid "1 file found."
 msgstr "1 bestand gevonden."
 
-#: ../catfish/CatfishWindow.py:1433
+#: ../catfish/CatfishWindow.py:1462
 #, python-format
 msgid "%i files found."
 msgstr "%i bestanden gevonden."
 
-#: ../catfish/CatfishWindow.py:1439
+#: ../catfish/CatfishWindow.py:1468
 msgid "bytes"
 msgstr "bytes"
 
-#: ../catfish/CatfishWindow.py:1585 ../catfish/CatfishWindow.py:1594
+#: ../catfish/CatfishWindow.py:1576 ../catfish/CatfishWindow.py:1585
 msgid "Searching…"
 msgstr "Aan het zoeken..."
 
-#: ../catfish/CatfishWindow.py:1587
+#: ../catfish/CatfishWindow.py:1578
 msgid "Results will be displayed as soon as they are found."
 msgstr "Resultaten zullen worden getoond zodra ze worden gevonden."
 
-#: ../catfish/CatfishWindow.py:1592
+#: ../catfish/CatfishWindow.py:1583
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Aan het zoeken naar '%s'"
 
-#: ../catfish/CatfishWindow.py:1681
+#: ../catfish/CatfishWindow.py:1672
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Zoekresultaten voor ‘%s’"
@@ -482,13 +485,13 @@ msgstr "Flexibel gereedschap voor het zoeken van bestanden"
 #: ../data/metainfo/catfish.appdata.xml.in.h:2
 msgid ""
 "Catfish is a small, fast, and powerful file search utility. Featuring a "
-"minimal interface with an emphasis on results, it helps users find the files "
-"they need without a file manager. With powerful filters such as modification "
-"date, file type, and file contents, users will no longer be dependent on the "
-"file manager or organization skills."
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
 msgstr ""
-"Catfish is een klein, snel, en krachtig hulpmiddel voor het (door)zoeken van "
-"bestanden. Met een minimale gebruikersschil die de nadruk legt op "
+"Catfish is een klein, snel, en krachtig hulpmiddel voor het (door)zoeken van"
+" bestanden. Met een minimale gebruikersschil die de nadruk legt op "
 "resultaten, helpt het gebruikers om de bestanden te vinden die  ze nodig "
 "hebben, zonder een bestandbeheerder. Met krachtige filters zoals "
 "wijzigingsdatum, bestandtype en bestandinhoud, zijn gebruikers niet langer "
@@ -523,17 +526,17 @@ msgid ""
 msgstr ""
 "Deze versie herstelt verschillende fouten die te maken hebben met het "
 "resultatenvenster. Bestanden worden wederom verwijderd uit de "
-"resultatenlijst na wissen. Middel- en rechtsklikfunctionaliteit is hersteld. "
-"Datumbereikfilters worden nu toegepast overeenkomstig de tijdzone in plaats "
-"van Universal Coordinated Time (UTC)."
+"resultatenlijst na wissen. Middel- en rechtsklikfunctionaliteit is hersteld."
+" Datumbereikfilters worden nu toegepast overeenkomstig de tijdzone in plaats"
+" van Universal Coordinated Time (UTC)."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
 "some of the latest features of the GTK+ toolkit, including optional "
-"headerbars and popover widgets. Password handling has been improved with the "
-"integration of PolicyKit when available."
+"headerbars and popover widgets. Password handling has been improved with the"
+" integration of PolicyKit when available."
 msgstr ""
 "Deze versie bevat een belangrijke vernieuwing van de gebruikersschil, "
 "verbetert de zoeksnelheid, en herstelt verschillende fouten. Het "
@@ -558,8 +561,8 @@ msgstr ""
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
-"supported. An InfoBar is now displayed when the search database is outdated, "
-"and the dialogs used to update the database have been improved."
+"supported. An InfoBar is now displayed when the search database is outdated,"
+" and the dialogs used to update the database have been improved."
 msgstr ""
 "Deze uitgave herstelt een regressiefout waardoor meerdere zoektermen niet "
 "langer werden ondersteund. Er wordt nu een InfoBalk getoond wanneer de "
@@ -576,17 +579,18 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
-"This stable release improved the reliability of the password dialog, cleaned "
-"up unused code, and fixed potential issues with the list and item selection."
+"This stable release improved the reliability of the password dialog, cleaned"
+" up unused code, and fixed potential issues with the list and item "
+"selection."
 msgstr ""
 "Deze stabiele uitgave heeft de betrouwbaarheid van het dialoogscherm voor "
-"het wachtwoord verbeterd, ongebruikte code opgeruimd, en mogelijke problemen "
-"met de selectie van lijst en element verholpen."
+"het wachtwoord verbeterd, ongebruikte code opgeruimd, en mogelijke problemen"
+" met de selectie van lijst en element verholpen."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
-"This release fixed a potential security issue with program startup and fixed "
-"a regression with selecting multiple items."
+"This release fixed a potential security issue with program startup and fixed"
+" a regression with selecting multiple items."
 msgstr ""
 "Deze uitgave heeft een mogelijk veiligheidsprobleem hersteld inzake "
 "programma-opstart en heeft een regressiefout hersteld betreffende het "
@@ -601,81 +605,8 @@ msgid ""
 "translatable and keyboard accelerators have been improved."
 msgstr ""
 "De eerste uitgave in de 1.0.x-reeks introduceerde een opgefriste "
-"gebruikersschil en herstelde een aantal oude fouten. Verbeteringen inzake de "
-"standaardrechten elimineerde een aantal waarschuwingen bij het verpakken "
+"gebruikersschil en herstelde een aantal oude fouten. Verbeteringen inzake de"
+" standaardrechten elimineerde een aantal waarschuwingen bij het verpakken "
 "voor distributies. Toegankelijkheid werd vergroot doordat alle tekenreeksen "
-"vertaalbaar zijn gemaakt en doordat versnellingstoetsen voor het toetsenbord "
-"zijn verbeterd."
-
-#~ msgid "Last modified"
-#~ msgstr "Laatst bewerkt"
-
-#~ msgid "Update Search Index"
-#~ msgstr "Werk de zoekindex bij"
-
-#~ msgid "Custom Time Range"
-#~ msgstr "Aangepast tijdsbestek"
-
-#~ msgid "Done."
-#~ msgstr "Gereed."
-
-#~ msgid "An error occurred while updating locatedb."
-#~ msgstr "Er trad een fout op bij het bijwerken van locatedb."
-
-#~ msgid "Clear search terms"
-#~ msgstr "Zoektermen wissen"
-
-#~ msgid "Enter search terms and press ENTER"
-#~ msgstr "Voer zoektermen in en druk op ENTER"
-
-#~ msgid "<b>Modified</b>"
-#~ msgstr "<b>Aangepast</b>"
-
-#~ msgid "<b>File Type</b>"
-#~ msgstr "<b>Bestandtype</b>"
-
-#~ msgid "Custom File Type"
-#~ msgstr "Aangepast bestandtype"
-
-#~ msgid "Enter file extensions"
-#~ msgstr "Voer bestandextensies in"
-
-#~ msgid "Select existing mimetype"
-#~ msgstr "Kies bestaand mimetype"
-
-#~ msgid "<big><b>Update Search Index</b></big>"
-#~ msgstr "<big><b>Werk zoekindex bij</b></big>"
-
-#~ msgid "Updating database…"
-#~ msgstr "Bezig met bijwerken van gegevensbank..."
-
-#~ msgid "User aborted authentication."
-#~ msgstr "Gebruiker brak authenticatie af."
-
-#~ msgid "Catfish could not find the default open wrapper."
-#~ msgstr ""
-#~ "Catfish kon de standaardtoepassing niet vinden om het bestand te openen."
-
-#~ msgid "_Hidden Files"
-#~ msgstr "_Verborgen bestanden"
-
-#~ msgid "_Show Advanced Settings"
-#~ msgstr "Toon de _geavanceerde instellingen"
-
-#~ msgid "_Fulltext Search"
-#~ msgstr "Volledige _tekst doorzoeken"
-
-#~ msgid ""
-#~ "To provide accurate results, the <i>locate</i> database needs to be "
-#~ "refreshed.\n"
-#~ "This requires sudo (admin) rights."
-#~ msgstr ""
-#~ "Om accurate resultaten te geven, moet de gegevensbank van <i>locate</i> "
-#~ "worden ververst.\n"
-#~ "Dit vereist sudo-rechten (beheerder)."
-
-#~ msgid "Catfish could not find the default file manager."
-#~ msgstr "Catfish kon de standaard-bestandbeheerder niet vinden."
-
-#~ msgid "Locate database updated successfully."
-#~ msgstr "Gegevensbank van Locate is met succes bijgewerkt."
+"vertaalbaar zijn gemaakt en doordat versnellingstoetsen voor het toetsenbord"
+" zijn verbeterd."
