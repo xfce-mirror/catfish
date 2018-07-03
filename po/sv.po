@@ -1,27 +1,25 @@
-# Swedish translation for catfish-search
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
-# This file is distributed under the same license as the catfish-search package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-# Translators:
-# Påvel Nicklasson<pavel@frimix2.se>, 2015-2018
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-04-26 05:37+0000\n"
-"PO-Revision-Date: 2018-01-29 20:07+0000\n"
-"Last-Translator: Påvel Nicklasson <Unknown>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"Project-Id-Version: catfish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-03 14:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>, 2018\n"
+"Language-Team: Swedish (https://www.transifex.com/xfce/teams/16840/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-27 05:40+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
 "Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:642
+#: ../catfish/CatfishWindow.py:665
 msgid "Catfish File Search"
 msgstr "Catfish filsökning"
 
@@ -33,7 +31,8 @@ msgstr "Filsökning"
 msgid "Search the file system"
 msgstr "Sök i filsystemet"
 
-#. TRANSLATORS: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
 msgstr "files;find;locate;lookup;search;"
@@ -46,12 +45,14 @@ msgstr "Catfish är ett mångsidigt sökverktyg."
 msgid "_Open"
 msgstr "_Öppna"
 
-#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
 msgstr "Visa i _filhanterare"
 
-#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Copy Location"
 msgstr "_Kopiera plats"
@@ -124,7 +125,7 @@ msgstr "<b>Startdatum</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>Slutdatum</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:216
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:217
 msgid "Catfish"
 msgstr "Catfish"
 
@@ -140,7 +141,7 @@ msgstr "Sökdatabasen är mer än 7 dagar gammal. Uppdatera nu?"
 msgid "File Type"
 msgstr "Filtyp"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1103
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1132
 msgid "Modified"
 msgstr "Ändrad"
 
@@ -269,45 +270,45 @@ msgstr "Om sökväg och fråga tillhandahålls, börja sök då programmet visas
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:83
+#: ../catfish/CatfishWindow.py:84
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (ogiltig kodning)"
 
-#: ../catfish/CatfishWindow.py:249
+#: ../catfish/CatfishWindow.py:237
 msgid "Unknown"
 msgstr "Okänd"
 
-#: ../catfish/CatfishWindow.py:253
+#: ../catfish/CatfishWindow.py:241
 msgid "Never"
 msgstr "Aldrig"
 
-#: ../catfish/CatfishWindow.py:610
+#: ../catfish/CatfishWindow.py:633
 msgid "An error occurred while updating the database."
 msgstr "Ett fel inträffade då databasen uppdaterades."
 
-#: ../catfish/CatfishWindow.py:612
+#: ../catfish/CatfishWindow.py:635
 msgid "Authentication failed."
 msgstr "Autentisering misslyckades."
 
-#: ../catfish/CatfishWindow.py:618
+#: ../catfish/CatfishWindow.py:641
 msgid "Authentication cancelled."
 msgstr "Autentisering avbröts."
 
-#: ../catfish/CatfishWindow.py:624
+#: ../catfish/CatfishWindow.py:647
 msgid "Search database updated successfully."
 msgstr "Sökdatabas uppdaterades."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:699
+#: ../catfish/CatfishWindow.py:722
 msgid "Updating..."
 msgstr "Uppdateras..."
 
-#: ../catfish/CatfishWindow.py:733
+#: ../catfish/CatfishWindow.py:756
 msgid "Stop Search"
 msgstr "Stoppa sökning"
 
-#: ../catfish/CatfishWindow.py:734
+#: ../catfish/CatfishWindow.py:757
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -315,31 +316,31 @@ msgstr ""
 "Sökning pågår...\n"
 "Klicka på avbrytknappen eller Esc-tangenten för att stoppa."
 
-#: ../catfish/CatfishWindow.py:743
+#: ../catfish/CatfishWindow.py:766
 msgid "Begin Search"
 msgstr "Börja sökning"
 
-#: ../catfish/CatfishWindow.py:929
+#: ../catfish/CatfishWindow.py:958
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Det gick inte att öppna \"%s\"."
 
-#: ../catfish/CatfishWindow.py:975
+#: ../catfish/CatfishWindow.py:1004
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Det gick inte att spara \"%s\"."
 
-#: ../catfish/CatfishWindow.py:992
+#: ../catfish/CatfishWindow.py:1021
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Det gick inte att ta bort \"%s\"."
 
-#: ../catfish/CatfishWindow.py:1032
+#: ../catfish/CatfishWindow.py:1061
 #, python-format
 msgid "Save \"%s\" as…"
 msgstr "Spara \"%s\" som..."
 
-#: ../catfish/CatfishWindow.py:1067
+#: ../catfish/CatfishWindow.py:1096
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -348,7 +349,7 @@ msgstr ""
 "Är du säker på att du vill \n"
 "ta bort \"%s\" permanent?"
 
-#: ../catfish/CatfishWindow.py:1071
+#: ../catfish/CatfishWindow.py:1100
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -357,43 +358,43 @@ msgstr ""
 "Är du säker på att du vill \n"
 "ta bort de %i markerade filerna permanent?"
 
-#: ../catfish/CatfishWindow.py:1074
+#: ../catfish/CatfishWindow.py:1103
 msgid "If you delete a file, it is permanently lost."
 msgstr "Om du tar bort en fil, är den permanent borta."
 
-#: ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:1126
 msgid "Filename"
 msgstr "Filnamn"
 
-#: ../catfish/CatfishWindow.py:1099
+#: ../catfish/CatfishWindow.py:1128
 msgid "Size"
 msgstr "Storlek"
 
-#: ../catfish/CatfishWindow.py:1101
+#: ../catfish/CatfishWindow.py:1130
 msgid "Location"
 msgstr "Plats"
 
-#: ../catfish/CatfishWindow.py:1113
+#: ../catfish/CatfishWindow.py:1142
 msgid "Preview"
 msgstr "Förhandsvisning"
 
-#: ../catfish/CatfishWindow.py:1121
+#: ../catfish/CatfishWindow.py:1150
 msgid "Details"
 msgstr "Detaljer"
 
-#: ../catfish/CatfishWindow.py:1340
+#: ../catfish/CatfishWindow.py:1369
 msgid "Today"
 msgstr "Idag"
 
-#: ../catfish/CatfishWindow.py:1342
+#: ../catfish/CatfishWindow.py:1371
 msgid "Yesterday"
 msgstr "Igår"
 
-#: ../catfish/CatfishWindow.py:1423
+#: ../catfish/CatfishWindow.py:1452
 msgid "No files found."
 msgstr "Inga filer hittades."
 
-#: ../catfish/CatfishWindow.py:1425
+#: ../catfish/CatfishWindow.py:1454
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -401,33 +402,33 @@ msgstr ""
 "Försök gör dina sökningar mindre specificerade\n"
 "eller försök med en annan katalog."
 
-#: ../catfish/CatfishWindow.py:1431
+#: ../catfish/CatfishWindow.py:1460
 msgid "1 file found."
 msgstr "1 fil hittad."
 
-#: ../catfish/CatfishWindow.py:1433
+#: ../catfish/CatfishWindow.py:1462
 #, python-format
 msgid "%i files found."
 msgstr "%i filer hittade."
 
-#: ../catfish/CatfishWindow.py:1439
+#: ../catfish/CatfishWindow.py:1468
 msgid "bytes"
 msgstr "bits"
 
-#: ../catfish/CatfishWindow.py:1585 ../catfish/CatfishWindow.py:1594
+#: ../catfish/CatfishWindow.py:1576 ../catfish/CatfishWindow.py:1585
 msgid "Searching…"
 msgstr "Söker..."
 
-#: ../catfish/CatfishWindow.py:1587
+#: ../catfish/CatfishWindow.py:1578
 msgid "Results will be displayed as soon as they are found."
 msgstr "Resultat kommer att visas direkt då de hittas."
 
-#: ../catfish/CatfishWindow.py:1592
+#: ../catfish/CatfishWindow.py:1583
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Söker efter \"%s\""
 
-#: ../catfish/CatfishWindow.py:1681
+#: ../catfish/CatfishWindow.py:1672
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Sökresultat för \"%s\""
@@ -477,10 +478,10 @@ msgstr "Mångsidigt sökverktyg"
 #: ../data/metainfo/catfish.appdata.xml.in.h:2
 msgid ""
 "Catfish is a small, fast, and powerful file search utility. Featuring a "
-"minimal interface with an emphasis on results, it helps users find the files "
-"they need without a file manager. With powerful filters such as modification "
-"date, file type, and file contents, users will no longer be dependent on the "
-"file manager or organization skills."
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
 msgstr ""
 "Catfish är ett litet, snabbt och kraftfullt filsökverktyg. Med ett minimalt "
 "gränssnitt med betoning på resultat, hjälper det användare att hitta de "
@@ -525,14 +526,14 @@ msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
 "some of the latest features of the GTK+ toolkit, including optional "
-"headerbars and popover widgets. Password handling has been improved with the "
-"integration of PolicyKit when available."
+"headerbars and popover widgets. Password handling has been improved with the"
+" integration of PolicyKit when available."
 msgstr ""
 "Denna version inkluderar omfattande gränssnittsuppdateringar, förbättrad "
-"sökhastighet, och rättar till flera fel. Arbetsflödet har förbättrats, genom "
-"att använda några av de senaste funktionerna i GTK+ verktygslådan, "
-"inkluderande valfria rubrikrader och popover widgets. Lösenordshantering har "
-"förbättrats med integrationen av PolicyKit då detta är tillgängligt."
+"sökhastighet, och rättar till flera fel. Arbetsflödet har förbättrats, genom"
+" att använda några av de senaste funktionerna i GTK+ verktygslådan, "
+"inkluderande valfria rubrikrader och popover widgets. Lösenordshantering har"
+" förbättrats med integrationen av PolicyKit då detta är tillgängligt."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid "This release fixes two new bugs and includes updated translations."
@@ -551,8 +552,8 @@ msgstr ""
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
-"supported. An InfoBar is now displayed when the search database is outdated, "
-"and the dialogs used to update the database have been improved."
+"supported. An InfoBar is now displayed when the search database is outdated,"
+" and the dialogs used to update the database have been improved."
 msgstr ""
 "Denna version ordnar en regression som gjorde att flera söktermer inte "
 "längre stöddes. En Inforad visas nu då sökdatabasen är föråldrad, och "
@@ -568,8 +569,9 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
-"This stable release improved the reliability of the password dialog, cleaned "
-"up unused code, and fixed potential issues with the list and item selection."
+"This stable release improved the reliability of the password dialog, cleaned"
+" up unused code, and fixed potential issues with the list and item "
+"selection."
 msgstr ""
 "Denna stabila version förbättrade lösenordsdialogens tillförlitlighet, "
 "rensade upp oanvänd kod, och ordnade eventuella problem med list- och "
@@ -577,8 +579,8 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
-"This release fixed a potential security issue with program startup and fixed "
-"a regression with selecting multiple items."
+"This release fixed a potential security issue with program startup and fixed"
+" a regression with selecting multiple items."
 msgstr ""
 "Denna version ordnade ett möjligt säkerhetsproblem med programstart och "
 "ordnade en regression med markering av flera objekt."
@@ -592,7 +594,7 @@ msgid ""
 "translatable and keyboard accelerators have been improved."
 msgstr ""
 "Den första versionen i 1.0.x serien introducerar ett uppdaterat gränssnitt "
-"och rättar till ett antal gamla fel. Förbättringar av standardbehörigheterna "
-"eliminerade ett antal varningar vid paketering för distributioner. "
+"och rättar till ett antal gamla fel. Förbättringar av standardbehörigheterna"
+" eliminerade ett antal varningar vid paketering för distributioner. "
 "Tillgängligheten förbättrades i och med att alla strängar har gjorts "
 "översättningsbara och tangentbordsgenvägar har förbättrats."
