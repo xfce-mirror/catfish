@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 14:05+0200\n"
+"POT-Creation-Date: 2018-06-30 21:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2018\n"
 "Language-Team: Dutch (https://www.transifex.com/xfce/teams/16840/nl/)\n"
@@ -39,7 +39,8 @@ msgstr "bestanden;zoeken;vinden;opzoeken;doorzoeken;"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
-msgstr "Catfish is een veelzijdig gereedschap voor het zoeken van bestanden."
+msgstr ""
+"Catfish is een veelzijdig gereedschap voor het (door)zoeken van bestanden."
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
@@ -55,7 +56,7 @@ msgstr "Toon in bestandbeheerder"
 #. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Copy Location"
-msgstr "Locatie kopiëren"
+msgstr "Locatie _kopiëren"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
@@ -71,7 +72,7 @@ msgstr "Bestandextensies"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
-msgstr "odt, png, txt"
+msgstr ".odt, .png, .txt"
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
@@ -140,7 +141,7 @@ msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "File Type"
-msgstr "Bestandsoort"
+msgstr "Bestandssoort"
 
 #: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1132
 msgid "Modified"
@@ -297,7 +298,7 @@ msgstr "Authenticatie is mislukt."
 
 #: ../catfish/CatfishWindow.py:641
 msgid "Authentication cancelled."
-msgstr "Authenticatie geannuleerd."
+msgstr "Authenticatie afgebroken."
 
 #: ../catfish/CatfishWindow.py:647
 msgid "Search database updated successfully."
@@ -318,7 +319,7 @@ msgid ""
 "Press the cancel button or the Escape key to stop."
 msgstr ""
 "Doorzoeking is gaande...\n"
-"Druk op de knop Annuleren of op de Esc-toets om te stoppen."
+"Druk op de knop Afbreken of op de Esc-toets om stil te zetten."
 
 #: ../catfish/CatfishWindow.py:766
 msgid "Begin Search"
@@ -351,7 +352,7 @@ msgid ""
 "permanently delete \"%s\"?"
 msgstr ""
 "Weet u zeker dat u '%s' \n"
-"blijvend wil verwijderen?"
+"blijvend wilt verwijderen?"
 
 #: ../catfish/CatfishWindow.py:1100
 #, python-format
@@ -360,7 +361,7 @@ msgid ""
 "permanently delete the %i selected files?"
 msgstr ""
 "Weet u zeker dat u de %i gekozen \n"
-"bestanden blijvend wil verwijderen?"
+"bestanden blijvend wilt verwijderen?"
 
 #: ../catfish/CatfishWindow.py:1103
 msgid "If you delete a file, it is permanently lost."
@@ -453,7 +454,7 @@ msgstr "Wachtwoord:"
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:196
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "Afbreken"
 
 #: ../catfish_lib/SudoDialog.py:199
 msgid "OK"
@@ -499,7 +500,7 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "This is a minor translations-only release."
-msgstr ""
+msgstr "Dit is een versie die alleen nieuwe vertalingen bevat."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
