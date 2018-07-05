@@ -28,9 +28,9 @@
     </screenshot>
   </screenshots>
 
-  <url type="homepage">https://launchpad.net/catfish-search/</url>
-  <url type="bugtracker">https://bugs.launchpad.net/catfish-search/</url>
-  <url type="help">https://answers.launchpad.net/catfish-search</url>
+  <url type="homepage">https://docs.xfce.org/apps/catfish/start</url>
+  <url type="bugtracker">https://bugzilla.xfce.org</url>
+  <url type="help">https://docs.xfce.org/apps/catfish/start</url>
 
   <update_contact>smd.seandavis@gmail.com</update_contact>
 

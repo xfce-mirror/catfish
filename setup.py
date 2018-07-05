@@ -207,7 +207,7 @@ DistUtilsExtra.auto.setup(
                      'UNIX. The interface is intentionally lightweight and '
                      'simple, using only Gtk+3. You can configure it to your '
                      'needs by using several command line options.',
-    url='https://launchpad.net/catfish-search',
+    url='https://docs.xfce.org/apps/catfish/start',
     data_files=[
         ('share/man/man1', ['catfish.1']),
         ('share/metainfo/', ['data/metainfo/catfish.appdata.xml'])
