@@ -1,8 +1,0 @@
-Planned Features:
-* Rename widgets for autopilot, including GtkWindow to CatfishWindow
-* Add support for Tracker
-* Allow editing of search methods used (locate, find, python-walk)
-
-Other:
-* Improve glade editing. To edit the UI files, launch glade with:
-  'GLADE_CATALOG_SEARCH_PATH=./data/ui glade ./data/ui/*.ui'

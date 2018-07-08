@@ -1,0 +1,2 @@
+To edit the .ui files, run the following command:
+	GLADE_CATALOG_SEARCH_PATH=./data/ui glade ./data/ui/*.ui

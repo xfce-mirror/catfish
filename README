@@ -1,14 +1,25 @@
-Catfish is a handy file searching tool for linux and unix. The interface is intentionally lightweight and simple, using only GTK+3. You can configure it to your needs by using several command line options.
+Catfish is a handy file searching tool for linux and unix.
+The interface is intentionally lightweight and simple, using only GTK+3.
+You can configure it to your needs by using several command line options.
 
-Dependencies: python-gi, gksu, python-pexpect, locate | mlocate
+Dependencies:
+- Python 2 or 3
+- GLib / GObject Python bindings: GdkPixbuf, GLib, GTK 3, Pango, Cairo
+- Pexpect
+- locate or mlocate
 
-For installation instructions read INSTALL.
+For installation instructions, please read INSTALL.
 
-You are encouraged to run 'catfish --help' to check out the various command line options.
+You are encouraged to run 'catfish --help' to check out the various
+command line options.
 
-Please report comments, suggestions and bugs to:
-    Christian Dywan <christian@twotoasts.de>
-    Sean Davis <smd.seandavis@gmail.com>
+Catfish is part of the Xfce project. All project resources can be found
+at the following locations:
 
-Check for new versions at:
-    www.twotoasts.de
+Homepage: https://docs.xfce.org/apps/catfish/start
+Bugs: http://bugzilla.xfce.org/buglist.cgi?product=Catfish
+VCS: https://git.xfce.org/apps/catfish
+Translations: https://www.transifex.com/xfce/public
+
+Please send all bugs, suggestions, and feature requests to the Xfce Bugzilla:
+http://bugzilla.xfce.org/buglist.cgi?product=Catfish
