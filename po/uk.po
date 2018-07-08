@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 14:05+0200\n"
+"POT-Creation-Date: 2018-06-30 21:44-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Yarema aka Knedlyk <yupadmin@gmail.com>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/xfce/teams/16840/uk/)\n"
@@ -35,7 +35,7 @@ msgstr "Пошук у файловій системі"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "файли;пошук;розташування;знаходження;шукати;"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
@@ -491,13 +491,15 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "This is a minor translations-only release."
-msgstr ""
+msgstr "Це є невеликий випуск лише для перекладу."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
+"Цей випуск містить кілька покращень функціонування і чисельні оновлення "
+"перекладу."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
