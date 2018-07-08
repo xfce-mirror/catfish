@@ -39,6 +39,16 @@
   </provides>
 
   <releases>
+    <release version="1.4.6" date="2018-07-15">
+      <description>
+        <_p>This release features several improvements to thumbnail
+        processing and numerous bug fixes. Icon previews have been
+        improved and will now match other applications. Items
+        displayed at the bottom of the results window are now
+        accessible with all desktop themes.
+        </_p>
+      </description>
+    </release>
     <release version="1.4.5" date="2018-04-11">
       <description>
         <_p>This is a minor translations-only release.
