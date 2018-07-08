@@ -1,3 +1,35 @@
+v1.4.6:
+ + General:
+   - Catfish is now part of Xfce! Update your links:
+     - Homepage: https://docs.xfce.org/apps/catfish/start
+     - Bugs: http://bugzilla.xfce.org/buglist.cgi?product=Catfish
+     - VCS: https://git.xfce.org/apps/catfish
+     - Translations: https://www.transifex.com/xfce/public
+   - Upgraded thumbnailer, based on the FD.o Thumbnail Spec:
+     - Improved error handling
+     - Proper permissions for thumbnail directories and files
+     - Logging of failed thumbnail generation
+     - Saving of thumbnail file attributes
+     - Support for relative thumbnail directories
+   - Bumped minimum GTK+ version to 3.16
+ + Bug Fixes:
+   - Added inode/directory mimetype to desktop entry (Xfce #14505)
+   - Replaced stock icons with standard Mime Type icons (Xfce #14503)
+   - Fixed invalid date in appdata (Xfce #14502)
+   - Improved support for hidden files (Xfce #14497)
+   - Improved handling of UnicodeDecodeErrors (Xfce #14490)
+   - Improved handling of PermissionErrors (Xfce #14488)
+   - Enabled launching of executable AppImage files (Xfce #14500)
+   - Improved handling of exceptions when parsing settings (Xfce #14491)
+   - Remember window size and position between sessions (Xfce #14504)
+   - Xfce: Open directories with the preferred file manager (Xfce #14483)
+   - Disabled overlay scrollbars to improve interacting with the results
+     list (Xfce #14487)
+ + Translation Updates:
+   - Albanian, Belarusian, Catalan, Chinese (China), Croatian, Czech, Danish,
+     Dutch, French, Hebrew, Italian, Lithuanian, Norwegian Bokmål, Polish,
+     Portuguese (Brazil), Spanish, Ukrainian
+
 v1.4.5:
  + Translation Updates:
    - Catalan, Danish, Dutch, Lithuanian, Spanish, Swedish, Turkish
