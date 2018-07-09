@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-30 21:44-0400\n"
+"POT-Creation-Date: 2018-07-08 18:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>, 2018\n"
 "Language-Team: Albanian (https://www.transifex.com/xfce/teams/16840/sq/)\n"
@@ -492,10 +492,23 @@ msgstr ""
 "përgjegjësi i kartelave apo aftësi organizative."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
+msgid ""
+"This release features several improvements to thumbnail processing and "
+"numerous bug fixes. Icon previews have been improved and will now match "
+"other applications. Items displayed at the bottom of the results window are "
+"now accessible with all desktop themes."
+msgstr ""
+"Kjo hedhje në qarkullim përmban disa përmirësime të përpunimit të "
+"miniaturave dhe shumë ndreqje të metash. Paraparja e ikonave është "
+"përmirësuar dhe tani do të përputhet me atë të aplikacioneve të tjera. "
+"Objektet e shfaqura në fund të dritares së përfundimeve tani mund të "
+"përdoren me krejt temat grafike të desktopit."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid "This is a minor translations-only release."
 msgstr "Kjo është një hedhje e vockël në qarkullim, vetëm për ca përkthime."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:4
+#: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -503,7 +516,7 @@ msgstr ""
 "Kjo hedhje në qarkullim përfshin disa përmirësime të funksionimit dhe "
 "përditësime të shumta përkthimesh."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:5
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -512,7 +525,7 @@ msgstr ""
 " zonën kohore, në vend se me Kohën e Bashkërenduar Universale (Universal "
 "Coordinated Time - UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -525,7 +538,7 @@ msgstr ""
 "djathtë të miut. Filtrat mbi intervale datash tani zbatohen sipas zonën "
 "kohore, në vend se sipas Kohës së Bashkërenduar Universale (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -540,13 +553,13 @@ msgstr ""
 " Shfrytëzimi i fjalëkalimeve është përmirësuar përmes integrimit të "
 "PolicyKit-it, kur kjo është e mundur."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Kjo hedhje në qarkullim ndreq dy të meta dhe përfshin përditësime të "
 "përkthimeve."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -554,7 +567,7 @@ msgstr ""
 "Kjo hedhje në qarkullim ndreq një hap mbrapa, nën të cilin aplikacioni "
 "s’është në gjendje të niset në disa sisteme."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -565,7 +578,7 @@ msgstr ""
 "është e vjetruar, shfaqet një InfoBar, dhe janë përmirësuar dialogët e "
 "përdorur gjatë përditësimit të bazës së të dhënave."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -574,7 +587,7 @@ msgstr ""
 "përmbushej si duhet, dhe përmirëson trajtimin e ikonave simbolike kur "
 "mungojnë."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -584,7 +597,7 @@ msgstr ""
 "fjalëkalimeve, u pastrua kod i papërdorur, dhe u ndreqën probleme potenciale"
 " me përzgjedhje listash dhe objektesh."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -593,7 +606,7 @@ msgstr ""
 "e programit dhe ndreq një hap mbrapa në përzgjedhjen e shumë zërave "
 "njëherësh."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
