@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 14:05+0200\n"
+"POT-Creation-Date: 2018-07-08 18:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Elishai Eliyahu <e1907@mm.st>, 2018\n"
 "Language-Team: Hebrew (https://www.transifex.com/xfce/teams/16840/he/)\n"
@@ -35,7 +35,7 @@ msgstr "חפש במערכת הקבצים"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "קבצים;מצא;אתר;חפש;חפש;"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
@@ -489,16 +489,27 @@ msgstr ""
 "תלויים במנהל הקבצים או ביכולות ארגון."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
-msgid "This is a minor translations-only release."
+msgid ""
+"This release features several improvements to thumbnail processing and "
+"numerous bug fixes. Icon previews have been improved and will now match "
+"other applications. Items displayed at the bottom of the results window are "
+"now accessible with all desktop themes."
 msgstr ""
+"גרסה זו מאופיינת בכמה שיפורים לעיבוד תמונות ממוזערות ומספר תיקוני באגים. "
+"תצוגות מקדימות של אייקונים שופרו וכעת יתאימו לישומים אחרים. פריטים שמוצגים "
+"בתחתית חלון התוצאות נגישים כעת עם כל ערכות נושא שולחן עבודה."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
+msgid "This is a minor translations-only release."
+msgstr "זוהי גרסה מינורית לתרגומים בלבד."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
-msgstr ""
+msgstr "גרסה זו מאופיינת בכמה שיפורי ביצועים ומספר עדכוני תרגום."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:5
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -506,7 +517,7 @@ msgstr ""
 "גרסה זו מציגה כעת את כל חותמות השעה של הקבצים לפי אזור זמן במקום שעה "
 "אוניברסלית מתואמת (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -518,7 +529,7 @@ msgstr ""
 "מסנני טווח התאריכים מיושמים כעת לפי איזור זמן במקום שעה אוניברסלית מתואמת "
 "(UTC). "
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -531,18 +542,18 @@ msgstr ""
 "GTK+, כולל כותרות אופציונליות ויישומונים קופצים. טיפול בסיסמאות שופר עם "
 "השילוב של ערכת מדיניות כאשר ישימה."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr "גרסה זו מתקנת שני באגים חדשים וכוללת תרגומים מעודכנים."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
 "גרסה זו מתקנת באג רגרסיה בו האפליקציה לא היתה ניתנת להפעלה בכמה מערכות."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -551,7 +562,7 @@ msgstr ""
 "גרסה זו מתקנת באג רגרסיה בו מונחי חיפוש מרובים לא היו עוד נתמכים. כעת מוצגת "
 "שורת מידע כאשר מאגר החיפוש אינו בתוקף, והדו שיח לעדכון המאגר עבר שיפור."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -559,7 +570,7 @@ msgstr ""
 "גרסה זו מתקנת שתי בעיות בהן איתור לא היה מבוצע בצורה תקינה ומשפרת טיפול "
 "באיקונים סימבוליים חסרים."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -568,7 +579,7 @@ msgstr ""
 "גרסה יציבה זו שיפרה את האמינות של דו שיח סיסמאות, ניקתה קוד לא בשימוש, "
 "ותיקנה בעיות פוטנציאליות בבחירת רשימות ופריטים."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -576,7 +587,7 @@ msgstr ""
 "גרסה זו תיקנה בעית אבטחה פוטנציאלית בהפעלת התוכנה ותיקנה באג רגרסיה בבחירת "
 "פריטים מרובים."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
