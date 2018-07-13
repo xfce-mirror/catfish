@@ -20,10 +20,11 @@ command line options.
 
 Catfish is part of the Xfce project. All project resources can be found
 at the following locations:
+
 * Homepage: https://docs.xfce.org/apps/catfish/start
 * Bugs: http://bugzilla.xfce.org/buglist.cgi?product=Catfish
 * VCS: https://git.xfce.org/apps/catfish
-* Translations: [https://www.transifex.com/xfce/public]
+* [Translations](https://www.transifex.com/xfce/public)
 
 Please send all bugs, suggestions, and feature requests to the Xfce Bugzilla:
 
