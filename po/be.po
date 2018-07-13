@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 14:05+0200\n"
+"POT-Creation-Date: 2018-07-08 18:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Zmicer Turok <zmicerturok@gmail.com>, 2018\n"
 "Language-Team: Belarusian (https://www.transifex.com/xfce/teams/16840/be/)\n"
@@ -490,10 +490,22 @@ msgstr ""
 "кіраўніка файлаў."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
+msgid ""
+"This release features several improvements to thumbnail processing and "
+"numerous bug fixes. Icon previews have been improved and will now match "
+"other applications. Items displayed at the bottom of the results window are "
+"now accessible with all desktop themes."
+msgstr ""
+"У гэтым выпуску ўдасканалена апрацоўка мініяцюр і выпраўлена шмат памылак. "
+"Значок папярэдняга прагляду быў ўдасканалены і цяпер адпавядае іншым "
+"праграмам. Элементы, якія адлюстроўваюцца ў ніжняй частцы акна вынікаў, "
+"цяпер даступны для усіх тэм працоўнага стала."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid "This is a minor translations-only release."
 msgstr "Гэта нязначны выпуск з абнаўленнем перакладаў."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:4
+#: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -501,7 +513,7 @@ msgstr ""
 "Гэты выпуск ўключае ў сябе некалькі паляпшэнняў прадукцыйнасці і шматлікія "
 "абнаўленні перакладу."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:5
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -509,7 +521,7 @@ msgstr ""
 "У гэтым выпуску длюстроўваюцца ўсе адбіткі часу файлаў у адпаведнасці з "
 "часавым поясам замест універсальнага зкаардынаванага часу (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -522,7 +534,7 @@ msgstr ""
 " ужываюцца ў адпаведнасці з часавым поясам замест універсальнага "
 "зкаардынаванага часу (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -535,11 +547,11 @@ msgstr ""
 " некаторых з апошніх магчымасцяў GTK + , уключаючы дадатковыя панэлі і "
 "віджэты. Апрацоўка пароляў была палепшана з дапамогаю PolicyKit."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr "У гэтым выпуску выпраўлены дзве новыя хібы і абноўлены пераклады."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -547,7 +559,7 @@ msgstr ""
 "У гэтым выпуску выпраўлена рэгрэсія, калі праграму немагчыма запусціць у "
 "некаторых сістэмах."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -558,7 +570,7 @@ msgstr ""
 " пошуку састарэла, і дыялогавыя вокны, якія выкарыстоўваюцца для абнаўлення "
 "базы даных, былі палепшаны."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -566,7 +578,7 @@ msgstr ""
 "У гэтым выпуску выпраўлены дзве праблемы: месцазнаходжанне не вызначалася "
 "належным чынам, паляпшана апрацоўка знікшых сімвалічных значкоў."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -576,7 +588,7 @@ msgstr ""
 "невыкарыстоўваемы код і выпраўлены патэнцыйныя праблемы са спісам і выбарам "
 "элементаў."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -584,7 +596,7 @@ msgstr ""
 "У гэтым выпуску выпраўлены патэнцыйная праблема бяспекі пры запуску праграмы"
 " і рэгрэсія выбару некалькіх элементаў."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
