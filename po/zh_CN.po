@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-08 18:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Levi Zhou <congzhou821@gmail.com>, 2018\n"
+"Last-Translator: No Body <nemolus@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/xfce/teams/16840/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "搜索文件系统"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "文件;搜寻;定位;查找;搜索;"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
@@ -490,6 +490,8 @@ msgid ""
 "other applications. Items displayed at the bottom of the results window are "
 "now accessible with all desktop themes."
 msgstr ""
+"本次更新包括了对缩略图处理进行的一些改进和诸多错误的修复。 图标预览已得到改进，现在将与其他应用程序匹配。 "
+"搜索结果窗口底部显示的所有项目现在都可以被所有桌面主题访问。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid "This is a minor translations-only release."
@@ -514,6 +516,8 @@ msgid ""
 "click functionality has been restored. Date range filters are now applied "
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
+"本次更新修正了一些关于搜索结果窗口的错误. 文件现在又可以从搜索结果列表中被删除. 鼠标中键和右键的功能被得以恢复. "
+"过滤时间段现在可以根据时区而不是协调时间时 (UTC) 来执行."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
@@ -523,6 +527,8 @@ msgid ""
 "headerbars and popover widgets. Password handling has been improved with the"
 " integration of PolicyKit when available."
 msgstr ""
+"本次更新包括了重大更新的界面，搜索速度的改善，和对诸多错误的修正。利用 "
+"GTK+工具包的一些最新功能，包括可选的标题栏和弹出窗口小部件，工作流程得到了改进。 在可用时集成了 PolicyKit 使密码处理得到了改进。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
@@ -532,33 +538,33 @@ msgstr "本版本修复了两处新的缺陷同时完善了翻译情况"
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
-msgstr ""
+msgstr "此版本修复了本应用在某些系统上无法启动的回归。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
 " and the dialogs used to update the database have been improved."
-msgstr ""
+msgstr "此版本修复了不再支持多个搜索字词的回归。 现在，当搜索数据库过期时，将显示InfoBar，并且用于更新数据库的对话框已得到改进。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
-msgstr ""
+msgstr "此版本修复了定位无法正确执行的两个错误，并改进了对缺少符号图标的处理。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
 "selection."
-msgstr ""
+msgstr "此稳定版本提高了密码对话框的可靠性，清除了未使用的代码，并修复了列表和项目选择的潜在问题。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
-msgstr ""
+msgstr "本次更新修复了程序启动时的潜在安全问题，并修复了选择多个搜索结果的回归。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
@@ -568,3 +574,5 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"1.0.x 系列的第一个版本引入了一个全新界面并修复了许多长期存在的错误。对默认权限的改进消除了许多为发行打包时的警告。 "
+"由于所有字符串都可以被翻译并且键盘加速器被改善，可访问性得以增强。"
