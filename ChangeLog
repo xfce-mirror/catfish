@@ -26,9 +26,10 @@ v1.4.6:
    - Remember window size and position between sessions (Xfce #14504)
    - Xfce: Open directories with the preferred file manager (Xfce #14483)
  + Translation Updates:
-   - Albanian, Belarusian, Catalan, Chinese (China), Croatian, Czech, Danish,
-     Dutch, French, Hebrew, Italian, Lithuanian, Norwegian Bokmål, Polish,
-     Portuguese (Brazil), Russian, Spanish, Ukrainian
+   - Albanian, Belarusian, Catalan, Chinese (China), Chinese (Taiwan),
+     Croatian, Czech, Danish, Dutch, French, Galician, Greek, Hebrew,
+     Italian, Lithuanian, Norwegian Bokmål, Polish, Portuguese,
+     Portuguese (Brazil), Russian, Spanish, Swedish, Ukrainian
 
 v1.4.5:
  + Translation Updates:

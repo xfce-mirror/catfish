@@ -28,6 +28,8 @@
     </screenshot>
   </screenshots>
 
+  <translation type="gettext">catfish</translation>
+
   <url type="homepage">https://docs.xfce.org/apps/catfish/start</url>
   <url type="bugtracker">https://bugzilla.xfce.org</url>
   <url type="help">https://docs.xfce.org/apps/catfish/start</url>
