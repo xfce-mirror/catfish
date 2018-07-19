@@ -35,8 +35,7 @@ msgstr "Pesquisar no sistema de arquivos"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
-"files;find;locate;lookup;search;arquivos;buscar;busca;localizar;encontrar;pesquisar;pesquisa;"
+msgstr "arquivos;buscar;localizar;encontrar;pesquisar"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
