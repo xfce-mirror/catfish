@@ -145,7 +145,7 @@ msgstr "Type de fichier"
 
 #: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1132
 msgid "Modified"
-msgstr "Date de modification"
+msgstr "Date de modification  "
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgctxt ""
