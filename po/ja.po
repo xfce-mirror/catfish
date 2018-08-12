@@ -492,22 +492,23 @@ msgid ""
 "other applications. Items displayed at the bottom of the results window are "
 "now accessible with all desktop themes."
 msgstr ""
+"このリリースでは、サムネイル処理と多数のバグ修正によっていくつか問題が改善されています。アイコンのプレビューが改善され、他のアプリケーションと一致するようになりました。結果ウィンドウの下部に表示される項目は、すべてのデスクトップテーマでアクセスできるようになりました。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid "This is a minor translations-only release."
-msgstr ""
+msgstr "これは翻訳のみのマイナーリリースです。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
-msgstr ""
+msgstr "このリリースでは、いくつかのパフォーマンスの改善と多くの翻訳更新が行われています。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
-msgstr ""
+msgstr "今回のリリースでは、世界協定時刻 (UTC) の代わりにタイムゾーンに従って、全てのファイルタイムスタンプが表示されるようになりました。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
@@ -516,6 +517,8 @@ msgid ""
 "click functionality has been restored. Date range filters are now applied "
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
+"このリリースでは、結果ウィンドウに関するいくつかのバグが修正されています。 ファイルは削除されたとき、結果リストから再び削除されます。 "
+"中間および右クリック機能が復活しました。 日付範囲フィルタは、世界協定時刻 (UTC) ではなく、タイムゾーンに従って適用されるようになりました。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
@@ -525,16 +528,18 @@ msgid ""
 "headerbars and popover widgets. Password handling has been improved with the"
 " integration of PolicyKit when available."
 msgstr ""
+"このリリースでは、重要なインタフェースの更新、検索速度の向上、いくつかのバグの修正が行われています。オプションのヘッダーバーやポップオーバーウィジェットを含む、GTK+"
+" ツールキットの最新機能のいくつかを利用することによってワークフローが向上しました。 PolicyKit の統合により、パスワード処理が改善されました。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
-msgstr ""
+msgstr "このリリースでは、2つの新しいバグ修正と翻訳の更新が含まれます。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
-msgstr ""
+msgstr "このリリースでは、一部のシステムでアプリケーションを起動できないリグレッション問題が修正されています。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
@@ -548,7 +553,7 @@ msgstr ""
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
-msgstr ""
+msgstr "このリリースでは、locate が正しく実行されない問題と欠けているシンボリックアイコンの処理を改善する問題が修正されています。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
