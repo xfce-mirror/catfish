@@ -218,7 +218,7 @@ msgstr "<b>Base de données :</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
-msgstr "<b>Mis à jour :</b>"
+msgstr "<b>Dernière mise à jour :</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
@@ -289,8 +289,7 @@ msgstr "Jamais"
 
 #: ../catfish/CatfishWindow.py:633
 msgid "An error occurred while updating the database."
-msgstr ""
-"Une erreur s’est produite lors de la mise à jour de la base de données."
+msgstr "Une erreur est survenue lors de la mise à jour de la base de données."
 
 #: ../catfish/CatfishWindow.py:635
 msgid "Authentication failed."
@@ -319,7 +318,7 @@ msgid ""
 "Press the cancel button or the Escape key to stop."
 msgstr ""
 "La recherche est en cours…\n"
-"Appuyer sur le bouton Annuler ou la touche Echap pour arrêter."
+"Appuyez sur le bouton Annuler ou sur la touche Échap pour arrêter."
 
 #: ../catfish/CatfishWindow.py:766
 msgid "Begin Search"
@@ -351,7 +350,7 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
-"Êtes-vous sûr de vouloir \n"
+"Voulez-vous vraiment \n"
 "supprimer définitivement « %s » ?"
 
 #: ../catfish/CatfishWindow.py:1100
@@ -360,7 +359,7 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
-"Êtes-vous sûr de vouloir \n"
+"Voulez-vous vraiment \n"
 "supprimer définitivement les %i fichiers sélectionnés ?"
 
 #: ../catfish/CatfishWindow.py:1103
@@ -550,7 +549,7 @@ msgid ""
 "headerbars and popover widgets. Password handling has been improved with the"
 " integration of PolicyKit when available."
 msgstr ""
-"Cette version inclut un rafraîchissement important de l’interface, une "
+"Cette version comporte un rafraîchissement important de l’interface, une "
 "amélioration de la vitesse de recherche et corrige plusieurs bogues. Le flux"
 " de travail a été amélioré en utilisant quelques-unes des dernières "
 "fonctionnalités de la boîte à outils GTK+, incluant des barres d’en-tête "
@@ -577,18 +576,20 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated,"
 " and the dialogs used to update the database have been improved."
 msgstr ""
-"Cette version corrige une régression où plusieurs termes de recherche "
-"n’étaient plus pris en charge. Une barre d’informations s’affiche désormais "
-"lorsque la base des données recherchées n’est pas à jour. De plus, la boîte "
-"de dialogue de mise à jour de la base de données a été améliorée."
+"Cette version corrige une régression dans laquelle plusieurs termes de "
+"recherche n’étaient plus pris en charge. Une barre d’informations s’affiche "
+"désormais lorsque la base des données de recherche n’est plus à jour. De "
+"plus, la boîte de dialogue de mise à jour de la base de données a été "
+"améliorée."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
-"Cette version corrige deux problèmes où la localisation n’était pas exécutée"
-" correctement et améliore la gestion des icônes symboliques manquantes."
+"Cette version corrige deux problèmes dans lesquels la localisation ne serait"
+" pas exécutée correctement et améliore la gestion des icônes symboliques "
+"manquantes."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
@@ -597,7 +598,7 @@ msgid ""
 "selection."
 msgstr ""
 "Cette version stable a amélioré la fiabilité de la boîte de dialogue du mot "
-"de passe, nettoyé le code inutilisé, et corrige les problèmes potentiels "
+"de passe, nettoyé le code inutilisé, et corrigé les problèmes potentiels "
 "lors de la sélection des listes et des éléments."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
@@ -605,9 +606,9 @@ msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr ""
-"Cette version a corrigé une faille de sécurité potentielle sur le programme "
-"de démarrage ainsi qu’une régression avec la sélection multiples d’éléments "
-"."
+"Cette version a corrigé une faille de sécurité potentielle dans le programme"
+" de démarrage ainsi qu’une régression avec la sélection multiples d’éléments"
+" ."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
@@ -621,5 +622,5 @@ msgstr ""
 "a corrigé un certain nombre de bogues de longue date. Les améliorations "
 "apportées aux autorisations par défaut ont supprimé un certain nombre "
 "d’avertissements lors de l’empaquetage pour les distributions. "
-"L’accessibilité a été renforcée, toutes les chaînes ont été rendues "
+"L’accessibilité a été améliorée, toutes les chaînes ont été rendues "
 "traduisibles et les raccourcis clavier ont été améliorés."
