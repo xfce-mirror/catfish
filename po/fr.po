@@ -262,7 +262,7 @@ msgstr "Inclure les fichiers cachés"
 
 #: ../catfish/__init__.py:57
 msgid "Perform fulltext search"
-msgstr "Rechercher plein texte"
+msgstr "Recherche plein texte"
 
 #: ../catfish/__init__.py:59
 msgid ""
@@ -456,7 +456,7 @@ msgstr "Annuler"
 
 #: ../catfish_lib/SudoDialog.py:199
 msgid "OK"
-msgstr "OK"
+msgstr "Valider"
 
 #: ../catfish_lib/SudoDialog.py:220
 msgid ""
@@ -535,7 +535,7 @@ msgid ""
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
 "Cette version corrige plusieurs bogues relatifs à la fenêtre des résultats. "
-"Les fichiers sont encore une fois enlevés de la liste des résultats quand "
+"Les fichiers sont une nouvelle fois enlevés de la liste des résultats quand "
 "ils sont supprimés. Les fonctionnalités « clic du milieu / clic droit » ont "
 "été restaurées. Les filtres d’intervalle de date sont maintenant appliqués "
 "selon le fuseau horaire (timezone), à la place du temps universel coordonné "
