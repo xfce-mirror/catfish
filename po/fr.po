@@ -186,7 +186,7 @@ msgstr "Affic_her les fichiers cachés"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
-msgstr "Rechercher dans le contenu des dossiers"
+msgstr "Rechercher dans le _contenu des dossiers"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Exact Match"
@@ -230,7 +230,7 @@ msgid ""
 "This action requires administrative rights."
 msgstr ""
 "Pour des résultats de recherche plus rapides, la base de données de recherche a besoin d’être actualisée.\n"
-"Cette action nécessite les droits administrateurs."
+"Cette action nécessite les droits administrateur."
 
 #: ../catfish/__init__.py:37
 msgid "Usage: %prog [options] path query"
