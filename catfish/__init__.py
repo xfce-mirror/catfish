@@ -48,7 +48,7 @@ def parse_options():
     parser.add_option('', '--iso-time', action='store_true',
                       dest='time_iso', help=_('Display time in ISO format'))
     # Translators: Do not translate PATH, it is a variable.
-    parser.add_option('', '--path', help=optparse.SUPPRESS_HELP)
+    parser.add_option('', '--path', help=_("Set the default search path"))
     parser.add_option('', '--exact', action='store_true',
                       help=_('Perform exact match'))
     parser.add_option('', '--hidden', action='store_true',
