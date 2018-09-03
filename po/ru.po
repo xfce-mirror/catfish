@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-08 18:48-0400\n"
+"POT-Creation-Date: 2018-09-02 07:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Igor <f2404@yandex.ru>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/xfce/teams/16840/ru/)\n"
@@ -236,7 +236,7 @@ msgid "Usage: %prog [options] path query"
 msgstr "Использование: %prog [опции] путь запрос"
 
 #: ../catfish/__init__.py:42
-msgid "Show debug messages (-vv debugs catfish_lib also)"
+msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr "Показывать сообщения отладки (-vv также отлаживает catfish_lib)"
 
 #: ../catfish/__init__.py:45
@@ -250,6 +250,11 @@ msgstr "Использовать эскизы"
 #: ../catfish/__init__.py:49
 msgid "Display time in ISO format"
 msgstr "Отображать время в формате ISO"
+
+#. Translators: Do not translate PATH, it is a variable.
+#: ../catfish/__init__.py:51
+msgid "Set the default search path"
+msgstr "Задать путь поиска по умолчанию"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
