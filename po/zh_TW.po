@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-08 18:48-0400\n"
+"POT-Creation-Date: 2018-09-02 07:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>, 2018\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/xfce/teams/16840/zh_TW/)\n"
@@ -235,8 +235,8 @@ msgid "Usage: %prog [options] path query"
 msgstr "使用方法：%prog [選項] 路徑 搜尋字詞"
 
 #: ../catfish/__init__.py:42
-msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr "顯示除錯訊息（使用 -vv 同時為 catfish_lib 除錯）"
+msgid "Show debug messages (-vv will also debug catfish_lib)"
+msgstr "顯示除錯訊息（-vv 將會同時除錯 catfish_lib）"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
@@ -249,6 +249,11 @@ msgstr "使用縮圖"
 #: ../catfish/__init__.py:49
 msgid "Display time in ISO format"
 msgstr "以 ISO 格式顯示時間"
+
+#. Translators: Do not translate PATH, it is a variable.
+#: ../catfish/__init__.py:51
+msgid "Set the default search path"
+msgstr "設定預設搜尋路徑"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
