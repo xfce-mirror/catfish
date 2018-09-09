@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-08 18:48-0400\n"
+"POT-Creation-Date: 2018-09-02 07:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: José Vieira <jvieira33@sapo.pt>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/xfce/teams/16840/pt/)\n"
@@ -67,7 +67,7 @@ msgstr "_Apagar"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr "Extensões de Ficheiros"
+msgstr "Extensões de ficheiros"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
@@ -87,7 +87,7 @@ msgstr "Imagens"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "Music"
-msgstr "Musica"
+msgstr "Música"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Videos"
@@ -115,7 +115,7 @@ msgstr "Personalizado"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Go to Today"
-msgstr "Ir para Hoje"
+msgstr "Ir para hoje"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "<b>Start Date</b>"
@@ -123,7 +123,7 @@ msgstr "<b>Data inicial</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "<b>End Date</b>"
-msgstr "b>Data final</b>"
+msgstr "<b>Data final</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:217
 msgid "Catfish"
@@ -180,7 +180,7 @@ msgstr "Miniaturas"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show _Hidden Files"
-msgstr "Mostrar _Ficheiros Ocultos"
+msgstr "Mostrar _ficheiros ocultos"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
@@ -192,7 +192,7 @@ msgstr "_Correspondência exata"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "Show _Sidebar"
-msgstr "Mostrar _Barra lateral"
+msgstr "Mostrar _barra lateral"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Update Search Index…"
@@ -220,7 +220,7 @@ msgstr "<b>Atualizada:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
-msgstr "big><b>Atualizar a Base de Dados de Pesquisa</b></big>"
+msgstr "<big><b>Atualizar a base de dados de pesquisa</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
@@ -235,8 +235,8 @@ msgid "Usage: %prog [options] path query"
 msgstr "Uso: %prog [opções] consulta de caminho"
 
 #: ../catfish/__init__.py:42
-msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr "Mostrar mensagens de depuração (-vv debugs catfish_lib também)"
+msgid "Show debug messages (-vv will also debug catfish_lib)"
+msgstr "Mostrar mensagens de debug (-vv também faz debug de catfish_lib)"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
@@ -249,6 +249,11 @@ msgstr "Usar miniaturas"
 #: ../catfish/__init__.py:49
 msgid "Display time in ISO format"
 msgstr "Exibir hora no formato ISO"
+
+#. Translators: Do not translate PATH, it is a variable.
+#: ../catfish/__init__.py:51
+msgid "Set the default search path"
+msgstr "Definir a path de busca por omissão"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
@@ -500,10 +505,10 @@ msgid ""
 "now accessible with all desktop themes."
 msgstr ""
 "Esta versão apresenta diversas melhorias no processamento de miniaturas e "
-"numerosas resoluções de deficiências (bugs). As pré-visualizações de ícones "
-"foram melhoradas e agora estão ao nível de outras aplicações. Os itens "
-"exibidos no fundo da janela de resultados são agora acessíveis com todos os "
-"temas de ambiente de trabalho."
+"numerosos erros corrigidos. As pré-visualizações de ícones foram melhoradas "
+"e agora estão ao nível de outras aplicações. Os itens exibidos no fundo da "
+"janela de resultados são agora acessíveis com todos os temas de ambiente de "
+"trabalho."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid "This is a minor translations-only release."
