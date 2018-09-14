@@ -6,11 +6,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 14:05+0200\n"
+"POT-Creation-Date: 2018-09-02 07:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Cybertramp <paran_son@outlook.com>, 2018\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/xfce/teams/16840/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -235,8 +235,8 @@ msgid "Usage: %prog [options] path query"
 msgstr "사용: %p rog [옵션] 경로 쿼리"
 
 #: ../catfish/__init__.py:42
-msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr "디버그 메시지 표시 (-vv 옵션은 catfish_lib 또한 디버그)"
+msgid "Show debug messages (-vv will also debug catfish_lib)"
+msgstr ""
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
@@ -249,6 +249,11 @@ msgstr "미리보기 사용"
 #: ../catfish/__init__.py:49
 msgid "Display time in ISO format"
 msgstr "ISO 포맷으로 시간 표시"
+
+#. Translators: Do not translate PATH, it is a variable.
+#: ../catfish/__init__.py:51
+msgid "Set the default search path"
+msgstr ""
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
@@ -482,22 +487,30 @@ msgstr ""
 "기술에 의존 할 필요가 없게 합니다."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
-msgid "This is a minor translations-only release."
+msgid ""
+"This release features several improvements to thumbnail processing and "
+"numerous bug fixes. Icon previews have been improved and will now match "
+"other applications. Items displayed at the bottom of the results window are "
+"now accessible with all desktop themes."
 msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
+msgid "This is a minor translations-only release."
+msgstr "이 출시판은 사소한 번역을 추가했습니다."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:5
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr "이 릴리즈는 UTC(세계협정표준시)에 따른 모든 타임 스탬프를 표시합니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -507,7 +520,7 @@ msgstr ""
 "이 릴리즈는 결과 창에 관련된 몇몇 버그가 수정되었습니다. 파일을 삭제하면 목록에서 다시 한 번 제거됩니다. 중간과 오른쪽 클릭 기능은 "
 "복구되었습니다. 날짜 범위 필터는 이제 UTC(세계협정표준시)에 따라 적용됩니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -519,17 +532,17 @@ msgstr ""
 "GTK+ toolkit의 최신 기능을 사용하며, 추가적으로 더 나은 위젯과 헤더바를 추가 하고 있습니다. 암호처리기능은 "
 "PolicyKit이 이용가능 할때 더 향상됩니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr "이 릴리즈는 2가지의 새로운 버그를 수정 하고 번역 업데이트를 포함합니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr "이 릴리즈는 일부 시스템에서 실행 불가능한 문제를 해결했습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -538,13 +551,13 @@ msgstr ""
 "이 릴리즈는 다중 검색이 불가능 했던 점이 수정되었습니다. 정보 표시줄에 검색 데이터베이스가 오래된 경우 표시되며, 데이터베이스 "
 "업데이트를 하기위한 대화상자가 향상되었습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr "이 릴리즈는 locate가 제대로 실행되지 않고 누락 된 기호 아이콘의 처리를 향상시키는 두 가지 문제를 수정합니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -553,13 +566,13 @@ msgstr ""
 "이번 안정적인 릴리즈는 암호 대화상자의 신뢰성을 향상시키고, 사용되지 않는 코드를 청소하였으며, 잠재적인 목록과 요소의 선택 문제를 "
 "수정하였습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr "이 릴리즈는 프로그램이 시작될 때 잠재적인 보안 문제를 해결하였고 여러개를 선택 할 때의 회귀문제를 해결 하였습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
