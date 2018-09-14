@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 14:05+0200\n"
+"POT-Creation-Date: 2018-09-02 07:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/xfce/teams/16840/bg/)\n"
@@ -35,7 +35,7 @@ msgstr "Търсене във файловата система"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "файлове;намиране;локализиране;издирване;търсене;"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
@@ -165,7 +165,7 @@ msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
-msgstr " Икона за повече опции"
+msgstr " иконата за повече опции."
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
@@ -236,8 +236,10 @@ msgid "Usage: %prog [options] path query"
 msgstr "Употреба: %напредък [options] път заявка"
 
 #: ../catfish/__init__.py:42
-msgid "Show debug messages (-vv debugs catfish_lib also)"
-msgstr "Покажи доклад за  грешка (-vv debugs catfish_lib also)"
+msgid "Show debug messages (-vv will also debug catfish_lib)"
+msgstr ""
+"Показване на съобщенията за отстраняване на грешки (-vv will also debug "
+"catfish_lib)"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
@@ -245,11 +247,16 @@ msgstr "Използвай големи икони"
 
 #: ../catfish/__init__.py:47
 msgid "Use thumbnails"
-msgstr "Използвай умалени изображения"
+msgstr "Използвай миниатюри"
 
 #: ../catfish/__init__.py:49
 msgid "Display time in ISO format"
 msgstr "Покажи времето в ISO формат"
+
+#. Translators: Do not translate PATH, it is a variable.
+#: ../catfish/__init__.py:51
+msgid "Set the default search path"
+msgstr "Задаване на пътя за търсене по подразбиране"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
@@ -296,7 +303,7 @@ msgstr "Идентификацията е неуспешна."
 
 #: ../catfish/CatfishWindow.py:641
 msgid "Authentication cancelled."
-msgstr "Идентификацията е отменена"
+msgstr "Идентификацията е отменена."
 
 #: ../catfish/CatfishWindow.py:647
 msgid "Search database updated successfully."
@@ -341,7 +348,7 @@ msgstr "«%s» не може да се изтрие."
 #: ../catfish/CatfishWindow.py:1061
 #, python-format
 msgid "Save \"%s\" as…"
-msgstr "Съхрани «%s» като…"
+msgstr "Запази «%s» като…"
 
 #: ../catfish/CatfishWindow.py:1096
 #, python-format
@@ -429,12 +436,12 @@ msgstr "Резултатите ще бъдат показани скоро ил�
 #: ../catfish/CatfishWindow.py:1583
 #, python-format
 msgid "Searching for \"%s\""
-msgstr "Търсене за \"%s\""
+msgstr "Търсене на \"%s\""
 
 #: ../catfish/CatfishWindow.py:1672
 #, python-format
 msgid "Search results for \"%s\""
-msgstr "Резултати от търсенето за \"%s\""
+msgstr "Резултати от търсенето на \"%s\""
 
 #: ../catfish_lib/SudoDialog.py:138
 msgid "Password Required"
@@ -494,16 +501,31 @@ msgstr ""
 "файловия мениджър или организационни умения."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
-msgid "This is a minor translations-only release."
+msgid ""
+"This release features several improvements to thumbnail processing and "
+"numerous bug fixes. Icon previews have been improved and will now match "
+"other applications. Items displayed at the bottom of the results window are "
+"now accessible with all desktop themes."
 msgstr ""
+"Това издание включва няколко подобрения в обработката на миниатюри и "
+"многобройни корекции на програмни грешки. Визуализация на иконите са "
+"подобрени и сега ще съответстват на останалите приложения. Елементите, "
+"показани в долната част на прозореца за резултатите, вече са приложими за "
+"всички теми на работния плот."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
+msgid "This is a minor translations-only release."
+msgstr "Това е издания с незначително обновяване - само на преводите."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
+"Това издание включва няколко подобрения на производителността и множество "
+"актуализации на преводите."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:5
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -511,7 +533,7 @@ msgstr ""
 "Тази версия вече показва всички файлови времеви отпечатъци според часовата "
 "зона вместо универсално координирано време (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -524,7 +546,7 @@ msgstr ""
 "Филтрите за диапазон от време сега се прилагат според часова зона вместо "
 "Универсално координирано време (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -538,12 +560,12 @@ msgstr ""
 "включително опционални headerbares и popup widgets. Работата с паролата бе "
 "подобрена с интегрирането на PolicyKit, когато е налице."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Тази версия поправя две нови грешки и включва актуализиране на преводите."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -551,7 +573,7 @@ msgstr ""
 "Тази версия отстранява регресия, при която приложението не може да стартира "
 "при някои системи."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -562,7 +584,7 @@ msgstr ""
 " търсене е остаряла и диалозите, използвани за актуализиране на базата "
 "данни, са подобрени."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -570,7 +592,7 @@ msgstr ""
 "Тази версия отстранява два проблема, при които локализирането не би било "
 "правилно изпълнено и подобрява работата с липсващи символни икони."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -580,7 +602,7 @@ msgstr ""
 "парола, изчистен е непотребен код и са фиксираните потенциални проблеми със "
 "списъка и избора на елементи."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -588,7 +610,7 @@ msgstr ""
 "Тази версия отстрани потенциален проблем със сигурността при стартиране на "
 "програмата и фиксира регресия с избиране на няколко елемента."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
