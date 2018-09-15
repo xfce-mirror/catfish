@@ -115,7 +115,7 @@ msgstr "Personalitza"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Go to Today"
-msgstr "Ves a la data d'avui"
+msgstr "Vés a la data d'avui"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "<b>Start Date</b>"
