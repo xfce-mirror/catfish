@@ -237,6 +237,7 @@ msgstr "Употреба: %prog [могућности] путања упита"
 #: ../catfish/__init__.py:42
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr ""
+"Приказуј поруке исправака грешака (-vv ће пратити грешке библиотеке сома)"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
@@ -253,7 +254,7 @@ msgstr "Приказуј време у облику ИСО"
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:51
 msgid "Set the default search path"
-msgstr ""
+msgstr "Постави подразумевану путању претраге"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
