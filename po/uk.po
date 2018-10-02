@@ -501,6 +501,9 @@ msgid ""
 "other applications. Items displayed at the bottom of the results window are "
 "now accessible with all desktop themes."
 msgstr ""
+"У цьому випуску зроблено покращення обробки мініатюр та виправлено чисельні "
+"помилки. Покращено перегляд значків, також для інших програм. Елементи, що "
+"показуються внизу вікна, тепер доступні всім темам робочого столу."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid "This is a minor translations-only release."
