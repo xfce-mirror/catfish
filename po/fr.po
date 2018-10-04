@@ -251,7 +251,7 @@ msgstr "Utiliser des miniatures"
 
 #: ../catfish/__init__.py:49
 msgid "Display time in ISO format"
-msgstr "Afficher le temps au format ISO"
+msgstr "Afficher l’heure au format ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:51
