@@ -230,7 +230,7 @@ msgid ""
 "This action requires administrative rights."
 msgstr ""
 "Pour des résultats de recherche plus rapides, la base de données de recherche a besoin d’être actualisée.\n"
-"Cette action nécessite les droits administrateur."
+"Cette action nécessite les droits d’administrateur."
 
 #: ../catfish/__init__.py:37
 msgid "Usage: %prog [options] path query"
@@ -283,7 +283,7 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:84
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr "%s (encodage non valide)"
+msgstr "%s (codage non valide)"
 
 #: ../catfish/CatfishWindow.py:237
 msgid "Unknown"
