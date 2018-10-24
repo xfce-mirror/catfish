@@ -237,7 +237,7 @@ msgstr "Uso: %prog [opciones] ruta consulta"
 
 #: ../catfish/__init__.py:42
 msgid "Show debug messages (-vv will also debug catfish_lib)"
-msgstr ""
+msgstr "Mostrar mensajes de depuración (-vv depurará catfish_lib también)"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
@@ -254,7 +254,7 @@ msgstr "Mostrar la hora en formato ISO"
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:51
 msgid "Set the default search path"
-msgstr ""
+msgstr "Establecer la ruta de búsquedas predeterminada"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
