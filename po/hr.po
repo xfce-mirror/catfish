@@ -3,14 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Xfce Bot <transifex@xfce.org>, 2018
+# Edin Veskovic <edin.lockedin@gmail.com>, 2018
+# Ivica  Kolić <ikoli@yahoo.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-02 07:56-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Edin Veskovic <edin.lockedin@gmail.com>, 2018\n"
+"PO-Revision-Date: 2018-06-28 22:08+0000\n"
+"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>, 2018\n"
 "Language-Team: Croatian (https://www.transifex.com/xfce/teams/16840/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -540,6 +545,7 @@ msgstr ""
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
+"Ovo izdanje rješava dvije nove greške i uključuje ažurirane prijevode."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
