@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Xfce Bot <transifex@xfce.org>, 2018
+# Zmicer Turok <zmicerturok@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-02 07:56-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Zmicer Turok <zmicerturok@gmail.com>, 2018\n"
 "Language-Team: Belarusian (https://www.transifex.com/xfce/teams/16840/be/)\n"
 "MIME-Version: 1.0\n"
@@ -236,7 +240,7 @@ msgstr "Выкарыстанне: %prog [параметры] шлях запыт
 
 #: ../catfish/__init__.py:42
 msgid "Show debug messages (-vv will also debug catfish_lib)"
-msgstr ""
+msgstr "Паказваць адладачныя паведамленні (-vv таксама адладзіць catfish_lib)"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
@@ -253,7 +257,7 @@ msgstr "Адлюстроўваць час у фармаце ISO"
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:51
 msgid "Set the default search path"
-msgstr ""
+msgstr "Прызначыць прадвызначаны шлях пошуку"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
@@ -298,11 +302,11 @@ msgstr "Памылка аўтэнтыфікацыі."
 
 #: ../catfish/CatfishWindow.py:641
 msgid "Authentication cancelled."
-msgstr "Аўтэнтыфікацыя скасавана."
+msgstr "Аўтэнтыфікацыя скасаваная."
 
 #: ../catfish/CatfishWindow.py:647
 msgid "Search database updated successfully."
-msgstr "База даных пошуку паспяхова абноўлена."
+msgstr "База даных пошуку паспяхова абноўленая."
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:722
@@ -523,7 +527,7 @@ msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
-"У гэтым выпуску длюстроўваюцца ўсе адбіткі часу файлаў у адпаведнасці з "
+"У гэтым выпуску адлюстроўваюцца ўсе адбіткі часу файлаў у адпаведнасці з "
 "часавым поясам замест універсальнага зкаардынаванага часу (UTC)."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
@@ -611,6 +615,6 @@ msgid ""
 msgstr ""
 "У першым выпуск серыі 1.0.x прадстаўлены абноўлены інтэрфейс і выпраўлены "
 "шэраг даўніх хібаў. Пераразмеркаванне прадвызначаных дазволаў дапамагло "
-"ліквідаваць шэраг папярэджанняў пры стварэнні пакункаў. Былі палепшаны "
-"спецыяльныя магчымасці: усе радкі можна перакласці і перароблены "
+"ліквідаваць шэраг папярэджанняў пры стварэнні пакункаў. Былі палепшаныя "
+"адмысловыя магчымасці: усе радкі можна перакласці і пераробленыя "
 "паскаральнікі клавіятуры."
