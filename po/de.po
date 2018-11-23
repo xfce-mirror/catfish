@@ -3,14 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Xfce Bot <transifex@xfce.org>, 2018
+# Vinzenz Vietzke <vinz@vinzv.de>, 2018
+# Tobias Bannert <tobannert@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-02 07:56-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Vinzenz Vietzke <vinz@vinzv.de>, 2018\n"
+"PO-Revision-Date: 2018-06-28 22:08+0000\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>, 2018\n"
 "Language-Team: German (https://www.transifex.com/xfce/teams/16840/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -236,7 +241,7 @@ msgstr "Nutzung: %prog [Optionen] Pfad Suchbegriff"
 
 #: ../catfish/__init__.py:42
 msgid "Show debug messages (-vv will also debug catfish_lib)"
-msgstr "Debug-Meldungen anzeigen (-vv wird auch catfish_lib debuggen)"
+msgstr "Fehlersuchnachrichten anzeigen (-vv wird auch catfish_lib austesten)"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
@@ -253,11 +258,11 @@ msgstr "Zeit im ISO-Format anzeigen"
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:51
 msgid "Set the default search path"
-msgstr "Den Standardsuchpfad festlegen"
+msgstr "Den Vorgabesuchpfad festlegen"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
-msgstr "Exakte Suche"
+msgstr "Genaue Suche"
 
 #: ../catfish/__init__.py:55
 msgid "Include hidden files"
@@ -505,14 +510,14 @@ msgid ""
 "now accessible with all desktop themes."
 msgstr ""
 "Diese Version enthält einige Verbesserungen bei der Verarbeitung von "
-"Miniaturansichten und zahlreiche Fehlerbehebungen. Die Icon-Vorschau wurde "
-"verbessert und passt nun zu anderen Anwendungen. Die unten im "
-"Ergebnisfenster angezeigten Elemente sind nun mit allen Desktop-Themen "
-"zugänglich."
+"Vorschaubildern und zahlreiche Fehlerbehebungen. Die Symbolvorschau wurde "
+"verbessert und passt jetzt zu anderen Anwendungen. Die unten im "
+"Ergebnisfenster angezeigten Elemente sind jetzt mit allen Schreibtischthemen"
+" zugänglich."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid "This is a minor translations-only release."
-msgstr "Dies ist eine minor-Version, die nur Übersetzungen enthält."
+msgstr "Das ist eine kleine Version, die nur Übersetzungen enthält."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
@@ -520,15 +525,15 @@ msgid ""
 "translation updates."
 msgstr ""
 "Diese Version enthält mehrere Leistungsverbesserungen und zahlreiche "
-"Übersetzungsupdates."
+"Übersetzungsaktualisierungen."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
-"Diese Version zeigt nun alle Datei-Zeitstempel nach Zeitzone statt nach "
-"Universal Coordinated Time (UTC) an."
+"Diese Version zeigt jetzt alle Dateizeitstempel nach Zeitzone statt nach "
+"koordinierter Weltzeit (UTC) an."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
@@ -540,7 +545,7 @@ msgstr ""
 "Diese Version behebt mehrere Fehler im Zusammenhang mit dem Ergebnisfenster."
 " Dateien werden beim Löschen wieder aus der Ergebnisliste entfernt. Mittel- "
 "und Rechtsklick-Funktionalität wurde wiederhergestellt. Datumsbereichsfilter"
-" werden jetzt nach Zeitzone statt nach Universal Coordinated Time (UTC) "
+" werden jetzt nach Zeitzone statt nach koordinierter Weltzeit (UTC) "
 "angewendet."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
@@ -551,12 +556,12 @@ msgid ""
 "headerbars and popover widgets. Password handling has been improved with the"
 " integration of PolicyKit when available."
 msgstr ""
-"Diese Version enthält eine signifikante Aktualisierung der "
+"Diese Version enthält eine beträchtliche Aktualisierung der "
 "Benutzeroberfläche, verbessert die Suchgeschwindigkeit und behebt mehrere "
-"Fehler. Der Workflow wurde verbessert und nutzt einige der neuesten "
-"Funktionen des GTK+-Toolkits, einschließlich optionaler Headerbars und "
-"Popover-Widgets. Die Handhabung von Passwörtern wurde durch die Integration "
-"von PolicyKit verbessert, sofern verfügbar."
+"Fehler. Der Arbeitsablauf wurde verbessert und nutzt einige der neuesten "
+"Funktionen des GTK+-Werkzeugkastens, einschließlich optionaler Kopfleisten "
+"und Popover-Widgets. Die Handhabung von Passwörtern wurde durch die "
+"Integration von PolicyKit verbessert, sofern verfügbar."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
