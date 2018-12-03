@@ -39,7 +39,7 @@ msgstr "Leita í skráakerfi"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: ../catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "skrár;finna;staðsetja;fletta upp;leita;"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
@@ -240,7 +240,7 @@ msgstr "Notkun: %prog [rofar] slóð fyrirspurn"
 
 #: ../catfish/__init__.py:42
 msgid "Show debug messages (-vv will also debug catfish_lib)"
-msgstr ""
+msgstr "Sýna aflúsunarskilaboð (-vv mun einnig aflúsa/villuleita catfish_lib)"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
@@ -257,7 +257,7 @@ msgstr "Birta tíma á ISO-sniði"
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:51
 msgid "Set the default search path"
-msgstr ""
+msgstr "Setja sjálfgefna leitarslóð"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
