@@ -542,6 +542,11 @@ msgid ""
 "click functionality has been restored. Date range filters are now applied "
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
+"Ez a kiadás számos az eredmények ablakkal kapcsolatos hibát javít. A fájlok "
+"újra eltávolításra kerülnek a listából törléskor. A középső és jobb gombos "
+"funkciók is helyreállításra kerültek. A dátum intervallum szűrők most már "
+"figyelembe veszik az időzónát, és nem egyezményes koordinált világidőt (UTC)"
+" használnak."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
@@ -551,16 +556,23 @@ msgid ""
 "headerbars and popover widgets. Password handling has been improved with the"
 " integration of PolicyKit when available."
 msgstr ""
+"Ez a kiadás jelentés felületi frissítést tartalmaz, javítja a keresés "
+"sebességét, és számos hibát javít. A munkafolyamat fejlesztésre került, "
+"kihasználva a GTK+ eszközkészlet legfrissebb funkcióit, köztük a nem "
+"kötelező címsávot, és a popover felületi elemeket. A jelszókezelés is "
+"fejlesztve lett a PolicyKit integrálásával, ha az elérhető."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
-msgstr ""
+msgstr "Ez a kiadás két új hibát javít, és frissített fordításokat tartalmaz."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
+"Ez a kiadás egy regressziót javít, amely szerint az alkalmazás egyes "
+"rendszereken képtelen elindulni."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
@@ -568,12 +580,18 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated,"
 " and the dialogs used to update the database have been improved."
 msgstr ""
+"Ez a kiadás egy regressziót javít, amely szerint a több egyidejű keresési "
+"kifejezések már nem támogatottak. Egy információs sáv jelenik meg, ha az "
+"adatbázis elavult, és az adatbázis frissítéséhez használt párbeszédablak is "
+"fejlesztésre került."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
+"Ez a kiadás két problémát old meg: a keresés nem mindig hajtódott végre "
+"rendesen, és a hiányzó szimbolikus ikonok kezelése is javítva lett."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
@@ -581,12 +599,17 @@ msgid ""
 " up unused code, and fixed potential issues with the list and item "
 "selection."
 msgstr ""
+"Ez a stabil kiadás javította a jelszó párbeszédablak megbízhatóságát, "
+"kitisztította a nem használt kódot, és lehetséges problémákat javított a "
+"lista- és elemkiválasztásban."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr ""
+"Ez a kiadás lehetséges biztonsági problémákt javított a program indításakor,"
+" és kijavított egy, több elem kiválasztását érintő, regressziót."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
@@ -596,3 +619,8 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"Az első kiadás az 1.0.x sorozatban frissített felülettel érkezik, és számos "
+"régóta fennálló hibát javít. Az alapértelmezett jogosultságok fejlesztései "
+"számos figyelmeztetést szüntettek meg a disztribúciókba csomagoláskor. Az "
+"akadálymentesség javítva lett, mivel minden szöveg fordíthatóvá lett téve, "
+"és a gyorsbillentyűk is fejlesztve lettek."
