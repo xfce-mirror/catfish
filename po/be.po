@@ -59,7 +59,7 @@ msgstr "Паказаць у _кіраўніку файлаў"
 #. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Copy Location"
-msgstr "_Скапіраваць месцазнаходжанне"
+msgstr "_Скапіяваць месцазнаходжанне"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
@@ -355,7 +355,7 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
-"Вы ўпэўнены, што хочаце назаўсёды \n"
+"Вы ўпэўненыя, што хочаце назаўсёды \n"
 "выдаліць \"%s\"?"
 
 #: ../catfish/CatfishWindow.py:1100
@@ -364,7 +364,7 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
-"Вы ўпэўнены, што хочаце назаўсёды \n"
+"Вы ўпэўненыя, што хочаце назаўсёды \n"
 "выдаліць %i абраныя(ых) файлы(аў)?"
 
 #: ../catfish/CatfishWindow.py:1103
@@ -401,14 +401,14 @@ msgstr "Учора"
 
 #: ../catfish/CatfishWindow.py:1452
 msgid "No files found."
-msgstr "Файлы не знойдзены."
+msgstr "Файлы не знойдзеныя."
 
 #: ../catfish/CatfishWindow.py:1454
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
-"Паспрабуйце ўвесці больш канкрэтны запыт\n"
+"Паспрабуйце ўвесці больш дакладны запыт\n"
 "альбо паспрабуйце іншы каталог."
 
 #: ../catfish/CatfishWindow.py:1460
@@ -505,7 +505,7 @@ msgid ""
 "other applications. Items displayed at the bottom of the results window are "
 "now accessible with all desktop themes."
 msgstr ""
-"У гэтым выпуску ўдасканалена апрацоўка мініяцюр і выпраўлена шмат памылак. "
+"У гэтым выпуску ўдасканаленая апрацоўка мініяцюр і выпраўлена шмат памылак. "
 "Значок папярэдняга прагляду быў ўдасканалены і цяпер адпавядае іншым "
 "праграмам. Элементы, якія адлюстроўваюцца ў ніжняй частцы акна вынікаў, "
 "цяпер даступны для усіх тэм працоўнага стала."
@@ -554,11 +554,11 @@ msgstr ""
 "Гэты выпуск ўключае ў сябе значнае абнаўленне інтэрфейсу, павышае хуткасць "
 "пошуку і выпраўляе шэраг хібаў. Працоўны працэс быў удасканалены з дапамогаю"
 " некаторых з апошніх магчымасцяў GTK + , уключаючы дадатковыя панэлі і "
-"віджэты. Апрацоўка пароляў была палепшана з дапамогаю PolicyKit."
+"віджэты. Апрацоўка пароляў была палепшаная з дапамогаю PolicyKit."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This release fixes two new bugs and includes updated translations."
-msgstr "У гэтым выпуску выпраўлены дзве новыя хібы і абноўлены пераклады."
+msgstr "У гэтым выпуску выпраўлены дзве новыя хібы і абноўленыя пераклады."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
@@ -577,7 +577,7 @@ msgstr ""
 "У гэтым выпуску выпраўлена рэгрэсія, калі некалькі тэрмінаў пошуку больш не "
 "падтрымліваецца. Інфармацыйная панэль зараз адлюстроўваюцца, калі база даных"
 " пошуку састарэла, і дыялогавыя вокны, якія выкарыстоўваюцца для абнаўлення "
-"базы даных, былі палепшаны."
+"базы даных, былі палепшаныя."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
@@ -585,7 +585,7 @@ msgid ""
 "and improves handling of missing symbolic icons."
 msgstr ""
 "У гэтым выпуску выпраўлены дзве праблемы: месцазнаходжанне не вызначалася "
-"належным чынам, паляпшана апрацоўка знікшых сімвалічных значкоў."
+"належным чынам, палепшана апрацоўка знікшых сімвалічных значкоў."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
@@ -593,17 +593,17 @@ msgid ""
 " up unused code, and fixed potential issues with the list and item "
 "selection."
 msgstr ""
-"У гэтым стабільным выпуску павышана надзейнасць дыялога паролю, ачышчаны "
-"невыкарыстоўваемы код і выпраўлены патэнцыйныя праблемы са спісам і выбарам "
-"элементаў."
+"У гэтым стабільным выпуску павышана надзейнасць дыялога паролю, ачышчаныя "
+"невыкарыстоўваемы код і выпраўленыя патэнцыйныя праблемы са спісам і выбарам"
+" элементаў."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr ""
-"У гэтым выпуску выпраўлены патэнцыйная праблема бяспекі пры запуску праграмы"
-" і рэгрэсія выбару некалькіх элементаў."
+"У гэтым выпуску выпраўленыя патэнцыйная праблема бяспекі пры запуску "
+"праграмы і рэгрэсія выбару некалькіх элементаў."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
