@@ -165,12 +165,14 @@ class CatfishSearchEngine:
 
         # Path exclusions for efficiency
         exclude = []
-        cache_path = os.path.expanduser("~/.cache")
-        if cache_path not in path:
-            exclude.append(cache_path)
-        gvfs_path = os.path.expanduser("~/.gvfs")
-        if gvfs_path not in path:
-            exclude.append(gvfs_path)
+        maybe_exclude = [
+            os.path.expanduser("~/.cache"),
+            os.path.expanduser("~/.gvfs"),
+            "/dev"
+        ]
+        for maybe_path in maybe_exclude:
+            if not path.startswith(maybe_path):
+                exclude.append(maybe_path)
 
         file_count = 0
         for method in self.methods:
@@ -296,12 +298,14 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         This function is a generator and will yield files as they are found or
         True if still running."""
         exclude = []
-        cache_path = os.path.expanduser("~/.cache")
-        if cache_path not in path:
-            exclude.append(cache_path)
-        gvfs_path = os.path.expanduser("~/.gvfs")
-        if gvfs_path not in path:
-            exclude.append(gvfs_path)
+        maybe_exclude = [
+            os.path.expanduser("~/.cache"),
+            os.path.expanduser("~/.gvfs"),
+            "/dev"
+        ]
+        for maybe_path in maybe_exclude:
+            if not path.startswith(maybe_path):
+                exclude.append(maybe_path)
 
         self.running = True
         if isinstance(keywords, str):

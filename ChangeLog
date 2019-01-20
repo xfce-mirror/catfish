@@ -9,6 +9,7 @@ v1.4.7:
        in the Catfish configuration file (~/.config/catfish/catfish.rc)
  + Performance:
    - Thumbnails will now only be generated when requested (Xfce #14689)
+   - Added /dev to list of standard excluded directories
  + Bug Fixes:
    - Quoted search strings now work as expected (Xfce #14501)
    - Files can now be dragged into other applications (Xfce #14492)
