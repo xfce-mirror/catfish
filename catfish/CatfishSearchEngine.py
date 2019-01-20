@@ -20,6 +20,7 @@ import logging
 
 import io
 import os
+import re
 import signal
 import subprocess
 import time
@@ -50,11 +51,21 @@ else:
     locate_support = False
 FNULL.close()
 
+def get_keyword_list(keywords):
+    keywords = keywords.replace(",", " ").strip().lower()
+    kwords = []
+    matches = re.findall(r'\"(.+?)\"', keywords)
+    for match in matches:
+        newmatch = match.replace(" ", "\0")
+        newmatch = newmatch.replace("\"", "")
+        keywords = keywords.replace("\"%s\"" % match, newmatch)
+    for keyword in keywords.split(" "):
+        kwords.append(keyword.replace("\0", " "))
+    return kwords
 
 def string_regex(keywords, path):
     """Returns a string with the regular expression containing all combinations
     of the keywords."""
-    keywords = keywords.split()
     if len(keywords) == 0:
         return ''
     if len(keywords) == 1:
@@ -133,29 +144,24 @@ class CatfishSearchEngine:
         self.start_time = time.time()
         self.stop_time = 0
 
-        keywords = keywords.replace(',', ' ').strip().lower()
+        keywords = get_keyword_list(keywords)
+        self.keywords = " ".join(keywords)
 
         logger.debug("[%i] path: %s, keywords: %s, limit: %i, regex: %s",
                      self.engine_id, str(path), str(keywords), limit,
                      str(regex))
 
-        self.keywords = keywords
-
         wildcard_chunks = []
-        for key in self.keywords.split():
+        keys = []
+        for key in keywords:
             if '*' in key:
                 wildcard_chunks.append(key.split('*'))
-
-        keywords = keywords.replace('*', ' ')
+            else:
+                keys.append(key)
 
         # For simplicity, make sure the path contains a trailing '/'
         if not path.endswith('/'):
             path += '/'
-
-        # Transform the keywords into a clean list.
-        keys = []
-        for key in keywords.split():
-            keys.append(key.strip())
 
         # Path exclusions for efficiency
         exclude = []
@@ -376,7 +382,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                                     break
 
                                 if self.exact:
-                                    if keywords in line:
+                                    if " ".join(keywords) in line:
                                         yield os.path.join(root, filename)
                                         break
                                 else:
