@@ -1531,7 +1531,7 @@ class CatfishWindow(Window):
 
     def get_thumbnail(self, path, mime_type=None):
         """Try to fetch a thumbnail."""
-        thumb = self.thumbnailer.get_thumbnail(path, mime_type)
+        thumb = self.thumbnailer.get_thumbnail(path, mime_type, self.show_thumbnail)
         if thumb:
             return thumb
         return self.get_file_icon(path, mime_type)

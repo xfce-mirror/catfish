@@ -207,7 +207,7 @@ class Thumbnailer:
             print("Exception: ", e)
             return False
 
-    def get_thumbnail(self, filename, mime_type = None):
+    def get_thumbnail(self, filename, mime_type = None, buildit = True):
         thumb = self._get_normal_filename(filename)
         if os.path.exists(thumb):
             return thumb
@@ -230,6 +230,9 @@ class Thumbnailer:
             if mime_type in ["image/x-photoshop"]:
                 return False
         else:
+            return False
+
+        if not buildit:
             return False
 
         normal = self._get_normal_filename(filename)
