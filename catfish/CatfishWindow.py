@@ -1612,7 +1612,8 @@ class CatfishWindow(Window):
 
         # Enable multiple-selection
         sel = self.treeview.get_selection()
-        sel.set_mode(Gtk.SelectionMode.MULTIPLE)
+        if sel is not None:
+            sel.set_mode(Gtk.SelectionMode.MULTIPLE)
 
         folder = self.folderchooser.get_filename()
 
