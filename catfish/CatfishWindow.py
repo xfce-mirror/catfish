@@ -197,7 +197,8 @@ class CatfishWindow(Window):
         self.treeview = builder.get_named_object("results.treeview")
         self.treeview.enable_model_drag_source(
             Gdk.ModifierType.BUTTON1_MASK,
-            [('text/plain', Gtk.TargetFlags.OTHER_APP, 0)],
+            [('text/plain', Gtk.TargetFlags.OTHER_APP, 0),
+             ('text/uri-list', Gtk.TargetFlags.OTHER_APP, 0)],
             Gdk.DragAction.DEFAULT | Gdk.DragAction.COPY)
         self.treeview.drag_source_add_text_targets()
         self.file_menu = builder.get_named_object("menus.file.menu")
@@ -1196,6 +1197,10 @@ class CatfishWindow(Window):
         """Treeview DND Get."""
         text = str(os.linesep).join(self.selected_filenames)
         selection.set_text(text, -1)
+
+        uris = ['file://' + path for path in self.selected_filenames]
+        selection.set_uris(uris)
+
         return True
 
     def treemodel_get_row_filename(self, model, row):
