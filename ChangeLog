@@ -13,7 +13,7 @@ v1.4.7:
    - Quoted search strings now work as expected (Xfce #14501)
    - Files can now be dragged into other applications (Xfce #14492)
    - The file context menu can now be opened multiple times (Xfce #14621)
-   - Fix crash when Catfish sets multi-select at startup (LP: #1764562)
+   - Fix crash when Catfish sets multi-select at startup (LP: #1753163)
  + Translation Updates:
    - Belarusian, Bulgarian, Catalan, Chinese (China), Chinese (Taiwan),
      Croatian, Czech, Danish, Dutch, English (Australia), French, Galician,
