@@ -21,7 +21,7 @@ import os
 default_settings_file = os.path.join(os.getenv('HOME'),
                                      '.config/catfish/catfish.rc')
 default_settings = {
-    'use-headerbar': True,
+    'use-headerbar': None,
     'show-hidden-files': False,
     'show-sidebar': False,
     'window-width': 650,
@@ -44,7 +44,21 @@ class CatfishSettings:
             self.settings_file = settings_file
         except Exception:
             self.settings_file = None
+        self.headerbar_configured = False
         self.read()
+
+    def get_current_desktop(self):
+        current_desktop = os.environ.get("XDG_CURRENT_DESKTOP", "")
+        current_desktop = current_desktop.lower()
+        for desktop in ["budgie", "pantheon", "gnome"]:
+            if desktop in current_desktop:
+                return desktop
+        if "kde" in current_desktop:
+            kde_version = int(os.environ.get("KDE_SESSION_VERSION", "4"))
+            if kde_version >= 5:
+                return "plasma"
+            return "kde"
+        return current_desktop
 
     def get_setting(self, key):
         """Return current setting for specified key."""
@@ -80,6 +94,15 @@ class CatfishSettings:
             except Exception:
                 pass
 
+        if self.settings['use-headerbar'] == None:
+            current_desktop = self.get_current_desktop()
+            if current_desktop in ["budgie", "gnome", "pantheon"]:
+                self.settings['use-headerbar'] = True
+            else:
+                self.settings['use-headerbar'] = False
+        else:
+            self.headerbar_configured = True
+
     def write(self):
         """Write the current settings to the settings rc-file."""
         if self.settings_file:
@@ -87,6 +110,8 @@ class CatfishSettings:
                 write_file = open(self.settings_file, 'w')
                 for key in list(self.settings.keys()):
                     value = self.settings[key]
+                    if key == 'use-headerbar' and not self.headerbar_configured:
+                        continue
                     if isinstance(value, bool):
                         value = str(value).lower()
                     else:
