@@ -1,3 +1,26 @@
+v1.4.7:
+ + General:
+   - Cleaner, easier to read manpage contents
+   - Added information about the --path flag to help and the manpage
+   - The window layout now respects the current desktop (Xfce #14486)
+     - A headerbar layout is used for Budgie, GNOME, and Pantheon
+     - All other desktops use the traditional titlebar layout
+     - This option can be overridden using the use-headerbar option
+       in the Catfish configuration file (~/.config/catfish/catfish.rc)
+ + Performance:
+   - Thumbnails will now only be generated when requested (Xfce #14689)
+ + Bug Fixes:
+   - Quoted search strings now work as expected (Xfce #14501)
+   - Files can now be dragged into other applications (Xfce #14492)
+   - The file context menu can now be opened multiple times (Xfce #14621)
+ + Translation Updates:
+   - Belarusian, Bulgarian, Catalan, Chinese (China), Chinese (Taiwan),
+     Croatian, Czech, Danish, Dutch, English (Australia), French, Galician,
+     German, Greek, Hebrew, Hungarian, Icelandic, Indonesian, Italian,
+     Japanese, Korean, Malay, Norwegian Nynorsk, Portuguese,
+     Portuguese (Brazil), Russian, Serbian, Sinhala, Spanish, Swedish,
+     Thai, Turkish, Ukrainian
+
 v1.4.6:
  + General:
    - Catfish is now part of Xfce! Update your links:
