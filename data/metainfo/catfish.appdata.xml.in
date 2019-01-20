@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014-2018 Sean Davis <smd.seandavis@gmail.com> -->
 <component type="desktop-application">
-  <id>catfish</id>
+  <id>org.xfce.Catfish</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>Catfish</name>
@@ -17,14 +17,16 @@
     </_p>
   </description>
 
-  <launchable type="desktop-id">catfish.desktop</launchable>
+  <launchable type="desktop-id">org.xfce.Catfish.desktop</launchable>
 
   <screenshots>
     <screenshot type="default">
-      <image>http://screenshots.bluesabre.org/catfish/catfish.png</image>
+      <image>https://screenshots.bluesabre.org/catfish/catfish.png</image>
+      <_caption>The main Catfish window displaying image search results</_caption>
     </screenshot>
     <screenshot>
-      <image>http://screenshots.bluesabre.org/catfish/catfish-filters.png</image>
+      <image>https://screenshots.bluesabre.org/catfish/catfish-filters.png</image>
+      <_caption>The main Catfish window displaying available filters and filtered search results</_caption>
     </screenshot>
   </screenshots>
 

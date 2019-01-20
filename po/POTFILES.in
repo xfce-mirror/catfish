@@ -15,7 +15,7 @@
 ### END LICENSE
 
 # Desktop File
-catfish.desktop.in
+org.xfce.Catfish.desktop.in
 
 # Glade Files
 [type: gettext/glade]data/ui/AboutCatfishDialog.ui
