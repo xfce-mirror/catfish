@@ -3,6 +3,7 @@ v1.4.7:
    - Cleaner, easier to read manpage contents
    - Added information about the --path flag to help and the manpage
    - Updated AppStream requirements
+   - Replaced project URLs with HTTPS where possible
    - The window layout now respects the current desktop (Xfce #14486)
      - A headerbar layout is used for Budgie, GNOME, and Pantheon
      - All other desktops use the traditional titlebar layout
@@ -28,7 +29,7 @@ v1.4.6:
  + General:
    - Catfish is now part of Xfce! Update your links:
      - Homepage: https://docs.xfce.org/apps/catfish/start
-     - Bugs: http://bugzilla.xfce.org/buglist.cgi?product=Catfish
+     - Bugs: https://bugzilla.xfce.org/buglist.cgi?product=Catfish
      - VCS: https://git.xfce.org/apps/catfish
      - Translations: https://www.transifex.com/xfce/public
    - Upgraded thumbnailer, based on the FD.o Thumbnail Spec:

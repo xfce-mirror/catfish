@@ -15,7 +15,7 @@ Catfish is part of the Xfce project. All project resources can be found
 at the following locations:
 
 * [Homepage](https://docs.xfce.org/apps/catfish/start)
-* [Bugs](http://bugzilla.xfce.org/buglist.cgi?product=Catfish)
+* [Bugs](https://bugzilla.xfce.org/buglist.cgi?product=Catfish)
 * [Code](https://git.xfce.org/apps/catfish)
 * [Translations](https://www.transifex.com/xfce/public)
 
@@ -32,4 +32,4 @@ Installation and Bugs
 
 For installation instructions, please read INSTALL.
 
-Please send all bugs, suggestions, and feature requests to [the Xfce Bugzilla](http://bugzilla.xfce.org/buglist.cgi?product=Catfish)
+Please send all bugs, suggestions, and feature requests to [the Xfce Bugzilla](https://bugzilla.xfce.org/buglist.cgi?product=Catfish)
