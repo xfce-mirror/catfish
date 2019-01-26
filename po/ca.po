@@ -605,7 +605,7 @@ msgid ""
 "and improves handling of missing symbolic icons."
 msgstr ""
 "Aquesta versió corregeix dos problemes que impedien executar l'ordre locate "
-"correctament i millora la gestió de la manca d'icones simbòlics."
+"correctament i millora la gestió de la manca d'icones simbòliques."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
