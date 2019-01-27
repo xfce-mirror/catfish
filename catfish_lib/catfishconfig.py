@@ -31,7 +31,7 @@ __catfish_data_directory__ = '../data/'
 # Location of locate.db file
 __locate_db_path__ = '/var/lib/mlocate/mlocate.db'
 __license__ = 'GPL-3+'
-__version__ = '1.4.6'
+__version__ = '1.4.7'
 
 
 class project_path_not_found(Exception):

@@ -2,28 +2,35 @@ v1.4.7:
  + General:
    - Cleaner, easier to read manpage contents
    - Added information about the --path flag to help and the manpage
-   - Updated AppStream requirements
+   - Updated AppStream requirements to align with the latest spec
    - Replaced project URLs with HTTPS where possible
+ + Desktop Integration:
    - The window layout now respects the current desktop (Xfce #14486)
      - A headerbar layout is used for Budgie, GNOME, and Pantheon
      - All other desktops use the traditional titlebar layout
      - This option can be overridden using the use-headerbar option
        in the Catfish configuration file (~/.config/catfish/catfish.rc)
- + Performance:
-   - Thumbnails will now only be generated when requested (Xfce #14689)
-   - Added /dev to list of standard excluded directories
- + Bug Fixes:
-   - Quoted search strings now work as expected (Xfce #14501)
    - Files can now be dragged into other applications (Xfce #14492)
+     - For file managers, the files will usually be copied to that location
+     - For other applications, the files will be opened by the application
+ + Performance:
+   - Thumbnails will now only be generated when the thumbnail view is
+     active (Xfce #14689)
+   - Added /dev to list of standard excluded directories
+    - Files within /dev can still be searched if explicitly selected by
+      the user
+ + Bug Fixes:
+   - Quoted search strings now allow for searching for specific phrases,
+     instead of searching for actual quote characters (Xfce #14501)
    - The file context menu can now be opened multiple times (Xfce #14621)
-   - Fix crash when Catfish sets multi-select at startup (LP: #1753163)
+   - Fix crash as startup with multi-file selection (LP #1753163)
  + Translation Updates:
-   - Belarusian, Bulgarian, Catalan, Chinese (China), Chinese (Taiwan),
-     Croatian, Czech, Danish, Dutch, English (Australia), French, Galician,
-     German, Greek, Hebrew, Hungarian, Icelandic, Indonesian, Italian,
-     Japanese, Korean, Malay, Norwegian Nynorsk, Portuguese,
-     Portuguese (Brazil), Russian, Serbian, Sinhala, Spanish, Swedish,
-     Thai, Turkish, Ukrainian
+   - Albanian, Belarusian, Bulgarian, Catalan, Chinese (China),
+     Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (Australia),
+     French, Galician, German, Greek, Hebrew, Hungarian, Icelandic,
+     Indonesian, Italian, Japanese, Korean, Lithuanian, Malay,
+     Norwegian Nynorsk, Polish, Portuguese, Portuguese (Brazil), Russian,
+     Serbian, Sinhala, Spanish, Swedish, Thai, Turkish, Ukrainian
 
 v1.4.6:
  + General:
