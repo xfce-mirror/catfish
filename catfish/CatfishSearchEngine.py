@@ -547,9 +547,33 @@ class CatfishSearchMethod_Locate(CatfishSearchMethodExternal):
     def __init__(self):
         """Initialize the Locate SearchMethod."""
         CatfishSearchMethodExternal.__init__(self, "locate")
-        self.command = ["locate", "-i", "%path*%keywords*", "--existing"]
+        self.caps = self.get_capabilities()
+        if self.caps["existing"]:
+            self.command = ["locate", "-i", "%path*%keywords*", "--existing"]
+        else:
+            self.command = ["locate", "-i", "%path*%keywords*"]
+
+    def get_capabilities(self):
+        caps = {
+            "existing": False,
+            "regex": False
+        }
+        try:
+            details = subprocess.check_output(["locate", "--help"])
+            details = details.decode("utf-8")
+            if "--existing" in details:
+                caps["existing"] = True
+            if "--regex" in details or "--regexp" in details:
+                caps["regex"] = True
+
+        except subprocess.CalledProcessError:
+            pass
+        return caps
 
     def assemble_query(self, keywords, path):
         """Assemble the search query."""
-        return ["locate", "--regex", "--basename", "-i",
-                "{}".format(string_regex(keywords, path))]
+        if self.caps["regex"]:
+            return ["locate", "--regex", "--basename", "-i",
+                    "{}".format(string_regex(keywords, path))]
+        else:
+            return ["locate", "-i", "%path*", str(keywords)]
