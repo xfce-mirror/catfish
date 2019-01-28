@@ -209,6 +209,10 @@ msgstr "Обновить поисковый _индекс…"
 msgid "_About"
 msgstr "_О программе"
 
+#: ../data/ui/CatfishWindow.ui.h:1071
+msgid "Search for files"
+msgstr "Поиск файлов"
+
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
 msgstr "Обновить поисковую базу данных"
