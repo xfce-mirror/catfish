@@ -1,73 +1,83 @@
-# Basque translation for catfish-search
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the catfish-search package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Xfce Bot <transifex@xfce.org>, 2018
+# Nick Schermer <nick@xfce.org>, 2018
+# Piarres Beobide <pi@beobide.net>, 2018
+# beriain <beriain@bitmessage.ch>, 2019
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: catfish-search\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-04-26 05:37+0000\n"
-"PO-Revision-Date: 2013-01-11 19:52+0000\n"
-"Last-Translator: Asier Iturralde Sarasola <Unknown>\n"
-"Language-Team: Basque <eu@li.org>\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-27 21:24-0500\n"
+"PO-Revision-Date: 2018-06-28 22:08+0000\n"
+"Last-Translator: beriain <beriain@bitmessage.ch>, 2019\n"
+"Language-Team: Basque (https://www.transifex.com/xfce/teams/16840/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-04-27 05:40+0000\n"
-"X-Generator: Launchpad (build 18623)\n"
+"Language: eu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:642
+#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
+#: ../catfish/CatfishWindow.py:666
 msgid "Catfish File Search"
-msgstr ""
+msgstr "Catfish fitxategi bilatzailea"
 
-#: ../catfish.desktop.in.h:2
+#: ../org.xfce.Catfish.desktop.in.h:2
 msgid "File search"
-msgstr ""
+msgstr "Fitxategi bilaketa"
 
-#: ../catfish.desktop.in.h:3
+#: ../org.xfce.Catfish.desktop.in.h:3
 msgid "Search the file system"
-msgstr ""
+msgstr "Fitxategien sisteman bilatu"
 
-#. TRANSLATORS: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: ../catfish.desktop.in.h:5
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: ../org.xfce.Catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "fitxategiak;bilatu;aurkitu;bilaketa;araketa;"
 
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
-msgstr ""
+msgstr "Catfish fitxategiak bilatzeko tresna moldakor bat da."
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
-msgstr ""
+msgstr "_Ireki"
 
-#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
-msgstr ""
+msgstr "Fitxategien kudeatzailean ikusi"
 
-#. This menu contains the menu items: _Open, Show in _File Manager, _Copy Location, Save _As, _Delete
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Copy Location"
-msgstr ""
+msgstr "Kokapena kopiatu"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr ""
+msgstr "Gorde honela..."
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
-msgstr ""
+msgstr "_Ezabatu"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
-msgstr ""
+msgstr "Fitxategien luzapenak"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "odt, png, txt"
-msgstr ""
+msgstr "odt, png, txt"
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
@@ -75,7 +85,7 @@ msgstr "Dokumentuak"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "Folders"
-msgstr ""
+msgstr "Karpetak"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "Images"
@@ -95,128 +105,128 @@ msgstr "Aplikazioak"
 
 #: ../data/ui/CatfishWindow.ui.h:16
 msgid "Other"
-msgstr ""
+msgstr "Besteak"
 
 #: ../data/ui/CatfishWindow.ui.h:17
 msgid "Any time"
-msgstr ""
+msgstr "Edonoiz"
 
 #: ../data/ui/CatfishWindow.ui.h:18
 msgid "This week"
-msgstr ""
+msgstr "Aste honetan"
 
 #: ../data/ui/CatfishWindow.ui.h:19
 msgid "Custom"
-msgstr ""
+msgstr "Pertsonalizatua"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "Go to Today"
-msgstr ""
+msgstr "Gaurko egunera joan"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "<b>Start Date</b>"
-msgstr ""
+msgstr "<b>Hasiera data</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "<b>End Date</b>"
-msgstr ""
+msgstr "<b>Amaiera data</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:216
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:217
 msgid "Catfish"
-msgstr ""
+msgstr "Catfish"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Update"
-msgstr ""
+msgstr "Eguneratu"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr ""
+msgstr "Bilaketa datu-basea 7 egun baino zaharragoa da. Eguneratu orain?"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "File Type"
-msgstr ""
+msgstr "Fitxategi mota"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1103
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1133
 msgid "Modified"
-msgstr ""
+msgstr "Aldatuta"
 
 #: ../data/ui/CatfishWindow.ui.h:29
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "Enter your query above to find your files"
-msgstr ""
+msgstr "Sartu zure kontsulta goian zure fitxategiak aurkitzeko"
 
 #: ../data/ui/CatfishWindow.ui.h:30
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid "or click the "
-msgstr ""
+msgstr "edo sakatu"
 
 #: ../data/ui/CatfishWindow.ui.h:31
 msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
-msgstr ""
+msgstr "ikonoa aukera gehiago ikusteko."
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
-msgstr ""
+msgstr "Direktorio bat hautatu"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Compact List"
-msgstr ""
+msgstr "Zerrenda konpaktua"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Thumbnails"
-msgstr ""
+msgstr "Argazkitxoak"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show _Hidden Files"
-msgstr ""
+msgstr "Ezkutuko fitxategiak erakutsi"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search File _Contents"
-msgstr ""
+msgstr "Fitxategien edukietan bilatu"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Exact Match"
-msgstr ""
+msgstr "Bat-etortze zehatza"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "Show _Sidebar"
-msgstr ""
+msgstr "Alboko barra erakutsi"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Update Search Index…"
-msgstr ""
+msgstr "Bilaketa indizea eguneratu…"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_About"
-msgstr ""
+msgstr "_Honi buruz"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
-msgstr ""
+msgstr "Bilaketa datu-basea eguneratu"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgid "Unlock"
-msgstr ""
+msgstr "Desblokeatu"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "<b>Database:</b>"
-msgstr ""
+msgstr "<b>Datu-basea:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
-msgstr ""
+msgstr "<b>Eguneratuta:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>Eguneratu bilaketa datu-basea</b></big>"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
@@ -229,32 +239,37 @@ msgid "Usage: %prog [options] path query"
 msgstr ""
 
 #: ../catfish/__init__.py:42
-msgid "Show debug messages (-vv debugs catfish_lib also)"
+msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr ""
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
-msgstr ""
+msgstr "Ikono handiak erabili"
 
 #: ../catfish/__init__.py:47
 msgid "Use thumbnails"
-msgstr ""
+msgstr "Argazkitxoak erabili"
 
 #: ../catfish/__init__.py:49
 msgid "Display time in ISO format"
+msgstr "Denbora ISO formatuan erakutsi"
+
+#. Translators: Do not translate PATH, it is a variable.
+#: ../catfish/__init__.py:51
+msgid "Set the default search path"
 msgstr ""
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
-msgstr ""
+msgstr "Bat-etortze zehatza burutu"
 
 #: ../catfish/__init__.py:55
 msgid "Include hidden files"
-msgstr ""
+msgstr "Ezkutuko fitxategiak sartu"
 
 #: ../catfish/__init__.py:57
 msgid "Perform fulltext search"
-msgstr ""
+msgstr "Testu osoko bilaketa burutu"
 
 #: ../catfish/__init__.py:59
 msgid ""
@@ -264,187 +279,189 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:83
+#: ../catfish/CatfishWindow.py:84
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:249
+#: ../catfish/CatfishWindow.py:238
 msgid "Unknown"
-msgstr ""
+msgstr "Ezezaguna"
 
-#: ../catfish/CatfishWindow.py:253
+#: ../catfish/CatfishWindow.py:242
 msgid "Never"
-msgstr ""
+msgstr "Inoiz"
 
-#: ../catfish/CatfishWindow.py:610
+#: ../catfish/CatfishWindow.py:634
 msgid "An error occurred while updating the database."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:612
+#: ../catfish/CatfishWindow.py:636
 msgid "Authentication failed."
-msgstr ""
+msgstr "Autentikazioak huts egin du."
 
-#: ../catfish/CatfishWindow.py:618
+#: ../catfish/CatfishWindow.py:642
 msgid "Authentication cancelled."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:624
+#: ../catfish/CatfishWindow.py:648
 msgid "Search database updated successfully."
 msgstr ""
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:699
+#: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr ""
+msgstr "Eguneratzen…"
 
-#: ../catfish/CatfishWindow.py:733
+#: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
-msgstr ""
+msgstr "Bilaketa gelditu"
 
-#: ../catfish/CatfishWindow.py:734
+#: ../catfish/CatfishWindow.py:758
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:743
+#: ../catfish/CatfishWindow.py:767
 msgid "Begin Search"
-msgstr ""
+msgstr "Bilaketa hasi"
 
-#: ../catfish/CatfishWindow.py:929
+#: ../catfish/CatfishWindow.py:959
 #, python-format
 msgid "\"%s\" could not be opened."
-msgstr ""
+msgstr "Ezin izan da \"%s\" ireki."
 
-#: ../catfish/CatfishWindow.py:975
+#: ../catfish/CatfishWindow.py:1005
 #, python-format
 msgid "\"%s\" could not be saved."
-msgstr ""
+msgstr "Ezin izan da \"%s\" gorde."
 
-#: ../catfish/CatfishWindow.py:992
+#: ../catfish/CatfishWindow.py:1022
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr ""
+msgstr "Ezin izan da \"%s\" ezabatu."
 
-#: ../catfish/CatfishWindow.py:1032
+#: ../catfish/CatfishWindow.py:1062
 #, python-format
 msgid "Save \"%s\" as…"
-msgstr ""
+msgstr "Gorde \"%s\" honela…"
 
-#: ../catfish/CatfishWindow.py:1067
+#: ../catfish/CatfishWindow.py:1097
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1071
+#: ../catfish/CatfishWindow.py:1101
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1074
+#: ../catfish/CatfishWindow.py:1104
 msgid "If you delete a file, it is permanently lost."
-msgstr ""
+msgstr "Fitxategi bat ezabatzen baduzu, betiko galduko da."
 
-#: ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:1127
 msgid "Filename"
 msgstr "Fitxategi-izena"
 
-#: ../catfish/CatfishWindow.py:1099
+#: ../catfish/CatfishWindow.py:1129
 msgid "Size"
 msgstr "Tamaina"
 
-#: ../catfish/CatfishWindow.py:1101
+#: ../catfish/CatfishWindow.py:1131
 msgid "Location"
 msgstr "Kokapena"
 
-#: ../catfish/CatfishWindow.py:1113
+#: ../catfish/CatfishWindow.py:1143
 msgid "Preview"
 msgstr "Aurrebista"
 
-#: ../catfish/CatfishWindow.py:1121
+#: ../catfish/CatfishWindow.py:1151
 msgid "Details"
-msgstr ""
+msgstr "Xehetasunak"
 
-#: ../catfish/CatfishWindow.py:1340
+#: ../catfish/CatfishWindow.py:1374
 msgid "Today"
-msgstr ""
+msgstr "Gaur"
 
-#: ../catfish/CatfishWindow.py:1342
+#: ../catfish/CatfishWindow.py:1376
 msgid "Yesterday"
-msgstr ""
+msgstr "Atzo"
 
-#: ../catfish/CatfishWindow.py:1423
+#: ../catfish/CatfishWindow.py:1457
 msgid "No files found."
 msgstr "Ez da fitxategirik aurkitu."
 
-#: ../catfish/CatfishWindow.py:1425
+#: ../catfish/CatfishWindow.py:1459
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1431
+#: ../catfish/CatfishWindow.py:1465
 msgid "1 file found."
-msgstr ""
+msgstr "Fitxategi 1 aurkitu da."
 
-#: ../catfish/CatfishWindow.py:1433
+#: ../catfish/CatfishWindow.py:1467
 #, python-format
 msgid "%i files found."
-msgstr ""
+msgstr "%i fitxategi aurkitu dira."
 
-#: ../catfish/CatfishWindow.py:1439
+#: ../catfish/CatfishWindow.py:1473
 msgid "bytes"
-msgstr ""
+msgstr "byte"
 
-#: ../catfish/CatfishWindow.py:1585 ../catfish/CatfishWindow.py:1594
+#: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
 msgid "Searching…"
-msgstr ""
+msgstr "Bilatzen…"
 
-#: ../catfish/CatfishWindow.py:1587
+#: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."
-msgstr ""
+msgstr "Emaitzak aurkitu ahala erakutsiko dira."
 
-#: ../catfish/CatfishWindow.py:1592
+#: ../catfish/CatfishWindow.py:1588
 #, python-format
 msgid "Searching for \"%s\""
-msgstr ""
+msgstr "\"%s\" bilatzen"
 
-#: ../catfish/CatfishWindow.py:1681
+#: ../catfish/CatfishWindow.py:1678
 #, python-format
 msgid "Search results for \"%s\""
-msgstr ""
+msgstr "\"%s\"(r)entzako bilaketa emaitzak"
 
 #: ../catfish_lib/SudoDialog.py:138
 msgid "Password Required"
-msgstr ""
+msgstr "Pasahitza behar da"
 
 #: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
-msgstr ""
+msgstr "Pasahitza ez da zuzena… saiatu berriz."
 
 #: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"
-msgstr ""
+msgstr "Pasahitza:"
 
 #. Buttons
 #: ../catfish_lib/SudoDialog.py:196
 msgid "Cancel"
-msgstr ""
+msgstr "Utzi"
 
 #: ../catfish_lib/SudoDialog.py:199
 msgid "OK"
-msgstr ""
+msgstr "Ados"
 
 #: ../catfish_lib/SudoDialog.py:220
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
+"Sartu zure pasahitza\n"
+"lan administratiboak burutzeko."
 
 #: ../catfish_lib/SudoDialog.py:222
 #, python-format
@@ -455,34 +472,60 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr ""
+msgstr "Fitxategiak bilatzeko tresna moldakorra"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:2
 msgid ""
 "Catfish is a small, fast, and powerful file search utility. Featuring a "
-"minimal interface with an emphasis on results, it helps users find the files "
-"they need without a file manager. With powerful filters such as modification "
-"date, file type, and file contents, users will no longer be dependent on the "
-"file manager or organization skills."
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
 msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
-msgid "This is a minor translations-only release."
+msgid "The main Catfish window displaying image search results"
 msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
+msgid ""
+"The main Catfish window displaying available filters and filtered search "
+"results"
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:5
+msgid ""
+"This release features improved performance, better desktop integration, and "
+"a number of long-standing bugs. Quoted search strings are now correctly "
+"processed. Files can be dragged into other applications. Thumbnails are only"
+" generated when requested by the user."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
+"This release features several improvements to thumbnail processing and "
+"numerous bug fixes. Icon previews have been improved and will now match "
+"other applications. Items displayed at the bottom of the results window are "
+"now accessible with all desktop themes."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
+msgid "This is a minor translations-only release."
+msgstr "Hau itzulpenak soilik eguneratzen dituen argitalpen txiki bat da."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:5
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -490,51 +533,52 @@ msgid ""
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
 "some of the latest features of the GTK+ toolkit, including optional "
-"headerbars and popover widgets. Password handling has been improved with the "
-"integration of PolicyKit when available."
+"headerbars and popover widgets. Password handling has been improved with the"
+" integration of PolicyKit when available."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
-"supported. An InfoBar is now displayed when the search database is outdated, "
-"and the dialogs used to update the database have been improved."
+"supported. An InfoBar is now displayed when the search database is outdated,"
+" and the dialogs used to update the database have been improved."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
-"This stable release improved the reliability of the password dialog, cleaned "
-"up unused code, and fixed potential issues with the list and item selection."
+"This stable release improved the reliability of the password dialog, cleaned"
+" up unused code, and fixed potential issues with the list and item "
+"selection."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
-"This release fixed a potential security issue with program startup and fixed "
-"a regression with selecting multiple items."
+"This release fixed a potential security issue with program startup and fixed"
+" a regression with selecting multiple items."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
@@ -542,9 +586,3 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
-
-#~ msgid "Last modified"
-#~ msgstr "Azken aldaketa"
-
-#~ msgid "Done."
-#~ msgstr "Eginda."
