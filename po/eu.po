@@ -233,10 +233,12 @@ msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"Bilaketa azkarrago egiteko, bilaketa datu-basea freskatu behar da.\n"
+"Ekintza honek baimen administratzaileak behar ditu."
 
 #: ../catfish/__init__.py:37
 msgid "Usage: %prog [options] path query"
-msgstr ""
+msgstr "Erabilera: %prog [aukerak] bidea kontsulta"
 
 #: ../catfish/__init__.py:42
 msgid "Show debug messages (-vv will also debug catfish_lib)"
@@ -257,7 +259,7 @@ msgstr "Denbora ISO formatuan erakutsi"
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:51
 msgid "Set the default search path"
-msgstr ""
+msgstr "Ezarri bilatzeko path lehenetsia"
 
 #: ../catfish/__init__.py:53
 msgid "Perform exact match"
@@ -294,19 +296,19 @@ msgstr "Inoiz"
 
 #: ../catfish/CatfishWindow.py:634
 msgid "An error occurred while updating the database."
-msgstr ""
+msgstr "Akats bat gertatu da datu-basea eguneratzerakoan."
 
 #: ../catfish/CatfishWindow.py:636
 msgid "Authentication failed."
-msgstr "Autentikazioak huts egin du."
+msgstr "Autentifikazioak huts egin du."
 
 #: ../catfish/CatfishWindow.py:642
 msgid "Authentication cancelled."
-msgstr ""
+msgstr "Autentifikazioa bertan behera utzi da."
 
 #: ../catfish/CatfishWindow.py:648
 msgid "Search database updated successfully."
-msgstr ""
+msgstr "Bilaketa datu-basea ongi eguneratu da."
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
