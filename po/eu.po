@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 21:24-0500\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: beriain <beriain@bitmessage.ch>, 2019\n"
 "Language-Team: Basque (https://www.transifex.com/xfce/teams/16840/eu/)\n"
@@ -177,58 +177,62 @@ msgid "Select a Directory"
 msgstr "Direktorio bat hautatu"
 
 #: ../data/ui/CatfishWindow.ui.h:33
+msgid "Search for files"
+msgstr "Fitxategiak bilatu"
+
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "Compact List"
 msgstr "Zerrenda konpaktua"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "Thumbnails"
 msgstr "Argazkitxoak"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "Show _Hidden Files"
 msgstr "Ezkutuko fitxategiak erakutsi"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "Search File _Contents"
 msgstr "Fitxategien edukietan bilatu"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Exact Match"
 msgstr "Bat-etortze zehatza"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Show _Sidebar"
 msgstr "Alboko barra erakutsi"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index…"
 msgstr "Bilaketa indizea eguneratu…"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
 msgstr "_Honi buruz"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Update Search Database"
 msgstr "Bilaketa datu-basea eguneratu"
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "Unlock"
 msgstr "Desblokeatu"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Database:</b>"
 msgstr "<b>Datu-basea:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "<b>Updated:</b>"
 msgstr "<b>Eguneratuta:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Eguneratu bilaketa datu-basea</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -242,7 +246,7 @@ msgstr "Erabilera: %prog [aukerak] bidea kontsulta"
 
 #: ../catfish/__init__.py:42
 msgid "Show debug messages (-vv will also debug catfish_lib)"
-msgstr ""
+msgstr "Arazketa mezuak erakutsi (-vv catfish_lib ere araztuko du)"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
@@ -284,7 +288,7 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:84
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (kodeketa ez balioduna)"
 
 #: ../catfish/CatfishWindow.py:238
 msgid "Unknown"
