@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 21:24-0500\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Igor <f2404@yandex.ru>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/xfce/teams/16840/ru/)\n"
@@ -178,62 +178,62 @@ msgid "Select a Directory"
 msgstr "Выберите каталог"
 
 #: ../data/ui/CatfishWindow.ui.h:33
-msgid "Compact List"
-msgstr "Список"
-
-#: ../data/ui/CatfishWindow.ui.h:34
-msgid "Thumbnails"
-msgstr "Миниатюры"
-
-#: ../data/ui/CatfishWindow.ui.h:35
-msgid "Show _Hidden Files"
-msgstr "Показать _скрытые файлы"
-
-#: ../data/ui/CatfishWindow.ui.h:36
-msgid "Search File _Contents"
-msgstr "Искать по _содержимому файла"
-
-#: ../data/ui/CatfishWindow.ui.h:37
-msgid "_Exact Match"
-msgstr "_Точное совпадение"
-
-#: ../data/ui/CatfishWindow.ui.h:38
-msgid "Show _Sidebar"
-msgstr "Показать _боковую панель"
-
-#: ../data/ui/CatfishWindow.ui.h:39
-msgid "_Update Search Index…"
-msgstr "Обновить поисковый _индекс…"
-
-#: ../data/ui/CatfishWindow.ui.h:40
-msgid "_About"
-msgstr "_О программе"
-
-#: ../data/ui/CatfishWindow.ui.h:1071
 msgid "Search for files"
 msgstr "Поиск файлов"
 
+#: ../data/ui/CatfishWindow.ui.h:34
+msgid "Compact List"
+msgstr "Список"
+
+#: ../data/ui/CatfishWindow.ui.h:35
+msgid "Thumbnails"
+msgstr "Миниатюры"
+
+#: ../data/ui/CatfishWindow.ui.h:36
+msgid "Show _Hidden Files"
+msgstr "Показать _скрытые файлы"
+
+#: ../data/ui/CatfishWindow.ui.h:37
+msgid "Search File _Contents"
+msgstr "Искать по _содержимому файла"
+
+#: ../data/ui/CatfishWindow.ui.h:38
+msgid "_Exact Match"
+msgstr "_Точное совпадение"
+
+#: ../data/ui/CatfishWindow.ui.h:39
+msgid "Show _Sidebar"
+msgstr "Показать _боковую панель"
+
+#: ../data/ui/CatfishWindow.ui.h:40
+msgid "_Update Search Index…"
+msgstr "Обновить поисковый _индекс…"
+
 #: ../data/ui/CatfishWindow.ui.h:41
+msgid "_About"
+msgstr "_О программе"
+
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Update Search Database"
 msgstr "Обновить поисковую базу данных"
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "Unlock"
 msgstr "Разблокировать"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Database:</b>"
 msgstr "<b>База данных:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "<b>Updated:</b>"
 msgstr "<b>Обновлено:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Обновление поисковой базы данных</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -305,7 +305,7 @@ msgstr "Ошибка при обновлении базы данных."
 
 #: ../catfish/CatfishWindow.py:636
 msgid "Authentication failed."
-msgstr "Ошибка проверки подлинности."
+msgstr "Ошибка аутентификации."
 
 #: ../catfish/CatfishWindow.py:642
 msgid "Authentication cancelled."
