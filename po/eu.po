@@ -282,6 +282,8 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
+"Bidea eta kontsulta ematen badira, bilatzen hasi aplikazioa bistaratu eta "
+"berehala."
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -328,6 +330,8 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
+"Bilaketa martxan da...\n"
+"Sakatu utzi botoia edo Esc tekla gelditzeko."
 
 #: ../catfish/CatfishWindow.py:767
 msgid "Begin Search"
@@ -358,7 +362,7 @@ msgstr "Gorde \"%s\" honela…"
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
-msgstr ""
+msgstr "\"%s\" betiko ezabatu nahi duzu?"
 
 #: ../catfish/CatfishWindow.py:1101
 #, python-format
@@ -366,6 +370,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
+"Hautatutako %i fitxategiak betiko\n"
+"ezabatu nahi dituzu?"
 
 #: ../catfish/CatfishWindow.py:1104
 msgid "If you delete a file, it is permanently lost."
@@ -408,6 +414,8 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
+"Saiatu bilaketa ez hain zehatza egiten\n"
+"edo saiatu beste karpeta batean bilatzen."
 
 #: ../catfish/CatfishWindow.py:1465
 msgid "1 file found."
@@ -475,6 +483,8 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
+"'%s' aplikazioak zure sistemaren\n"
+"oinarrizko zatiak aldatzea baimentzen du."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
@@ -488,16 +498,24 @@ msgid ""
 "modification date, file type, and file contents, users will no longer be "
 "dependent on the file manager or organization skills."
 msgstr ""
+"Catfish fitxategiak bilaketzeko tresna txikia, bizkorra eta ahaltsua da. "
+"Interfaze minimoarekin eta emaitzetan enfasia jarriz, erabiltzaileak behar "
+"dituen fitxategiak aurkitzen laguntzen du fitxategi kudeatzaile bat erabili "
+"gabe. Aldatze data, fitxategi mota eta fitxategien edukiak bezalako iragazki"
+" ahaltsuekin, erabiltzaileak ez dira gehiago fitxategi kudeatzaileen edo "
+"antolaketa trebetasunaren menpekoak izango."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "The main Catfish window displaying image search results"
-msgstr ""
+msgstr "Catfishen leiho nagusia irudi bilaketa emaitzak erakusten"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
 "The main Catfish window displaying available filters and filtered search "
 "results"
 msgstr ""
+"Catfishen leiho nagusia iragazki erabilgarriak eta iragazitako bilaketa "
+"emaitzak erakusten "
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
@@ -506,6 +524,10 @@ msgid ""
 "processed. Files can be dragged into other applications. Thumbnails are only"
 " generated when requested by the user."
 msgstr ""
+"Bertsio honek errendimendua hobetzen du, mahaigaineko integrazio hobea dakar"
+" eta arazo zahar ugari konpontzen ditu. Aipatutako bilaketa terminoak ondo "
+"prozesatzen dira orain. Fitxategiak beste aplikazioetara arrastatu daitezke."
+" Iruditxoak soilik erabiltzaileak zehaztutakoan sortzen dira."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
@@ -524,12 +546,16 @@ msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
+"Bertsio honek errendimendu hobekuntza eta itzulpen eguneraketa ugari "
+"dakartza."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
+"Bertsio honek fitxategi denborak ordu eremuaren arabera erakusten ditu eta "
+"ez Universal Coordinated Time (UTC)ren arabera."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
@@ -551,12 +577,16 @@ msgstr ""
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
+"Bertsio honek bi akats berri konpontzen ditu eta itzulpen eguneratuak "
+"sartzen ditu."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
+"Bertsio honek sistema batzuetan aplikazioa abiaraztea galarazten duen "
+"atzerapen bat konpontzen du."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
@@ -564,12 +594,18 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated,"
 " and the dialogs used to update the database have been improved."
 msgstr ""
+"Bertsio honek bilaketa termino ugari erabiltzea baimentzen ez zuen atzerapen"
+" bat konpontzen du. Informazio barra bat erakusten da orain datu-basea "
+"zaharkituta dagoenean, eta datu-basea eguneratzeko erabiltzen diren "
+"leihotxoak hobetu dira."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
+"Bertsio honek bilaketa ondo burutzen ez zen bi kasu konpontzen ditu eta "
+"falta diren ikono sinbolikoen kudeaketa hobetzen du."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
@@ -577,12 +613,17 @@ msgid ""
 " up unused code, and fixed potential issues with the list and item "
 "selection."
 msgstr ""
+"Bertsio egonkor honek pasahitz leihotxoaren fidagarritasuna hobetzen du, "
+"erabili gabeko kodea kentzen du eta zerrenda eta elementuen hautaketarekin "
+"arazo potentzialak konpontzen ditu."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr ""
+"Bertsio honek programa hasieraren segurtasun arrisku handi bat konpontzen du"
+" eta baita hainbat elementu hautatzeko atzerapen bat ere."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
@@ -592,3 +633,8 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"1.0.x seriearen lehen bertsioak interfaze berri bat sartzen du eta hainbat "
+"arazo zahar konpontzen ditu. Banaketetarako paketatzerakoan abisu ugari "
+"kendu dira baimen lehenetsietan egindako hobekuntzekin. Irisgarritasuna "
+"areagotu da hitz guztiak itzulgarriak bihurtuz eta teklatu bizkortzaileak "
+"hobetu dira."
