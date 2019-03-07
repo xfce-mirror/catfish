@@ -176,7 +176,7 @@ msgstr "Vælg en mappe"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Search for files"
-msgstr ""
+msgstr "Søg efter filer"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Compact List"
@@ -536,8 +536,8 @@ msgid ""
 msgstr ""
 "Denne udgivelse byder på adskillige forbedringer til behandling af miniature"
 " og mange fejlrettelser. Forhåndsvisning af ikoner er blevet forbedret og "
-"matcher nu andre programmer.  Punkter som vises nederst i resultatsvinduet "
-"og kan nu tilgås med alle skrivebordstemaer."
+"matcher nu andre programmer. Punkter som vises nederst i resultatsvinduet og"
+" kan nu tilgås med alle skrivebordstemaer."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid "This is a minor translations-only release."
