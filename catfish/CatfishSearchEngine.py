@@ -310,7 +310,7 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         self.running = True
         if isinstance(keywords, str):
             keywords = keywords.replace(',', ' ').strip().split()
-        for root, dirs, files in os.walk(path, False):
+        for root, dirs, files in os.walk(path):
             dirs[:] = [d for d in dirs if os.path.join(root, d) not in exclude]
             if not self.running:
                 break
