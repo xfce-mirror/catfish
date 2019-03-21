@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-05 20:20-0500\n"
+"POT-Creation-Date: 2019-03-12 13:50+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>, 2019\n"
 "Language-Team: Galician (https://www.transifex.com/xfce/teams/16840/gl/)\n"
@@ -466,7 +466,7 @@ msgstr "Cancelar"
 
 #: ../catfish_lib/SudoDialog.py:199
 msgid "OK"
-msgstr "Aceptar"
+msgstr "Vale"
 
 #: ../catfish_lib/SudoDialog.py:220
 msgid ""
