@@ -8,15 +8,16 @@
 # Xfce Bot <transifex@xfce.org>, 2018
 # Michael Martins <michaelfm21@gmail.com>, 2018
 # Andre Miranda <andre42m@gmail.com>, 2019
+# Luis Borges <roninborges@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-27 21:24-0500\n"
+"POT-Creation-Date: 2019-03-12 13:50+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Andre Miranda <andre42m@gmail.com>, 2019\n"
+"Last-Translator: Luis Borges <roninborges@gmail.com>, 2019\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/xfce/teams/16840/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -177,58 +178,62 @@ msgid "Select a Directory"
 msgstr "Selecione um diretório"
 
 #: ../data/ui/CatfishWindow.ui.h:33
+msgid "Search for files"
+msgstr "Pesquisa por arquivos"
+
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "Compact List"
 msgstr "Lista compacta"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "Thumbnails"
 msgstr "Miniaturas"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "Show _Hidden Files"
 msgstr "Exibir Arquivos Ocultos"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "Search File _Contents"
 msgstr "Pesquisar _Conteúdos de Arquivo"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Exact Match"
 msgstr "_Correspondência Correta"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Show _Sidebar"
 msgstr "Mo_strar Barra Lateral"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index…"
 msgstr "_Atualizar Indice da Pesquisa"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Update Search Database"
 msgstr "Atualizar a base de dados de pesquisa"
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "Unlock"
 msgstr "Desbloquear"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Database:</b>"
 msgstr "<b>Base de dados:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "<b>Updated:</b>"
 msgstr "<b>Atualizado:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Atualizar a base de dados de pesquisa</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -526,7 +531,7 @@ msgstr ""
 "Esta versão apresenta melhor desempenho, melhor integração com o desktop e "
 "várias correções de bugs antigos. As strings de pesquisa com aspas agora são"
 " processadas corretamente. Arquivos podem ser arrastados para outros "
-"aplicativos. Miniaturas só são geradas quando solicitadas pelo usuário."
+"aplicativos. Miniaturas são geradas somente quando solicitadas pelo usuário."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
