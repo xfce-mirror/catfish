@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-05 20:20-0500\n"
+"POT-Creation-Date: 2019-03-12 13:50+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: scootergrisen, 2019\n"
 "Language-Team: Danish (https://www.transifex.com/xfce/teams/16840/da/)\n"
@@ -192,7 +192,7 @@ msgstr "Vis _skjulte filer"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "Search File _Contents"
-msgstr "Søg i fil_indehold"
+msgstr "Søg i fil_indhold"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Exact Match"
