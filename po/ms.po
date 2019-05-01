@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-20 10:17-0500\n"
+"POT-Creation-Date: 2019-03-12 13:50+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>, 2019\n"
 "Language-Team: Malay (https://www.transifex.com/xfce/teams/16840/ms/)\n"
@@ -175,58 +175,62 @@ msgid "Select a Directory"
 msgstr "Pilih satu Direktori"
 
 #: ../data/ui/CatfishWindow.ui.h:33
+msgid "Search for files"
+msgstr "Gelintar fail"
+
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "Compact List"
 msgstr "Senarai Padat"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "Thumbnails"
 msgstr "Lakaran Kenit"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "Show _Hidden Files"
 msgstr "Tunjuk Fail T_ersembunyi"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "Search File _Contents"
 msgstr "Gelintar _Kandungan Fail"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Exact Match"
 msgstr "Padanan _Tepat"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Show _Sidebar"
 msgstr "Tunjuk Palang _Sisi"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index…"
 msgstr "_Kemaskini Indeks Gelintar..."
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
 msgstr "Perih_al"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Update Search Database"
 msgstr "Kemaskini Pangkalan Data Gelintar"
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "Unlock"
 msgstr "Buka"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Database:</b>"
 msgstr "<b>Pangkalan Data</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "<b>Updated:</b>"
 msgstr "<b>Dikemaskini:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Kemaskini Pangkalan Data Gelintar</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -515,6 +519,18 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release features improved performance, better desktop integration, and "
+"a number of long-standing bugs. Quoted search strings are now correctly "
+"processed. Files can be dragged into other applications. Thumbnails are only"
+" generated when requested by the user."
+msgstr ""
+"Keluaran ini memfiturkan prestasi ditambah baik, penyepaduan desktop lebih "
+"baik, dan sejumlah pepijat lama yang telah dibaiki. Rentetan gelintar "
+"berpetikan kini boleh memproses dengan betul. Fail-fail boleh diseret ke "
+"dalam aplikasi lain. Lakaran kenit hanya dijana bila dipinta oleh pengguna."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
 "other applications. Items displayed at the bottom of the results window are "
@@ -525,11 +541,11 @@ msgstr ""
 "kini akan dipadankan dengan lain-lain aplikasi. Item dipaparkan di bahagian "
 "bawah tetingkap keputusan dan kini boleh dicapai dengan semua tema desktop."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid "This is a minor translations-only release."
 msgstr "Ini adalah keluaran terjemahan kecil-sahaja."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -537,7 +553,7 @@ msgstr ""
 "Keluar ini memfiturkan beberapa penambahbaikan prestasi dan banyak kemaskini"
 " terjemahan."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -545,7 +561,7 @@ msgstr ""
 "Keluaran ini kini memaparkan semua setem masa fail berdasarkan zon waktu "
 "selain dari Waktu Universal Selaras (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -558,7 +574,7 @@ msgstr ""
 " boleh digunakan berdasarkan zon waktu berbanding Waktu Universal Terselaras"
 " (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -572,13 +588,13 @@ msgstr ""
 "termasuklah palang pengepala dan widget timbul pilihan. Pengendalian kata "
 "laluan telah ditambah baik dengan penyepaduan PolicyKit jika tersedia."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Keluaran ini membaiki dua pepijat baharu dan sertakan terjemahan yang "
 "dikemakinikan."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -586,7 +602,7 @@ msgstr ""
 "Keluaran ini membaiki regresi yang mana aplikasi tidak berupaya dimulakan "
 "pada beberapa sistem."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -596,7 +612,7 @@ msgstr ""
 "disokong. Satu Palang Maklumat kini dipaparkan bila pangkalan data gelintar "
 "telah lapuk, dan dialog digunakan untuk mengemaskini telah ditambah baik."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -604,7 +620,7 @@ msgstr ""
 "Keluaran ini membaiki dua isu yang lokasi tidak dilakukan dengan betul dan "
 "juga menambahbaik pengendalian ikon simbolik yang hilang."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -614,7 +630,7 @@ msgstr ""
 "membuang kod yang tidak diperlukan, dan membaiki isu-isu dengan pemilihan "
 "senarai dan item."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -622,7 +638,7 @@ msgstr ""
 "Keluaran ini membaiki isu keselamatan yang mungkin berlaku ketika permulaan "
 "program dan juga membaiki regresi ketika memilih item berbilang."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
