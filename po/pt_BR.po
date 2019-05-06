@@ -9,6 +9,7 @@
 # Michael Martins <michaelfm21@gmail.com>, 2018
 # Andre Miranda <andre42m@gmail.com>, 2019
 # Luis Borges <roninborges@gmail.com>, 2019
+# Rafael Fontenelle <rffontenelle@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-12 13:50+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Luis Borges <roninborges@gmail.com>, 2019\n"
+"Last-Translator: Rafael Fontenelle <rffontenelle@gmail.com>, 2019\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/xfce/teams/16840/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,7 +57,7 @@ msgstr "_Abrir"
 #. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
-msgstr "Mostrar no Gerenciador de Arquivos"
+msgstr "Mostrar no _Gerenciador de Arquivos"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -191,7 +192,7 @@ msgstr "Miniaturas"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Show _Hidden Files"
-msgstr "Exibir Arquivos Ocultos"
+msgstr "Exibir Arquivos _Ocultos"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "Search File _Contents"
@@ -207,7 +208,7 @@ msgstr "Mo_strar Barra Lateral"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index…"
-msgstr "_Atualizar Indice da Pesquisa"
+msgstr "_Atualizar Índice da Pesquisa…"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -239,7 +240,7 @@ msgid ""
 "This action requires administrative rights."
 msgstr ""
 "Para rápidos resultados de pesquisa, a base de dados precisa estar atualizada.\n"
-"Essa ação requer previlégios administrativos."
+"Essa ação requer privilégios administrativos."
 
 #: ../catfish/__init__.py:37
 msgid "Usage: %prog [options] path query"
@@ -251,7 +252,7 @@ msgstr "Mostrar mensagens de depuração (-vv também irá depurar catfish_lib)"
 
 #: ../catfish/__init__.py:45
 msgid "Use large icons"
-msgstr "Usar icones grandes"
+msgstr "Usar ícones grandes"
 
 #: ../catfish/__init__.py:47
 msgid "Use thumbnails"
@@ -356,7 +357,7 @@ msgstr "\"%s\" não pôde ser deletado."
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
 msgid "Save \"%s\" as…"
-msgstr "Salvar \"%s\" como..."
+msgstr "Salvar \"%s\" como…"
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
