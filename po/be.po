@@ -521,6 +521,10 @@ msgid ""
 "processed. Files can be dragged into other applications. Thumbnails are only"
 " generated when requested by the user."
 msgstr ""
+"У гэтым выпуску былі палепшаныя прадукцыйнасць, інтэграцыя з працоўным "
+"сталом, а таксама выпраўлены шэраг застарэлых памылак. Ад гэтай пары "
+"цытаваныя радкі пошуку апрацоўваюцца карэктна. Файлы можна перацягваць у "
+"іншыя праграмы. Мініяцюры генеруюцца толькі па запыце карыстальніка."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
