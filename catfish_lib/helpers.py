@@ -22,9 +22,12 @@ import os
 import sys
 
 import gi
-gi.require_version('Gtk', '3.0')  # noqa
+gi.require_version('GLib', '2.0')
+gi.require_version('GObject', '2.0')
+gi.require_version('Gdk', '3.0')
+gi.require_version('Gtk', '3.0')
 
-from gi.repository import Gtk, GObject
+from gi.repository import GLib, GObject, Gdk, Gtk
 
 from . catfishconfig import get_data_file
 from . Builder import Builder
@@ -152,3 +155,20 @@ def alias(alternative_function_name):
         function.aliases.append(alternative_function_name)
         return function
     return decorator
+
+
+def check_x11_session():
+    '''Is it an X.org session?'''
+    backend_env = GLib.environ_getenv(GLib.get_environ(), 'GDK_BACKEND')
+    if backend_env is None:
+        # We look for default display
+        display = Gdk.Display.get_default().get_name()
+        if display.startswith('wayland'):
+            return False
+        else:
+            return True
+    else:
+        if backend_env.lower() == 'x11':
+            return True
+        else:
+            return False

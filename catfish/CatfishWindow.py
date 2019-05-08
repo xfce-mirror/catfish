@@ -28,7 +28,14 @@ from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
 
 import pexpect
-from gi.repository import Gdk, GdkPixbuf, GLib, GObject, Gtk, Pango
+import gi
+gi.require_version('GLib', '2.0')
+gi.require_version('GObject', '2.0')
+gi.require_version('Pango', '1.0')
+gi.require_version('Gdk', '3.0')
+gi.require_version('GdkPixbuf', '2.0')
+gi.require_version('Gtk', '3.0')
+from gi.repository import GLib, GObject, Pango, Gdk, GdkPixbuf, Gtk
 
 from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishSearchEngine import CatfishSearchEngine
@@ -317,9 +324,11 @@ class CatfishWindow(Window):
         return (s.get_width(), s.get_height())
 
     def get_display_size(self):
-        s = self.get_screen()
-        m = s.get_monitor_at_window(s.get_active_window())
-        monitor = s.get_monitor_geometry(m)
+        d = Gdk.Display.get_default()
+        w = Gdk.get_default_root_window()
+
+        m = d.get_monitor_at_window(w)
+        monitor = m.get_geometry()
         return (monitor.width, monitor.height)
 
     def on_calendar_day_changed(self, widget):
