@@ -6,16 +6,16 @@
 # Translators:
 # Marco <marcxosm@gmail.com>, 2018
 # Xfce Bot <transifex@xfce.org>, 2018
-# Emanuele Petriglia <inbox@emanuelepetriglia.me>, 2019
+# Emanuele Petriglia <transifex@emanuelepetriglia.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-05 20:20-0500\n"
+"POT-Creation-Date: 2019-03-12 13:50+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Emanuele Petriglia <inbox@emanuelepetriglia.me>, 2019\n"
+"Last-Translator: Emanuele Petriglia <transifex@emanuelepetriglia.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/xfce/teams/16840/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
