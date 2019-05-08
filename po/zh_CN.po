@@ -6,7 +6,7 @@
 # Translators:
 # Levi Zhou <congzhou821@gmail.com>, 2018
 # No Body, 2018
-# Xiaobo Zhou <zhouxiaobo.500@gmail.com>, 2019
+# Cally Mal <zhouxiaobo.500@gmail.com>, 2019
 # 玉堂白鹤 <yjwork@qq.com>, 2019
 # 
 #, fuzzy
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-05 20:20-0500\n"
+"POT-Creation-Date: 2019-03-12 13:50+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/xfce/teams/16840/zh_CN/)\n"
