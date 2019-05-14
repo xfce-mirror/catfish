@@ -63,7 +63,7 @@ msgstr "_Copiar lugar"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Gardar como..."
+msgstr "_Gardar como…"
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
@@ -316,7 +316,7 @@ msgstr "A base de datos de buscas foi actualizada correctamente."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "A actualizar..."
+msgstr "Estase a actualizar…"
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -327,7 +327,7 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
-"A busca está en progreso...\n"
+"A busca está en progreso…\n"
 "Prema o botón de cancelar ou a tecla Escape para detela."
 
 #: ../catfish/CatfishWindow.py:767
@@ -435,7 +435,7 @@ msgstr "A buscar..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."
-msgstr "Os resultados móstranse segundo van aparecendo."
+msgstr "Os resultados amósanse segundo se van atopando."
 
 #: ../catfish/CatfishWindow.py:1588
 #, python-format
@@ -524,7 +524,7 @@ msgid ""
 " generated when requested by the user."
 msgstr ""
 "Esta versión presenta un mellor rendemento, mellor integración co escritorio"
-" e a corrección de erros de hai bastante tempo. As cadeas de busca entre "
+" e a corrección de fallos de hai bastante tempo. As cadeas de busca entre "
 "vírgulas agora procésanse correctamente. Os ficheiros pódense arrastrar a "
 "outros aplicativos. As miniaturas só se xeran cando o usuario solicita."
 
@@ -536,9 +536,10 @@ msgid ""
 "now accessible with all desktop themes."
 msgstr ""
 "Esta versión conta con varias melloras no procesamento das miniaturas e "
-"numerosos arranxos de erros. As vistas previas das iconas son agora melloras"
-" e cadran coas doutros aplicativos. Os elementos que se mostran no fondo da "
-"xanela de resultados son agora accesíbeis con todos os temas de escritorio."
+"numerosos arranxos de fallos. As vistas previas das iconas son agora "
+"melloras e cadran coas doutros aplicativos. Os elementos que se mostran no "
+"fondo da xanela de resultados son agora accesíbeis con todos os temas de "
+"escritorio."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid "This is a minor translations-only release."
@@ -567,7 +568,7 @@ msgid ""
 "click functionality has been restored. Date range filters are now applied "
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
-"Esta versión arranxa varios erros relacionados coa xanela de resultados. É "
+"Esta versión arranxa varios fallos relacionados coa xanela de resultados. É "
 "posíbel outra vez retirar os ficheiros desde a lista de resultados ao "
 "eliminalos. Restaurouse a funcionalidade dos clics medio e dereito. Os "
 "filtros de intervalos de datos aplícanse agora segundo o fuso horario no "
@@ -582,16 +583,16 @@ msgid ""
 " integration of PolicyKit when available."
 msgstr ""
 "Esta versión inclúe feitura nova da interface, mellora a velocidade da busca"
-" e arranxa varios erros. O fuxo de traballo foi mellorado utilizando algunha"
-" das funcionalidades máis recentes da caixa de ferramentas GTK+, incluíndo "
-"as barras de cabeceira opcionais e os trebellos sobrepostos. A xestión dos "
-"contrasinais foi mellorada coa integración de PolicyKit onde está "
-"dispoñíbel."
+" e arranxa varios fallos. O fuxo de traballo foi mellorado utilizando "
+"algunha das funcionalidades máis recentes da caixa de ferramentas GTK+, "
+"incluíndo as barras de cabeceira opcionais e os trebellos sobrepostos. A "
+"xestión dos contrasinais foi mellorada coa integración de PolicyKit onde "
+"está dispoñíbel."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
-"Esta versión arranxa dous erros novos e inclúe traducións actualizadas."
+"Esta versión arranxa dous fallos novos e inclúe traducións actualizadas."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
@@ -617,8 +618,8 @@ msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
-"Esta versión arranxa dous problemas nos que locate non se executaba "
-"axeitadamente e mellora a xestión de iconas simbólicas ausentes."
+"Esta versión arranxa dúas incidencias nos que a localización non se "
+"executaba axeitadamente e mellora o manexo das iconas simbólicas que faltan."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
@@ -627,15 +628,15 @@ msgid ""
 "selection."
 msgstr ""
 "Esta versión estábel mellorou a lexibilidade do diálogo do contrasinal, "
-"limpou código que non se usaba e arranxou problemas potenciais coa selección"
-" de listas e elementos."
+"limpou código que non se usaba e arranxou incidencias potenciais coa "
+"selección de listas e elementos."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr ""
-"Esta versión arranxou un problema de seguranza potencial no inicio do "
+"Esta versión arranxou unha incidencia de seguranza potencial no inicio do "
 "programa e arranxou unha regresión ao seleccionar varios elementos"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:18
@@ -647,7 +648,7 @@ msgid ""
 "translatable and keyboard accelerators have been improved."
 msgstr ""
 "A primeira versión da serie 1.0.x presentou unha interface anovada e "
-"arranxou moitos erros antigos. As melloras nos permisos predeterminados "
+"arranxou moitos fallos antigos. As melloras nos permisos predeterminados "
 "eliminaron moitos avisos ao empaquetar para as distribucións. Mellorouse a "
 "accesibilidade, xa que todas as cadeas son traducíbeis e os aceleradores de "
 "teclado recibiron melloras"
