@@ -236,7 +236,7 @@ msgid ""
 "This action requires administrative rights."
 msgstr ""
 "For at få hurtigere søgeresultater skal søgedatabasen genopfriskes.\n"
-"Denne handling kræver administratorrettigheder."
+"Denne handling kræver administratortilladelser."
 
 #: ../catfish/__init__.py:37
 msgid "Usage: %prog [options] path query"
