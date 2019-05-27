@@ -175,7 +175,7 @@ msgstr "เลือกไดเรกทอรี"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Search for files"
-msgstr ""
+msgstr "ค้นหาแฟ้ม"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Compact List"
