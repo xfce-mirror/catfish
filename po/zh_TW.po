@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 13:50+0100\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>, 2019\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/xfce/teams/16840/zh_TW/)\n"
@@ -204,7 +204,7 @@ msgstr "顯示側邊欄"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index..."
-msgstr "更新搜尋索引(_U)..."
+msgstr "更新搜尋索引……(_U)"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -315,7 +315,7 @@ msgstr "搜尋資料庫更新成功。"
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "更新中..."
+msgstr "更新中…"
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -351,7 +351,7 @@ msgstr "無法删除「%s」。"
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "將「%s」另存為..."
+msgstr "將「%s」另存為……"
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -430,7 +430,7 @@ msgstr "bytes"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
 msgid "Searching..."
-msgstr "搜尋中..."
+msgstr "正在搜尋……"
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."
