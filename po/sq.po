@@ -62,7 +62,7 @@ msgstr "_Kopjoji Vendndodhjen"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Ruajeni si…"
+msgstr "_Ruajeni si..."
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
@@ -202,8 +202,8 @@ msgid "Show _Sidebar"
 msgstr "Shfaq _Anështyllën"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
-msgstr "_Përditësoni Tregues Kërkimesh…"
+msgid "_Update Search Index..."
+msgstr "_Përditësoni Tregues Kërkimesh..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -316,7 +316,7 @@ msgstr "Baza e të dhënave të kërkimeve u përditësua me sukses."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Po përditësohet…"
+msgstr "Po përditësohet..."
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -327,7 +327,7 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
-"Kërkimi po kryhet…\n"
+"Kërkimi po kryhet...\n"
 "Që të ndalet, shtypni butonin Anuloje ose tastin Esc."
 
 #: ../catfish/CatfishWindow.py:767
@@ -351,8 +351,8 @@ msgstr "\"%s\" s’u fshi dot."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Ruajeni %s si… "
+msgid "Save \"%s\" as..."
+msgstr "Ruajeni %s si... "
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -430,8 +430,8 @@ msgid "bytes"
 msgstr "bajte"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "Po kërkohet…"
+msgid "Searching..."
+msgstr "Po kërkohet..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."
@@ -453,7 +453,7 @@ msgstr "Lypset Fjalëkalim"
 
 #: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
-msgstr "Fjalëkalim i pasaktë… riprovoni."
+msgstr "Fjalëkalim i pasaktë... riprovoni."
 
 #: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"

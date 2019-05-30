@@ -64,7 +64,7 @@ msgstr "_Copiar la ubicación"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Guardar como…"
+msgstr "_Guardar como..."
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
@@ -205,8 +205,8 @@ msgid "Show _Sidebar"
 msgstr "Mostrar la barra _lateral"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
-msgstr "Actualizar el índice de _búsqueda…"
+msgid "_Update Search Index..."
+msgstr "Actualizar el índice de _búsqueda..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -319,7 +319,7 @@ msgstr "El índice de búsqueda se ha actualizado correctamente."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Actualizando…"
+msgstr "Actualizando..."
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -354,8 +354,8 @@ msgstr "No se ha podido eliminar «%s»."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Guardar «%s» como…"
+msgid "Save \"%s\" as..."
+msgstr "Guardar «%s» como..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -433,8 +433,8 @@ msgid "bytes"
 msgstr "bytes"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "Buscando…"
+msgid "Searching..."
+msgstr "Buscando..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."

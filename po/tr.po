@@ -204,7 +204,7 @@ msgid "Show _Sidebar"
 msgstr "_Kenar Çubuğunu Göster"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "Arama Veritabanını _Güncelle..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -352,7 +352,7 @@ msgstr "\"%s\" silinemedi."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr "%s 'i Farklı Kaydet"
 
 #: ../catfish/CatfishWindow.py:1097
@@ -431,7 +431,7 @@ msgid "bytes"
 msgstr "bayt"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
+msgid "Searching..."
 msgstr "Aranıyor..."
 
 #: ../catfish/CatfishWindow.py:1583

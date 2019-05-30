@@ -203,8 +203,8 @@ msgid "Show _Sidebar"
 msgstr "Приказуј бочну _површ"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
-msgstr "_Освежи списак датотека претраге…"
+msgid "_Update Search Index..."
+msgstr "_Освежи списак датотека претраге..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -352,7 +352,7 @@ msgstr "Нисам успео да избришем „%s“."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr "Сачувај „%s“ као..."
 
 #: ../catfish/CatfishWindow.py:1097
@@ -431,8 +431,8 @@ msgid "bytes"
 msgstr "бајта"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "Тражим…"
+msgid "Searching..."
+msgstr "Тражим..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."

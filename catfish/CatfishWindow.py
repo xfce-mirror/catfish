@@ -1059,7 +1059,7 @@ class CatfishWindow(Window):
         Return the filename, or None if cancelled."""
         basename = os.path.basename(filename)
 
-        dialog = Gtk.FileChooserDialog(title=_('Save "%s" as…') % basename,
+        dialog = Gtk.FileChooserDialog(title=_('Save "%s" as...') % basename,
                                        transient_for=self,
                                        action=Gtk.FileChooserAction.SAVE)
         dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
@@ -1578,7 +1578,7 @@ class CatfishWindow(Window):
         # Update the interface to Search Mode
         self.builder.get_object("results_scrolledwindow").hide()
         self.builder.get_object("splash").show()
-        self.builder.get_object("splash_title").set_text(_("Searching…"))
+        self.builder.get_object("splash_title").set_text(_("Searching..."))
         self.builder.get_object("splash_subtitle").set_text(
             _("Results will be displayed as soon as they are found."))
         self.builder.get_object("splash_hide").hide()
@@ -1587,7 +1587,7 @@ class CatfishWindow(Window):
         self.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
         self.set_title(_("Searching for \"%s\"") % keywords)
         self.spinner.show()
-        self.statusbar_label.set_label(_("Searching…"))
+        self.statusbar_label.set_label(_("Searching..."))
 
         self.search_in_progress = True
         self.refresh_search_entry()

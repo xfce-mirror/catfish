@@ -191,7 +191,7 @@ msgid "Show _Sidebar"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:39
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:40
@@ -329,7 +329,7 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:1032
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:1067
@@ -402,7 +402,7 @@ msgid "bytes"
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:1585 ../catfish/CatfishWindow.py:1594
-msgid "Searching…"
+msgid "Searching..."
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:1587

@@ -205,7 +205,7 @@ msgid "Show _Sidebar"
 msgstr "Toon zijbalk"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "Zoekindex bijwerken..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -321,7 +321,7 @@ msgstr "De gegevensbank met zoekgegevens is met succes bijgewerkt."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Aan het bijwerken…"
+msgstr "Aan het bijwerken..."
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -356,7 +356,7 @@ msgstr "'%s' kon niet gewist worden."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr "'%s' opslaan als..."
 
 #: ../catfish/CatfishWindow.py:1097
@@ -436,7 +436,7 @@ msgid "bytes"
 msgstr "bytes"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
+msgid "Searching..."
 msgstr "Aan het zoeken..."
 
 #: ../catfish/CatfishWindow.py:1583

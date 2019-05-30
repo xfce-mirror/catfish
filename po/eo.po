@@ -191,7 +191,7 @@ msgid "Show _Sidebar"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:39
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:40
@@ -329,8 +329,8 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:1032
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Konservi \"%s\" kiel…"
+msgid "Save \"%s\" as..."
+msgstr "Konservi \"%s\" kiel..."
 
 #: ../catfish/CatfishWindow.py:1067
 #, python-format
@@ -402,8 +402,8 @@ msgid "bytes"
 msgstr "oktetoj"
 
 #: ../catfish/CatfishWindow.py:1585 ../catfish/CatfishWindow.py:1594
-msgid "Searching…"
-msgstr "Serĉado…"
+msgid "Searching..."
+msgstr "Serĉado..."
 
 #: ../catfish/CatfishWindow.py:1587
 msgid "Results will be displayed as soon as they are found."
@@ -425,7 +425,7 @@ msgstr "Pasvorto bezonata"
 
 #: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
-msgstr "Pasvorto malkorekta… Provu denove."
+msgstr "Pasvorto malkorekta... Provu denove."
 
 #: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"

@@ -204,7 +204,7 @@ msgid "Show _Sidebar"
 msgstr "Pokaži rubnu _traku"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "_Ažuriraj popis pretraga..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -353,8 +353,8 @@ msgstr "\"%s\" nije moguće izbrisati."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Spremi \"%s\" kao…"
+msgid "Save \"%s\" as..."
+msgstr "Spremi \"%s\" kao..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -432,7 +432,7 @@ msgid "bytes"
 msgstr "bajtova"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
+msgid "Searching..."
 msgstr "Pretražujem..."
 
 #: ../catfish/CatfishWindow.py:1583

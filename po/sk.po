@@ -203,7 +203,7 @@ msgid "Show _Sidebar"
 msgstr "Zobraziť bočný _panel"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "_Aktualizovať index vyhľadávania..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -352,8 +352,8 @@ msgstr "Nepodarilo sa odstrániť „%s“."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Uložiť „%s“ ako…"
+msgid "Save \"%s\" as..."
+msgstr "Uložiť „%s“ ako..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -431,8 +431,8 @@ msgid "bytes"
 msgstr "bajtov"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "Vyhľadáva sa…"
+msgid "Searching..."
+msgstr "Vyhľadáva sa..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."

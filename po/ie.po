@@ -203,7 +203,7 @@ msgid "Show _Sidebar"
 msgstr "Panel _láteral"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "Act_ualisar li índex de sercha"
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -352,7 +352,7 @@ msgstr "«%s» ne posset esser deletet."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr "Salvar «%s» quam..."
 
 #: ../catfish/CatfishWindow.py:1097
@@ -429,7 +429,7 @@ msgid "bytes"
 msgstr "octetes"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
+msgid "Searching..."
 msgstr "Sercha..."
 
 #: ../catfish/CatfishWindow.py:1583

@@ -203,7 +203,7 @@ msgid "Show _Sidebar"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "යාවත්කාලීන දර්ශක සෙවීම"
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -346,7 +346,7 @@ msgstr "\"%s\" කැ ප්‍රමාණයක් විනාශ කල න�
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr "\"%s\" ලෙස සුරකින්න"
 
 #: ../catfish/CatfishWindow.py:1097
@@ -419,7 +419,7 @@ msgid "bytes"
 msgstr "බයිට"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
+msgid "Searching..."
 msgstr "සොයමින් පවතී"
 
 #: ../catfish/CatfishWindow.py:1583

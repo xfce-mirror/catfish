@@ -204,7 +204,7 @@ msgid "Show _Sidebar"
 msgstr "Mostra _barra laterale"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "Aggiorna in_dice di ricerca..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -354,7 +354,7 @@ msgstr "Impossibile eliminare «%s»."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr "Salva «%s» come..."
 
 #: ../catfish/CatfishWindow.py:1097
@@ -433,7 +433,7 @@ msgid "bytes"
 msgstr "byte"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
+msgid "Searching..."
 msgstr "Ricerca in corso..."
 
 #: ../catfish/CatfishWindow.py:1583

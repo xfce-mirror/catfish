@@ -206,7 +206,7 @@ msgid "Show _Sidebar"
 msgstr "Εμφάνι_ση Πλευρικής Μπάρας"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "_Ενημέρωση αναζήτησης ευρετηρίου ..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -355,7 +355,7 @@ msgstr "Αδυναμία διαγραφής \"%s\"."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr "Αποθήκευση \"%s\" ως..."
 
 #: ../catfish/CatfishWindow.py:1097
@@ -434,8 +434,8 @@ msgid "bytes"
 msgstr "bytes"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "Αναζήτηση…"
+msgid "Searching..."
+msgstr "Αναζήτηση..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."

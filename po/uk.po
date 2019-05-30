@@ -202,7 +202,7 @@ msgid "Show _Sidebar"
 msgstr "Показувати _бічну панель"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "_Оновити пошуковий індекс..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -314,7 +314,7 @@ msgstr "Пошукова база вдало оновлена"
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Оновлення…"
+msgstr "Оновлення..."
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -349,8 +349,8 @@ msgstr "\"%s\" не може бути видалений."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Зберегти \"%s\" як…"
+msgid "Save \"%s\" as..."
+msgstr "Зберегти \"%s\" як..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -428,8 +428,8 @@ msgid "bytes"
 msgstr "байти"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "Пошук…"
+msgid "Searching..."
+msgstr "Пошук..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."

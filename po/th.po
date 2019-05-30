@@ -202,8 +202,8 @@ msgid "Show _Sidebar"
 msgstr "แสดงแถบ_ข้าง"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
-msgstr "_ปรับข้อมูลดัชนีค้นหา…"
+msgid "_Update Search Index..."
+msgstr "_ปรับข้อมูลดัชนีค้นหา..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -349,8 +349,8 @@ msgstr "\"%s\" ไม่สามารถลบได้"
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "บันทึก \"%s\" เป็น…"
+msgid "Save \"%s\" as..."
+msgstr "บันทึก \"%s\" เป็น..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -428,8 +428,8 @@ msgid "bytes"
 msgstr "ไบต์"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "กำลังค้นหา…"
+msgid "Searching..."
+msgstr "กำลังค้นหา..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."

@@ -203,7 +203,7 @@ msgid "Show _Sidebar"
 msgstr "Tunjuk Palang _Sisi"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "_Kemaskini Indeks Gelintar..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -352,8 +352,8 @@ msgstr "\"%s\" tidak dapat dipadamkan."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Simpan \"%s\" sebagai…"
+msgid "Save \"%s\" as..."
+msgstr "Simpan \"%s\" sebagai..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -431,7 +431,7 @@ msgid "bytes"
 msgstr "bait"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
+msgid "Searching..."
 msgstr "Menggelintar..."
 
 #: ../catfish/CatfishWindow.py:1583

@@ -204,7 +204,7 @@ msgid "Show _Sidebar"
 msgstr "_Oldalsáv megjelenítése"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "_Keresési index frissítése"
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -355,8 +355,8 @@ msgstr "„%s” nem törölhető."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "„%s” mentése másként…"
+msgid "Save \"%s\" as..."
+msgstr "„%s” mentése másként..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -434,8 +434,8 @@ msgid "bytes"
 msgstr "bájt"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "Keresés…"
+msgid "Searching..."
+msgstr "Keresés..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."

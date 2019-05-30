@@ -63,7 +63,7 @@ msgstr "_Copia la ubicació"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Anomena i desa…"
+msgstr "_Anomena i desa..."
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
@@ -203,7 +203,7 @@ msgid "Show _Sidebar"
 msgstr "Mostra la barra _lateral"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "_Actualitza la base de dades de cerques..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -352,8 +352,8 @@ msgstr "No s'ha pogut suprimir «%s»."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Anomena i desa «%s»…"
+msgid "Save \"%s\" as..."
+msgstr "Anomena i desa «%s»..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -431,8 +431,8 @@ msgid "bytes"
 msgstr "bytes"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "S'està cercant…"
+msgid "Searching..."
+msgstr "S'està cercant..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."
@@ -454,7 +454,7 @@ msgstr "Es requereix una contrasenya"
 
 #: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
-msgstr "Contrasenya incorrecta… Intenteu-ho de nou."
+msgstr "Contrasenya incorrecta... Intenteu-ho de nou."
 
 #: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"

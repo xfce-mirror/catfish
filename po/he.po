@@ -202,7 +202,7 @@ msgid "Show _Sidebar"
 msgstr "הצג סרגל _צידי"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "_עדכן את אינדקס החיפוש..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -349,7 +349,7 @@ msgstr "\"%s\" לא היה ניתן למחיקה."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr "שמור \"%s\" בשם..."
 
 #: ../catfish/CatfishWindow.py:1097
@@ -428,7 +428,7 @@ msgid "bytes"
 msgstr "בייטים"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
+msgid "Searching..."
 msgstr "מחפש..."
 
 #: ../catfish/CatfishWindow.py:1583

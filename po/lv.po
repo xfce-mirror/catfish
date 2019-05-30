@@ -193,8 +193,8 @@ msgid "Show _Sidebar"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:39
-msgid "_Update Search Index…"
-msgstr "Atja_unināt meklēšanas indeksu…"
+msgid "_Update Search Index..."
+msgstr "Atja_unināt meklēšanas indeksu..."
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_About"
@@ -331,8 +331,8 @@ msgstr "Neizdevās izdzēst “%s”"
 
 #: ../catfish/CatfishWindow.py:1032
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Saglabāt “%s” kā…"
+msgid "Save \"%s\" as..."
+msgstr "Saglabāt “%s” kā..."
 
 #: ../catfish/CatfishWindow.py:1067
 #, python-format
@@ -408,8 +408,8 @@ msgid "bytes"
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:1585 ../catfish/CatfishWindow.py:1594
-msgid "Searching…"
-msgstr "Meklē…"
+msgid "Searching..."
+msgstr "Meklē..."
 
 #: ../catfish/CatfishWindow.py:1587
 msgid "Results will be displayed as soon as they are found."
@@ -593,8 +593,8 @@ msgstr ""
 #~ "Lai dotu aktuālus rezultātus, ir jāatjaunina <i>locate</i> datubāze.\n"
 #~ "Tam ir vajadzīgas sudo (administratora) tiesības."
 
-#~ msgid "Updating database…"
-#~ msgstr "Atjaunina datubāzi…"
+#~ msgid "Updating database..."
+#~ msgstr "Atjaunina datubāzi..."
 
 #~ msgid "Done."
 #~ msgstr "Pabeigts."

@@ -204,8 +204,8 @@ msgid "Show _Sidebar"
 msgstr "Покажи страничната лента"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
-msgstr "Обнови _индекса за търсене…"
+msgid "_Update Search Index..."
+msgstr "Обнови _индекса за търсене..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -320,7 +320,7 @@ msgstr "Базата с данни е актуализирана успешно.
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Актуализиране…"
+msgstr "Актуализиране..."
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -355,8 +355,8 @@ msgstr "«%s» не може да се изтрие."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Запази «%s» като…"
+msgid "Save \"%s\" as..."
+msgstr "Запази «%s» като..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -434,8 +434,8 @@ msgid "bytes"
 msgstr "байта"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "Търсене…"
+msgid "Searching..."
+msgstr "Търсене..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."

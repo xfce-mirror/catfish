@@ -205,8 +205,8 @@ msgid "Show _Sidebar"
 msgstr "Alboko barra erakutsi"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
-msgstr "Bilaketa indizea eguneratu…"
+msgid "_Update Search Index..."
+msgstr "Bilaketa indizea eguneratu..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -319,7 +319,7 @@ msgstr "Bilaketa datu-basea ongi eguneratu da."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Eguneratzen…"
+msgstr "Eguneratzen..."
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -354,8 +354,8 @@ msgstr "Ezin izan da \"%s\" ezabatu."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Gorde \"%s\" honela…"
+msgid "Save \"%s\" as..."
+msgstr "Gorde \"%s\" honela..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -431,8 +431,8 @@ msgid "bytes"
 msgstr "byte"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "Bilatzen…"
+msgid "Searching..."
+msgstr "Bilatzen..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."
@@ -454,7 +454,7 @@ msgstr "Pasahitza behar da"
 
 #: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
-msgstr "Pasahitza ez da zuzena… saiatu berriz."
+msgstr "Pasahitza ez da zuzena... saiatu berriz."
 
 #: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"

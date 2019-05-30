@@ -203,7 +203,7 @@ msgid "Show _Sidebar"
 msgstr "サイドバーの表示(_S)"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "検索インデックスの更新(_U)"
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -350,7 +350,7 @@ msgstr "\"%s\" は削除できません。"
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr "\"%s\" を別名で保存"
 
 #: ../catfish/CatfishWindow.py:1097
@@ -429,8 +429,8 @@ msgid "bytes"
 msgstr "bytes"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "検索中…"
+msgid "Searching..."
+msgstr "検索中..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."

@@ -205,7 +205,7 @@ msgid "Show _Sidebar"
 msgstr "显示侧边栏(&S)"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
+msgid "_Update Search Index..."
 msgstr "更新搜索索引(&U)..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -352,7 +352,7 @@ msgstr "无法删除 \"%s\"。"
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
+msgid "Save \"%s\" as..."
 msgstr "将 \"%s\" 另存为..."
 
 #: ../catfish/CatfishWindow.py:1097
@@ -429,7 +429,7 @@ msgid "bytes"
 msgstr "字节"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
+msgid "Searching..."
 msgstr "搜索中..."
 
 #: ../catfish/CatfishWindow.py:1583

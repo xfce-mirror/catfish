@@ -68,7 +68,7 @@ msgstr "_Copier l’emplacement"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Enregistrer sous…"
+msgstr "_Enregistrer sous..."
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
@@ -210,8 +210,8 @@ msgid "Show _Sidebar"
 msgstr "Afficher la _barre latérale"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index…"
-msgstr "_Mettre à jour l’index de recherche…"
+msgid "_Update Search Index..."
+msgstr "_Mettre à jour l’index de recherche..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -325,7 +325,7 @@ msgstr "Base de données de recherche mise à jour avec succès."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Mise à jour…"
+msgstr "Mise à jour..."
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -336,7 +336,7 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
-"La recherche est en cours…\n"
+"La recherche est en cours...\n"
 "Appuyez sur le bouton Annuler ou sur la touche Échap pour arrêter."
 
 #: ../catfish/CatfishWindow.py:767
@@ -360,8 +360,8 @@ msgstr "Impossible de supprimer « %s »."
 
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
-msgid "Save \"%s\" as…"
-msgstr "Enregistrer « %s » sous…"
+msgid "Save \"%s\" as..."
+msgstr "Enregistrer « %s » sous..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -439,8 +439,8 @@ msgid "bytes"
 msgstr "octets"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
-msgid "Searching…"
-msgstr "Recherche…"
+msgid "Searching..."
+msgstr "Recherche..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."
@@ -462,7 +462,7 @@ msgstr "Mot de passe requis"
 
 #: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
-msgstr "Mot de passe incorrect… Veuillez réessayer."
+msgstr "Mot de passe incorrect... Veuillez réessayer."
 
 #: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"
