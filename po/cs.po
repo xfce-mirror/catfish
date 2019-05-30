@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 13:50+0100\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2019\n"
 "Language-Team: Czech (https://www.transifex.com/xfce/teams/16840/cs/)\n"
@@ -65,7 +65,7 @@ msgstr "_Kopírovat umístění"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Uložit jako..."
+msgstr "_Uložit jako…"
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
@@ -321,7 +321,7 @@ msgstr "Aktualizace vyhledávací databáze byla úspěšně dokončena."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Aktualizování..."
+msgstr "Aktualizování…"
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -332,7 +332,7 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
-"Vyhledávání probíhá...\n"
+"Vyhledávání probíhá…\n"
 "Zastavíte ho kliknutím na Storno nebo klávesou Esc."
 
 #: ../catfish/CatfishWindow.py:767
