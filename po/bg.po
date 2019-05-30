@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 13:50+0100\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>, 2019\n"
 "Language-Team: Bulgarian (https://www.transifex.com/xfce/teams/16840/bg/)\n"
@@ -205,7 +205,7 @@ msgstr "Покажи страничната лента"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index..."
-msgstr "Обнови _индекса за търсене..."
+msgstr "_Обновяване на индекса за търсене..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -320,7 +320,7 @@ msgstr "Базата с данни е актуализирана успешно.
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Актуализиране..."
+msgstr "Актуализиране…"
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -356,7 +356,7 @@ msgstr "«%s» не може да се изтрие."
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "Запази «%s» като..."
+msgstr "Запази \"%s\" като..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
