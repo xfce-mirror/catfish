@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 13:50+0100\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>, 2019\n"
 "Language-Team: Serbian (https://www.transifex.com/xfce/teams/16840/sr/)\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish/CatfishWindow.py:666
 msgid "Catfish File Search"
-msgstr "Претрага датотека Сом (Catfish)"
+msgstr "Претрага датотека Сом"
 
 #: ../org.xfce.Catfish.desktop.in.h:2
 msgid "File search"
@@ -176,7 +176,7 @@ msgstr "Изаберите омот"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "Search for files"
-msgstr ""
+msgstr "Тражите датотеке"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Compact List"
@@ -432,7 +432,7 @@ msgstr "бајта"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
 msgid "Searching..."
-msgstr "Тражим..."
+msgstr "Претрага..."
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."
@@ -523,6 +523,10 @@ msgid ""
 "processed. Files can be dragged into other applications. Thumbnails are only"
 " generated when requested by the user."
 msgstr ""
+"Ово издање представља побољшани учинак, бољи склад са радним простором, и "
+"бројне исправе грешака. Ниске претраге под наводницима су сада исправно "
+"обрађене. Датотеке могу бити превлачене у друге програме. Умањене сличице се"
+" само образују на захтев корисника."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
