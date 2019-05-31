@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 13:50+0100\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2019\n"
 "Language-Team: Dutch (https://www.transifex.com/xfce/teams/16840/nl/)\n"
@@ -206,7 +206,7 @@ msgstr "Toon zijbalk"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index..."
-msgstr "Zoekindex bijwerken..."
+msgstr "Zoekindex _bijwerken..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -321,7 +321,7 @@ msgstr "De gegevensbank met zoekgegevens is met succes bijgewerkt."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Aan het bijwerken..."
+msgstr "Aan het bijwerken…"
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
