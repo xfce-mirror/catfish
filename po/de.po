@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 13:50+0100\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Andreas Eitel <github-aneitel@online.de>, 2019\n"
 "Language-Team: German (https://www.transifex.com/xfce/teams/16840/de/)\n"
@@ -65,7 +65,7 @@ msgstr "Ort _kopieren"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Speichern unter ..."
+msgstr "_Speichern unter …"
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
@@ -206,7 +206,7 @@ msgstr "Seitenleiste _anzeigen"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index..."
-msgstr "_Suchindex aktualisieren ..."
+msgstr "_Suchindex aktualisieren …"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -319,7 +319,7 @@ msgstr "Die Suchdatenbank wurde erfolgreich aktualisiert."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Aktualisierung wird durchgeführt ..."
+msgstr "Aktualisierung wird durchgeführt …"
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -330,7 +330,7 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
-"Suchvorgang läuft ...\n"
+"Suchvorgang läuft …\n"
 "Abbrechen klicken oder die die Escape-Taste drücken, um abzubrechen."
 
 #: ../catfish/CatfishWindow.py:767
@@ -355,7 +355,7 @@ msgstr "»%s« konnte nicht gelöscht werden."
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "»%s« speichern unter ..."
+msgstr "\"%s\" speichern unter …"
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
@@ -434,7 +434,7 @@ msgstr "Bytes"
 
 #: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
 msgid "Searching..."
-msgstr "Suche läuft ..."
+msgstr "Suche läuft …"
 
 #: ../catfish/CatfishWindow.py:1583
 msgid "Results will be displayed as soon as they are found."
@@ -456,7 +456,7 @@ msgstr "Passwort erforderlich"
 
 #: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
-msgstr "Falsches Passwort ... bitte erneut versuchen."
+msgstr "Falsches Passwort … bitte erneut versuchen."
 
 #: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"
