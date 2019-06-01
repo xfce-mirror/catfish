@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 13:50+0100\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019\n"
 "Language-Team: Catalan (https://www.transifex.com/xfce/teams/16840/ca/)\n"
@@ -63,7 +63,7 @@ msgstr "_Copia la ubicació"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Anomena i desa..."
+msgstr "_Anomena i desa…"
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
@@ -454,7 +454,7 @@ msgstr "Es requereix una contrasenya"
 
 #: ../catfish_lib/SudoDialog.py:175
 msgid "Incorrect password... try again."
-msgstr "Contrasenya incorrecta... Intenteu-ho de nou."
+msgstr "Contrasenya incorrecta… Intenteu-ho de nou."
 
 #: ../catfish_lib/SudoDialog.py:185
 msgid "Password:"
