@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 13:50+0100\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Casper casper, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/xfce/teams/16840/es/)\n"
@@ -64,7 +64,7 @@ msgstr "_Copiar la ubicación"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Guardar como..."
+msgstr "_Guardar como…"
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
@@ -206,7 +206,7 @@ msgstr "Mostrar la barra _lateral"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index..."
-msgstr "Actualizar el índice de _búsqueda..."
+msgstr "_Actualizar índice de búsqueda..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -319,7 +319,7 @@ msgstr "El índice de búsqueda se ha actualizado correctamente."
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:723
 msgid "Updating..."
-msgstr "Actualizando..."
+msgstr "Actualizando…"
 
 #: ../catfish/CatfishWindow.py:757
 msgid "Stop Search"
@@ -355,7 +355,7 @@ msgstr "No se ha podido eliminar «%s»."
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "Guardar «%s» como..."
+msgstr "Guardar \"%s\" como..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
