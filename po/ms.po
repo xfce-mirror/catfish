@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 13:50+0100\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>, 2019\n"
 "Language-Team: Malay (https://www.transifex.com/xfce/teams/16840/ms/)\n"
@@ -353,7 +353,7 @@ msgstr "\"%s\" tidak dapat dipadamkan."
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "Simpan \"%s\" sebagai..."
+msgstr "Simpan \"%s\" sebagai…"
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
