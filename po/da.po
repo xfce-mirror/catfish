@@ -25,7 +25,7 @@ msgstr ""
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish/CatfishWindow.py:666
 msgid "Catfish File Search"
-msgstr "Catfish-filsøgning"
+msgstr "Catfish Filsøgning"
 
 #: ../org.xfce.Catfish.desktop.in.h:2
 msgid "File search"
