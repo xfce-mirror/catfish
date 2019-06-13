@@ -168,7 +168,7 @@ msgctxt ""
 "Full text: Enter your query above to find your files or click the [icon] "
 "icon for more options."
 msgid " icon for more options."
-msgstr " -ikonet for flere valgmuligheder."
+msgstr "-ikonet for flere valgmuligheder."
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
