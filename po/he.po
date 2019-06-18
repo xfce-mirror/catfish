@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 13:50+0100\n"
+"POT-Creation-Date: 2019-03-05 20:20-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Elishai Eliyahu <e1907@mm.st>, 2019\n"
 "Language-Team: Hebrew (https://www.transifex.com/xfce/teams/16840/he/)\n"
@@ -203,7 +203,7 @@ msgstr "הצג סרגל _צידי"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index..."
-msgstr "_עדכן את אינדקס החיפוש..."
+msgstr "_עדכן אינדקס חיפוש..."
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
@@ -350,7 +350,7 @@ msgstr "\"%s\" לא היה ניתן למחיקה."
 #: ../catfish/CatfishWindow.py:1062
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "שמור \"%s\" בשם..."
+msgstr "שמור \"%s\" כ..."
 
 #: ../catfish/CatfishWindow.py:1097
 #, python-format
