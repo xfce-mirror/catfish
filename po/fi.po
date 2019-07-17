@@ -310,7 +310,7 @@ msgstr "Tunnistus epäonnistui."
 
 #: ../catfish/CatfishWindow.py:642
 msgid "Authentication cancelled."
-msgstr "Todennus keskeytetty."
+msgstr "Tunnistus keskeytetty."
 
 #: ../catfish/CatfishWindow.py:648
 msgid "Search database updated successfully."
@@ -509,13 +509,13 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "The main Catfish window displaying image search results"
-msgstr ""
+msgstr "Catfishin pääikkuna kuvahakutulosten kera"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
 "The main Catfish window displaying available filters and filtered search "
 "results"
-msgstr ""
+msgstr "Catfishin pääikkuna suodattimien ja suodatettujen hakutulosten kera"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
