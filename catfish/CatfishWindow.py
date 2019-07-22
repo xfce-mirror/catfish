@@ -27,6 +27,10 @@ from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
 
+# Thunar Integration
+import dbus
+import urllib
+
 import pexpect
 import gi
 gi.require_version('GLib', '2.0')
@@ -948,6 +952,68 @@ class CatfishWindow(Window):
         # Reload the results filter.
         self.refilter()
 
+    def thunar_display_path(self, path):
+        bus = dbus.SessionBus()
+        obj = bus.get_object('org.xfce.Thunar', '/org/xfce/FileManager')
+        iface = dbus.Interface(obj, 'org.xfce.FileManager')
+
+        path = os.path.realpath(urllib.parse.urlparse(path).path)
+        url = urllib.parse.urljoin('file:', urllib.request.pathname2url(path))
+
+        if os.path.isfile(path):
+            method = iface.get_dbus_method('DisplayFolderAndSelect')
+            dirname = os.path.dirname(url)
+            filename = os.path.basename(url)
+            method(dirname, filename, '', '')
+
+        else:
+            method = iface.get_dbus_method('DisplayFolder')
+            method(url, '', '')
+
+    def get_exo_preferred_applications(self, filename):
+        apps = {}
+        if os.path.exists(filename):
+            with open(filename, "r") as infile:
+                for line in infile.readlines():
+                    line = line.strip()
+                    if "=" in line:
+                        key, value = line.split("=", 2)
+                        if len(value) > 0:
+                            apps[key] = value
+        return apps
+
+    def get_exo_preferred_file_manager(self):
+        tmp = [GLib.get_user_config_dir()] + GLib.get_system_config_dirs()
+        config_dirs = []
+        for config_dir in tmp:
+            if config_dir not in config_dirs:
+                if os.path.exists(config_dir):
+                    config_dirs.append(config_dir)
+
+        for config_dir in config_dirs:
+            cfg = "%s/xfce4/helpers.rc" % config_dir
+            if os.path.exists(cfg):
+                apps = self.get_exo_preferred_applications(cfg)
+                if "FileManager" in apps:
+                    return apps["FileManager"]
+
+        return "Thunar"
+
+    def using_thunar_fm(self):
+        if os.environ.get("XDG_CURRENT_DESKTOP", "").lower() == 'xfce':
+            fm = self.get_exo_preferred_file_manager()
+            return "thunar" in fm.lower()
+
+        fm = subprocess.check_output(['xdg-mime','query','default', 'inode/directory'])
+        if "thunar" in fm.lower():
+            return True
+
+        if "exo-file-manager" in fm.lower():
+            fm = self.get_exo_preferred_file_manager()
+            return "thunar" in fm.lower()
+
+        return False
+
     def open_file(self, filename):
         """Open the specified filename in its default application."""
         logger.debug("Opening %s" % filename)
@@ -978,6 +1044,12 @@ class CatfishWindow(Window):
         """Open the selected file in the default file manager."""
         logger.debug("Opening file manager for %i path(s)" %
                      len(self.selected_filenames))
+
+        if self.using_thunar_fm():
+            for filename in self.selected_filenames:
+                self.thunar_display_path(filename)
+            return
+
         dirs = []
         for filename in self.selected_filenames:
             path = os.path.split(filename)[0]
