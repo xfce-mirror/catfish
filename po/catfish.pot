@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-22 13:32-0400\n"
+"POT-Creation-Date: 2019-07-22 13:50-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -431,6 +431,10 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:1687
 #, python-format
 msgid "Search results for \"%s\""
+msgstr ""
+
+#: ../catfish/AboutCatfishDialog.py:37
+msgid "translator-credits"
 msgstr ""
 
 #: ../catfish_lib/SudoDialog.py:138

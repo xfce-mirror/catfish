@@ -18,6 +18,8 @@
 
 import logging
 
+from locale import gettext as _
+
 from catfish_lib.AboutDialog import AboutDialog
 
 logger = logging.getLogger('catfish')
@@ -32,3 +34,4 @@ class AboutCatfishDialog(AboutDialog):
     def finish_initializing(self, builder):  # pylint: disable=E1002
         """Set up the about dialog"""
         super(AboutCatfishDialog, self).finish_initializing(builder)
+        self.set_translator_credits(_("translator-credits"))
