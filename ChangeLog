@@ -1,3 +1,23 @@
+v1.4.8 (UNRELEASED):
+ + Desktop Integration:
+   - Thunar: Select file after opening file manager (Xfce #14494)
+ + Bug Fixes:
+   - Adjust locate parameters for the host OS (OpenBSD support)
+   - Fix running on Wayland (Xfce #15297)
+   - Fix opening directories without XDG_CURRENT_DESKTOP (Xfce #15099)
+   - Fix exclusion of non-standard paths with the walk method (Xfce #15206)
+ + Translation Updates:
+   - Add 'translator-credits' string to po files (Xfce #15564)
+   - Change "…" to "..." for consistency with other Xfce apps (Xfce #15407)
+   - Translate "Search for files" (Xfce #15097)
+   Albanian, Arabic, Armenian (Armenia), Basque, Belarusian, Bulgarian,
+   Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+   Dutch, English (Australia), Finnish, French, Galician, German, Greek,
+   Hebrew, Hungarian, Icelandic, Indonesian, Interlingue, Italian, Japanese,
+   Korean, Lithuanian, Malay, Norwegian Bokmål, Norwegian Nynorsk, Polish,
+   Portuguese, Portuguese (Brazil), Russian, Serbian, Sinhala, Slovak,
+   Spanish, Swedish, Thai, Turkish, Ukrainian
+
 v1.4.7:
  + General:
    - Cleaner, easier to read manpage contents
