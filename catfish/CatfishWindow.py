@@ -1005,6 +1005,7 @@ class CatfishWindow(Window):
             return "thunar" in fm.lower()
 
         fm = subprocess.check_output(['xdg-mime','query','default', 'inode/directory'])
+        fm = fm.decode("utf-8", errors="replace")
         if "thunar" in fm.lower():
             return True
 
