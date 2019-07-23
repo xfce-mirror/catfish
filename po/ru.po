@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-05 20:20-0500\n"
+"POT-Creation-Date: 2019-07-22 16:49-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Igor <f2404@yandex.ru>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/xfce/teams/16840/ru/)\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:666
+#: ../catfish/CatfishWindow.py:679
 msgid "Catfish File Search"
 msgstr "Поиск файлов Catfish"
 
@@ -148,7 +148,7 @@ msgstr "Поисковая база данных старше 7 дней. Обн
 msgid "File Type"
 msgstr "Тип файла"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1133
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1215
 msgid "Modified"
 msgstr "Изменён"
 
@@ -241,90 +241,95 @@ msgstr ""
 "Для ускорения результатов, поисковая база данных должна быть обновлена.\n"
 "Действие требует прав администратора."
 
-#: ../catfish/__init__.py:37
+#: ../catfish/__init__.py:38
 msgid "Usage: %prog [options] path query"
 msgstr "Использование: %prog [опции] путь запрос"
 
-#: ../catfish/__init__.py:42
+#: ../catfish/__init__.py:43
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr "Показывать сообщения отладки (-vv также отлаживает catfish_lib)"
 
-#: ../catfish/__init__.py:45
+#: ../catfish/__init__.py:46
 msgid "Use large icons"
 msgstr "Использовать большие значки"
 
-#: ../catfish/__init__.py:47
+#: ../catfish/__init__.py:48
 msgid "Use thumbnails"
 msgstr "Использовать эскизы"
 
-#: ../catfish/__init__.py:49
+#: ../catfish/__init__.py:50
 msgid "Display time in ISO format"
 msgstr "Отображать время в формате ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
-#: ../catfish/__init__.py:51
+#: ../catfish/__init__.py:52
 msgid "Set the default search path"
 msgstr "Задать путь поиска по умолчанию"
 
-#: ../catfish/__init__.py:53
+#: ../catfish/__init__.py:54
 msgid "Perform exact match"
 msgstr "Точное совпадение"
 
-#: ../catfish/__init__.py:55
+#: ../catfish/__init__.py:56
 msgid "Include hidden files"
 msgstr "Искать в скрытых файлах"
 
-#: ../catfish/__init__.py:57
+#: ../catfish/__init__.py:58
 msgid "Perform fulltext search"
 msgstr "Выполнять полнотекстовый поиск"
 
-#: ../catfish/__init__.py:59
+#: ../catfish/__init__.py:60
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr "Если путь и запрос указаны, начинать поиск при открытии приложения."
 
+#: ../catfish/__init__.py:77
+#, python-brace-format
+msgid "Try GDK_BACKEND=x11 {0}\n"
+msgstr "Попробуйте GDK_BACKEND=x11 {0}\n"
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:84
+#: ../catfish/CatfishWindow.py:95
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (неверная кодировка)"
 
-#: ../catfish/CatfishWindow.py:238
+#: ../catfish/CatfishWindow.py:249
 msgid "Unknown"
 msgstr "Неизвестно"
 
-#: ../catfish/CatfishWindow.py:242
+#: ../catfish/CatfishWindow.py:253
 msgid "Never"
 msgstr "Никогда"
 
-#: ../catfish/CatfishWindow.py:634
+#: ../catfish/CatfishWindow.py:647
 msgid "An error occurred while updating the database."
 msgstr "Ошибка при обновлении базы данных."
 
-#: ../catfish/CatfishWindow.py:636
+#: ../catfish/CatfishWindow.py:649
 msgid "Authentication failed."
 msgstr "Ошибка аутентификации."
 
-#: ../catfish/CatfishWindow.py:642
+#: ../catfish/CatfishWindow.py:655
 msgid "Authentication cancelled."
 msgstr "Аутентификация отменена."
 
-#: ../catfish/CatfishWindow.py:648
+#: ../catfish/CatfishWindow.py:661
 msgid "Search database updated successfully."
 msgstr "Поисковая база данных успешно обновлена."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:723
+#: ../catfish/CatfishWindow.py:736
 msgid "Updating..."
 msgstr "Обновление..."
 
-#: ../catfish/CatfishWindow.py:757
+#: ../catfish/CatfishWindow.py:770
 msgid "Stop Search"
 msgstr "Остановить поиск"
 
-#: ../catfish/CatfishWindow.py:758
+#: ../catfish/CatfishWindow.py:771
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -332,31 +337,31 @@ msgstr ""
 "Поиск...\n"
 "Нажмите «Отмена» или клавишу Esc, чтобы остановить процесс."
 
-#: ../catfish/CatfishWindow.py:767
+#: ../catfish/CatfishWindow.py:780
 msgid "Begin Search"
 msgstr "Начать поиск"
 
-#: ../catfish/CatfishWindow.py:959
+#: ../catfish/CatfishWindow.py:1035
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "«%s» невозможно открыть."
 
-#: ../catfish/CatfishWindow.py:1005
+#: ../catfish/CatfishWindow.py:1087
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "«%s» не может быть сохранён."
 
-#: ../catfish/CatfishWindow.py:1022
+#: ../catfish/CatfishWindow.py:1104
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "«%s» не может быть удалён."
 
-#: ../catfish/CatfishWindow.py:1062
+#: ../catfish/CatfishWindow.py:1144
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Сохранить «%s» как..."
 
-#: ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:1179
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -365,7 +370,7 @@ msgstr ""
 "Вы уверены, что хотите \n"
 "безвозвратно удалить «%s»?"
 
-#: ../catfish/CatfishWindow.py:1101
+#: ../catfish/CatfishWindow.py:1183
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -374,43 +379,43 @@ msgstr ""
 "Вы уверены, что хотите \n"
 "безвозвратно удалить %i выделенных файла (-ов)?"
 
-#: ../catfish/CatfishWindow.py:1104
+#: ../catfish/CatfishWindow.py:1186
 msgid "If you delete a file, it is permanently lost."
 msgstr "Если вы удалите файл, он будет безвозвратно утерян."
 
-#: ../catfish/CatfishWindow.py:1127
+#: ../catfish/CatfishWindow.py:1209
 msgid "Filename"
 msgstr "Имя файла"
 
-#: ../catfish/CatfishWindow.py:1129
+#: ../catfish/CatfishWindow.py:1211
 msgid "Size"
 msgstr "Размер"
 
-#: ../catfish/CatfishWindow.py:1131
+#: ../catfish/CatfishWindow.py:1213
 msgid "Location"
 msgstr "Местонахождение"
 
-#: ../catfish/CatfishWindow.py:1143
+#: ../catfish/CatfishWindow.py:1225
 msgid "Preview"
 msgstr "Предпросмотр"
 
-#: ../catfish/CatfishWindow.py:1151
+#: ../catfish/CatfishWindow.py:1233
 msgid "Details"
 msgstr "Детали"
 
-#: ../catfish/CatfishWindow.py:1374
+#: ../catfish/CatfishWindow.py:1456
 msgid "Today"
 msgstr "Cегодня"
 
-#: ../catfish/CatfishWindow.py:1376
+#: ../catfish/CatfishWindow.py:1458
 msgid "Yesterday"
 msgstr "Вчера"
 
-#: ../catfish/CatfishWindow.py:1457
+#: ../catfish/CatfishWindow.py:1539
 msgid "No files found."
 msgstr "Файлы не найдены."
 
-#: ../catfish/CatfishWindow.py:1459
+#: ../catfish/CatfishWindow.py:1541
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -418,36 +423,45 @@ msgstr ""
 "Попробуйте задать не столь строгий запрос\n"
 "или поищите в другом каталоге."
 
-#: ../catfish/CatfishWindow.py:1465
+#: ../catfish/CatfishWindow.py:1547
 msgid "1 file found."
 msgstr "Найден 1 файл."
 
-#: ../catfish/CatfishWindow.py:1467
+#: ../catfish/CatfishWindow.py:1549
 #, python-format
 msgid "%i files found."
 msgstr "Найдено файлов: %i."
 
-#: ../catfish/CatfishWindow.py:1473
+#: ../catfish/CatfishWindow.py:1555
 msgid "bytes"
 msgstr "байт"
 
-#: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
+#: ../catfish/CatfishWindow.py:1663 ../catfish/CatfishWindow.py:1672
 msgid "Searching..."
 msgstr "Поиск..."
 
-#: ../catfish/CatfishWindow.py:1583
+#: ../catfish/CatfishWindow.py:1665
 msgid "Results will be displayed as soon as they are found."
 msgstr "Результат отобразится, как только будет получен."
 
-#: ../catfish/CatfishWindow.py:1588
+#: ../catfish/CatfishWindow.py:1670
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Поиск «%s»"
 
-#: ../catfish/CatfishWindow.py:1678
+#: ../catfish/CatfishWindow.py:1760
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Результаты поиска «%s»"
+
+#: ../catfish/AboutCatfishDialog.py:37
+msgid "translator-credits"
+msgstr ""
+"Anthony Ivanoff <a-i@bk.ru>\n"
+"Andrey Fedoseev <andrey.fedoseev@gmail.com>\n"
+"Igor Zakharov <f2404@yandex.ru>\n"
+"Sergey Fedoseev <fedoseev.sergey@gmail.com>\n"
+"Styopa Semenukha <semenukha@gmail.com>"
 
 #: ../catfish_lib/SudoDialog.py:138
 msgid "Password Required"
