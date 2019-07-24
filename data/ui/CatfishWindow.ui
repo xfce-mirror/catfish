@@ -1222,6 +1222,25 @@
       </object>
     </child>
     <child>
+      <object class="GtkListBoxRow" id="listboxrow8">
+        <property name="width_request">100</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <child>
+          <object class="GtkCheckButton" id="application_menu_closeafterselect">
+            <property name="label" translatable="yes">Close _on Selection</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="use_underline">True</property>
+            <property name="xalign">0</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="on_menu_closeafterselect_toggled" swapped="no"/>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
       <object class="GtkListBoxRow" id="application_menu_update">
         <property name="visible">True</property>
         <property name="can_focus">True</property>

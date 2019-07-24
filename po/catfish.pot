@@ -17,8 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:679
+#: ../catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
+#: ../catfish/CatfishWindow.py:669
 msgid "Catfish File Search"
 msgstr ""
 
@@ -121,7 +121,7 @@ msgstr ""
 msgid "<b>End Date</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:217
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:218
 msgid "Catfish"
 msgstr ""
 
@@ -137,7 +137,11 @@ msgstr ""
 msgid "File Type"
 msgstr ""
 
+<<<<<<< HEAD
 #: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1215
+=======
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1142
+>>>>>>> 761eaffa... ../0001.patch
 msgid "Modified"
 msgstr ""
 
@@ -191,11 +195,19 @@ msgid "_Exact Match"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:39
+<<<<<<< HEAD
 msgid "Show _Sidebar"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "_Update Search Index..."
+=======
+msgid "Close _on Selection"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:40
+msgid "_Update Search Index…"
+>>>>>>> 761eaffa... ../0001.patch
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:41
@@ -283,6 +295,7 @@ msgstr ""
 msgid "%s (invalid encoding)"
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:249
 msgid "Unknown"
 msgstr ""
@@ -304,10 +317,34 @@ msgid "Authentication cancelled."
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:661
+=======
+#: ../catfish/CatfishWindow.py:239
+msgid "Unknown"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:243
+msgid "Never"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:637
+msgid "An error occurred while updating the database."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:639
+msgid "Authentication failed."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:645
+msgid "Authentication cancelled."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:651
+>>>>>>> 761eaffa... ../0001.patch
 msgid "Search database updated successfully."
 msgstr ""
 
 #. Set the dialog status to running.
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:736
 msgid "Updating..."
 msgstr ""
@@ -317,49 +354,89 @@ msgid "Stop Search"
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:771
+=======
+#: ../catfish/CatfishWindow.py:726
+msgid "Updating..."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:760
+msgid "Stop Search"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:761
+>>>>>>> 761eaffa... ../0001.patch
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:780
 msgid "Begin Search"
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:1035
+=======
+#: ../catfish/CatfishWindow.py:770
+msgid "Begin Search"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:968
+>>>>>>> 761eaffa... ../0001.patch
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:1087
+=======
+#: ../catfish/CatfishWindow.py:1014
+>>>>>>> 761eaffa... ../0001.patch
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:1104
+=======
+#: ../catfish/CatfishWindow.py:1031
+>>>>>>> 761eaffa... ../0001.patch
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:1144
+=======
+#: ../catfish/CatfishWindow.py:1071
+>>>>>>> 761eaffa... ../0001.patch
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:1179
+=======
+#: ../catfish/CatfishWindow.py:1106
+>>>>>>> 761eaffa... ../0001.patch
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:1183
+=======
+#: ../catfish/CatfishWindow.py:1110
+>>>>>>> 761eaffa... ../0001.patch
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:1186
 msgid "If you delete a file, it is permanently lost."
 msgstr ""
@@ -397,20 +474,68 @@ msgid "No files found."
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:1541
+=======
+#: ../catfish/CatfishWindow.py:1113
+msgid "If you delete a file, it is permanently lost."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1136
+msgid "Filename"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1138
+msgid "Size"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1140
+msgid "Location"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1152
+msgid "Preview"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1160
+msgid "Details"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1379
+msgid "Today"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1381
+msgid "Yesterday"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1462
+msgid "No files found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1464
+>>>>>>> 761eaffa... ../0001.patch
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:1547
 msgid "1 file found."
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:1549
+=======
+#: ../catfish/CatfishWindow.py:1470
+msgid "1 file found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1472
+>>>>>>> 761eaffa... ../0001.patch
 #, python-format
 msgid "%i files found."
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:1555
 msgid "bytes"
 msgstr ""
@@ -424,11 +549,30 @@ msgid "Results will be displayed as soon as they are found."
 msgstr ""
 
 #: ../catfish/CatfishWindow.py:1670
+=======
+#: ../catfish/CatfishWindow.py:1478
+msgid "bytes"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1586 ../catfish/CatfishWindow.py:1595
+msgid "Searching…"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1588
+msgid "Results will be displayed as soon as they are found."
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1593
+>>>>>>> 761eaffa... ../0001.patch
 #, python-format
 msgid "Searching for \"%s\""
 msgstr ""
 
+<<<<<<< HEAD
 #: ../catfish/CatfishWindow.py:1760
+=======
+#: ../catfish/CatfishWindow.py:1682
+>>>>>>> 761eaffa... ../0001.patch
 #, python-format
 msgid "Search results for \"%s\""
 msgstr ""

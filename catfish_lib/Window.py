@@ -56,7 +56,8 @@ __builder__ = {
             "hidden": "application_menu_hidden",
             "fulltext": "application_menu_fulltext",
             "advanced": "application_menu_advanced",
-            "update": "application_menu_update"
+            "update": "application_menu_update",
+            "closeafterselect": "application_menu_closeafterselect"
         },
         # File Context Menu
         "file": {
