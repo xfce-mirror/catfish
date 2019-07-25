@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-05 20:20-0500\n"
+"POT-Creation-Date: 2019-07-22 16:49-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019\n"
 "Language-Team: Catalan (https://www.transifex.com/xfce/teams/16840/ca/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:666
+#: ../catfish/CatfishWindow.py:679
 msgid "Catfish File Search"
 msgstr "Cerca de fitxers Catfish"
 
@@ -145,7 +145,7 @@ msgstr "L'índex de cerca té més de 7 dies. Voleu actualitzar-lo ara?"
 msgid "File Type"
 msgstr "Tipus de fitxer"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1133
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1215
 msgid "Modified"
 msgstr "Data de modificació"
 
@@ -238,44 +238,44 @@ msgstr ""
 "Per obtenir resultats més ràpid, cal actualitzar l'índex de cerca.\n"
 "Aquesta acció requereix permisos d'administrador."
 
-#: ../catfish/__init__.py:37
+#: ../catfish/__init__.py:38
 msgid "Usage: %prog [options] path query"
 msgstr "Ús: %prog [opcions] camí consulta"
 
-#: ../catfish/__init__.py:42
+#: ../catfish/__init__.py:43
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr "Mostra els missatges de depuració (-vv també depurarà catfish_lib)"
 
-#: ../catfish/__init__.py:45
+#: ../catfish/__init__.py:46
 msgid "Use large icons"
 msgstr "Utilitza icones grans"
 
-#: ../catfish/__init__.py:47
+#: ../catfish/__init__.py:48
 msgid "Use thumbnails"
 msgstr "Utilitza miniatures"
 
-#: ../catfish/__init__.py:49
+#: ../catfish/__init__.py:50
 msgid "Display time in ISO format"
 msgstr "Mostra l'hora en format ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
-#: ../catfish/__init__.py:51
+#: ../catfish/__init__.py:52
 msgid "Set the default search path"
 msgstr "Estableix el camí de cerca predeterminat"
 
-#: ../catfish/__init__.py:53
+#: ../catfish/__init__.py:54
 msgid "Perform exact match"
 msgstr "Busca una coincidència exacta"
 
-#: ../catfish/__init__.py:55
+#: ../catfish/__init__.py:56
 msgid "Include hidden files"
 msgstr "Inclou els fitxers ocults"
 
-#: ../catfish/__init__.py:57
+#: ../catfish/__init__.py:58
 msgid "Perform fulltext search"
 msgstr "Cerca el text complet"
 
-#: ../catfish/__init__.py:59
+#: ../catfish/__init__.py:60
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
@@ -283,47 +283,52 @@ msgstr ""
 "Si es proporcionen el camí i la consulta, la cerca comença quan es mostra "
 "l'aplicació."
 
+#: ../catfish/__init__.py:77
+#, python-brace-format
+msgid "Try GDK_BACKEND=x11 {0}\n"
+msgstr "Proveu GDK_BACKEND=x11 {0}\n"
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:84
+#: ../catfish/CatfishWindow.py:95
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (codif. no vàlida)"
 
-#: ../catfish/CatfishWindow.py:238
+#: ../catfish/CatfishWindow.py:249
 msgid "Unknown"
 msgstr "Desconeguda"
 
-#: ../catfish/CatfishWindow.py:242
+#: ../catfish/CatfishWindow.py:253
 msgid "Never"
 msgstr "Mai"
 
-#: ../catfish/CatfishWindow.py:634
+#: ../catfish/CatfishWindow.py:647
 msgid "An error occurred while updating the database."
 msgstr "S'ha produït un error en actualitzar l'índex de cerca."
 
-#: ../catfish/CatfishWindow.py:636
+#: ../catfish/CatfishWindow.py:649
 msgid "Authentication failed."
 msgstr "Ha fallat l'autenticació."
 
-#: ../catfish/CatfishWindow.py:642
+#: ../catfish/CatfishWindow.py:655
 msgid "Authentication cancelled."
 msgstr "S'ha cancel·lat l'autenticació."
 
-#: ../catfish/CatfishWindow.py:648
+#: ../catfish/CatfishWindow.py:661
 msgid "Search database updated successfully."
 msgstr "L'índex de cerca s'ha actualitzat correctament."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:723
+#: ../catfish/CatfishWindow.py:736
 msgid "Updating..."
 msgstr "S'està actualitzant..."
 
-#: ../catfish/CatfishWindow.py:757
+#: ../catfish/CatfishWindow.py:770
 msgid "Stop Search"
 msgstr "Atura la cerca"
 
-#: ../catfish/CatfishWindow.py:758
+#: ../catfish/CatfishWindow.py:771
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -331,31 +336,31 @@ msgstr ""
 "Cerca en curs...\n"
 "Premeu el botó de cancel·lació o la tecla Esc per aturar-la."
 
-#: ../catfish/CatfishWindow.py:767
+#: ../catfish/CatfishWindow.py:780
 msgid "Begin Search"
 msgstr "Comença la cerca"
 
-#: ../catfish/CatfishWindow.py:959
+#: ../catfish/CatfishWindow.py:1035
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "No s'ha pogut obrir «%s»."
 
-#: ../catfish/CatfishWindow.py:1005
+#: ../catfish/CatfishWindow.py:1087
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "No s'ha pogut desar «%s»."
 
-#: ../catfish/CatfishWindow.py:1022
+#: ../catfish/CatfishWindow.py:1104
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "No s'ha pogut suprimir «%s»."
 
-#: ../catfish/CatfishWindow.py:1062
+#: ../catfish/CatfishWindow.py:1144
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Anomena i desa «%s»..."
 
-#: ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:1179
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -364,7 +369,7 @@ msgstr ""
 "Segur que voleu suprimir \n"
 "permanentment «%s»?"
 
-#: ../catfish/CatfishWindow.py:1101
+#: ../catfish/CatfishWindow.py:1183
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -373,43 +378,43 @@ msgstr ""
 "Segur que voleu suprimir \n"
 "permanentment els %i fitxers seleccionats?"
 
-#: ../catfish/CatfishWindow.py:1104
+#: ../catfish/CatfishWindow.py:1186
 msgid "If you delete a file, it is permanently lost."
 msgstr "Si suprimiu un fitxer, es perdrà permanentment."
 
-#: ../catfish/CatfishWindow.py:1127
+#: ../catfish/CatfishWindow.py:1209
 msgid "Filename"
 msgstr "Nom"
 
-#: ../catfish/CatfishWindow.py:1129
+#: ../catfish/CatfishWindow.py:1211
 msgid "Size"
 msgstr "Mida"
 
-#: ../catfish/CatfishWindow.py:1131
+#: ../catfish/CatfishWindow.py:1213
 msgid "Location"
 msgstr "Ubicació"
 
-#: ../catfish/CatfishWindow.py:1143
+#: ../catfish/CatfishWindow.py:1225
 msgid "Preview"
 msgstr "Vista prèvia"
 
-#: ../catfish/CatfishWindow.py:1151
+#: ../catfish/CatfishWindow.py:1233
 msgid "Details"
 msgstr "Detalls"
 
-#: ../catfish/CatfishWindow.py:1374
+#: ../catfish/CatfishWindow.py:1456
 msgid "Today"
 msgstr "Avui"
 
-#: ../catfish/CatfishWindow.py:1376
+#: ../catfish/CatfishWindow.py:1458
 msgid "Yesterday"
 msgstr "Ahir"
 
-#: ../catfish/CatfishWindow.py:1457
+#: ../catfish/CatfishWindow.py:1539
 msgid "No files found."
 msgstr "No s'ha trobat cap fitxer."
 
-#: ../catfish/CatfishWindow.py:1459
+#: ../catfish/CatfishWindow.py:1541
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -417,36 +422,43 @@ msgstr ""
 "Intenteu fer una cerca menys específica\n"
 "o intenteu-ho en una altra carpeta."
 
-#: ../catfish/CatfishWindow.py:1465
+#: ../catfish/CatfishWindow.py:1547
 msgid "1 file found."
 msgstr "S'ha trobat un fitxer."
 
-#: ../catfish/CatfishWindow.py:1467
+#: ../catfish/CatfishWindow.py:1549
 #, python-format
 msgid "%i files found."
 msgstr "S'han trobat %i fitxers."
 
-#: ../catfish/CatfishWindow.py:1473
+#: ../catfish/CatfishWindow.py:1555
 msgid "bytes"
 msgstr "bytes"
 
-#: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
+#: ../catfish/CatfishWindow.py:1663 ../catfish/CatfishWindow.py:1672
 msgid "Searching..."
 msgstr "S'està cercant..."
 
-#: ../catfish/CatfishWindow.py:1583
+#: ../catfish/CatfishWindow.py:1665
 msgid "Results will be displayed as soon as they are found."
 msgstr "Els resultats es mostraran tan aviat com es trobin."
 
-#: ../catfish/CatfishWindow.py:1588
+#: ../catfish/CatfishWindow.py:1670
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "S'està cercant «%s»"
 
-#: ../catfish/CatfishWindow.py:1678
+#: ../catfish/CatfishWindow.py:1760
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Resultats de la cerca «%s»"
+
+#: ../catfish/AboutCatfishDialog.py:37
+msgid "translator-credits"
+msgstr ""
+"Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009.\n"
+"Harald Servat <redcrash@gmail.com>, 2009-2010.\n"
+"Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2019."
 
 #: ../catfish_lib/SudoDialog.py:138
 msgid "Password Required"
