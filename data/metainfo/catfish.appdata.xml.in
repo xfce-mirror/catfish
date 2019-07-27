@@ -43,6 +43,14 @@
   </provides>
 
   <releases>
+    <release version="1.4.8" date="2019-07-27">
+      <description>
+        <_p>This release features better desktop integration, support
+        for OpenBSD and Wayland, and improved translation support.
+        </_p>
+      </description>
+    </release>
+
     <release version="1.4.7" date="2019-01-27">
       <description>
         <_p>This release features improved performance, better desktop
@@ -53,6 +61,7 @@
         </_p>
       </description>
     </release>
+
     <release version="1.4.6" date="2018-07-15">
       <description>
         <_p>This release features several improvements to thumbnail
@@ -63,12 +72,14 @@
         </_p>
       </description>
     </release>
+
     <release version="1.4.5" date="2018-04-11">
       <description>
         <_p>This is a minor translations-only release.
         </_p>
       </description>
     </release>
+
     <release version="1.4.4" date="2018-01-27">
       <description>
         <_p>This release features several performance improvements
@@ -76,6 +87,7 @@
         </_p>
       </description>
     </release>
+
     <release version="1.4.2" date="2016-03-31">
       <description>
         <_p>This release now displays all file timestamps according to
@@ -83,6 +95,7 @@
         </_p>
       </description>
     </release>
+
     <release version="1.4.1" date="2016-02-24">
       <description>
         <_p>This release fixes several bugs related to the results
@@ -93,6 +106,7 @@
         </_p>
       </description>
     </release>
+
     <release version="1.4.0" date="2016-02-19">
       <description>
         <_p>This release includes a significant interface refresh,
@@ -104,12 +118,14 @@
         </_p>
       </description>
     </release>
+
     <release version="1.2.2" date="2014-09-21">
       <description>
         <_p>This release fixes two new bugs and includes updated translations.
         </_p>
       </description>
     </release>
+
     <release version="1.2.1" date="2014-08-19">
       <description>
         <_p>This release fixes a regression where the application is unable
@@ -117,6 +133,7 @@
         </_p>
       </description>
     </release>
+
     <release version="1.2.0" date="2014-08-16">
       <description>
         <_p>This release fixes a regression where multiple search terms were
