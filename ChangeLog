@@ -1,4 +1,4 @@
-v1.4.8 (UNRELEASED):
+v1.4.8:
  + Desktop Integration:
    - Thunar: Select file after opening file manager (Xfce #14494)
  + Bug Fixes:
