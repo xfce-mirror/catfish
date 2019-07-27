@@ -2,7 +2,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #   Catfish - a versatile file searching tool
 #   Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
-#   Copyright (C) 2012-2019 Sean Davis <smd.seandavis@gmail.com>
+#   Copyright (C) 2012-2019 Sean Davis <bluesabre@xfce.org>
 #
 #   This program is free software: you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License version 2, as published
@@ -201,7 +201,7 @@ DistUtilsExtra.auto.setup(
     version='1.4.8',
     license='GPL-2+',
     author='Sean Davis',
-    author_email='smd.seandavis@gmail.com',
+    author_email='bluesabre@xfce.org',
     description='file searching tool configurable via the command line',
     long_description='Catfish is a handy file searching tool for Linux and '
                      'UNIX. The interface is intentionally lightweight and '
