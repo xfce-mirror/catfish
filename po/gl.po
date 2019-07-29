@@ -636,8 +636,8 @@ msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
-"Esta versión arranxa dúas incidencias nos que a localización non se "
-"executaba axeitadamente e mellora o manexo das iconas simbólicas que faltan."
+"Esta versión arranxa dúas incidencias nos que a busca non se executaba "
+"axeitadamente e mellora o manexo das iconas simbólicas que faltan."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
