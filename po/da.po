@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-22 16:49-0400\n"
+"POT-Creation-Date: 2019-07-27 07:20-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: scootergrisen, 2019\n"
 "Language-Team: Danish (https://www.transifex.com/xfce/teams/16840/da/)\n"
@@ -533,6 +533,14 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release features better desktop integration, support for OpenBSD and "
+"Wayland, and improved translation support."
+msgstr ""
+"Denne udgivelse byder på bedre skrivebordsintegration, understøttelse af "
+"OpenBSD og Wayland, og forbedret understøttelse af oversættelse."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
 "processed. Files can be dragged into other applications. Thumbnails are only"
@@ -543,7 +551,7 @@ msgstr ""
 "korrekt. Filer kan trækkes ind i andre programmer. Miniaturer genereres kun "
 "når det anmodes af brugeren."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -555,11 +563,11 @@ msgstr ""
 "matcher nu andre programmer. Punkter som vises nederst i resultatsvinduet og"
 " kan nu tilgås med alle skrivebordstemaer."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid "This is a minor translations-only release."
 msgstr "Dette er en mindre udgivelse som kun har med oversættelser at gøre."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -567,7 +575,7 @@ msgstr ""
 "Denne udgivelse byder på adskillige forbedringer til ydelsen og opdateringer"
 " af oversættelser."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -575,7 +583,7 @@ msgstr ""
 "Denne udgivelse viser nu alle fil-tidsstempler i henhold til tidszone i "
 "stedet for Universal Coordinated Time (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -587,7 +595,7 @@ msgstr ""
 "højreklik er tilbage. Datoområdefiltre anvendes nu i henhold til tidszone i "
 "stedet for Universal Coordinated Time (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -602,12 +610,12 @@ msgstr ""
 "Adgangskodehåndtering er blevet forbedret med integreringen af PolicyKit når"
 " det er tilgængeligt."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Denne udgivelse retter to fejl og inkluderer opdaterede oversættelser."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -615,7 +623,7 @@ msgstr ""
 "Denne udgivelse retter en regression hvor programmet ikke er i stand til at "
 "starte på nogle systemer."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -625,7 +633,7 @@ msgstr ""
 "understøttet. En infolinje vises nu når søgedatabasen er forældet og "
 "dialogerne som bruges til at opdatere databasen er blevet forbedret."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -633,7 +641,7 @@ msgstr ""
 "Denne udgivelse retter to problemer hvor lokaliser ikke korrekt ville køre "
 "og forbedrer handling af manglende symbolske ikoner."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -643,7 +651,7 @@ msgstr ""
 "ryddede op i ubrugt kode og rettede potentielle problemer med listen og valg"
 " af punkt."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -651,7 +659,7 @@ msgstr ""
 "Denne udgivelse rettede et potentielt sikkerhedsproblem med programopstart "
 "og retteede en regression med valg af flere punkter."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
