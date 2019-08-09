@@ -53,7 +53,7 @@ msgstr "_Abrir"
 #. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
-msgstr "Mostrar no _Xestor de ficheiros"
+msgstr "Amosar no _Xestor de ficheiros"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -188,7 +188,7 @@ msgstr "Miniaturas"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Show _Hidden Files"
-msgstr "Mostrar os fi_cheiros ocultos"
+msgstr "Amosar os _ficheiros agochados"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "Search File _Contents"
@@ -256,7 +256,7 @@ msgstr "Empregar miniaturas"
 
 #: ../catfish/__init__.py:50
 msgid "Display time in ISO format"
-msgstr "Mostrar a hora en formato ISO"
+msgstr "Amosar a hora en formato ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:52
@@ -280,7 +280,7 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
-"Se se fornecen ruta e consulta, iniciar a busca ao mostrar o aplicativo."
+"Se se fornece ruta e a consulta, iniciar a busca ao amosar o aplicativo."
 
 #: ../catfish/__init__.py:77
 #, python-brace-format
