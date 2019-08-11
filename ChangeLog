@@ -1,6 +1,10 @@
-v1.4.9 (unreleased):
+v1.4.9:
  + Bug Fixes:
    - Fix path exclusions (Debian #926850)
+ + Translations:
+   Belarusian, Chinese (China), Chinese (Taiwan), Danish, French, Galician,
+   German, Hungarian, Indonesian, Italian, Lithuanian, Norwegian Bokmål,
+   Polish, Portuguese (Brazil), Portuguese, Russian, Spanish, Turkish
 
 v1.4.8:
  + Desktop Integration:

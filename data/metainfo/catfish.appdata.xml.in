@@ -43,6 +43,13 @@
   </provides>
 
   <releases>
+    <release version="1.4.9" date="2019-08-11">
+      <description>
+        <_p>This release features performance improvements by
+        excluding uncommon search directories.
+        </_p>
+      </description>
+    </release>
     <release version="1.4.8" date="2019-07-27">
       <description>
         <_p>This release features better desktop integration, support
