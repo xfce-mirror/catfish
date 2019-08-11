@@ -1,3 +1,7 @@
+v1.4.9 (unreleased):
+ + Bug Fixes:
+   - Fix path exclusions (Debian #926850)
+
 v1.4.8:
  + Desktop Integration:
    - Thunar: Select file after opening file manager (Xfce #14494)
