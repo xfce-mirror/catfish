@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-27 07:20-0400\n"
+"POT-Creation-Date: 2019-08-11 13:53-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Moo, 2019\n"
 "Language-Team: Lithuanian (https://www.transifex.com/xfce/teams/16840/lt/)\n"
@@ -533,13 +533,21 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release features performance improvements by excluding uncommon search "
+"directories."
+msgstr ""
+"Šioje laidoje yra našumo patobulinimai, išbraukiant nedažnai naudojamus "
+"paieškos katalogus."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
 msgstr ""
 "Šioje laidoje yra geresnė darbalaukių integracija, OpenBSD ir Wayland "
 "palaikymas ir patobulintas vertimų palaikymas."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -551,7 +559,7 @@ msgstr ""
 "teisingai. Failai gali būti velkami į kitas programas. Miniatiūros yra "
 "generuojamos tik kai to užklausia naudotojas."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -563,11 +571,11 @@ msgstr ""
 "jos atitiks kitas programas. Rezultatų apačioje rodomi elementai dabar yra "
 "pasiekiami su visomis darbalaukio temomis."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid "This is a minor translations-only release."
 msgstr "Tai yra smulki tik vertimų atnaujinimo laida."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -575,7 +583,7 @@ msgstr ""
 "Šioje laidoje yra keli našumo patobulinimai ir daugybės vertimų "
 "atnaujinimai."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -583,7 +591,7 @@ msgstr ""
 "Dabar, šioje laidoje visos failų laiko žymės yra rodomos atitinkamai pagal "
 "laiko juostą, o ne suderintąjį pasaulinį laiką (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -596,7 +604,7 @@ msgstr ""
 "dabar yra pritaikomi pagal laiko juostą, o ne pagal suderintąjį pasaulinį "
 "laiką (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -610,12 +618,12 @@ msgstr ""
 "juostas bei iššokančius valdiklius. Buvo patobulintas slaptažodžių "
 "apdorojimas su PolicyKit integravimu, kai tai yra prieinama."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Šioje laidoje ištaisomos dvi naujos klaidos ir yra atnaujinami vertimai."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -623,7 +631,7 @@ msgstr ""
 "Šioje laidoje yra ištaisyta regresija, dėl kurios kai kuriose sistemose buvo"
 " neįmanoma paleisti programos."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -634,7 +642,7 @@ msgstr ""
 "rodoma informacinė juosta, o taip pat yra patobulinti duomenų bazės "
 "atnaujinimo dialogai."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -643,7 +651,7 @@ msgstr ""
 "vietos nustatymas, o taip pat patobulinamas trūkstamų simbolinių piktogramų "
 "apdorojimas."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -653,7 +661,7 @@ msgstr ""
 "nebenaudojamas kodas ir ištaisytos potencialios, su sąrašo ir elemento "
 "pasirinkimu susijusios, klaidos."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -662,7 +670,7 @@ msgstr ""
 "paleidimu, o taip pat ištaisyta, su kelių elementų pasirinkimu susijusi, "
 "regresija."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
