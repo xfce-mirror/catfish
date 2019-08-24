@@ -57,6 +57,11 @@ if not helpers.check_gobject_version(3, 9, 1):
 mimetypes.init()
 
 
+if helpers.check_python_version(3, 0):
+    def long(value):
+        return int(value)
+
+
 def get_application_path(application_name):
     for path in os.getenv('PATH').split(':'):
         if os.path.isdir(path):
@@ -1461,10 +1466,7 @@ class CatfishWindow(Window):
     def cell_data_func_filesize(self, column, cell_renderer,
                                 tree_model, tree_iter, id):
         """File size cell display function."""
-        if helpers.check_python_version(3, 0):
-            size = int(tree_model.get_value(tree_iter, id))
-        else:
-            size = long(tree_model.get_value(tree_iter, id)) # noqa
+        size = long(tree_model.get_value(tree_iter, id))
 
         filesize = self.format_size(size)
         cell_renderer.set_property('text', filesize)
@@ -1675,11 +1677,11 @@ class CatfishWindow(Window):
                             return icon_name
         return "text-x-generic"
 
-    def python_three_size_sort_func(self, model, row1, row2, user_data):
+    def size_sort_func(self, model, row1, row2, user_data):
         """Sort function used in Python 3."""
         sort_column = 2
-        value1 = int(model.get_value(row1, sort_column))
-        value2 = int(model.get_value(row2, sort_column))
+        value1 = long(model.get_value(row1, sort_column))
+        value2 = long(model.get_value(row2, sort_column))
         if value1 < value2:
             return -1
         elif value1 == value2:
@@ -1722,8 +1724,7 @@ class CatfishWindow(Window):
         self.results_filter = model.filter_new()
         self.results_filter.set_visible_func(self.results_filter_func)
         sort = Gtk.TreeModelSort(model=self.results_filter)
-        if helpers.check_python_version(3, 0):
-            sort.set_sort_func(2, self.python_three_size_sort_func, None)
+        sort.set_sort_func(2, self.size_sort_func, None)
         self.treeview.set_model(sort)
         sort.get_model().get_model().clear()
         self.treeview.columns_autosize()
@@ -1749,12 +1750,7 @@ class CatfishWindow(Window):
                     filename not in results:
                 try:
                     path, name = os.path.split(filename)
-
-                    if helpers.check_python_version(3, 0):
-                        size = int(os.path.getsize(filename))
-                    else:
-                        size = long(os.path.getsize(filename))  # noqa
-
+                    size = long(os.path.getsize(filename))
                     modified = os.path.getmtime(filename)
 
                     mimetype, override = self.guess_mimetype(filename)
