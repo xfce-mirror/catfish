@@ -30,6 +30,10 @@ from mimetypes import guess_type
 
 from sys import version_info
 
+import gi
+gi.require_version('GLib', '2.0')  # noqa
+from gi.repository import GLib
+
 try:
     from zeitgeist.client import ZeitgeistDBusInterface
     from zeitgeist.datamodel import Event, TimeRange
@@ -293,6 +297,48 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         """Initialize the 'walk' Search Method."""
         CatfishSearchMethod.__init__(self, "walk")
 
+    def get_dir_list(self, root, dirs, xdg_list, exclude_list):
+        dirs = sorted(dirs, key=lambda s: s.lower())
+
+        # Prioritize: XDG, Visible (Linked), Dotfile (Linked)
+        xdgdirs = []
+        dotdirs = []
+        dotlinks = []
+        notdotdirs = []
+        notdotlinks = []
+        for path in dirs:
+            path = os.path.join(root, path)
+            if path in exclude_list:
+                continue
+            if path in xdg_list:
+                xdgdirs.append(path)
+                continue
+            islink = os.path.islink(path)
+            if os.path.basename(path).startswith("."):
+                if islink:
+                    dotlinks.append(path)
+                else:
+                    dotdirs.append(path)
+            else:
+                if islink:
+                    notdotlinks.append(path)
+                else:
+                    notdotdirs.append(path)
+
+        dirlist = xdgdirs + notdotdirs + notdotlinks + dotdirs + dotlinks
+        return dirlist
+
+    def get_root_list(self, path, xdg_list, exclude_list):
+        # Sort the roots alphabetically
+        roots = [d for d in os.listdir(path)
+                 if os.path.isdir(os.path.join(path, d)) and
+                 os.path.join(path, d) not in exclude_list]
+        roots = sorted(roots, key=lambda s: s.lower())
+        results = []
+        for dirpath in self.get_dir_list(path, roots, xdg_list, exclude_list):
+            results.append(os.path.join(path, dirpath))
+        return results
+
     def run(self, keywords, path, regex=False):
         """Run the search method using keywords and path.  regex is not used
         by this search method.
@@ -312,15 +358,48 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         self.running = True
         if isinstance(keywords, str):
             keywords = keywords.replace(',', ' ').strip().split()
-        for root, dirs, files in os.walk(path):
-            dirs[:] = [d for d in dirs if os.path.join(root, d) not in exclude]
-            if not self.running:
-                break
-            paths = dirs + files
-            paths.sort()
-            for path in paths:
-                if any(keyword in path.lower() for keyword in keywords):
-                    yield os.path.join(root, path)
+
+        # Enable symbolic link directories, but process once
+        processed_links = []
+
+        # Grab the special directory list to get them precedence
+        xdgdirlist = [
+            GLib.get_user_special_dir(GLib.USER_DIRECTORY_DESKTOP),
+            GLib.get_user_special_dir(GLib.USER_DIRECTORY_DOCUMENTS),
+            GLib.get_user_special_dir(GLib.USER_DIRECTORY_DOWNLOAD),
+            GLib.get_user_special_dir(GLib.USER_DIRECTORY_MUSIC),
+            GLib.get_user_special_dir(GLib.USER_DIRECTORY_PICTURES),
+            GLib.get_user_special_dir(
+                GLib.USER_DIRECTORY_PUBLIC_SHARE),
+            GLib.get_user_special_dir(GLib.USER_DIRECTORY_TEMPLATES),
+            GLib.get_user_special_dir(GLib.USER_DIRECTORY_VIDEOS),
+        ]
+
+        for path in self.get_root_list(path, xdgdirlist, exclude):
+            for root, dirs, files in os.walk(top=path, topdown=True,
+                                             onerror=None,
+                                             followlinks=True):
+                # Bail once the search has been canceled
+                if not self.running:
+                    break
+
+                # Check if we've already processed symbolic paths
+                if os.path.islink(root):
+                    realpath = os.path.realpath(root)
+                    if realpath in processed_links:
+                        yield True
+                        continue
+                    processed_links.append(realpath)
+
+                # Prioritize and drop excluded paths
+                dirs[:] = self.get_dir_list(root, dirs, xdgdirlist, exclude)
+
+                paths = dirs + files
+                paths.sort()
+                for path in paths:
+                    if any(keyword in path.lower() for keyword in keywords):
+                        yield os.path.join(root, path)
+                yield True
             yield True
         yield False
 
