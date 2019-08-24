@@ -324,6 +324,30 @@ class CatfishWindow(Window):
         self.app_menu_event = False
 
         self.thumbnailer = Thumbnailer.Thumbnailer()
+        self.configure_welcome_area(builder)
+
+    def configure_welcome_area(self, builder):
+        welcome_area = builder.get_object("welcome_area")
+        content = _("Enter your query above to find your files\n"
+                    "or click the %s icon for more options.")
+        for line in content.split("\n"):
+            if "%s" in line:
+                row = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 0)
+                parts = line.split("%s")
+                if len(parts[0].strip()) > 0:
+                    label = Gtk.Label.new(parts[0])
+                    row.pack_start(label, False, False, 0)
+                image = Gtk.Image.new_from_icon_name("emblem-system-symbolic", Gtk.IconSize.BUTTON)
+                image.set_property("use-fallback", True)
+                row.pack_start(image, False, False, 0)
+                if len(parts[1].strip()) > 0:
+                    label = Gtk.Label.new(parts[1])
+                    row.pack_start(label, False, False, 0)
+            else:
+                row = Gtk.Label.new(line)
+            row.set_halign(Gtk.Align.CENTER)
+            welcome_area.pack_start(row, False, False, 0)
+        welcome_area.show_all()
 
     def get_screen_size(self):
         s = Gdk.Screen.get_default()
@@ -1547,9 +1571,10 @@ class CatfishWindow(Window):
             self.builder.get_object("splash").show()
             self.builder.get_object(
                 "splash_title").set_text(_("No files found."))
-            self.builder.get_object("splash_subtitle").set_text(
+            self.builder.get_object("splash_status").set_text(
                 _("Try making your search less specific\n"
                   "or try another directory."))
+            self.builder.get_object("splash_status").show()
         else:
             self.builder.get_object("splash").hide()
             self.builder.get_object("results_scrolledwindow").show()
@@ -1671,9 +1696,10 @@ class CatfishWindow(Window):
         self.builder.get_object("results_scrolledwindow").hide()
         self.builder.get_object("splash").show()
         self.builder.get_object("splash_title").set_text(_("Searching..."))
-        self.builder.get_object("splash_subtitle").set_text(
+        self.builder.get_object("splash_status").set_text(
             _("Results will be displayed as soon as they are found."))
-        self.builder.get_object("splash_hide").hide()
+        self.builder.get_object("splash_status").show()
+        self.builder.get_object("welcome_area").hide()
         show_results = False
 
         self.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))

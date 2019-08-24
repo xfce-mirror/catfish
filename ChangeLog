@@ -1,3 +1,7 @@
+v1.4.10 (UNRELEASED):
+ + Translations:
+   - Combine 3 strings into 1 to help translators (Xfce #15596)
+
 v1.4.9:
  + Bug Fixes:
    - Fix path exclusions (Debian #926850)
