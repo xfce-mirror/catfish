@@ -24,6 +24,7 @@ from gi.repository import GLib, Gio, GdkPixbuf
 
 from . catfishconfig import get_version
 
+
 class Thumbnailer:
 
     def __init__(self):
@@ -69,8 +70,8 @@ class Thumbnailer:
         return os.path.join(expected, faildir)
 
     def _make_thumbnail_directory(self, path):
-        # All the directories including the $XDG_CACHE_HOME/thumbnails directory 
-        # must have set their permissions to 700
+        # All the directories including the $XDG_CACHE_HOME/thumbnails
+        # directory must have set their permissions to 700
         if os.path.exists(path):
             return True
         try:
@@ -84,10 +85,11 @@ class Thumbnailer:
         # $XDG_CACHE_HOME/thumbnails/normal (128x128)
         # $XDG_CACHE_HOME/thumbnails/large/ (256x256)
         # $XDG_CACHE_HOME/thumbnails/fail/  (failed generation)
-        # All the directories including the $XDG_CACHE_HOME/thumbnails directory 
-        # must have set their permissions to 700 (this means only the owner has read, 
-        # write and execute permissions, see "man chmod" for details). Similar, 
-        # all the files in the thumbnail directories should have set their permissions to 600.
+        # All the directories including the $XDG_CACHE_HOME/thumbnails
+        # directory must have set their permissions to 700 (this means
+        # only the owner has read, write and execute permissions, see
+        # "man chmod" for details). Similar,  all the files in the thumbnail
+        # directories should have set their permissions to 600.
         if not self._make_thumbnail_directory(self._get_normal_directory()):
             return False
         return True
@@ -132,9 +134,10 @@ class Thumbnailer:
 
     def _touch(self, fname, mode=0o600, dir_fd=None, **kwargs):
         flags = os.O_CREAT | os.O_APPEND
-        with os.fdopen(os.open(fname, flags=flags, mode=mode, dir_fd=dir_fd)) as f:
+        with os.fdopen(os.open(fname, flags=flags, mode=mode,
+                               dir_fd=dir_fd)) as f:
             os.utime(f.fileno() if os.utime in os.supports_fd else fname,
-                dir_fd=None if os.supports_fd else dir_fd, **kwargs)
+                     dir_fd=None if os.supports_fd else dir_fd, **kwargs)
 
     def _get_attributes(self, filename):
         gfile = Gio.File.new_for_path(filename)
@@ -157,7 +160,8 @@ class Thumbnailer:
 
         try:
             thumb_pb = GdkPixbuf.Pixbuf.new_from_file(thumbnail)
-            thumb_pb.savev(thumbnail, "png", list(options.keys()), list(options.values()))
+            thumb_pb.savev(thumbnail, "png", list(options.keys()),
+                           list(options.values()))
         except GLib.GError:
             pass
 
@@ -184,7 +188,8 @@ class Thumbnailer:
                 return False
             if pixbuf_w < 128 and pixbuf_h < 128:
                 options = self._get_attributes(filename)
-                pixbuf.savev(thumbnail, "png", list(options.keys()), list(options.values()))
+                pixbuf.savev(thumbnail, "png", list(options.keys()),
+                             list(options.values()))
                 os.chmod(thumbnail, 0o600)
                 return True
             if pixbuf_w > pixbuf_h:
@@ -200,14 +205,15 @@ class Thumbnailer:
             if thumb_pixbuf is None:
                 return False
             options = self._get_attributes(filename)
-            thumb_pixbuf.savev(thumbnail, "png", list(options.keys()), list(options.values()))
+            thumb_pixbuf.savev(thumbnail, "png", list(options.keys()),
+                               list(options.values()))
             os.chmod(thumbnail, 0o600)
             return True
         except Exception as e:
             print("Exception: ", e)
             return False
 
-    def get_thumbnail(self, filename, mime_type = None, buildit = True):
+    def get_thumbnail(self, filename, mime_type=None, buildit=True):
         thumb = self._get_normal_filename(filename)
         if os.path.exists(thumb):
             return thumb
@@ -225,7 +231,7 @@ class Thumbnailer:
 
         if mime_type is None:
             mime_type = self._get_mime_type(filename)
-    
+
         if mime_type.startswith('image'):
             if mime_type in ["image/x-photoshop"]:
                 return False

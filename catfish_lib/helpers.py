@@ -22,11 +22,10 @@ import os
 import sys
 
 import gi
-gi.require_version('GLib', '2.0')
-gi.require_version('GObject', '2.0')
-gi.require_version('Gdk', '3.0')
-gi.require_version('Gtk', '3.0')
-
+gi.require_version('GLib', '2.0')  # noqa
+gi.require_version('GObject', '2.0')  # noqa
+gi.require_version('Gdk', '3.0')  # noqa
+gi.require_version('Gtk', '3.0')  # noqa
 from gi.repository import GLib, GObject, Gdk, Gtk
 
 from . catfishconfig import get_data_file

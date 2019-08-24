@@ -95,7 +95,7 @@ class CatfishSettings:
             except Exception:
                 pass
 
-        if self.settings['use-headerbar'] == None:
+        if self.settings['use-headerbar'] is None:
             current_desktop = self.get_current_desktop()
             if current_desktop in ["budgie", "gnome", "pantheon"]:
                 self.settings['use-headerbar'] = True
@@ -111,7 +111,8 @@ class CatfishSettings:
                 write_file = open(self.settings_file, 'w')
                 for key in list(self.settings.keys()):
                     value = self.settings[key]
-                    if key == 'use-headerbar' and not self.headerbar_configured:
+                    if key == 'use-headerbar' and \
+                            not self.headerbar_configured:
                         continue
                     if isinstance(value, bool):
                         value = str(value).lower()

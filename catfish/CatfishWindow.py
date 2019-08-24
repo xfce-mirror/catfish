@@ -17,7 +17,6 @@
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import datetime
-import hashlib
 import logging
 import mimetypes
 import os
@@ -33,12 +32,12 @@ import urllib
 
 import pexpect
 import gi
-gi.require_version('GLib', '2.0')
-gi.require_version('GObject', '2.0')
-gi.require_version('Pango', '1.0')
-gi.require_version('Gdk', '3.0')
-gi.require_version('GdkPixbuf', '2.0')
-gi.require_version('Gtk', '3.0')
+gi.require_version('GLib', '2.0')  # noqa
+gi.require_version('GObject', '2.0')  # noqa
+gi.require_version('Pango', '1.0')  # noqa
+gi.require_version('Gdk', '3.0')  # noqa
+gi.require_version('GdkPixbuf', '2.0')  # noqa
+gi.require_version('Gtk', '3.0')  # noqa
 from gi.repository import GLib, GObject, Pango, Gdk, GdkPixbuf, Gtk
 
 from catfish.AboutCatfishDialog import AboutCatfishDialog
@@ -281,8 +280,10 @@ class CatfishWindow(Window):
 
         self.settings = CatfishSettings.CatfishSettings()
         paned = builder.get_named_object("window.paned")
-        paned.set_property('height_request', self.settings.get_setting('window-height'))
-        paned.set_property('width_request', self.settings.get_setting('window-width'))
+        paned.set_property('height_request',
+                           self.settings.get_setting('window-height'))
+        paned.set_property('width_request',
+                           self.settings.get_setting('window-width'))
 
         window_width = self.settings.get_setting('window-width')
         window_height = self.settings.get_setting('window-height')
@@ -342,7 +343,8 @@ class CatfishWindow(Window):
                 if len(parts[0].strip()) > 0:
                     label = Gtk.Label.new(parts[0])
                     row.pack_start(label, False, False, 0)
-                image = Gtk.Image.new_from_icon_name("emblem-system-symbolic", Gtk.IconSize.BUTTON)
+                image = Gtk.Image.new_from_icon_name("emblem-system-symbolic",
+                                                     Gtk.IconSize.BUTTON)
                 image.set_property("use-fallback", True)
                 row.pack_start(image, False, False, 0)
                 if len(parts[1].strip()) > 0:
@@ -1040,7 +1042,8 @@ class CatfishWindow(Window):
             fm = self.get_exo_preferred_file_manager()
             return "thunar" in fm.lower()
 
-        fm = subprocess.check_output(['xdg-mime','query','default', 'inode/directory'])
+        fm = subprocess.check_output(['xdg-mime', 'query', 'default',
+                                      'inode/directory'])
         fm = fm.decode("utf-8", errors="replace")
         if "thunar" in fm.lower():
             return True
@@ -1648,7 +1651,8 @@ class CatfishWindow(Window):
 
     def get_thumbnail(self, path, mime_type=None):
         """Try to fetch a thumbnail."""
-        thumb = self.thumbnailer.get_thumbnail(path, mime_type, self.show_thumbnail)
+        thumb = self.thumbnailer.get_thumbnail(path, mime_type,
+                                               self.show_thumbnail)
         if thumb:
             return thumb
         return self.get_file_icon(path, mime_type)

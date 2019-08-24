@@ -51,6 +51,7 @@ else:
     locate_support = False
 FNULL.close()
 
+
 def get_keyword_list(keywords):
     keywords = keywords.replace(",", " ").strip().lower()
     kwords = []
@@ -62,6 +63,7 @@ def get_keyword_list(keywords):
     for keyword in keywords.split(" "):
         kwords.append(keyword.replace("\0", " "))
     return kwords
+
 
 def string_regex(keywords, path):
     """Returns a string with the regular expression containing all combinations
@@ -512,7 +514,8 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
     def process_output(self, output):
         """Return the output text."""
         if isinstance(output, io.BufferedReader):
-            return map(lambda s: s.decode(encoding='UTF8', errors='replace').strip(),
+            return map(lambda s: s.decode(encoding='UTF8',
+                                          errors='replace').strip(),
                        output.readlines())
         else:
             return output

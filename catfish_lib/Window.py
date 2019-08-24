@@ -345,7 +345,7 @@ class Window(Gtk.Window):
         return False
 
     def on_catfish_window_size_allocate(self, widget, allocation):
-        paned =self.builder.get_named_object("window.paned")
+        paned = self.builder.get_named_object("window.paned")
         allocation = paned.get_allocation()
         self.settings.set_setting('window-height', allocation.height)
         self.settings.set_setting('window-width', allocation.width)
