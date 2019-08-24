@@ -488,7 +488,7 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
 
     def assemble_query(self, keywords, path):
         """Base assemble_query method."""
-        return None
+        return False
 
     def run(self, keywords, path, regex=False):
         """Run the search method using keywords and path.

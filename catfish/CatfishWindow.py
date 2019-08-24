@@ -124,7 +124,7 @@ class CatfishWindow(Window):
     mimetypes = dict()
     search_in_progress = False
 
-    def finish_initializing(self, builder):  # pylint: disable=E1002
+    def finish_initializing(self, builder):
         """Set up the main window"""
         super(CatfishWindow, self).finish_initializing(builder)
         self.set_wmclass("Catfish", "Catfish")
@@ -249,7 +249,7 @@ class CatfishWindow(Window):
 
             now = datetime.datetime.now()
             self.today = datetime.datetime(now.year, now.month, now.day)
-            locate, locate_path, locate_date = self.check_locate()[:3]
+            locate_path, locate_date = self.check_locate()[1:3]
 
             self.update_index_database.set_label("<tt>%s</tt>" % locate_path)
             if not os.access(os.path.dirname(locate_path), os.R_OK):
@@ -577,7 +577,7 @@ class CatfishWindow(Window):
                 icon_name = None
             else:
                 # Get the mimetype image..
-                mimetype, override = self.guess_mimetype(filename)
+                mimetype = self.guess_mimetype(filename)[0]
                 icon_name = self.get_file_icon(filename, mimetype)
 
         if icon_name is not None:
@@ -588,8 +588,7 @@ class CatfishWindow(Window):
 
     def thumbnail_cell_data_func(self, col, renderer, model, treeiter, data):
         """Cell Renderer Function to Thumbnails View."""
-        icon, name, size, path, modified, mime, hidden, exact = \
-            model[treeiter][:]
+        name, size, path, modified = model[treeiter][1:4]
         name = escape(name)
         size = self.format_size(size)
         path = escape(path)
@@ -742,7 +741,7 @@ class CatfishWindow(Window):
                 done = False
             if done:
                 self.update_index_active = False
-                locate, locate_path, locate_date, changed = self.check_locate()
+                locate_date, changed = self.check_locate()[2:]
                 modified = locate_date.strftime("%x %X")
                 self.update_index_modified.set_label("<tt>%s</tt>" % modified)
 
@@ -883,7 +882,7 @@ class CatfishWindow(Window):
 
         for filename in self.suggestions_engine.run(keywords, folder, 10):
             if isinstance(filename, str):
-                path, name = os.path.split(filename)
+                name = os.path.split(filename)[1]
                 if name not in results:
                     try:
                         # Determine if file is hidden
@@ -1341,8 +1340,7 @@ class CatfishWindow(Window):
     def check_treeview_stats(self, treeview):
         if len(self.rows) == 0:
             return -1
-        model, rows, selected_filenames = \
-            self.treeview_get_selected_rows(treeview)
+        rows = self.treeview_get_selected_rows(treeview)[1]
         for row in rows:
             if row not in self.rows:
                 return 2
@@ -1355,8 +1353,8 @@ class CatfishWindow(Window):
             self.treeview_set_cursor_if_unset(treeview,
                                               int(event.x),
                                               int(event.y))
-        model, self.rows, self.selected_filenames = \
-            self.treeview_get_selected_rows(treeview)
+        self.rows, self.selected_filenames = \
+            self.treeview_get_selected_rows(treeview)[1:]
 
     def maintain_treeview_stats(self, treeview, event=None):
         if len(self.selected_filenames) == 0:
@@ -1780,7 +1778,7 @@ class CatfishWindow(Window):
                     # file no longer exists
                     pass
                 except Exception as e:
-                    logger.error("Exception encountered: ", str(e))
+                    logger.error("Exception encountered: %s" % str(e))
 
             yield True
             continue

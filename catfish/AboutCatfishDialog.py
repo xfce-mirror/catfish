@@ -31,7 +31,7 @@ class AboutCatfishDialog(AboutDialog):
     """Creates the about dialog for catfish"""
     __gtype_name__ = "AboutCatfishDialog"
 
-    def finish_initializing(self, builder):  # pylint: disable=E1002
+    def finish_initializing(self, builder):
         """Set up the about dialog"""
         super(AboutCatfishDialog, self).finish_initializing(builder)
         self.set_translator_credits(_("translator-credits"))

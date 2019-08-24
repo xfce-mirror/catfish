@@ -210,6 +210,12 @@ class Window(Gtk.Window):
         search.grab_focus()
         self.keys_pressed = []
 
+        self.search_engine = None
+        self.settings = None
+
+    def on_sidebar_toggle_toggled(self, widget):
+        pass
+
     def setup_headerbar(self, chooser, search, button):
         headerbar = Gtk.HeaderBar.new()
         headerbar.set_show_close_button(True)
