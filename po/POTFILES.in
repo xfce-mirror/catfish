@@ -19,20 +19,25 @@ org.xfce.Catfish.desktop.in
 
 # Glade Files
 [type: gettext/glade]data/ui/AboutCatfishDialog.ui
+[type: gettext/glade]data/ui/CatfishPreferences.ui
 [type: gettext/glade]data/ui/CatfishWindow.ui
 
 # Python Files
 catfish/__init__.py
-catfish/CatfishWindow.py
-catfish/CatfishSearchEngine.py
 catfish/AboutCatfishDialog.py
+catfish/CatfishPrefsDialog.py
+catfish/CatfishSearchEngine.py
+catfish/CatfishWindow.py
+catfish_lib/__init__.py
+catfish_lib/AboutDialog.py
 catfish_lib/Builder.py
 catfish_lib/catfishconfig.py
-catfish_lib/AboutDialog.py
-catfish_lib/__init__.py
+catfish_lib/CatfishSettings.py
 catfish_lib/helpers.py
-catfish_lib/Window.py
+catfish_lib/PrefsDialog.py
 catfish_lib/SudoDialog.py
+catfish_lib/Thumbnailer.py
+catfish_lib/Window.py
 
 # XML Files
 [type: gettext/xml]data/metainfo/catfish.appdata.xml.in

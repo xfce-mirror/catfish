@@ -1,7 +1,7 @@
-<glade-catalog name="about_catfish_dialog" domain="glade-3" 
+<glade-catalog name="about_catfish_dialog" domain="glade-3"
                depends="gtk+" version="1.0">
   <glade-widget-classes>
-    <glade-widget-class title="About Catfish Dialog" name="AboutCatfishDialog" 
+    <glade-widget-class title="About Catfish Dialog" name="AboutCatfishDialog"
                         generic-name="AboutCatfishDialog" parent="GtkAboutDialog"
                         icon-name="widget-gtk-about-dialog"/>
   </glade-widget-classes>

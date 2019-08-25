@@ -98,7 +98,8 @@ class CatfishSearchEngine:
     """CatfishSearchEngine is the collection of search backends that are used
     to perform a query.  Each backend is a CatfishSearchMethod"""
 
-    def __init__(self, methods=['zeitgeist', 'locate', 'walk']):
+    def __init__(self, methods=['zeitgeist', 'locate', 'walk'],
+                 exclude_paths=[]):
         """Initialize the CatfishSearchEngine.  Provide a list of methods to
         be included in the search backends.  Available backends include:
 
@@ -124,6 +125,7 @@ class CatfishSearchEngine:
             self.add_method(CatfishSearchMethod_Fulltext)
         if 'walk' in methods:
             self.add_method(CatfishSearchMethod_Walk)
+        self.exclude_paths = exclude_paths
         initialized = []
         for method in self.methods:
             initialized.append(method.method_name)
@@ -171,11 +173,7 @@ class CatfishSearchEngine:
 
         # Path exclusions for efficiency
         exclude = []
-        maybe_exclude = [
-            os.path.expanduser("~/.cache"),
-            os.path.expanduser("~/.gvfs"),
-            "/dev"
-        ]
+        maybe_exclude = self.exclude_paths
         for maybe_path in maybe_exclude:
             if not path.startswith(maybe_path):
                 exclude.append(maybe_path)
@@ -188,7 +186,8 @@ class CatfishSearchEngine:
             logger.debug(
                 "[%i] Starting search method: %s",
                 self.engine_id, method.method_name)
-            for filename in method.run(keywords, path, regex):
+            for filename in method.run(keywords, path, regex,
+                                       self.exclude_paths):
                 if isinstance(filename, str) and path in filename:
                     found_bad = False
                     for filepath in exclude:
@@ -274,7 +273,7 @@ class CatfishSearchMethod:
         """Base CatfishSearchMethod Initializer."""
         self.method_name = method_name
 
-    def run(self, keywords, path, regex=False):
+    def run(self, keywords, path, regex=False, exclude_paths=[]):
         """Base CatfishSearchMethod run method."""
         return NotImplemented
 
@@ -339,18 +338,14 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
             results.append(os.path.join(path, dirpath))
         return results
 
-    def run(self, keywords, path, regex=False):
+    def run(self, keywords, path, regex=False, exclude_paths=[]):
         """Run the search method using keywords and path.  regex is not used
         by this search method.
 
         This function is a generator and will yield files as they are found or
         True if still running."""
         exclude = []
-        maybe_exclude = [
-            os.path.expanduser("~/.cache"),
-            os.path.expanduser("~/.gvfs"),
-            "/dev"
-        ]
+        maybe_exclude = exclude_paths
         for maybe_path in maybe_exclude:
             if not path.startswith(maybe_path):
                 exclude.append(maybe_path)
@@ -425,7 +420,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
         self.running = False
         self.exact = False
 
-    def run(self, keywords, path, regex=False): # noqa
+    def run(self, keywords, path, regex=False, exclude_paths=[]):  # noqa
         """Run the search method using keywords and path.  regex is not used
         by this search method.
 
@@ -513,7 +508,7 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
         """Initialize the Zeitgeist SearchMethod."""
         CatfishSearchMethod.__init__(self, "zeitgeist")
 
-    def run(self, keywords, path, regex=False):
+    def run(self, keywords, path, regex=False, exclude_paths=[]):
         """Run the Zeitgeist SearchMethod."""
         self.stop_search = False
         event_template = Event()
@@ -571,7 +566,7 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
         """Base assemble_query method."""
         return False
 
-    def run(self, keywords, path, regex=False):
+    def run(self, keywords, path, regex=False, exclude_paths=[]):
         """Run the search method using keywords and path.
 
         This function returns the process.stdout generator and will yield files

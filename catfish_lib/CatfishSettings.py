@@ -28,7 +28,8 @@ default_settings = {
     'window-width': 650,
     'window-height': 470,
     'window-x': -1,
-    'window-y': -1
+    'window-y': -1,
+    'exclude-paths': '/dev;~/.cache;~/.gvfs;'
 }
 
 
@@ -66,6 +67,14 @@ class CatfishSettings:
         if key in self.settings:
             if (key.startswith('window')):
                 return int(self.settings[key])
+            if (key == "exclude-paths"):
+                exclude_directories = []
+                for path in (self.settings[key].strip()).split(";"):
+                    if len(path) > 0:
+                        path = os.path.expanduser(path)
+                        exclude_directories.append(path)
+                exclude_directories.sort()
+                return exclude_directories
             return self.settings[key]
         else:
             return None
@@ -73,6 +82,8 @@ class CatfishSettings:
     def set_setting(self, key, value):
         """Set the value for the specified key."""
         if key in self.settings:
+            if key == "exclude-paths":
+                value = ";".join(value)
             self.settings[key] = value
         else:
             pass

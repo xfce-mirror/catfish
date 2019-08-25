@@ -41,6 +41,7 @@ gi.require_version('Gtk', '3.0')  # noqa
 from gi.repository import GLib, GObject, Pango, Gdk, GdkPixbuf, Gtk
 
 from catfish.AboutCatfishDialog import AboutCatfishDialog
+from catfish.CatfishPrefsDialog import CatfishPrefsDialog
 from catfish.CatfishSearchEngine import CatfishSearchEngine
 from catfish_lib import catfishconfig, helpers
 from catfish_lib import CatfishSettings, SudoDialog, Window
@@ -130,6 +131,8 @@ class CatfishWindow(Window):
 
         self.AboutDialog = AboutCatfishDialog
 
+        self.settings = CatfishSettings.CatfishSettings()
+
         # -- Folder Chooser Combobox -- #
         self.folderchooser = builder.get_named_object("toolbar.folderchooser")
 
@@ -149,8 +152,6 @@ class CatfishWindow(Window):
         self.fulltext = builder.get_named_object("menus.application.fulltext")
         self.sidebar_toggle_menu = builder.get_named_object(
             "menus.application.advanced")
-        self.close_after_select = builder.get_named_object(
-            "menus.application.closeafterselect")
 
         # -- Sidebar -- #
         self.button_time_custom = builder.get_named_object(
@@ -270,7 +271,9 @@ class CatfishWindow(Window):
         self.extensions_entry = \
             builder.get_named_object("dialogs.filetype.extensions.entry")
 
-        self.search_engine = CatfishSearchEngine()
+        self.search_engine = CatfishSearchEngine(
+            ['zeitgeist', 'locate', 'walk'],
+            self.settings.get_setting("exclude-paths"))
 
         self.icon_cache = {}
         self.icon_theme = Gtk.IconTheme.get_default()
@@ -278,7 +281,6 @@ class CatfishWindow(Window):
         self.selected_filenames = []
         self.rows = []
 
-        self.settings = CatfishSettings.CatfishSettings()
         paned = builder.get_named_object("window.paned")
         paned.set_property('height_request',
                            self.settings.get_setting('window-height'))
@@ -392,10 +394,13 @@ class CatfishWindow(Window):
         self.app_menu_event = not self.app_menu_event
         if not self.app_menu_event:
             return
-        if listbox.get_row_at_index(6) == row:
+        if listbox.get_row_at_index(8) == row:
             listbox.get_parent().hide()
             self.on_menu_update_index_activate(row)
-        if listbox.get_row_at_index(7) == row:
+        if listbox.get_row_at_index(10) == row:
+            listbox.get_parent().hide()
+            self.on_menu_preferences_activate(row)
+        if listbox.get_row_at_index(11) == row:
             listbox.get_parent().hide()
             self.on_mnu_about_activate(row)
 
@@ -544,8 +549,6 @@ class CatfishWindow(Window):
         self.fulltext.set_active(self.options.fulltext)
         self.sidebar_toggle_menu.set_active(
             self.settings.get_setting('show-sidebar'))
-        self.close_after_select.set_active(
-            self.settings.get_setting('close-after-select'))
 
         self.show_thumbnail = self.options.thumbnails
 
@@ -590,7 +593,7 @@ class CatfishWindow(Window):
 
     def thumbnail_cell_data_func(self, col, renderer, model, treeiter, data):
         """Cell Renderer Function to Thumbnails View."""
-        name, size, path, modified = model[treeiter][1:4]
+        name, size, path, modified = model[treeiter][1:5]
         name = escape(name)
         size = self.format_size(size)
         path = escape(path)
@@ -605,7 +608,8 @@ class CatfishWindow(Window):
         fallback if unavailable."""
         context = self.sidebar.get_style_context()
         try:
-            icon_lookup_flags = Gtk.IconLookupFlags.FORCE_SVG
+            icon_lookup_flags = Gtk.IconLookupFlags.FORCE_SVG | \
+                Gtk.IconLookupFlags.FORCE_SIZE
             icon_info = self.icon_theme.choose_icon([icon_name + '-symbolic'],
                                                     size,
                                                     icon_lookup_flags)
@@ -614,7 +618,8 @@ class CatfishWindow(Window):
         except (AttributeError, GLib.GError):
             icon_lookup_flags = Gtk.IconLookupFlags.FORCE_SVG | \
                 Gtk.IconLookupFlags.USE_BUILTIN | \
-                Gtk.IconLookupFlags.GENERIC_FALLBACK
+                Gtk.IconLookupFlags.GENERIC_FALLBACK | \
+                Gtk.IconLookupFlags.FORCE_SIZE
             icon = self.icon_theme.load_icon(
                 icon_name, size, icon_lookup_flags)
         return icon
@@ -922,11 +927,30 @@ class CatfishWindow(Window):
         """Show the Update Search Index dialog."""
         self.update_index_dialog.show()
 
-    def on_menu_closeafterselect_toggled(self, widget):
-        active = widget.get_active()
-        self.settings.set_setting('close-after-select', active)
+    def on_menu_preferences_activate(self, widget):
+        dialog = CatfishPrefsDialog()
+        dialog.set_transient_for(self)
+        dialog.connect_settings(self.settings)
+        dialog.run()
+        changed_properties = dialog.changed_properties
+        dialog.destroy()
+        self.refresh_from_settings(changed_properties)
+
+    def refresh_from_settings(self, changed_properties):
+        for prop in changed_properties:
+            setting = self.settings.get_setting(prop)
+            if (prop == "show-hidden-files"):
+                self.hidden_files.set_active(setting)
+            if (prop == "show-sidebar"):
+                self.set_sidebar_active(setting)
 
     # -- Sidebar -- #
+    def set_sidebar_active(self, active):
+        if self.sidebar_toggle_menu.get_active() != active:
+            self.sidebar_toggle_menu.set_active(active)
+        if self.sidebar.get_visible() != active:
+            self.sidebar.set_visible(active)
+
     def on_sidebar_toggle_toggled(self, widget):
         """Toggle visibility of the sidebar."""
         if isinstance(widget, Gtk.CheckButton):
@@ -934,10 +958,7 @@ class CatfishWindow(Window):
         else:
             active = not self.settings.get_setting('show-sidebar')
         self.settings.set_setting('show-sidebar', active)
-        if self.sidebar_toggle_menu.get_active() != active:
-            self.sidebar_toggle_menu.set_active(active)
-        if active != self.sidebar.get_visible():
-            self.sidebar.set_visible(active)
+        self.set_sidebar_active(active)
 
     def set_modified_range(self, value):
         if value == 'any':
@@ -1642,10 +1663,12 @@ class CatfishWindow(Window):
             return self.icon_cache[name]
         except KeyError:
             icon_size = Gtk.icon_size_lookup(self.icon_size)[1]
+            flags = Gtk.IconLookupFlags.FORCE_SIZE
             if self.icon_theme.has_icon(name):
-                icon = self.icon_theme.load_icon(name, icon_size, 0)
+                icon = self.icon_theme.load_icon(name, icon_size, flags)
             else:
-                icon = self.icon_theme.load_icon('image-missing', icon_size, 0)
+                icon = self.icon_theme.load_icon('image-missing', icon_size,
+                                                 flags)
             self.icon_cache[name] = icon
             return icon
 
@@ -1742,10 +1765,15 @@ class CatfishWindow(Window):
 
         # Check if this is a fulltext query or standard query.
         if self.filter_formats['fulltext']:
-            self.search_engine = CatfishSearchEngine(['fulltext'])
+            self.search_engine = \
+                CatfishSearchEngine(['fulltext'],
+                                    self.settings.get_setting("exclude-paths"))
             self.search_engine.set_exact(self.filter_formats['exact'])
         else:
-            self.search_engine = CatfishSearchEngine()
+            self.search_engine = CatfishSearchEngine(
+                ['zeitgeist', 'locate', 'walk'],
+                self.settings.get_setting("exclude-paths")
+            )
 
         for filename in self.search_engine.run(keywords, folder, regex=True):
             if not self.stop_search and isinstance(filename, str) and \

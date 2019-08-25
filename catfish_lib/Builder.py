@@ -86,7 +86,10 @@ class Builder(Gtk.Builder):
 
         ele_widgets = tree.getiterator("object")
         for ele_widget in ele_widgets:
-            name = ele_widget.attrib['id']
+            try:
+                name = ele_widget.attrib['id']
+            except AttributeError:
+                continue
             widget = self.get_object(name)
 
             # populate indexes - a dictionary of widgets

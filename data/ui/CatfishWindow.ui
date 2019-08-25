@@ -1063,8 +1063,8 @@
           <object class="GtkBox" id="toolbar_view">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">center</property>
             <property name="valign">center</property>
+            <property name="homogeneous">True</property>
             <child>
               <object class="GtkRadioButton" id="toolbar_view_list">
                 <property name="width_request">32</property>
@@ -1074,7 +1074,6 @@
                 <property name="receives_default">False</property>
                 <property name="tooltip_text" translatable="yes">Compact List</property>
                 <property name="image">toolbar_view_list_icon</property>
-                <property name="xalign">0.5</property>
                 <property name="active">True</property>
                 <property name="draw_indicator">False</property>
                 <signal name="toggled" handler="on_treeview_list_toggled" swapped="no"/>
@@ -1094,7 +1093,6 @@
                 <property name="receives_default">False</property>
                 <property name="tooltip_text" translatable="yes">Thumbnails</property>
                 <property name="image">toolbar_view_thumbnails_icon</property>
-                <property name="xalign">0.5</property>
                 <property name="draw_indicator">False</property>
                 <property name="group">toolbar_view_list</property>
                 <signal name="toggled" handler="on_treeview_thumbnails_toggled" swapped="no"/>
@@ -1113,19 +1111,57 @@
       </object>
     </child>
     <child>
+      <object class="GtkListBoxRow" id="listseprow1">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="valign">start</property>
+        <property name="activatable">False</property>
+        <property name="selectable">False</property>
+        <child>
+          <object class="GtkSeparator" id="listsep1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="valign">start</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
       <object class="GtkListBoxRow" id="listboxrow2">
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <child>
-          <object class="GtkCheckButton" id="application_menu_hidden">
-            <property name="label" translatable="yes">Show _Hidden Files</property>
+          <object class="GtkCheckButton" id="application_menu_advanced">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
             <property name="use_underline">True</property>
-            <property name="xalign">0</property>
             <property name="draw_indicator">True</property>
-            <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
+            <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
+            <child>
+              <object class="GtkAccelLabel" id="accel_label_1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Show _sidebar</property>
+                <property name="use_underline">True</property>
+                <property name="accel_widget">application_menu_advanced</property>
+              </object>
+            </child>
+            <accelerator key="F9" signal="activate"/>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkListBoxRow" id="listseprow2">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="valign">start</property>
+        <child>
+          <object class="GtkSeparator" id="listsep2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="valign">start</property>
           </object>
         </child>
       </object>
@@ -1135,15 +1171,14 @@
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <child>
-          <object class="GtkCheckButton" id="application_menu_fulltext">
-            <property name="label" translatable="yes">Search File _Contents</property>
+          <object class="GtkCheckButton" id="application_menu_hidden">
+            <property name="label" translatable="yes">Show _hidden files</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
             <property name="use_underline">True</property>
-            <property name="xalign">0</property>
             <property name="draw_indicator">True</property>
-            <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
+            <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
           </object>
         </child>
       </object>
@@ -1153,15 +1188,14 @@
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <child>
-          <object class="GtkCheckButton" id="application_menu_exact">
-            <property name="label" translatable="yes">_Exact Match</property>
+          <object class="GtkCheckButton" id="application_menu_fulltext">
+            <property name="label" translatable="yes">Search file _contents</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
             <property name="use_underline">True</property>
-            <property name="xalign">0</property>
             <property name="draw_indicator">True</property>
-            <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
+            <signal name="toggled" handler="on_menu_fulltext_toggled" swapped="no"/>
           </object>
         </child>
       </object>
@@ -1171,34 +1205,29 @@
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <child>
-          <object class="GtkCheckButton" id="application_menu_advanced">
-            <property name="label" translatable="yes">Show _Sidebar</property>
+          <object class="GtkCheckButton" id="application_menu_exact">
+            <property name="label" translatable="yes">_Match results exactly</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
             <property name="use_underline">True</property>
-            <property name="xalign">0</property>
             <property name="draw_indicator">True</property>
-            <signal name="toggled" handler="on_sidebar_toggle_toggled" swapped="no"/>
+            <signal name="toggled" handler="on_menu_exact_match_toggled" swapped="no"/>
           </object>
         </child>
       </object>
     </child>
     <child>
-      <object class="GtkListBoxRow" id="listboxrow8">
+      <object class="GtkListBoxRow" id="listseprow3">
         <property name="width_request">100</property>
         <property name="visible">True</property>
         <property name="can_focus">True</property>
+        <property name="valign">start</property>
         <child>
-          <object class="GtkCheckButton" id="application_menu_closeafterselect">
-            <property name="label" translatable="yes">Close _on Selection</property>
+          <object class="GtkSeparator" id="listsep3">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">False</property>
-            <property name="use_underline">True</property>
-            <property name="xalign">0</property>
-            <property name="draw_indicator">True</property>
-            <signal name="toggled" handler="on_menu_closeafterselect_toggled" swapped="no"/>
+            <property name="can_focus">False</property>
+            <property name="valign">start</property>
           </object>
         </child>
       </object>
@@ -1212,11 +1241,16 @@
           <object class="GtkBox" id="box1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="margin_left">9</property>
+            <property name="margin_right">9</property>
+            <property name="spacing">8</property>
             <child>
               <object class="GtkImage" id="image1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="pixel_size">16</property>
                 <property name="icon_name">view-refresh-symbolic</property>
+                <property name="icon_size">1</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -1228,8 +1262,7 @@
               <object class="GtkLabel" id="label1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="margin_left">5</property>
-                <property name="label" translatable="yes">_Update Search Index...</property>
+                <property name="label" translatable="yes">_Refresh search index...</property>
                 <property name="use_underline">True</property>
               </object>
               <packing>
@@ -1243,7 +1276,63 @@
       </object>
     </child>
     <child>
-      <object class="GtkListBoxRow" id="listboxrow7">
+      <object class="GtkListBoxRow" id="listseprow4">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <child>
+          <object class="GtkSeparator" id="listsep4">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="valign">start</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkListBoxRow" id="application_menu_prefs">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <child>
+          <object class="GtkBox" id="box4">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_left">9</property>
+            <property name="margin_right">9</property>
+            <property name="spacing">8</property>
+            <child>
+              <object class="GtkImage" id="image3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="pixel_size">16</property>
+                <property name="icon_name">document-properties-symbolic</property>
+                <property name="use_fallback">True</property>
+                <property name="icon_size">1</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label6">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">_Preferences</property>
+                <property name="use_underline">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkListBoxRow" id="listboxrow8">
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <property name="selectable">False</property>
@@ -1251,11 +1340,16 @@
           <object class="GtkBox" id="box2">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="margin_left">9</property>
+            <property name="margin_right">9</property>
+            <property name="spacing">8</property>
             <child>
               <object class="GtkImage" id="image2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="pixel_size">16</property>
                 <property name="icon_name">help-about-symbolic</property>
+                <property name="icon_size">1</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -1267,7 +1361,6 @@
               <object class="GtkLabel" id="label2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="margin_left">5</property>
                 <property name="label" translatable="yes">_About</property>
                 <property name="use_underline">True</property>
               </object>
@@ -1281,6 +1374,18 @@
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkSizeGroup" id="application_menu_sg">
+    <property name="mode">vertical</property>
+    <widgets>
+      <widget name="listboxrow2"/>
+      <widget name="listboxrow3"/>
+      <widget name="listboxrow4"/>
+      <widget name="listboxrow5"/>
+      <widget name="application_menu_update"/>
+      <widget name="application_menu_prefs"/>
+      <widget name="listboxrow8"/>
+    </widgets>
   </object>
   <object class="GtkImage" id="update_unlock_icon">
     <property name="visible">True</property>

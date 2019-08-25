@@ -1,4 +1,16 @@
 v1.4.10 (UNRELEASED):
+ + New Preferences Dialog:
+   - Window layout (titlebar vs. headerbar)
+   - Display options
+   - Custom exclude directories
+   - "Close after select" option
+ + Improved Application Menu:
+   - Better use of space, padding, and margins
+   - Clearer purpose labels
+   - Keyboard accelerator for the sidebar (F9) is now displayed
+ + General:
+   - Better use of alt-accelerators
+   - Standardized icon sizes, no more wrongly-sized icons in the results
  + Translations:
    - Combine 3 strings into 1 to help translators (Xfce #15596)
 
