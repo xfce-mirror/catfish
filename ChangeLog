@@ -1,11 +1,12 @@
 v1.4.10 (UNRELEASED):
+ + New Features:
+   - Preferences Dialog:
+     - Window layout (titlebar vs. headerbar)
+     - Display options (hidden files and sidebar)
+     - Custom exclude directories
+   - Option to close Catfish after opening a file (Xfce #14888)
  + Bug Fixes:
    - (Really) fix path exclusions (Debian #926850)
- + New Preferences Dialog:
-   - Window layout (titlebar vs. headerbar)
-   - Display options
-   - Custom exclude directories
-   - "Close after select" option
  + Improved Application Menu:
    - Better use of space, padding, and margins
    - Clearer purpose labels
@@ -13,6 +14,14 @@ v1.4.10 (UNRELEASED):
  + General:
    - Better use of alt-accelerators
    - Standardized icon sizes, no more wrongly-sized icons in the results
+   - Simplified Python 2/3 compatibility code
+   - Various code quality fixes (pylint, flake)
+ + Search (Walk Method):
+   - Enable traversing symbolic links, processing real paths only once
+   - Add search priority, with each level processed alphabetically:
+     - XDG paths (Desktop, Documents, etc)
+     - Visible paths
+     - Hidden paths
  + Translations:
    - Combine 3 strings into 1 to help translators (Xfce #15596)
 
