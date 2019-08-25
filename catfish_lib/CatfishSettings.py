@@ -72,6 +72,8 @@ class CatfishSettings:
                 for path in (self.settings[key].strip()).split(";"):
                     if len(path) > 0:
                         path = os.path.expanduser(path)
+                        if not path.endswith("/"):
+                            path = path + "/"
                         exclude_directories.append(path)
                 exclude_directories.sort()
                 return exclude_directories

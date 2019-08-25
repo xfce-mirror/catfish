@@ -191,7 +191,7 @@ class CatfishSearchEngine:
                 if isinstance(filename, str) and path in filename:
                     found_bad = False
                     for filepath in exclude:
-                        if filepath in filename:
+                        if filename.startswith(filepath):
                             if self.stop_time > 0:
                                 logger.debug("Engine is stopped")
                                 return
@@ -307,6 +307,8 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         notdotlinks = []
         for path in dirs:
             path = os.path.join(root, path)
+            if not path.endswith("/"):
+                path = path + "/"
             if path in exclude_list:
                 continue
             if path in xdg_list:

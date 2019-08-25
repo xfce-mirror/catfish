@@ -1,4 +1,6 @@
 v1.4.10 (UNRELEASED):
+ + Bug Fixes:
+   - (Really) fix path exclusions (Debian #926850)
  + New Preferences Dialog:
    - Window layout (titlebar vs. headerbar)
    - Display options
