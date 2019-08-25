@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-11 13:53-0400\n"
+"POT-Creation-Date: 2019-08-24 07:35-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>, 2019\n"
 "Language-Team: Albanian (https://www.transifex.com/xfce/teams/16840/sq/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:679
+#: ../catfish/CatfishWindow.py:707
 msgid "Catfish File Search"
 msgstr "Kërkim Kartelash Catfish"
 
@@ -128,7 +128,7 @@ msgstr "<b>Datë Fillimi</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>Datë Përfundimi</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:217
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:218
 msgid "Catfish"
 msgstr "Catfish"
 
@@ -144,92 +144,79 @@ msgstr "Baza e të dhënave është më e vjetër se 7 ditë.  Të përditësohe
 msgid "File Type"
 msgstr "Lloj Kartele"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1215
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1249
 msgid "Modified"
 msgstr "Ndryshuar më"
 
-#: ../data/ui/CatfishWindow.ui.h:29
-msgctxt ""
-"Full text: Enter your query above to find your files or click the [icon] "
-"icon for more options."
-msgid "Enter your query above to find your files"
-msgstr "Që të gjenden kartelat tuaja, jepni më sipër kërkesën tuaj"
+#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1700
+msgid "Results will be displayed as soon as they are found."
+msgstr "Përfundimet do të shfaqen sapo të gjenden."
 
 #: ../data/ui/CatfishWindow.ui.h:30
-msgctxt ""
-"Full text: Enter your query above to find your files or click the [icon] "
-"icon for more options."
-msgid "or click the "
-msgstr "ose klikoni mbi ikonën "
-
-#: ../data/ui/CatfishWindow.ui.h:31
-msgctxt ""
-"Full text: Enter your query above to find your files or click the [icon] "
-"icon for more options."
-msgid " icon for more options."
-msgstr " për më tepër mundësi."
-
-#: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
 msgstr "Përzgjidhni Drejtori"
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "Search for files"
 msgstr "Kërkoni për kartela"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:32
 msgid "Compact List"
 msgstr "Listë e Ngjeshur"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Thumbnails"
 msgstr "Miniatura"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "Show _Hidden Files"
 msgstr "Shfaq Kartela të _Padukshme"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "Search File _Contents"
 msgstr "Kërko Në Lëndë Kartele"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "_Exact Match"
 msgstr "_Saktësisht Siç Është Shkruar"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "Show _Sidebar"
 msgstr "Shfaq _Anështyllën"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:38
+msgid "Close _on Selection"
+msgstr "Mbylle _gjatë Përzgjedhjes"
+
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Update Search Index..."
 msgstr "_Përditësoni Treguesin e Kërkimeve…"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "_About"
 msgstr "_Rreth"
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
 msgstr "Përditësoni Bazë të Dhënash Kërkimesh"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Unlock"
 msgstr "Shkyçe"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "<b>Database:</b>"
 msgstr "<b>Bazë të dhënash:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
 msgstr "<b>Përditësuar më:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Përditësoje Bazën e të Dhënave të Kërkimeve</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -294,40 +281,49 @@ msgstr "Provoni GDK_BACKEND=x11 {0}\n"
 msgid "%s (invalid encoding)"
 msgstr "%s (kodim i pavlefshëm)"
 
-#: ../catfish/CatfishWindow.py:249
+#: ../catfish/CatfishWindow.py:251
 msgid "Unknown"
 msgstr "I panjohur"
 
-#: ../catfish/CatfishWindow.py:253
+#: ../catfish/CatfishWindow.py:255
 msgid "Never"
 msgstr "Kurrë"
 
-#: ../catfish/CatfishWindow.py:647
+#: ../catfish/CatfishWindow.py:331
+#, python-format
+msgid ""
+"Enter your query above to find your files\n"
+"or click the %s icon for more options."
+msgstr ""
+"Jepni më sipër kërkesën tuaj që të gjeni kartelat\n"
+"tuaja ose klikoni ikonën %s për më tepër mundësi."
+
+#: ../catfish/CatfishWindow.py:675
 msgid "An error occurred while updating the database."
 msgstr "Ndodhi një gabim teksa përditësohej baza e të dhënave."
 
-#: ../catfish/CatfishWindow.py:649
+#: ../catfish/CatfishWindow.py:677
 msgid "Authentication failed."
 msgstr "Mirëfilltësimi dështoi."
 
-#: ../catfish/CatfishWindow.py:655
+#: ../catfish/CatfishWindow.py:683
 msgid "Authentication cancelled."
 msgstr "Mirëfilltësimi u anulua."
 
-#: ../catfish/CatfishWindow.py:661
+#: ../catfish/CatfishWindow.py:689
 msgid "Search database updated successfully."
 msgstr "Baza e të dhënave të kërkimeve u përditësua me sukses."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:736
+#: ../catfish/CatfishWindow.py:764
 msgid "Updating..."
 msgstr "Po përditësohet…"
 
-#: ../catfish/CatfishWindow.py:770
+#: ../catfish/CatfishWindow.py:798
 msgid "Stop Search"
 msgstr "Ndale Kërkimin"
 
-#: ../catfish/CatfishWindow.py:771
+#: ../catfish/CatfishWindow.py:799
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -335,31 +331,31 @@ msgstr ""
 "Kërkimi po kryhet…\n"
 "Që të ndalet, shtypni butonin Anuloje ose tastin Esc."
 
-#: ../catfish/CatfishWindow.py:780
+#: ../catfish/CatfishWindow.py:808
 msgid "Begin Search"
 msgstr "Nise Kërkimin"
 
-#: ../catfish/CatfishWindow.py:1035
+#: ../catfish/CatfishWindow.py:1069
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" s’u hap dot."
 
-#: ../catfish/CatfishWindow.py:1087
+#: ../catfish/CatfishWindow.py:1121
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" s’u ruajt dot."
 
-#: ../catfish/CatfishWindow.py:1104
+#: ../catfish/CatfishWindow.py:1138
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" s’u fshi dot."
 
-#: ../catfish/CatfishWindow.py:1144
+#: ../catfish/CatfishWindow.py:1178
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Ruajeni \"%s\" si…"
 
-#: ../catfish/CatfishWindow.py:1179
+#: ../catfish/CatfishWindow.py:1213
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -368,7 +364,7 @@ msgstr ""
 "Jeni i sigurt se doni të fshihet \n"
 "\"%s\" përgjithmonë?"
 
-#: ../catfish/CatfishWindow.py:1183
+#: ../catfish/CatfishWindow.py:1217
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -377,43 +373,43 @@ msgstr ""
 "Jeni i sigurt se doni të fshihen \n"
 "përgjithmonë %i kartelat e përzgjedhura?"
 
-#: ../catfish/CatfishWindow.py:1186
+#: ../catfish/CatfishWindow.py:1220
 msgid "If you delete a file, it is permanently lost."
 msgstr "Nëse fshini një kartelë, humbet përgjithmonë."
 
-#: ../catfish/CatfishWindow.py:1209
+#: ../catfish/CatfishWindow.py:1243
 msgid "Filename"
 msgstr "Emër kartele"
 
-#: ../catfish/CatfishWindow.py:1211
+#: ../catfish/CatfishWindow.py:1245
 msgid "Size"
 msgstr "Madhësi"
 
-#: ../catfish/CatfishWindow.py:1213
+#: ../catfish/CatfishWindow.py:1247
 msgid "Location"
 msgstr "Vendndodhje"
 
-#: ../catfish/CatfishWindow.py:1225
+#: ../catfish/CatfishWindow.py:1259
 msgid "Preview"
 msgstr "Paraparje"
 
-#: ../catfish/CatfishWindow.py:1233
+#: ../catfish/CatfishWindow.py:1267
 msgid "Details"
 msgstr "Hollësi"
 
-#: ../catfish/CatfishWindow.py:1456
+#: ../catfish/CatfishWindow.py:1490
 msgid "Today"
 msgstr "Sot"
 
-#: ../catfish/CatfishWindow.py:1458
+#: ../catfish/CatfishWindow.py:1492
 msgid "Yesterday"
 msgstr "Dje"
 
-#: ../catfish/CatfishWindow.py:1539
+#: ../catfish/CatfishWindow.py:1573
 msgid "No files found."
 msgstr "S’u gjetën kartela."
 
-#: ../catfish/CatfishWindow.py:1541
+#: ../catfish/CatfishWindow.py:1575
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -421,33 +417,29 @@ msgstr ""
 "Provoni ta bëni kërkimin tuaj më pak\n"
 "të hollësishëm ose provoni në një drejtori tjetër."
 
-#: ../catfish/CatfishWindow.py:1547
+#: ../catfish/CatfishWindow.py:1582
 msgid "1 file found."
 msgstr "U gjet 1 kartelë."
 
-#: ../catfish/CatfishWindow.py:1549
+#: ../catfish/CatfishWindow.py:1584
 #, python-format
 msgid "%i files found."
 msgstr "U gjetën kartela %i."
 
-#: ../catfish/CatfishWindow.py:1555
+#: ../catfish/CatfishWindow.py:1590
 msgid "bytes"
 msgstr "bajte"
 
-#: ../catfish/CatfishWindow.py:1663 ../catfish/CatfishWindow.py:1672
+#: ../catfish/CatfishWindow.py:1698 ../catfish/CatfishWindow.py:1708
 msgid "Searching..."
 msgstr "Po kërkohet…"
 
-#: ../catfish/CatfishWindow.py:1665
-msgid "Results will be displayed as soon as they are found."
-msgstr "Përfundimet do të shfaqen sapo të gjenden."
-
-#: ../catfish/CatfishWindow.py:1670
+#: ../catfish/CatfishWindow.py:1706
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Po kërkohet për \"%s\""
 
-#: ../catfish/CatfishWindow.py:1760
+#: ../catfish/CatfishWindow.py:1796
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Përfundime kërkimi për \"%s\""
