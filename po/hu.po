@@ -74,15 +74,15 @@ msgstr "Ablakok elrendezése"
 
 #: ../data/ui/CatfishPreferences.ui.h:7
 msgid "Show _hidden files in the results"
-msgstr ""
+msgstr "Rejtett fájlok megjelenítése a találatok között"
 
 #: ../data/ui/CatfishPreferences.ui.h:8
 msgid "Show filter _sidebar"
-msgstr ""
+msgstr "_Szűrők megjelenítése az oldalsávon"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Display Options"
-msgstr ""
+msgstr "Megjelenítési beállítások"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "_Appearance"
@@ -90,11 +90,11 @@ msgstr "_Megjelenés"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
-msgstr ""
+msgstr "Útvonal"
 
 #: ../data/ui/CatfishPreferences.ui.h:12
 msgid "Add Directory..."
-msgstr ""
+msgstr "Könyvtár hozzáadása..."
 
 #: ../data/ui/CatfishPreferences.ui.h:13
 msgid "_Add"
@@ -102,27 +102,27 @@ msgstr "Hozzá_adás"
 
 #: ../data/ui/CatfishPreferences.ui.h:14
 msgid "Remove Directory"
-msgstr ""
+msgstr "Könyvtár eltávolítása"
 
 #: ../data/ui/CatfishPreferences.ui.h:15
 msgid "_Remove"
-msgstr ""
+msgstr "El_távolítás"
 
 #: ../data/ui/CatfishPreferences.ui.h:16
 msgid "Exclude Directories"
-msgstr ""
+msgstr "Könyvtárak kizárása"
 
 #: ../data/ui/CatfishPreferences.ui.h:17
 msgid "Close the search _window after opening a file"
-msgstr ""
+msgstr "Kereső_ablak bezárása egy fájl megnyitása után"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Egyéb"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
 msgid "A_dvanced"
-msgstr ""
+msgstr "_Speciális"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
@@ -250,7 +250,7 @@ msgstr "Előnézeti képek"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "Show _sidebar"
-msgstr ""
+msgstr "_Oldalsáv megjelenítése"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show _hidden files"
@@ -258,15 +258,15 @@ msgstr "_Rejtett fájlok megjelenítése"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search file _contents"
-msgstr ""
+msgstr "Keresés a fájlok _tartalmában"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Match results exactly"
-msgstr ""
+msgstr "_Pontosan egyező találatok"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Refresh search index..."
-msgstr ""
+msgstr "_Keresési index frissítése..."
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Preferences"
@@ -381,6 +381,8 @@ msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
+"Írja be a keresendő kifejezést a fenti mezőbe\n"
+"vagy kattintson a(z) %s ikonra további beállításokért."
 
 #: ../catfish/CatfishWindow.py:686
 msgid "An error occurred while updating the database."
@@ -601,6 +603,8 @@ msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
+"Ez a kiadás teljesítménybeli fejlesztést tartalmaz a kereséshez általában "
+"nem használt könyvtárak kizárásával."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
