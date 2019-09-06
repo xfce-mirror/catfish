@@ -53,6 +53,44 @@ def check_gobject_version(major_version, minor_version, micro=0):
     return gobject_version >= (major_version, minor_version, micro)
 
 
+# Define a context manager to suppress stdout and stderr.
+class suppress_stdout_stderr(object):
+    '''
+    A context manager for doing a "deep suppression" of stdout and stderr in
+    Python, i.e. will suppress all print, even if the print originates in a
+    compiled C/Fortran sub-function.
+       This will not suppress raised exceptions, since exceptions are printed
+    to stderr just before a script exits, and after the context manager has
+    exited (at least, I think that is why it lets exceptions through).
+
+    From: Stack Overflow
+    Question: https://stackoverflow.com/questions/11130156/suppress-stdout-stderr-print-from-python-functions
+    Answer: https://stackoverflow.com/q/11130156
+    Author: jeremiahbuddha (https://stackoverflow.com/users/772487/jeremiahbuddha)
+    License: CC-BY-SA 3.0 (https://stackoverflow.com/help/licensing,
+                           https://creativecommons.org/licenses/by-sa/3.0/)
+    '''
+
+    def __init__(self):
+        # Open a pair of null files
+        self.null_fds = [os.open(os.devnull, os.O_RDWR) for x in range(2)]
+        # Save the actual stdout (1) and stderr (2) file descriptors.
+        self.save_fds = [os.dup(1), os.dup(2)]
+
+    def __enter__(self):
+        # Assign the null pointers to stdout and stderr.
+        os.dup2(self.null_fds[0], 1)
+        os.dup2(self.null_fds[1], 2)
+
+    def __exit__(self, *_):
+        # Re-assign the real stdout/stderr back to (1) and (2)
+        os.dup2(self.save_fds[0], 1)
+        os.dup2(self.save_fds[1], 2)
+        # Close all file descriptors
+        for fd in self.null_fds + self.save_fds:
+            os.close(fd)
+
+
 def get_builder(builder_file_name):
     """Return a fully-instantiated Gtk.Builder instance from specified ui file
 
@@ -66,7 +104,10 @@ def get_builder(builder_file_name):
 
     builder = Builder()
     builder.set_translation_domain('catfish')
-    builder.add_from_file(ui_filename)
+
+    with suppress_stdout_stderr():
+        builder.add_from_file(ui_filename)
+
     return builder
 
 
