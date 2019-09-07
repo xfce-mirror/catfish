@@ -24,7 +24,7 @@ Dependencies
 
 * Python 2 or 3
 * GLib / GObject Python bindings: GdkPixbuf, GLib, GTK 3, Pango, Cairo
-* Pexpect
+* [Pexpect](https://pypi.org/project/pexpect/)
 * locate or mlocate
 
 Installation and Bugs

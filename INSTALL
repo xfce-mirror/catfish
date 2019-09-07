@@ -1,15 +1,45 @@
-To build Catfish, you need https://launchpad.net/python-distutils-extra
-Catfish can be used with Python 2 or 3.
+Requirements
+------------
+- Python (2 or 3)
+- Python Distutils Extra (https://launchpad.net/python-distutils-extra)
+- Python GLib / GObject bindings: GdkPixbuf, GLib, GTK 3, Pango, Cairo
+- Pexpect (https://pypi.org/project/pexpect/)
+- locate or mlocate
+
+To install the build and runtime requirements on a Debian-based system,
+the following command is sufficient:
+
+    sudo apt install python python-distutils-extra gir1.2-gdkpixbuf-2.0
+    gir1.2-glib-2.0 gir1.2-gtk-3.0 gir1.2-pango-1.0 python-gi-cairo
+    python-pexpect locate
+
+
+Optional
+--------
+Catfish includes optional support for Zeitgeist, which is used to provide
+instant search results. You can learn more about Zeitgeist here:
+
+    Homepage:  https://launchpad.net/zeitgeist-project
+    Arch Wiki: https://wiki.archlinux.org/index.php/Zeitgeist
+
+To enable Zeitgeist, just install the Python Zeitgeist binding and ensure
+the Zeitgeist datahub is running.
+
+    sudo apt install python-zeitgeist
+
+
+Install Instructions
+--------------------
 
 1.  Unpack the archive.
 
 2.  Install Catfish:
 
-2a. To install locally (a user install), run:
-	python setup.py install --user
+    2a. To install locally (a user install), run:
+        python setup.py install --user
 
-2b. To install system-wide (a root install), run:
-	(sudo) python setup.py install
+    2b. To install system-wide (a root install), run:
+        (sudo) python setup.py install
 
 3.  For a list of command line options run
       catfish --help
