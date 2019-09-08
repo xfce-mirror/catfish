@@ -52,7 +52,7 @@ msgstr "Catfish é uma ferramenta de busca de arquivos versátil."
 
 #: ../data/ui/CatfishPreferences.ui.h:1
 msgid "Catfish Preferences"
-msgstr ""
+msgstr "Preferências do Catfish"
 
 #: ../data/ui/CatfishPreferences.ui.h:2
 msgid "_Close"
