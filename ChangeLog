@@ -1,4 +1,4 @@
-v1.4.10 (UNRELEASED):
+v1.4.10:
  + New Features:
    - Preferences Dialog:
      - Window layout (titlebar vs. headerbar)
@@ -13,17 +13,23 @@ v1.4.10 (UNRELEASED):
    - Keyboard accelerator for the sidebar (F9) is now displayed
  + General:
    - Better use of alt-accelerators
-   - Standardized icon sizes, no more wrongly-sized icons in the results
+   - Improved installation instructions (Xfce #15105)
+   - Reduced warnings displayed in the terminal
    - Simplified Python 2/3 compatibility code
+   - Standardized icon sizes, no more wrongly-sized icons in the results
    - Various code quality fixes (pylint, flake)
  + Search (Walk Method):
    - Enable traversing symbolic links, processing real paths only once
    - Add search priority, with each level processed alphabetically:
-     - XDG paths (Desktop, Documents, etc)
-     - Visible paths
-     - Hidden paths
- + Translations:
+     1. XDG paths (Desktop, Documents, etc)
+     2. Visible paths
+     3. Hidden paths
+ + Translation Updates:
    - Combine 3 strings into 1 to help translators (Xfce #15596)
+   Albanian, Basque, Bulgarian, Catalan, Chinese (China), Chinese (Taiwan),
+   Croatian, Danish, Dutch, French, Galician, German, Hungarian, Italian,
+   Korean, Lithuanian, Norwegian Bokmål, Polish, Portuguese,
+   Portuguese (Brazil), Russian, Serbian, Spanish, Turkish
 
 v1.4.9:
  + Bug Fixes:

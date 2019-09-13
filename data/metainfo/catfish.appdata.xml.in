@@ -43,6 +43,14 @@
   </provides>
 
   <releases>
+    <release version="1.4.10" date="2019-09-13">
+      <description>
+        <_p>This release includes many appearance improvements, introduces
+        a new preferences dialog, and improves search results and performance.
+        </_p>
+      </description>
+    </release>
+
     <release version="1.4.9" date="2019-08-11">
       <description>
         <_p>This release features performance improvements by
@@ -50,6 +58,7 @@
         </_p>
       </description>
     </release>
+
     <release version="1.4.8" date="2019-07-27">
       <description>
         <_p>This release features better desktop integration, support
