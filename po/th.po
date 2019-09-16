@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-05 20:20-0500\n"
+"POT-Creation-Date: 2019-09-13 05:13-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>, 2019\n"
 "Language-Team: Thai (https://www.transifex.com/xfce/teams/16840/th/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:666
+#: ../catfish/CatfishWindow.py:718
 msgid "Catfish File Search"
 msgstr "เครื่องมือค้นหาแฟ้ม Catfish"
 
@@ -43,6 +43,82 @@ msgstr "แฟ้ม;ค้น;หา;ค้นหา;"
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish เป็นเครื่องมือค้นหาแฟ้มที่เก่งรอบด้าน"
+
+#: ../data/ui/CatfishPreferences.ui.h:1
+msgid "Catfish Preferences"
+msgstr "ปรับแต่ง Catfish"
+
+#: ../data/ui/CatfishPreferences.ui.h:2
+msgid "_Close"
+msgstr "ปิ_ด"
+
+#: ../data/ui/CatfishPreferences.ui.h:3
+msgid "Classic (_Titlebar)"
+msgstr "_คลาสสิก (แยกแถบหัวหน้าต่าง)"
+
+#: ../data/ui/CatfishPreferences.ui.h:4
+msgid "_Modern (CSD)"
+msgstr "สมัยให_ม่ (CSD)"
+
+#: ../data/ui/CatfishPreferences.ui.h:5
+msgid "Your new window layout will be applied after restarting Catifish."
+msgstr "โครงหน้าต่างที่คุณเปลี่ยนจะเริ่มมีผลหลังจากที่คุณเปิด Catfish ใหม่"
+
+#: ../data/ui/CatfishPreferences.ui.h:6
+msgid "Window Layout"
+msgstr "โครงหน้าต่าง"
+
+#: ../data/ui/CatfishPreferences.ui.h:7
+msgid "Show _hidden files in the results"
+msgstr "แสดงแฟ้มซ่_อนในผลการค้นหา"
+
+#: ../data/ui/CatfishPreferences.ui.h:8
+msgid "Show filter _sidebar"
+msgstr "แสดงแถบด้าน_ข้างของตัวกรอง"
+
+#: ../data/ui/CatfishPreferences.ui.h:9
+msgid "Display Options"
+msgstr "ตัวเลือกการแสดงผล"
+
+#: ../data/ui/CatfishPreferences.ui.h:10
+msgid "_Appearance"
+msgstr "รูป_ลักษณ์"
+
+#: ../data/ui/CatfishPreferences.ui.h:11
+msgid "Path"
+msgstr "พาธ"
+
+#: ../data/ui/CatfishPreferences.ui.h:12
+msgid "Add Directory..."
+msgstr "เพิ่มไดเรกทอรี..."
+
+#: ../data/ui/CatfishPreferences.ui.h:13
+msgid "_Add"
+msgstr "เ_พิ่ม"
+
+#: ../data/ui/CatfishPreferences.ui.h:14
+msgid "Remove Directory"
+msgstr "ตัดไดเรกทอรีออก"
+
+#: ../data/ui/CatfishPreferences.ui.h:15
+msgid "_Remove"
+msgstr "_ตัดออก"
+
+#: ../data/ui/CatfishPreferences.ui.h:16
+msgid "Exclude Directories"
+msgstr "ไม่รวมไดเรกทอรี"
+
+#: ../data/ui/CatfishPreferences.ui.h:17
+msgid "Close the search _window after opening a file"
+msgstr "ปิดห_น้าต่างค้นหาหลังจากเปิดแฟ้ม"
+
+#: ../data/ui/CatfishPreferences.ui.h:18
+msgid "Miscellaneous"
+msgstr "จิปาถะ"
+
+#: ../data/ui/CatfishPreferences.ui.h:19
+msgid "A_dvanced"
+msgstr "_ขั้นสูง"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
@@ -128,7 +204,7 @@ msgstr "<b>วันที่เริ่มต้น</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>วันที่สุดท้าย</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:217
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:224
 msgid "Catfish"
 msgstr "Catfish"
 
@@ -144,92 +220,79 @@ msgstr "ฐานข้อมูลค้นหาเก่ากว่า 7 ว
 msgid "File Type"
 msgstr "ชนิดแฟ้ม"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1133
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1277
 msgid "Modified"
 msgstr "แก้ไขเมื่อ"
 
-#: ../data/ui/CatfishWindow.ui.h:29
-msgctxt ""
-"Full text: Enter your query above to find your files or click the [icon] "
-"icon for more options."
-msgid "Enter your query above to find your files"
-msgstr "ป้อนคำค้นที่ด้านบนเพื่อค้นหาแฟ้มของคุณ"
+#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1727
+msgid "Results will be displayed as soon as they are found."
+msgstr "ผลลัพธ์จะแสดงทันทีที่พบ"
 
 #: ../data/ui/CatfishWindow.ui.h:30
-msgctxt ""
-"Full text: Enter your query above to find your files or click the [icon] "
-"icon for more options."
-msgid "or click the "
-msgstr "หรือคลิกที่ไอคอน "
-
-#: ../data/ui/CatfishWindow.ui.h:31
-msgctxt ""
-"Full text: Enter your query above to find your files or click the [icon] "
-"icon for more options."
-msgid " icon for more options."
-msgstr " เพื่อใช้ตัวเลือกเพิ่มเติม"
-
-#: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
 msgstr "เลือกไดเรกทอรี"
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "Search for files"
 msgstr "ค้นหาแฟ้ม"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:32
 msgid "Compact List"
 msgstr "รายชื่อแบบกระชับ"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Thumbnails"
 msgstr "ภาพย่อ"
 
-#: ../data/ui/CatfishWindow.ui.h:36
-msgid "Show _Hidden Files"
-msgstr "แสดงแฟ้มซ่_อน"
-
-#: ../data/ui/CatfishWindow.ui.h:37
-msgid "Search File _Contents"
-msgstr "ค้นในเ_นื้อหาแฟ้ม"
-
-#: ../data/ui/CatfishWindow.ui.h:38
-msgid "_Exact Match"
-msgstr "_ตรงทุกตัวอักษร"
-
-#: ../data/ui/CatfishWindow.ui.h:39
-msgid "Show _Sidebar"
+#: ../data/ui/CatfishWindow.ui.h:34
+msgid "Show _sidebar"
 msgstr "แสดงแถบ_ข้าง"
 
-#: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index..."
+#: ../data/ui/CatfishWindow.ui.h:35
+msgid "Show _hidden files"
+msgstr "แสดงแฟ้มซ่_อน"
+
+#: ../data/ui/CatfishWindow.ui.h:36
+msgid "Search file _contents"
+msgstr "ค้นในเ_นื้อหาแฟ้ม"
+
+#: ../data/ui/CatfishWindow.ui.h:37
+msgid "_Match results exactly"
+msgstr "_ตรงทุกตัวอักษร"
+
+#: ../data/ui/CatfishWindow.ui.h:38
+msgid "_Refresh search index..."
 msgstr "_ปรับข้อมูลดัชนีค้นหา..."
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:39
+msgid "_Preferences"
+msgstr "_ปรับแต่ง"
+
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "_About"
 msgstr "เ_กี่ยวกับ"
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
 msgstr "ปรับฐานข้อมูลค้นหา"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Unlock"
 msgstr "ปลดล็อค"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "<b>Database:</b>"
 msgstr "<b>ฐานข้อมูล:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
 msgstr "<b>ปรับข้อมูลเมื่อ:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>ปรับฐานข้อมูลค้นหา</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -237,90 +300,108 @@ msgstr ""
 "เพื่อให้ค้นหาได้เร็วยิ่งขึ้น จำเป็นต้องปรับฐานข้อมูลสำหรับค้นหา\n"
 "การกระทำนี้จำเป็นต้องใช้สิทธิ์ผู้ดูแลระบบ"
 
-#: ../catfish/__init__.py:37
+#: ../catfish/__init__.py:38
 msgid "Usage: %prog [options] path query"
 msgstr "วิธีใช้: %prog [ตัวเลือก] พาธ คำค้น"
 
-#: ../catfish/__init__.py:42
+#: ../catfish/__init__.py:43
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr "แสดงข้อความดีบั๊ก (-vv จะแสดงของ catfish_lib ด้วย)"
 
-#: ../catfish/__init__.py:45
+#: ../catfish/__init__.py:46
 msgid "Use large icons"
 msgstr "ใช้ไอคอนขนาดใหญ่"
 
-#: ../catfish/__init__.py:47
+#: ../catfish/__init__.py:48
 msgid "Use thumbnails"
 msgstr "ใช้ภาพย่อ"
 
-#: ../catfish/__init__.py:49
+#: ../catfish/__init__.py:50
 msgid "Display time in ISO format"
 msgstr "แสดงเวลาในรูปแบบ ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
-#: ../catfish/__init__.py:51
+#: ../catfish/__init__.py:52
 msgid "Set the default search path"
 msgstr "กำหนดพาธค้นหาปริยาย"
 
-#: ../catfish/__init__.py:53
+#: ../catfish/__init__.py:54
 msgid "Perform exact match"
 msgstr "ค้นหาแบบตรงทุกตัวอักษร"
 
-#: ../catfish/__init__.py:55
+#: ../catfish/__init__.py:56
 msgid "Include hidden files"
 msgstr "รวมแฟ้มซ่อน"
 
-#: ../catfish/__init__.py:57
+#: ../catfish/__init__.py:58
 msgid "Perform fulltext search"
 msgstr "ค้นในเนื้อหาแฟ้ม"
 
-#: ../catfish/__init__.py:59
+#: ../catfish/__init__.py:60
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr "ถ้าระบุพาธและคำค้นมาด้วย ก็เริ่มค้นหาทันทีเมื่อเปิดโปรแกรม"
 
+#: ../catfish/__init__.py:77
+#, python-brace-format
+msgid "Try GDK_BACKEND=x11 {0}\n"
+msgstr "ลองใช้ GDK_BACKEND=x11 {0}\n"
+
+#: ../catfish/AboutCatfishDialog.py:37
+msgid "translator-credits"
+msgstr "Theppitak Karoonboonyanan <theppitak@gmail.com>"
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:84
+#: ../catfish/CatfishWindow.py:100
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (รหัสอักขระไม่ถูกต้อง)"
 
-#: ../catfish/CatfishWindow.py:238
+#: ../catfish/CatfishWindow.py:256
 msgid "Unknown"
 msgstr "ไม่ทราบ"
 
-#: ../catfish/CatfishWindow.py:242
+#: ../catfish/CatfishWindow.py:260
 msgid "Never"
 msgstr "ไม่เลย"
 
-#: ../catfish/CatfishWindow.py:634
+#: ../catfish/CatfishWindow.py:339
+#, python-format
+msgid ""
+"Enter your query above to find your files\n"
+"or click the %s icon for more options."
+msgstr ""
+"ป้อนคำค้นที่ด้านบนเพื่อค้นหาแฟ้มของคุณ\n"
+"หรือคลิกที่ไอคอน %s เพื่อใช้ตัวเลือกเพิ่มเติม"
+
+#: ../catfish/CatfishWindow.py:686
 msgid "An error occurred while updating the database."
 msgstr "เกิดข้อผิดพลาดขณะปรับฐานข้อมูล"
 
-#: ../catfish/CatfishWindow.py:636
+#: ../catfish/CatfishWindow.py:688
 msgid "Authentication failed."
 msgstr "ยืนยันตัวบุคคลไม่สำเร็จ"
 
-#: ../catfish/CatfishWindow.py:642
+#: ../catfish/CatfishWindow.py:694
 msgid "Authentication cancelled."
 msgstr "การยืนยันตัวบุคคลถูกยกเลิก"
 
-#: ../catfish/CatfishWindow.py:648
+#: ../catfish/CatfishWindow.py:700
 msgid "Search database updated successfully."
 msgstr "ปรับฐานข้อมูลสำเร็จแล้ว"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:723
+#: ../catfish/CatfishWindow.py:775
 msgid "Updating..."
 msgstr "กำลังปรับข้อมูล..."
 
-#: ../catfish/CatfishWindow.py:757
+#: ../catfish/CatfishWindow.py:809
 msgid "Stop Search"
 msgstr "หยุดค้นหา"
 
-#: ../catfish/CatfishWindow.py:758
+#: ../catfish/CatfishWindow.py:810
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -328,31 +409,31 @@ msgstr ""
 "กำลังดำเนินการค้นหา...\n"
 "คลิกปุ่มยกเลิกหรือกดปุ่ม Escape หากต้องการหยุดค้น"
 
-#: ../catfish/CatfishWindow.py:767
+#: ../catfish/CatfishWindow.py:819
 msgid "Begin Search"
 msgstr "เริ่มค้นหา"
 
-#: ../catfish/CatfishWindow.py:959
+#: ../catfish/CatfishWindow.py:1097
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" ไม่สามารถเปิดได้"
 
-#: ../catfish/CatfishWindow.py:1005
+#: ../catfish/CatfishWindow.py:1149
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" ไม่สามารถบันทึกได้"
 
-#: ../catfish/CatfishWindow.py:1022
+#: ../catfish/CatfishWindow.py:1166
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" ไม่สามารถลบได้"
 
-#: ../catfish/CatfishWindow.py:1062
+#: ../catfish/CatfishWindow.py:1206
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "บันทึก \"%s\" เป็น..."
 
-#: ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:1241
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -361,7 +442,7 @@ msgstr ""
 "ยืนยันหรือไม่ว่าคุณต้องการลบ\n"
 "\"%s\" ทิ้งอย่างถาวร?"
 
-#: ../catfish/CatfishWindow.py:1101
+#: ../catfish/CatfishWindow.py:1245
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -370,43 +451,43 @@ msgstr ""
 "ยืนยันหรือไม่ว่าคุณต้องการลบ\n"
 "แฟ้ม %i แฟ้มที่เลือกทิ้งอย่างถาวร?"
 
-#: ../catfish/CatfishWindow.py:1104
+#: ../catfish/CatfishWindow.py:1248
 msgid "If you delete a file, it is permanently lost."
 msgstr "ถ้าคุณลบแฟ้ม แฟ้มนั้นก็จะสูญหายไปอย่างถาวร"
 
-#: ../catfish/CatfishWindow.py:1127
+#: ../catfish/CatfishWindow.py:1271
 msgid "Filename"
 msgstr "ชื่อแฟ้ม"
 
-#: ../catfish/CatfishWindow.py:1129
+#: ../catfish/CatfishWindow.py:1273
 msgid "Size"
 msgstr "ขนาด"
 
-#: ../catfish/CatfishWindow.py:1131
+#: ../catfish/CatfishWindow.py:1275
 msgid "Location"
 msgstr "ตำแหน่งเก็บ"
 
-#: ../catfish/CatfishWindow.py:1143
+#: ../catfish/CatfishWindow.py:1287
 msgid "Preview"
 msgstr "ตัวอย่าง"
 
-#: ../catfish/CatfishWindow.py:1151
+#: ../catfish/CatfishWindow.py:1295
 msgid "Details"
 msgstr "รายละเอียด"
 
-#: ../catfish/CatfishWindow.py:1374
+#: ../catfish/CatfishWindow.py:1514
 msgid "Today"
 msgstr "วันนี้"
 
-#: ../catfish/CatfishWindow.py:1376
+#: ../catfish/CatfishWindow.py:1516
 msgid "Yesterday"
 msgstr "เมื่อวาน"
 
-#: ../catfish/CatfishWindow.py:1457
+#: ../catfish/CatfishWindow.py:1597
 msgid "No files found."
 msgstr "ไม่พบแฟ้ม"
 
-#: ../catfish/CatfishWindow.py:1459
+#: ../catfish/CatfishWindow.py:1599
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -414,33 +495,29 @@ msgstr ""
 "ลองค้นแบบเฉพาะเจาะจงน้อยกว่านี้\n"
 "หรือลองค้นหาในไดเรกทอรีอื่น"
 
-#: ../catfish/CatfishWindow.py:1465
+#: ../catfish/CatfishWindow.py:1606
 msgid "1 file found."
 msgstr "พบ 1 แฟ้ม"
 
-#: ../catfish/CatfishWindow.py:1467
+#: ../catfish/CatfishWindow.py:1608
 #, python-format
 msgid "%i files found."
 msgstr "พบ %i แฟ้ม"
 
-#: ../catfish/CatfishWindow.py:1473
+#: ../catfish/CatfishWindow.py:1614
 msgid "bytes"
 msgstr "ไบต์"
 
-#: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
+#: ../catfish/CatfishWindow.py:1725 ../catfish/CatfishWindow.py:1735
 msgid "Searching..."
 msgstr "กำลังค้นหา..."
 
-#: ../catfish/CatfishWindow.py:1583
-msgid "Results will be displayed as soon as they are found."
-msgstr "ผลลัพธ์จะแสดงทันทีที่พบ"
-
-#: ../catfish/CatfishWindow.py:1588
+#: ../catfish/CatfishWindow.py:1733
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "กำลังค้นหา \"%s\""
 
-#: ../catfish/CatfishWindow.py:1678
+#: ../catfish/CatfishWindow.py:1822
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "ผลการค้นหาสำหรับ \"%s\""
@@ -514,6 +591,28 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release includes many appearance improvements, introduces a new "
+"preferences dialog, and improves search results and performance."
+msgstr ""
+"รุ่นนี้มีการปรับปรุงรูปลักษณ์หลายรายการ เพิ่มกล่องโต้ตอบปรับแต่ง "
+"และปรับปรุงผลลัพธ์และประสิทธิภาพของการค้นหา"
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
+"This release features performance improvements by excluding uncommon search "
+"directories."
+msgstr "รุ่นนี้มีการปรับปรุงประสิทธิภาพโดยตัดการค้นในไดเรกทอรีที่มักไม่ค้น"
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
+msgid ""
+"This release features better desktop integration, support for OpenBSD and "
+"Wayland, and improved translation support."
+msgstr ""
+"รุ่นนี้มีการเชื่อมรวมกับเดสก์ท็อปที่ดีขึ้น รองรับ OpenBSD และ Wayland "
+"และมีการปรับปรุงการรองรับงานแปลข้อความ"
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
+msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
 "processed. Files can be dragged into other applications. Thumbnails are only"
@@ -525,7 +624,7 @@ msgstr ""
 "สามารถลากแฟ้มไปยังแอปพลิเคชันอื่นได้, "
 "และจะสร้างรูปย่อเฉพาะเมื่อผู้ใช้ร้องขอเท่านั้น"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -537,23 +636,23 @@ msgstr ""
 "รายการต่างๆ "
 "ที่แสดงในหน้าต่างแสดงผลลัพธ์ในรุ่นนี้สามารถเข้าถึงได้จากชุดตกแต่งเดสก์ท็อปทั้งหมด"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid "This is a minor translations-only release."
 msgstr "รุ่นนี้เป็นรุนย่อยที่ปรับคำแปลเพิ่มเติมเท่านั้น"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr "รุ่นนี้มีการปรับปรุงสมรรถนะหลายรายการ และมีการปรับคำแปลจำนวนมาก"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr "รุ่นนี้แสดงเวลาต่างๆ ของแฟ้มตามเขตเวลาแทนที่จะเป็นเวลาสากล (UTC)"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -565,7 +664,7 @@ msgstr ""
 "การรองรับการคลิกเมาส์ปุ่มกลางและปุ่มขวาได้กลับมาทำงานอีกครั้ง "
 "ตัวกรองช่วงวันที่ในรุ่นนี้ทำงานตามเขตเวลาแทนที่จะเป็นเวลาสากล (UTC) แล้ว"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -580,18 +679,18 @@ msgstr ""
 "การรองรับรหัสผ่านในรุ่นนี้ได้รับการปรับปรุงโดยเชื่อมรวมกับ PolicyKit "
 "เมื่อทำได้"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr "รุ่นนี้แก้บั๊กที่ได้รับรายงานใหม่สองรายการ และปรับคำแปล"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
 "รุ่นนี้แก้ปัญหาความถดถอยซึ่งทำให้โปรแกรมไม่สามารถเปิดทำงานได้ในบางระบบ"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -601,7 +700,7 @@ msgstr ""
 "มีการแสดงแถบแจ้งข้อมูลเมื่อฐานข้อมูลค้นหาล้าสมัย "
 "และมีการปรับปรุงกล่องโต้ตอบสำหรับปรับฐานข้อมูล"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -609,7 +708,7 @@ msgstr ""
 "รุ่นนี้แก้ปัญหาสองรายการที่ทำให้ locate ไม่สามารถทำงานได้ "
 "และมีการปรับปรุงการจัดการไอคอนสัญลักษณ์ที่ขาดหาย"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -619,7 +718,7 @@ msgstr ""
 "กำจัดโค้ดที่ไม่ใช้แล้ว "
 "และแก้ปัญหาที่มีแนวโน้มจะเกิดเกี่ยวกับรายชื่อและการเลือกรายการ"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -627,7 +726,7 @@ msgstr ""
 "รุ่นนี้แก้ปัญหาที่มีแนวโน้มจะเกิดเกี่ยวกับระบบรักษาความปลอดภัยขณะโปรแกรมเริ่มทำงาน"
 " และแก้ปัญหาความถดถอยเกี่ยวกับการเลือกหลายรายการ"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
