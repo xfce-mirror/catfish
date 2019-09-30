@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-05 20:20-0500\n"
+"POT-Creation-Date: 2019-09-13 05:13-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>, 2019\n"
 "Language-Team: Malay (https://www.transifex.com/xfce/teams/16840/ms/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:666
+#: ../catfish/CatfishWindow.py:718
 msgid "Catfish File Search"
 msgstr "Gelintat Fail Catfish"
 
@@ -43,6 +43,84 @@ msgstr "fail;cari;kenalpasti;carian;gelintar;"
 #: ../data/ui/AboutCatfishDialog.ui.h:1
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish ialah alat penggelintaran yang serba boleh."
+
+#: ../data/ui/CatfishPreferences.ui.h:1
+msgid "Catfish Preferences"
+msgstr "Keutamaan Catfish"
+
+#: ../data/ui/CatfishPreferences.ui.h:2
+msgid "_Close"
+msgstr "_Tutup"
+
+#: ../data/ui/CatfishPreferences.ui.h:3
+msgid "Classic (_Titlebar)"
+msgstr "Klasik (Palang _Tajuk)"
+
+#: ../data/ui/CatfishPreferences.ui.h:4
+msgid "_Modern (CSD)"
+msgstr "_Modern (CSD)"
+
+#: ../data/ui/CatfishPreferences.ui.h:5
+msgid "Your new window layout will be applied after restarting Catifish."
+msgstr ""
+"Bentangan tetingkap baharu anda akan diterap selepas memulakan semula "
+"Catfish."
+
+#: ../data/ui/CatfishPreferences.ui.h:6
+msgid "Window Layout"
+msgstr "Bentangan Tetingkap"
+
+#: ../data/ui/CatfishPreferences.ui.h:7
+msgid "Show _hidden files in the results"
+msgstr "Tunjuk fail-fail _tersembunyi dalam keputusan"
+
+#: ../data/ui/CatfishPreferences.ui.h:8
+msgid "Show filter _sidebar"
+msgstr "Tunjuk palang _sisi penapis"
+
+#: ../data/ui/CatfishPreferences.ui.h:9
+msgid "Display Options"
+msgstr "Pilihan Paparan"
+
+#: ../data/ui/CatfishPreferences.ui.h:10
+msgid "_Appearance"
+msgstr "Penampi_lan"
+
+#: ../data/ui/CatfishPreferences.ui.h:11
+msgid "Path"
+msgstr "Laluan"
+
+#: ../data/ui/CatfishPreferences.ui.h:12
+msgid "Add Directory..."
+msgstr "Tambah Direktori..."
+
+#: ../data/ui/CatfishPreferences.ui.h:13
+msgid "_Add"
+msgstr "T_ambah"
+
+#: ../data/ui/CatfishPreferences.ui.h:14
+msgid "Remove Directory"
+msgstr "Buang Direktori"
+
+#: ../data/ui/CatfishPreferences.ui.h:15
+msgid "_Remove"
+msgstr "_Buang"
+
+#: ../data/ui/CatfishPreferences.ui.h:16
+msgid "Exclude Directories"
+msgstr "Asingkan Direktori"
+
+#: ../data/ui/CatfishPreferences.ui.h:17
+msgid "Close the search _window after opening a file"
+msgstr "Tutup tet_ingkap gelintar selepas membuka satu fail"
+
+#: ../data/ui/CatfishPreferences.ui.h:18
+msgid "Miscellaneous"
+msgstr "Pelbagai"
+
+#: ../data/ui/CatfishPreferences.ui.h:19
+msgid "A_dvanced"
+msgstr "_Lanjutan"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
@@ -128,7 +206,7 @@ msgstr "<b>Tarikh Mula</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>Tarikh Tamat</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:217
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:224
 msgid "Catfish"
 msgstr "Catfish"
 
@@ -145,92 +223,79 @@ msgstr ""
 msgid "File Type"
 msgstr "Jenis Fail"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1133
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1277
 msgid "Modified"
 msgstr "Diubahsuai"
 
-#: ../data/ui/CatfishWindow.ui.h:29
-msgctxt ""
-"Full text: Enter your query above to find your files or click the [icon] "
-"icon for more options."
-msgid "Enter your query above to find your files"
-msgstr "Masukkan pertanyaan anda di atas untuk mencari fail anda"
+#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1727
+msgid "Results will be displayed as soon as they are found."
+msgstr "Keputusan akan dipaparkan sebaik sahaja iad itemui"
 
 #: ../data/ui/CatfishWindow.ui.h:30
-msgctxt ""
-"Full text: Enter your query above to find your files or click the [icon] "
-"icon for more options."
-msgid "or click the "
-msgstr "atau klik"
-
-#: ../data/ui/CatfishWindow.ui.h:31
-msgctxt ""
-"Full text: Enter your query above to find your files or click the [icon] "
-"icon for more options."
-msgid " icon for more options."
-msgstr "ikon untuk lebih banyak pilihan."
-
-#: ../data/ui/CatfishWindow.ui.h:32
 msgid "Select a Directory"
 msgstr "Pilih satu Direktori"
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "Search for files"
 msgstr "Gelintar fail"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:32
 msgid "Compact List"
 msgstr "Senarai Padat"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Thumbnails"
 msgstr "Lakaran Kenit"
 
+#: ../data/ui/CatfishWindow.ui.h:34
+msgid "Show _sidebar"
+msgstr "Tunjuk palang _sisi"
+
+#: ../data/ui/CatfishWindow.ui.h:35
+msgid "Show _hidden files"
+msgstr "Tunjuk fail ter_sembunyi"
+
 #: ../data/ui/CatfishWindow.ui.h:36
-msgid "Show _Hidden Files"
-msgstr "Tunjuk Fail T_ersembunyi"
+msgid "Search file _contents"
+msgstr "Gelintar _kandungan fail"
 
 #: ../data/ui/CatfishWindow.ui.h:37
-msgid "Search File _Contents"
-msgstr "Gelintar _Kandungan Fail"
+msgid "_Match results exactly"
+msgstr "_Padankan keputusan dengan tepat"
 
 #: ../data/ui/CatfishWindow.ui.h:38
-msgid "_Exact Match"
-msgstr "Padanan _Tepat"
+msgid "_Refresh search index..."
+msgstr "_Segar semula indeks gelintar..."
 
 #: ../data/ui/CatfishWindow.ui.h:39
-msgid "Show _Sidebar"
-msgstr "Tunjuk Palang _Sisi"
+msgid "_Preferences"
+msgstr "_Keutamaan"
 
 #: ../data/ui/CatfishWindow.ui.h:40
-msgid "_Update Search Index..."
-msgstr "_Kemaskini Indeks Gelintar..."
-
-#: ../data/ui/CatfishWindow.ui.h:41
 msgid "_About"
 msgstr "Perih_al"
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
 msgstr "Kemaskini Pangkalan Data Gelintar"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "Unlock"
 msgstr "Buka"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "<b>Database:</b>"
 msgstr "<b>Pangkalan Data</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "<b>Updated:</b>"
 msgstr "<b>Dikemaskini:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Kemaskini Pangkalan Data Gelintar</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -238,44 +303,44 @@ msgstr ""
 "Untuk menikmati keputusan gelintar lebih pantas, pangkalan data gelintar\n"
 "perlu disegar semula. Tindakan ini memerlukan kelayakan pentadbiran."
 
-#: ../catfish/__init__.py:37
+#: ../catfish/__init__.py:38
 msgid "Usage: %prog [options] path query"
 msgstr "Penggunaan: %prog [options] path query"
 
-#: ../catfish/__init__.py:42
+#: ../catfish/__init__.py:43
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr "Tunjuk mesej nyahpepijat (-vv juga dapat menyahpepijat catfish_lib)"
 
-#: ../catfish/__init__.py:45
+#: ../catfish/__init__.py:46
 msgid "Use large icons"
 msgstr "Guna ikon besar"
 
-#: ../catfish/__init__.py:47
+#: ../catfish/__init__.py:48
 msgid "Use thumbnails"
 msgstr "Guna lakaran kenit"
 
-#: ../catfish/__init__.py:49
+#: ../catfish/__init__.py:50
 msgid "Display time in ISO format"
 msgstr "Papar waktu dalam format ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
-#: ../catfish/__init__.py:51
+#: ../catfish/__init__.py:52
 msgid "Set the default search path"
 msgstr "Tetapkan laluan gelintar lalai"
 
-#: ../catfish/__init__.py:53
+#: ../catfish/__init__.py:54
 msgid "Perform exact match"
 msgstr "Jalankan padanan tepat"
 
-#: ../catfish/__init__.py:55
+#: ../catfish/__init__.py:56
 msgid "Include hidden files"
 msgstr "Sertakan fail tersembunyi"
 
-#: ../catfish/__init__.py:57
+#: ../catfish/__init__.py:58
 msgid "Perform fulltext search"
 msgstr "Jalankan gelintar teks penuh"
 
-#: ../catfish/__init__.py:59
+#: ../catfish/__init__.py:60
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
@@ -283,47 +348,66 @@ msgstr ""
 "Jika laluan dan pertanyaan disediakan, mula menggelintar ketika aplikasi "
 "dipaparkan."
 
+#: ../catfish/__init__.py:77
+#, python-brace-format
+msgid "Try GDK_BACKEND=x11 {0}\n"
+msgstr "Cuba GDK_BACKEND=x11 {0}\n"
+
+#: ../catfish/AboutCatfishDialog.py:37
+msgid "translator-credits"
+msgstr "Abuyop <abuyop@gmail.com>"
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:84
+#: ../catfish/CatfishWindow.py:100
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (pengekodan tidak sah)"
 
-#: ../catfish/CatfishWindow.py:238
+#: ../catfish/CatfishWindow.py:256
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
-#: ../catfish/CatfishWindow.py:242
+#: ../catfish/CatfishWindow.py:260
 msgid "Never"
 msgstr "Tidak sesekali"
 
-#: ../catfish/CatfishWindow.py:634
+#: ../catfish/CatfishWindow.py:339
+#, python-format
+msgid ""
+"Enter your query above to find your files\n"
+"or click the %s icon for more options."
+msgstr ""
+"Masukkan pertanyaan anda di atas untuk\n"
+"mencari fail anda atau klik ikon %s untuk\n"
+"lihat lebih banyak pilihan."
+
+#: ../catfish/CatfishWindow.py:686
 msgid "An error occurred while updating the database."
 msgstr "Satu ralat berlaku ketika mengemaskini pangkalan data."
 
-#: ../catfish/CatfishWindow.py:636
+#: ../catfish/CatfishWindow.py:688
 msgid "Authentication failed."
 msgstr "Pengesahihan gagal."
 
-#: ../catfish/CatfishWindow.py:642
+#: ../catfish/CatfishWindow.py:694
 msgid "Authentication cancelled."
 msgstr "Pengesahihan dibatalkan."
 
-#: ../catfish/CatfishWindow.py:648
+#: ../catfish/CatfishWindow.py:700
 msgid "Search database updated successfully."
 msgstr "Pangkalan data gelintar berjaya dikemaskinikan."
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:723
+#: ../catfish/CatfishWindow.py:775
 msgid "Updating..."
 msgstr "Mengemaskini..."
 
-#: ../catfish/CatfishWindow.py:757
+#: ../catfish/CatfishWindow.py:809
 msgid "Stop Search"
 msgstr "Henti Gelintar"
 
-#: ../catfish/CatfishWindow.py:758
+#: ../catfish/CatfishWindow.py:810
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -331,31 +415,31 @@ msgstr ""
 "Gelintar masih berlangsung...\n"
 "Ketik butang batal atau kekunci Escape untuk henti."
 
-#: ../catfish/CatfishWindow.py:767
+#: ../catfish/CatfishWindow.py:819
 msgid "Begin Search"
 msgstr "Mula Gelintar"
 
-#: ../catfish/CatfishWindow.py:959
+#: ../catfish/CatfishWindow.py:1097
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" tidak dapat dibuka."
 
-#: ../catfish/CatfishWindow.py:1005
+#: ../catfish/CatfishWindow.py:1149
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" tidak dapat disimpan."
 
-#: ../catfish/CatfishWindow.py:1022
+#: ../catfish/CatfishWindow.py:1166
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" tidak dapat dipadamkan."
 
-#: ../catfish/CatfishWindow.py:1062
+#: ../catfish/CatfishWindow.py:1206
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Simpan \"%s\" sebagai…"
 
-#: ../catfish/CatfishWindow.py:1097
+#: ../catfish/CatfishWindow.py:1241
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -364,7 +448,7 @@ msgstr ""
 "Anda pasti mahu memadam\n"
 "\"%s\" secara kekal?"
 
-#: ../catfish/CatfishWindow.py:1101
+#: ../catfish/CatfishWindow.py:1245
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -373,43 +457,43 @@ msgstr ""
 "Anda pasti mahu memadam\n"
 "%i fail terpilih secara kekal?"
 
-#: ../catfish/CatfishWindow.py:1104
+#: ../catfish/CatfishWindow.py:1248
 msgid "If you delete a file, it is permanently lost."
 msgstr "Jika anda memadam sebuah fail, ia akan kekal hilang."
 
-#: ../catfish/CatfishWindow.py:1127
+#: ../catfish/CatfishWindow.py:1271
 msgid "Filename"
 msgstr "Nama Fail"
 
-#: ../catfish/CatfishWindow.py:1129
+#: ../catfish/CatfishWindow.py:1273
 msgid "Size"
 msgstr "Saiz"
 
-#: ../catfish/CatfishWindow.py:1131
+#: ../catfish/CatfishWindow.py:1275
 msgid "Location"
 msgstr "Lokasi"
 
-#: ../catfish/CatfishWindow.py:1143
+#: ../catfish/CatfishWindow.py:1287
 msgid "Preview"
 msgstr "Pratonton"
 
-#: ../catfish/CatfishWindow.py:1151
+#: ../catfish/CatfishWindow.py:1295
 msgid "Details"
 msgstr "Perincian"
 
-#: ../catfish/CatfishWindow.py:1374
+#: ../catfish/CatfishWindow.py:1514
 msgid "Today"
 msgstr "Hari Ini"
 
-#: ../catfish/CatfishWindow.py:1376
+#: ../catfish/CatfishWindow.py:1516
 msgid "Yesterday"
 msgstr "Semalam"
 
-#: ../catfish/CatfishWindow.py:1457
+#: ../catfish/CatfishWindow.py:1597
 msgid "No files found."
 msgstr "Tiada fail ditemui."
 
-#: ../catfish/CatfishWindow.py:1459
+#: ../catfish/CatfishWindow.py:1599
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -417,33 +501,29 @@ msgstr ""
 "Cuba jadikan penggelintaran anda kurang\n"
 "spesifik atau cuba pada direktori lain."
 
-#: ../catfish/CatfishWindow.py:1465
+#: ../catfish/CatfishWindow.py:1606
 msgid "1 file found."
 msgstr "1 fail ditemui."
 
-#: ../catfish/CatfishWindow.py:1467
+#: ../catfish/CatfishWindow.py:1608
 #, python-format
 msgid "%i files found."
 msgstr "%i fail ditemui."
 
-#: ../catfish/CatfishWindow.py:1473
+#: ../catfish/CatfishWindow.py:1614
 msgid "bytes"
 msgstr "bait"
 
-#: ../catfish/CatfishWindow.py:1581 ../catfish/CatfishWindow.py:1590
+#: ../catfish/CatfishWindow.py:1725 ../catfish/CatfishWindow.py:1735
 msgid "Searching..."
 msgstr "Menggelintar..."
 
-#: ../catfish/CatfishWindow.py:1583
-msgid "Results will be displayed as soon as they are found."
-msgstr "Keputusan akan dipaparkan sebaik sahaja iad itemui"
-
-#: ../catfish/CatfishWindow.py:1588
+#: ../catfish/CatfishWindow.py:1733
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Menggelintar untuk \"%s\""
 
-#: ../catfish/CatfishWindow.py:1678
+#: ../catfish/CatfishWindow.py:1822
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Keputusan gelintar bagi \"%s\""
@@ -519,6 +599,30 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release includes many appearance improvements, introduces a new "
+"preferences dialog, and improves search results and performance."
+msgstr ""
+"Keluaran ini melibatkan banyak penambahbaikan penampilan, memperkenalkan "
+"dialog keutamaan baharu, dan menambahbaik keputusan gelintar dan prestasi."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
+"This release features performance improvements by excluding uncommon search "
+"directories."
+msgstr ""
+"Keluaran ini memfiturkan penambahbaikan prestasi dengan mengasingkan "
+"direktori-direktori gelintar yang kurang digunakan."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
+msgid ""
+"This release features better desktop integration, support for OpenBSD and "
+"Wayland, and improved translation support."
+msgstr ""
+"Keluaran ini memfiturkan penyepaduan desktop yang lebih baik, sokongan untuk"
+" OpenBSD dan Wayland, dan sokongan terjemahan yang ditambah baik."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
+msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
 "processed. Files can be dragged into other applications. Thumbnails are only"
@@ -529,7 +633,7 @@ msgstr ""
 "berpetikan kini boleh memproses dengan betul. Fail-fail boleh diseret ke "
 "dalam aplikasi lain. Lakaran kenit hanya dijana bila dipinta oleh pengguna."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -541,11 +645,11 @@ msgstr ""
 "kini akan dipadankan dengan lain-lain aplikasi. Item dipaparkan di bahagian "
 "bawah tetingkap keputusan dan kini boleh dicapai dengan semua tema desktop."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid "This is a minor translations-only release."
 msgstr "Ini adalah keluaran terjemahan kecil-sahaja."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -553,7 +657,7 @@ msgstr ""
 "Keluar ini memfiturkan beberapa penambahbaikan prestasi dan banyak kemaskini"
 " terjemahan."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -561,7 +665,7 @@ msgstr ""
 "Keluaran ini kini memaparkan semua setem masa fail berdasarkan zon waktu "
 "selain dari Waktu Universal Selaras (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -574,7 +678,7 @@ msgstr ""
 " boleh digunakan berdasarkan zon waktu berbanding Waktu Universal Terselaras"
 " (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -588,13 +692,13 @@ msgstr ""
 "termasuklah palang pengepala dan widget timbul pilihan. Pengendalian kata "
 "laluan telah ditambah baik dengan penyepaduan PolicyKit jika tersedia."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Keluaran ini membaiki dua pepijat baharu dan sertakan terjemahan yang "
 "dikemakinikan."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -602,7 +706,7 @@ msgstr ""
 "Keluaran ini membaiki regresi yang mana aplikasi tidak berupaya dimulakan "
 "pada beberapa sistem."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -612,7 +716,7 @@ msgstr ""
 "disokong. Satu Palang Maklumat kini dipaparkan bila pangkalan data gelintar "
 "telah lapuk, dan dialog digunakan untuk mengemaskini telah ditambah baik."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -620,7 +724,7 @@ msgstr ""
 "Keluaran ini membaiki dua isu yang lokasi tidak dilakukan dengan betul dan "
 "juga menambahbaik pengendalian ikon simbolik yang hilang."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -630,7 +734,7 @@ msgstr ""
 "membuang kod yang tidak diperlukan, dan membaiki isu-isu dengan pemilihan "
 "senarai dan item."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -638,7 +742,7 @@ msgstr ""
 "Keluaran ini membaiki isu keselamatan yang mungkin berlaku ketika permulaan "
 "program dan juga membaiki regresi ketika memilih item berbilang."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
