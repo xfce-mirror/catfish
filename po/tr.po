@@ -7,17 +7,17 @@
 # Xfce Bot <transifex@xfce.org>, 2018
 # Necdet Yücel <necdetyucel@gmail.com>, 2019
 # Nick Schermer <nick@xfce.org>, 2019
-# Demiray Muhterem <mdemiray@msn.com>, 2019
 # Serdar Sağlam <teknomobil@msn.com>, 2019
+# Demiray Muhterem <mdemiray@msn.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-25 11:51-0400\n"
+"POT-Creation-Date: 2019-09-13 05:13-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Serdar Sağlam <teknomobil@msn.com>, 2019\n"
+"Last-Translator: Demiray Muhterem <mdemiray@msn.com>, 2019\n"
 "Language-Team: Turkish (https://www.transifex.com/xfce/teams/16840/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -604,13 +604,21 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release includes many appearance improvements, introduces a new "
+"preferences dialog, and improves search results and performance."
+msgstr ""
+"Bu sürüm birçok görünüm iyileştirmesi içeriyor, yeni bir tercihler iletişim "
+"kutusu getiriyor ve arama sonuçlarını ve performansını geliştiriyor."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
 "Bu sürüm, nadir bulunan arama dizinlerini hariç tutarak performans "
 "iyileştirmeleri sunar."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
@@ -618,7 +626,7 @@ msgstr ""
 "Bu sürüm daha iyi masaüstü entegrasyonu, OpenBSD ve Wayland desteği ve "
 "geliştirilmiş çeviri desteği sunuyor."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -631,7 +639,7 @@ msgstr ""
 "dosyalar başka bir dizine sürüklenip taşınabilir. Küçük resimler, yalnızca "
 "kullanıcı tarafından istendiğinde oluşturulur."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -643,11 +651,11 @@ msgstr ""
 "uygulamalarla eşleşecek. Sonuç penceresinin altında görüntülenen öğeler "
 "artık tüm masaüstü temalarıyla erişilebilir durumdadır."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid "This is a minor translations-only release."
 msgstr "Bu sürüm sadece birkaç çeviriden ibarettir."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -655,7 +663,7 @@ msgstr ""
 "Bu sürüm birçok performans iyileştirmesi ve çok sayıda çeviri "
 "güncelleştirmesine sahiptir."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -663,7 +671,7 @@ msgstr ""
 "Bu sürüm şimdi Evrensel Eşgüdümlı Zaman (UTC) yerine saat dilimine göre tüm "
 "dosya zaman damgalarını görüntüler."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -675,7 +683,7 @@ msgstr ""
 "işlevselliği geri yüklendi. Tarih aralığı filtreleri artık Evrensel "
 "Eşgüdümlı Saat (UTC) yerine saat dilimine göre uygulanır."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -689,18 +697,18 @@ msgstr ""
 "kullanarak iş akışı geliştirildi. PasswordKit'in mümkün olduğunda "
 "entegrasyonu ile şifre kullanımı geliştirildi."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr "Bu sürüm, iki yeni hatayı düzeltir ve güncellenmiş çevirileri içerir."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
 "Bu sürüm, uygulamanın bazı sistemlerde başlatılamadığı gerilemeyi düzeltir."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -711,7 +719,7 @@ msgstr ""
 "güncellemek için kullanılan diyaloglar geliştirildiğinde bir BilgiÇubuğu "
 "görüntülenmekte."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -719,7 +727,7 @@ msgstr ""
 "Bu sürüm, locate'ın düzgün yürütülmeyeceği ve eksik simgesel simgelerin "
 "işlenmesini geliştirdiği iki sorunu giderir."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -729,7 +737,7 @@ msgstr ""
 "kullanılmayan kodları temizledi ayrıca liste ve madde seçimi ile ilgili "
 "potansiyel sabit sorunlar düzeltildi."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -737,7 +745,7 @@ msgstr ""
 "Bu sürüm, programın başlatılmasıyla ilgili olası bir güvenlik sorununu "
 "düzeltti ve birden çok öğe seçerek geri dönüşü düzeltti."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
