@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-25 11:51-0400\n"
+"POT-Creation-Date: 2019-09-13 05:13-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/xfce/teams/16840/ko/)\n"
@@ -589,17 +589,23 @@ msgstr "가용 조건과 조건으로 걸러낸 검색 결과를 나타내는 �
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release includes many appearance improvements, introduces a new "
+"preferences dialog, and improves search results and performance."
+msgstr "이 릴리스에서는 다양한 모양새 개선을 이루었습니다. 새 대화상자 속성을 도입하였고, 검색 결과 표시와 성능을 개선했습니다."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr "이번 릴리스에서는 흔하지 않은 검색 디렉터리를 제외하여 검색 성능을 개선하는 기능을 갖추었습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
 msgstr "이번 릴리스에서는 OpenBSD, 웨일랜드를 지원하여 더 나은 데스크톱 통합 기능을 갖추었으며, 번역을 개선했습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -609,7 +615,7 @@ msgstr ""
 "이 릴리스에서는 성능을 개선했고 데스크톱에 좀 더 어우러지도록 했으며, 오랫동안 남아있던 많은 버그를 수정했습니다. 따옴표로 감싼 검색 "
 "문자열을 이제 제대로 처리합니다. 파일을 다른 프로그램으로 끌어다 넣을 수 있습니다. 미리 보기 그림은 사용자가 요청할 때만 만듭니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -619,23 +625,23 @@ msgstr ""
 "이 릴리스에서는 몇가지 미리 보기 그림 처리 기능을 개선하고 다양한 문제를 수정했습니다. 미리 보기 아이콘을 개선했으며 다른 프로그램과 "
 "어우러집니다. 결과 화면 하단에 나타나는 항목은 모든 데스크톱 테마에서 접근할 수 있습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid "This is a minor translations-only release."
 msgstr "이 출시판은 사소한 번역을 추가했습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr "이 릴리스에서는 다양한 부분에서 성능 개선을 진행했으며, 수많은 언어로의 번역 업데이트를 실었습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr "이 릴리즈는 UTC(세계협정표준시)에 따른 모든 타임 스탬프를 표시합니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -645,7 +651,7 @@ msgstr ""
 "이 릴리즈는 결과 창에 관련된 몇몇 버그가 수정되었습니다. 파일을 삭제하면 목록에서 다시 한 번 제거됩니다. 중간과 오른쪽 클릭 기능은 "
 "복구되었습니다. 날짜 범위 필터는 이제 UTC(세계협정표준시)에 따라 적용됩니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -657,17 +663,17 @@ msgstr ""
 "toolkit의 최신 기능을 사용하며, 추가적으로 더 나은 위젯과 헤더바를 추가 하고 있습니다. 암호 처리 기능은 PolicyKit "
 "통합으로 개선했습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr "이 릴리즈는 2가지의 새로운 버그를 수정 하고 번역 업데이트를 포함합니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr "이 릴리즈는 일부 시스템에서 실행 불가능한 문제를 해결했습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -676,13 +682,13 @@ msgstr ""
 "이 릴리즈는 다중 검색이 불가능 했던 점이 수정되었습니다. 정보 표시줄에 검색 데이터베이스가 오래된 경우 표시되며, 데이터베이스 "
 "업데이트를 하기위한 대화상자가 향상되었습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr "이 릴리즈는 locate가 제대로 실행되지 않고 누락 된 기호 아이콘의 처리를 향상시키는 두 가지 문제를 수정합니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -691,13 +697,13 @@ msgstr ""
 "이번 안정적인 릴리즈는 암호 대화상자의 신뢰성을 향상시키고, 사용되지 않는 코드를 청소하였으며, 잠재적인 목록과 요소의 선택 문제를 "
 "수정하였습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr "이 릴리즈는 프로그램이 시작될 때 잠재적인 보안 문제를 해결하였고 여러개를 선택 할 때의 회귀문제를 해결 하였습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
