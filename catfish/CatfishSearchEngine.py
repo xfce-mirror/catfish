@@ -307,8 +307,9 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         notdotlinks = []
         for path in dirs:
             path = os.path.join(root, path)
-            if not path.endswith("/"):
-                path = path + "/"
+            # Remove trailing slashes to ensure that calling os.path.basename()
+            # will not cut the path to an empty string
+            path = os.path.normpath(path)
             if path in exclude_list:
                 continue
             if path in xdg_list:
@@ -330,15 +331,26 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         return dirlist
 
     def get_root_list(self, path, xdg_list, exclude_list):
-        # Sort the roots alphabetically
-        roots = [d for d in os.listdir(path)
-                 if os.path.isdir(os.path.join(path, d)) and
-                 os.path.join(path, d) not in exclude_list]
-        roots = sorted(roots, key=lambda s: s.lower())
+        root_dirs = []
+        root_files = []
+        for d in os.listdir(path):
+            if os.path.join(path, d) not in exclude_list:
+                if os.path.isdir(os.path.join(path, d)):
+                    root_dirs.append(d)
+                else:
+                    root_files.append(os.path.join(path, d))
+
         results = []
-        for dirpath in self.get_dir_list(path, roots, xdg_list, exclude_list):
+        for dirpath in self.get_dir_list(path, root_dirs, xdg_list, exclude_list):
             results.append(os.path.join(path, dirpath))
-        return results
+
+        # Sort the root files alphabetically
+        # root dirs were already sorted in get_dir_list()
+        root_files = sorted(root_files, key=lambda s: s.lower())
+
+        # Return files first to be displayed right away
+        # and then priortized dir paths that will be traversed
+        return root_files + results
 
     def run(self, keywords, path, regex=False, exclude_paths=[]):
         """Run the search method using keywords and path.  regex is not used
@@ -373,6 +385,19 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         ]
 
         for path in self.get_root_list(path, xdgdirlist, exclude):
+
+            # Check if we've already processed symbolic paths
+            if os.path.islink(path):
+                realpath = os.path.realpath(path)
+                if realpath in processed_links:
+                    yield True
+                    continue
+                processed_links.append(realpath)
+
+            # Check paths in the first level of the selected directory
+            if any(keyword in path.lower() for keyword in keywords):
+                    yield path
+
             for root, dirs, files in os.walk(top=path, topdown=True,
                                              onerror=None,
                                              followlinks=True):
@@ -393,6 +418,8 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
 
                 paths = dirs + files
                 paths.sort()
+
+                # Check paths in the second and deeper levels of the selected directory
                 for path in paths:
                     if any(keyword in path.lower() for keyword in keywords):
                         yield os.path.join(root, path)
