@@ -360,12 +360,16 @@ class CatfishWindow(Window):
 
     def get_screen_size(self):
         s = Gdk.Screen.get_default()
+        if s is None:
+            return (800, 600)
         return (s.get_width(), s.get_height())
 
     def get_display_size(self):
         d = Gdk.Display.get_default()
-        w = Gdk.get_default_root_window()
+        if d is None:
+            return (800, 600)
 
+        w = Gdk.get_default_root_window()
         m = d.get_monitor_at_window(w)
         monitor = m.get_geometry()
         return (monitor.width, monitor.height)

@@ -202,8 +202,12 @@ def check_x11_session():
     backend_env = GLib.environ_getenv(GLib.get_environ(), 'GDK_BACKEND')
     if backend_env is None:
         # We look for default display
-        display = Gdk.Display.get_default().get_name()
-        if display.startswith('wayland'):
+        display = Gdk.Display.get_default()
+        if display is None:
+            return True
+
+        name = display.get_name()
+        if name.startswith('wayland'):
             return False
         else:
             return True
