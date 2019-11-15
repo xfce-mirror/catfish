@@ -86,6 +86,8 @@ class CatfishSettings:
         if key in self.settings:
             if key == "exclude-paths":
                 value = ";".join(value)
+            if key == 'use-headerbar':
+                self.headerbar_configured = True
             self.settings[key] = value
         else:
             pass
