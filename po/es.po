@@ -4,11 +4,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Xfce Bot <transifex@xfce.org>, 2018
 # Adolfo Jayme-Barrientos, 2018
+# Xfce Bot <transifex@xfce.org>, 2018
 # Nick Schermer <nick@xfce.org>, 2019
 # Jaime Marquínez Ferrándiz, 2019
-# Manolo Díaz <diaz.manolo@gmail.com>, 2019
+# 629cf3e396111bb8c5fb6664e2dbc91d, 2019
 # Casper casper, 2019
 # Toni Estévez <toni.estevez@gmail.com>, 2019
 # 
@@ -77,7 +77,7 @@ msgstr "Diseño de la ventana"
 
 #: ../data/ui/CatfishPreferences.ui.h:7
 msgid "Show _hidden files in the results"
-msgstr "Mostrar _archivos ocultos en los resultados"
+msgstr "Mostrar los _archivos ocultos en los resultados"
 
 #: ../data/ui/CatfishPreferences.ui.h:8
 msgid "Show filter _sidebar"
@@ -85,7 +85,7 @@ msgstr "Mostrar la _barra lateral de filtro"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Display Options"
-msgstr "Opciones de pantalla"
+msgstr "Opciones de visualización"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "_Appearance"
@@ -135,7 +135,7 @@ msgstr "_Abrir"
 #. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
-msgstr "_Mostrar en el administrador de archivos"
+msgstr "_Mostrar en el gestor de archivos"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -258,7 +258,7 @@ msgstr "Mostrar la _barra lateral"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "Show _hidden files"
-msgstr "Mostrar archivos _ocultos"
+msgstr "Mostrar los archivos _ocultos"
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Search file _contents"
@@ -270,7 +270,7 @@ msgstr "Coincidencia _exacta"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Refresh search index..."
-msgstr "_Actualizar índice de búsqueda..."
+msgstr "_Actualizar el índice de búsqueda..."
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "_Preferences"
@@ -331,7 +331,7 @@ msgstr "Mostrar la hora en formato ISO"
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:52
 msgid "Set the default search path"
-msgstr "Establecer la ruta de búsquedas predeterminada"
+msgstr "Configurar la ruta de búsqueda predeterminada"
 
 #: ../catfish/__init__.py:54
 msgid "Perform exact match"
@@ -386,7 +386,7 @@ msgid ""
 "or click the %s icon for more options."
 msgstr ""
 "Escriba una consulta en el cuadro de arriba para buscar archivos\n"
-"o haga clic en el icono %s icono para ver más opciones."
+"o haga clic en el icono %s para ver más opciones."
 
 #: ../catfish/CatfishWindow.py:686
 msgid "An error occurred while updating the database."
@@ -586,10 +586,10 @@ msgid ""
 msgstr ""
 "Catfish es una utilidad de búsqueda de archivos pequeña, rápida y potente. "
 "Con una interfaz mínima que destaca los resultados, ayuda al usuario a "
-"encontrar los archivos que necesita sin recurrir al administrador de "
-"archivos. Con unos filtros potentes, como el de fecha de modificación, el de"
-" tipo de archivo y el de contenido del archivo, el usuario ya no dependerá "
-"del administrador de archivos ni de sus habilidades de organización."
+"encontrar los archivos que necesita sin recurrir al gestor de archivos. Con "
+"unos filtros potentes, como el de fecha de modificación, el de tipo de "
+"archivo y el de contenido del archivo, el usuario ya no dependerá del gestor"
+" de archivos ni de sus habilidades de organización."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "The main Catfish window displaying image search results"
@@ -611,8 +611,8 @@ msgid ""
 "preferences dialog, and improves search results and performance."
 msgstr ""
 "Esta versión incluye muchas mejoras en la apariencia, incorpora un nuevo "
-"cuadro de diálogo de preferencias y mejora los resultados y el rendimiento "
-"de la búsqueda."
+"diálogo de preferencias y mejora los resultados y el rendimiento de la "
+"búsqueda."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
@@ -641,7 +641,7 @@ msgstr ""
 "Esta versión presenta un rendimiento mejorado, una mejor integración con el "
 "escritorio y una serie de errores corregidos. Las cadenas de búsqueda entre "
 "comillas ahora se procesan correctamente. Los archivos pueden ser "
-"arrastrados a otras aplicaciones. Las miniaturas solo se generan cuando las "
+"arrastrados a otras aplicaciones. Las miniaturas solo se generan cuando lo "
 "solicita el usuario."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
