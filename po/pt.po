@@ -358,7 +358,9 @@ msgstr "Experimentar GDK_BACKEND=x11 {0}\n"
 
 #: ../catfish/AboutCatfishDialog.py:37
 msgid "translator-credits"
-msgstr "Nuno Miguel <nunomgue@gmail.com>"
+msgstr ""
+"Hugo Carvalho <hugokarvalho@gmail.com>\n"
+"Nuno Miguel <nunomgue@gmail.com>"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
