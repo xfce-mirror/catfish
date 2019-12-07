@@ -330,28 +330,6 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         dirlist = xdgdirs + notdotdirs + notdotlinks + dotdirs + dotlinks
         return dirlist
 
-    def get_root_list(self, path, xdg_list, exclude_list):
-        root_dirs = []
-        root_files = []
-        for d in os.listdir(path):
-            if os.path.join(path, d) not in exclude_list:
-                if os.path.isdir(os.path.join(path, d)):
-                    root_dirs.append(d)
-                else:
-                    root_files.append(os.path.join(path, d))
-
-        results = []
-        for dirpath in self.get_dir_list(path, root_dirs, xdg_list, exclude_list):
-            results.append(os.path.join(path, dirpath))
-
-        # Sort the root files alphabetically
-        # root dirs were already sorted in get_dir_list()
-        root_files = sorted(root_files, key=lambda s: s.lower())
-
-        # Return files first to be displayed right away
-        # and then priortized dir paths that will be traversed
-        return root_files + results
-
     def run(self, keywords, path, regex=False, exclude_paths=[]):
         """Run the search method using keywords and path.  regex is not used
         by this search method.
@@ -384,46 +362,31 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
             GLib.get_user_special_dir(GLib.USER_DIRECTORY_VIDEOS),
         ]
 
-        for path in self.get_root_list(path, xdgdirlist, exclude):
+        for root, dirs, files in os.walk(top=path, topdown=True,
+                                         onerror=None,
+                                         followlinks=True):
+            # Bail once the search has been canceled
+            if not self.running:
+                break
 
             # Check if we've already processed symbolic paths
-            if os.path.islink(path):
-                realpath = os.path.realpath(path)
+            if os.path.islink(root):
+                realpath = os.path.realpath(root)
                 if realpath in processed_links:
                     yield True
                     continue
                 processed_links.append(realpath)
 
-            # Check paths in the first level of the selected directory
-            if any(keyword in path.lower() for keyword in keywords):
-                    yield path
+            # Prioritize and drop excluded paths
+            dirs[:] = self.get_dir_list(root, dirs, xdgdirlist, exclude)
 
-            for root, dirs, files in os.walk(top=path, topdown=True,
-                                             onerror=None,
-                                             followlinks=True):
-                # Bail once the search has been canceled
-                if not self.running:
-                    break
+            paths = dirs + files
+            paths.sort()
 
-                # Check if we've already processed symbolic paths
-                if os.path.islink(root):
-                    realpath = os.path.realpath(root)
-                    if realpath in processed_links:
-                        yield True
-                        continue
-                    processed_links.append(realpath)
-
-                # Prioritize and drop excluded paths
-                dirs[:] = self.get_dir_list(root, dirs, xdgdirlist, exclude)
-
-                paths = dirs + files
-                paths.sort()
-
-                # Check paths in the second and deeper levels of the selected directory
-                for path in paths:
-                    if any(keyword in path.lower() for keyword in keywords):
-                        yield os.path.join(root, path)
-                yield True
+            # Check paths in the second and deeper levels of the selected directory
+            for path in paths:
+                if any(keyword in path.lower() for keyword in keywords):
+                    yield os.path.join(root, path)
             yield True
         yield False
 
