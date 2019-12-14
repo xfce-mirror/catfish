@@ -296,7 +296,7 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         """Initialize the 'walk' Search Method."""
         CatfishSearchMethod.__init__(self, "walk")
 
-    def get_dir_list(self, root, dirs, xdg_list, exclude_list):
+    def get_dir_list(self, root, dirs, xdg_list, exclude_list, processed_links):
         dirs = sorted(dirs, key=lambda s: s.lower())
 
         # Prioritize: XDG, Visible (Linked), Dotfile (Linked)
@@ -316,6 +316,11 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
                 xdgdirs.append(path)
                 continue
             islink = os.path.islink(path)
+            if islink:
+                realpath = os.path.realpath(path)
+                if realpath in processed_links:
+                    continue
+                processed_links.append(realpath)
             if os.path.basename(path).startswith("."):
                 if islink:
                     dotlinks.append(path)
@@ -378,7 +383,7 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
                 processed_links.append(realpath)
 
             # Prioritize and drop excluded paths
-            dirs[:] = self.get_dir_list(root, dirs, xdgdirlist, exclude)
+            dirs[:] = self.get_dir_list(root, dirs, xdgdirlist, exclude, processed_links)
 
             paths = dirs + files
             paths.sort()
