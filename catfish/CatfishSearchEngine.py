@@ -305,6 +305,9 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         dotlinks = []
         notdotdirs = []
         notdotlinks = []
+
+        realroot = os.path.realpath(root)
+
         for path in dirs:
             path = os.path.join(root, path)
             # Remove trailing slashes to ensure that calling os.path.basename()
@@ -319,6 +322,14 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
             if islink:
                 realpath = os.path.realpath(path)
                 if realpath in processed_links:
+                    continue
+                # Respect the user's settings
+                if realpath in exclude_list:
+                    continue
+                # Sandbox search results to the starting path, don't allow:
+                # Start: /home/username/
+                # Link: ~/.wine/dosdevices/z:/ -> /
+                if realroot.startswith(realpath):
                     continue
                 processed_links.append(realpath)
             if os.path.basename(path).startswith("."):
