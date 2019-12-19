@@ -1,3 +1,9 @@
+v1.4.11 (unreleased):
+ + Bug Fixes:
+   - Fix crashes when GdkDisplay or GdkScreen calls return None (LP: #1822914)
+   - Fix configuration of preferred window layout (Xfce #16085)
+   - Fix finding files in the target directory (Xfce #15985, #16233)
+
 v1.4.10:
  + New Features:
    - Preferences Dialog:
