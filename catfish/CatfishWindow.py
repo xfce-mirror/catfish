@@ -504,6 +504,15 @@ class CatfishWindow(Window):
 
         return False
 
+    def get_path(self, arg):
+        realpath = os.path.realpath(arg)
+        if os.path.isdir(realpath):
+            return realpath
+        realpath = os.path.realpath(os.path.expanduser(arg))
+        if os.path.isdir(realpath):
+            return realpath
+        return None
+
     def parse_path_option(self, options, args):
         # Set the selected folder path. Allow legacy --path option.
         path = None
@@ -511,23 +520,23 @@ class CatfishWindow(Window):
         # New format, first argument
         if self.options.path is None:
             if len(args) > 0:
-                if os.path.isdir(os.path.realpath(args[0])):
-                    path = args.pop(0)
+                path = self.get_path(args[0])
+                if path:
+                    args.pop(0)
 
         # Old format, --path
         else:
-            if os.path.isdir(os.path.realpath(self.options.path)):
-                path = self.options.path
+            path = self.get_path(self.options.path)
 
-        # Make sure there is a valid path.
+        # Try the user home directory
         if path is None:
-            path = os.path.expanduser("~")
-            if os.path.isdir(os.path.realpath(path)):
-                return path
-            else:
-                return "/"
-        else:
-            return path
+            path = self.get_path("~")
+
+        # Once all options are exhausted, return the root
+        if path is None:
+            path = "/"
+
+        return path
 
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
