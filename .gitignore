@@ -2,6 +2,7 @@
 build/
 __pycache__
 *~
+*.rej
 *.pyc
 MANIFEST
 dist/
