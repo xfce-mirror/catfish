@@ -577,7 +577,7 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr "Outil de recherche de fichiers polyvalent."
+msgstr "Outil de recherche de fichiers polyvalent"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:2
 msgid ""
