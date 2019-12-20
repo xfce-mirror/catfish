@@ -110,14 +110,14 @@
                                           </packing>
                                         </child>
                                         <child>
-                                          <object class="GtkLabel" id="wl_titlebar_label">
+                                          <object class="GtkRadioButton" id="wl_titlebar_visible">
+                                            <property name="label" translatable="yes">Classic (_Titlebar)</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">Classic (_Titlebar)</property>
+                                            <property name="receives_default">False</property>
+                                            <property name="halign">center</property>
                                             <property name="use_underline">True</property>
-                                            <attributes>
-                                              <attribute name="weight" value="bold"/>
-                                            </attributes>
+                                            <property name="draw_indicator">True</property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
@@ -161,14 +161,15 @@
                                           </packing>
                                         </child>
                                         <child>
-                                          <object class="GtkLabel" id="wl_headerbar_label">
+                                          <object class="GtkRadioButton" id="wl_headerbar_visible">
+                                            <property name="label" translatable="yes">_Modern (CSD)</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">_Modern (CSD)</property>
+                                            <property name="receives_default">False</property>
+                                            <property name="halign">center</property>
                                             <property name="use_underline">True</property>
-                                            <attributes>
-                                              <attribute name="weight" value="bold"/>
-                                            </attributes>
+                                            <property name="draw_indicator">True</property>
+                                            <property name="group">wl_titlebar_visible</property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
@@ -543,5 +544,11 @@
     <action-widgets>
       <action-widget response="-7">button1</action-widget>
     </action-widgets>
+  </object>
+  <object class="GtkSizeGroup" id="layout_label_sg">
+    <widgets>
+      <widget name="wl_titlebar_visible"/>
+      <widget name="wl_headerbar_visible"/>
+    </widgets>
   </object>
 </interface>

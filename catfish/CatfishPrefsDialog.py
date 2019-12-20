@@ -43,6 +43,7 @@ class CatfishPrefsDialog(PrefsDialog):
         self.settings = settings
         if self.settings.get_setting("use-headerbar"):
             self.builder.get_object("wl_headerbar").set_active(True)
+            self.builder.get_object("wl_headerbar_visible").set_active(True)
         if self.settings.get_setting("show-hidden-files"):
             self.builder.get_object("do_show_hidden").set_active(True)
         if self.settings.get_setting("show-sidebar"):
@@ -58,8 +59,10 @@ class CatfishPrefsDialog(PrefsDialog):
             return
         if widget.get_active():
             self.settings.set_setting("use-headerbar", False)
+            self.builder.get_object("wl_titlebar_visible").set_active(True)
         else:
             self.settings.set_setting("use-headerbar", True)
+            self.builder.get_object("wl_headerbar_visible").set_active(True)
         self.builder.get_object("wl_info").show()
         self.changed_properties.append("use-headerbar")
 
