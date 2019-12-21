@@ -43,6 +43,14 @@
   </provides>
 
   <releases>
+    <release version="1.4.11" date="2019-12-21">
+      <description>
+        <_p>This releases addresses some startup errors as well as various
+        issues with traversing symbolic links.
+        </_p>
+      </description>
+    </release>
+
     <release version="1.4.10" date="2019-09-13">
       <description>
         <_p>This release includes many appearance improvements, introduces

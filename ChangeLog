@@ -1,10 +1,19 @@
-v1.4.11 (unreleased):
+v1.4.11:
+ + General:
+   - Radio indicators are now displayed on the layout options
  + Bug Fixes:
    - Fix crashes when GdkDisplay or GdkScreen calls return None (LP: #1822914)
    - Fix configuration of preferred window layout (Xfce #16085)
    - Fix finding files in the target directory (Xfce #15985, #16233)
    - Fix symbolic link looping (Xfce #16272)
-   - Do not search real paths that are above the starting path
+   - Fix home (~) expansion for the start path
+   - Fix asv-summary-has-dot-suffix
+     (https://appstream.debian.org/sid/main/issues/catfish.html)
+ + Translation Updates:
+   Albanian, Belarusian, Catalan, Chinese (China), Chinese (Taiwan), Croatian,
+   Czech, Dutch, French, German, Interlingue, Italian, Korean, Lithuanian,
+   Malay, Norwegian Bokmål, Portuguese, Portuguese (Brazil), Russian, Serbian,
+   Slovak, Spanish, Thai, Turkish
 
 v1.4.10:
  + New Features:
