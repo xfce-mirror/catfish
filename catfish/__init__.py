@@ -73,10 +73,6 @@ def main():
     'constructor for your class instances'
     options, args = parse_options()
 
-    if not check_x11_session():
-        sys.stderr.write(_('Try GDK_BACKEND=x11 {0}\n'.format(sys.argv[0])))
-        sys.exit(0)
-
     # Run the application.
     window = CatfishWindow.CatfishWindow()
     window.parse_options(options, args)

@@ -10,3 +10,4 @@ Icon=catfish
 Terminal=false
 Type=Application
 MimeType=inode/directory;
+StartupWMClass=catfish
