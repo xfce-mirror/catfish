@@ -22,6 +22,7 @@ import shutil
 import sys
 import subprocess
 
+release_version = '1.4.11'
 
 try:
     import DistUtilsExtra.auto
@@ -195,10 +196,24 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
         cleanup_metainfo_files(self.root, target_data)
         os.remove(metainfo)
 
+# Hacky, default releases to bztar
+if "--formats" not in " ".join(sys.argv[1:]):
+    sys.argv.append("--formats=bztar")
+    default_build = True
+else:
+    default_build = False
+
+# Verify the build directory is clean
+if "sdist" in sys.argv:
+    folder = "dist/catfish-%s" % release_version
+    if os.path.exists(folder):
+        sys.stderr.write("Build directory 'dist' is not clean.\n"
+                         "Please manually remove %s" % folder)
+        sys.exit(1)
 
 DistUtilsExtra.auto.setup(
     name='catfish',
-    version='1.4.11',
+    version=release_version,
     license='GPL-2+',
     author='Sean Davis',
     author_email='bluesabre@xfce.org',
@@ -214,3 +229,20 @@ DistUtilsExtra.auto.setup(
     ],
     cmdclass={'install': InstallAndUpdateDataDirectory}
 )
+
+# Simplify Xfce release process by providing sums
+if default_build and "sdist" in sys.argv:
+    import hashlib
+
+    bzfile = "dist/catfish-%s.tar.bz2" % release_version
+    if not os.path.exists(bzfile):
+        sys.stderr.write("Expected file '%s' was not found.")
+        sys.exit(1)
+
+    contents = open(bzfile, 'rb').read()
+
+    print("")
+    print("%s written" % bzfile)
+    print("  MD5:    %s" % hashlib.md5(contents).hexdigest())
+    print("  SHA1:   %s" % hashlib.sha1(contents).hexdigest())
+    print("  SHA256: %s" % hashlib.sha256(contents).hexdigest())
