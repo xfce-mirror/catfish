@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-21 07:01-0500\n"
+"POT-Creation-Date: 2019-12-24 14:01-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Serdar Sağlam <teknomobil@msn.com>, 2019\n"
 "Language-Team: Turkish (https://www.transifex.com/xfce/teams/16840/tr/)\n"
@@ -79,7 +79,7 @@ msgstr "Sonuçlarda _gizli dosyaları göster"
 
 #: ../data/ui/CatfishPreferences.ui.h:8
 msgid "Show filter _sidebar"
-msgstr "Filtre kenar çubuğunu göster"
+msgstr "Filtre _kenar çubuğunu göster"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Display Options"
@@ -348,11 +348,6 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr "Yol ve sorgu sağlanırsa, uygulama görüntülendiğinde aramaya başlayın."
-
-#: ../catfish/__init__.py:77
-#, python-brace-format
-msgid "Try GDK_BACKEND=x11 {0}\n"
-msgstr "Dene GDK_BACKEND=x11 {0}\n"
 
 #: ../catfish/AboutCatfishDialog.py:37
 msgid "translator-credits"
