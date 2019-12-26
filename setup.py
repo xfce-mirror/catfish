@@ -196,20 +196,19 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
         cleanup_metainfo_files(self.root, target_data)
         os.remove(metainfo)
 
-# Hacky, default releases to bztar
-if "--formats" not in " ".join(sys.argv[1:]):
-    sys.argv.append("--formats=bztar")
-    default_build = True
-else:
-    default_build = False
-
 # Verify the build directory is clean
+folder = "dist/catfish-%s" % release_version
+if os.path.exists(folder):
+    sys.stderr.write("Build directory 'dist' is not clean.\n"
+                     "Please manually remove %s" % folder)
+    sys.exit(1)
+
+# Hacky, default releases to bztar
+default_release_build = False
 if "sdist" in sys.argv:
-    folder = "dist/catfish-%s" % release_version
-    if os.path.exists(folder):
-        sys.stderr.write("Build directory 'dist' is not clean.\n"
-                         "Please manually remove %s" % folder)
-        sys.exit(1)
+    if "--formats" not in " ".join(sys.argv[1:]):
+        sys.argv.append("--formats=bztar")
+        default_release_build = True
 
 DistUtilsExtra.auto.setup(
     name='catfish',
@@ -231,7 +230,7 @@ DistUtilsExtra.auto.setup(
 )
 
 # Simplify Xfce release process by providing sums
-if default_build and "sdist" in sys.argv:
+if default_release_build:
     import hashlib
 
     bzfile = "dist/catfish-%s.tar.bz2" % release_version
