@@ -232,6 +232,7 @@ DistUtilsExtra.auto.setup(
 # Simplify Xfce release process by providing sums
 if default_release_build:
     import hashlib
+    import tarfile
 
     bzfile = "dist/catfish-%s.tar.bz2" % release_version
     if not os.path.exists(bzfile):
@@ -245,3 +246,24 @@ if default_release_build:
     print("  MD5:    %s" % hashlib.md5(contents).hexdigest())
     print("  SHA1:   %s" % hashlib.sha1(contents).hexdigest())
     print("  SHA256: %s" % hashlib.sha256(contents).hexdigest())
+    print("")
+    print("Contents:")
+
+    contents = {}
+    tar = tarfile.open(bzfile, "r:bz2")
+    for tarinfo in tar:
+        if not tarinfo.isdir():
+            basedir = os.path.dirname(tarinfo.name)
+            if basedir not in contents.keys():
+                contents[basedir] = []
+            contents[basedir].append(tarinfo.name)
+    tar.close()
+
+    for basedir in contents.keys():
+        indent = ""
+        for i in range(0, len(basedir.split("/"))):
+            indent += "  "
+        print("%s%s/" % (indent, basedir))
+        indent += "  "
+        for filename in contents[basedir]:
+            print(indent + filename)
