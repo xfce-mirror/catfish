@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-21 07:01-0500\n"
+"POT-Creation-Date: 2019-12-24 14:01-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019\n"
 "Language-Team: Catalan (https://www.transifex.com/xfce/teams/16840/ca/)\n"
@@ -261,7 +261,7 @@ msgstr "Cerca al _contingut dels fitxers"
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "_Match results exactly"
-msgstr ""
+msgstr "_Coincidència exacta dels resultats"
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "_Refresh search index..."
@@ -347,11 +347,6 @@ msgid ""
 msgstr ""
 "Si es proporcionen el camí i la consulta, la cerca comença quan es mostra "
 "l'aplicació."
-
-#: ../catfish/__init__.py:77
-#, python-brace-format
-msgid "Try GDK_BACKEND=x11 {0}\n"
-msgstr "Proveu GDK_BACKEND=x11 {0}\n"
 
 #: ../catfish/AboutCatfishDialog.py:37
 msgid "translator-credits"
