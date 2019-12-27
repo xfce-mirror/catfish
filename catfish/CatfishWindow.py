@@ -681,7 +681,7 @@ class CatfishWindow(Window):
             self.update_index_unlock.grab_default()
 
             # Restore Cancel button
-            self.update_index_close.set_label(Gtk.STOCK_CANCEL)
+            self.update_index_close.set_label(_("Cancel"))
             self.update_index_close.set_can_default(False)
             self.update_index_close.set_receives_default(False)
 
