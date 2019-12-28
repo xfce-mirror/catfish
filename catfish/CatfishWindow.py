@@ -40,10 +40,9 @@ gi.require_version('GdkPixbuf', '2.0')  # noqa
 gi.require_version('Gtk', '3.0')  # noqa
 from gi.repository import GLib, GObject, Pango, Gdk, GdkPixbuf, Gtk
 
-from catfish.AboutCatfishDialog import AboutCatfishDialog
 from catfish.CatfishPrefsDialog import CatfishPrefsDialog
 from catfish.CatfishSearchEngine import CatfishSearchEngine
-from catfish_lib import catfishconfig, helpers
+from catfish_lib import catfishconfig, helpers, get_version
 from catfish_lib import CatfishSettings, SudoDialog, Window
 from catfish_lib import Thumbnailer
 
@@ -124,12 +123,36 @@ class CatfishWindow(Window):
     mimetypes = dict()
     search_in_progress = False
 
+    def get_about_dialog(self):
+        dlg = GObject.new(Gtk.AboutDialog, use_header_bar=True)
+        dlg.set_program_name(_("Catfish File Search"))
+        dlg.set_version(get_version())
+        dlg.set_logo_icon_name("catfish")
+        dlg.set_website("https://docs.xfce.org/apps/catfish/start")
+        dlg.set_comments(_("Catfish is a versatile file searching tool."))
+        dlg.set_license_type(Gtk.License.GPL_2_0)
+        dlg.set_copyright("Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n"
+                          "Copyright (C) 2012-2019 Sean Davis <bluesabre@xfce.org>")
+        dlg.set_authors(["Christian Dywan <christian@twotoasts.de>",
+                         "Sean Davis <bluesabre@xfce.org>"])
+        dlg.set_artists(["Nancy Runge <nancy@twotoasts.de>"])
+        dlg.set_translator_credits(_("translator-credits"))
+        dlg.set_transient_for(self)
+
+        # Cleanup duplicate buttons
+        hbar = dlg.get_header_bar()
+        for child in hbar.get_children():
+            if type(child) in [Gtk.Button, Gtk.ToggleButton]:
+                child.destroy()
+
+        return dlg
+
     def finish_initializing(self, builder):
         """Set up the main window"""
         super(CatfishWindow, self).finish_initializing(builder)
         self.set_wmclass("catfish", "Catfish")
 
-        self.AboutDialog = AboutCatfishDialog
+        self.AboutDialog = self.get_about_dialog
 
         self.settings = CatfishSettings.CatfishSettings()
 

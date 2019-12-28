@@ -27,7 +27,7 @@ from catfish_lib.PrefsDialog import PrefsDialog
 logger = logging.getLogger('catfish')
 
 
-# See catfish_lib.AboutDialog.py for more details about how this class works.
+# See catfish_lib.PrefsDialog.py for more details about how this class works.
 class CatfishPrefsDialog(PrefsDialog):
 
     """Creates the about dialog for catfish"""
