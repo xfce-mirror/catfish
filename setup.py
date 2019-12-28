@@ -22,7 +22,7 @@ import shutil
 import sys
 import subprocess
 
-release_version = '1.4.11'
+from catfish_lib.catfishconfig import __version__, __url__
 
 try:
     import DistUtilsExtra.auto
@@ -197,7 +197,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
         os.remove(metainfo)
 
 # Verify the build directory is clean
-folder = "dist/catfish-%s" % release_version
+folder = "dist/catfish-%s" % __version__
 if os.path.exists(folder):
     sys.stderr.write("Build directory 'dist' is not clean.\n"
                      "Please manually remove %s" % folder)
@@ -212,7 +212,7 @@ if "sdist" in sys.argv:
 
 DistUtilsExtra.auto.setup(
     name='catfish',
-    version=release_version,
+    version=__version__,
     license='GPL-2+',
     author='Sean Davis',
     author_email='bluesabre@xfce.org',
@@ -221,7 +221,7 @@ DistUtilsExtra.auto.setup(
                      'UNIX. The interface is intentionally lightweight and '
                      'simple, using only Gtk+3. You can configure it to your '
                      'needs by using several command line options.',
-    url='https://docs.xfce.org/apps/catfish/start',
+    url=__url__,
     data_files=[
         ('share/man/man1', ['catfish.1']),
         ('share/metainfo/', ['data/metainfo/catfish.appdata.xml'])
@@ -234,7 +234,7 @@ if default_release_build:
     import hashlib
     import tarfile
 
-    bzfile = "dist/catfish-%s.tar.bz2" % release_version
+    bzfile = "dist/catfish-%s.tar.bz2" % __version__
     if not os.path.exists(bzfile):
         sys.stderr.write("Expected file '%s' was not found.")
         sys.exit(1)

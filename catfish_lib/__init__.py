@@ -21,4 +21,4 @@
 while keeping its api constant'''
 from . helpers import set_up_logging, check_x11_session  # noqa
 from . Window import Window  # noqa
-from . catfishconfig import get_version  # noqa
+from . catfishconfig import get_version, get_about  # noqa

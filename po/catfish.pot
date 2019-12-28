@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-28 07:17-0500\n"
+"POT-Creation-Date: 2019-12-28 16:24-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:128 ../catfish/CatfishWindow.py:754
+#: ../catfish_lib/catfishconfig.py:88
 msgid "Catfish File Search"
 msgstr ""
 
@@ -344,10 +344,6 @@ msgstr ""
 msgid "%s (invalid encoding)"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:132
-msgid "Catfish is a versatile file searching tool."
-msgstr ""
-
 #: ../catfish/CatfishWindow.py:139
 msgid "translator-credits"
 msgstr ""
@@ -381,6 +377,11 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:736
 msgid "Search database updated successfully."
+msgstr ""
+
+#. Update the Cancel button to Close, make it default
+#: ../catfish/CatfishWindow.py:797
+msgid "Close"
 msgstr ""
 
 #. Set the dialog status to running.
@@ -503,6 +504,10 @@ msgstr ""
 #: ../catfish/CatfishWindow.py:1858
 #, python-format
 msgid "Search results for \"%s\""
+msgstr ""
+
+#: ../catfish_lib/catfishconfig.py:91
+msgid "Catfish is a versatile file searching tool."
 msgstr ""
 
 #: ../catfish_lib/SudoDialog.py:138

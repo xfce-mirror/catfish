@@ -30,8 +30,9 @@ __all__ = [
 __catfish_data_directory__ = '../data/'
 # Location of locate.db file
 __locate_db_path__ = '/var/lib/mlocate/mlocate.db'
-__license__ = 'GPL-3+'
+__license__ = 'GPL-2+'
 __version__ = '1.4.11'
+__url__ = 'https://docs.xfce.org/apps/catfish/start'
 
 
 class project_path_not_found(Exception):
@@ -77,3 +78,20 @@ def get_locate_db_path():
 def get_version():
     """Return the program version number."""
     return __version__
+
+
+def get_about():
+    from locale import gettext as _
+
+    return {
+        'version': __version__,
+        'program_name': _('Catfish File Search'),
+        'icon_name': 'catfish',
+        'website': __url__,
+        'comments': _('Catfish is a versatile file searching tool.'),
+        'copyright': 'Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n'
+                     'Copyright (C) 2012-2019 Sean Davis <bluesabre@xfce.org>',
+        'authors': ['Christian Dywan <christian@twotoasts.de>',
+                    'Sean Davis <bluesabre@xfce.org>'],
+        'artists': ['Nancy Runge <nancy@twotoasts.de>']
+    }

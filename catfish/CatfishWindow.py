@@ -42,7 +42,7 @@ from gi.repository import GLib, GObject, Pango, Gdk, GdkPixbuf, Gtk
 
 from catfish.CatfishPrefsDialog import CatfishPrefsDialog
 from catfish.CatfishSearchEngine import CatfishSearchEngine
-from catfish_lib import catfishconfig, helpers, get_version
+from catfish_lib import catfishconfig, helpers, get_version, get_about
 from catfish_lib import CatfishSettings, SudoDialog, Window
 from catfish_lib import Thumbnailer
 
@@ -124,18 +124,18 @@ class CatfishWindow(Window):
     search_in_progress = False
 
     def get_about_dialog(self):
+        about = get_about()
+
         dlg = GObject.new(Gtk.AboutDialog, use_header_bar=True)
-        dlg.set_program_name(_("Catfish File Search"))
-        dlg.set_version(get_version())
-        dlg.set_logo_icon_name("catfish")
-        dlg.set_website("https://docs.xfce.org/apps/catfish/start")
-        dlg.set_comments(_("Catfish is a versatile file searching tool."))
+        dlg.set_program_name(about['program_name'])
+        dlg.set_version(about['version'])
+        dlg.set_logo_icon_name(about['icon_name'])
+        dlg.set_website(about['website'])
+        dlg.set_comments(about['comments'])
         dlg.set_license_type(Gtk.License.GPL_2_0)
-        dlg.set_copyright("Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n"
-                          "Copyright (C) 2012-2019 Sean Davis <bluesabre@xfce.org>")
-        dlg.set_authors(["Christian Dywan <christian@twotoasts.de>",
-                         "Sean Davis <bluesabre@xfce.org>"])
-        dlg.set_artists(["Nancy Runge <nancy@twotoasts.de>"])
+        dlg.set_copyright(about['copyright'])
+        dlg.set_authors(about['authors'])
+        dlg.set_artists(about['artists'])
         dlg.set_translator_credits(_("translator-credits"))
         dlg.set_transient_for(self)
 
@@ -751,7 +751,7 @@ class CatfishWindow(Window):
             sudo_dialog = SudoDialog.SudoDialog(
                 parent=self.update_index_dialog,
                 icon='catfish',
-                name=_("Catfish File Search"),
+                name=get_about()['program_name'],
                 retries=3)
             sudo_dialog.show_all()
             response = sudo_dialog.run()
@@ -794,7 +794,7 @@ class CatfishWindow(Window):
                 self.update_index_unlock.hide()
 
                 # Update the Cancel button to Close, make it default
-                self.update_index_close.set_label(Gtk.STOCK_CLOSE)
+                self.update_index_close.set_label(_("Close"))
                 self.update_index_close.set_sensitive(True)
                 self.update_index_close.set_can_default(True)
                 self.update_index_close.set_receives_default(True)
