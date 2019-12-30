@@ -337,7 +337,6 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
                 # Link: ~/.wine/dosdevices/z:/ -> /
                 if realroot.startswith(realpath):
                     continue
-                processed_links.append(realpath)
             if os.path.basename(path).startswith("."):
                 if islink:
                     dotlinks.append(path)
