@@ -2,7 +2,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #   Catfish - a versatile file searching tool
 #   Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
-#   Copyright (C) 2012-2019 Sean Davis <bluesabre@xfce.org>
+#   Copyright (C) 2012-2020 Sean Davis <bluesabre@xfce.org>
 #
 #   This program is free software: you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License version 2, as published
