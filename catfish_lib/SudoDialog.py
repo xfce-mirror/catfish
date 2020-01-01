@@ -16,12 +16,12 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, GdkPixbuf
 import os
-
 from locale import gettext as _
 
 import pexpect
+
+from gi.repository import Gtk, GdkPixbuf
 
 gtk_version = (Gtk.get_major_version(),
                Gtk.get_minor_version(),
@@ -66,12 +66,9 @@ def check_dependencies(commands=[]):
         index = child.expect([".*ssword.*", "Sorry",
                               pexpect.EOF, pexpect.TIMEOUT])
         child.close()
-        if index == 0 or index == 2:
+        if index in [0, 2]:
             # User in sudoers, or already admin
             return True
-        elif index == 1 or index == 3:
-            # User not in sudoers
-            return False
 
     except Exception:
         # Something else went wrong.
@@ -226,6 +223,7 @@ class SudoDialog(Gtk.Dialog):
 
         self.attempted_logins = 0
         self.max_attempted_logins = retries
+        self.password_valid = False
 
     def on_password_changed(self, widget, button):
         """Set the apply button sensitivity based on password input."""
@@ -268,12 +266,12 @@ class SudoDialog(Gtk.Dialog):
             self.dialog_icon.set_from_icon_name('dialog-password', icon_size)
             self.set_icon_name('dialog-password')
 
-    def on_show(self, widget):
+    def on_show(self, widget):  # pylint: disable=W0613
         '''When the dialog is displayed, clear the password.'''
         self.set_password('')
         self.password_valid = False
 
-    def on_ok_clicked(self, widget):
+    def on_ok_clicked(self, widget):  # pylint: disable=W0613
         '''
         When the OK button is clicked, attempt to use sudo with the currently
         entered password.  If successful, emit the response signal with ACCEPT.
@@ -331,6 +329,5 @@ class SudoDialog(Gtk.Dialog):
         if child.exitstatus == 0:
             self.attempted_logins = 0
             return True
-        else:
-            self.attempted_logins += 1
-            return False
+        self.attempted_logins += 1
+        return False

@@ -182,16 +182,19 @@ class Thumbnailer:
             pixbuf = GdkPixbuf.Pixbuf.new_from_file(filename)
             if pixbuf is None:
                 return False
+
             pixbuf_w = pixbuf.get_width()
             pixbuf_h = pixbuf.get_height()
             if pixbuf_w < 1 or pixbuf_h < 1:
                 return False
+
             if pixbuf_w < 128 and pixbuf_h < 128:
                 options = self._get_attributes(filename)
                 pixbuf.savev(thumbnail, "png", list(options.keys()),
                              list(options.values()))
                 os.chmod(thumbnail, 0o600)
                 return True
+
             if pixbuf_w > pixbuf_h:
                 thumb_w = 128
                 thumb_h = int(pixbuf_h / (pixbuf_w / 128.0))
@@ -200,10 +203,12 @@ class Thumbnailer:
                 thumb_w = int(pixbuf_w / (pixbuf_h / 128.0))
             if thumb_w < 1 or thumb_h < 1:
                 return False
+
             thumb_pixbuf = pixbuf.scale_simple(
                 thumb_w, thumb_h, GdkPixbuf.InterpType.BILINEAR)
             if thumb_pixbuf is None:
                 return False
+
             options = self._get_attributes(filename)
             thumb_pixbuf.savev(thumbnail, "png", list(options.keys()),
                                list(options.values()))
@@ -244,6 +249,5 @@ class Thumbnailer:
         normal = self._get_normal_filename(filename)
         if self._create_thumbnail(filename, normal):
             return normal
-        else:
-            self._write_fail(filename)
-            return False
+        self._write_fail(filename)
+        return False

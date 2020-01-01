@@ -16,6 +16,10 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+# pylint: disable=C0114
+# pylint: disable=C0116
+# pylint: disable=C0413
+
 import logging
 
 import gi
@@ -24,7 +28,7 @@ from gi.repository import Gtk
 
 from catfish_lib.PrefsDialog import PrefsDialog
 
-logger = logging.getLogger('catfish')
+LOGGER = logging.getLogger('catfish')
 
 
 # See catfish_lib.PrefsDialog.py for more details about how this class works.
@@ -93,14 +97,14 @@ class CatfishPrefsDialog(PrefsDialog):
             self.settings.set_setting("close-after-select", False)
         self.changed_properties.append("close-after-select")
 
-    def on_add_directory_clicked(self, widget):
+    def on_add_directory_clicked(self, widget):  # pylint: disable=W0613
         dlg = Gtk.FileChooserDialog("Add Excluded Directory",
                                     self,
                                     Gtk.FileChooserAction.SELECT_FOLDER,
                                     (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
                                      Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
         response = dlg.run()
-        if (response == Gtk.ResponseType.OK):
+        if response == Gtk.ResponseType.OK:
             path = dlg.get_filename()
             treeview = self.builder.get_object("exclude_treeview")
             model = treeview.get_model()
@@ -108,7 +112,7 @@ class CatfishPrefsDialog(PrefsDialog):
             self.treemodel_to_settings(model)
         dlg.destroy()
 
-    def on_remove_directory_clicked(self, widget):
+    def on_remove_directory_clicked(self, widget):  # pylint: disable=W0613
         treeview = self.builder.get_object("exclude_treeview")
         model = treeview.get_model()
         sel = treeview.get_selection().get_selected()

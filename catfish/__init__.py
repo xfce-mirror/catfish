@@ -16,7 +16,10 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+# pylint: disable=C0413
+
 import optparse
+import signal
 import sys
 
 from locale import gettext as _
@@ -28,9 +31,7 @@ from gi.repository import Gtk
 
 from catfish import CatfishWindow
 
-from catfish_lib import set_up_logging, get_version, check_x11_session
-
-import signal
+from catfish_lib import set_up_logging, get_version
 
 
 def parse_options():

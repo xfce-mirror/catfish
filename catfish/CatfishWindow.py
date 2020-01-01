@@ -16,6 +16,13 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+# pylint: disable=W0201
+# pylint: disable=C0103
+# pylint: disable=C0114
+# pylint: disable=C0116
+# pylint: disable=C0413
+
+
 import datetime
 import logging
 import mimetypes
@@ -27,8 +34,8 @@ from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
 
 # Thunar Integration
-import dbus
 import urllib
+import dbus
 
 import pexpect
 import gi
@@ -42,11 +49,11 @@ from gi.repository import GLib, GObject, Pango, Gdk, GdkPixbuf, Gtk
 
 from catfish.CatfishPrefsDialog import CatfishPrefsDialog
 from catfish.CatfishSearchEngine import CatfishSearchEngine
-from catfish_lib import catfishconfig, helpers, get_version, get_about
+from catfish_lib import catfishconfig, helpers, get_about
 from catfish_lib import CatfishSettings, SudoDialog, Window
 from catfish_lib import Thumbnailer
 
-logger = logging.getLogger('catfish')
+LOGGER = logging.getLogger('catfish')
 
 
 # Initialize Gtk, GObject, and mimetypes
@@ -397,7 +404,7 @@ class CatfishWindow(Window):
         monitor = m.get_geometry()
         return (monitor.width, monitor.height)
 
-    def on_calendar_day_changed(self, widget):
+    def on_calendar_day_changed(self, widget):  # pylint: disable=W0613
         start_calendar = self.builder.get_named_object(
             "dialogs.date.start_calendar")
         end_calendar = self.builder.get_named_object(
@@ -441,8 +448,7 @@ class CatfishWindow(Window):
                 popover = self.get_popover(row[2], builder)
                 popover.show_all()
                 return
-            else:
-                row[3], row[4] = row[4], row[3]
+            row[3], row[4] = row[4], row[3]
         else:
             row[3], row[4] = row[4], row[3]
         if row[2] == 'other' or row[2] == 'custom':
@@ -501,7 +507,7 @@ class CatfishWindow(Window):
             self.on_menu_update_index_activate(widget)
         widget.hide()
 
-    def on_floating_bar_enter_notify(self, widget, event):
+    def on_floating_bar_enter_notify(self, widget, event):  # pylint: disable=W0613
         """Move the floating statusbar when hovered."""
         if widget.get_halign() == Gtk.Align.START:
             widget.set_halign(Gtk.Align.END)
@@ -536,7 +542,7 @@ class CatfishWindow(Window):
             return realpath
         return None
 
-    def parse_path_option(self, options, args):
+    def parse_path_option(self, options, args):  # pylint: disable=W0613
         # Set the selected folder path. Allow legacy --path option.
         path = None
 
@@ -606,7 +612,7 @@ class CatfishWindow(Window):
         if self.options.start:
             self.on_search_entry_activate(self.search_entry)
 
-    def preview_cell_data_func(self, col, renderer, model, treeiter, data):
+    def preview_cell_data_func(self, col, renderer, model, treeiter, data):  # pylint: disable=W0613
         """Cell Renderer Function for the preview."""
         icon_name = model[treeiter][0]
         filename = model[treeiter][1]
@@ -625,9 +631,8 @@ class CatfishWindow(Window):
             pixbuf = self.get_icon_pixbuf(icon_name)
 
         renderer.set_property('pixbuf', pixbuf)
-        return
 
-    def thumbnail_cell_data_func(self, col, renderer, model, treeiter, data):
+    def thumbnail_cell_data_func(self, col, renderer, model, treeiter, data):  # pylint: disable=W0613
         """Cell Renderer Function to Thumbnails View."""
         name, size, path, modified = model[treeiter][1:5]
         name = escape(name)
@@ -637,7 +642,6 @@ class CatfishWindow(Window):
         displayed = '<b>%s</b> %s%s%s%s%s' % (name, size, os.linesep, path,
                                               os.linesep, modified)
         renderer.set_property('markup', displayed)
-        return
 
     def load_symbolic_icon(self, icon_name, size, state=Gtk.StateFlags.ACTIVE):
         """Return the symbolic version of icon_name, or the non-symbolic
@@ -682,7 +686,7 @@ class CatfishWindow(Window):
         item_date = datetime.datetime.fromtimestamp(modified)
         return (locate, db, item_date, changed)
 
-    def on_filters_changed(self, box, row, user_data=None):
+    def on_filters_changed(self, box, row, user_data=None):  # pylint: disable=W0613
         if row.is_selected():
             box.unselect_row(row)
         else:
@@ -690,8 +694,8 @@ class CatfishWindow(Window):
         return True
 
     # -- Update Search Index dialog -- #
-    def on_update_index_dialog_close(self, widget=None, event=None,
-                                     user_data=None):
+    def on_update_index_dialog_close(self, widget=None, event=None,  # pylint: disable=W0613
+                                     user_data=None):  # pylint: disable=W0613
         """Close the Update Search Index dialog, resetting to default."""
         if not self.update_index_active:
             self.update_index_dialog.hide()
@@ -741,7 +745,7 @@ class CatfishWindow(Window):
 
         self.update_index_infobar.show()
 
-    def on_update_index_unlock_clicked(self, widget):  # noqa
+    def on_update_index_unlock_clicked(self, widget):  # pylint: disable=W0613
         """Unlock admin rights and perform 'updatedb' query."""
         self.update_index_active = True
 
@@ -764,7 +768,7 @@ class CatfishWindow(Window):
                 self.show_update_status_infobar(2)
                 return False
 
-            elif response == Gtk.ResponseType.REJECT:
+            if response == Gtk.ResponseType.REJECT:
                 self.update_index_active = False
                 self.show_update_status_infobar(3)
                 return False
@@ -883,7 +887,7 @@ class CatfishWindow(Window):
             task = self.perform_query(widget.get_text())
             GLib.idle_add(next, task)
 
-    def on_search_entry_icon_press(self, widget, event, user_data):
+    def on_search_entry_icon_press(self, widget, event, user_data):  # pylint: disable=W0613
         """If search in progress, stop the search, otherwise, start."""
         if not self.search_in_progress:
             self.on_search_entry_activate(self.search_entry)
@@ -891,7 +895,7 @@ class CatfishWindow(Window):
             self.stop_search = True
             self.search_engine.stop()
 
-    def on_search_entry_changed(self, widget):
+    def on_search_entry_changed(self, widget):  # pylint: disable=W0613
         """Update the search entry icon and run suggestions."""
         text = self.refresh_search_entry()
 
@@ -959,11 +963,11 @@ class CatfishWindow(Window):
         self.filter_format_toggled("fulltext", widget.get_active())
         self.on_search_entry_activate(self.search_entry)
 
-    def on_menu_update_index_activate(self, widget):
+    def on_menu_update_index_activate(self, widget):  # pylint: disable=W0613
         """Show the Update Search Index dialog."""
         self.update_index_dialog.show()
 
-    def on_menu_preferences_activate(self, widget):
+    def on_menu_preferences_activate(self, widget):  # pylint: disable=W0613
         dialog = CatfishPrefsDialog()
         dialog.set_transient_for(self)
         dialog.connect_settings(self.settings)
@@ -975,9 +979,9 @@ class CatfishWindow(Window):
     def refresh_from_settings(self, changed_properties):
         for prop in changed_properties:
             setting = self.settings.get_setting(prop)
-            if (prop == "show-hidden-files"):
+            if prop == "show-hidden-files":
                 self.hidden_files.set_active(setting)
-            if (prop == "show-sidebar"):
+            if prop == "show-sidebar":
                 self.set_sidebar_active(setting)
 
     # -- Sidebar -- #
@@ -999,20 +1003,20 @@ class CatfishWindow(Window):
     def set_modified_range(self, value):
         if value == 'any':
             self.filter_timerange = (0.0, 9999999999.0)
-            logger.debug("Time Range: Beginning of time -> Eternity")
+            LOGGER.debug("Time Range: Beginning of time -> Eternity")
         elif value == 'week':
             now = datetime.datetime.now()
             week = time.mktime((
                 datetime.datetime(now.year, now.month, now.day, 0, 0) -
                 datetime.timedelta(7)).timetuple())
             self.filter_timerange = (week, 9999999999.0)
-            logger.debug(
+            LOGGER.debug(
                 "Time Range: %s -> Eternity",
                 time.strftime("%x %X", time.localtime(int(week))))
         elif value == 'custom':
             self.filter_timerange = (time.mktime(self.start_date.timetuple()),
                                      time.mktime(self.end_date.timetuple()))
-            logger.debug(
+            LOGGER.debug(
                 "Time Range: %s -> %s",
                 time.strftime("%x %X",
                               time.localtime(int(self.filter_timerange[0]))),
@@ -1030,7 +1034,7 @@ class CatfishWindow(Window):
     def filter_format_toggled(self, filter_format, enabled):
         """Update search filter when formats are modified."""
         self.filter_formats[filter_format] = enabled
-        logger.debug("File type filters updated: %s", str(self.filter_formats))
+        LOGGER.debug("File type filters updated: %s", str(self.filter_formats))
         self.refilter()
 
     def on_filter_extensions_changed(self, widget):
@@ -1113,7 +1117,7 @@ class CatfishWindow(Window):
 
     def open_file(self, filename):
         """Open the specified filename in its default application."""
-        logger.debug("Opening %s" % filename)
+        LOGGER.debug("Opening %s" % filename)
         if filename.endswith('.AppImage') and os.access(filename, os.X_OK):
             command = [filename]
         elif os.path.isdir(filename) and \
@@ -1123,25 +1127,25 @@ class CatfishWindow(Window):
             command = ['xdg-open', filename]
         try:
             subprocess.Popen(command, shell=False)
-            if(self.settings.get_setting('close-after-select')):
+            if self.settings.get_setting('close-after-select'):
                 self.destroy()
             return
         except Exception as msg:
-            logger.debug('Exception encountered while opening %s.' +
+            LOGGER.debug('Exception encountered while opening %s.' +
                          '\n  Exception: %s' +
                          filename, msg)
             self.get_error_dialog(_('\"%s\" could not be opened.') %
                                   os.path.basename(filename), str(msg))
 
     # -- File Popup Menu -- #
-    def on_menu_open_activate(self, widget):
+    def on_menu_open_activate(self, widget):  # pylint: disable=W0613
         """Open the selected file in its default application."""
         for filename in self.selected_filenames:
             self.open_file(filename)
 
-    def on_menu_filemanager_activate(self, widget):
+    def on_menu_filemanager_activate(self, widget):  # pylint: disable=W0613
         """Open the selected file in the default file manager."""
-        logger.debug("Opening file manager for %i path(s)" %
+        LOGGER.debug("Opening file manager for %i path(s)" %
                      len(self.selected_filenames))
 
         if self.using_thunar_fm():
@@ -1157,9 +1161,9 @@ class CatfishWindow(Window):
         for path in dirs:
             self.open_file(path)
 
-    def on_menu_copy_location_activate(self, widget):
+    def on_menu_copy_location_activate(self, widget):  # pylint: disable=W0613
         """Copy the selected file name to the clipboard."""
-        logger.debug("Copying %i filename(s) to the clipboard" %
+        LOGGER.debug("Copying %i filename(s) to the clipboard" %
                      len(self.selected_filenames))
         clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         locations = []
@@ -1169,7 +1173,7 @@ class CatfishWindow(Window):
         clipboard.set_text(text, -1)
         clipboard.store()
 
-    def on_menu_save_activate(self, widget):
+    def on_menu_save_activate(self, widget):  # pylint: disable=W0613
         """Show a save dialog and possibly write the results to a file."""
         filename = self.get_save_dialog(
             surrogate_escape(self.selected_filenames[0]))
@@ -1180,7 +1184,7 @@ class CatfishWindow(Window):
 
             except Exception as msg:
                 # If the file save fails, throw an error.
-                logger.debug('Exception encountered while saving %s.' +
+                LOGGER.debug('Exception encountered while saving %s.' +
                              '\n  Exception: %s', filename, msg)
                 self.get_error_dialog(_('\"%s\" could not be saved.') %
                                       os.path.basename(filename), str(msg))
@@ -1190,14 +1194,14 @@ class CatfishWindow(Window):
             # Delete the file.
             if not os.path.exists(filename):
                 return True
-            elif os.path.isdir(filename):
+            if os.path.isdir(filename):
                 rmtree(filename)
             else:
                 os.remove(filename)
             return True
         except Exception as msg:
             # If the file cannot be deleted, throw an error.
-            logger.debug('Exception encountered while deleting %s.' +
+            LOGGER.debug('Exception encountered while deleting %s.' +
                          '\n  Exception: %s', filename, msg)
             self.get_error_dialog(_("\"%s\" could not be deleted.") %
                                   os.path.basename(filename),
@@ -1220,7 +1224,7 @@ class CatfishWindow(Window):
             treeiter = nextiter
         return False
 
-    def on_menu_delete_activate(self, widget):
+    def on_menu_delete_activate(self, widget):  # pylint: disable=W0613
         """Show a delete dialog and remove the file if accepted."""
         filenames = []
         if self.get_delete_dialog(self.selected_filenames):
@@ -1353,7 +1357,7 @@ class CatfishWindow(Window):
             self.setup_large_view()
 
     # -- Treeview -- #
-    def on_treeview_row_activated(self, treeview, path, user_data):
+    def on_treeview_row_activated(self, treeview, path, user_data):  # pylint: disable=W0613
         """Catch row activations by keyboard or mouse double-click."""
         # Get the filename from the row.
         model = treeview.get_model()
@@ -1363,7 +1367,7 @@ class CatfishWindow(Window):
         # Open the selected file.
         self.open_file(self.selected_filenames[0])
 
-    def on_treeview_drag_begin(self, treeview, context):
+    def on_treeview_drag_begin(self, treeview, context):  # pylint: disable=W0613
         """Treeview DND Begin."""
         if len(self.selected_filenames) > 1:
             treesel = treeview.get_selection()
@@ -1371,8 +1375,8 @@ class CatfishWindow(Window):
                 treesel.select_path(row)
         return True
 
-    def on_treeview_drag_data_get(self, treeview, context, selection, info,
-                                  time):
+    def on_treeview_drag_data_get(self, treeview, context, selection, info,  # pylint: disable=W0613
+                                  timestamp):  # pylint: disable=W0613
         """Treeview DND Get."""
         text = str(os.linesep).join(self.selected_filenames)
         selection.set_text(text, -1)
@@ -1488,7 +1492,7 @@ class CatfishWindow(Window):
             handled = False
         return handled
 
-    def new_column(self, label, id, special=None, markup=False):
+    def new_column(self, label, colid, special=None, markup=False):
         """New Column function for creating TreeView columns easily."""
         if special == 'icon':
             column = Gtk.TreeViewColumn(label)
@@ -1497,46 +1501,44 @@ class CatfishWindow(Window):
             column.set_cell_data_func(cell, self.preview_cell_data_func, None)
             cell = Gtk.CellRendererText()
             column.pack_start(cell, False)
-            column.add_attribute(cell, 'text', id)
+            column.add_attribute(cell, 'text', colid)
         else:
             cell = Gtk.CellRendererText()
             if markup:
-                column = Gtk.TreeViewColumn(label, cell, markup=id)
+                column = Gtk.TreeViewColumn(label, cell, markup=colid)
             else:
-                column = Gtk.TreeViewColumn(label, cell, text=id)
+                column = Gtk.TreeViewColumn(label, cell, text=colid)
             if special == 'ellipsize':
                 column.set_min_width(120)
                 cell.set_property('ellipsize', Pango.EllipsizeMode.START)
             elif special == 'filesize':
                 cell.set_property('xalign', 1.0)
                 column.set_cell_data_func(cell,
-                                          self.cell_data_func_filesize, id)
+                                          self.cell_data_func_filesize, colid)
             elif special == 'date':
                 column.set_cell_data_func(cell,
-                                          self.cell_data_func_modified, id)
-        column.set_sort_column_id(id)
+                                          self.cell_data_func_modified, colid)
+        column.set_sort_column_id(colid)
         column.set_resizable(True)
-        if id == 3:
+        if colid == 3:
             column.set_expand(True)
         return column
 
-    def cell_data_func_filesize(self, column, cell_renderer,
-                                tree_model, tree_iter, id):
+    def cell_data_func_filesize(self, column, cell_renderer,  # pylint: disable=W0613
+                                tree_model, tree_iter, cellid):
         """File size cell display function."""
-        size = long(tree_model.get_value(tree_iter, id))
+        size = long(tree_model.get_value(tree_iter, cellid))
 
         filesize = self.format_size(size)
         cell_renderer.set_property('text', filesize)
-        return
 
-    def cell_data_func_modified(self, column, cell_renderer,
-                                tree_model, tree_iter, id):
+    def cell_data_func_modified(self, column, cell_renderer,  # pylint: disable=W0613
+                                tree_model, tree_iter, cellid):
         """Modification date cell display function."""
-        modification_int = int(tree_model.get_value(tree_iter, id))
+        modification_int = int(tree_model.get_value(tree_iter, cellid))
         modified = self.get_date_string(modification_int)
 
         cell_renderer.set_property('text', modified)
-        return
 
     def get_date_string(self, modification_int):
         """Return the date string in the preferred format."""
@@ -1557,28 +1559,28 @@ class CatfishWindow(Window):
                                          time.localtime(modification_int))
         return modified
 
-    def results_filter_func(self, model, iter, user_data):  # noqa
+    def results_filter_func(self, model, treeiter, user_data):  # pylint: disable=W0613
         """Filter function for search results."""
         # hidden
-        if model[iter][6]:
+        if model[treeiter][6]:
             if not self.filter_formats['hidden']:
                 return False
 
         # exact
         if not self.filter_formats['fulltext']:
-            if not model[iter][7]:
+            if not model[treeiter][7]:
                 if self.filter_formats['exact']:
                     return False
 
         # modified
-        modified = model[iter][4]
+        modified = model[treeiter][4]
         if modified < self.filter_timerange[0]:
             return False
         if modified > self.filter_timerange[1]:
             return False
 
         # mimetype
-        mimetype = model[iter][5]
+        mimetype = model[treeiter][5]
         use_filters = False
         if self.filter_formats['folders']:
             use_filters = True
@@ -1606,7 +1608,7 @@ class CatfishWindow(Window):
                 return True
         if self.filter_formats['other']:
             use_filters = True
-            extension = os.path.splitext(model[iter][1])[1]
+            extension = os.path.splitext(model[treeiter][1])[1]
             if extension in self.filter_custom_extensions:
                 return True
 
@@ -1653,8 +1655,7 @@ class CatfishWindow(Window):
                 suffixIndex += 1
                 size = size / 1024.0
             return "%.*f %s" % (precision, size, suffixes[suffixIndex])
-        else:
-            return "%i %s" % (size, suffixes[0])
+        return "%i %s" % (size, suffixes[0])
 
     def guess_mimetype(self, filename):
         """Guess the mimetype of the specified filename.
@@ -1715,39 +1716,37 @@ class CatfishWindow(Window):
             return thumb
         return self.get_file_icon(path, mime_type)
 
-    def get_file_icon(self, path, mime_type=None):
+    def get_file_icon(self, path, mime_type=None):  # pylint: disable=W0613
         """Retrieve the file icon."""
         if mime_type:
             if mime_type == 'inode/directory':
                 return "folder"
-            else:
-                mime_type = mime_type.split('/')
-                if mime_type is not None:
-                    # Get icon from mimetype
-                    media, subtype = mime_type
+            mime_type = mime_type.split('/')
+            if mime_type is not None:
+                # Get icon from mimetype
+                media, subtype = mime_type
 
-                    variations = ['%s-%s' % (media, subtype),
-                                  '%s-x-%s' % (media, subtype)]
-                    if media == "application":
-                        variations.append('application-x-executable')
-                    variations.append('%s-x-generic' % media)
+                variations = ['%s-%s' % (media, subtype),
+                              '%s-x-%s' % (media, subtype)]
+                if media == "application":
+                    variations.append('application-x-executable')
+                variations.append('%s-x-generic' % media)
 
-                    for icon_name in variations:
-                        if self.icon_theme.has_icon(icon_name):
-                            return icon_name
+                for icon_name in variations:
+                    if self.icon_theme.has_icon(icon_name):
+                        return icon_name
         return "text-x-generic"
 
-    def size_sort_func(self, model, row1, row2, user_data):
+    def size_sort_func(self, model, row1, row2, user_data):  # pylint: disable=W0613
         """Sort function used in Python 3."""
         sort_column = 2
         value1 = long(model.get_value(row1, sort_column))
         value2 = long(model.get_value(row2, sort_column))
         if value1 < value2:
             return -1
-        elif value1 == value2:
+        if value1 == value2:
             return 0
-        else:
-            return 1
+        return 1
 
     # -- Searching -- #
     def perform_query(self, keywords):  # noqa
@@ -1845,7 +1844,7 @@ class CatfishWindow(Window):
                     # file no longer exists
                     pass
                 except Exception as e:
-                    logger.error("Exception encountered: %s" % str(e))
+                    LOGGER.error("Exception encountered: %s" % str(e))
 
             yield True
             continue

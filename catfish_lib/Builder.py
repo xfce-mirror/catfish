@@ -18,12 +18,12 @@
 
 '''Enhances builder connections, provides object to access glade objects'''
 
-from gi.repository import GObject, Gtk  # pylint: disable=E0611
-
 import inspect
 import functools
 import logging
 from xml.etree.cElementTree import ElementTree
+
+from gi.repository import GObject, Gtk  # pylint: disable=E0611
 
 logger = logging.getLogger('catfish_lib')
 

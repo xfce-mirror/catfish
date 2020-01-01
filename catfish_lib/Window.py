@@ -16,12 +16,16 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, Gdk  # pylint: disable=E0611
+# pylint: disable=C0114
+# pylint: disable=C0116
+
 import logging
 from locale import gettext as _
 
-from . helpers import get_builder
+from gi.repository import Gtk, Gdk  # pylint: disable=E0611
+
 from catfish_lib import CatfishSettings
+from . helpers import get_builder
 
 logger = logging.getLogger('catfish_lib')
 
@@ -251,7 +255,7 @@ class Window(Gtk.Window):
         self.get_children()[0].reorder_child(toolbar, 0)
         toolbar.show_all()
 
-    def on_mnu_about_activate(self, widget, data=None):
+    def on_mnu_about_activate(self, widget, data=None):  # pylint: disable=W0613
         """Display the about box for catfish."""
         if self.AboutDialog is not None:
             about = self.AboutDialog()  # pylint: disable=E1102
@@ -259,13 +263,13 @@ class Window(Gtk.Window):
             about.run()
             about.destroy()
 
-    def on_destroy(self, widget, data=None):
+    def on_destroy(self, widget, data=None):  # pylint: disable=W0613
         """Called when the CatfishWindow is closed."""
         self.search_engine.stop()
         self.settings.write()
         Gtk.main_quit()
 
-    def on_catfish_window_window_state_event(self, widget, event):
+    def on_catfish_window_window_state_event(self, widget, event):  # pylint: disable=W0613
         """Properly handle window-manager fullscreen events."""
         self.window_is_fullscreen = bool(event.new_window_state &
                                          Gdk.WindowState.FULLSCREEN)
@@ -286,7 +290,7 @@ class Window(Gtk.Window):
     def map_key(self, key):
         if key.endswith("_L"):
             return key.replace("_L", "")
-        elif key.endswith("_R"):
+        if key.endswith("_R"):
             return key.replace("_R", "")
         return key
 
@@ -339,13 +343,13 @@ class Window(Gtk.Window):
             return True
         return False
 
-    def on_catfish_window_key_release_event(self, widget, event):
+    def on_catfish_window_key_release_event(self, widget, event):  # pylint: disable=W0613
         """Handle key releases for the Catfish window."""
         keys = self.get_keys_from_event(event)
         self.remove_keys(keys)
         return False
 
-    def on_catfish_window_size_allocate(self, widget, allocation):
+    def on_catfish_window_size_allocate(self, widget, allocation):  # pylint: disable=W0613
         paned = self.builder.get_named_object("window.paned")
         allocation = paned.get_allocation()
         self.settings.set_setting('window-height', allocation.height)
@@ -353,7 +357,7 @@ class Window(Gtk.Window):
         paned.set_property('height_request', -1)
         paned.set_property('width_request', -1)
 
-    def on_catfish_window_configure_event(self, widget, event):
+    def on_catfish_window_configure_event(self, widget, event):  # pylint: disable=W0613
         pos = self.get_position()
         self.settings.set_setting('window-x', pos.root_x)
         self.settings.set_setting('window-y', pos.root_y)

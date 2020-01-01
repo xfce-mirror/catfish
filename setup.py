@@ -59,7 +59,7 @@ def update_config(libdir, values={}):
     return oldvalues
 
 
-def move_icon_file(root, target_data, prefix):
+def move_icon_file(root, target_data):
     """Move the icon files to their installation prefix."""
     old_icon_path = os.path.normpath(
         os.path.join(root, target_data, 'share', 'catfish', 'media'))
@@ -90,7 +90,7 @@ def move_icon_file(root, target_data, prefix):
     return icon_file
 
 
-def get_desktop_file(root, target_data, prefix):
+def get_desktop_file(root, target_data):
     """Move the desktop file to its installation prefix."""
     desktop_path = os.path.realpath(
         os.path.join(root, target_data, 'share', 'applications'))
@@ -153,7 +153,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
                 self.distribution.get_version())))
 
         if not self.prefix:
-            self.prefix = ''
+            self.prefix = ''  # pylint: disable=W0201
 
         if self.root:
             target_data = os.path.relpath(
@@ -164,7 +164,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
             script_path = os.path.join(self.prefix, 'bin')
         else:
             # --user install
-            self.root = ''
+            self.root = ''  # pylint: disable=W0201
             target_data = os.path.relpath(self.install_data) + os.sep
             target_pkgdata = os.path.join(target_data, 'share', 'catfish', '')
             target_scripts = os.path.join(self.install_scripts, '')
@@ -188,9 +188,9 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
                   '__version__': "'%s'" % self.distribution.get_version()}
         update_config(self.install_lib, values)
 
-        desktop_file = get_desktop_file(self.root, target_data, self.prefix)
+        desktop_file = get_desktop_file(self.root, target_data)
         print(("Desktop File: %s\n" % desktop_file))
-        move_icon_file(self.root, target_data, self.prefix)
+        move_icon_file(self.root, target_data)
         update_desktop_file(desktop_file, script_path)
 
         cleanup_metainfo_files(self.root, target_data)
@@ -198,18 +198,18 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 
 # Verify the build directory is clean
-folder = "dist/catfish-%s" % __version__
-if os.path.exists(folder):
+FOLDER = "dist/catfish-%s" % __version__
+if os.path.exists(FOLDER):
     sys.stderr.write("Build directory 'dist' is not clean.\n"
-                     "Please manually remove %s" % folder)
+                     "Please manually remove %s" % FOLDER)
     sys.exit(1)
 
 # Hacky, default releases to bztar
-default_release_build = False
+DEFAULT_RELEASE_BUILD = False
 if "sdist" in sys.argv:
     if "--formats" not in " ".join(sys.argv[1:]):
         sys.argv.append("--formats=bztar")
-        default_release_build = True
+        DEFAULT_RELEASE_BUILD = True
 
 DistUtilsExtra.auto.setup(
     name='catfish',
@@ -231,40 +231,40 @@ DistUtilsExtra.auto.setup(
 )
 
 # Simplify Xfce release process by providing sums
-if default_release_build:
+if DEFAULT_RELEASE_BUILD:
     import hashlib
     import tarfile
 
-    bzfile = "dist/catfish-%s.tar.bz2" % __version__
-    if not os.path.exists(bzfile):
+    BZFILE = "dist/catfish-%s.tar.bz2" % __version__
+    if not os.path.exists(BZFILE):
         sys.stderr.write("Expected file '%s' was not found.")
         sys.exit(1)
 
-    contents = open(bzfile, 'rb').read()
+    CONTENTS = open(BZFILE, 'rb').read()
 
     print("")
-    print("%s written" % bzfile)
-    print("  MD5:    %s" % hashlib.md5(contents).hexdigest())
-    print("  SHA1:   %s" % hashlib.sha1(contents).hexdigest())
-    print("  SHA256: %s" % hashlib.sha256(contents).hexdigest())
+    print("%s written" % BZFILE)
+    print("  MD5:    %s" % hashlib.md5(CONTENTS).hexdigest())
+    print("  SHA1:   %s" % hashlib.sha1(CONTENTS).hexdigest())
+    print("  SHA256: %s" % hashlib.sha256(CONTENTS).hexdigest())
     print("")
     print("Contents:")
 
-    contents = {}
-    tar = tarfile.open(bzfile, "r:bz2")
-    for tarinfo in tar:
+    CONTENTS = {}
+    TAR = tarfile.open(BZFILE, "r:bz2")
+    for tarinfo in TAR:
         if not tarinfo.isdir():
             basedir = os.path.dirname(tarinfo.name)
-            if basedir not in contents.keys():
-                contents[basedir] = []
-            contents[basedir].append(tarinfo.name)
-    tar.close()
+            if basedir not in CONTENTS.keys():
+                CONTENTS[basedir] = []
+            CONTENTS[basedir].append(tarinfo.name)
+    TAR.close()
 
-    for basedir in contents.keys():
+    for basedir in CONTENTS.keys():  # pylint: disable=C0201
         indent = ""
         for i in range(0, len(basedir.split("/"))):
             indent += "  "
         print("%s%s/" % (indent, basedir))
         indent += "  "
-        for filename in contents[basedir]:
-            print(indent + filename)
+        for fname in CONTENTS[basedir]:
+            print(indent + fname)

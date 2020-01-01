@@ -16,17 +16,17 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+# pylint: disable=C0413
+
 """Helpers for an Ubuntu application."""
 import logging
 import os
 import sys
 
 import gi
-gi.require_version('GLib', '2.0')  # noqa
 gi.require_version('GObject', '2.0')  # noqa
-gi.require_version('Gdk', '3.0')  # noqa
 gi.require_version('Gtk', '3.0')  # noqa
-from gi.repository import GLib, GObject, Gdk, Gtk
+from gi.repository import GObject, Gtk
 
 from . catfishconfig import get_data_file
 from . Builder import Builder
@@ -181,7 +181,6 @@ def get_help_uri(page=None):
 
 def show_uri(parent, link):
     """Open the specified URI."""
-    from gi.repository import Gtk  # pylint: disable=E0611
     screen = parent.get_screen()
     Gtk.show_uri(screen, link, Gtk.get_current_event_time())
 
@@ -195,24 +194,3 @@ def alias(alternative_function_name):
         function.aliases.append(alternative_function_name)
         return function
     return decorator
-
-
-def check_x11_session():
-    '''Is it an X.org session?'''
-    backend_env = GLib.environ_getenv(GLib.get_environ(), 'GDK_BACKEND')
-    if backend_env is None:
-        # We look for default display
-        display = Gdk.Display.get_default()
-        if display is None:
-            return True
-
-        name = display.get_name()
-        if name.startswith('wayland'):
-            return False
-        else:
-            return True
-    else:
-        if backend_env.lower() == 'x11':
-            return True
-        else:
-            return False

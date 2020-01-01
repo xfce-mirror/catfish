@@ -16,6 +16,10 @@
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+# pylint: disable=C0413
+# pylint: disable=C0114
+# pylint: disable=C0116
+
 import logging
 
 import io
@@ -28,31 +32,28 @@ from itertools import permutations
 
 from mimetypes import guess_type
 
-from sys import version_info
-
 import gi
 gi.require_version('GLib', '2.0')  # noqa
 from gi.repository import GLib
 
 try:
-    from zeitgeist.client import ZeitgeistDBusInterface
-    from zeitgeist.datamodel import Event, TimeRange
-    from zeitgeist import datamodel
-    iface = ZeitgeistDBusInterface()
-    zeitgeist_support = True
-except Exception:
-    zeitgeist_support = False
+    from zeitgeist.client import ZeitgeistDBusInterface  # pylint: disable=E0401
+    from zeitgeist.datamodel import Event, TimeRange  # pylint: disable=E0401
+    from zeitgeist import datamodel  # pylint: disable=E0401
+    IFACE = ZeitgeistDBusInterface()
+    ZEITGEIST_SUPPORT = True
+except ImportError:
+    ZEITGEIST_SUPPORT = False
 
-logger = logging.getLogger('catfish_search')
-python3 = version_info[0] > 2
-engine_count = 0
+LOGGER = logging.getLogger('catfish_search')
+ENGINE_COUNT = 0
 
 FNULL = open(os.devnull, 'w')
-if subprocess.call(['which', 'locate'],
+if subprocess.call(['which', 'locate'],  # pylint: disable=R1703
                    stdout=FNULL, stderr=subprocess.STDOUT) == 0:
-    locate_support = True
+    LOCATE_SUPPORT = True
 else:
-    locate_support = False
+    LOCATE_SUPPORT = False
 FNULL.close()
 
 
@@ -69,7 +70,7 @@ def get_keyword_list(keywords):
     return kwords
 
 
-def string_regex(keywords, path):
+def string_regex(keywords, path):  # pylint: disable=W0613
     """Returns a string with the regular expression containing all combinations
     of the keywords."""
     if len(keywords) == 0:
@@ -108,18 +109,21 @@ class CatfishSearchEngine:
          walk             'os.walk' to search for files (like find).
          zeitgeist        Zeitgeist indexing service to search for files.
         """
-        global engine_count
-        engine_count += 1
-        self.engine_id = engine_count
-        logger.debug(
+        self.stop_time = 0
+        self.keywords = ""
+
+        global ENGINE_COUNT
+        ENGINE_COUNT += 1
+        self.engine_id = ENGINE_COUNT
+        LOGGER.debug(
             "[%i] engine initializing with methods: %s",
             self.engine_id, str(methods))
         self.methods = []
         if 'zeitgeist' in methods:
-            if zeitgeist_support:
+            if ZEITGEIST_SUPPORT:
                 self.add_method(CatfishSearchMethod_Zeitgeist)
         if 'locate' in methods:
-            if locate_support:
+            if LOCATE_SUPPORT:
                 self.add_method(CatfishSearchMethod_Locate)
         if 'fulltext' in methods:
             self.add_method(CatfishSearchMethod_Fulltext)
@@ -129,13 +133,13 @@ class CatfishSearchEngine:
         initialized = []
         for method in self.methods:
             initialized.append(method.method_name)
-        logger.debug(
+        LOGGER.debug(
             "[%i] engine initialized with methods: %s",
             self.engine_id, str(initialized))
         self.start_time = 0.0
 
     def __del__(self):
-        logger.debug("[%i] engine destroyed", self.engine_id)
+        LOGGER.debug("[%i] engine destroyed", self.engine_id)
 
     def add_method(self, method_class):
         """Add a CatfishSearchMethod the the engine's search backends."""
@@ -155,7 +159,7 @@ class CatfishSearchEngine:
         keywords = get_keyword_list(keywords)
         self.keywords = " ".join(keywords)
 
-        logger.debug("[%i] path: %s, keywords: %s, limit: %i, regex: %s",
+        LOGGER.debug("[%i] path: %s, keywords: %s, limit: %i, regex: %s",
                      self.engine_id, str(path), str(keywords), limit,
                      str(regex))
 
@@ -181,9 +185,9 @@ class CatfishSearchEngine:
         file_count = 0
         for method in self.methods:
             if self.stop_time > 0:
-                logger.debug("Engine is stopped")
+                LOGGER.debug("Engine is stopped")
                 return
-            logger.debug(
+            LOGGER.debug(
                 "[%i] Starting search method: %s",
                 self.engine_id, method.method_name)
             for filename in method.run(keywords, path, regex,
@@ -193,7 +197,7 @@ class CatfishSearchEngine:
                     for filepath in exclude:
                         if filename.startswith(filepath):
                             if self.stop_time > 0:
-                                logger.debug("Engine is stopped")
+                                LOGGER.debug("Engine is stopped")
                                 return
                             found_bad = True
                     if found_bad:
@@ -202,8 +206,8 @@ class CatfishSearchEngine:
 
                     if method.method_name == 'fulltext' or  \
                             all(key in
-                                os.path.basename(filename).lower()
-                                for key in keys):
+                                    os.path.basename(filename).lower()
+                                    for key in keys):
 
                         # Remove the URI portion of the filename if present.
                         if filename.startswith('file://'):
@@ -261,7 +265,7 @@ class CatfishSearchEngine:
             method.stop()
         self.stop_time = time.time()
         clock = self.stop_time - self.start_time
-        logger.debug("[%i] Last query: %f seconds", self.engine_id, clock)
+        LOGGER.debug("[%i] Last query: %f seconds", self.engine_id, clock)
 
 
 class CatfishSearchMethod:
@@ -273,7 +277,7 @@ class CatfishSearchMethod:
         """Base CatfishSearchMethod Initializer."""
         self.method_name = method_name
 
-    def run(self, keywords, path, regex=False, exclude_paths=[]):
+    def run(self, keywords, path, regex=False, exclude_paths=[]):  # pylint: disable=W0613
         """Base CatfishSearchMethod run method."""
         return NotImplemented
 
@@ -295,6 +299,7 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
     def __init__(self):
         """Initialize the 'walk' Search Method."""
         CatfishSearchMethod.__init__(self, "walk")
+        self.running = False
 
     def get_dir_list(self, root, dirs, xdg_list,
                      exclude_list, processed_links):
@@ -449,7 +454,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                     find_keywords_backup.append(keyword)
 
         # Start walking the folder structure.
-        for root, dirs, files in os.walk(path):
+        for root, dirs, files in os.walk(path):  # pylint: disable=W0612
             if self.force_stop:
                 break
 
@@ -477,7 +482,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                                         break
                                 else:
                                     if any(keyword in line.lower()
-                                            for keyword in keywords):
+                                           for keyword in keywords):
                                         found_keywords = []
                                         for find_keyword in find_keywords:
                                             if find_keyword in line.lower():
@@ -517,6 +522,7 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
     def __init__(self):
         """Initialize the Zeitgeist SearchMethod."""
         CatfishSearchMethod.__init__(self, "zeitgeist")
+        self.stop_search = False
 
     def run(self, keywords, path, regex=False, exclude_paths=[]):
         """Run the Zeitgeist SearchMethod."""
@@ -525,7 +531,7 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
         time_range = TimeRange.from_seconds_ago(60 * 3600 * 24)
         # 60 days at most
 
-        results = iface.FindEvents(
+        results = IFACE.FindEvents(
             time_range,  # (min_timestamp, max_timestamp) in milliseconds
             [event_template, ],
             datamodel.StorageState.Any,
@@ -572,7 +578,7 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
         self.command = []
         self.process = None
 
-    def assemble_query(self, keywords, path):
+    def assemble_query(self, keywords, path):  # pylint: disable=W0613
         """Base assemble_query method."""
         return False
 
@@ -601,8 +607,7 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
             return map(lambda s: s.decode(encoding='UTF8',
                                           errors='replace').strip(),
                        output.readlines())
-        else:
-            return output
+        return output
 
     def status(self):
         """Return the current search status."""
@@ -662,5 +667,4 @@ class CatfishSearchMethod_Locate(CatfishSearchMethodExternal):
         if self.caps["regex"]:
             return ["locate", "--regex", "--basename", "-i",
                     "{}".format(string_regex(keywords, path))]
-        else:
-            return ["locate", "-i", "%path*", str(keywords)]
+        return ["locate", "-i", "%path*", str(keywords)]

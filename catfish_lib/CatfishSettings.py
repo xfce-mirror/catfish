@@ -18,9 +18,9 @@
 
 import os
 
-default_settings_file = os.path.join(os.getenv('HOME'),
+DEFAULT_SETTINGS_FILE = os.path.join(os.getenv('HOME'),
                                      '.config/catfish/catfish.rc')
-default_settings = {
+DEFAULT_SETTINGS = {
     'use-headerbar': None,
     'show-hidden-files': False,
     'show-sidebar': False,
@@ -37,7 +37,7 @@ class CatfishSettings:
 
     """CatfishSettings rc-file management."""
 
-    def __init__(self, settings_file=default_settings_file):
+    def __init__(self, settings_file=DEFAULT_SETTINGS_FILE):
         """Initialize the CatfishSettings instance."""
         try:
             settings_dir = os.path.dirname(settings_file)
@@ -65,9 +65,9 @@ class CatfishSettings:
     def get_setting(self, key):
         """Return current setting for specified key."""
         if key in self.settings:
-            if (key.startswith('window')):
+            if key.startswith('window'):
                 return int(self.settings[key])
-            if (key == "exclude-paths"):
+            if key == "exclude-paths":
                 exclude_directories = []
                 for path in (self.settings[key].strip()).split(";"):
                     if len(path) > 0:
@@ -78,8 +78,7 @@ class CatfishSettings:
                 exclude_directories.sort()
                 return exclude_directories
             return self.settings[key]
-        else:
-            return None
+        return None
 
     def set_setting(self, key, value):
         """Set the value for the specified key."""
@@ -94,7 +93,7 @@ class CatfishSettings:
 
     def read(self):
         """Read the settings rc-file into this settings instance."""
-        self.settings = default_settings.copy()
+        self.settings = DEFAULT_SETTINGS.copy()
         if os.path.isfile(self.settings_file):
             try:
                 for line in open(self.settings_file):
