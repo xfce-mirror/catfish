@@ -324,17 +324,22 @@ class CatfishWindow(Window):
         (screen_width, screen_height) = self.get_screen_size()
         (display_width, display_height) = self.get_display_size()
 
-        if (window_height > screen_height or window_width > screen_width):
-            window_width = min(display_width, 650)
-            window_height = min(display_height, 470)
+        if (screen_width, screen_height) == (-1, -1) or \
+                (display_width, display_height) == (-1, -1):
+            # Failed detection, likely using Wayland, don't resize
+            pass
+        else:
+            if (window_height > screen_height or window_width > screen_width):
+                window_width = min(display_width, 650)
+                window_height = min(display_height, 470)
 
-        paned.set_property('height_request', window_height)
-        paned.set_property('width_request', window_width)
+            paned.set_property('height_request', window_height)
+            paned.set_property('width_request', window_width)
 
-        if (window_x >= 0 and window_y >= 0):
-            if (window_x + window_width <= screen_width) and \
-               (window_y + window_height <= screen_height):
-                self.move(window_x, window_y)
+            if (window_x >= 0 and window_y >= 0):
+                if (window_x + window_width <= screen_width) and \
+                (window_y + window_height <= screen_height):
+                    self.move(window_x, window_y)
 
         self.refresh_search_entry()
 
@@ -391,13 +396,13 @@ class CatfishWindow(Window):
     def get_screen_size(self):
         s = Gdk.Screen.get_default()
         if s is None:
-            return (800, 600)
+            return (-1, -1)
         return (s.get_width(), s.get_height())
 
     def get_display_size(self):
         d = Gdk.Display.get_default()
         if d is None:
-            return (800, 600)
+            return (-1, -1)
 
         w = Gdk.get_default_root_window()
         m = d.get_monitor_at_window(w)
