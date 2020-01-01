@@ -1,4 +1,4 @@
-v1.4.12 (unreleased):
+v1.4.12:
  + New Features:
    - Wayland and GNOME Shell support (Xfce #16293)
  + General:
