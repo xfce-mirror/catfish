@@ -83,8 +83,8 @@ msgid "Display Options"
 msgstr "Mundësi Shfaqjeje"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
-msgstr "_Dukje"
+msgid "Appearance"
+msgstr "Dukje"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
@@ -119,8 +119,8 @@ msgid "Miscellaneous"
 msgstr "Të ndryshme"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
-msgstr "Të _mëtejshme"
+msgid "Advanced"
+msgstr "Të mëtejshme"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"

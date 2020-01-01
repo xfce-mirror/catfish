@@ -84,8 +84,8 @@ msgid "Display Options"
 msgstr "Aukerak erakutsi"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
-msgstr "_Itxura"
+msgid "Appearance"
+msgstr "Itxura"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
@@ -120,7 +120,7 @@ msgid "Miscellaneous"
 msgstr "Bestelakoak"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
+msgid "Advanced"
 msgstr "Aurreratua"
 
 #: ../data/ui/CatfishWindow.ui.h:1

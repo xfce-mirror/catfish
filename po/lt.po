@@ -85,8 +85,8 @@ msgid "Display Options"
 msgstr "Rodymo parametrai"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
-msgstr "_Išvaizda"
+msgid "Appearance"
+msgstr "Išvaizda"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
@@ -121,8 +121,8 @@ msgid "Miscellaneous"
 msgstr "Įvairūs"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
-msgstr "Išplės_tiniai"
+msgid "Advanced"
+msgstr "Išplėstiniai"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"

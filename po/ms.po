@@ -83,8 +83,8 @@ msgid "Display Options"
 msgstr "Pilihan Paparan"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
-msgstr "Penampi_lan"
+msgid "Appearance"
+msgstr "Penampilan"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
@@ -119,8 +119,8 @@ msgid "Miscellaneous"
 msgstr "Pelbagai"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
-msgstr "_Lanjutan"
+msgid "Advanced"
+msgstr "Lanjutan"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"

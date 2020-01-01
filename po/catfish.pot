@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-28 16:24-0500\n"
+"POT-Creation-Date: 2020-01-01 08:11-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,7 +72,7 @@ msgid "Display Options"
 msgstr ""
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
+msgid "Appearance"
 msgstr ""
 
 #: ../data/ui/CatfishPreferences.ui.h:11
@@ -108,7 +108,7 @@ msgid "Miscellaneous"
 msgstr ""
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
+msgid "Advanced"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:1

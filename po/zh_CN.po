@@ -86,8 +86,8 @@ msgid "Display Options"
 msgstr "显示选项"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
-msgstr "外观(_A)"
+msgid "Appearance"
+msgstr "外观"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
@@ -122,8 +122,8 @@ msgid "Miscellaneous"
 msgstr "杂项"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
-msgstr "高级(_D)"
+msgid "Advanced"
+msgstr "高级"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"

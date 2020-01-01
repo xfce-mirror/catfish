@@ -84,8 +84,8 @@ msgid "Display Options"
 msgstr "Opcións de visualización"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
-msgstr "_Aparencia"
+msgid "Appearance"
+msgstr "Aparencia"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
@@ -120,8 +120,8 @@ msgid "Miscellaneous"
 msgstr "Miscelánea"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
-msgstr "_Avanzado"
+msgid "Advanced"
+msgstr "Avanzado"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"

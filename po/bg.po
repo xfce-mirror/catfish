@@ -85,7 +85,7 @@ msgid "Display Options"
 msgstr "Показване на опциите"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
+msgid "Appearance"
 msgstr "Външен вид"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
@@ -121,7 +121,7 @@ msgid "Miscellaneous"
 msgstr "Разни"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
+msgid "Advanced"
 msgstr "Разширени"
 
 #: ../data/ui/CatfishWindow.ui.h:1

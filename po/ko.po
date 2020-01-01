@@ -85,8 +85,8 @@ msgid "Display Options"
 msgstr "표시 옵션"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
-msgstr "모양새(_A)"
+msgid "Appearance"
+msgstr "모양새"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
@@ -121,8 +121,8 @@ msgid "Miscellaneous"
 msgstr "기타"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
-msgstr "고급(_D)"
+msgid "Advanced"
+msgstr "고급"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"

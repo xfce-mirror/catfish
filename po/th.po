@@ -81,8 +81,8 @@ msgid "Display Options"
 msgstr "ตัวเลือกการแสดงผล"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
-msgstr "รูป_ลักษณ์"
+msgid "Appearance"
+msgstr "รูปลักษณ์"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
@@ -117,8 +117,8 @@ msgid "Miscellaneous"
 msgstr "จิปาถะ"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
-msgstr "_ขั้นสูง"
+msgid "Advanced"
+msgstr "ขั้นสูง"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"

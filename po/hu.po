@@ -85,8 +85,8 @@ msgid "Display Options"
 msgstr "Megjelenítési beállítások"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
-msgid "_Appearance"
-msgstr "_Megjelenés"
+msgid "Appearance"
+msgstr "Megjelenés"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
@@ -121,8 +121,8 @@ msgid "Miscellaneous"
 msgstr "Egyéb"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
-msgid "A_dvanced"
-msgstr "_Speciális"
+msgid "Advanced"
+msgstr "Speciális"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
