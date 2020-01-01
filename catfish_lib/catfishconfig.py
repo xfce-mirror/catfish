@@ -90,8 +90,8 @@ def get_about():
         'website': __url__,
         'comments': _('Catfish is a versatile file searching tool.'),
         'copyright': 'Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n'
-                     'Copyright (C) 2012-2019 Sean Davis <bluesabre@xfce.org>',
-        'authors': ['Christian Dywan <christian@twotoasts.de>',
-                    'Sean Davis <bluesabre@xfce.org>'],
-        'artists': ['Nancy Runge <nancy@twotoasts.de>']
-    }
+        'Copyright (C) 2012-2019 Sean Davis <bluesabre@xfce.org>',
+        'authors': [
+            'Christian Dywan <christian@twotoasts.de>',
+            'Sean Davis <bluesabre@xfce.org>'],
+        'artists': ['Nancy Runge <nancy@twotoasts.de>']}

@@ -196,6 +196,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
         cleanup_metainfo_files(self.root, target_data)
         os.remove(metainfo)
 
+
 # Verify the build directory is clean
 folder = "dist/catfish-%s" % __version__
 if os.path.exists(folder):

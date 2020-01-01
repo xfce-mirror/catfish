@@ -141,7 +141,7 @@ class CatfishSearchEngine:
         """Add a CatfishSearchMethod the the engine's search backends."""
         self.methods.append(method_class())
 
-    def run(self, keywords, path, limit=-1, regex=False): # noqa
+    def run(self, keywords, path, limit=-1, regex=False):  # noqa
         """Run the CatfishSearchEngine.
 
         Each method is run sequentially in the order they are added.
@@ -296,7 +296,8 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         """Initialize the 'walk' Search Method."""
         CatfishSearchMethod.__init__(self, "walk")
 
-    def get_dir_list(self, root, dirs, xdg_list, exclude_list, processed_links):
+    def get_dir_list(self, root, dirs, xdg_list,
+                     exclude_list, processed_links):
         dirs = sorted(dirs, key=lambda s: s.lower())
 
         # Prioritize: XDG, Visible (Linked), Dotfile (Linked)
@@ -394,12 +395,13 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
                 processed_links.append(realpath)
 
             # Prioritize and drop excluded paths
-            dirs[:] = self.get_dir_list(root, dirs, xdgdirlist, exclude, processed_links)
+            dirs[:] = self.get_dir_list(
+                root, dirs, xdgdirlist, exclude, processed_links)
 
-            paths = dirs + files
-            paths.sort()
+            paths = sorted(dirs + files)
 
-            # Check paths in the second and deeper levels of the selected directory
+            # Check paths in the second and deeper levels of the selected
+            # directory
             for path in paths:
                 if any(keyword in path.lower() for keyword in keywords):
                     yield os.path.join(root, path)

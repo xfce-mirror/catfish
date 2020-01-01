@@ -741,7 +741,7 @@ class CatfishWindow(Window):
 
         self.update_index_infobar.show()
 
-    def on_update_index_unlock_clicked(self, widget): # noqa
+    def on_update_index_unlock_clicked(self, widget):  # noqa
         """Unlock admin rights and perform 'updatedb' query."""
         self.update_index_active = True
 
@@ -1224,8 +1224,7 @@ class CatfishWindow(Window):
         """Show a delete dialog and remove the file if accepted."""
         filenames = []
         if self.get_delete_dialog(self.selected_filenames):
-            delete = self.selected_filenames
-            delete.sort()
+            delete = sorted(self.selected_filenames)
             delete.reverse()
             for filename in delete:
                 if self.delete_file(filename):
@@ -1558,7 +1557,7 @@ class CatfishWindow(Window):
                                          time.localtime(modification_int))
         return modified
 
-    def results_filter_func(self, model, iter, user_data): # noqa
+    def results_filter_func(self, model, iter, user_data):  # noqa
         """Filter function for search results."""
         # hidden
         if model[iter][6]:
@@ -1751,7 +1750,7 @@ class CatfishWindow(Window):
             return 1
 
     # -- Searching -- #
-    def perform_query(self, keywords): # noqa
+    def perform_query(self, keywords):  # noqa
         """Run the search query with the specified keywords."""
         self.stop_search = False
 
