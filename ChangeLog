@@ -2,11 +2,15 @@ v1.4.12 (unreleased):
  + New Features:
    - Wayland and GNOME Shell support (Xfce #16293)
  + General:
-   - All modal dialogs now use client-side decorations and are transient
-     by default
+   - All dialogs now use client-side decorations and are modal
+   - Fixed typo "Catifish"
  + Release Process Updates:
    - Temporary files are now excluded from releases
-   - Releases now generate .bz2 files and display checksums by default
+   - Releases now generate .bz2 files and display contents and checksums
+ + Translation Updates:
+   Albanian, Catalan, Chinese (China), Chinese (Taiwan), Czech, Danish, Dutch,
+   French, Galician, German, Italian, Japanese, Norwegian Bokmål, Russian,
+   Serbian, Spanish, Turkish
 
 v1.4.11:
  + General:
