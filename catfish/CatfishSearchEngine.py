@@ -206,8 +206,8 @@ class CatfishSearchEngine:
 
                     if method.method_name == 'fulltext' or  \
                             all(key in
-                                    os.path.basename(filename).lower()
-                                    for key in keys):
+                                os.path.basename(filename).lower()
+                                for key in keys):
 
                         # Remove the URI portion of the filename if present.
                         if filename.startswith('file://'):
