@@ -63,7 +63,7 @@ msgid "_Modern (CSD)"
 msgstr "Šiuolai_kinis (CSD)"
 
 #: ../data/ui/CatfishPreferences.ui.h:5
-msgid "Your new window layout will be applied after restarting Catifish."
+msgid "Your new window layout will be applied after restarting Catfish."
 msgstr ""
 "Jūsų naujas lango išdėstymas bus pritaikytas, kai paleisite Catfish iš "
 "naujo."

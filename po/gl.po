@@ -63,7 +63,7 @@ msgid "_Modern (CSD)"
 msgstr "_Moderno (CSD)"
 
 #: ../data/ui/CatfishPreferences.ui.h:5
-msgid "Your new window layout will be applied after restarting Catifish."
+msgid "Your new window layout will be applied after restarting Catfish."
 msgstr ""
 "A súa nova disposición de xanelas aplicarase despois de reiniciar o Catfish."
 
