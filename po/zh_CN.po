@@ -7,18 +7,18 @@
 # Levi Zhou <congzhou821@gmail.com>, 2018
 # No Body, 2018
 # Cally Mal <zhouxiaobo.500@gmail.com>, 2019
-# Nick Schermer <nick@xfce.org>, 2019
 # Mingcong Bai <jeffbai@aosc.xyz>, 2019
-# 玉堂白鹤 <yjwork@qq.com>, 2019
+# Nick Schermer <nick@xfce.org>, 2020
+# 玉堂白鹤 <yjwork@qq.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-24 14:01-0500\n"
+"POT-Creation-Date: 2020-01-01 13:36-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2019\n"
+"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/xfce/teams/16840/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
-#: ../catfish/CatfishWindow.py:731
+#: ../catfish_lib/catfishconfig.py:88
 msgid "Catfish File Search"
 msgstr "Catfish 文件搜索"
 
@@ -44,10 +44,6 @@ msgstr "搜索文件系统"
 #: ../org.xfce.Catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
 msgstr "文件;搜寻;定位;查找;搜索;"
-
-#: ../data/ui/AboutCatfishDialog.ui.h:1
-msgid "Catfish is a versatile file searching tool."
-msgstr "Catfish 是一款多功能的文件搜索工具。"
 
 #: ../data/ui/CatfishPreferences.ui.h:1
 msgid "Catfish Preferences"
@@ -209,7 +205,7 @@ msgstr "<b>开始日期</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>结束日期</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:224
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish_lib/Window.py:228
 msgid "Catfish"
 msgstr "Catfish"
 
@@ -225,79 +221,42 @@ msgstr "搜索数据库已超过7天，是否现在更新？"
 msgid "File Type"
 msgstr "文件类型"
 
-#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1290
+#: ../data/ui/CatfishWindow.ui.h:27 ../catfish/CatfishWindow.py:1321
 msgid "Modified"
 msgstr "修改时间"
 
-#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1740
+#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1766
 msgid "Results will be displayed as soon as they are found."
 msgstr "结果将在查找后立即显示。"
 
 #: ../data/ui/CatfishWindow.ui.h:30
-msgid "Select a Directory"
-msgstr "选择一个目录"
-
-#: ../data/ui/CatfishWindow.ui.h:31
-msgid "Search for files"
-msgstr "搜索文件"
-
-#: ../data/ui/CatfishWindow.ui.h:32
-msgid "Compact List"
-msgstr "紧凑列表"
-
-#: ../data/ui/CatfishWindow.ui.h:33
-msgid "Thumbnails"
-msgstr "缩略图"
-
-#: ../data/ui/CatfishWindow.ui.h:34
-msgid "Show _sidebar"
-msgstr "显示侧边栏(_S)"
-
-#: ../data/ui/CatfishWindow.ui.h:35
-msgid "Show _hidden files"
-msgstr "显示隐藏文件(_H)"
-
-#: ../data/ui/CatfishWindow.ui.h:36
-msgid "Search file _contents"
-msgstr "搜索文件内容(_C)"
-
-#: ../data/ui/CatfishWindow.ui.h:37
-msgid "_Match results exactly"
-msgstr "完全匹配结果(_M)"
-
-#: ../data/ui/CatfishWindow.ui.h:38
-msgid "_Refresh search index..."
-msgstr "更新搜索索引(_R)..."
-
-#: ../data/ui/CatfishWindow.ui.h:39
-msgid "_Preferences"
-msgstr "首选项(_P)"
-
-#: ../data/ui/CatfishWindow.ui.h:40
-msgid "_About"
-msgstr "关于(&A)"
-
-#: ../data/ui/CatfishWindow.ui.h:41
 msgid "Update Search Database"
 msgstr "更新搜索数据库"
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#. Restore Cancel button
+#. Buttons
+#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:716
+#: ../catfish_lib/SudoDialog.py:193
+msgid "Cancel"
+msgstr "取消"
+
+#: ../data/ui/CatfishWindow.ui.h:32
 msgid "Unlock"
 msgstr "解锁"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "<b>Database:</b>"
 msgstr "<b>数据库:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "<b>Updated:</b>"
 msgstr "<b>更新:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>更新搜索数据库</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -305,50 +264,101 @@ msgstr ""
 "为了获得更快的搜索结果，搜索数据库需要被刷新。\n"
 "此操作需要管理员权限。"
 
-#: ../catfish/__init__.py:38
+#: ../data/ui/CatfishWindow.ui.h:38
+msgid "Select a Directory"
+msgstr "选择一个目录"
+
+#: ../data/ui/CatfishWindow.ui.h:39
+msgid "Search for files"
+msgstr "搜索文件"
+
+#: ../data/ui/CatfishWindow.ui.h:40
+msgid "Compact List"
+msgstr "紧凑列表"
+
+#: ../data/ui/CatfishWindow.ui.h:41
+msgid "Thumbnails"
+msgstr "缩略图"
+
+#: ../data/ui/CatfishWindow.ui.h:42
+msgid "Show _sidebar"
+msgstr "显示侧边栏(_S)"
+
+#: ../data/ui/CatfishWindow.ui.h:43
+msgid "Show _hidden files"
+msgstr "显示隐藏文件(_H)"
+
+#: ../data/ui/CatfishWindow.ui.h:44
+msgid "Search file _contents"
+msgstr "搜索文件内容(_C)"
+
+#: ../data/ui/CatfishWindow.ui.h:45
+msgid "_Match results exactly"
+msgstr "完全匹配结果(_M)"
+
+#: ../data/ui/CatfishWindow.ui.h:46
+msgid "_Refresh search index..."
+msgstr "更新搜索索引(_R)..."
+
+#: ../data/ui/CatfishWindow.ui.h:47
+msgid "_Preferences"
+msgstr "首选项(_P)"
+
+#: ../data/ui/CatfishWindow.ui.h:48
+msgid "_About"
+msgstr "关于(&A)"
+
+#: ../catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
 msgstr "语法：%prog [选项] 路径 查询内容"
 
-#: ../catfish/__init__.py:43
+#: ../catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr "显示调试信息 (-vv 还将调试 catfish_lib)"
 
-#: ../catfish/__init__.py:46
+#: ../catfish/__init__.py:47
 msgid "Use large icons"
 msgstr "使用大图标"
 
-#: ../catfish/__init__.py:48
+#: ../catfish/__init__.py:49
 msgid "Use thumbnails"
 msgstr "使用缩略图"
 
-#: ../catfish/__init__.py:50
+#: ../catfish/__init__.py:51
 msgid "Display time in ISO format"
 msgstr "以 ISO 格式显示时间"
 
 #. Translators: Do not translate PATH, it is a variable.
-#: ../catfish/__init__.py:52
+#: ../catfish/__init__.py:53
 msgid "Set the default search path"
 msgstr "设置默认搜索目录 path"
 
-#: ../catfish/__init__.py:54
+#: ../catfish/__init__.py:55
 msgid "Perform exact match"
 msgstr "执行精确匹配"
 
-#: ../catfish/__init__.py:56
+#: ../catfish/__init__.py:57
 msgid "Include hidden files"
 msgstr "包含隐藏文件"
 
-#: ../catfish/__init__.py:58
+#: ../catfish/__init__.py:59
 msgid "Perform fulltext search"
 msgstr "执行全文检索"
 
-#: ../catfish/__init__.py:60
+#: ../catfish/__init__.py:61
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr "如果提供了路径和查找内容，则启动应用时开始搜索。"
 
-#: ../catfish/AboutCatfishDialog.py:37
+#. Translators: this text is displayed next to
+#. a filename that is not utf-8 encoded.
+#: ../catfish/CatfishWindow.py:106
+#, python-format
+msgid "%s (invalid encoding)"
+msgstr "%s (无效的编码)"
+
+#: ../catfish/CatfishWindow.py:146
 msgid "translator-credits"
 msgstr ""
 "Hunt Xu <huntxu@live.cn>, 2009.\n"
@@ -357,22 +367,15 @@ msgstr ""
 "玉堂白鹤 <yjwork@qq.com>, 2016.\n"
 "Xiaobo Zhou <zhouxiaobo.500@gmail.com>, 2013, 2014, 2017, 2018."
 
-#. Translators: this text is displayed next to
-#. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:100
-#, python-format
-msgid "%s (invalid encoding)"
-msgstr "%s (无效的编码)"
-
-#: ../catfish/CatfishWindow.py:256
+#: ../catfish/CatfishWindow.py:286
 msgid "Unknown"
 msgstr "未知"
 
-#: ../catfish/CatfishWindow.py:260
+#: ../catfish/CatfishWindow.py:290
 msgid "Never"
 msgstr "从不"
 
-#: ../catfish/CatfishWindow.py:339
+#: ../catfish/CatfishWindow.py:374
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -381,32 +384,37 @@ msgstr ""
 "在上面输入您要查找的文件或者\n"
 "点击 %s图标获取更多选项。"
 
-#: ../catfish/CatfishWindow.py:699
+#: ../catfish/CatfishWindow.py:731
 msgid "An error occurred while updating the database."
 msgstr "在更新数据库时发生错误。"
 
-#: ../catfish/CatfishWindow.py:701
+#: ../catfish/CatfishWindow.py:733
 msgid "Authentication failed."
 msgstr "认证失败。"
 
-#: ../catfish/CatfishWindow.py:707
+#: ../catfish/CatfishWindow.py:739
 msgid "Authentication cancelled."
 msgstr "认证取消。"
 
-#: ../catfish/CatfishWindow.py:713
+#: ../catfish/CatfishWindow.py:745
 msgid "Search database updated successfully."
 msgstr "搜索数据库更新成功。"
 
+#. Update the Cancel button to Close, make it default
+#: ../catfish/CatfishWindow.py:806
+msgid "Close"
+msgstr "关闭"
+
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:788
+#: ../catfish/CatfishWindow.py:820
 msgid "Updating..."
 msgstr "正在更新..."
 
-#: ../catfish/CatfishWindow.py:822
+#: ../catfish/CatfishWindow.py:854
 msgid "Stop Search"
 msgstr "停止搜索"
 
-#: ../catfish/CatfishWindow.py:823
+#: ../catfish/CatfishWindow.py:855
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -414,31 +422,31 @@ msgstr ""
 "搜索进行中...\n"
 "点击取消按钮或按Esc键可以停止。"
 
-#: ../catfish/CatfishWindow.py:832
+#: ../catfish/CatfishWindow.py:864
 msgid "Begin Search"
 msgstr "开始搜索"
 
-#: ../catfish/CatfishWindow.py:1110
+#: ../catfish/CatfishWindow.py:1142
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "无法打开 \"%s\"。"
 
-#: ../catfish/CatfishWindow.py:1162
+#: ../catfish/CatfishWindow.py:1194
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "无法保存 \"%s\"。"
 
-#: ../catfish/CatfishWindow.py:1179
+#: ../catfish/CatfishWindow.py:1211
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "无法删除 \"%s\"。"
 
-#: ../catfish/CatfishWindow.py:1219
+#: ../catfish/CatfishWindow.py:1250
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "将 \"%s\" 另存为..."
 
-#: ../catfish/CatfishWindow.py:1254
+#: ../catfish/CatfishWindow.py:1285
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -447,50 +455,50 @@ msgstr ""
 "您确定要永久删除\n"
 "\"%s\"?"
 
-#: ../catfish/CatfishWindow.py:1258
+#: ../catfish/CatfishWindow.py:1289
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr "您确定要删除选中的文件%i吗？"
 
-#: ../catfish/CatfishWindow.py:1261
+#: ../catfish/CatfishWindow.py:1292
 msgid "If you delete a file, it is permanently lost."
 msgstr "如果您删除该文件，它会永久丢失。"
 
-#: ../catfish/CatfishWindow.py:1284
+#: ../catfish/CatfishWindow.py:1315
 msgid "Filename"
 msgstr "文件名"
 
-#: ../catfish/CatfishWindow.py:1286
+#: ../catfish/CatfishWindow.py:1317
 msgid "Size"
 msgstr "大小"
 
-#: ../catfish/CatfishWindow.py:1288
+#: ../catfish/CatfishWindow.py:1319
 msgid "Location"
 msgstr "位置"
 
-#: ../catfish/CatfishWindow.py:1300
+#: ../catfish/CatfishWindow.py:1331
 msgid "Preview"
 msgstr "预览"
 
-#: ../catfish/CatfishWindow.py:1308
+#: ../catfish/CatfishWindow.py:1339
 msgid "Details"
 msgstr "详细信息"
 
-#: ../catfish/CatfishWindow.py:1527
+#: ../catfish/CatfishWindow.py:1556
 msgid "Today"
 msgstr "今天"
 
-#: ../catfish/CatfishWindow.py:1529
+#: ../catfish/CatfishWindow.py:1558
 msgid "Yesterday"
 msgstr "昨天"
 
-#: ../catfish/CatfishWindow.py:1610
+#: ../catfish/CatfishWindow.py:1639
 msgid "No files found."
 msgstr "没有找到文件。"
 
-#: ../catfish/CatfishWindow.py:1612
+#: ../catfish/CatfishWindow.py:1641
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -498,55 +506,54 @@ msgstr ""
 "尝试少指定一些搜索关键词\n"
 "或者尝试其它目录。"
 
-#: ../catfish/CatfishWindow.py:1619
+#: ../catfish/CatfishWindow.py:1648
 msgid "1 file found."
 msgstr "找到1个文件。"
 
-#: ../catfish/CatfishWindow.py:1621
+#: ../catfish/CatfishWindow.py:1650
 #, python-format
 msgid "%i files found."
 msgstr "找到 %i 个文件。"
 
-#: ../catfish/CatfishWindow.py:1627
+#: ../catfish/CatfishWindow.py:1656
 msgid "bytes"
 msgstr "字节"
 
-#: ../catfish/CatfishWindow.py:1738 ../catfish/CatfishWindow.py:1748
+#: ../catfish/CatfishWindow.py:1764 ../catfish/CatfishWindow.py:1774
 msgid "Searching..."
 msgstr "搜索中..."
 
-#: ../catfish/CatfishWindow.py:1746
+#: ../catfish/CatfishWindow.py:1772
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "正在搜索 \"%s\""
 
-#: ../catfish/CatfishWindow.py:1835
+#: ../catfish/CatfishWindow.py:1861
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "\"%s\" 的搜索结果"
 
-#: ../catfish_lib/SudoDialog.py:138
+#: ../catfish_lib/catfishconfig.py:91
+msgid "Catfish is a versatile file searching tool."
+msgstr "Catfish 是一款多功能的文件搜索工具。"
+
+#: ../catfish_lib/SudoDialog.py:135
 msgid "Password Required"
 msgstr "需要密码："
 
-#: ../catfish_lib/SudoDialog.py:175
+#: ../catfish_lib/SudoDialog.py:172
 msgid "Incorrect password... try again."
 msgstr "密码不正确......再试一次。"
 
-#: ../catfish_lib/SudoDialog.py:185
+#: ../catfish_lib/SudoDialog.py:182
 msgid "Password:"
 msgstr "密码："
 
-#. Buttons
 #: ../catfish_lib/SudoDialog.py:196
-msgid "Cancel"
-msgstr "取消"
-
-#: ../catfish_lib/SudoDialog.py:199
 msgid "OK"
 msgstr "确定"
 
-#: ../catfish_lib/SudoDialog.py:220
+#: ../catfish_lib/SudoDialog.py:217
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
@@ -554,7 +561,7 @@ msgstr ""
 "请输入密码以便 \n"
 "执行管理员权限。"
 
-#: ../catfish_lib/SudoDialog.py:222
+#: ../catfish_lib/SudoDialog.py:219
 #, python-format
 msgid ""
 "The application '%s' lets you\n"
@@ -589,29 +596,35 @@ msgstr "Catfish 的主窗口显示了可用的过滤器以及过滤后的搜索�
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This releases adds support for running under Wayland and features refreshed "
+"dialogs with simplified controls."
+msgstr "此版本增加了在 Wayland 下运行的支持，并带有简化控件的刷新对话框。"
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This releases addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr "此版本解决了一些启动错误以及遍历符号链接的各种问题。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
 msgstr "此版本包括许多外观改进，引入了新的首选项对话框，并改进了搜索结果和性能。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr "此版本通过排除不常用的搜索目录来提高性能。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
 msgstr "此版本具有更好的桌面集成、对 OpenBSD 和 Wayland 的支持以及改进的翻译支持。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -620,7 +633,7 @@ msgid ""
 msgstr ""
 "该发行版本提升了性能、更好的桌面整合能力，以及一些由来已久的漏掉修复。引用搜索语句现已可以正确解析。文件也能够直接拖进其他应用程序中。缩略图只在用户请求的情况之下才会生成。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -630,23 +643,23 @@ msgstr ""
 "本次更新包括了对缩略图处理进行的一些改进和诸多错误的修复。 图标预览已得到改进，现在将与其他应用程序匹配。 "
 "搜索结果窗口底部显示的所有项目现在都可以被所有桌面主题访问。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid "This is a minor translations-only release."
 msgstr "该版本仅更新了翻译。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr "该版本包括一些性能上的提升以及大量翻译工作的完善"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr "该版本会根据用户所处时区来显示文件的时间戳而不是以前使用的UTC时间"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -656,7 +669,7 @@ msgstr ""
 "本次更新修正了一些关于搜索结果窗口的错误. 文件现在又可以从搜索结果列表中被删除. 鼠标中键和右键的功能被得以恢复. "
 "过滤时间段现在可以根据时区而不是协调时间时 (UTC) 来执行."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -667,43 +680,43 @@ msgstr ""
 "本次更新包括了重大更新的界面，搜索速度的改善，和对诸多错误的修正。利用 "
 "GTK+工具包的一些最新功能，包括可选的标题栏和弹出窗口小部件，工作流程得到了改进。 在可用时集成了 PolicyKit 使密码处理得到了改进。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr "本版本修复了两处新的缺陷同时完善了翻译情况"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr "此版本修复了本应用在某些系统上无法启动的回归。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
 " and the dialogs used to update the database have been improved."
 msgstr "此版本修复了不再支持多个搜索字词的回归。 现在，当搜索数据库过期时，将显示InfoBar，并且用于更新数据库的对话框已得到改进。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr "此版本修复了定位无法正确执行的两个错误，并改进了对缺少符号图标的处理。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
 "selection."
 msgstr "此稳定版本提高了密码对话框的可靠性，清除了未使用的代码，并修复了列表和项目选择的潜在问题。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr "本次更新修复了程序启动时的潜在安全问题，并修复了选择多个搜索结果的回归。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
