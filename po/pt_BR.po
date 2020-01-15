@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Marcelo Tobias <marcelo.tobbias@gmail.com>, 2018
 # Xfce Bot <transifex@xfce.org>, 2018
@@ -11,7 +11,7 @@
 # Nick Schermer <nick@xfce.org>, 2019
 # Michael Martins <michaelfm21@gmail.com>, 2019
 # Andre Miranda <andre42m@gmail.com>, 2019
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""

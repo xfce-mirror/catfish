@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Levi Zhou <congzhou821@gmail.com>, 2018
 # No Body, 2018
@@ -10,7 +10,7 @@
 # Mingcong Bai <jeffbai@aosc.xyz>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
 # 玉堂白鹤 <yjwork@qq.com>, 2020
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -596,13 +596,13 @@ msgstr "Catfish 的主窗口显示了可用的过滤器以及过滤后的搜索�
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
-"This releases adds support for running under Wayland and features refreshed "
+"This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr "此版本增加了在 Wayland 下运行的支持，并带有简化控件的刷新对话框。"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
-"This releases addresses some startup errors as well as various issues with "
+"This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr "此版本解决了一些启动错误以及遍历符号链接的各种问题。"
 

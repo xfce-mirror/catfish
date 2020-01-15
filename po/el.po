@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Georgios Zarkadas <georgios.zarkadas@gmail.com>, 2018
 # Xfce Bot <transifex@xfce.org>, 2018
 # Panagiotis Mantzios <pmantzios@hotmail.com>, 2018
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""

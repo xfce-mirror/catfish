@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2018
 # Nick Schermer <nick@xfce.org>, 2019
 # scootergrisen, 2020
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -604,7 +604,7 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
-"This releases adds support for running under Wayland and features refreshed "
+"This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr ""
 "Denne udgivelse tilføjer understøttelse af kørsel under Wayland og har "
@@ -612,7 +612,7 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
-"This releases addresses some startup errors as well as various issues with "
+"This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
 "Denne udgivelse adresserer opstartsproblemer samt diverse problemer i "

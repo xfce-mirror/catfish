@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2018
 # Nick Schermer <nick@xfce.org>, 2018
 # Kukuh Syafaat <syafaatkukuh@gmail.com>, 2019
 # Ardjuna <Asyura.x@gmail.com>, 2019
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""

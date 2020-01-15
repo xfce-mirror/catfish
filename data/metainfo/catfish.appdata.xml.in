@@ -43,9 +43,17 @@
   </provides>
 
   <releases>
+    <release version="1.4.13" date="2020-01-14">
+      <description>
+        <_p>This release resolves packaging errors for Debian and includes
+        optimized assets.
+        </_p>
+      </description>
+    </release>
+
     <release version="1.4.12" date="2020-01-01">
       <description>
-        <_p>This releases adds support for running under Wayland and features
+        <_p>This release adds support for running under Wayland and features
         refreshed dialogs with simplified controls.
         </_p>
       </description>
@@ -53,7 +61,7 @@
 
     <release version="1.4.11" date="2019-12-21">
       <description>
-        <_p>This releases addresses some startup errors as well as various
+        <_p>This release addresses some startup errors as well as various
         issues with traversing symbolic links.
         </_p>
       </description>

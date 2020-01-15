@@ -2,11 +2,11 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2019
 # Besnik <besnik@programeshqip.org>, 2019
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -598,7 +598,7 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
-"This releases addresses some startup errors as well as various issues with "
+"This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
 "Kjo hedhje në në qarkullim merret me disa gabime gjatë nisjes, si dhe me "

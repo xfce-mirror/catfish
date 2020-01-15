@@ -1,3 +1,15 @@
+v1.4.13:
+ + General:
+   - Optimized svg and png assets
+ + Bug Fixes:
+   - Fix missing results from symbolic links (Xfce #16318)
+   - Do not load catfishconfig during setup as it breaks Debian packaging
+ + Translation Updates:
+   Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech,
+   Danish, Dutch, French, Galician, German, Hungarian, Interlingue, Italian,
+   Japanese, Lithuanian, Norwegian Bokmål, Polish, Portuguese, Russian,
+   Spanish, Swedish, Turkish
+
 v1.4.12:
  + New Features:
    - Wayland and GNOME Shell support (Xfce #16293)

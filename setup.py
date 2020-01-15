@@ -22,7 +22,7 @@ import shutil
 import sys
 import subprocess
 
-__version__ = '1.4.12'
+__version__ = '1.4.13'
 __url__ = 'https://docs.xfce.org/apps/catfish/start'
 
 try:

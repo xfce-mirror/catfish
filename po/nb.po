@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Eirik Dekko <edekko@gmail.com>, 2018
 # Harald H. <haarektrans@gmail.com>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
 # Allan Nordhøy <epost@anotheragency.no>, 2020
 # Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -600,13 +600,13 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
-"This releases adds support for running under Wayland and features refreshed "
+"This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr "Denne utgivelsen støtter Wayland og har forenklet dialogvinduene."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
-"This releases addresses some startup errors as well as various issues with "
+"This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
 "Denne utgivelsen fikser noen feil ved oppstart og følging av symbolske "
