@@ -22,7 +22,8 @@ import shutil
 import sys
 import subprocess
 
-from catfish_lib.catfishconfig import __version__, __url__
+__version__ = '1.4.12'
+__url__ = 'https://docs.xfce.org/apps/catfish/start'
 
 try:
     import DistUtilsExtra.auto
