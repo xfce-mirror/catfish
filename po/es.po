@@ -2,25 +2,25 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Adolfo Jayme-Barrientos, 2018
 # Xfce Bot <transifex@xfce.org>, 2018
 # Jaime Marquínez Ferrándiz, 2019
-# Casper casper, 2019
 # prflr88 <prflr88@gmail.com>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
 # 629cf3e396111bb8c5fb6664e2dbc91d, 2020
 # Toni Estévez <toni.estevez@gmail.com>, 2020
-#
+# Casper casper, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-01 13:36-0500\n"
+"POT-Creation-Date: 2020-01-14 21:03-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2020\n"
+"Last-Translator: Casper casper, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/xfce/teams/16840/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -611,13 +611,21 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release resolves packaging errors for Debian and includes optimized "
+"assets."
+msgstr ""
+"Esta versión resuelve errores de empaquetado para Debian e incluye activos "
+"optimizados."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr ""
-"Esta versión añade compatibilidad para ejecutarse en Wayland y presenta "
-"diálogos actualizados con controles simplificados."
+"Esta versión agrega soporte para ejecutarse en Wayland y presenta cuadros de"
+" diálogo actualizados con controles simplificados."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
@@ -625,7 +633,7 @@ msgstr ""
 "Esta versión aborda algunos errores de inicio, así como varios problemas al "
 "atravesar enlaces simbólicos."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
@@ -634,7 +642,7 @@ msgstr ""
 "diálogo de preferencias y mejora los resultados y el rendimiento de la "
 "búsqueda."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
@@ -642,7 +650,7 @@ msgstr ""
 "Esta versión incluye mejoras de rendimiento al excluir carpetas de búsqueda "
 "poco comunes."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
@@ -651,7 +659,7 @@ msgstr ""
 "compatibilidad con OpenBSD y Wayland, y un mejor apoyo para las "
 "traducciones."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -664,7 +672,7 @@ msgstr ""
 "arrastrados a otras aplicaciones. Las miniaturas solo se generan cuando lo "
 "solicita el usuario."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -677,11 +685,11 @@ msgstr ""
 " se muestran en la parte inferior de la ventana de resultados ahora son "
 "accesibles con todos los temas del escritorio."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid "This is a minor translations-only release."
 msgstr "Esta es una versión menor solo para traducciones."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -689,7 +697,7 @@ msgstr ""
 "Esta versión presenta varias mejoras de rendimiento y numerosas "
 "actualizaciones de las traducciones."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -698,7 +706,7 @@ msgstr ""
 "acuerdo con la zona horaria en lugar de con el tiempo universal coordinado "
 "(UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -712,7 +720,7 @@ msgstr ""
 "acuerdo con la zona horaria en lugar de con el tiempo universal coordinado "
 "(UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -727,12 +735,12 @@ msgstr ""
 "opcionales y los elementos gráficos emergentes. El manejo de contraseñas se "
 "ha mejorado con la integración de PolicyKit cuando esté disponible."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Esta versión corrige dos errores nuevos e incluye traducciones actualizadas."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -740,7 +748,7 @@ msgstr ""
 "Esta versión corrige una regresión que impedía que la aplicación se iniciara"
 " en algunos sistemas."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -750,7 +758,7 @@ msgstr ""
 "de búsqueda. Ahora se muestra una barra de información cuando el índice de "
 "búsqueda está obsoleto y se han mejorado los diálogos para actualizarlo."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -758,7 +766,7 @@ msgstr ""
 "Esta versión corrige dos problemas que impedían ejecutar la orden locate "
 "correctamente y mejora el manejo de la falta de iconos simbólicos."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -768,7 +776,7 @@ msgstr ""
 "elimina código no utilizado y corrige posibles problemas con la lista y la "
 "selección de elementos."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -776,7 +784,7 @@ msgstr ""
 "Esta actualización soluciona un posible problema de seguridad con el inicio "
 "del programa y corrige una regresión al seleccionar múltiples elementos."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
+#: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
