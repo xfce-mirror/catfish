@@ -25,7 +25,7 @@ msgstr ""
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:28
 #: ../catfish_lib/catfishconfig.py:88
 msgid "Catfish File Search"
-msgstr "Kërkim Kartelash me Catfish"
+msgstr "Kërkim Kartelash Catfish"
 
 #: ../org.xfce.Catfish.desktop.in.h:2
 msgid "File search"
@@ -509,7 +509,7 @@ msgstr "U gjet 1 kartelë."
 #: ../catfish/CatfishWindow.py:1650
 #, python-format
 msgid "%i files found."
-msgstr "U gjetën kartela %i."
+msgstr "U gjetën %i kartela."
 
 #: ../catfish/CatfishWindow.py:1656
 msgid "bytes"
@@ -568,7 +568,7 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr "Mmjet i zhdërvjellët kërkimesh"
+msgstr "Mjet i zhdërvjellët kërkimesh"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:2
 msgid ""
