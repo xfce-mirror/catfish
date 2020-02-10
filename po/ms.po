@@ -613,12 +613,16 @@ msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr ""
+"Keluaran ini menambah sokongan untuk yang dijalankan bawah Wayland dan "
+"memfiturkan dialog-dialog disegar semula dengan kawasan lebih ringkas."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
+"Keluaran ini mempersembahkan beberapa ralat permulaan dan juga pelbagai isu "
+"dengan pautan-pautan simbolik yang menyusur."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
