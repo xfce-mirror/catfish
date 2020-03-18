@@ -11,6 +11,7 @@
 # Πέτρος Σαμαράς <psamaras1@gmail.com>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
 # Stephanos Papanikolopoulos <spapanik21@gmail.com>, 2020
+# Ioannis LM, 2020
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 21:03-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Stephanos Papanikolopoulos <spapanik21@gmail.com>, 2020\n"
+"Last-Translator: Ioannis LM, 2020\n"
 "Language-Team: Greek (https://www.transifex.com/xfce/teams/16840/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,7 +49,7 @@ msgstr "αρχεία;εύρεση;τοποθέτηση;lookup;αναζήτηση
 
 #: ../data/ui/CatfishPreferences.ui.h:1
 msgid "Catfish Preferences"
-msgstr ""
+msgstr "Προτιμήσεις του Catfish"
 
 #: ../data/ui/CatfishPreferences.ui.h:2
 msgid "_Close"
@@ -56,31 +57,32 @@ msgstr "_Κλείσιμο"
 
 #: ../data/ui/CatfishPreferences.ui.h:3
 msgid "Classic (_Titlebar)"
-msgstr ""
+msgstr "Κλασικό (Μπάρα _τίτλου)"
 
 #: ../data/ui/CatfishPreferences.ui.h:4
 msgid "_Modern (CSD)"
-msgstr ""
+msgstr "_Μοντέρνο (CSD)"
 
 #: ../data/ui/CatfishPreferences.ui.h:5
 msgid "Your new window layout will be applied after restarting Catfish."
 msgstr ""
+"Η νέα διάταξη παραθύρου θα εφαρμοστεί μετά την επανεκκίνηση του Catfish."
 
 #: ../data/ui/CatfishPreferences.ui.h:6
 msgid "Window Layout"
-msgstr ""
+msgstr "Διάταξη παραθύρου"
 
 #: ../data/ui/CatfishPreferences.ui.h:7
 msgid "Show _hidden files in the results"
-msgstr ""
+msgstr "Εμφάνιση _κρυφών αρχείων στα αποτελέσματα"
 
 #: ../data/ui/CatfishPreferences.ui.h:8
 msgid "Show filter _sidebar"
-msgstr ""
+msgstr "Εμφάνιση μπάρας _φίλτρων"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Display Options"
-msgstr ""
+msgstr "Επιλογές εμφάνισης"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Appearance"
@@ -88,7 +90,7 @@ msgstr "Εμφάνιση"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
-msgstr ""
+msgstr "Διαδρομή"
 
 #: ../data/ui/CatfishPreferences.ui.h:12
 msgid "Add Directory..."
@@ -96,7 +98,7 @@ msgstr "Προσθήκη Καταλόγου"
 
 #: ../data/ui/CatfishPreferences.ui.h:13
 msgid "_Add"
-msgstr ""
+msgstr "_Προσθήκη"
 
 #: ../data/ui/CatfishPreferences.ui.h:14
 msgid "Remove Directory"
@@ -104,19 +106,19 @@ msgstr "Διαγραφή Καταλόγου"
 
 #: ../data/ui/CatfishPreferences.ui.h:15
 msgid "_Remove"
-msgstr ""
+msgstr "_Αφαίρεση"
 
 #: ../data/ui/CatfishPreferences.ui.h:16
 msgid "Exclude Directories"
-msgstr ""
+msgstr "Εξαίρεση καταλόγων"
 
 #: ../data/ui/CatfishPreferences.ui.h:17
 msgid "Close the search _window after opening a file"
-msgstr ""
+msgstr "Κλείσιμο του παραθύρου ανα_ζήτησης μετά από το άνοιγμα ενός αρχείου"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Διάφορα"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Advanced"
@@ -273,7 +275,7 @@ msgstr "Επιλογή ενός καταλόγου"
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "Search for files"
-msgstr ""
+msgstr "Αναζήτηση αρχείων"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "Compact List"
@@ -285,7 +287,7 @@ msgstr "Μικρογραφίες"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgid "Show _sidebar"
-msgstr ""
+msgstr "Εμφάνιση _μπάρας"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "Show _hidden files"
@@ -293,15 +295,15 @@ msgstr "Εμφάνιση _κρυφών αρχείων"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "Search file _contents"
-msgstr ""
+msgstr "Αναζήτηση στο _περιεχόμενο των αρχείων "
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "_Match results exactly"
-msgstr ""
+msgstr "_Ταίριασμα αποτελεσμάτων με ακρίβεια"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "_Refresh search index..."
-msgstr ""
+msgstr "Ανανέωση _περιεχομένων ευρετηρίου..."
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "_Preferences"
@@ -318,6 +320,8 @@ msgstr "Χρήση: %πρόγραμμα [επιλογές] διαδρομές α
 #: ../catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr ""
+"Εμφάνιση μηνυμάτων αποσφαλμάτωσης (επίσης με -vv θα γίνει αποσφαλμάτωση στο "
+"catfish_lib)"
 
 #: ../catfish/__init__.py:47
 msgid "Use large icons"
@@ -334,7 +338,7 @@ msgstr "Εμφάνιση ώρας σε μορφή ISO"
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:53
 msgid "Set the default search path"
-msgstr ""
+msgstr "Εισάγετε την προκαθορισμένη διαδρομή αναζήτησης"
 
 #: ../catfish/__init__.py:55
 msgid "Perform exact match"
@@ -383,6 +387,8 @@ msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
+"Εισάγετε την αναζήτησή σας παραπάνω για να βρείτε αρχεία σας\n"
+"ή κάνετε κλικ στο εικονίδιο %s για περισσότερες επιλογές."
 
 #: ../catfish/CatfishWindow.py:731
 msgid "An error occurred while updating the database."
@@ -444,7 +450,7 @@ msgstr "Αδυναμία διαγραφής \"%s\"."
 #: ../catfish/CatfishWindow.py:1250
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr ""
+msgstr "Αποθήκευση \"%s\" ως..."
 
 #: ../catfish/CatfishWindow.py:1285
 #, python-format
@@ -523,7 +529,7 @@ msgstr "bytes"
 
 #: ../catfish/CatfishWindow.py:1764 ../catfish/CatfishWindow.py:1774
 msgid "Searching..."
-msgstr ""
+msgstr "Αναζήτηση..."
 
 #: ../catfish/CatfishWindow.py:1772
 #, python-format
@@ -594,12 +600,16 @@ msgstr ""
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "The main Catfish window displaying image search results"
 msgstr ""
+"Το κυρίως παράθυρο του Catfish εμφανίζει τα αποτελέσματα αναζήτησης από "
+"εικόνες"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
 "The main Catfish window displaying available filters and filtered search "
 "results"
 msgstr ""
+"Το κυρίως παράθυρο του Catfish εμφανίζει τα διαθέσιμα φίλτρα και τα "
+"φιλτραρισμένα αποτελέσματα της αναζήτησης"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
