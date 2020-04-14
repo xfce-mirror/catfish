@@ -7,7 +7,7 @@
 # Georgios Zarkadas <georgios.zarkadas@gmail.com>, 2018
 # Xfce Bot <transifex@xfce.org>, 2018
 # Panagiotis Mantzios <pmantzios@hotmail.com>, 2018
-# Apóstolos Papaðimitríu <apostolos.papadimitriu@gmail.com>, 2019
+# Ápo. <apostolos.papadimitriu@gmail.com>, 2019
 # Πέτρος Σαμαράς <psamaras1@gmail.com>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
 # Ioannis LM, 2020
