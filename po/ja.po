@@ -10,6 +10,7 @@
 # Nick Schermer <nick@xfce.org>, 2020
 # UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2020
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2020
+# YAMADA Shinichirou <yamada_strong_yamada_nice_64bit@yahoo.co.jp>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 21:03-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2020\n"
+"Last-Translator: YAMADA Shinichirou <yamada_strong_yamada_nice_64bit@yahoo.co.jp>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/xfce/teams/16840/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -215,7 +216,7 @@ msgstr "アップデート"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr "検索データベースは７日以上更新されていません。今すぐアップデートしますか？"
+msgstr "検索データベースは 7 日以上更新されていません。今すぐアップデートしますか？"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "File Type"
@@ -380,8 +381,8 @@ msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
-"上のクエリを入力してファイルを見つけるか、\n"
-"%s アイコンをクリックしてその他のオプションを選択する。"
+"上にクエリを入力してファイルを見つけるか、\n"
+"%s アイコンをクリックしてその他のオプションを選択してください。"
 
 #: ../catfish/CatfishWindow.py:731
 msgid "An error occurred while updating the database."
@@ -451,8 +452,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
-"本当に \"%s\"\n"
-" を恒久的に削除しても良いですか？"
+"本当に \"%s\" を\n"
+"完全に削除しますか？"
 
 #: ../catfish/CatfishWindow.py:1289
 #, python-format
@@ -460,8 +461,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
-"本当に %i つのファイル\n"
-"を恒久的に削除しても良いですか？"
+"本当に %i 個のファイルを\n"
+"完全に削除しますか？"
 
 #: ../catfish/CatfishWindow.py:1292
 msgid "If you delete a file, it is permanently lost."
