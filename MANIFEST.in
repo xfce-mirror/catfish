@@ -1,4 +1,4 @@
-include AUTHORS ChangeLog COPYING catfish.1 org.xfce.Catfish.desktop.in INSTALL README
+include AUTHORS ChangeLog COPYING catfish.1 org.xfce.Catfish.desktop.in INSTALL README.md
 include bin/*
 recursive-include catfish *.py
 recursive-include catfish_lib *.py
