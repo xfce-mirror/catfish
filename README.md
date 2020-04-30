@@ -16,7 +16,7 @@ at the following locations:
 
 * [Homepage](https://docs.xfce.org/apps/catfish/start)
 * [Bugs](https://bugzilla.xfce.org/buglist.cgi?product=Catfish)
-* [Code](https://git.xfce.org/apps/catfish)
+* [Code](https://gitlab.xfce.org/apps/catfish)
 * [Translations](https://www.transifex.com/xfce/public)
 
 Dependencies
