@@ -603,18 +603,21 @@ msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
 msgstr ""
+"Denne utgivelsen fikser pakkefeil for Debian og har optimerte ressurser."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
-msgstr ""
+msgstr "Denne utgivelsen støtter Wayland og har forenklet dialogvinduene."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
+"Denne utgivelsen fikser noen feil ved oppstart og følging av symbolske "
+"lenker."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
