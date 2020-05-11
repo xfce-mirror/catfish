@@ -39,7 +39,7 @@ msgstr "Otsi failisüsteemist"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: ../org.xfce.Catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "files;find;locate;lookup;search;failid;leia;otsi;päring;"
 
 #: ../data/ui/CatfishPreferences.ui.h:1
 msgid "Catfish Preferences"
@@ -72,7 +72,7 @@ msgstr "Näita tulemustes _peidetud faile"
 
 #: ../data/ui/CatfishPreferences.ui.h:8
 msgid "Show filter _sidebar"
-msgstr ""
+msgstr "Näita _filtreerivat külgpaani"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Display Options"
@@ -116,7 +116,7 @@ msgstr "Mitmesugust"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Advanced"
-msgstr "Täpsem"
+msgstr "Lisaseaded"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
@@ -259,6 +259,8 @@ msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"Kiiremate otsingutulemuste jaoks pead värskendama otsingute andmebaasi.\n"
+"See tegevus eeldab administraatori õigusi."
 
 #: ../data/ui/CatfishWindow.ui.h:38
 msgid "Select a Directory"
@@ -310,7 +312,7 @@ msgstr "Kasutus: %prog [suvandid] otsitee päring"
 
 #: ../catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
-msgstr ""
+msgstr "Näita silumisteateid (-vv võimaldab siluda ka catfish_lib teeki)"
 
 #: ../catfish/__init__.py:47
 msgid "Use large icons"
@@ -398,7 +400,7 @@ msgstr "Otsingute andmebaasi uuendus õnnestus."
 #. Update the Cancel button to Close, make it default
 #: ../catfish/CatfishWindow.py:806
 msgid "Close"
-msgstr "Sulgeda"
+msgstr "Sulge"
 
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:820
@@ -447,6 +449,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
+"Kas oled kindel,\n"
+"et soovid jäädavalt kustutada \"%s\"?"
 
 #: ../catfish/CatfishWindow.py:1289
 #, python-format
@@ -454,10 +458,12 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
+"Kas oled kindel,\n"
+"et soovid jäädavalt kustutada %i valitud faili?"
 
 #: ../catfish/CatfishWindow.py:1292
 msgid "If you delete a file, it is permanently lost."
-msgstr ""
+msgstr "Kui sa kustutad faili, siis läheb see jäädavalt kaotsi."
 
 #: ../catfish/CatfishWindow.py:1315
 msgid "Filename"
@@ -519,12 +525,12 @@ msgstr "Otsin..."
 #: ../catfish/CatfishWindow.py:1772
 #, python-format
 msgid "Searching for \"%s\""
-msgstr ""
+msgstr "Otsin vasteid sõnele \"%s\""
 
 #: ../catfish/CatfishWindow.py:1861
 #, python-format
 msgid "Search results for \"%s\""
-msgstr ""
+msgstr "Otsingutulemused sõne \"%s\" kohta"
 
 #: ../catfish_lib/catfishconfig.py:91
 msgid "Catfish is a versatile file searching tool."
@@ -560,6 +566,8 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
+"Rakendus '%s' lubab sul muuta\n"
+"süsteemi olulisi koostisosi."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
@@ -573,6 +581,11 @@ msgid ""
 "modification date, file type, and file contents, users will no longer be "
 "dependent on the file manager or organization skills."
 msgstr ""
+"Catfish on väike, kiire ja võimas otsingutarvik. Kasutades lakoonilist "
+"liidest on rõhk eelkõige otsingutulemustel ja see võimaldab kasutajatel "
+"leida faile ilma failihaldurit kasutamata. Kasutades detailseid filtreid "
+"nagu muutmise kuupäev, faili tüüp ja faili sisu, ei ole kasutajad enam "
+"sõltuvad failihaldurist oma sisu haldamisel."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "The main Catfish window displaying image search results"
