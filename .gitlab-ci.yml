@@ -1,0 +1,37 @@
+image: xfce/xfce-build:latest
+
+stages:
+  - build
+
+translations:
+  extends: .translation
+  stage: build
+  script:
+    #  Could validate translations, but for now just pass
+    - "true"
+
+build:
+  stage: build
+  script:
+    - python3 setup.py sdist
+  rules:
+    # If there are changes to .po, never run. We also check
+    # BEFORE_SHA to see if it is zeros, in which case we are
+    # running on a manual trigger or scheduled pipeline. In
+    # that case, changes resolves to true so we need to check
+    # both.
+    - if: '$CI_COMMIT_BEFORE_SHA != "0000000000000000000000000000000000000000"'
+      changes:
+      - "po/*.po"
+      when: never
+    # Otherwise, always run
+    - when: always
+
+.translation:
+  rules:
+    # If there are changes to .po, run this job
+    - changes:
+      - "po/*.po"
+      when: always
+    # Otherwise, never run
+    - when: never
