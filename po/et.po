@@ -361,7 +361,7 @@ msgstr "%s (vigane kodeering)"
 #: ../catfish/CatfishWindow.py:146
 msgid "translator-credits"
 msgstr ""
-"Kristjan Siimson <epost@ksiimson.se> & tolge.pingviin.org\n"
+"Kristjan Siimson <epost@ksiimson.se> &amp; tolge.pingviin.org\n"
 "Priit Jõerüüt 2020"
 
 #: ../catfish/CatfishWindow.py:286
