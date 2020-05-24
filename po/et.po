@@ -76,7 +76,7 @@ msgstr "Näita _filtreerivat külgpaani"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Display Options"
-msgstr ""
+msgstr "Kuvamise valikud"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Appearance"
@@ -296,7 +296,7 @@ msgstr "Otsi _täpset vastet"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "_Refresh search index..."
-msgstr "_Värskenda otsingindeksit..."
+msgstr "_Värskenda otsinguindeksit..."
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "_Preferences"
