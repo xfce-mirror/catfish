@@ -86,7 +86,7 @@ def get_about():
     return {
         'version': __version__,
         'program_name': _('Catfish File Search'),
-        'icon_name': 'catfish',
+        'icon_name': 'org.xfce.catfish',
         'website': __url__,
         'comments': _('Catfish is a versatile file searching tool.'),
         'copyright': 'Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n'
