@@ -1015,7 +1015,7 @@
     <property name="modal">True</property>
     <property name="window_position">center-on-parent</property>
     <property name="destroy_with_parent">True</property>
-    <property name="icon_name">catfish</property>
+    <property name="icon_name">org.xfce.catfish</property>
     <property name="type_hint">dialog</property>
     <property name="transient_for">Catfish</property>
     <signal name="delete-event" handler="on_update_index_dialog_close" swapped="no"/>

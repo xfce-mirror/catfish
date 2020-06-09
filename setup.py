@@ -60,35 +60,64 @@ def update_config(libdir, values={}):
     return oldvalues
 
 
-def move_icon_file(root, target_data):
+def get_icon_files(root, target_data):
+    files = []
+    for extension in ["png", "svg"]:
+        icon_name = "org.xfce.catfish.%s" % extension
+        filename = os.path.join(root, icon_name)
+        if os.path.exists(filename):
+            files.append(filename)
+    if len(files) == 0:
+        sys.stderr.write("ERROR: Can't find icons in %s" % root)
+        sys.exit(1)
+    return files
+
+
+def move_icon_file(root, icon_size, target_data):
     """Move the icon files to their installation prefix."""
     old_icon_path = os.path.normpath(
-        os.path.join(root, target_data, 'share', 'catfish', 'media'))
-    old_icon_file = os.path.join(old_icon_path, 'catfish.svg')
-    icon_path = os.path.normpath(
-        os.path.join(root, target_data, 'share', 'icons', 'hicolor',
-                     'scalable', 'apps'))
-    icon_file = os.path.join(icon_path, 'catfish.svg')
+        os.path.join(root, target_data, 'share', 'catfish', 'media', icon_size))
 
-    # Get the real paths.
-    old_icon_file = os.path.realpath(old_icon_file)
-    icon_file = os.path.realpath(icon_file)
+    for old_icon_file in get_icon_files(old_icon_path, target_data):
+        icon_name = os.path.basename(old_icon_file)
+        icon_path = os.path.normpath(
+            os.path.join(root, target_data, 'share', 'icons',
+                         'hicolor', icon_size, 'apps'))
+        icon_file = os.path.join(icon_path, icon_name)
 
-    if not os.path.exists(old_icon_file):
-        sys.stderr.write("ERROR: Can't find", old_icon_file)
-        sys.exit(1)
-    if not os.path.exists(icon_path):
-        os.makedirs(icon_path)
-    if old_icon_file != icon_file:
-        print("Moving icon file: %s -> %s" % (old_icon_file, icon_file))
-        os.rename(old_icon_file, icon_file)
+        # Get the real paths.
+        old_icon_file = os.path.realpath(old_icon_file)
+        icon_file = os.path.realpath(icon_file)
 
-    # Media is now empty
+        if not os.path.exists(icon_path):
+            os.makedirs(icon_path)
+        if old_icon_file != icon_file:
+            print("Moving icon file: %s -> %s" % (old_icon_file, icon_file))
+            os.rename(old_icon_file, icon_file)
+
+    # Media/icon_size is now empty
     if len(os.listdir(old_icon_path)) == 0:
         print("Removing empty directory: %s" % old_icon_path)
         os.rmdir(old_icon_path)
 
     return icon_file
+
+
+def move_icon_files(root, target_data):
+    """Move the icon files to their installation prefix."""
+    files = []
+
+    for icon_size in ["16x16", "48x48", "128x128", "scalable"]:
+        files.append(move_icon_file(root, icon_size, target_data))
+    media_path = os.path.normpath(
+        os.path.join(root, target_data, 'share', 'catfish', 'media'))
+
+    # Media is now empty
+    if len(os.listdir(media_path)) == 0:
+        print("Removing empty directory: %s" % media_path)
+        os.rmdir(media_path)
+
+    return files
 
 
 def get_desktop_file(root, target_data):
@@ -191,7 +220,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
         desktop_file = get_desktop_file(self.root, target_data)
         print(("Desktop File: %s\n" % desktop_file))
-        move_icon_file(self.root, target_data)
+        move_icon_files(self.root, target_data)
         update_desktop_file(desktop_file, script_path)
 
         cleanup_metainfo_files(self.root, target_data)
