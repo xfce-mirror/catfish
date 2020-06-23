@@ -6,6 +6,7 @@
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2019
 # Elishai Eliyahu <e1907@mm.st>, 2020
+# Omer, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 21:03-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Elishai Eliyahu <e1907@mm.st>, 2020\n"
+"Last-Translator: Omer, 2020\n"
 "Language-Team: Hebrew (https://www.transifex.com/xfce/teams/16840/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -211,7 +212,7 @@ msgstr "עדכון"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr "מאגר החיפוש הוא בן יותר מ-7 ימים. לעדכן עכשיו?"
+msgstr "מאגר נתוני החיפוש הוא בן יותר מ־7 ימים. לעדכן עכשיו?"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "File Type"
@@ -242,7 +243,7 @@ msgstr "פתח"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "<b>Database:</b>"
-msgstr "<b>מאגר:</b>"
+msgstr "<b>מאגר נתונים:</b>"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "<b>Updated:</b>"
@@ -377,7 +378,7 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:731
 msgid "An error occurred while updating the database."
-msgstr "אירעה שגיאה בעת עדכון המאגר."
+msgstr "אירעה שגיאה בעת עדכון מאגר הנתונים."
 
 #: ../catfish/CatfishWindow.py:733
 msgid "Authentication failed."
@@ -732,7 +733,7 @@ msgid ""
 " up unused code, and fixed potential issues with the list and item "
 "selection."
 msgstr ""
-"גרסה יציבה זו שיפרה את האמינות של דו שיח סיסמאות, ניקתה קוד לא בשימוש, "
+"גרסה יציבה זו שיפרה את האמינות של דו־שיח סיסמאות, ניקתה קוד לא בשימוש, "
 "ותיקנה בעיות פוטנציאליות בבחירת רשימות ופריטים."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:23
