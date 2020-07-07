@@ -460,48 +460,50 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
             for filename in files:
                 if self.force_stop:
                     break
-                
+
                 # Checks if regular file (excludes special files).
-                if os.path.isfile(os.path.join(root, filename)):
+                if not os.path.isfile(os.path.join(root, filename)):
+                    continue
 
-                    # If the filetype is known to not be text, move along.
-                    mime = guess_type(filename)[0]
-                    if not mime or 'text' in mime:
+                # If the filetype is known to not be text, move along.
+                mime = guess_type(filename)[0]
+                if not mime or 'text' in mime:
+                    try:
+                        opened = open(os.path.join(root, filename), 'r')
+
+                        find_keywords = find_keywords_backup
+
+                        # Check each line.  If a keyword is found, yield.
                         try:
-                            opened = open(os.path.join(root, filename), 'r')
+                            for line in opened:
+                                if self.force_stop:
+                                    break
 
-                            find_keywords = find_keywords_backup
-
-                            # Check each line.  If a keyword is found, yield.
-                            try:
-                                for line in opened:
-                                    if self.force_stop:
+                                if self.exact:
+                                    if " ".join(keywords) in line:
+                                        yield os.path.join(root, filename)
                                         break
+                                else:
+                                    if any(keyword in line.lower()
+                                           for keyword in keywords):
+                                        found_keywords = []
+                                        for find_keyword in find_keywords:
+                                            if find_keyword in line.lower():
+                                                found_keywords.append(
+                                                    find_keyword)
+                                        for found_keyword in found_keywords:
+                                            find_keywords.remove(found_keyword)
 
-                                    if self.exact:
-                                        if " ".join(keywords) in line:
+                                        if len(find_keywords) == 0:
                                             yield os.path.join(root, filename)
                                             break
-                                    else:
-                                        if any(keyword in line.lower()
-                                               for keyword in keywords):
-                                            found_keywords = []
-                                            for find_keyword in find_keywords:
-                                                if find_keyword in line.lower():
-                                                    found_keywords.append(
-                                                        find_keyword)
-                                            for found_keyword in found_keywords:
-                                                find_keywords.remove(found_keyword)
-
-                                            if len(find_keywords) == 0:
-                                                yield os.path.join(root, filename)
-                                                break
-                            except UnicodeDecodeError:
-                                pass
-                            opened.close()
-                        except IOError:
+                        except UnicodeDecodeError:
                             pass
-                    yield True
+
+                        opened.close()
+                    except IOError:
+                        pass
+                yield True
         yield False
         self.force_stop = False
         self.running = False
