@@ -21,7 +21,7 @@
 # pylint: disable=C0116
 
 import logging
- 
+
 import io
 import os
 import re
