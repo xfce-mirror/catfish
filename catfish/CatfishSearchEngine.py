@@ -461,7 +461,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                 if self.force_stop:
                     break
                 
-                # Check if regular file (exludes uncheckable special files).
+                # Checks if file is a regular file before searching through it (exludes uncheckable special files).
                 regfile = os.path.join(root, filename)
                 if os.path.isfile(regfile):
 
