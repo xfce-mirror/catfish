@@ -461,9 +461,9 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                 if self.force_stop:
                     break
                 
-                # Check if regular file (exludes special files).
-                filex = os.path.join(root, filename)
-                if os.path.isfile(filex):
+                # Check if regular file (exludes uncheckable special files).
+                regfile = os.path.join(root, filename)
+                if os.path.isfile(regfile):
 
                     # If the filetype is known to not be text, move along.
                     mime = guess_type(filename)[0]
