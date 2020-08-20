@@ -430,22 +430,22 @@ msgstr "Pradėti paiešką"
 #: ../catfish/CatfishWindow.py:1142
 #, python-format
 msgid "\"%s\" could not be opened."
-msgstr "Nepavyko atverti \"%s\"."
+msgstr "Nepavyko atverti „%s“."
 
 #: ../catfish/CatfishWindow.py:1194
 #, python-format
 msgid "\"%s\" could not be saved."
-msgstr "Nepavyko įrašyti \"%s\"."
+msgstr "Nepavyko įrašyti „%s“."
 
 #: ../catfish/CatfishWindow.py:1211
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr "Nepavyko ištrinti \"%s\"."
+msgstr "Nepavyko ištrinti „%s“."
 
 #: ../catfish/CatfishWindow.py:1250
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "Įrašyti \"%s\" kaip..."
+msgstr "Įrašyti „%s“ kaip..."
 
 #: ../catfish/CatfishWindow.py:1285
 #, python-format
@@ -454,7 +454,7 @@ msgid ""
 "permanently delete \"%s\"?"
 msgstr ""
 "Ar tikrai norite negrįžtamai \n"
-"ištrinti \"%s\"?"
+"ištrinti „%s“?"
 
 #: ../catfish/CatfishWindow.py:1289
 #, python-format
@@ -529,12 +529,12 @@ msgstr "Ieškoma..."
 #: ../catfish/CatfishWindow.py:1772
 #, python-format
 msgid "Searching for \"%s\""
-msgstr "Ieškoma \"%s\""
+msgstr "Ieškoma „%s“"
 
 #: ../catfish/CatfishWindow.py:1861
 #, python-format
 msgid "Search results for \"%s\""
-msgstr "\"%s\" paieškos rezultatai"
+msgstr "„%s“ paieškos rezultatai"
 
 #: ../catfish_lib/catfishconfig.py:91
 msgid "Catfish is a versatile file searching tool."
