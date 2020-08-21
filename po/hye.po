@@ -6,6 +6,7 @@
 # Translators:
 # Real School <localization@ehayq.am>, 2020
 # Samvel Harutyunyan <samvel@ehayq.am>, 2020
+# Arman Harutyunyan <arman.harut468@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-14 21:03-0500\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Samvel Harutyunyan <samvel@ehayq.am>, 2020\n"
+"Last-Translator: Arman Harutyunyan <arman.harut468@gmail.com>, 2020\n"
 "Language-Team: Eastern Armenian (https://www.transifex.com/xfce/teams/16840/hye/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +44,7 @@ msgstr "նիշք;գտնել;բացայայտել;զննել;որոնել;"
 
 #: ../data/ui/CatfishPreferences.ui.h:1
 msgid "Catfish Preferences"
-msgstr ""
+msgstr "Catfish նախընտրութիւններ"
 
 #: ../data/ui/CatfishPreferences.ui.h:2
 msgid "_Close"
@@ -51,31 +52,32 @@ msgstr "_Փակել"
 
 #: ../data/ui/CatfishPreferences.ui.h:3
 msgid "Classic (_Titlebar)"
-msgstr ""
+msgstr "Դասական (_անուանագաւտի)"
 
 #: ../data/ui/CatfishPreferences.ui.h:4
 msgid "_Modern (CSD)"
-msgstr ""
+msgstr "_Ժամանակակից (CSD)"
 
 #: ../data/ui/CatfishPreferences.ui.h:5
 msgid "Your new window layout will be applied after restarting Catfish."
 msgstr ""
+"Ձեր նոր պատուհանի դասաւորութիւնը կկիրառուի Catfish-ը վերագործարկելուց յետոյ:"
 
 #: ../data/ui/CatfishPreferences.ui.h:6
 msgid "Window Layout"
-msgstr ""
+msgstr "Պատուհանների դասաւորութիւն"
 
 #: ../data/ui/CatfishPreferences.ui.h:7
 msgid "Show _hidden files in the results"
-msgstr ""
+msgstr "Ցոյց տալ _թաքնուած նիշքը արդիւնքների մէջ"
 
 #: ../data/ui/CatfishPreferences.ui.h:8
 msgid "Show filter _sidebar"
-msgstr ""
+msgstr "Ցուցադրել զտիչի _կողքային գաւտին"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Display Options"
-msgstr ""
+msgstr "Ցուցադրման ընտրանքներ"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Appearance"
@@ -83,11 +85,11 @@ msgstr "Տեսք"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
-msgstr ""
+msgstr "Ուղի"
 
 #: ../data/ui/CatfishPreferences.ui.h:12
 msgid "Add Directory..."
-msgstr ""
+msgstr "Աւելացնել նշարան..."
 
 #: ../data/ui/CatfishPreferences.ui.h:13
 msgid "_Add"
@@ -95,23 +97,23 @@ msgstr "_Յաւելել"
 
 #: ../data/ui/CatfishPreferences.ui.h:14
 msgid "Remove Directory"
-msgstr ""
+msgstr "Հեռացնել նշարանը"
 
 #: ../data/ui/CatfishPreferences.ui.h:15
 msgid "_Remove"
-msgstr ""
+msgstr "_Հեռացնել"
 
 #: ../data/ui/CatfishPreferences.ui.h:16
 msgid "Exclude Directories"
-msgstr ""
+msgstr "Բացառել նշարանները"
 
 #: ../data/ui/CatfishPreferences.ui.h:17
 msgid "Close the search _window after opening a file"
-msgstr ""
+msgstr "Փակէք որոնման պատուհանը _նիշքը բացելուց յետոյ"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Զանազան"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Advanced"
@@ -278,7 +280,7 @@ msgstr "Փոքրապատկերներ"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgid "Show _sidebar"
-msgstr ""
+msgstr "Ցոյց տալ _կողքային գաւտին"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "Show _hidden files"
@@ -286,15 +288,15 @@ msgstr "Ցուցադրել _թաքնուած նիշերը"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "Search file _contents"
-msgstr ""
+msgstr "Փնտրել նիշքի _բովանդակութիւնը"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "_Match results exactly"
-msgstr ""
+msgstr "_Համընկեցնել ճշգրիտ արդիւնքները"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "_Refresh search index..."
-msgstr ""
+msgstr "_Թարմացրէք որոնման ցուցիչը..."
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "_Preferences"
@@ -376,6 +378,8 @@ msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
+"Մուտքագրէք Ձեր հարցումը վերեւում, որպէսզի գտնէք Ձեր նիշքերը \n"
+"կամ կտտացրէք %s պատկերակի վրա` լրացուցիչ ընտրանքների համար:"
 
 #: ../catfish/CatfishWindow.py:731
 msgid "An error occurred while updating the database."
@@ -600,36 +604,50 @@ msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
 msgstr ""
+"Այս թողարկումը լուծում է Debian- ի փաթեթաւորման սխալները եւ ներառում է "
+"բարելաւուած միջոցներ:"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr ""
+"Այս թողարկումը աւելացնում է աջակցութիւն՝ Wayland-ի ներքոյ աշխատելու համար եւ"
+" պարունակում է թարմացուած երկխաւսութիւններ՝ պարզեցուած հսկիչներով:"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
+"Այս թողարկումն հասցէյաւորում է մեկնարկման որոշ սխալներ, ինչպէս նաեւ տարբեր "
+"խնդիրներ՝ շրջանցող խորհրդանշական յղումներով:"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
 msgstr ""
+"Այս թողարկումը ներառում է շատ հայտնի բարելաւումներ, ներկայացնում է նոր "
+"նախընտրութիւնների երկխաւսութիւն եւ բարելաւում է որոնման արդիւնքները եւ "
+"կատարողականը:"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
+"Այս թողարկումը պարունակում է կատարողական բարելաւումներ` բացառելով հազուադէպ "
+"որոնման նշարաններ:"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
 msgstr ""
+"Այս թողարկումը պարունակում է նախընտրելի աշխատասեղանի ամբողջացումը, "
+"աջակցութիւն OpenBSD- ի եւ Wayland- ի համար, եւ թարգմանութեան "
+"կատարելագործուած աջակցութեան:"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
