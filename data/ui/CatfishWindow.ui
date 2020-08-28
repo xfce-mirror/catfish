@@ -250,8 +250,24 @@
       </row>
       <row>
         <col id="0">document-open-recent-symbolic</col>
+        <col id="1" translatable="yes">Today</col>
+        <col id="2">today</col>
+        <col id="3">False</col>
+        <col id="4">True</col>
+        <col id="5">False</col>
+      </row>
+      <row>
+        <col id="0">document-open-recent-symbolic</col>
         <col id="1" translatable="yes">This week</col>
         <col id="2">week</col>
+        <col id="3">False</col>
+        <col id="4">True</col>
+        <col id="5">False</col>
+      </row>
+      <row>
+        <col id="0">document-open-recent-symbolic</col>
+        <col id="1" translatable="yes">This month</col>
+        <col id="2">month</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>

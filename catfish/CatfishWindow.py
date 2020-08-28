@@ -1009,6 +1009,15 @@ class CatfishWindow(Window):
         if value == 'any':
             self.filter_timerange = (0.0, 9999999999.0)
             LOGGER.debug("Time Range: Beginning of time -> Eternity")
+        elif value == 'today':
+            now = datetime.datetime.now()
+            today = time.mktime((
+                datetime.datetime(now.year, now.month, now.day, 0, 0) -
+                datetime.timedelta(1)).timetuple())
+            self.filter_timerange = (today, 9999999999.0)
+            LOGGER.debug(
+                "Time Range: %s -> Eternity",
+                time.strftime("%x %X", time.localtime(int(today))))
         elif value == 'week':
             now = datetime.datetime.now()
             week = time.mktime((
@@ -1018,6 +1027,15 @@ class CatfishWindow(Window):
             LOGGER.debug(
                 "Time Range: %s -> Eternity",
                 time.strftime("%x %X", time.localtime(int(week))))
+        elif value == 'month':
+            now = datetime.datetime.now()
+            month = time.mktime((
+                datetime.datetime(now.year, now.month, now.day, 0, 0) -
+                datetime.timedelta(31)).timetuple())
+            self.filter_timerange = (month, 9999999999.0)
+            LOGGER.debug(
+                "Time Range: %s -> Eternity",
+                time.strftime("%x %X", time.localtime(int(month))))
         elif value == 'custom':
             self.filter_timerange = (time.mktime(self.start_date.timetuple()),
                                      time.mktime(self.end_date.timetuple()))
