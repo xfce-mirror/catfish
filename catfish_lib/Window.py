@@ -82,7 +82,9 @@ __builder__ = {
             "options": "sidebar_filter_custom_date_options",
             "icons": {
                 "any": "sidebar_filter_modified_any_icon",
+                "today": "sidebar_filter_modified_day_icon",
                 "week": "sidebar_filter_modified_week_icon",
+                "month": "sidebar_filter_modified_month_icon",
                 "custom": "sidebar_filter_custom_date_icon",
                 "options": "sidebar_filter_custom_date_options_icon"
             }
