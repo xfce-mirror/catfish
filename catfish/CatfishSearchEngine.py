@@ -461,6 +461,10 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                 if self.force_stop:
                     break
 
+                # Checks if regular file (excludes special files).
+                if not os.path.isfile(os.path.join(root, filename)):
+                    continue
+
                 # If the filetype is known to not be text, move along.
                 mime = guess_type(filename)[0]
                 if not mime or 'text' in mime:
