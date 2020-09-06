@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.1 -->
+<!-- Generated with glade 3.22.2 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <requires lib="catfish_preferences" version="1.0"/>
+  <object class="GtkListStore" id="liststore1">
+    <columns>
+      <!-- column-name path -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
   <object class="CatfishPrefsDialog" id="catfish_preferences">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Catfish Preferences</property>
@@ -209,7 +215,7 @@
                                   <object class="GtkImage" id="wl_info_image">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="icon_name">dialog-information</property>
+                                    <property name="icon_name">dialog-information-symbolic</property>
                                     <property name="icon_size">2</property>
                                   </object>
                                   <packing>
@@ -536,11 +542,5 @@
       <widget name="wl_titlebar_visible"/>
       <widget name="wl_headerbar_visible"/>
     </widgets>
-  </object>
-  <object class="GtkListStore" id="liststore1">
-    <columns>
-      <!-- column-name path -->
-      <column type="gchararray"/>
-    </columns>
   </object>
 </interface>
