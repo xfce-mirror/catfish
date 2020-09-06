@@ -210,7 +210,7 @@
         <col id="5">False</col>
       </row>
       <row>
-        <col id="0">applications-utilities-symbolic</col>
+        <col id="0">applications-other-symbolic</col>
         <col id="1" translatable="yes">Applications</col>
         <col id="2">applications</col>
         <col id="3">False</col>
@@ -218,7 +218,7 @@
         <col id="5">False</col>
       </row>
       <row>
-        <col id="0">preferences-other-symbolic</col>
+        <col id="0">folder-saved-search-symbolic</col>
         <col id="1" translatable="yes">Other</col>
         <col id="2">other</col>
         <col id="3">False</col>
