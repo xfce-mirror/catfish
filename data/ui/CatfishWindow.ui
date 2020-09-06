@@ -311,9 +311,6 @@
                   <object class="GtkCalendar" id="date_start_calendar">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="year">2015</property>
-                    <property name="month">7</property>
-                    <property name="day">16</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -406,9 +403,6 @@
                   <object class="GtkCalendar" id="date_end_calendar">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="year">2015</property>
-                    <property name="month">7</property>
-                    <property name="day">16</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
