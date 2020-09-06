@@ -384,7 +384,7 @@ class CatfishWindow(Window):
                 if len(parts[0].strip()) > 0:
                     label = Gtk.Label.new(parts[0])
                     row.pack_start(label, False, False, 0)
-                image = Gtk.Image.new_from_icon_name("emblem-system-symbolic",
+                image = Gtk.Image.new_from_icon_name("open-menu-symbolic",
                                                      Gtk.IconSize.BUTTON)
                 image.set_property("use-fallback", True)
                 row.pack_start(image, False, False, 0)

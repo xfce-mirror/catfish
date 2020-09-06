@@ -199,7 +199,7 @@ class Window(Gtk.Window):
         # AppMenu
         button = Gtk.MenuButton()
         button.set_size_request(32, 32)
-        image = Gtk.Image.new_from_icon_name("emblem-system-symbolic",
+        image = Gtk.Image.new_from_icon_name("open-menu-symbolic",
                                              Gtk.IconSize.MENU)
         button.set_image(image)
         popover = Gtk.Popover.new(button)
