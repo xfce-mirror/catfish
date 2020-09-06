@@ -115,13 +115,17 @@
   <object class="GtkBox" id="filetype_popover">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="border_width">6</property>
+    <property name="margin_left">8</property>
+    <property name="margin_right">8</property>
+    <property name="margin_top">2</property>
+    <property name="margin_bottom">8</property>
     <property name="orientation">vertical</property>
     <property name="spacing">3</property>
     <child>
       <object class="GtkLabel" id="label5">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="halign">center</property>
         <property name="label" translatable="yes">File Extensions</property>
         <property name="xalign">0</property>
         <attributes>
@@ -288,20 +292,22 @@
   <object class="GtkBox" id="modified_popover">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="border_width">6</property>
-    <property name="spacing">12</property>
+    <property name="margin_left">8</property>
+    <property name="margin_right">8</property>
+    <property name="margin_top">2</property>
+    <property name="margin_bottom">8</property>
+    <property name="spacing">10</property>
     <child>
       <object class="GtkFrame" id="date_start_frame">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label_xalign">0</property>
+        <property name="label_xalign">0.5</property>
         <property name="shadow_type">none</property>
         <child>
           <object class="GtkAlignment" id="date_start_align">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="top_padding">3</property>
-            <property name="left_padding">3</property>
             <child>
               <object class="GtkBox" id="date_start_box">
                 <property name="visible">True</property>
@@ -328,12 +334,13 @@
                       <object class="GtkBox" id="box19">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="halign">center</property>
                         <property name="spacing">3</property>
                         <child>
                           <object class="GtkImage" id="date_start_today_icon">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="icon_name">x-office-calendar</property>
+                            <property name="icon_name">x-office-calendar-symbolic</property>
                             <property name="use_fallback">True</property>
                           </object>
                           <packing>
@@ -356,6 +363,9 @@
                         </child>
                       </object>
                     </child>
+                    <style>
+                      <class name="inline-toolbar"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -386,14 +396,13 @@
       <object class="GtkFrame" id="date_end_frame">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label_xalign">0</property>
+        <property name="label_xalign">0.5</property>
         <property name="shadow_type">none</property>
         <child>
           <object class="GtkAlignment" id="date_end_align">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="top_padding">3</property>
-            <property name="left_padding">3</property>
             <child>
               <object class="GtkBox" id="box18">
                 <property name="visible">True</property>
@@ -420,12 +429,13 @@
                       <object class="GtkBox" id="box20">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="halign">center</property>
                         <property name="spacing">3</property>
                         <child>
                           <object class="GtkImage" id="date_end_today_icon">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="icon_name">x-office-calendar</property>
+                            <property name="icon_name">x-office-calendar-symbolic</property>
                             <property name="use_fallback">True</property>
                           </object>
                           <packing>
@@ -448,6 +458,9 @@
                         </child>
                       </object>
                     </child>
+                    <style>
+                      <class name="inline-toolbar"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -529,12 +542,14 @@
             <child internal-child="content_area">
               <object class="GtkBox" id="infobar-content_area1">
                 <property name="can_focus">False</property>
+                <property name="margin_left">3</property>
+                <property name="margin_right">3</property>
                 <property name="spacing">16</property>
                 <child>
                   <object class="GtkImage" id="infobar_icon">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="icon_name">dialog-information</property>
+                    <property name="icon_name">dialog-information-symbolic</property>
                     <property name="use_fallback">True</property>
                   </object>
                   <packing>
@@ -1128,7 +1143,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="pixel_size">48</property>
-                <property name="icon_name">dialog-password</property>
+                <property name="icon_name">dialog-password-symbolic</property>
                 <property name="use_fallback">True</property>
                 <property name="icon_size">6</property>
               </object>
@@ -1241,12 +1256,14 @@ This action requires administrative rights.</property>
                 <child internal-child="content_area">
                   <object class="GtkBox" id="infobar-content_area2">
                     <property name="can_focus">False</property>
-                    <property name="spacing">16</property>
+                    <property name="margin_left">3</property>
+                    <property name="margin_right">3</property>
+                    <property name="spacing">8</property>
                     <child>
                       <object class="GtkImage" id="update_dialog_infobar_icon">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="icon_name">dialog-information</property>
+                        <property name="icon_name">dialog-information-symbolic</property>
                         <property name="use_fallback">True</property>
                       </object>
                       <packing>
