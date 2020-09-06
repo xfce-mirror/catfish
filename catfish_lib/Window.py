@@ -218,6 +218,7 @@ class Window(Gtk.Window):
 
         self.search_engine = None
         self.settings = None
+        self.hidden_files = None
 
     def on_sidebar_toggle_toggled(self, widget):
         pass
@@ -334,6 +335,10 @@ class Window(Gtk.Window):
             return True
         if "Control" in keys and ("q" in keys or "Q" in keys):
             self.destroy()
+            return True
+        if "Control" in keys and ("h" in keys or "H" in keys):
+            self.hidden_files.activate()
+            return True
         if 'F9' in keys:
             self.on_sidebar_toggle_toggled(widget)
             return True
