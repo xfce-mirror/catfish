@@ -529,6 +529,7 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
 
     def run(self, keywords, path, regex=False, exclude_paths=[]):
         """Run the Zeitgeist SearchMethod."""
+        keywords = " ".join(keywords)
         self.stop_search = False
         event_template = Event()
         time_range = TimeRange.from_seconds_ago(60 * 3600 * 24)
