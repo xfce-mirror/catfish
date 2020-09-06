@@ -686,6 +686,7 @@
                                         <property name="title">column</property>
                                         <child>
                                           <object class="GtkCellRendererPixbuf" id="cellrendererpixbuf3">
+                                            <property name="xpad">6</property>
                                             <property name="icon_name">document-properties-symbolic</property>
                                           </object>
                                           <attributes>
@@ -707,7 +708,7 @@
                                     <property name="can_focus">False</property>
                                     <property name="halign">end</property>
                                     <property name="valign">end</property>
-                                    <property name="margin_right">2</property>
+                                    <property name="margin_right">8</property>
                                     <property name="margin_bottom">6</property>
                                     <property name="xalign">1</property>
                                     <property name="yalign">1</property>
@@ -824,6 +825,7 @@
                                         <property name="title">column</property>
                                         <child>
                                           <object class="GtkCellRendererPixbuf" id="cellrendererpixbuf4">
+                                            <property name="xpad">6</property>
                                             <property name="icon_name">document-properties-symbolic</property>
                                           </object>
                                           <attributes>
@@ -845,7 +847,7 @@
                                     <property name="can_focus">False</property>
                                     <property name="halign">end</property>
                                     <property name="valign">end</property>
-                                    <property name="margin_right">2</property>
+                                    <property name="margin_right">8</property>
                                     <property name="margin_bottom">8</property>
                                     <property name="xalign">1</property>
                                     <property name="yalign">1</property>
