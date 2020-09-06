@@ -204,12 +204,16 @@ class CatfishWindow(Window):
 
         # Create the overlay statusbar
         self.statusbar = Gtk.EventBox()
+        self.statusbar.set_margin_left(2)
+        self.statusbar.set_margin_right(3)
+        self.statusbar.set_margin_bottom(3)
+        self.statusbar.get_style_context().add_class("frame")
         self.statusbar.get_style_context().add_class("background")
         self.statusbar.get_style_context().add_class("floating-bar")
         self.statusbar.connect("draw", self.on_floating_bar_draw)
         self.statusbar.connect("enter-notify-event",
                                self.on_floating_bar_enter_notify)
-        self.statusbar.set_halign(Gtk.Align.START)
+        self.statusbar.set_halign(Gtk.Align.END)
         self.statusbar.set_valign(Gtk.Align.END)
 
         # Put the statusbar in the overlay
@@ -225,9 +229,9 @@ class CatfishWindow(Window):
         box.set_orientation(Gtk.Orientation.HORIZONTAL)
         box.pack_start(self.spinner, False, False, 0)
         box.pack_start(self.statusbar_label, False, False, 0)
-        box.set_margin_left(6)
+        box.set_margin_left(8)
         box.set_margin_top(3)
-        box.set_margin_right(6)
+        box.set_margin_right(8)
         box.set_margin_bottom(3)
         self.spinner.set_margin_right(3)
         box.show()
@@ -514,10 +518,16 @@ class CatfishWindow(Window):
 
     def on_floating_bar_enter_notify(self, widget, event):  # pylint: disable=W0613
         """Move the floating statusbar when hovered."""
-        if widget.get_halign() == Gtk.Align.START:
-            widget.set_halign(Gtk.Align.END)
-        else:
+        if widget.get_halign() == Gtk.Align.END:
+            widget.hide()
             widget.set_halign(Gtk.Align.START)
+            widget.show()
+
+        else:
+            widget.hide()
+            widget.set_halign(Gtk.Align.END)
+            widget.show()
+
 
     def on_floating_bar_draw(self, widget, cairo_t):
         """Draw the floating statusbar."""
