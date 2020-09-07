@@ -2,7 +2,7 @@ Requirements
 ------------
 - Python 3
 - Python Distutils Extra (https://launchpad.net/python-distutils-extra)
-- Python GLib / GObject bindings: GdkPixbuf, GLib, GTK 3, Pango, Cairo
+- Python GLib / GObject bindings: GdkPixbuf, GLib, GTK 3, Pango, Cairo, Xfconf
 - Pexpect (https://pypi.org/project/pexpect/)
 - locate or mlocate
 

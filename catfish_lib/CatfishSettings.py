@@ -18,27 +18,35 @@
 
 import os
 
+import gi
+
+gi.require_version('Xfconf', '0')
+from gi.repository import Xfconf
+
+Xfconf.init()
+
 DEFAULT_SETTINGS_FILE = os.path.join(os.getenv('HOME'),
                                      '.config/catfish/catfish.rc')
 DEFAULT_SETTINGS = {
-    'use-headerbar': None,
-    'show-hidden-files': False,
-    'show-sidebar': False,
-    'close-after-select': False,
-    'window-width': 650,
-    'window-height': 470,
-    'window-x': -1,
-    'window-y': -1,
-    'exclude-paths': '/dev;~/.cache;~/.gvfs;'
+    'use-headerbar': (bool, None),
+    'show-hidden-files': (bool, False),
+    'show-sidebar': (bool, False),
+    'close-after-select': (bool, False),
+    'window-width': (int, 650),
+    'window-height': (int, 470),
+    'window-x': (int, -1),
+    'window-y': (int, -1),
+    'exclude-paths': (str, '/dev;~/.cache;~/.gvfs;')
 }
 
 
 class CatfishSettings:
 
-    """CatfishSettings rc-file management."""
+    """CatfishSettings settings management."""
 
     def __init__(self, settings_file=DEFAULT_SETTINGS_FILE):
         """Initialize the CatfishSettings instance."""
+        self.channel = Xfconf.Channel.new("catfish")
         try:
             settings_dir = os.path.dirname(settings_file)
             if not os.path.exists(settings_dir):
@@ -91,9 +99,8 @@ class CatfishSettings:
         else:
             pass
 
-    def read(self):
-        """Read the settings rc-file into this settings instance."""
-        self.settings = DEFAULT_SETTINGS.copy()
+    def read_from_settings_file(self):
+        settings = {}
         if os.path.isfile(self.settings_file):
             try:
                 for line in open(self.settings_file):
@@ -103,11 +110,37 @@ class CatfishSettings:
                             if prop in self.settings:
                                 if value.strip().lower() in ['true', 'false']:
                                     value = value.strip().lower() == 'true'
-                                self.settings[prop] = value
+                                settings[prop] = value
                         except Exception:
                             pass
             except Exception:
                 pass
+        return settings
+
+    def delete_settings_file(self):
+        try:
+            if os.path.isfile(self.settings_file):
+                os.remove(self.settings_file)
+        except Exception:
+            pass
+
+    def read(self):
+        """Read the settings Xfconf channel into this settings instance."""
+        self.settings = {}
+        rc_settings = self.read_from_settings_file()
+        for key, value in DEFAULT_SETTINGS.items():
+            typing = value[0]
+            xfconf_prop = "/%s" % key
+            self.settings[key] = value[1]
+            if self.channel.has_property(xfconf_prop):
+                if typing == bool:
+                    self.settings[key] = self.channel.get_bool(xfconf_prop, value[1])
+                elif typing == int:
+                    self.settings[key] = self.channel.get_int(xfconf_prop, value[1])
+                elif typing == str:
+                    self.settings[key] = self.channel.get_string(xfconf_prop, value[1])
+            elif key in rc_settings.keys():
+                self.settings[key] = rc_settings[key]
 
         if self.settings['use-headerbar'] is None:
             current_desktop = self.get_current_desktop()
@@ -117,22 +150,20 @@ class CatfishSettings:
                 self.settings['use-headerbar'] = False
         else:
             self.headerbar_configured = True
+        
+        self.delete_settings_file()
 
     def write(self):
-        """Write the current settings to the settings rc-file."""
-        if self.settings_file:
-            try:
-                write_file = open(self.settings_file, 'w')
-                for key in list(self.settings.keys()):
-                    value = self.settings[key]
-                    if key == 'use-headerbar' and \
-                            not self.headerbar_configured:
-                        continue
-                    if isinstance(value, bool):
-                        value = str(value).lower()
-                    else:
-                        value = str(value)
-                    write_file.write('%s=%s\n' % (key, value))
-                write_file.close()
-            except PermissionError:
-                pass
+        """Write the current settings to the settings Xfconf channel."""
+        for key, value in DEFAULT_SETTINGS.items():
+            if key == 'use-headerbar' and \
+                    not self.headerbar_configured:
+                continue
+            typing = value[0]
+            xfconf_prop = "/%s" % key
+            if typing == bool:
+                self.channel.set_bool(xfconf_prop, self.settings[key])
+            elif typing == int:
+                self.channel.set_int(xfconf_prop, self.settings[key])
+            elif typing == str:
+                self.channel.set_string(xfconf_prop, self.settings[key])
