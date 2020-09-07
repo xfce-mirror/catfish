@@ -37,10 +37,8 @@ gi.require_version('GLib', '2.0')  # noqa
 from gi.repository import GLib
 
 try:
-    from zeitgeist.client import ZeitgeistDBusInterface  # pylint: disable=E0401
-    from zeitgeist.datamodel import Event, TimeRange  # pylint: disable=E0401
-    from zeitgeist import datamodel  # pylint: disable=E0401
-    IFACE = ZeitgeistDBusInterface()
+    gi.require_version('Zeitgeist', '2.0')
+    from gi.repository import Zeitgeist
     ZEITGEIST_SUPPORT = True
 except ImportError:
     ZEITGEIST_SUPPORT = False
@@ -526,31 +524,47 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
         """Initialize the Zeitgeist SearchMethod."""
         CatfishSearchMethod.__init__(self, "zeitgeist")
         self.stop_search = False
+        self.events = []
+
+    def result_callback(self, log, result, data):
+        events = log.find_events_finish(result)
+        for i in range(events.size()):  # cannot iterate events directly
+            event = events.next_value()
+            if event is None:
+                continue
+            self.events.append(event)
+        self.stop_search = True
 
     def run(self, keywords, path, regex=False, exclude_paths=[]):
         """Run the Zeitgeist SearchMethod."""
         keywords = " ".join(keywords)
         self.stop_search = False
-        event_template = Event()
-        time_range = TimeRange.from_seconds_ago(60 * 3600 * 24)
-        # 60 days at most
+        event_template = Zeitgeist.Event()
 
-        results = IFACE.FindEvents(
-            time_range,  # (min_timestamp, max_timestamp) in milliseconds
+        # 60 days at most
+        end = int(time.time() * 1000)
+        start = end - (60 * 3600 * 24 * 1000)
+        time_range = Zeitgeist.TimeRange.new(start, end)
+
+        self.events = []
+        log = Zeitgeist.Log.get_default()
+        log.find_events(
+            time_range,
             [event_template, ],
-            datamodel.StorageState.Any,
+            Zeitgeist.StorageState.ANY,
             1000,
-            datamodel.ResultType.MostRecentSubjects
+            Zeitgeist.ResultType.MOST_RECENT_SUBJECTS,
+            None, self.result_callback, None
         )
 
-        results = (datamodel.Event(result) for result in results)
+        while self.stop_search == False:
+            yield False
+
         uniques = []
 
-        for event in results:
-            if self.stop_search:
-                break
+        for event in self.events:
             for subject in event.get_subjects():
-                uri = str(subject.uri)
+                uri = subject.get_uri()
                 if uri.startswith('file://'):
                     fullname = str(uri[7:])
                     filepath, filename = os.path.split(fullname)
@@ -559,7 +573,6 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
                             path in filepath:
                         uniques.append(uri)
                         yield fullname
-        self.stop_search = True
 
     def stop(self):
         """Stop the Zeitgeist SearchMethod."""

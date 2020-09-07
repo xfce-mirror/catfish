@@ -7,3 +7,4 @@ __pycache__
 *.pyc
 MANIFEST
 dist/
+data/metainfo/catfish.appdata.xml
