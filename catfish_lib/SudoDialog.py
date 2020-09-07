@@ -23,15 +23,6 @@ import pexpect
 
 from gi.repository import Gtk, GdkPixbuf
 
-gtk_version = (Gtk.get_major_version(),
-               Gtk.get_minor_version(),
-               Gtk.get_micro_version())
-
-
-def check_gtk_version(major_version, minor_version, micro=0):
-    """Return true if running gtk >= requested version"""
-    return gtk_version >= (major_version, minor_version, micro)
-
 
 # Check if the LANG variable needs to be set
 use_env = False
@@ -199,10 +190,7 @@ class SudoDialog(Gtk.Dialog):
         ok_button.set_can_default(True)
         ok_button.set_sensitive(False)
         self.set_default(ok_button)
-        if check_gtk_version(3, 12):
-            button_box.pack_start(ok_button, True, True, 0)
-        else:
-            button_box.pack_start(ok_button, False, False, 0)
+        button_box.pack_start(ok_button, True, True, 0)
 
         self.password_entry.connect("changed", self.on_password_changed,
                                     ok_button)

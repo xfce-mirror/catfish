@@ -32,14 +32,6 @@ from . catfishconfig import get_data_file
 from . Builder import Builder
 
 gobject_version = GObject.pygobject_version
-gtk_version = (Gtk.get_major_version(),
-               Gtk.get_minor_version(),
-               Gtk.get_micro_version())
-
-
-def check_gtk_version(major_version, minor_version, micro=0):
-    """Return true if running gtk >= requested version"""
-    return gtk_version >= (major_version, minor_version, micro)
 
 
 def check_gobject_version(major_version, minor_version, micro=0):

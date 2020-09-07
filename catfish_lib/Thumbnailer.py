@@ -28,7 +28,6 @@ from . catfishconfig import get_version
 class Thumbnailer:
 
     def __init__(self):
-        self._glib_version = self._get_glib_version()
         if self._make_thumbnail_directories():
             self._normal_dir = self._get_normal_directory()
             self._fail_dir = self._get_fail_directory()
@@ -36,23 +35,8 @@ class Thumbnailer:
             self._normal_dir = None
             self._fail_dir = None
 
-    def _get_glib_version(self):
-        try:
-            major = GLib.MAJOR_VERSION
-            minor = GLib.MINOR_VERSION
-            version = float("%i.%i" % (major, minor))
-        except AttributeError:
-            try:
-                major, minor = list(GLib.glib_version)[:2]
-                version = float("%i.%i" % (major, minor))
-            except Exception:
-                version = 2.32
-        return version
-
     def _get_expected_thumbnail_directory(self):
-        if self._glib_version > 2.34:
-            return os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
-        return os.path.join(GLib.get_home_dir(), '.thumbnails/')
+        return os.path.join(GLib.get_user_cache_dir(), 'thumbnails/')
 
     def _get_normal_directory(self):
         expected = self._get_expected_thumbnail_directory()
