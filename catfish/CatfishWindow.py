@@ -63,9 +63,8 @@ if not helpers.check_gobject_version(3, 9, 1):
 mimetypes.init()
 
 
-if helpers.check_python_version(3, 0):
-    def long(value):
-        return int(value)
+def long(value):
+    return int(value)
 
 
 def get_application_path(application_name):

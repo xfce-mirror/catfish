@@ -22,7 +22,7 @@ at the following locations:
 Dependencies
 -------------
 
-* Python 2 or 3
+* Python 3
 * GLib / GObject Python bindings: GdkPixbuf, GLib, GTK 3, Pango, Cairo
 * [Pexpect](https://pypi.org/project/pexpect/)
 * locate or mlocate

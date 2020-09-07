@@ -29,7 +29,6 @@ class Thumbnailer:
 
     def __init__(self):
         self._glib_version = self._get_glib_version()
-        self._python_version = self._get_python_version()
         if self._make_thumbnail_directories():
             self._normal_dir = self._get_normal_directory()
             self._fail_dir = self._get_fail_directory()
@@ -48,11 +47,6 @@ class Thumbnailer:
                 version = float("%i.%i" % (major, minor))
             except Exception:
                 version = 2.32
-        return version
-
-    def _get_python_version(self):
-        major, minor = list(sys.version_info[:2])
-        version = float("%i.%i" % (major, minor))
         return version
 
     def _get_expected_thumbnail_directory(self):
@@ -97,15 +91,13 @@ class Thumbnailer:
     def _get_file_md5(self, filename):
         gfile = Gio.File.new_for_path(filename)
         uri = gfile.get_uri()
-        if self._python_version >= 3.0:
-            uri = uri.encode('utf-8')
+        uri = uri.encode('utf-8')
         md5_hash = hashlib.md5(uri).hexdigest()
         return md5_hash
 
     def _get_shared_file_md5(self, filename):
         basename = os.path.basename(filename)
-        if self._python_version >= 3.0:
-            basename = basename.encode('utf-8')
+        basename = basename.encode('utf-8')
         md5_hash = hashlib.md5(basename).hexdigest()
         return md5_hash
 

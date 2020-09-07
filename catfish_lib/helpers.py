@@ -31,16 +31,10 @@ from gi.repository import GObject, Gtk
 from . catfishconfig import get_data_file
 from . Builder import Builder
 
-python_version = sys.version_info[:3]
 gobject_version = GObject.pygobject_version
 gtk_version = (Gtk.get_major_version(),
                Gtk.get_minor_version(),
                Gtk.get_micro_version())
-
-
-def check_python_version(major_version, minor_version, micro=0):
-    """Return true if running python >= requested version"""
-    return python_version >= (major_version, minor_version, micro)
 
 
 def check_gtk_version(major_version, minor_version, micro=0):
