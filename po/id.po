@@ -83,7 +83,7 @@ msgstr "Opsi Tampilan"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Appearance"
-msgstr "Tampilan"
+msgstr "Penampilan"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
