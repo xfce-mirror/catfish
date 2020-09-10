@@ -1,37 +1,48 @@
-Catfish
-=============
+[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/xfce/catfish/COPYING)
 
-Catfish is a handy file searching tool for linux and unix.
-The interface is intentionally lightweight and simple, using only GTK+3.
-You can configure it to your needs by using several command line options.
+# catfish
 
-You are encouraged to run 'catfish --help' to check out the various
-command line options.
+The catfish component provides a daemon, manager, and editor to
+centralize the configuration management of the Xfce system.
 
-General
--------------
+----
 
-Catfish is part of the Xfce project. All project resources can be found
-at the following locations:
+### Homepage
 
-* [Homepage](https://docs.xfce.org/apps/catfish/start)
-* [Bugs](https://bugzilla.xfce.org/buglist.cgi?product=Catfish)
-* [Code](https://gitlab.xfce.org/apps/catfish)
-* [Translations](https://www.transifex.com/xfce/public)
+[catfish documentation](https://docs.xfce.org/xfce/catfish/start)
 
-Dependencies
--------------
+### Changelog
 
-* Python 3
-* Gtk 3.22+
-* GLib 2.42+
-* GLib / GObject Python bindings: GdkPixbuf, GLib, GTK 3, Pango, Cairo, Xfconf
-* [Pexpect](https://pypi.org/project/pexpect/)
-* locate or mlocate
+See [NEWS](https://gitlab.xfce.org/xfce/catfish/-/blob/master/NEWS) for details on changes and fixes made in the current release.
 
-Installation and Bugs
--------------
+### Source Code Repository
 
-For installation instructions, please read INSTALL.
+[catfish source code](https://gitlab.xfce.org/xfce/catfish)
 
-Please send all bugs, suggestions, and feature requests to [the Xfce Bugzilla](https://bugzilla.xfce.org/buglist.cgi?product=Catfish)
+### Download A Release Tarball
+
+[catfish archive](https://archive.xfce.org/src/xfce/catfish)
+    or
+[catfish tags](https://gitlab.xfce.org/xfce/catfish/-/tags)
+
+### Installation
+
+From source: 
+
+    % cd catfish
+    % ./autogen.sh
+    % make
+    % make install
+
+From release tarball:
+
+    % tar xf catfish-<version>.tar.bz2
+    % cd catfish-<version>
+    % ./configure
+    % make
+    % make install
+
+### Reporting Bugs
+
+Visit the [reporting bugs](https://docs.xfce.org/xfce/catfish/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
+
