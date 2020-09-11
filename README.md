@@ -9,21 +9,21 @@ centralize the configuration management of the Xfce system.
 
 ### Homepage
 
-[catfish documentation](https://docs.xfce.org/xfce/catfish/start)
+[catfish documentation](https://docs.xfce.org/apps/catfish/start)
 
 ### Changelog
 
-See [NEWS](https://gitlab.xfce.org/xfce/catfish/-/blob/master/NEWS) for details on changes and fixes made in the current release.
+See [NEWS](https://gitlab.xfce.org/apps/catfish/-/blob/master/NEWS) for details on changes and fixes made in the current release.
 
 ### Source Code Repository
 
-[catfish source code](https://gitlab.xfce.org/xfce/catfish)
+[catfish source code](https://gitlab.xfce.org/apps/catfish)
 
 ### Download A Release Tarball
 
-[catfish archive](https://archive.xfce.org/src/xfce/catfish)
+[catfish archive](https://archive.xfce.org/src/apps/catfish)
     or
-[catfish tags](https://gitlab.xfce.org/xfce/catfish/-/tags)
+[catfish tags](https://gitlab.xfce.org/apps/catfish/-/tags)
 
 ### Installation
 
@@ -44,5 +44,5 @@ From release tarball:
 
 ### Reporting Bugs
 
-Visit the [reporting bugs](https://docs.xfce.org/xfce/catfish/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
+Visit the [reporting bugs](https://docs.xfce.org/apps/catfish/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
 
