@@ -1,15 +1,18 @@
-[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/xfce/catfish/COPYING)
+[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/apps/catfish/-/blob/master/COPYING)
 
 # catfish
 
-The catfish component provides a daemon, manager, and editor to
-centralize the configuration management of the Xfce system.
+Catfish is a handy file searching tool for Linux and Unix. 
+The interface is intentionally lightweight and simple, using only GTK+3. 
+You can configure it to your needs by using several command line options.
+
+You are encouraged to run ``catfish –help`` to check out the various command line options.
 
 ----
 
 ### Homepage
 
-[catfish documentation](https://docs.xfce.org/apps/catfish/start)
+[Catfish documentation](https://docs.xfce.org/apps/catfish/start)
 
 ### Changelog
 
@@ -17,13 +20,13 @@ See [NEWS](https://gitlab.xfce.org/apps/catfish/-/blob/master/NEWS) for details 
 
 ### Source Code Repository
 
-[catfish source code](https://gitlab.xfce.org/apps/catfish)
+[Catfish source code](https://gitlab.xfce.org/apps/catfish)
 
-### Download A Release Tarball
+### Download a Release Tarball
 
-[catfish archive](https://archive.xfce.org/src/apps/catfish)
+[Catfish archive](https://archive.xfce.org/src/apps/catfish)
     or
-[catfish tags](https://gitlab.xfce.org/apps/catfish/-/tags)
+[Catfish tags](https://gitlab.xfce.org/apps/catfish/-/tags)
 
 ### Installation
 
