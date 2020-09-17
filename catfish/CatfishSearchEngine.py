@@ -42,6 +42,8 @@ try:
     ZEITGEIST_SUPPORT = True
 except ImportError:
     ZEITGEIST_SUPPORT = False
+except ValueError:
+    ZEITGEIST_SUPPORT = False
 
 LOGGER = logging.getLogger('catfish_search')
 ENGINE_COUNT = 0
