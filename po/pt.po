@@ -547,15 +547,15 @@ msgstr "Catfish é uma ferramenta versátil de pesquisa de ficheiros."
 
 #: ../catfish_lib/SudoDialog.py:135
 msgid "Password Required"
-msgstr "Necessário senha"
+msgstr "Palavra-passe é necessária"
 
 #: ../catfish_lib/SudoDialog.py:172
 msgid "Incorrect password... try again."
-msgstr "Senha incorreta... tente novamente."
+msgstr "Palavra-passe incorreta... tente novamente."
 
 #: ../catfish_lib/SudoDialog.py:182
 msgid "Password:"
-msgstr "Senha:"
+msgstr "Palavra-passe:"
 
 #: ../catfish_lib/SudoDialog.py:196
 msgid "OK"
@@ -566,7 +566,7 @@ msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
-"Inserir a sua senha para\n"
+"Introduza a sua palavra-passe para\n"
 "executar tarefas administrativas."
 
 #: ../catfish_lib/SudoDialog.py:219
@@ -729,8 +729,8 @@ msgstr ""
 "velocidade de pesquisa e corrige vários bugs. O fluxo de trabalho foi "
 "melhorado, utilizando alguns dos mais recentes recursos do kit de "
 "ferramentas GTK+, incluindo barras opcionais de cabeçalho e widgets popover."
-" O tratamento da senha foi melhorado com a integração do PolicyKit, quando "
-"disponível."
+" O tratamento da palavra-passe foi melhorado com a integração do PolicyKit, "
+"quando disponível."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid "This release fixes two new bugs and includes updated translations."
@@ -769,9 +769,9 @@ msgid ""
 " up unused code, and fixed potential issues with the list and item "
 "selection."
 msgstr ""
-"Esta versão estável melhorou a confiabilidade do diálogo de senha, limpou "
-"código não utilizado e fixa potenciais problemas com a lista e seleção de "
-"itens."
+"Esta versão estável melhorou a fiabilidade da caixa de diálogo da palavra-"
+"passe, limpou código não utilizado e corrigiu potenciais problemas com a "
+"lista e seleção de itens."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
