@@ -346,24 +346,24 @@ msgstr "تطابق تام للأداء"
 
 #: ../catfish/__init__.py:57
 msgid "Include hidden files"
-msgstr ""
+msgstr "تشمل الملفات المخفية"
 
 #: ../catfish/__init__.py:59
 msgid "Perform fulltext search"
-msgstr ""
+msgstr "إجراء بحث النص الكامل"
 
 #: ../catfish/__init__.py:61
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
-msgstr ""
+msgstr "إذا تم توفير المسار والاستعلام ، ابدأ البحث عند عرض التطبيق."
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
 #: ../catfish/CatfishWindow.py:106
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (ترميز غير صالح)"
 
 #: ../catfish/CatfishWindow.py:146
 msgid "translator-credits"
@@ -383,10 +383,12 @@ msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
+"أدخل استفسارك أعلاه للعثور على ملفاتك\n"
+"أو انقر فوق %s الأيقونة لمزيد من الخيارات."
 
 #: ../catfish/CatfishWindow.py:741
 msgid "An error occurred while updating the database."
-msgstr ""
+msgstr "حدث خطأ أثناء تحديث قاعدة البيانات."
 
 #: ../catfish/CatfishWindow.py:743
 msgid "Authentication failed."
@@ -394,11 +396,11 @@ msgstr "فشل الاستيثاق."
 
 #: ../catfish/CatfishWindow.py:749
 msgid "Authentication cancelled."
-msgstr ""
+msgstr "تم إلغاء المصادقة."
 
 #: ../catfish/CatfishWindow.py:755
 msgid "Search database updated successfully."
-msgstr ""
+msgstr "تم تحديث قاعدة بيانات البحث بنجاح"
 
 #. Update the Cancel button to Close, make it default
 #: ../catfish/CatfishWindow.py:816
@@ -419,10 +421,12 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
+"تقدم عملية البحث...\n"
+"اضغط على زر إلغاء أو مفتاح Escape لتوقف."
 
 #: ../catfish/CatfishWindow.py:874
 msgid "Begin Search"
-msgstr ""
+msgstr "ابدأ البحث"
 
 #: ../catfish/CatfishWindow.py:1170
 #, python-format
@@ -442,7 +446,7 @@ msgstr "تعذر حذف \"%s\""
 #: ../catfish/CatfishWindow.py:1278
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr ""
+msgstr "حفظ \"%s\" في..."
 
 #: ../catfish/CatfishWindow.py:1313
 #, python-format
@@ -450,6 +454,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
+"هل أنت متأكد من أنك تريد أن\n"
+"تحذف نهائيا\"%s\" ؟"
 
 #: ../catfish/CatfishWindow.py:1317
 #, python-format
@@ -457,6 +463,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
+"هل أنت متأكد من أنك تريد أن\n"
+"تحذف%iالملفات المحددة؟"
 
 #: ../catfish/CatfishWindow.py:1320
 msgid "If you delete a file, it is permanently lost."
@@ -495,15 +503,17 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
+"حاول  أن تجعل بحثك أكثر دقة\n"
+"أو جرب مجلد آخر."
 
 #: ../catfish/CatfishWindow.py:1676
 msgid "1 file found."
-msgstr ""
+msgstr "تم العثور على ملف 1."
 
 #: ../catfish/CatfishWindow.py:1678
 #, python-format
 msgid "%i files found."
-msgstr ""
+msgstr "تم العثور على ملف %i."
 
 #: ../catfish/CatfishWindow.py:1684
 msgid "bytes"
@@ -511,7 +521,7 @@ msgstr "بايتات"
 
 #: ../catfish/CatfishWindow.py:1792 ../catfish/CatfishWindow.py:1802
 msgid "Searching..."
-msgstr ""
+msgstr "جاري البحث..."
 
 #: ../catfish/CatfishWindow.py:1800
 #, python-format
@@ -525,7 +535,7 @@ msgstr "نتائج البحث عن \"%s\""
 
 #: ../catfish_lib/catfishconfig.py:91
 msgid "Catfish is a versatile file searching tool."
-msgstr ""
+msgstr "كاتفيش هي أداة للبحث عن مختلف الملفات."
 
 #: ../catfish_lib/SudoDialog.py:135
 msgid "Password Required"
@@ -533,7 +543,7 @@ msgstr "كلمة مرور مطلوبة"
 
 #: ../catfish_lib/SudoDialog.py:172
 msgid "Incorrect password... try again."
-msgstr ""
+msgstr "كلمة مرور غير صحيحة... حاول مرة أخرى."
 
 #: ../catfish_lib/SudoDialog.py:182
 msgid "Password:"
@@ -548,6 +558,8 @@ msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
+"أدخل كلمة المرور إلى\n"
+"أداء المهام الإدارية."
 
 #: ../catfish_lib/SudoDialog.py:219
 #, python-format
@@ -555,10 +567,12 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
+"التطبيق '%s' يتيح لك\n"
+"تعديل الأجزاء الأساسية من النظام الخاص بك."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr ""
+msgstr "أداة البحث عن مختلف أنواع الملفات"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:2
 msgid ""
@@ -568,16 +582,23 @@ msgid ""
 "modification date, file type, and file contents, users will no longer be "
 "dependent on the file manager or organization skills."
 msgstr ""
+"كاتفيش هو أداة بحث عن الملفات, صغيرة وسريعة وقوية. تتميز واجهة البرنامج "
+"بالبساطة و الحد الأدنى مع التركيز على النتائج ، فإنه يساعد المستخدمين على "
+"العثور على الملفات التي يحتاجونها دون مدير الملفات. مع مرشحات قوية مثل تاريخ"
+" التعديل ونوع الملف ومحتويات الملف ، لن يعتمد المستخدمون بعد الآن على مدير "
+"الملفات."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "The main Catfish window displaying image search results"
-msgstr ""
+msgstr "نافذة كاتفيش الرئيسية التي تعرض نتائج البحث عن الصور"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
 "The main Catfish window displaying available filters and filtered search "
 "results"
 msgstr ""
+"نافذة كاتفيش الرئيسية التي تعرض المرشحات المتاحة ونتائج البحث التي تمت "
+"تصفيتها"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
