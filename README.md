@@ -32,20 +32,13 @@ See [NEWS](https://gitlab.xfce.org/apps/catfish/-/blob/master/NEWS) for details 
 
 From source: 
 
-    % cd catfish
-    % ./autogen.sh
-    % make
-    % make install
-
-From release tarball:
-
-    % tar xf catfish-<version>.tar.bz2
-    % cd catfish-<version>
-    % ./configure
-    % make
-    % make install
-
-### Reporting Bugs
+    local/user install:
+        python3 setup.py install --user
+    system-wide/root install:
+        sudo python3 setup.py install
+ 
+ For detailed installation instructions, see [INSTALL](https://gitlab.xfce.org/apps/catfish/-/blob/master/INSTALL)
+#(## Reporting Bugs
 
 Visit the [reporting bugs](https://docs.xfce.org/apps/catfish/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
 
