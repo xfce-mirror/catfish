@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/apps/catfish/-/blob/master/COPYING)
 
-# catfish
+# Catfish
 
 Catfish is a handy file searching tool for Linux and Unix. 
 The interface is intentionally lightweight and simple, using only GTK+3. 
@@ -38,7 +38,8 @@ From source:
         sudo python3 setup.py install
  
  For detailed installation instructions, see [INSTALL](https://gitlab.xfce.org/apps/catfish/-/blob/master/INSTALL)
-#(## Reporting Bugs
+
+### Reporting Bugs
 
 Visit the [reporting bugs](https://docs.xfce.org/apps/catfish/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
 
