@@ -1338,6 +1338,7 @@ This action requires administrative rights.</property>
     <property name="use_fallback">True</property>
   </object>
   <object class="GtkListBox" id="application_menu">
+    <property name="width_request">200</property>
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="selection_mode">none</property>
@@ -1400,8 +1401,8 @@ This action requires administrative rights.</property>
     <child>
       <object class="GtkListBoxRow" id="listseprow1">
         <property name="visible">True</property>
-        <property name="can_focus">True</property>
-        <property name="valign">start</property>
+        <property name="sensitive">False</property>
+        <property name="can_focus">False</property>
         <property name="activatable">False</property>
         <property name="selectable">False</property>
         <child>
@@ -1420,7 +1421,7 @@ This action requires administrative rights.</property>
         <child>
           <object class="GtkCheckButton" id="application_menu_advanced">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
+            <property name="can_focus">False</property>
             <property name="receives_default">False</property>
             <property name="use_underline">True</property>
             <property name="draw_indicator">True</property>
@@ -1442,8 +1443,8 @@ This action requires administrative rights.</property>
     <child>
       <object class="GtkListBoxRow" id="listseprow2">
         <property name="visible">True</property>
-        <property name="can_focus">True</property>
-        <property name="valign">start</property>
+        <property name="sensitive">False</property>
+        <property name="can_focus">False</property>
         <child>
           <object class="GtkSeparator" id="listsep2">
             <property name="visible">True</property>
@@ -1459,13 +1460,22 @@ This action requires administrative rights.</property>
         <property name="can_focus">True</property>
         <child>
           <object class="GtkCheckButton" id="application_menu_hidden">
-            <property name="label" translatable="yes">Show _hidden files</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
+            <property name="can_focus">False</property>
             <property name="receives_default">False</property>
             <property name="use_underline">True</property>
             <property name="draw_indicator">True</property>
             <signal name="toggled" handler="on_menu_hidden_files_toggled" swapped="no"/>
+            <child>
+              <object class="GtkAccelLabel" id="accel_label_2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Show _hidden files</property>
+                <property name="use_underline">True</property>
+                <property name="accel_widget">application_menu_hidden</property>
+              </object>
+            </child>
+            <accelerator key="h" signal="activate" modifiers="GDK_CONTROL_MASK"/>
           </object>
         </child>
       </object>
@@ -1478,7 +1488,7 @@ This action requires administrative rights.</property>
           <object class="GtkCheckButton" id="application_menu_fulltext">
             <property name="label" translatable="yes">Search file _contents</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
+            <property name="can_focus">False</property>
             <property name="receives_default">False</property>
             <property name="use_underline">True</property>
             <property name="draw_indicator">True</property>
@@ -1495,7 +1505,7 @@ This action requires administrative rights.</property>
           <object class="GtkCheckButton" id="application_menu_exact">
             <property name="label" translatable="yes">_Match results exactly</property>
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
+            <property name="can_focus">False</property>
             <property name="receives_default">False</property>
             <property name="use_underline">True</property>
             <property name="draw_indicator">True</property>
@@ -1506,10 +1516,9 @@ This action requires administrative rights.</property>
     </child>
     <child>
       <object class="GtkListBoxRow" id="listseprow3">
-        <property name="width_request">100</property>
         <property name="visible">True</property>
-        <property name="can_focus">True</property>
-        <property name="valign">start</property>
+        <property name="sensitive">False</property>
+        <property name="can_focus">False</property>
         <child>
           <object class="GtkSeparator" id="listsep3">
             <property name="visible">True</property>
@@ -1565,7 +1574,8 @@ This action requires administrative rights.</property>
     <child>
       <object class="GtkListBoxRow" id="listseprow4">
         <property name="visible">True</property>
-        <property name="can_focus">True</property>
+        <property name="sensitive">False</property>
+        <property name="can_focus">False</property>
         <child>
           <object class="GtkSeparator" id="listsep4">
             <property name="visible">True</property>
