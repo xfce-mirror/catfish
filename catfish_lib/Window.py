@@ -240,14 +240,14 @@ class Window(Gtk.Window):
 
         toolitem = Gtk.ToolItem.new()
         toolitem.add(chooser)
-        toolitem.set_margin_right(6)
+        toolitem.set_margin_end(6)
         toolbar.insert(toolitem, 0)
 
         toolitem = Gtk.ToolItem.new()
         toolitem.add(search)
         search.set_hexpand(True)
         toolitem.set_expand(True)
-        toolitem.set_margin_right(6)
+        toolitem.set_margin_end(6)
         toolbar.insert(toolitem, 1)
 
         toolitem = Gtk.ToolItem.new()

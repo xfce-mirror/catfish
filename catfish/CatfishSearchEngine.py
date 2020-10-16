@@ -381,15 +381,14 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
 
         # Grab the special directory list to get them precedence
         xdgdirlist = [
-            GLib.get_user_special_dir(GLib.USER_DIRECTORY_DESKTOP),
-            GLib.get_user_special_dir(GLib.USER_DIRECTORY_DOCUMENTS),
-            GLib.get_user_special_dir(GLib.USER_DIRECTORY_DOWNLOAD),
-            GLib.get_user_special_dir(GLib.USER_DIRECTORY_MUSIC),
-            GLib.get_user_special_dir(GLib.USER_DIRECTORY_PICTURES),
-            GLib.get_user_special_dir(
-                GLib.USER_DIRECTORY_PUBLIC_SHARE),
-            GLib.get_user_special_dir(GLib.USER_DIRECTORY_TEMPLATES),
-            GLib.get_user_special_dir(GLib.USER_DIRECTORY_VIDEOS),
+            GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DESKTOP),
+            GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DOCUMENTS),
+            GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DOWNLOAD),
+            GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_MUSIC),
+            GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_PICTURES),
+            GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_PUBLIC_SHARE),
+            GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_TEMPLATES),
+            GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_VIDEOS),
         ]
 
         for root, dirs, files in os.walk(top=path, topdown=True,
