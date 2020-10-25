@@ -517,30 +517,23 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                         continue
 
                     # Check each line. If a keyword is found, yield.
-                    opened =  open(fullpath, 'r')
-                    find_keywords = find_keywords_backup
-                    for line in opened:
-
+                    open_file =  open(fullpath, 'r')
+                    with open_file as file_text:
                         if self.exact:
-                            if " ".join(keywords) in line:
-                                yield fullpath
-                                break
-                        else:
-                            if any(keyword in line.lower()
-                                   for keyword in keywords):
-                                found_keywords = []
-                                for find_keyword in find_keywords:
-                                    if find_keyword in line.lower():
-                                        found_keywords.append(
-                                            find_keyword)
-                                for found_keyword in found_keywords:
-                                    find_keywords.remove(found_keyword)
-
-                                if len(find_keywords) == 0:
+                            for line in file_text:
+                                if " ".join(keywords) in line:
                                     yield fullpath
+                        else:
+                            match_list = set()
+                            for line in file_text:
+                                for kword in keywords:
+                                    if kword in line.lower():
+                                        match_list.add(kword)
+                                if len(set(keywords)) == len(match_list):
                                     break
-                    opened.close()
-                # Skips on errors, move onto next in list.
+                            if len(set(keywords)) == len(match_list):
+                                yield fullpath
+                # Skips on errors, move on to next in list.
                 except UnicodeDecodeError:
                     continue
                 except UnicodeError:
