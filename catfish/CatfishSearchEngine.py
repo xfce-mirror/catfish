@@ -30,7 +30,7 @@ import subprocess
 import time
 from itertools import permutations
 
-from mimetypes import guess_type
+import mimetypes
 
 import gi
 gi.require_version('GLib', '2.0')  # noqa
@@ -443,6 +443,36 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
         self.running = False
         self.exact = False
 
+    def is_binary(self, root, filename):
+        """Checks file for null byte. Most files containing a null byte
+        will be binary. May need to be changed in future to account for
+        UTF-16 and UTF-32 text, as both contain null bytes."""
+        file = open(os.path.join(root, filename), 'rb')
+        try:
+            data = file.read(64)
+            if b'\0' in data:
+                return True
+            else:
+                return False
+        finally:
+            file.close()
+
+    def is_txt(self, filename):
+        """Checks if text mimetype."""
+        mime = str(mimetypes.guess_type(filename)[0])
+        text_list = ('ardour', 'audacity', 'desktop', 'document',
+                     'fontforge', 'java', 'json', 'm4', 'mbox',
+                     'mimearchive', 'msg', 'none', 'perl',
+                     'pgp-keys', 'php', 'postscript', 'rtf',
+                     'ruby', 'shellscript', 'spreadsheet', 'sql',
+                     'subrip', 'text', 'url', 'winhlp',
+                     'x-bittorent', 'x-cue', 'x-extension-cfg',
+                     'x-glade', 'x-mpegurl', 'x-sami', 'x-theme',
+                     'x-trash', 'xml', 'xpixmap', 'yaml')
+        for filetype in text_list:
+            if filetype in mime.lower():
+                return True
+
     def run(self, keywords, path, regex=False, exclude_paths=[]):  # noqa
         """Run the search method using keywords and path.  regex is not used
         by this search method.
@@ -465,54 +495,63 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
         for root, dirs, files in os.walk(path):  # pylint: disable=W0612
             if self.force_stop:
                 break
+            # Don't search user excluded directories.
+            if root.startswith(tuple(exclude_paths)):
+                dirs[:] = []
+                continue
 
             for filename in files:
-                if self.force_stop:
-                    break
+                try:
+                    fullpath = os.path.join(root, filename)
 
-                # Checks if regular file (excludes special files).
-                if not os.path.isfile(os.path.join(root, filename)):
-                    continue
+                    # Skip if special file.
+                    if not os.path.isfile(fullpath):
+                        continue
+                    if os.path.getsize(fullpath) == 0:
+                        continue
+                    # Skip if not text file.
+                    if not self.is_txt(filename):
+                        continue
+                    # Skip if binary file not found in text check.
+                    if self.is_binary(root, filename):
+                        continue
 
-                # If the filetype is known to not be text, move along.
-                mime = guess_type(filename)[0]
-                if not mime or 'text' in mime:
-                    try:
-                        opened = open(os.path.join(root, filename), 'r')
+                    # Check each line. If a keyword is found, yield.
+                    opened =  open(fullpath, 'r')
+                    find_keywords = find_keywords_backup
+                    for line in opened:
 
-                        find_keywords = find_keywords_backup
+                        if self.exact:
+                            if " ".join(keywords) in line:
+                                yield fullpath
+                                break
+                        else:
+                            if any(keyword in line.lower()
+                                   for keyword in keywords):
+                                found_keywords = []
+                                for find_keyword in find_keywords:
+                                    if find_keyword in line.lower():
+                                        found_keywords.append(
+                                            find_keyword)
+                                for found_keyword in found_keywords:
+                                    find_keywords.remove(found_keyword)
 
-                        # Check each line.  If a keyword is found, yield.
-                        try:
-                            for line in opened:
-                                if self.force_stop:
+                                if len(find_keywords) == 0:
+                                    yield fullpath
                                     break
-
-                                if self.exact:
-                                    if " ".join(keywords) in line:
-                                        yield os.path.join(root, filename)
-                                        break
-                                else:
-                                    if any(keyword in line.lower()
-                                           for keyword in keywords):
-                                        found_keywords = []
-                                        for find_keyword in find_keywords:
-                                            if find_keyword in line.lower():
-                                                found_keywords.append(
-                                                    find_keyword)
-                                        for found_keyword in found_keywords:
-                                            find_keywords.remove(found_keyword)
-
-                                        if len(find_keywords) == 0:
-                                            yield os.path.join(root, filename)
-                                            break
-                        except UnicodeDecodeError:
-                            pass
-
-                        opened.close()
-                    except IOError:
-                        pass
-                yield True
+                    opened.close()
+                # Skips on errors, move onto next in list.
+                except UnicodeDecodeError:
+                    continue
+                except UnicodeError:
+                    continue
+                except FileNotFoundError:
+                    continue
+                except PermissionError:
+                    continue
+                except OSError:
+                    continue
+            yield True
         yield False
         self.force_stop = False
         self.running = False
