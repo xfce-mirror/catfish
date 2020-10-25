@@ -39,7 +39,11 @@ from gi.repository import GLib
 try:
     gi.require_version('Zeitgeist', '2.0')
     from gi.repository import Zeitgeist
-    ZEITGEIST_SUPPORT = True
+    log_trial = Zeitgeist.Log.get_default()
+    if log_trial.datapath() is None:
+        ZEITGEIST_SUPPORT = False
+    else:
+        ZEITGEIST_SUPPORT = True
 except ImportError:
     ZEITGEIST_SUPPORT = False
 
