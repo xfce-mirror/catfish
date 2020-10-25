@@ -43,6 +43,15 @@
   </provides>
 
   <releases>
+    <release version="4.15.0" date="2020-10-25">
+      <description>
+        <_p>This release better integrates with the Xfce desktop, better supports
+        the Zeitgeist datahub, and includes many bugfixes and usability
+        improvements.
+        </_p>
+      </description>
+    </release>
+
     <release version="1.4.13" date="2020-01-14">
       <description>
         <_p>This release resolves packaging errors for Debian and includes

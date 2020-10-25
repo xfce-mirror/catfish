@@ -1,3 +1,42 @@
+4.15.0
+======
+- Dependency Changes:
+  - GTK >= 3.22
+  - GLib >= 2.42
+  - Python 2 support has been removed
+  - Python 3 >= 3.2 (#33)
+  - Xfconf >= 4.14.0 (requires GObject Introspection, see INSTALL)
+  - Zeitgeist optional dependency now requires GObject Introspection
+- New Features:
+  - Added Ctrl+H shortcut to show/hide hidden files (#16)
+  - Added "Today" and "Month" filters to the sidebar (#23)
+  - Fulltext searches now include more text files (#7)
+- General:
+  - New app icon, now using an rDNS icon name (org.xfce.catfish)
+  - Migrated ChangeLog to NEWS to better match Xfce projects
+  - Renamed README to README.md and updated to match Xfce projects
+  - Updated INSTALL to reference python3-specific packages (#36)
+  - Various in-app icon updates (#15, #17, #26)
+  - Added additional padding to Other and Custom gear icons (#20)
+- Bug Fixes:
+  - Check if zeitgeist daemon is running at startup (#34)
+  - Correctly position custom filter popups above gear icon (#18)
+  - Default to the current date in the custom date filters (#24)
+  - Fix 'list' object has no attribute 'lower' (#9)
+  - Fix fulltext freeze with special files (#32)
+  - Fix python crash when some extension scheme is used (#35)
+  - Fix statusbar moving on mouseover
+  - Move custom file extension hint to tooltip (#25)
+  - Sidebar entries no longer move when losing focus (#22)
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+  Dutch, Eastern Armenian, English (Australia), Estonian, Finnish, French,
+  Galician, German, Greek, Hebrew, Hungarian, Icelandic, Indonesian,
+  Interlingue, Italian, Japanese, Korean, Lithuanian, Malay, Norwegian Bokmål,
+  Norwegian Nynorsk, Polish, Portuguese, Portuguese (Brazil), Russian,
+  Serbian, Slovak, Slovenian, Spanish, Thai, Turkish, Ukrainian
+
 1.4.13
 ======
 - General:
