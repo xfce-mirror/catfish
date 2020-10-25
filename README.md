@@ -1,37 +1,45 @@
-Catfish
-=============
+[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/apps/catfish/-/blob/master/COPYING)
 
-Catfish is a handy file searching tool for linux and unix.
-The interface is intentionally lightweight and simple, using only GTK+3.
+# Catfish
+
+Catfish is a handy file searching tool for Linux and Unix. 
+The interface is intentionally lightweight and simple, using only GTK+3. 
 You can configure it to your needs by using several command line options.
 
-You are encouraged to run 'catfish --help' to check out the various
-command line options.
+You are encouraged to run ``catfish –help`` to check out the various command line options.
 
-General
--------------
+----
 
-Catfish is part of the Xfce project. All project resources can be found
-at the following locations:
+### Homepage
 
-* [Homepage](https://docs.xfce.org/apps/catfish/start)
-* [Bugs](https://bugzilla.xfce.org/buglist.cgi?product=Catfish)
-* [Code](https://gitlab.xfce.org/apps/catfish)
-* [Translations](https://www.transifex.com/xfce/public)
+[Catfish documentation](https://docs.xfce.org/apps/catfish/start)
 
-Dependencies
--------------
+### Changelog
 
-* Python 3
-* Gtk 3.22+
-* GLib 2.42+
-* GLib / GObject Python bindings: GdkPixbuf, GLib, GTK 3, Pango, Cairo, Xfconf
-* [Pexpect](https://pypi.org/project/pexpect/)
-* locate or mlocate
+See [NEWS](https://gitlab.xfce.org/apps/catfish/-/blob/master/NEWS) for details on changes and fixes made in the current release.
 
-Installation and Bugs
--------------
+### Source Code Repository
 
-For installation instructions, please read INSTALL.
+[Catfish source code](https://gitlab.xfce.org/apps/catfish)
 
-Please send all bugs, suggestions, and feature requests to [the Xfce Bugzilla](https://bugzilla.xfce.org/buglist.cgi?product=Catfish)
+### Download a Release Tarball
+
+[Catfish archive](https://archive.xfce.org/src/apps/catfish)
+    or
+[Catfish tags](https://gitlab.xfce.org/apps/catfish/-/tags)
+
+### Installation
+
+From source: 
+
+    local/user install:
+        python3 setup.py install --user
+    system-wide/root install:
+        sudo python3 setup.py install
+ 
+ For detailed installation instructions, see [INSTALL](https://gitlab.xfce.org/apps/catfish/-/blob/master/INSTALL)
+
+### Reporting Bugs
+
+Visit the [reporting bugs](https://docs.xfce.org/apps/catfish/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
+
