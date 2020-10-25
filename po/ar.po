@@ -740,6 +740,8 @@ msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
+"عمل هذا الإصدار على إصلا مشكلتين و هما عدم القدرة على تنفيذ مسار بشكل صحيح و"
+" كذا يحسن التعامل مع  الرومز الرمزية المخفية."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
@@ -747,12 +749,16 @@ msgid ""
 " up unused code, and fixed potential issues with the list and item "
 "selection."
 msgstr ""
+"أدى هذا الإصدار المستقر إلى تحسين موثوقية مربع حوار كلمة المرور ، وتنظيف "
+"الشفرة غير المستخدمة ، وإصلاح المشكلات المحتملة في القائمة واختيار العنصر."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr ""
+"هذا الإصدار عمل على إصلاح مشكلة أمنية محتملة مع بدء تشغيل البرنامج وإصلاح "
+"انهياره مع اختيار عناصر متعددة."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
@@ -762,3 +768,7 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"أول إصدار في سلسلة 1.0x قدم واجهة منتعشة وأصلح عددا من الأخطاء منذ فترة "
+"طويلة. تحسينات على الأذونات الافتراضية القضاء على عدد من التحذيرات عند "
+"التعبئة للتوزيعات. تم تعزيز إمكانية الوصول حيث تم جعل جميع السلاسل قابلة "
+"للترجمة وتحسين مسرعات لوحة المفاتيح."
