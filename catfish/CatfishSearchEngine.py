@@ -175,6 +175,11 @@ class CatfishSearchEngine:
             else:
                 keys.append(key)
 
+        # path may be empty when some "extension" scheme is used in URL
+        if not path:
+            self.stop()
+            return
+
         # For simplicity, make sure the path contains a trailing '/'
         if not path.endswith('/'):
             path += '/'
