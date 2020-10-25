@@ -597,6 +597,7 @@
                           <object class="GtkBox" id="filters_filetype">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <property name="margin_top">2</property>
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkLabel" id="label3">
@@ -637,6 +638,8 @@
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn" id="treeviewcolumn1">
+                                        <property name="sizing">fixed</property>
+                                        <property name="fixed_width">34</property>
                                         <property name="title">column</property>
                                         <child>
                                           <object class="GtkCellRendererToggle" id="cellrenderertoggle1">
@@ -775,6 +778,8 @@
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn" id="treeviewcolumn3">
+                                        <property name="sizing">fixed</property>
+                                        <property name="fixed_width">34</property>
                                         <property name="title">column</property>
                                         <child>
                                           <object class="GtkCellRendererPixbuf" id="cellrendererpixbuf2">
