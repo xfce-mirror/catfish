@@ -228,7 +228,7 @@ msgstr "Baza iskanj je starejša od sedmih dni. Posodobim zdaj?"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "File Type"
-msgstr "Tip datoteke"
+msgstr "Vrsta datoteke"
 
 #: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1348
 msgid "Modified"
@@ -585,11 +585,11 @@ msgid ""
 "modification date, file type, and file contents, users will no longer be "
 "dependent on the file manager or organization skills."
 msgstr ""
-"Catfish je mahhno, hitro in zmogljivo iskalno orodje. Ponaša se z minimalnim"
+"Catfish je majhno, hitro in zmogljivo iskalno orodje. Ponaša se z minimalnim"
 " vmesnikom, s poudarkom na rezultatih. Uporabnikom pomaga najti kar rabijo "
 "brez upravljalnika datotek. S pomočjo zmogljivih filtorv, kot so datum "
-"spremembe, vrsta datotek in  vsebina datotek, uporabniki niso več odvisni od"
-" upravljalnika datotek ali organizacijskih veščin."
+"spremembe, vrsta in  vsebina datotek, uporabniki niso več odvisni od "
+"upravljalnika datotek ali organizacijskih veščin."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "The main Catfish window displaying image search results"
