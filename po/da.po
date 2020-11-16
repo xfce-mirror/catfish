@@ -653,8 +653,8 @@ msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
-"Denne udgivelse byder på forbedringer til ydelsen ved at udelukke søgemapper"
-" som normalt ikke bruges."
+"Denne udgivelse byder på forbedringer til ydelsen ved at undlade søgemapper "
+"som normalt ikke bruges."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
