@@ -349,7 +349,7 @@ msgstr "Medtag skjulte filer"
 
 #: ../catfish/__init__.py:59
 msgid "Perform fulltext search"
-msgstr "Udfør fuldtekstssøgning"
+msgstr "Udfør søgning i fuld tekst"
 
 #: ../catfish/__init__.py:61
 msgid ""
@@ -782,7 +782,7 @@ msgid ""
 " a regression with selecting multiple items."
 msgstr ""
 "Denne udgivelse rettede et potentielt sikkerhedsproblem med programopstart "
-"og retteede en regression med valg af flere punkter."
+"og rettede en regression med valg af flere punkter."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
