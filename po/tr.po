@@ -10,7 +10,7 @@
 # Volkan Gezer <volkangezer@gmail.com>, 2020
 # Demiray Muhterem <mdemiray@msn.com>, 2020
 # Serdar Sağlam <teknomobil@msn.com>, 2020
-# Emin Tufan <etcetin@gmail.com>, 2020
+# Emin Tufan Çetin <etcetin@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-25 08:15-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Emin Tufan <etcetin@gmail.com>, 2020\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>, 2020\n"
 "Language-Team: Turkish (https://www.transifex.com/xfce/teams/16840/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -321,7 +321,7 @@ msgstr "_Hakkında"
 
 #: ../catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
-msgstr "Kullanım şekli: %prog [options] path query"
+msgstr "Kullanım biçimi: %prog [seçenekler] yol sorgu"
 
 #: ../catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
@@ -398,7 +398,7 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:740
 msgid "An error occurred while updating the database."
-msgstr "Veritabanı güncellenirken bir hata oluştu."
+msgstr "Veri tabanı güncellenirken hata oluştu."
 
 #: ../catfish/CatfishWindow.py:742
 msgid "Authentication failed."
@@ -410,7 +410,7 @@ msgstr "Doğrulama iptal edildi."
 
 #: ../catfish/CatfishWindow.py:754
 msgid "Search database updated successfully."
-msgstr "Arama veritabanı başarıyla güncellendi."
+msgstr "Arama veri tabanı başarıyla güncellendi."
 
 #. Update the Cancel button to Close, make it default
 #: ../catfish/CatfishWindow.py:815
@@ -478,7 +478,7 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:1319
 msgid "If you delete a file, it is permanently lost."
-msgstr "Bir dosya silerseniz, kalıcı olarak kaybedilir."
+msgstr "Dosya silerseniz, kalıcı olarak yitirilir."
 
 #: ../catfish/CatfishWindow.py:1342
 msgid "Filename"
@@ -494,7 +494,7 @@ msgstr "Konum"
 
 #: ../catfish/CatfishWindow.py:1358
 msgid "Preview"
-msgstr "Önizleme"
+msgstr "Ön İzleme"
 
 #: ../catfish/CatfishWindow.py:1366
 msgid "Details"
@@ -545,7 +545,7 @@ msgstr "\"%s\" için arama sonuçları"
 
 #: ../catfish_lib/catfishconfig.py:91
 msgid "Catfish is a versatile file searching tool."
-msgstr "Catfish çok yönlü bir dosya arama aracıdır."
+msgstr "Catfish, çok yönlü dosya arama aracıdır."
 
 #: ../catfish_lib/SudoDialog.py:126
 msgid "Password Required"
@@ -641,7 +641,7 @@ msgid ""
 "traversing symbolic links."
 msgstr ""
 "Bu sürüm bazı başlatma hatalarının yanı sıra sembolik bağlantılarda geçişle "
-"ilgili çeşitli sorunları ele almaktadır."
+"ilgili türlü sorunları ele almaktadır."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
@@ -664,7 +664,7 @@ msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
 msgstr ""
-"Bu sürüm daha iyi masaüstü entegrasyonu, OpenBSD ve Wayland desteği ve "
+"Bu sürüm daha iyi masaüstü tümleşimi, OpenBSD ve Wayland desteği, "
 "geliştirilmiş çeviri desteği sunuyor."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
@@ -674,11 +674,11 @@ msgid ""
 "processed. Files can be dragged into other applications. Thumbnails are only"
 " generated when requested by the user."
 msgstr ""
-"Bu sürüm, geliştirilmiş performans, daha iyi masaüstü entegrasyonu ve "
+"Bu sürüm, geliştirilmiş performans, daha iyi masaüstü tümleşimi ve "
 "kronikleşmiş hataların ayıklanmasını içeriyor. Alıntılanan arama dizeleri "
-"artık daha doğru bir şekilde işlemden geçiyor. Arama sonucunda elde edilen "
-"dosyalar başka bir dizine sürüklenip taşınabilir. Küçük resimler, yalnızca "
-"kullanıcı tarafından istendiğinde oluşturulur."
+"artık daha doğru biçimde işlemden geçiyor. Arama sonucunda elde edilen "
+"dosyalar başka dizine sürüklenip taşınabilir. Küçük resimler, yalnızca "
+"kullanıcı istediğinde oluşturulur."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
@@ -687,9 +687,9 @@ msgid ""
 "other applications. Items displayed at the bottom of the results window are "
 "now accessible with all desktop themes."
 msgstr ""
-"Bu sürüm, küçük resim işleme ve çeşitli hata düzeltmeleri için birkaç "
-"iyileştirme sunuyor. Simge önizlemeleri geliştirildi ve şimdi diğer "
-"uygulamalarla eşleşecek. Sonuç penceresinin altında görüntülenen öğeler "
+"Bu sürüm, küçük resim işleme ve türlü hata düzeltmeleri için birkaç "
+"iyileştirme sunuyor. Simge ön izlemeleri geliştirildi ve şimdi diğer "
+"uygulamalarla eşleşecek. Sonuç penceresinin altında görüntülenen ögeler "
 "artık tüm masaüstü temalarıyla erişilebilir durumdadır."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
@@ -732,11 +732,11 @@ msgid ""
 "headerbars and popover widgets. Password handling has been improved with the"
 " integration of PolicyKit when available."
 msgstr ""
-"Bu sürüm önemli bir arayüz yenilemesi içerir, arama hızını artırır ve "
-"çeşitli hataları düzeltir. İsteğe bağlı başlık çubukları ve popover "
-"widget'ları dahil, GTK + araç setinin en yeni özelliklerinden bazılarını "
-"kullanarak iş akışı geliştirildi. PasswordKit'in mümkün olduğunda "
-"entegrasyonu ile şifre kullanımı geliştirildi."
+"Bu sürüm önemli arayüz yenilemesi içerir, arama hızını artırır ve türlü "
+"hataları düzeltir. İsteğe bağlı başlık çubukları ve popover widget'ları "
+"dahil, GTK + araç takımının en yeni özelliklerinden bazılarını kullanarak iş"
+" akışı geliştirildi. PasswordKit ile olabildiğince tümleşimle şifre "
+"kullanımı geliştirildi."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid "This release fixes two new bugs and includes updated translations."
@@ -755,10 +755,10 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated,"
 " and the dialogs used to update the database have been improved."
 msgstr ""
-"Bu sürüm, birden fazla arama teriminin artık desteklenmediği bir geri dönüşü"
-" düzeltir. Arama veritabanının modası geçmiş ve artık veritabanını "
-"güncellemek için kullanılan diyaloglar geliştirildiğinde bir BilgiÇubuğu "
-"görüntülenmekte."
+"Bu sürüm, birden çok arama teriminin artık desteklenmediği bağlanımı "
+"düzeltir. Arama veri tabanının modası geçmiş ve artık veri tabanını "
+"güncellemek için kullanılan iletişim pencereleri geliştirildiğinde bir "
+"BilgiÇubuğu görüntülenmekte."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
@@ -783,8 +783,8 @@ msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr ""
-"Bu sürüm, programın başlatılmasıyla ilgili olası bir güvenlik sorununu "
-"düzeltti ve birden çok öğe seçerek geri dönüşü düzeltti."
+"Bu sürüm, programın başlatılmasıyla ilgili olası güvenlik sorununu düzeltti "
+"ve çoklu öge seçiminde gerilemeyi düzeltti."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
@@ -794,8 +794,8 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
-"1.0.x serisindeki ilk sürüm, yenilenmiş bir arabirim sundu ve bir dizi uzun "
-"süredir devam eden hataları düzeltti. Varsayılan izinlerdeki iyileştirmeler,"
-" dağıtımlar için paketlerken bir takım uyarıları ortadan kaldırdı. Tüm "
-"dizeler çevrilebilir hale getirildiğinden ve klavye hızlandırıcılarının "
-"geliştirildiği için erişilebilirlik geliştirildi."
+"1.0.x serisindeki ilk sürüm, yenilenmiş arabirim sundu ve uzun süredir süren"
+" kimi hataları düzeltti. Öntanımlı izinlerdeki iyileştirmeler, dağıtımlar "
+"için paketlerken kimi uyarıları ortadan kaldırdı. Tüm dizeler çevrilebilir "
+"hale getirildiğinden ve klavye hızlandırıcılarının geliştirildiği için "
+"erişilebilirlik geliştirildi."
