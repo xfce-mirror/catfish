@@ -41,7 +41,7 @@ msgstr "Vyhľadáva v súborovom systéme"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: ../org.xfce.Catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "súbory;nájsť;nájdenie;vyhľadanie;vyhľadať;"
 
 #: ../data/ui/CatfishPreferences.ui.h:1
 msgid "Catfish Preferences"
@@ -53,31 +53,32 @@ msgstr "_Zavrieť"
 
 #: ../data/ui/CatfishPreferences.ui.h:3
 msgid "Classic (_Titlebar)"
-msgstr ""
+msgstr "Klasické (_záhlavie)"
 
 #: ../data/ui/CatfishPreferences.ui.h:4
 msgid "_Modern (CSD)"
-msgstr ""
+msgstr "_Moderné (CSD)"
 
 #: ../data/ui/CatfishPreferences.ui.h:5
 msgid "Your new window layout will be applied after restarting Catfish."
 msgstr ""
+"Vaše nové rozloženie okna bude použité po reštartovaní aplikácie Catfish."
 
 #: ../data/ui/CatfishPreferences.ui.h:6
 msgid "Window Layout"
-msgstr ""
+msgstr "Rozloženie okna"
 
 #: ../data/ui/CatfishPreferences.ui.h:7
 msgid "Show _hidden files in the results"
-msgstr ""
+msgstr "Zobraziť vo výsledkoch _skryté súbory"
 
 #: ../data/ui/CatfishPreferences.ui.h:8
 msgid "Show filter _sidebar"
-msgstr ""
+msgstr "Zobraziť postranný panel _filtrovania"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Display Options"
-msgstr ""
+msgstr "Voľby zobrazenia"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Appearance"
@@ -85,11 +86,11 @@ msgstr "Vzhľad"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Path"
-msgstr ""
+msgstr "Cesta"
 
 #: ../data/ui/CatfishPreferences.ui.h:12
 msgid "Add Directory..."
-msgstr ""
+msgstr "Pridá adresár..."
 
 #: ../data/ui/CatfishPreferences.ui.h:13
 msgid "_Add"
@@ -97,23 +98,23 @@ msgstr "_Pridať"
 
 #: ../data/ui/CatfishPreferences.ui.h:14
 msgid "Remove Directory"
-msgstr ""
+msgstr "Odstráni adresár"
 
 #: ../data/ui/CatfishPreferences.ui.h:15
 msgid "_Remove"
-msgstr ""
+msgstr "O_dstrániť"
 
 #: ../data/ui/CatfishPreferences.ui.h:16
 msgid "Exclude Directories"
-msgstr ""
+msgstr "Vylúčené adresáre"
 
 #: ../data/ui/CatfishPreferences.ui.h:17
 msgid "Close the search _window after opening a file"
-msgstr ""
+msgstr "Zavrieť _okno vyhľadávanie po otvorení súboru"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Rôzne"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Advanced"
@@ -149,7 +150,7 @@ msgstr "Prípony súborov"
 
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
-msgstr ""
+msgstr "Zadajte čiarkami oddelený zoznam prípon súborov (napr. odt, png, txt)"
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
@@ -193,7 +194,7 @@ msgstr "Tento týždeň"
 
 #: ../data/ui/CatfishWindow.ui.h:20
 msgid "This month"
-msgstr ""
+msgstr "Tento mesiac"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "Custom"
@@ -276,7 +277,7 @@ msgstr "Výber priečinku"
 
 #: ../data/ui/CatfishWindow.ui.h:41
 msgid "Search for files"
-msgstr ""
+msgstr "Vyhľadajte súbory"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgid "Compact List"
@@ -288,7 +289,7 @@ msgstr "Miniatúry"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "Show _sidebar"
-msgstr ""
+msgstr "Zobraziť po_stranný panel"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Show _hidden files"
@@ -296,15 +297,15 @@ msgstr "Zobraziť _skryté súbory"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Search file _contents"
-msgstr ""
+msgstr "Vyhľadať o_bsah súborov"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "_Match results exactly"
-msgstr ""
+msgstr "Vy_hľadať presnú zhodu"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "_Refresh search index..."
-msgstr ""
+msgstr "_Obnoviť index vyhľadávania..."
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Preferences"
@@ -312,7 +313,7 @@ msgstr "Nas_tavenia"
 
 #: ../data/ui/CatfishWindow.ui.h:50
 msgid "_About"
-msgstr "_O programe"
+msgstr "_O aplikácii"
 
 #: ../catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
@@ -320,7 +321,7 @@ msgstr "Použitie: %prog [voľby] cesta požiadavka"
 
 #: ../catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
-msgstr ""
+msgstr "Zobrazí ladiace správy (voľba -vv ladí tiež knižnicu catfish_lib)"
 
 #: ../catfish/__init__.py:47
 msgid "Use large icons"
@@ -337,7 +338,7 @@ msgstr "Zobrazí čas vo formáte ISO"
 #. Translators: Do not translate PATH, it is a variable.
 #: ../catfish/__init__.py:53
 msgid "Set the default search path"
-msgstr ""
+msgstr "Nastaví predvolenú cestu vyhľadávania"
 
 #: ../catfish/__init__.py:55
 msgid "Perform exact match"
@@ -388,6 +389,8 @@ msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
+"Vyššie zadajte vašu požiadavku na nájdenie súborov,\n"
+"alebo kliknite na ikonu %s pre viac volieb."
 
 #: ../catfish/CatfishWindow.py:740
 msgid "An error occurred while updating the database."
@@ -449,7 +452,7 @@ msgstr "Nepodarilo sa odstrániť „%s“."
 #: ../catfish/CatfishWindow.py:1277
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr ""
+msgstr "Uloženie „%s“ ako..."
 
 #: ../catfish/CatfishWindow.py:1312
 #, python-format
@@ -524,7 +527,7 @@ msgstr "bajtov"
 
 #: ../catfish/CatfishWindow.py:1791 ../catfish/CatfishWindow.py:1801
 msgid "Searching..."
-msgstr ""
+msgstr "Vyhľadáva sa..."
 
 #: ../catfish/CatfishWindow.py:1799
 #, python-format
@@ -594,12 +597,15 @@ msgstr ""
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "The main Catfish window displaying image search results"
 msgstr ""
+"Hlavné okno aplikácie Catfish zobrazujúce výsledky vyhľadávania obrázkov"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
 "The main Catfish window displaying available filters and filtered search "
 "results"
 msgstr ""
+"Hlavné okno aplikácie Catfish zobrazujúce dostupné filtre a filtrované "
+"výsledky vyhľadávania"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
