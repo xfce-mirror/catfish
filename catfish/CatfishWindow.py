@@ -156,7 +156,6 @@ class CatfishWindow(Window):
     def finish_initializing(self, builder):
         """Set up the main window"""
         super(CatfishWindow, self).finish_initializing(builder)
-        self.set_wmclass("catfish", "Catfish")
 
         self.AboutDialog = self.get_about_dialog
 
@@ -197,14 +196,15 @@ class CatfishWindow(Window):
         # place the overlay in the window
         scrolledwindow = builder.get_named_object("results.scrolled_window")
         parent = scrolledwindow.get_parent()
-        scrolledwindow.reparent(overlay)
+        parent.remove(scrolledwindow)
+        overlay.add(scrolledwindow)
         parent.add(overlay)
         overlay.show()
 
         # Create the overlay statusbar
         self.statusbar = Gtk.EventBox()
-        self.statusbar.set_margin_left(2)
-        self.statusbar.set_margin_right(3)
+        self.statusbar.set_margin_start(2)
+        self.statusbar.set_margin_end(3)
         self.statusbar.set_margin_bottom(3)
         self.statusbar.get_style_context().add_class("frame")
         self.statusbar.get_style_context().add_class("background")
@@ -228,11 +228,11 @@ class CatfishWindow(Window):
         box.set_orientation(Gtk.Orientation.HORIZONTAL)
         box.pack_start(self.spinner, False, False, 0)
         box.pack_start(self.statusbar_label, False, False, 0)
-        box.set_margin_left(8)
+        box.set_margin_start(8)
         box.set_margin_top(3)
-        box.set_margin_right(8)
+        box.set_margin_end(8)
         box.set_margin_bottom(3)
-        self.spinner.set_margin_right(3)
+        self.spinner.set_margin_end(3)
         box.show()
 
         self.statusbar.add(box)
@@ -397,19 +397,25 @@ class CatfishWindow(Window):
         welcome_area.show_all()
 
     def get_screen_size(self):
-        s = Gdk.Screen.get_default()
-        if s is None:
+        display = Gdk.Display.get_default()
+        if display is None:
             return (-1, -1)
-        return (s.get_width(), s.get_height())
+
+        monitor = display.get_primary_monitor()
+        geometry = monitor.get_geometry()
+        scale = monitor.get_scale_factor()
+        res_width = scale * geometry.width
+        res_height = scale * geometry.height
+        return (res_width, res_height)
 
     def get_display_size(self):
-        d = Gdk.Display.get_default()
-        if d is None:
+        display = Gdk.Display.get_default()
+        if display is None:
             return (-1, -1)
 
-        w = Gdk.get_default_root_window()
-        m = d.get_monitor_at_window(w)
-        monitor = m.get_geometry()
+        window = Gdk.get_default_root_window()
+        mon = display.get_monitor_at_window(window)
+        monitor = mon.get_geometry()
         return (monitor.width, monitor.height)
 
     def on_calendar_day_changed(self, widget):  # pylint: disable=W0613
@@ -1498,8 +1504,7 @@ class CatfishWindow(Window):
             if not os.access(filename, os.W_OK):
                 writeable = False
         self.file_menu_delete.set_sensitive(writeable)
-        self.file_menu.popup(None, None, None, None,
-                             event.button, event.time)
+        self.file_menu.popup_at_pointer()
         return True
 
     def treeview_alt_clicked(self, treeview, event=None):
@@ -1794,7 +1799,6 @@ class CatfishWindow(Window):
         self.builder.get_object("splash_status").show()
         self.builder.get_object("welcome_area").hide()
         show_results = False
-
         self.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
         self.set_title(_("Searching for \"%s\"") % keywords)
         self.spinner.show()
