@@ -442,17 +442,37 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
         self.running = False
         self.exact = False
 
-    def is_binary(self, root, filename):
-        """Checks file for null byte. Most files containing a null byte
-        will be binary. May need to be changed in future to account for
-        UTF-16 and UTF-32 text, as both contain null bytes."""
+    def check_charset(self, root, filename):
+        """Checks file for BOM to detect UTF encodings.
+        Also checks file for null byte. Most files containing
+        a null byte will be binary. UTF-16 and UTF-32 without
+        BOM can contain null bytes, support for that can be
+        added by checking the line ending."""
         file = open(os.path.join(root, filename), 'rb')
         try:
-            data = file.read(64)
-            if b'\0' in data:
-                return True
+            data = file.read(64).lower()
+
+            if data.startswith(b'\x00\x00\xfe\xff'):
+                return 'utf-32-be'
+
+            elif data.startswith(b'\xff\xfe\x00\x00'):
+                return 'utf-32-le'
+
+            elif data.startswith(b'\x2b\x2f\x76'):
+                return 'utf-7'
+
+            elif data.startswith(b'\xfe\xff'):
+                return 'utf-16-be'
+
+            elif data.startswith(b'\xff\xfe'):
+                return 'utf-16-le'
+
+            elif b'\0' in data:
+                return 'binary'
+
             else:
-                return False
+                return 'utf-8'
+
         finally:
             file.close()
 
@@ -511,12 +531,13 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                     # Skip if not text file.
                     if not self.is_txt(filename):
                         continue
-                    # Skip if binary file not found in text check.
-                    if self.is_binary(root, filename):
+                    # Check character encoding, skip if binary.
+                    charset = self.check_charset(root, filename)
+                    if charset == 'binary':
                         continue
 
                     # Check each line. If a keyword is found, yield.
-                    open_file =  open(fullpath, 'r')
+                    open_file = open(fullpath, 'r', encoding=charset)
                     with open_file as file_text:
                         if self.exact:
                             for line in file_text:
