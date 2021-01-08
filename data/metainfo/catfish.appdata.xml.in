@@ -43,6 +43,14 @@
   </provides>
 
   <releases>
+    <release version="4.16.0" date="2021-01-08">
+      <description>
+        <_p>This release expands fulltext search to support more encodings and
+        match all keywords instead of matching any.
+        </_p>
+      </description>
+    </release>
+
     <release version="4.15.0" date="2020-10-25">
       <description>
         <_p>This release better integrates with the Xfce desktop, better supports

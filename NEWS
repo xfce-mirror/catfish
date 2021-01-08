@@ -1,3 +1,14 @@
+4.16.0
+======
+- Fulltext now searches UTF-7, UTF-8, UTF-16 BE/LE, and UTF-32 BE/LE
+- Replace Gtk/Gdk/GLib deprecated code (#6)
+- Use "match all" method for fulltext search (#30)
+- Translation Updates:
+  Arabic, Basque, Belarusian, Danish, Estonian, Finnish, French,
+  Indonesian, Japanese, Kabyle, Norwegian Bokmål, Portuguese,
+  Portuguese (Brazil), Russian, Serbian, Slovak, Slovenian, Spanish,
+  Swedish, Turkish
+
 4.15.0
 ======
 - Dependency Changes:
