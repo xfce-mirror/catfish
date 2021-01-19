@@ -6,7 +6,7 @@
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2018
 # Masato HASHIMOTO <cabezon.hashimoto@gmail.com>, 2019
-# kdeguchi <kdeguchi@sz.tokoha-u.ac.jp>, 2019
+# Ken DEGUCHI <kdeguchi@sz.tokoha-u.ac.jp>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
 # YAMADA Shinichirou <yamada_strong_yamada_nice_64bit@yahoo.co.jp>, 2020
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2020
