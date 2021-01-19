@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-06 06:39-0400\n"
+"POT-Creation-Date: 2020-10-25 08:15-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Oukiki Saleh <salehoukiki@gmail.com>, 2020\n"
 "Language-Team: Arabic (https://www.transifex.com/xfce/teams/16840/ar/)\n"
@@ -184,7 +184,7 @@ msgstr "أخرى"
 msgid "Any time"
 msgstr "أي وقت"
 
-#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1584
+#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1583
 msgid "Today"
 msgstr "اليوم"
 
@@ -228,11 +228,11 @@ msgstr "قاعدة بيانات البحث عمرها أكثر من 7 أيام �
 msgid "File Type"
 msgstr "نوع الملف"
 
-#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1349
+#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1348
 msgid "Modified"
 msgstr "مُعدّل"
 
-#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1794
+#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1793
 msgid "Results will be displayed as soon as they are found."
 msgstr "ستعرض النتائج حالما يتم العثور عليها."
 
@@ -242,8 +242,8 @@ msgstr "تحديث قاعدة بيانات البحث"
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:726
-#: ../catfish_lib/SudoDialog.py:193
+#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:725
+#: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "إلغاء"
 
@@ -360,24 +360,24 @@ msgstr "إذا تم توفير المسار والاستعلام ، ابدأ ا�
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:106
+#: ../catfish/CatfishWindow.py:105
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (ترميز غير صالح)"
 
-#: ../catfish/CatfishWindow.py:146
+#: ../catfish/CatfishWindow.py:145
 msgid "translator-credits"
 msgstr "المترجم محمد الحرقان"
 
-#: ../catfish/CatfishWindow.py:290
+#: ../catfish/CatfishWindow.py:289
 msgid "Unknown"
 msgstr "مجهول"
 
-#: ../catfish/CatfishWindow.py:294
+#: ../catfish/CatfishWindow.py:293
 msgid "Never"
 msgstr "أبداً لا"
 
-#: ../catfish/CatfishWindow.py:378
+#: ../catfish/CatfishWindow.py:377
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -386,37 +386,37 @@ msgstr ""
 "أدخل استفسارك أعلاه للعثور على ملفاتك\n"
 "أو انقر فوق %s الأيقونة لمزيد من الخيارات."
 
-#: ../catfish/CatfishWindow.py:741
+#: ../catfish/CatfishWindow.py:740
 msgid "An error occurred while updating the database."
 msgstr "حدث خطأ أثناء تحديث قاعدة البيانات."
 
-#: ../catfish/CatfishWindow.py:743
+#: ../catfish/CatfishWindow.py:742
 msgid "Authentication failed."
 msgstr "فشل الاستيثاق."
 
-#: ../catfish/CatfishWindow.py:749
+#: ../catfish/CatfishWindow.py:748
 msgid "Authentication cancelled."
 msgstr "تم إلغاء المصادقة."
 
-#: ../catfish/CatfishWindow.py:755
+#: ../catfish/CatfishWindow.py:754
 msgid "Search database updated successfully."
 msgstr "تم تحديث قاعدة بيانات البحث بنجاح"
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:816
+#: ../catfish/CatfishWindow.py:815
 msgid "Close"
 msgstr "أغلق"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:830
+#: ../catfish/CatfishWindow.py:829
 msgid "Updating..."
 msgstr "يُحدّث..."
 
-#: ../catfish/CatfishWindow.py:864
+#: ../catfish/CatfishWindow.py:863
 msgid "Stop Search"
 msgstr "إيقاف البحث"
 
-#: ../catfish/CatfishWindow.py:865
+#: ../catfish/CatfishWindow.py:864
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -424,31 +424,31 @@ msgstr ""
 "تقدم عملية البحث...\n"
 "اضغط على زر إلغاء أو مفتاح Escape لتوقف."
 
-#: ../catfish/CatfishWindow.py:874
+#: ../catfish/CatfishWindow.py:873
 msgid "Begin Search"
 msgstr "ابدأ البحث"
 
-#: ../catfish/CatfishWindow.py:1170
+#: ../catfish/CatfishWindow.py:1169
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "تغذّر فتح \"%s\"."
 
-#: ../catfish/CatfishWindow.py:1222
+#: ../catfish/CatfishWindow.py:1221
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "تعذر حفظ\"%s\""
 
-#: ../catfish/CatfishWindow.py:1239
+#: ../catfish/CatfishWindow.py:1238
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "تعذر حذف \"%s\""
 
-#: ../catfish/CatfishWindow.py:1278
+#: ../catfish/CatfishWindow.py:1277
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "حفظ \"%s\" في..."
 
-#: ../catfish/CatfishWindow.py:1313
+#: ../catfish/CatfishWindow.py:1312
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -457,7 +457,7 @@ msgstr ""
 "هل أنت متأكد من أنك تريد أن\n"
 "تحذف نهائيا\"%s\" ؟"
 
-#: ../catfish/CatfishWindow.py:1317
+#: ../catfish/CatfishWindow.py:1316
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -466,39 +466,39 @@ msgstr ""
 "هل أنت متأكد من أنك تريد أن\n"
 "تحذف%iالملفات المحددة؟"
 
-#: ../catfish/CatfishWindow.py:1320
+#: ../catfish/CatfishWindow.py:1319
 msgid "If you delete a file, it is permanently lost."
 msgstr "إذا خذفت الملف، سيحذف بصفة نهائية."
 
-#: ../catfish/CatfishWindow.py:1343
+#: ../catfish/CatfishWindow.py:1342
 msgid "Filename"
 msgstr "اسم الملف"
 
-#: ../catfish/CatfishWindow.py:1345
+#: ../catfish/CatfishWindow.py:1344
 msgid "Size"
 msgstr "الحجم"
 
-#: ../catfish/CatfishWindow.py:1347
+#: ../catfish/CatfishWindow.py:1346
 msgid "Location"
 msgstr "الموقع"
 
-#: ../catfish/CatfishWindow.py:1359
+#: ../catfish/CatfishWindow.py:1358
 msgid "Preview"
 msgstr "معاينة"
 
-#: ../catfish/CatfishWindow.py:1367
+#: ../catfish/CatfishWindow.py:1366
 msgid "Details"
 msgstr "التفاصيل"
 
-#: ../catfish/CatfishWindow.py:1586
+#: ../catfish/CatfishWindow.py:1585
 msgid "Yesterday"
 msgstr "أمس"
 
-#: ../catfish/CatfishWindow.py:1667
+#: ../catfish/CatfishWindow.py:1666
 msgid "No files found."
 msgstr "لم يتم العثور على ملفات"
 
-#: ../catfish/CatfishWindow.py:1669
+#: ../catfish/CatfishWindow.py:1668
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -506,29 +506,29 @@ msgstr ""
 "حاول  أن تجعل بحثك أكثر دقة\n"
 "أو جرب مجلد آخر."
 
-#: ../catfish/CatfishWindow.py:1676
+#: ../catfish/CatfishWindow.py:1675
 msgid "1 file found."
 msgstr "تم العثور على ملف 1."
 
-#: ../catfish/CatfishWindow.py:1678
+#: ../catfish/CatfishWindow.py:1677
 #, python-format
 msgid "%i files found."
 msgstr "تم العثور على ملف %i."
 
-#: ../catfish/CatfishWindow.py:1684
+#: ../catfish/CatfishWindow.py:1683
 msgid "bytes"
 msgstr "بايتات"
 
-#: ../catfish/CatfishWindow.py:1792 ../catfish/CatfishWindow.py:1802
+#: ../catfish/CatfishWindow.py:1791 ../catfish/CatfishWindow.py:1801
 msgid "Searching..."
 msgstr "جاري البحث..."
 
-#: ../catfish/CatfishWindow.py:1800
+#: ../catfish/CatfishWindow.py:1799
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "يبحث عن \"%s\""
 
-#: ../catfish/CatfishWindow.py:1889
+#: ../catfish/CatfishWindow.py:1888
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "نتائج البحث عن \"%s\""
@@ -537,23 +537,23 @@ msgstr "نتائج البحث عن \"%s\""
 msgid "Catfish is a versatile file searching tool."
 msgstr "كاتفيش هي أداة للبحث عن مختلف الملفات."
 
-#: ../catfish_lib/SudoDialog.py:135
+#: ../catfish_lib/SudoDialog.py:126
 msgid "Password Required"
 msgstr "كلمة مرور مطلوبة"
 
-#: ../catfish_lib/SudoDialog.py:172
+#: ../catfish_lib/SudoDialog.py:163
 msgid "Incorrect password... try again."
 msgstr "كلمة مرور غير صحيحة... حاول مرة أخرى."
 
-#: ../catfish_lib/SudoDialog.py:182
+#: ../catfish_lib/SudoDialog.py:173
 msgid "Password:"
 msgstr "كلمة السر:"
 
-#: ../catfish_lib/SudoDialog.py:196
+#: ../catfish_lib/SudoDialog.py:187
 msgid "OK"
 msgstr "حسناً"
 
-#: ../catfish_lib/SudoDialog.py:217
+#: ../catfish_lib/SudoDialog.py:205
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
@@ -561,7 +561,7 @@ msgstr ""
 "أدخل كلمة المرور إلى\n"
 "أداء المهام الإدارية."
 
-#: ../catfish_lib/SudoDialog.py:219
+#: ../catfish_lib/SudoDialog.py:207
 #, python-format
 msgid ""
 "The application '%s' lets you\n"
@@ -602,11 +602,17 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release better integrates with the Xfce desktop, better supports the "
+"Zeitgeist datahub, and includes many bugfixes and usability improvements."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
 msgstr "هذا الإصدار يحل أخطاء التحزيم الخاصة بديبيان ويتضمن الأصول المحسنة."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
@@ -614,7 +620,7 @@ msgstr ""
 "يضيف هذا الإصدار دعمًا لتشغيل تحت Wayland وميزات حوار منتعشة مع عناصر تحكم "
 "مبسطة."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
@@ -622,7 +628,7 @@ msgstr ""
 "يعالج هذا الإصدار بعض أخطاء بدء التشغيل بالإضافة إلى العديد من المشكلات "
 "المتعلقة بعبور الروابط الرمزية."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
@@ -630,14 +636,14 @@ msgstr ""
 "يتضمن هذا الإصدار العديد من تحسينات المظهر ، ويقدم مربع حوار تفضيلات جديد ، "
 "ويحسن نتائج البحث والأداء."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
 "يتميز هذا الإصدار بتحسينات في الأداء من خلال استبعاد أدلة البحث غير الشائعة."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
@@ -645,7 +651,7 @@ msgstr ""
 "يتميز هذا الإصدار بتكامل سطح المكتب بشكل أفضل ، ودعم OpenBSD و Wayland ، "
 "ودعم الترجمة المحسن."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -656,7 +662,7 @@ msgstr ""
 "الأخطاء طويلة الأمد. يتم الآن معالجة سلاسل البحث المقتبسة بشكل صحيح. يمكن "
 "سحب الملفات إلى تطبيقات أخرى. يتم إنشاء الصور المصغرة فقط عند طلب المستخدم."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -668,18 +674,18 @@ msgstr ""
 "العناصر المعروضة في الجزء السفلي من نافذة النتائج متاحة الآن مع جميع سمات "
 "سطح المكتب."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid "This is a minor translations-only release."
 msgstr "هذا فقط. إصدار ترجمات طفيفة "
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
 "يتميز هذا الإصدار بالعديد من تحسينات الأداء والعديد من تحديثات الترجمة."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -687,7 +693,7 @@ msgstr ""
 "يعرض هذا الإصدار الآن جميع الطوابع الزمنية للملفات وفقا للمنطقة الزمنية بدلا"
 " من التوقيت العالمي المنسق (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -699,7 +705,7 @@ msgstr ""
 "الوسطى و اليمنى. يتم الآن تطبيق عوامل تصفية نطاق التاريخ وفقاً للمنطقة "
 "الزمنية بدلاً من التوقيت العالمي المنسق (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -712,12 +718,12 @@ msgstr ""
 "الميزات من مجموعة أدوات GTK + ، بما في ذلك رؤوس اختياري والحاجيات popover. "
 "تم تحسين معالجة كلمة المرور مع دمج PolicyKit عندما تكون متوفرة."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "يعمل هذا الإصدار على إصلاح اثنين من الأخطاء الجديدة ويتضمن ترجمات محدثة."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -725,7 +731,7 @@ msgstr ""
 "يعمل هذا الإصدار على إصلاح الانحدار حيث يتعذر على التطبيق البدء في بعض "
 "الأنظمة."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -735,7 +741,7 @@ msgstr ""
 "مدعومة. يتم عرض شريط المعلومات الآن عندما تكون قاعدة بيانات البحث قديمة ، "
 "وتم تحسين مربعات الحوار المستخدمة لتحديث قاعدة البيانات."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -743,7 +749,7 @@ msgstr ""
 "عمل هذا الإصدار على إصلا مشكلتين و هما عدم القدرة على تنفيذ مسار بشكل صحيح و"
 " كذا يحسن التعامل مع  الرومز الرمزية المخفية."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -752,7 +758,7 @@ msgstr ""
 "أدى هذا الإصدار المستقر إلى تحسين موثوقية مربع حوار كلمة المرور ، وتنظيف "
 "الشفرة غير المستخدمة ، وإصلاح المشكلات المحتملة في القائمة واختيار العنصر."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
+#: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -760,7 +766,7 @@ msgstr ""
 "هذا الإصدار عمل على إصلاح مشكلة أمنية محتملة مع بدء تشغيل البرنامج وإصلاح "
 "انهياره مع اختيار عناصر متعددة."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:24
+#: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
