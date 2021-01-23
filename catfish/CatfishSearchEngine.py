@@ -492,6 +492,26 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
             if filetype in mime.lower():
                 return True
 
+    def search_pdf(self, fullpath, keywords):
+        command = ['pdftotext', '-q', '-nopgbrk', fullpath, '-']
+        pdf = subprocess.Popen(command, stdout=subprocess.PIPE)
+        for text in pdf.stdout:
+            line = text.decode()
+            if self.exact:
+                if " ".join(keywords) in line.lower():
+                    pdf.stdout.close()
+                    return True
+            elif not self.exact:
+                match_list = set()
+                for kword in keywords:
+                    if kword in line.lower():
+                        match_list.add(kword)
+                if len(set(keywords)) == len(match_list):
+                    pdf.stdout.close()
+                    return True
+            else:
+                pdf.stdout.close()
+
     def run(self, keywords, path, regex=False, exclude_paths=[]):  # noqa
         """Run the search method using keywords and path.  regex is not used
         by this search method.
@@ -528,6 +548,9 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                         continue
                     if os.path.getsize(fullpath) == 0:
                         continue
+                    if fullpath.lower().endswith('.pdf'):
+                        if self.search_pdf(fullpath, keywords):
+                            yield fullpath
                     # Skip if not text file.
                     if not self.is_txt(filename):
                         continue
