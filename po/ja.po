@@ -10,7 +10,7 @@
 # Nick Schermer <nick@xfce.org>, 2020
 # YAMADA Shinichirou <yamada_strong_yamada_nice_64bit@yahoo.co.jp>, 2020
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2020
-# UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2020
+# UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-25 08:15-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2020\n"
+"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/xfce/teams/16840/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -283,7 +283,7 @@ msgstr "ファイルを検索します"
 
 #: ../data/ui/CatfishWindow.ui.h:42
 msgid "Compact List"
-msgstr "一覧"
+msgstr "コンパクトリスト"
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "Thumbnails"
