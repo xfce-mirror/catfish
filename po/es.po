@@ -10,9 +10,8 @@
 # prflr88 <prflr88@gmail.com>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
 # 629cf3e396111bb8c5fb6664e2dbc91d, 2020
-# Toni Estévez <toni.estevez@gmail.com>, 2020
 # Casper casper, 2020
-# emiliano casal chiarotti <emiliano.casal.chiarotti@gmail.com>, 2020
+# Toni Estévez <toni.estevez@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -21,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-25 08:15-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: emiliano casal chiarotti <emiliano.casal.chiarotti@gmail.com>, 2020\n"
+"Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/xfce/teams/16840/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -157,7 +156,7 @@ msgstr "Extensiones de archivo"
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr ""
-"Ingrese una lista separada por comas de extensiones de archivo (por ejemplo,"
+"Escriba una lista separada por comas de extensiones de archivo (por ejemplo,"
 " odt, png, txt)"
 
 #: ../data/ui/CatfishWindow.ui.h:10
@@ -379,8 +378,8 @@ msgstr "%s (codif. no válida)"
 #: ../catfish/CatfishWindow.py:145
 msgid "translator-credits"
 msgstr ""
-"Pablo Lezaeta <prflr88@gmail.com> 2013-2016\n"
-"Toni Estevez <toni.estevez@gmail.com> 2019"
+"Toni Estevez <toni.estevez@gmail.com> 2019\n"
+"Pablo Lezaeta <prflr88@gmail.com> 2013-2016."
 
 #: ../catfish/CatfishWindow.py:289
 msgid "Unknown"
@@ -621,16 +620,16 @@ msgid ""
 "This release better integrates with the Xfce desktop, better supports the "
 "Zeitgeist datahub, and includes many bugfixes and usability improvements."
 msgstr ""
-"Esta versión se integra mejor al escritorio de Xfce, se complementa mejor "
-"con el datahub Zeitgeist, e incluye muchos arreglos y mejoramientos en la "
-"usabilidad."
+"Esta versión se integra mejor con el escritorio Xfce, es más compatible con "
+"el centro de datos Zeitgeist e incluye muchas correcciones de errores y "
+"mejoras de usabilidad."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
 msgstr ""
-"Esta versión resuelve errores de empaquetado para Debian e incluye activos "
+"Esta versión resuelve errores de empaquetado para Debian e incluye valores "
 "optimizados."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
@@ -638,16 +637,16 @@ msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr ""
-"Esta versión agrega soporte para ejecutarse en Wayland y presenta cuadros de"
-" diálogo actualizados con controles simplificados."
+"Esta versión añade compatibilidad para ejecutarse en Wayland y presenta "
+"diálogos renovados con controles simplificados."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
-"Esta versión aborda algunos errores de inicio, así como varios problemas al "
-"atravesar enlaces simbólicos."
+"Esta versión soluciona algunos errores de inicio, así como varios problemas "
+"con el manejo de los enlaces simbólicos."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
@@ -655,16 +654,16 @@ msgid ""
 "preferences dialog, and improves search results and performance."
 msgstr ""
 "Esta versión incluye muchas mejoras en la apariencia, incorpora un nuevo "
-"diálogo de preferencias y mejora los resultados y el rendimiento de la "
-"búsqueda."
+"diálogo de preferencias y mejora los resultados de los resultados de la "
+"búsqueda y el rendimiento."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
-"Esta versión incluye mejoras de rendimiento al excluir carpetas de búsqueda "
-"poco comunes."
+"Esta versión ofrece mejoras de rendimiento al excluir de la búsqueda "
+"carpetas poco comunes."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
