@@ -397,22 +397,15 @@ class CatfishWindow(Window):
         welcome_area.show_all()
 
     def get_screen_size(self):
-        display = Gdk.Display.get_default()
-        if display is None:
+        screen = Gdk.Screen.get_default()
+        if screen is None:
             return (-1, -1)
-
-        monitor = display.get_primary_monitor()
-        geometry = monitor.get_geometry()
-        scale = monitor.get_scale_factor()
-        res_width = scale * geometry.width
-        res_height = scale * geometry.height
-        return (res_width, res_height)
+        return (screen.width(), screen.height())
 
     def get_display_size(self):
         display = Gdk.Display.get_default()
         if display is None:
             return (-1, -1)
-
         window = Gdk.get_default_root_window()
         mon = display.get_monitor_at_window(window)
         monitor = mon.get_geometry()
