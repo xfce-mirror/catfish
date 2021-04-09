@@ -7,6 +7,7 @@
 # Xfce Bot <transifex@xfce.org>, 2018
 # Nick Schermer <nick@xfce.org>, 2020
 # Kiril Kirilov <cybercop_montana@abv.bg>, 2020
+# Красимир Беров, 2021
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-25 08:15-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>, 2020\n"
+"Last-Translator: Красимир Беров, 2021\n"
 "Language-Team: Bulgarian (https://www.transifex.com/xfce/teams/16840/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -224,8 +225,7 @@ msgstr "Обновяване"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr ""
-"Базата за търсене не е актуализирана повече от 7 дни. Актуализиране сега ?"
+msgstr "Базата за търсене не е обновявана повече от 7 дни. Обновяване сега ?"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "File Type"
@@ -395,7 +395,7 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:740
 msgid "An error occurred while updating the database."
-msgstr "Възникна грешка при актуализирането на базата с данни."
+msgstr "Възникна грешка при обновяването на базата с данни."
 
 #: ../catfish/CatfishWindow.py:742
 msgid "Authentication failed."
@@ -407,7 +407,7 @@ msgstr "Идентификацията е отменена."
 
 #: ../catfish/CatfishWindow.py:754
 msgid "Search database updated successfully."
-msgstr "Базата с данни е актуализирана успешно."
+msgstr "Базата с данни е обновена успешно."
 
 #. Update the Cancel button to Close, make it default
 #: ../catfish/CatfishWindow.py:815
@@ -417,7 +417,7 @@ msgstr "Затваряне"
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:829
 msgid "Updating..."
-msgstr "Актуализиране…"
+msgstr "Обновяване…"
 
 #: ../catfish/CatfishWindow.py:863
 msgid "Stop Search"
@@ -703,7 +703,7 @@ msgid ""
 "translation updates."
 msgstr ""
 "Това издание включва няколко подобрения на производителността и множество "
-"актуализации на преводите."
+"обновления на преводите."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
@@ -743,7 +743,7 @@ msgstr ""
 #: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
-"Тази версия поправя две нови грешки и включва актуализиране на преводите."
+"Тази версия поправя две нови грешки и включва обновления на преводите."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
@@ -759,10 +759,10 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated,"
 " and the dialogs used to update the database have been improved."
 msgstr ""
-"Тази версия отстранява регресия, при която няколко термина за търсене, вече "
+"Тази версия отстранява регресия, при която няколко термина за търсене вече "
 "не се поддържат. Вече се показва информационна лента, когато базата данни за"
-" търсене е остаряла и диалозите, използвани за актуализиране на базата "
-"данни, са подобрени."
+" търсене е остаряла и диалозите, използвани за обновяване на базата данни, "
+"са подобрени."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
