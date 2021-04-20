@@ -62,8 +62,8 @@ msgstr "_Модерен (CSD)"
 #: ../data/ui/CatfishPreferences.ui.h:5
 msgid "Your new window layout will be applied after restarting Catfish."
 msgstr ""
-"Вашата нова подредба на прозореца ще бъде приложена след рестартирането на "
-"Catfish."
+"Вашата нова подредба на прозореца ще бъде приложена\n"
+"при следващото пускане на Catfish."
 
 #: ../data/ui/CatfishPreferences.ui.h:6
 msgid "Window Layout"
@@ -79,7 +79,7 @@ msgstr "Показване на филтър в страничната лент�
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Display Options"
-msgstr "Показване на опциите"
+msgstr "Какво да се показва"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Appearance"
@@ -129,7 +129,7 @@ msgstr "_Отвори"
 #. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
-msgstr "Покажи във Файлов мениджър"
+msgstr "Покажи в програмата за управление на файлове"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
