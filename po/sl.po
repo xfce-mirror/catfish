@@ -8,7 +8,7 @@
 # Xfce Bot <transifex@xfce.org>, 2018
 # Kernc, 2018
 # ansich <mojmejlzaforume@gmail.com>, 2018
-# Aljoša Žagar <anthon.manix@gmail.com>, 2020
+# 8b03701f910565d01acaec9ce3f558ab_e9f0fee <b5b06e8f85fb8288fe43ad0bc2422d94_32848>, 2020
 # Arnold Marko <arnold.marko@gmail.com>, 2020
 # 
 #, fuzzy
