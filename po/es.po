@@ -717,9 +717,8 @@ msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
-"Esta versión muestra ahora todas las marcas de tiempo de los archivos de "
-"acuerdo con la zona horaria en lugar de con el tiempo universal coordinado "
-"(UTC)."
+"Esta versión muestra ahora todas las marcas de tiempo de los archivos según "
+"la zona horaria en vez de según el tiempo universal coordinado (UTC)."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
