@@ -620,7 +620,7 @@ class CatfishWindow(Window):
             self.show_thumbnail = False
             self.setup_large_view()
             self.list_toggle.set_active(True)
-        elif self.settings.get_setting('show-thumbnails')s:
+        elif self.settings.get_setting('show-thumbnails'):
             self.show_thumbnail = True
             self.setup_large_view()
             self.thumbnail_toggle.set_active(True)
