@@ -31,6 +31,8 @@ DEFAULT_SETTINGS = {
     'use-headerbar': (bool, None),
     'show-hidden-files': (bool, False),
     'show-sidebar': (bool, False),
+    'list-toggle': (bool, True),
+    'show-thumbnails': (bool, None),
     'close-after-select': (bool, False),
     'window-width': (int, 650),
     'window-height': (int, 470),
