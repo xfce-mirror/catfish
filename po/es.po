@@ -45,7 +45,7 @@ msgstr "Buscar en el sistema de archivos"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: ../org.xfce.Catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr "archivos;encontrar;localizar;buscar;búsqueda"
+msgstr "archivos;encontrar;localizar;buscar;búsqueda;"
 
 #: ../data/ui/CatfishPreferences.ui.h:1
 msgid "Catfish Preferences"
@@ -143,7 +143,7 @@ msgstr "_Copiar la ubicación"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Guardar como…"
+msgstr "_Guardar como..."
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
@@ -366,7 +366,7 @@ msgid ""
 "displayed."
 msgstr ""
 "Si se proporcionan la ruta y la consulta, la búsqueda comienza cuando se "
-"muestre la aplicación"
+"muestre la aplicación."
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -422,7 +422,7 @@ msgstr "Cerrar"
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:829
 msgid "Updating..."
-msgstr "Actualizando…"
+msgstr "Actualizando..."
 
 #: ../catfish/CatfishWindow.py:863
 msgid "Stop Search"
