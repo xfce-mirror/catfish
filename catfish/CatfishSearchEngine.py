@@ -481,10 +481,10 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
         mime = str(mimetypes.guess_type(filename)[0])
         text_list = ('ardour', 'audacity', 'desktop', 'document',
                      'fontforge', 'java', 'json', 'm4', 'mbox',
-                     'mimearchive', 'msg', 'none', 'perl',
+                     'message', 'mimearchive', 'msg', 'none', 'perl',
                      'pgp-keys', 'php', 'postscript', 'rtf',
                      'ruby', 'shellscript', 'spreadsheet', 'sql',
-                     'subrip', 'text', 'url', 'winhlp',
+                     'subrip', 'text', 'troff', 'url', 'winhlp',
                      'x-bittorent', 'x-cue', 'x-extension-cfg',
                      'x-glade', 'x-mpegurl', 'x-sami', 'x-theme',
                      'x-trash', 'xml', 'xpixmap', 'yaml')
