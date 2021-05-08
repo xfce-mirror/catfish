@@ -33,6 +33,8 @@ DEFAULT_SETTINGS = {
     'show-sidebar': (bool, True),
     'list-toggle': (bool, True),
     'show-thumbnails': (bool, None),
+    'search-file-contents': (bool, False),
+    'match-results-exactly': (bool, False),
     'close-after-select': (bool, False),
     'window-width': (int, 650),
     'window-height': (int, 470),
