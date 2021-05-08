@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-08 15:48-0400\n"
+"POT-Creation-Date: 2021-05-08 15:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,7 +173,7 @@ msgstr ""
 msgid "Any time"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1602
+#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1606
 msgid "Today"
 msgstr ""
 
@@ -221,7 +221,7 @@ msgstr ""
 msgid "Modified"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1812
+#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1816
 msgid "Results will be displayed as soon as they are found."
 msgstr ""
 
@@ -469,43 +469,43 @@ msgstr ""
 msgid "Details"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1604
+#: ../catfish/CatfishWindow.py:1608
 msgid "Yesterday"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1685
+#: ../catfish/CatfishWindow.py:1689
 msgid "No files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1687
+#: ../catfish/CatfishWindow.py:1691
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1694
+#: ../catfish/CatfishWindow.py:1698
 msgid "1 file found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1696
+#: ../catfish/CatfishWindow.py:1700
 #, python-format
 msgid "%i files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1702
+#: ../catfish/CatfishWindow.py:1706
 msgid "bytes"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1810 ../catfish/CatfishWindow.py:1819
+#: ../catfish/CatfishWindow.py:1814 ../catfish/CatfishWindow.py:1823
 msgid "Searching..."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1817
+#: ../catfish/CatfishWindow.py:1821
 #, python-format
 msgid "Searching for \"%s\""
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1906
+#: ../catfish/CatfishWindow.py:1910
 #, python-format
 msgid "Search results for \"%s\""
 msgstr ""

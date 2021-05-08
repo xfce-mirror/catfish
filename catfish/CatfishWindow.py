@@ -634,7 +634,7 @@ class CatfishWindow(Window):
             self.show_thumbnail = False
             self.setup_large_view()
             self.list_toggle.set_active(True)
-        elif self.options.thumbnails:
+        elif self.settings.get_setting('show-thumbnails'):
             self.show_thumbnail = True
             self.setup_large_view()
             self.thumbnail_toggle.set_active(True)
@@ -1397,6 +1397,8 @@ class CatfishWindow(Window):
         """Switch to the details view."""
         if widget.get_active():
             self.show_thumbnail = False
+            self.settings.set_setting('list-toggle', True)
+            self.settings.set_setting('show-thumbnails', False)
             if self.options.icons_large:
                 self.setup_large_view()
             else:
@@ -1406,6 +1408,8 @@ class CatfishWindow(Window):
         """Switch to the preview view."""
         if widget.get_active():
             self.show_thumbnail = True
+            self.settings.set_setting('list-toggle', False)
+            self.settings.set_setting('show-thumbnails', True)
             self.setup_large_view()
 
     # -- Treeview -- #
