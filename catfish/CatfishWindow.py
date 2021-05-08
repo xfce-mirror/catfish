@@ -618,11 +618,15 @@ class CatfishWindow(Window):
             self.time_format = None
 
         # Set search defaults.
-        self.exact_match.set_active(self.options.exact)
+        self.exact_match.set_active(
+            self.options.exact or
+            self.settings.get_setting('match-results-exactly'))
         self.hidden_files.set_active(
             self.options.hidden or
             self.settings.get_setting('show-hidden-files'))
-        self.fulltext.set_active(self.options.fulltext)
+        self.fulltext.set_active(
+            self.options.fulltext or 
+            self.settings.get_setting('search-file-contents'))
         self.sidebar_toggle_menu.set_active(
             self.settings.get_setting('show-sidebar'))
 
@@ -982,6 +986,7 @@ class CatfishWindow(Window):
     def on_menu_exact_match_toggled(self, widget):
         """Toggle the exact match settings, and restart the search
         if a fulltext search was previously run."""
+        self.settings.set_setting('match-results-exactly', widget.get_active())
         self.filter_format_toggled("exact", widget.get_active())
         if self.filter_formats['fulltext']:
             self.on_search_entry_activate(self.search_entry)
@@ -994,6 +999,7 @@ class CatfishWindow(Window):
 
     def on_menu_fulltext_toggled(self, widget):
         """Toggle the fulltext settings, and restart the search."""
+        self.settings.set_setting('search-file-contents', widget.get_active())
         self.filter_format_toggled("fulltext", widget.get_active())
         self.on_search_entry_activate(self.search_entry)
 
