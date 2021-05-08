@@ -30,7 +30,7 @@ DEFAULT_SETTINGS_FILE = os.path.join(os.getenv('HOME'),
 DEFAULT_SETTINGS = {
     'use-headerbar': (bool, None),
     'show-hidden-files': (bool, False),
-    'show-sidebar': (bool, False),
+    'show-sidebar': (bool, True),
     'close-after-select': (bool, False),
     'window-width': (int, 650),
     'window-height': (int, 470),
