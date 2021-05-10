@@ -6,16 +6,16 @@
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2018
 # Nick Schermer <nick@xfce.org>, 2020
-# Moo, 2020
+# Moo, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-25 08:15-0400\n"
+"POT-Creation-Date: 2021-05-08 15:56-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Moo, 2020\n"
+"Last-Translator: Moo, 2021\n"
 "Language-Team: Lithuanian (https://www.transifex.com/xfce/teams/16840/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -185,7 +185,7 @@ msgstr "Kita"
 msgid "Any time"
 msgstr "Bet kada"
 
-#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1583
+#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1606
 msgid "Today"
 msgstr "Šiandien"
 
@@ -230,11 +230,11 @@ msgstr ""
 msgid "File Type"
 msgstr "Failo tipas"
 
-#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1348
+#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1368
 msgid "Modified"
 msgstr "Keista"
 
-#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1793
+#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1816
 msgid "Results will be displayed as soon as they are found."
 msgstr "Rezultatai bus rodomi iš karto, kai tik bus rasti."
 
@@ -244,7 +244,7 @@ msgstr "Atnaujinti Paieškos Duomenų Bazę"
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:725
+#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:745
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Atsisakyti"
@@ -384,7 +384,7 @@ msgstr "Nežinoma"
 msgid "Never"
 msgstr "Niekada"
 
-#: ../catfish/CatfishWindow.py:377
+#: ../catfish/CatfishWindow.py:398
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -394,37 +394,37 @@ msgstr ""
 "arba, išsamesniems parametrams, spustelėkite\n"
 "ant %s piktogramos."
 
-#: ../catfish/CatfishWindow.py:740
+#: ../catfish/CatfishWindow.py:760
 msgid "An error occurred while updating the database."
 msgstr "Atnaujinant duomenų bazę, įvyko klaida."
 
-#: ../catfish/CatfishWindow.py:742
+#: ../catfish/CatfishWindow.py:762
 msgid "Authentication failed."
 msgstr "Nepavyko nustatyti tapatybės."
 
-#: ../catfish/CatfishWindow.py:748
+#: ../catfish/CatfishWindow.py:768
 msgid "Authentication cancelled."
 msgstr "Tapatybės nustatymas atšauktas."
 
-#: ../catfish/CatfishWindow.py:754
+#: ../catfish/CatfishWindow.py:774
 msgid "Search database updated successfully."
 msgstr "Paieškos duomenų bazė sėkmingai atnaujinta."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:815
+#: ../catfish/CatfishWindow.py:835
 msgid "Close"
 msgstr "Užverti"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:829
+#: ../catfish/CatfishWindow.py:849
 msgid "Updating..."
 msgstr "Atnaujinama..."
 
-#: ../catfish/CatfishWindow.py:863
+#: ../catfish/CatfishWindow.py:883
 msgid "Stop Search"
 msgstr "Stabdyti paiešką"
 
-#: ../catfish/CatfishWindow.py:864
+#: ../catfish/CatfishWindow.py:884
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -432,31 +432,31 @@ msgstr ""
 "Paieška yra vykdoma...\n"
 "Norėdami sustabdyti, spauskite atšaukimo arba Escape mygtuką."
 
-#: ../catfish/CatfishWindow.py:873
+#: ../catfish/CatfishWindow.py:893
 msgid "Begin Search"
 msgstr "Pradėti paiešką"
 
-#: ../catfish/CatfishWindow.py:1169
+#: ../catfish/CatfishWindow.py:1189
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Nepavyko atverti „%s“."
 
-#: ../catfish/CatfishWindow.py:1221
+#: ../catfish/CatfishWindow.py:1241
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Nepavyko įrašyti „%s“."
 
-#: ../catfish/CatfishWindow.py:1238
+#: ../catfish/CatfishWindow.py:1258
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Nepavyko ištrinti „%s“."
 
-#: ../catfish/CatfishWindow.py:1277
+#: ../catfish/CatfishWindow.py:1297
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Įrašyti „%s“ kaip..."
 
-#: ../catfish/CatfishWindow.py:1312
+#: ../catfish/CatfishWindow.py:1332
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -465,7 +465,7 @@ msgstr ""
 "Ar tikrai norite negrįžtamai \n"
 "ištrinti „%s“?"
 
-#: ../catfish/CatfishWindow.py:1316
+#: ../catfish/CatfishWindow.py:1336
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -474,39 +474,39 @@ msgstr ""
 "Ar tikrai norite negrįžtamai ištrinti \n"
 "%i pasirinktus failus?"
 
-#: ../catfish/CatfishWindow.py:1319
+#: ../catfish/CatfishWindow.py:1339
 msgid "If you delete a file, it is permanently lost."
 msgstr "Jeigu ištrinsite failą, jis bus negrįžtamai prarastas."
 
-#: ../catfish/CatfishWindow.py:1342
+#: ../catfish/CatfishWindow.py:1362
 msgid "Filename"
 msgstr "Failo pavadinimas"
 
-#: ../catfish/CatfishWindow.py:1344
+#: ../catfish/CatfishWindow.py:1364
 msgid "Size"
 msgstr "Dydis"
 
-#: ../catfish/CatfishWindow.py:1346
+#: ../catfish/CatfishWindow.py:1366
 msgid "Location"
 msgstr "Vieta"
 
-#: ../catfish/CatfishWindow.py:1358
+#: ../catfish/CatfishWindow.py:1378
 msgid "Preview"
 msgstr "Peržiūra"
 
-#: ../catfish/CatfishWindow.py:1366
+#: ../catfish/CatfishWindow.py:1386
 msgid "Details"
 msgstr "Išsamesnė informacija"
 
-#: ../catfish/CatfishWindow.py:1585
+#: ../catfish/CatfishWindow.py:1608
 msgid "Yesterday"
 msgstr "Vakar"
 
-#: ../catfish/CatfishWindow.py:1666
+#: ../catfish/CatfishWindow.py:1689
 msgid "No files found."
 msgstr "Failų nerasta."
 
-#: ../catfish/CatfishWindow.py:1668
+#: ../catfish/CatfishWindow.py:1691
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -514,29 +514,29 @@ msgstr ""
 "Pabandykite vykdyti ne tokią konkrečią paiešką\n"
 "arba pabandykite kitą katalogą."
 
-#: ../catfish/CatfishWindow.py:1675
+#: ../catfish/CatfishWindow.py:1698
 msgid "1 file found."
 msgstr "Rastas 1 failas."
 
-#: ../catfish/CatfishWindow.py:1677
+#: ../catfish/CatfishWindow.py:1700
 #, python-format
 msgid "%i files found."
 msgstr "Rasta %i failų."
 
-#: ../catfish/CatfishWindow.py:1683
+#: ../catfish/CatfishWindow.py:1706
 msgid "bytes"
 msgstr "baitų"
 
-#: ../catfish/CatfishWindow.py:1791 ../catfish/CatfishWindow.py:1801
+#: ../catfish/CatfishWindow.py:1814 ../catfish/CatfishWindow.py:1823
 msgid "Searching..."
 msgstr "Ieškoma..."
 
-#: ../catfish/CatfishWindow.py:1799
+#: ../catfish/CatfishWindow.py:1821
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Ieškoma „%s“"
 
-#: ../catfish/CatfishWindow.py:1888
+#: ../catfish/CatfishWindow.py:1910
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "„%s“ paieškos rezultatai"
@@ -612,6 +612,15 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release expands fulltext search to support more encodings and match all"
+" keywords instead of matching any."
+msgstr ""
+"Ši laida išplėčia absoliučiąją paiešką, kad būtų palaikoma daugiau koduočių "
+"ir, kad vietoj bet kurio atitinkamo raktažodžio, būtų atitinkami visi "
+"raktažodžiai. "
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release better integrates with the Xfce desktop, better supports the "
 "Zeitgeist datahub, and includes many bugfixes and usability improvements."
 msgstr ""
@@ -619,7 +628,7 @@ msgstr ""
 "duomenų mazgą ir joje yra daug klaidų pataisymų bei naudojimosi patogumo "
 "patobulinimų."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
@@ -627,7 +636,7 @@ msgstr ""
 "Ši laida išsprendžia Debian pakavimo klaidas, o taip pat joje yra "
 "optimizuoti komponentai."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
@@ -635,7 +644,7 @@ msgstr ""
 "Ši laida prideda palaikymą veikiant Wayland aplinkoje ir joje yra pateikiami"
 " atnaujinti dialogai su supaprastintais valdikliais."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
@@ -643,7 +652,7 @@ msgstr ""
 "Šioje laidoje buvo pataisytos kai kurios paleisties klaidos, o taip pat "
 "įvairios problemos su simbolinių nuorodų perėjimu skersai."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
@@ -651,7 +660,7 @@ msgstr ""
 "Į šią laidą įeina daug išvaizdos patobulinimų, pristatomas naujas nuostatų "
 "dialogas ir patobulinami paieškos rezultatai bei našumas."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
@@ -659,7 +668,7 @@ msgstr ""
 "Šioje laidoje yra našumo patobulinimai, išbraukiant nedažnai naudojamus "
 "paieškos katalogus."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
@@ -667,7 +676,7 @@ msgstr ""
 "Šioje laidoje yra geresnė darbalaukių integracija, OpenBSD ir Wayland "
 "palaikymas ir patobulintas vertimų palaikymas."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -679,7 +688,7 @@ msgstr ""
 "teisingai. Failai gali būti velkami į kitas programas. Miniatiūros yra "
 "generuojamos tik kai to užklausia naudotojas."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -691,11 +700,11 @@ msgstr ""
 "jos atitiks kitas programas. Rezultatų apačioje rodomi elementai dabar yra "
 "pasiekiami su visomis darbalaukio temomis."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid "This is a minor translations-only release."
 msgstr "Tai yra smulki tik vertimų atnaujinimo laida."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -703,7 +712,7 @@ msgstr ""
 "Šioje laidoje yra keli našumo patobulinimai ir daugybės vertimų "
 "atnaujinimai."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -711,7 +720,7 @@ msgstr ""
 "Dabar, šioje laidoje visos failų laiko žymės yra rodomos atitinkamai pagal "
 "laiko juostą, o ne suderintąjį pasaulinį laiką (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -724,7 +733,7 @@ msgstr ""
 "dabar yra pritaikomi pagal laiko juostą, o ne pagal suderintąjį pasaulinį "
 "laiką (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -738,12 +747,12 @@ msgstr ""
 "juostas bei iššokančius valdiklius. Buvo patobulintas slaptažodžių "
 "apdorojimas su PolicyKit integravimu, kai tai yra prieinama."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Šioje laidoje ištaisomos dvi naujos klaidos ir yra atnaujinami vertimai."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -751,7 +760,7 @@ msgstr ""
 "Šioje laidoje yra ištaisyta regresija, dėl kurios kai kuriose sistemose buvo"
 " neįmanoma paleisti programos."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -762,7 +771,7 @@ msgstr ""
 "rodoma informacinė juosta, o taip pat yra patobulinti duomenų bazės "
 "atnaujinimo dialogai."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -771,7 +780,7 @@ msgstr ""
 "vietos nustatymas, o taip pat patobulinamas trūkstamų simbolinių piktogramų "
 "apdorojimas."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
+#: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -781,7 +790,7 @@ msgstr ""
 "nebenaudojamas kodas ir ištaisytos potencialios, su sąrašo ir elemento "
 "pasirinkimu susijusios, klaidos."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:24
+#: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -790,7 +799,7 @@ msgstr ""
 "paleidimu, o taip pat ištaisyta, su kelių elementų pasirinkimu susijusi, "
 "regresija."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:25
+#: ../data/metainfo/catfish.appdata.xml.in.h:26
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
