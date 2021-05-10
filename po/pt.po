@@ -6,11 +6,10 @@
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2018
 # Rui <xymarior@yandex.com>, 2019
-# Nick Schermer <nick@xfce.org>, 2019
 # Sérgio Marques <smarquespt@gmail.com>, 2020
 # Nuno Miguel <nunomgue@gmail.com>, 2020
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2020
 # José Vieira <jvieira33@sapo.pt>, 2021
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-08 15:56-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: José Vieira <jvieira33@sapo.pt>, 2021\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2021\n"
 "Language-Team: Portuguese (https://www.transifex.com/xfce/teams/16840/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,7 +51,7 @@ msgstr "Preferências do Catfish"
 
 #: ../data/ui/CatfishPreferences.ui.h:2
 msgid "_Close"
-msgstr "_Fechar"
+msgstr "Fe_char"
 
 #: ../data/ui/CatfishPreferences.ui.h:3
 msgid "Classic (_Titlebar)"
@@ -72,11 +71,11 @@ msgstr "Disposição da janela"
 
 #: ../data/ui/CatfishPreferences.ui.h:7
 msgid "Show _hidden files in the results"
-msgstr "Mostrar ficheiros _ocultos nos resultados"
+msgstr "Mostrar ficheiros ocultos nos resultados"
 
 #: ../data/ui/CatfishPreferences.ui.h:8
 msgid "Show filter _sidebar"
-msgstr "Mostrar filtro _barra lateral"
+msgstr "Mo_strar filtro barra lateral"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Display Options"
@@ -92,7 +91,7 @@ msgstr "Caminho"
 
 #: ../data/ui/CatfishPreferences.ui.h:12
 msgid "Add Directory..."
-msgstr "Adicionar directório..."
+msgstr "Adicionar diretório..."
 
 #: ../data/ui/CatfishPreferences.ui.h:13
 msgid "_Add"
@@ -100,7 +99,7 @@ msgstr "_Adicionar"
 
 #: ../data/ui/CatfishPreferences.ui.h:14
 msgid "Remove Directory"
-msgstr "Remover directório"
+msgstr "Remover diretório"
 
 #: ../data/ui/CatfishPreferences.ui.h:15
 msgid "_Remove"
@@ -108,11 +107,11 @@ msgstr "_Remover"
 
 #: ../data/ui/CatfishPreferences.ui.h:16
 msgid "Exclude Directories"
-msgstr "Excluir directórios"
+msgstr "Excluir diretórios"
 
 #: ../data/ui/CatfishPreferences.ui.h:17
 msgid "Close the search _window after opening a file"
-msgstr "Feche a pesquisa _janela depois de abrir um ficheiro"
+msgstr "Fechar a janela de pesquisa janela após abrir um ficheiro"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Miscellaneous"
@@ -124,13 +123,13 @@ msgstr "Avançado"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "_Open"
-msgstr "_Abrir"
+msgstr "Abrir"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:3
 msgid "Show in _File Manager"
-msgstr "Mostrar no _Gestor de ficheiros"
+msgstr "Mostrar no Gestor de _Ficheiros"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -140,11 +139,11 @@ msgstr "_Copiar localização"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Save as..."
-msgstr "_Guardar como..."
+msgstr "Guardar como..."
 
 #: ../data/ui/CatfishWindow.ui.h:7
 msgid "_Delete"
-msgstr "_Apagar"
+msgstr "Eliminar"
 
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "File Extensions"
@@ -153,8 +152,8 @@ msgstr "Extensões de ficheiros"
 #: ../data/ui/CatfishWindow.ui.h:9
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr ""
-"Introduza uma lista separada por vírgulas de extensões de ficheiros (por "
-"exemplo, odt, png, txt)"
+"Introduza uma lista separada por vírgulas de extensões de ficheiros (por ex."
+" odt, png, txt)"
 
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "Documents"
@@ -293,23 +292,23 @@ msgstr "Miniaturas"
 
 #: ../data/ui/CatfishWindow.ui.h:44
 msgid "Show _sidebar"
-msgstr "Mostrar _barra lateral"
+msgstr "Mo_strar barra lateral"
 
 #: ../data/ui/CatfishWindow.ui.h:45
 msgid "Show _hidden files"
-msgstr "Mostrar ficheiros _ocultos"
+msgstr "Mostrar ficheiros ocultos"
 
 #: ../data/ui/CatfishWindow.ui.h:46
 msgid "Search file _contents"
-msgstr "Pesquisar ficheiro _conteúdo"
+msgstr "Pesquisar _conteúdo dos ficheiros"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "_Match results exactly"
-msgstr "_Combinar resultados exactos"
+msgstr "Corresponder resultados exatos"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "_Refresh search index..."
-msgstr "_Atualizar índice de pesquisa..."
+msgstr "Atualiza_r índice de pesquisa..."
 
 #: ../data/ui/CatfishWindow.ui.h:49
 msgid "_Preferences"
@@ -325,7 +324,8 @@ msgstr "Uso: %prog [opções] consulta de caminho"
 
 #: ../catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
-msgstr "Mostrar mensagens de debug (-vv também faz debug de catfish_lib)"
+msgstr ""
+"Mostrar mensagens de depuração (-vv também faz a depuração de catfish_lib)"
 
 #: ../catfish/__init__.py:47
 msgid "Use large icons"
