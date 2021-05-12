@@ -1836,7 +1836,7 @@ class CatfishWindow(Window):
             Gtk.main_iteration()
 
         # icon, name, size, path, modified, mimetype, hidden, exact
-        model = Gtk.ListStore(str, str, GObject.TYPE_INT64,
+        model = Gtk.TreeStore(str, str, GObject.TYPE_INT64,
                               str, float, str, bool, bool)
 
         # Initialize the results filter.
@@ -1890,7 +1890,7 @@ class CatfishWindow(Window):
 
                     displayed = surrogate_escape(name, True)
                     path = surrogate_escape(path)
-                    model.append([icon, displayed, size, path, modified,
+                    model.append(None, [icon, displayed, size, path, modified,
                                   mimetype, hidden, exact])
 
                     if not show_results:
