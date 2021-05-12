@@ -492,25 +492,25 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
             if filetype in mime.lower():
                 return True
 
-    def search_pdf(self, fullpath, keywords):
-        command = ['pdftotext', '-q', '-nopgbrk', fullpath, '-']
-        pdf = subprocess.Popen(command, stdout=subprocess.PIPE)
-        for text in pdf.stdout:
-            line = text.decode()
-            if self.exact:
-                if " ".join(keywords) in line.lower():
-                    pdf.stdout.close()
+    def search_text(self, lines, keywords):
+        if self.exact:
+            for line in lines:
+                if " ".join(keywords) in line:
                     return True
-            elif not self.exact:
-                match_list = set()
+        else:
+            match_list = set()
+            for line in lines:
                 for kword in keywords:
                     if kword in line.lower():
                         match_list.add(kword)
                 if len(set(keywords)) == len(match_list):
-                    pdf.stdout.close()
                     return True
-            else:
-                pdf.stdout.close()
+
+    def search_pdf(self, fullpath, keywords):
+        command = ['pdftotext', '-q', '-nopgbrk', fullpath, '-']
+        with subprocess.Popen(command, stdout=subprocess.PIPE, text=True) as pdf:
+            if self.search_text(pdf.stdout, keywords):
+                return True
 
     def run(self, keywords, path, regex=False, exclude_paths=[]):  # noqa
         """Run the search method using keywords and path.  regex is not used
@@ -562,20 +562,8 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                     # Check each line. If a keyword is found, yield.
                     open_file = open(fullpath, 'r', encoding=charset)
                     with open_file as file_text:
-                        if self.exact:
-                            for line in file_text:
-                                if " ".join(keywords) in line:
-                                    yield fullpath
-                        else:
-                            match_list = set()
-                            for line in file_text:
-                                for kword in keywords:
-                                    if kword in line.lower():
-                                        match_list.add(kword)
-                                if len(set(keywords)) == len(match_list):
-                                    break
-                            if len(set(keywords)) == len(match_list):
-                                yield fullpath
+                        if self.search_text(file_text, keywords):
+                            yield fullpath
                 # Skips on errors, move on to next in list.
                 except UnicodeDecodeError:
                     continue
