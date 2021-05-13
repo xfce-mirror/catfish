@@ -415,10 +415,14 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
             # Check paths in the second and deeper levels of the selected
             # directory
             for path in paths:
-                if any(keyword in path.lower() for keyword in keywords):
+                if self.search_path(path, keywords):
                     yield os.path.join(root, path)
             yield True
         yield False
+
+    def search_path(self, path, keywords):
+        if any(keyword in path.lower() for keyword in keywords):
+            return True
 
     def stop(self):
         """Stop the running search method."""
