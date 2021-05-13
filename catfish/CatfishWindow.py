@@ -29,6 +29,7 @@ import mimetypes
 import os
 import subprocess
 import time
+import zipfile
 from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
@@ -1890,7 +1891,16 @@ class CatfishWindow(Window):
 
                     displayed = surrogate_escape(name, True)
                     path = surrogate_escape(path)
-                    model.append(None, [icon, displayed, size, path, modified,
+
+                    if zipfile.is_zipfile(filename):
+                        parent = None
+                        for name, uncompressed_size, date_time in self.search_engine.search_zip(filename, keywords):
+                            if not parent:
+                                parent = model.append(None, [icon, displayed, size, path, modified, mimetype, hidden, exact])
+                            dt = datetime.datetime(*date_time).timestamp()
+                            model.append(parent, [icon, name, uncompressed_size, '', dt, '', False, exact])
+                    else:
+                        model.append(None, [icon, displayed, size, path, modified,
                                   mimetype, hidden, exact])
 
                     if not show_results:
