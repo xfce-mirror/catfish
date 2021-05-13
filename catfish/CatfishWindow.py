@@ -29,6 +29,7 @@ import mimetypes
 import os
 import subprocess
 import time
+import zipfile
 from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
@@ -48,7 +49,7 @@ gi.require_version('Gtk', '3.0')  # noqa
 from gi.repository import GLib, GObject, Pango, Gdk, GdkPixbuf, Gtk
 
 from catfish.CatfishPrefsDialog import CatfishPrefsDialog
-from catfish.CatfishSearchEngine import CatfishSearchEngine
+from catfish.CatfishSearchEngine import CatfishSearchEngine, get_keyword_list
 from catfish_lib import catfishconfig, helpers, get_about
 from catfish_lib import CatfishSettings, SudoDialog, Window
 from catfish_lib import Thumbnailer
@@ -1809,6 +1810,18 @@ class CatfishWindow(Window):
             return 0
         return 1
 
+    def perform_zip_query(self, filename, keywords):
+        for member, uncompressed_size, date_time in self.search_engine.search_zip(filename, keywords):
+            dt = datetime.datetime(*date_time).timestamp()
+            mimetype, override = self.guess_mimetype(member)
+            icon = self.get_thumbnail(member, mimetype)
+            if override:
+                mimetype = override
+            displayed = surrogate_escape(member, True)
+            zip_path = surrogate_escape(filename)
+            exact = keywords in member
+            yield [icon, displayed, uncompressed_size, zip_path, dt, mimetype, False, exact]
+
     # -- Searching -- #
     def perform_query(self, keywords):  # noqa
         """Run the search query with the specified keywords."""
@@ -1890,7 +1903,21 @@ class CatfishWindow(Window):
 
                     displayed = surrogate_escape(name, True)
                     path = surrogate_escape(path)
-                    model.append(None, [icon, displayed, size, path, modified,
+
+                    if zipfile.is_zipfile(filename):
+                        parent = None
+                        if not self.filter_formats['fulltext']:
+                            if any(keyword in filename.lower() for keyword in get_keyword_list(keywords)):
+                                parent = model.append(None, [icon, displayed, size, path, modified, mimetype, hidden, exact])
+                        try:
+                            for row in self.perform_zip_query(filename, keywords):
+                                if not parent:
+                                    parent = model.append(None, [icon, displayed, size, path, modified, mimetype, hidden, exact])
+                                model.append(parent, row)
+                        except zipfile.BadZipFile as e:
+                            LOGGER.debug(f'{e}: {path}')
+                    else:
+                        model.append(None, [icon, displayed, size, path, modified,
                                   mimetype, hidden, exact])
 
                     if not show_results:
