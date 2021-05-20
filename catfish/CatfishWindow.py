@@ -1781,7 +1781,7 @@ class CatfishWindow(Window):
     def get_file_icon(self, path, mime_type=None):  # pylint: disable=W0613
         """Retrieve the file icon."""
         if mime_type:
-            if mime_type == 'inode/directory':
+            if mime_type == 'inode/directory' or path.endswith('/'):
                 return "folder"
             mime_type = mime_type.split('/')
             if mime_type is not None:
