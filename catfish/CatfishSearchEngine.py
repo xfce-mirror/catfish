@@ -269,8 +269,6 @@ class CatfishSearchEngine:
         keyword_list = get_keyword_list(keywords)
         with zipfile.ZipFile(fullpath, 'r') as z:
             for member in z.infolist():
-                if member.is_dir():
-                    continue
                 for method in self.methods:
                     if method.search_zip(z, member, keyword_list):
                         yield (member.filename, member.file_size, member.date_time)
@@ -443,7 +441,9 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
             return True
 
     def search_zip(self, z, member, keywords):
-        return self.search_path(member.filename, keywords)
+        if member.is_dir():
+            return self.search_path(member.filename, keywords)
+        return self.search_path(os.path.basename(member.filename), keywords)
 
     def stop(self):
         """Stop the running search method."""
