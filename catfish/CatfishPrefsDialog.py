@@ -54,6 +54,8 @@ class CatfishPrefsDialog(PrefsDialog):
             self.builder.get_object("do_show_sidebar").set_active(True)
         if self.settings.get_setting("close-after-select"):
             self.builder.get_object("close_after_select").set_active(True)
+        if self.settings.get_setting("search-compressed-files"):
+            self.builder.get_object("search_in_compressed_files").set_active(True)
         self.set_exclude_directories(
             self.settings.get_setting("exclude-paths"))
         self.process_events = True
@@ -96,6 +98,15 @@ class CatfishPrefsDialog(PrefsDialog):
         else:
             self.settings.set_setting("close-after-select", False)
         self.changed_properties.append("close-after-select")
+
+    def on_search_in_compressed_files_toggled(self, widget):
+        if not self.process_events:
+            return
+        if widget.get_active():
+            self.settings.set_setting("search-compressed-files", True)
+        else:
+            self.settings.set_setting("search-compressed-files", False)
+        self.changed_properties.append("search-compressed-files")
 
     def on_add_directory_clicked(self, widget):  # pylint: disable=W0613
         dlg = Gtk.FileChooserDialog("Add Excluded Directory",

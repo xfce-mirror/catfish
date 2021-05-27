@@ -1944,7 +1944,9 @@ class CatfishWindow(Window):
 
                     displayed = surrogate_escape(name, True)
                     path = surrogate_escape(path)
-
+                    if not self.settings.get_setting('search-compressed-files'):
+                         if zipfile.is_zipfile(filename):
+                             continue
                     if zipfile.is_zipfile(filename):
                         parent = None
                         try:
