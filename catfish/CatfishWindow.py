@@ -1972,12 +1972,13 @@ class CatfishWindow(Window):
 
                     displayed = surrogate_escape(name, True)
                     path = surrogate_escape(path)
-
                     if zipfile.is_zipfile(filename):
                         parent = None
                         if not self.filter_formats['fulltext']:
                             if any(keyword in filename.lower() for keyword in get_keyword_list(keywords)):
                                 parent = model.append(None, [icon, displayed, size, path, modified, mimetype, hidden, exact])
+                        if not self.settings.get_setting('search-compressed-files'):
+                            continue
                         try:
                             for row in self.perform_zip_query(filename, keywords):
                                 if not parent:
