@@ -29,6 +29,7 @@ import mimetypes
 import os
 import subprocess
 import time
+import zipfile
 from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
@@ -1780,7 +1781,7 @@ class CatfishWindow(Window):
     def get_file_icon(self, path, mime_type=None):  # pylint: disable=W0613
         """Retrieve the file icon."""
         if mime_type:
-            if mime_type == 'inode/directory':
+            if mime_type == 'inode/directory' or path.endswith('/'):
                 return "folder"
             mime_type = mime_type.split('/')
             if mime_type is not None:
@@ -1836,7 +1837,7 @@ class CatfishWindow(Window):
             Gtk.main_iteration()
 
         # icon, name, size, path, modified, mimetype, hidden, exact
-        model = Gtk.ListStore(str, str, GObject.TYPE_INT64,
+        model = Gtk.TreeStore(str, str, GObject.TYPE_INT64,
                               str, float, str, bool, bool)
 
         # Initialize the results filter.
@@ -1890,7 +1891,23 @@ class CatfishWindow(Window):
 
                     displayed = surrogate_escape(name, True)
                     path = surrogate_escape(path)
-                    model.append([icon, displayed, size, path, modified,
+
+                    if zipfile.is_zipfile(filename):
+                        parent = None
+                        for member, uncompressed_size, date_time in self.search_engine.search_zip(filename, keywords):
+                            if not parent:
+                                parent = model.append(None, [icon, displayed, size, path, modified, mimetype, hidden, exact])
+                            dt = datetime.datetime(*date_time).timestamp()
+                            mimetype, override = self.guess_mimetype(member)
+                            icon = self.get_thumbnail(member, mimetype)
+                            if override:
+                                mimetype = override
+                            displayed = surrogate_escape(member, True)
+                            zip_path = surrogate_escape(filename)
+                            exact = keywords in member
+                            model.append(parent, [icon, displayed, uncompressed_size, zip_path, dt, mimetype, False, exact])
+                    else:
+                        model.append(None, [icon, displayed, size, path, modified,
                                   mimetype, hidden, exact])
 
                     if not show_results:
