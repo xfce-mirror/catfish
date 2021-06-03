@@ -36,6 +36,7 @@ DEFAULT_SETTINGS = {
     'search-file-contents': (bool, False),
     'match-results-exactly': (bool, False),
     'close-after-select': (bool, False),
+    'search-compressed-files': (bool, False),
     'window-width': (int, 650),
     'window-height': (int, 470),
     'window-x': (int, -1),
