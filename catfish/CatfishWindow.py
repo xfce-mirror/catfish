@@ -1951,7 +1951,9 @@ class CatfishWindow(Window):
                 self.settings.get_setting("exclude-paths")
             )
 
-        for filename in self.search_engine.run(keywords, folder, regex=True):
+        search_zips = self.settings.get_setting('search-compressed-files')
+
+        for filename in self.search_engine.run(keywords, folder, search_zips, regex=True):
             if not self.stop_search and isinstance(filename, str) and \
                     filename not in results:
                 try:
@@ -1977,7 +1979,7 @@ class CatfishWindow(Window):
                         if not self.filter_formats['fulltext']:
                             if any(keyword in filename.lower() for keyword in get_keyword_list(keywords)):
                                 parent = model.append(None, [icon, displayed, size, path, modified, mimetype, hidden, exact])
-                        if not self.settings.get_setting('search-compressed-files'):
+                        if not search_zips:
                             continue
                         try:
                             for row in self.perform_zip_query(filename, keywords):
