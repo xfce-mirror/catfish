@@ -265,13 +265,32 @@ class CatfishSearchEngine:
                 yield False
         self.stop()
 
-    def search_zip(self, fullpath, keywords):
+    def search_zip(self, fullpath, keywords, search_exact):
         keyword_list = get_keyword_list(keywords)
         with zipfile.ZipFile(fullpath, 'r') as z:
             for member in z.infolist():
                 for method in self.methods:
-                    if method.search_zip(z, member, keyword_list):
-                        yield (member.filename, member.file_size, member.date_time)
+                    if method.method_name is 'walk':
+                        if self.search_filenames(
+                                member.filename, keywords, search_exact):
+                            yield (member.filename, member.file_size, member.date_time)
+                    if method.method_name is 'fulltext':
+                        if method.search_zip(z, member, keyword_list):
+                            yield (member.filename, member.file_size, member.date_time)
+
+    def search_filenames(self, filename, keywords, search_exact):
+        keywords = get_keyword_list(keywords)
+        fname = os.path.basename(filename.rstrip("/"))
+        if search_exact:
+            if " ".join(keywords) in fname.lower():
+                return True
+        else:
+            match_list = set()
+            for kword in keywords:
+                if kword in fname.lower():
+                    match_list.add(kword)
+                if len(set(keywords)) == len(match_list):
+                    return True
 
     def set_exact(self, exact):
         """Set method for exact"""

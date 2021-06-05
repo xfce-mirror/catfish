@@ -1879,14 +1879,14 @@ class CatfishWindow(Window):
             return 0
         return 1
 
-    def perform_zip_query(self, filename, keywords):
-        for member, uncompressed_size, date_time in self.search_engine.search_zip(filename, keywords):
+    def perform_zip_query(self, filename, keywords, search_exact):
+        for member, uncompressed_size, date_time in self.search_engine.search_zip(filename, keywords, search_exact):
             dt = datetime.datetime(*date_time).timestamp()
             mimetype, override = self.guess_mimetype(member)
             icon = self.get_thumbnail(member, mimetype)
             if override:
                 mimetype = override
-            displayed = surrogate_escape(member, True)
+            displayed = surrogate_escape(member.rstrip("/"), True)
             zip_path = surrogate_escape(filename)
             exact = keywords in member
             yield [icon, displayed, uncompressed_size, zip_path, dt, mimetype, False, exact]
@@ -1952,6 +1952,7 @@ class CatfishWindow(Window):
             )
 
         search_zips = self.settings.get_setting('search-compressed-files')
+        search_exact = self.settings.get_setting('match-results-exactly')
 
         for filename in self.search_engine.run(keywords, folder, search_zips, regex=True):
             if not self.stop_search and isinstance(filename, str) and \
@@ -1977,14 +1978,14 @@ class CatfishWindow(Window):
                     if zipfile.is_zipfile(filename):
                         parent = None
                         if not self.filter_formats['fulltext']:
-                            if any(keyword in filename.lower() for keyword in get_keyword_list(keywords)):
-                                parent = model.append(None, [icon, displayed, size, path, modified, mimetype, hidden, exact])
+                            if self.search_engine.search_filenames(filename, keywords, search_exact):
+                                parent = model.append(None, [icon, displayed, size, path, modified, mimetype, hidden, search_exact])
                         if not search_zips:
                             continue
                         try:
-                            for row in self.perform_zip_query(filename, keywords):
+                            for row in self.perform_zip_query(filename, keywords, search_exact):
                                 if not parent:
-                                    parent = model.append(None, [icon, displayed, size, path, modified, mimetype, hidden, exact])
+                                    parent = model.append(None, [icon, displayed, size, path, modified, mimetype, hidden, search_exact])
                                 model.append(parent, row)
                         except zipfile.BadZipFile as e:
                             LOGGER.debug(f'{e}: {path}')
