@@ -1870,8 +1870,9 @@ class CatfishWindow(Window):
             )
 
         for filename in self.search_engine.run(keywords, folder, regex=True):
-            if not self.stop_search and isinstance(filename, str) and \
-                    filename not in results:
+            if self.stop_search:
+                break
+            if isinstance(filename, str) and filename not in results:
                 try:
                     path, name = os.path.split(filename)
                     size = long(os.path.getsize(filename))
