@@ -912,8 +912,14 @@ class CatfishWindow(Window):
         return query
 
     def on_search_entry_activate(self, widget):
-        """If the search entry is not empty, perform the query."""
+        """If the search entry is not empty, and there is no ongoing search, perform the query."""
         if len(widget.get_text()) > 0:
+            
+            # If a search is in progress, stop it
+            if not self.search_in_progress:
+                self.stop_search = True
+                self.search_engine.stop()
+
             self.statusbar.show()
 
             # Store search start time for displaying friendly dates
@@ -1870,8 +1876,9 @@ class CatfishWindow(Window):
             )
 
         for filename in self.search_engine.run(keywords, folder, regex=True):
-            if not self.stop_search and isinstance(filename, str) and \
-                    filename not in results:
+            if self.stop_search:
+                break
+            if isinstance(filename, str) and filename not in results:
                 try:
                     path, name = os.path.split(filename)
                     size = long(os.path.getsize(filename))
