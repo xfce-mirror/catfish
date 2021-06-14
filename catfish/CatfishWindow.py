@@ -919,7 +919,7 @@ class CatfishWindow(Window):
         if len(widget.get_text()) > 0:
             
             # If a search is in progress, stop it
-            if not self.search_in_progress:
+            if self.search_in_progress:
                 self.stop_search = True
                 self.search_engine.stop()
 
