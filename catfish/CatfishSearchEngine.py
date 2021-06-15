@@ -524,16 +524,20 @@ class CatfishSearchMethod_Ripgrep(CatfishSearchMethod):
         # Stop searching the file at one match
         args.append('--max-count')
         args.append('1')
+
         # If exact query, concatenate all keywords, else, ignore case
         if self.exact:
             joined_keyword = '"{}"'.format(' '.join(keywords))
             keywords = [joined_keyword]
+        # If not exact query remove keyword duplicates and sort
         else:
             args.append('--ignore-case')
 
-        # Sort keywords by length
-        # longest keywords first improves speed of ripgrep multi-word search
-        keywords = sorted(keywords, key=len, reverse=True)
+            keywords = list(dict.from_keys(keywords))
+
+            # Sort keywords by length
+            # longest keywords first improves speed of ripgrep multi-word search
+            keywords = sorted(keywords, key=len, reverse=True)
 
         # Create new variable for the first keyword query
         first_keyword_args = args.copy()
