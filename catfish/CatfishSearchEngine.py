@@ -111,6 +111,7 @@ class CatfishSearchEngine:
         be included in the search backends.  Available backends include:
 
          fulltext         'os.walk' and 'file.readline' to search inside files.
+         ripgrep          Ripgrep for faster fulltext search
          locate           System 'locate' to search for files.
          walk             'os.walk' to search for files (like find).
          zeitgeist        Zeitgeist indexing service to search for files.
@@ -133,6 +134,8 @@ class CatfishSearchEngine:
                 self.add_method(CatfishSearchMethod_Locate)
         if 'fulltext' in methods:
             self.add_method(CatfishSearchMethod_Fulltext)
+        if 'ripgrep' in methods:
+            self.add_method(CatfishSearchMethod_Ripgrep)
         if 'walk' in methods:
             self.add_method(CatfishSearchMethod_Walk)
         self.exclude_paths = exclude_paths
@@ -222,6 +225,7 @@ class CatfishSearchEngine:
                             continue
 
                     if method.method_name == 'fulltext' or \
+                            method.method_name == 'ripgrep' or \
                             all(key in
                                 os.path.basename(filename).lower()
                                 for key in keys):
@@ -237,7 +241,8 @@ class CatfishSearchEngine:
                         filename = filename.strip()
 
                         if len(wildcard_chunks) == 0 or \
-                                method.method_name == 'fulltext':
+                                method.method_name == 'fulltext' or \
+                                method.method_name == 'ripgrep':
                             yield filename
                             file_count += 1
                         else:
