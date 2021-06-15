@@ -29,6 +29,7 @@ import signal
 import subprocess
 import time
 from itertools import permutations
+from json import dumps, loads
 
 import mimetypes
 import zipfile
@@ -577,7 +578,7 @@ class CatfishSearchMethod_Ripgrep(CatfishSearchMethod):
         # Compile the args into a string to excecute
         command = ' '.join(args_list)
 
-        process = Popen(command, stdout = PIPE, shell = True)
+        process = subprocess.Popen(command, stdout = subprocess.PIPE, shell = True)
         self.processes.append(process)
 
         while not self.cancel_search:
