@@ -481,7 +481,7 @@ class CatfishSearchMethod_Ripgrep(CatfishSearchMethod):
         else:
             args.append('--ignore-case')
             
-            keywords = list(dict.from_keys(keywords))
+            keywords = list(dict.fromkeys(keywords))
             
             # Sort keywords by length
             # longest keywords first improves speed of ripgrep multi-word search
