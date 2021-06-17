@@ -31,6 +31,7 @@ import time
 from itertools import permutations
 
 import mimetypes
+import zipfile
 
 import gi
 gi.require_version('GLib', '2.0')  # noqa
@@ -149,7 +150,7 @@ class CatfishSearchEngine:
         """Add a CatfishSearchMethod the the engine's search backends."""
         self.methods.append(method_class())
 
-    def run(self, keywords, path, limit=-1, regex=False):  # noqa
+    def run(self, keywords, path, search_zips, limit=-1, regex=False):  # noqa
         """Run the CatfishSearchEngine.
 
         Each method is run sequentially in the order they are added.
@@ -199,7 +200,7 @@ class CatfishSearchEngine:
             LOGGER.debug(
                 "[%i] Starting search method: %s",
                 self.engine_id, method.method_name)
-            for filename in method.run(keywords, path, regex,
+            for filename in method.run(keywords, path, search_zips, regex,
                                        self.exclude_paths):
                 if isinstance(filename, str) and path in filename:
                     found_bad = False
@@ -214,6 +215,7 @@ class CatfishSearchEngine:
                         continue
 
                     if method.method_name == 'fulltext' or  \
+                            zipfile.is_zipfile(filename) or \
                             all(key in
                                 os.path.basename(filename).lower()
                                 for key in keys):
@@ -229,6 +231,7 @@ class CatfishSearchEngine:
                         filename = filename.strip()
 
                         if len(wildcard_chunks) == 0 or \
+                                zipfile.is_zipfile(filename) or \
                                 method.method_name == 'fulltext':
                             yield filename
                             file_count += 1
@@ -262,6 +265,14 @@ class CatfishSearchEngine:
                 yield False
         self.stop()
 
+    def search_zip(self, fullpath, keywords):
+        keyword_list = get_keyword_list(keywords)
+        with zipfile.ZipFile(fullpath, 'r') as z:
+            for member in z.infolist():
+                for method in self.methods:
+                    if method.search_zip(z, member, keyword_list):
+                        yield (member.filename, member.file_size, member.date_time)
+
     def set_exact(self, exact):
         """Set method for exact"""
         # Only for fulltext engine
@@ -286,9 +297,13 @@ class CatfishSearchMethod:
         """Base CatfishSearchMethod Initializer."""
         self.method_name = method_name
 
-    def run(self, keywords, path, regex=False, exclude_paths=[]):  # pylint: disable=W0613
+    def run(self, keywords, path, search_zips, regex=False, exclude_paths=[]):  # pylint: disable=W0613
         """Base CatfishSearchMethod run method."""
         return NotImplemented
+
+    def search_zip(self, z, member, keywords):
+        """Base CatfishSearchMethod search_zip method."""
+        return False
 
     def stop(self):
         """Base CatfishSearchMethod stop method."""
@@ -360,7 +375,7 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         dirlist = xdgdirs + notdotdirs + notdotlinks + dotdirs + dotlinks
         return dirlist
 
-    def run(self, keywords, path, regex=False, exclude_paths=[]):
+    def run(self, keywords, path, search_zips, regex=False, exclude_paths=[]):
         """Run the search method using keywords and path.  regex is not used
         by this search method.
 
@@ -415,10 +430,22 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
             # Check paths in the second and deeper levels of the selected
             # directory
             for path in paths:
-                if any(keyword in path.lower() for keyword in keywords):
-                    yield os.path.join(root, path)
+                fullpath = os.path.join(root, path)
+                if self.search_path(path, keywords):
+                    yield fullpath
+                if search_zips and zipfile.is_zipfile(fullpath):
+                    yield fullpath
             yield True
         yield False
+
+    def search_path(self, path, keywords):
+        if any(keyword in path.lower() for keyword in keywords):
+            return True
+
+    def search_zip(self, z, member, keywords):
+        if member.is_dir():
+            return self.search_path(member.filename, keywords)
+        return self.search_path(os.path.basename(member.filename), keywords)
 
     def stop(self):
         """Stop the running search method."""
@@ -494,25 +521,34 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
 
     def search_pdf(self, fullpath, keywords):
         command = ['pdftotext', '-q', '-nopgbrk', fullpath, '-']
-        pdf = subprocess.Popen(command, stdout=subprocess.PIPE)
-        for text in pdf.stdout:
-            line = text.decode()
-            if self.exact:
-                if " ".join(keywords) in line.lower():
-                    pdf.stdout.close()
+        with subprocess.Popen(command, stdout=subprocess.PIPE, text=True) as pdf:
+            if self.search_text(pdf.stdout, keywords):
+                return True
+
+    def search_text(self, lines, keywords):
+        if self.exact:
+            for line in lines:
+                if " ".join(keywords) in line:
                     return True
-            elif not self.exact:
-                match_list = set()
+        else:
+            match_list = set()
+            for line in lines:
                 for kword in keywords:
                     if kword in line.lower():
                         match_list.add(kword)
                 if len(set(keywords)) == len(match_list):
-                    pdf.stdout.close()
                     return True
-            else:
-                pdf.stdout.close()
 
-    def run(self, keywords, path, regex=False, exclude_paths=[]):  # noqa
+    def search_zip(self, z, member, keywords):
+        with z.open(member) as f:
+            lines = io.TextIOWrapper(f, encoding='utf-8')
+            try:
+                if self.search_text(lines, keywords):
+                    return True
+            except UnicodeError:
+                return False
+
+    def run(self, keywords, path, search_zips, regex=False, exclude_paths=[]):  # noqa
         """Run the search method using keywords and path.  regex is not used
         by this search method.
 
@@ -551,6 +587,8 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                     if fullpath.lower().endswith('.pdf'):
                         if self.search_pdf(fullpath, keywords):
                             yield fullpath
+                    if zipfile.is_zipfile(fullpath):
+                        yield fullpath
                     # Skip if not text file.
                     if not self.is_txt(filename):
                         continue
@@ -562,20 +600,8 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                     # Check each line. If a keyword is found, yield.
                     open_file = open(fullpath, 'r', encoding=charset)
                     with open_file as file_text:
-                        if self.exact:
-                            for line in file_text:
-                                if " ".join(keywords) in line:
-                                    yield fullpath
-                        else:
-                            match_list = set()
-                            for line in file_text:
-                                for kword in keywords:
-                                    if kword in line.lower():
-                                        match_list.add(kword)
-                                if len(set(keywords)) == len(match_list):
-                                    break
-                            if len(set(keywords)) == len(match_list):
-                                yield fullpath
+                        if self.search_text(file_text, keywords):
+                            yield fullpath
                 # Skips on errors, move on to next in list.
                 except UnicodeDecodeError:
                     continue
@@ -621,7 +647,7 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
             self.events.append(event)
         self.stop_search = True
 
-    def run(self, keywords, path, regex=False, exclude_paths=[]):
+    def run(self, keywords, path, search_zips, regex=False, exclude_paths=[]):
         """Run the Zeitgeist SearchMethod."""
         keywords = " ".join(keywords)
         self.stop_search = False
@@ -685,7 +711,7 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
         """Base assemble_query method."""
         return False
 
-    def run(self, keywords, path, regex=False, exclude_paths=[]):
+    def run(self, keywords, path, search_zips, regex=False, exclude_paths=[]):
         """Run the search method using keywords and path.
 
         This function returns the process.stdout generator and will yield files
