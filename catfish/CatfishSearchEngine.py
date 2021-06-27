@@ -29,6 +29,7 @@ import signal
 import subprocess
 import time
 from itertools import permutations
+from json import dumps, loads
 
 import mimetypes
 
@@ -109,6 +110,7 @@ class CatfishSearchEngine:
         be included in the search backends.  Available backends include:
 
          fulltext         'os.walk' and 'file.readline' to search inside files.
+         ripgrep          Ripgrep for faster fulltext search
          locate           System 'locate' to search for files.
          walk             'os.walk' to search for files (like find).
          zeitgeist        Zeitgeist indexing service to search for files.
@@ -131,6 +133,8 @@ class CatfishSearchEngine:
                 self.add_method(CatfishSearchMethod_Locate)
         if 'fulltext' in methods:
             self.add_method(CatfishSearchMethod_Fulltext)
+        if 'ripgrep' in methods:
+            self.add_method(CatfishSearchMethod_Ripgrep)
         if 'walk' in methods:
             self.add_method(CatfishSearchMethod_Walk)
         self.exclude_paths = exclude_paths
@@ -214,6 +218,7 @@ class CatfishSearchEngine:
                         continue
 
                     if method.method_name == 'fulltext' or  \
+                            method.method_name == 'ripgrep' or \
                             all(key in
                                 os.path.basename(filename).lower()
                                 for key in keys):
@@ -229,7 +234,8 @@ class CatfishSearchEngine:
                         filename = filename.strip()
 
                         if len(wildcard_chunks) == 0 or \
-                                method.method_name == 'fulltext':
+                                method.method_name == 'fulltext' or \
+                                method.method_name == 'ripgrep':
                             yield filename
                             file_count += 1
                         else:
@@ -428,6 +434,146 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
         """Poll the search method to see if it still running."""
         return self.running
 
+
+class CatfishSearchMethod_Ripgrep(CatfishSearchMethod):
+	
+    """Search Method utilizing python ripgrepy interface of ripgrep."""
+    """Needs exact vs all word search"""
+	
+    def __init__(self):
+        """Initialize the 'ripgrep' Search Method."""
+        CatfishSearchMethod.__init__(self, "ripgrep")
+        self.running = False
+        self.hidden = False
+        self.exact = False  
+        self.cancel_search = False
+        self.processes = []
+		
+    def run(self, keywords, path, regex=False, exclude_paths=[]):
+        """Run the search method using keywords and path."""
+                
+        self.running = True
+                
+        paths = []
+        
+        args = []
+        args.append('rg')
+        # Return in json format
+        args.append('--json')
+        # Include hidden files
+        if not self.hidden:
+            args.append('--hidden')
+        # Include zip files
+        args.append('--search-zip')
+        # Do not obey gitignore and other files
+        args.append('--no-ignore')
+        # Return the filename in the results
+        args.append('--with-filename')
+        # Stop searching the file at one match
+        args.append('--max-count')
+        args.append('1')
+                
+        # If exact query, concatenate all keywords, else, ignore case
+        if self.exact:
+            joined_keyword = '"{}"'.format(' '.join(keywords))
+            keywords = [joined_keyword]
+        # If not exact query remove keyword duplicates and sort
+        else:
+            args.append('--ignore-case')
+            
+            keywords = list(dict.fromkeys(keywords))
+            
+            # Sort keywords by length
+            # longest keywords first improves speed of ripgrep multi-word search
+            keywords = sorted(keywords, key=len, reverse=True)
+        
+        # Create new variable for the first keyword query
+        first_keyword_args = args.copy()
+        
+        # Add the query to the args list
+        first_keyword_args.append(keywords[0])
+        # Add the path to the args list
+        first_keyword_args.append(path)
+        first_keyword_results = self.rg_search(first_keyword_args)
+        
+        # If there is only one keyword, return results
+        if len(keywords) == 1:
+            for result in first_keyword_results:
+                yield result
+
+        # For more than one search term, run ripgrep on the longest term,
+        # and then scan each resulting file for other matches.
+        else:
+            for possible_file in first_keyword_results:
+                found_match = True
+                
+                for keyword in keywords[1:]:
+                    if found_match == False:
+                        break
+                    else:
+                        found_match = False
+                        # Compile the args list for this keyword and this possible match file
+                        new_keyword_args = args.copy()
+                        new_keyword_args.append(keyword)
+                        new_keyword_args.append(possible_file)
+                        matches = self.rg_search(new_keyword_args)
+                        new_keyword_args = []
+                        for match in matches:
+                            if isinstance(match, str):
+                                found_match = True
+                if found_match:
+                    yield possible_file
+                else:
+                    yield True
+        
+        self.running = False
+                    
+    def rg_search(self, args_list):
+        """Runs the search, yielding paths as they are found."""
+        # Put path in quotes in case of whitespaces
+        args_list[-1] = '"{}"'.format(args_list[-1])
+        # Compile the args into a string to excecute
+        command = ' '.join(args_list)
+        
+        process = subprocess.Popen(command, stdout = subprocess.PIPE, shell = True)
+        self.processes.append(process)
+        
+        while not self.cancel_search:
+            
+            subprocess_still_running = (process.poll() == None)
+
+            # Read the next line from the output
+            line = process.stdout.readline()
+            
+            if line:
+                # Try to convert from json to dict
+                try:
+                    json_value = line.strip().decode()
+                    data = loads(json_value)
+                    if data['type'] == 'match':
+                        full_path = data['data']['path']['text']
+                        yield full_path
+                except ValueError as err:
+                    pass
+                    #print('Json Decode Error: {} on line "{}"'.format(err, line))
+
+            elif subprocess_still_running:
+                yield True
+            else:
+                # If the line is empty and the process is not running,
+                # remove the process from the list of currently running processes and break out
+                self.processes.remove(process)
+                break
+                
+    def stop(self):
+        """Stop the running search method."""
+        self.cancel_search = True
+        for process in self.processes:
+            process.kill()
+
+    def is_running(self):
+        """Poll the search method to see if it still running."""
+        return self.running
 
 class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
 
