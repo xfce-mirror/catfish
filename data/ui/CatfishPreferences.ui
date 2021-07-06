@@ -266,7 +266,7 @@
                             <property name="spacing">3</property>
                             <child>
                               <object class="GtkCheckButton" id="do_show_hidden">
-                                <property name="label" translatable="yes"> Show _hidden files in the results</property>
+                                <property name="label" translatable="yes">Show _hidden files in the results</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
@@ -282,7 +282,7 @@
                             </child>
                             <child>
                               <object class="GtkCheckButton" id="do_show_sidebar">
-                                <property name="label" translatable="yes"> Show filter _sidebar</property>
+                                <property name="label" translatable="yes">Show filter _sidebar</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
@@ -465,7 +465,7 @@
                             <property name="spacing">3</property>
                             <child>
                               <object class="GtkCheckButton" id="close_after_select">
-                                <property name="label" translatable="yes"> Close the search _window after opening a file</property>
+                                <property name="label" translatable="yes">Close the search _window after opening a file</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
@@ -481,7 +481,7 @@
                             </child>
                             <child>
                               <object class="GtkCheckButton" id="search_in_compressed_files">
-                                <property name="label" translatable="yes"> Search within compressed files   (.zip, .odt, .docx)</property>
+                                <property name="label" translatable="yes">Search within compressed files (.zip, .odt, .docx)</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
