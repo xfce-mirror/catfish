@@ -1123,18 +1123,10 @@ class CatfishWindow(Window):
         obj = bus.get_object('org.xfce.Thunar', '/org/xfce/FileManager')
         iface = dbus.Interface(obj, 'org.xfce.FileManager')
 
-        path = os.path.realpath(urllib.parse.urlparse(path).path)
-        url = urllib.parse.urljoin('file:', urllib.request.pathname2url(path))
-
-        if os.path.isfile(path):
-            method = iface.get_dbus_method('DisplayFolderAndSelect')
-            dirname = os.path.dirname(url)
-            filename = os.path.basename(url)
-            method(dirname, filename, '', '')
-
-        else:
-            method = iface.get_dbus_method('DisplayFolder')
-            method(url, '', '')
+        method = iface.get_dbus_method('DisplayFolderAndSelect')
+        dirname = os.path.dirname(path)
+        filename = os.path.basename(path)
+        return method(dirname, filename, '', '')
 
     def get_exo_preferred_applications(self, filename):
         apps = {}
@@ -1149,19 +1141,24 @@ class CatfishWindow(Window):
         return apps
 
     def get_exo_preferred_file_manager(self):
-        tmp = [GLib.get_user_config_dir()] + GLib.get_system_config_dirs()
-        config_dirs = []
-        for config_dir in tmp:
-            if config_dir not in config_dirs:
-                if os.path.exists(config_dir):
-                    config_dirs.append(config_dir)
+        config = [GLib.get_user_config_dir()] + GLib.get_system_config_dirs()
+        data_dir = GLib.get_user_data_dir()
+        custFM = data_dir+"/xfce4/helpers/custom-FileManager.desktop"
+        config_dirs = sorted(set(config), reverse=True)
 
         for config_dir in config_dirs:
             cfg = "%s/xfce4/helpers.rc" % config_dir
             if os.path.exists(cfg):
                 apps = self.get_exo_preferred_applications(cfg)
-                if "FileManager" in apps:
-                    return apps["FileManager"]
+                if 'custom-FileManager' in apps['FileManager']:
+                    with open(custFM) as f:
+                        for line in f:
+                            CFM = line.replace('X-XFCE-Commands=', '').strip()
+                            if 'X-XFCE-Commands=' in line:
+                                return CFM
+
+                if 'FileManager' in apps:
+                    return apps['FileManager']
 
         return "Thunar"
 
@@ -1185,6 +1182,7 @@ class CatfishWindow(Window):
     def open_file(self, filename):
         """Open the specified filename in its default application."""
         LOGGER.debug("Opening %s" % filename)
+
         if type(filename) is list:
             filename = filename[0]
         if filename.endswith('.AppImage') and os.access(filename, os.X_OK):
@@ -1211,7 +1209,7 @@ class CatfishWindow(Window):
         """Open the selected file in its default application."""
         compressed_files = []
         for filename in self.selected_filenames:
-            if "//ARCHIVE//" in filename:
+            if '//ARCHIVE//' in filename:
                 compressed_files.append(filename)
             else:
                 self.open_file(filename)
@@ -1219,9 +1217,9 @@ class CatfishWindow(Window):
 
     def open_compressed_files(self, compressed_files):
         for filename in compressed_files:
-            archive = filename.split("//ARCHIVE//")[0]
-            fname = filename.split("//ARCHIVE//")[1]
-            if fname.endswith("/"):
+            archive = filename.split('//ARCHIVE//')[0]
+            fname = filename.split('//ARCHIVE//')[1]
+            if fname.endswith('/'):
                 self.open_file(archive)
                 continue
             with zipfile.ZipFile(archive) as z:
@@ -1233,32 +1231,55 @@ class CatfishWindow(Window):
 
     def on_menu_filemanager_activate(self, widget):  # pylint: disable=W0613
         """Open the selected file in the default file manager."""
-        LOGGER.debug("Opening file manager for %i path(s)" %
-                     len(self.selected_filenames))
-        tdirs = set()
-        if self.using_thunar_fm():
-            for filename in self.selected_filenames:
-                if "//ARCHIVE//" in filename:
-                    archive = filename.split("//ARCHIVE//")[0]
-                    path = os.path.dirname(archive)
-                    tdirs.add(path)
-                else:
-                    tdirs.add(filename)
-            for filename in tdirs:
-                self.thunar_display_path(filename)
-            return
 
+        file_manager = self.get_exo_preferred_file_manager().lower()
+        files, dirs, nfiles = self.on_menu_filemanager_get_file_lists()
+        num = len(files)
+
+        if 'nemo' or 'elementary' in file_manager:
+            num = len(nfiles)
+
+        if 'thunar' in file_manager:
+            for filename in files:
+                self.thunar_display_path(filename)
+        elif 'nautilus' in file_manager:
+            for filename in files:
+                subprocess.Popen([file_manager, '--select', filename])
+        elif 'nemo' in file_manager:
+            for nfilename in nfiles:
+                subprocess.Popen([file_manager, nfilename])
+        elif 'elementary' in file_manager:
+            for nfilename in nfiles:
+                subprocess.Popen([file_manager, '-n', nfilename])
+        else:
+            for dirname in dirs:
+                subprocess.Popen([file_manager, dirname])
+
+        LOGGER.debug("Opening file manager for %i path(s)" % num)
+        return
+
+    def on_menu_filemanager_get_file_lists(self):
+        """Creates sets from selected files. Allows file managers to
+        open and select file/folder when possible. If not it will open
+        the parent folder of the file/folder. Sets prevent file manager
+        from opening same location when multiple items are selected."""
+
+        files = set()
         dirs = set()
+        nfiles = set()
+
         for filename in self.selected_filenames:
-            # If file is in archive, open archive location
-            if "//ARCHIVE//" in filename:
-                archive = filename.split("//ARCHIVE//")[0]
-                path = os.path.dirname(archive)
-                dirs.add(path)
-            else:
-                path = os.path.split(filename)[0]
-                dirs.add(path)
-            self.open_file(path)
+            if '//ARCHIVE//' in filename:
+                filename = filename.split('//ARCHIVE//')[0]
+
+            files.add(filename)
+            dirs.add(os.path.dirname(filename))
+
+            if os.path.isfile(filename):
+                nfiles.add(filename)
+            elif os.path.isdir(filename):
+                nfiles.add(os.path.dirname(filename))
+        return files, dirs, nfiles
 
     def on_menu_copy_location_activate(self, widget):  # pylint: disable=W0613
         """Copy the selected file name to the clipboard."""
