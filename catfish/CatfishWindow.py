@@ -1565,6 +1565,10 @@ class CatfishWindow(Window):
     def on_treeview_cursor_changed(self, treeview):
         if "Shift" in self.keys_pressed or "Control" in self.keys_pressed:
             self.update_treeview_stats(treeview)
+        if "Up" in self.keys_pressed or "Down" in self.keys_pressed:
+            self.update_treeview_stats(treeview)
+        if len(self.selected_filenames) == 1:
+            self.update_treeview_stats(treeview)
 
     def treeview_set_cursor_if_unset(self, treeview, x=0, y=0):
         if treeview.get_selection().count_selected_rows() < 1:
