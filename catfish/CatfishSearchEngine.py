@@ -452,7 +452,8 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
                 fullpath = os.path.join(root, path)
                 if self.search_path(path, keywords):
                     yield fullpath
-                if search_zips and zipfile.is_zipfile(fullpath):
+                if search_zips and \
+                   os.path.isfile(fullpath) and zipfile.is_zipfile(fullpath):
                     yield fullpath
             yield True
         yield False
