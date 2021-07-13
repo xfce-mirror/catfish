@@ -8,16 +8,16 @@
 # Nick Schermer <nick@xfce.org>, 2018
 # Kukuh Syafaat <syafaatkukuh@gmail.com>, 2019
 # Ardjuna <Asyura.x@gmail.com>, 2020
-# Triyan W. Nugroho <triyan.wn@gmail.com>, 2020
+# Triyan W. Nugroho <triyan.wn@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-25 08:15-0400\n"
+"POT-Creation-Date: 2021-07-06 06:40-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>, 2020\n"
+"Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>, 2021\n"
 "Language-Team: Indonesian (https://www.transifex.com/xfce/teams/16840/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -114,10 +114,14 @@ msgid "Close the search _window after opening a file"
 msgstr "Tutup _jendela pencarian setelah membuka berkas"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
+msgid "Search within compressed files (.zip, .odt, .docx)"
+msgstr "Cari di dalam berkas terkompresi (.zip, .odt, .docx)"
+
+#: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Miscellaneous"
 msgstr "Lain-lain"
 
-#: ../data/ui/CatfishPreferences.ui.h:19
+#: ../data/ui/CatfishPreferences.ui.h:20
 msgid "Advanced"
 msgstr "Tingkat lanjut"
 
@@ -187,7 +191,7 @@ msgstr "Lainnya"
 msgid "Any time"
 msgstr "Segala waktu"
 
-#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1583
+#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1688
 msgid "Today"
 msgstr "Hari Ini"
 
@@ -232,48 +236,48 @@ msgstr ""
 msgid "File Type"
 msgstr "Tipe Berkas"
 
-#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1348
+#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1436
 msgid "Modified"
 msgstr "Diubah"
 
-#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1793
+#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1910
 msgid "Results will be displayed as soon as they are found."
 msgstr "Hasil akan ditampilkan segera setelah ditemukan."
 
-#: ../data/ui/CatfishWindow.ui.h:32
-msgid "Update Search Database"
-msgstr "Perbarui Data Pencarian"
-
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:725
+#: ../data/ui/CatfishWindow.ui.h:32 ../catfish/CatfishWindow.py:752
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Batal"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Unlock"
 msgstr "Buka Kunci"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "<b>Database:</b>"
 msgstr "<b>Data Pencarian:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "<b>Updated:</b>"
 msgstr "<b>Diperbarui:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Perbarui Data Pencarian</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
 "Agar proses pencarian lebih cepat, basis data pencarian perlu diperbarui.\n"
 "Untuk melakukannya, diperlukan hak akses administrator."
+
+#: ../data/ui/CatfishWindow.ui.h:39
+msgid "Update Search Database"
+msgstr "Perbarui Data Pencarian"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "Select a Directory"
@@ -365,27 +369,27 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:105
+#: ../catfish/CatfishWindow.py:107
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (pengkodean tidak valid)"
 
-#: ../catfish/CatfishWindow.py:145
+#: ../catfish/CatfishWindow.py:147
 msgid "translator-credits"
 msgstr ""
 "Andhika Padmawan <andhika.padmawan@gmail.com>, 2012.\n"
 "Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
 "Triyan W. Nugroho <triyan.wn@gmail.com>, 2020."
 
-#: ../catfish/CatfishWindow.py:289
+#: ../catfish/CatfishWindow.py:291
 msgid "Unknown"
 msgstr "Tak Dikenal"
 
-#: ../catfish/CatfishWindow.py:293
+#: ../catfish/CatfishWindow.py:295
 msgid "Never"
 msgstr "Tak pernah"
 
-#: ../catfish/CatfishWindow.py:377
+#: ../catfish/CatfishWindow.py:401
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -394,37 +398,37 @@ msgstr ""
 "Masukkan kueri Anda di atas untuk mencari berkas\n"
 "atau klik pada ikon %s untuk lebih banyak opsi."
 
-#: ../catfish/CatfishWindow.py:740
+#: ../catfish/CatfishWindow.py:767
 msgid "An error occurred while updating the database."
 msgstr "Terjadi kesalahan saat memutakhirkan basis data."
 
-#: ../catfish/CatfishWindow.py:742
+#: ../catfish/CatfishWindow.py:769
 msgid "Authentication failed."
 msgstr "Autentikasi gagal."
 
-#: ../catfish/CatfishWindow.py:748
+#: ../catfish/CatfishWindow.py:775
 msgid "Authentication cancelled."
 msgstr "Autentikasi dibatalkan."
 
-#: ../catfish/CatfishWindow.py:754
+#: ../catfish/CatfishWindow.py:781
 msgid "Search database updated successfully."
 msgstr "Basis data pencarian berhasil dimutakhirkan."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:815
+#: ../catfish/CatfishWindow.py:842
 msgid "Close"
 msgstr "Tutup"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:829
+#: ../catfish/CatfishWindow.py:856
 msgid "Updating..."
 msgstr "Memutakhirkan..."
 
-#: ../catfish/CatfishWindow.py:863
+#: ../catfish/CatfishWindow.py:890
 msgid "Stop Search"
 msgstr "Hentikan Pencarian"
 
-#: ../catfish/CatfishWindow.py:864
+#: ../catfish/CatfishWindow.py:891
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -432,31 +436,31 @@ msgstr ""
 "Pencarian sedang berlangsung...\n"
 "Tekan tombol batal atau Escape untuk menghentikan."
 
-#: ../catfish/CatfishWindow.py:873
+#: ../catfish/CatfishWindow.py:900
 msgid "Begin Search"
 msgstr "Mulai Pencarian"
 
-#: ../catfish/CatfishWindow.py:1169
+#: ../catfish/CatfishWindow.py:1206
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" tidak dapat dibuka."
 
-#: ../catfish/CatfishWindow.py:1221
+#: ../catfish/CatfishWindow.py:1309
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" tidak dapat disimpan."
 
-#: ../catfish/CatfishWindow.py:1238
+#: ../catfish/CatfishWindow.py:1326
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" tidak dapat dihapus."
 
-#: ../catfish/CatfishWindow.py:1277
+#: ../catfish/CatfishWindow.py:1365
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Simpan \"%s\" sebagai..."
 
-#: ../catfish/CatfishWindow.py:1312
+#: ../catfish/CatfishWindow.py:1400
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -465,7 +469,7 @@ msgstr ""
 "Apakah Anda yakin akan menghapus \n"
 "\"%s\" secara permanen?"
 
-#: ../catfish/CatfishWindow.py:1316
+#: ../catfish/CatfishWindow.py:1404
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -474,39 +478,39 @@ msgstr ""
 "Apakah Anda yakin akan menghapus \n"
 "%i berkas yang dipilih secara permanen?"
 
-#: ../catfish/CatfishWindow.py:1319
+#: ../catfish/CatfishWindow.py:1407
 msgid "If you delete a file, it is permanently lost."
 msgstr "Jika Anda menghapus sebuah berkas, ia akan hilang secara permanen."
 
-#: ../catfish/CatfishWindow.py:1342
+#: ../catfish/CatfishWindow.py:1430
 msgid "Filename"
 msgstr "Nama Berkas"
 
-#: ../catfish/CatfishWindow.py:1344
+#: ../catfish/CatfishWindow.py:1432
 msgid "Size"
 msgstr "Ukuran"
 
-#: ../catfish/CatfishWindow.py:1346
+#: ../catfish/CatfishWindow.py:1434
 msgid "Location"
 msgstr "Lokasi"
 
-#: ../catfish/CatfishWindow.py:1358
+#: ../catfish/CatfishWindow.py:1446
 msgid "Preview"
 msgstr "Pratinjau"
 
-#: ../catfish/CatfishWindow.py:1366
+#: ../catfish/CatfishWindow.py:1454
 msgid "Details"
 msgstr "Detail"
 
-#: ../catfish/CatfishWindow.py:1585
+#: ../catfish/CatfishWindow.py:1690
 msgid "Yesterday"
 msgstr "Kemarin"
 
-#: ../catfish/CatfishWindow.py:1666
+#: ../catfish/CatfishWindow.py:1771
 msgid "No files found."
 msgstr "Berkas tidak ditemukan."
 
-#: ../catfish/CatfishWindow.py:1668
+#: ../catfish/CatfishWindow.py:1773
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -514,29 +518,29 @@ msgstr ""
 "Cobalah melakukan pencarian secara kurang spesifik\n"
 "atau cobalah direktori lain."
 
-#: ../catfish/CatfishWindow.py:1675
+#: ../catfish/CatfishWindow.py:1780
 msgid "1 file found."
 msgstr "1 berkas ditemukan."
 
-#: ../catfish/CatfishWindow.py:1677
+#: ../catfish/CatfishWindow.py:1782
 #, python-format
 msgid "%i files found."
 msgstr "%i berkas ditemukan."
 
-#: ../catfish/CatfishWindow.py:1683
+#: ../catfish/CatfishWindow.py:1788
 msgid "bytes"
 msgstr "bita"
 
-#: ../catfish/CatfishWindow.py:1791 ../catfish/CatfishWindow.py:1801
+#: ../catfish/CatfishWindow.py:1908 ../catfish/CatfishWindow.py:1917
 msgid "Searching..."
 msgstr "Mencari..."
 
-#: ../catfish/CatfishWindow.py:1799
+#: ../catfish/CatfishWindow.py:1915
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Mencari \"%s\""
 
-#: ../catfish/CatfishWindow.py:1888
+#: ../catfish/CatfishWindow.py:2023
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Hasil pencarian untuk \"%s\""
@@ -611,6 +615,15 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release expands fulltext search to support more encodings and match all"
+" keywords instead of matching any."
+msgstr ""
+"Rilis ini memperluas pencarian teks penuh untuk mendukung lebih banyak "
+"pengkodean dan mencocokkan keseluruhan kata kunci, bukannya mencocokkan tiap"
+" kata kunci."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release better integrates with the Xfce desktop, better supports the "
 "Zeitgeist datahub, and includes many bugfixes and usability improvements."
 msgstr ""
@@ -618,7 +631,7 @@ msgstr ""
 "dukungan yang lebih baik dengan datahub Zeitgeist, dan menyertakan banyak "
 "perbaikan kutu serta peningkatan usabilitas."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
@@ -626,7 +639,7 @@ msgstr ""
 "Rilis ini mengatasi kesalahan pemaketan untuk Debian dan menyertakan aset-"
 "aset yang dioptimalkan."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
@@ -634,7 +647,7 @@ msgstr ""
 "Rilis ini menambahkan dukungan untuk berjalan di bawah Wayland dan "
 "mengedepankan penyegaran dialog dengan kontrol yang disederhanakan."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
@@ -642,7 +655,7 @@ msgstr ""
 "Rilis ini memperbaiki beberapa kesalahan saat mulai, serta beberapa "
 "permasalahan saat melintasi taut simbolis."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
@@ -650,7 +663,7 @@ msgstr ""
 "Rilis ini menyertakan beberapa peningkatan penampilan, memperkenalkan sebuah"
 " dialog preferensi baru, dan meningkatkan hasil pencarian dan performa."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
@@ -658,7 +671,7 @@ msgstr ""
 "Rilis ini mengedepankan peningkatan performa dengan mengecualikan direktori "
 "pencarian yang tak umum."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
@@ -666,7 +679,7 @@ msgstr ""
 "Rilis ini mengedepankan integrasi desktop yang lebih baik, dukungan untuk "
 "OpenBSD dan Wayland dan peningkatan dukungan penerjemahan."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -678,7 +691,7 @@ msgstr ""
 "pencarian dalam tanda petik kini diproses dengan benar. Berkas dapat diseret"
 " ke aplikasi lain. Gambar miniatur hanya dibuat jika diminta oleh pengguna."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -690,11 +703,11 @@ msgstr ""
 " dengan aplikasi lain. Item yang ditampilkan pada bagian bawah jendela hasil"
 " pencarian kini dapat diakses dengan semua tema desktop."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid "This is a minor translations-only release."
 msgstr "Ini adalah rilis minor dengan pemutakhiran terjemahan saja."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -702,7 +715,7 @@ msgstr ""
 "Rilis ini mengedepankan beberapa peningkatan performa dan sejumlah "
 "pemutakhiran terjemahan."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -710,7 +723,7 @@ msgstr ""
 "Rilis ini menampilkan semua cap waktu berkas berdasarkan zona waktu alih-"
 "alih Universal Coordinated Time (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -723,7 +736,7 @@ msgstr ""
 "diterapkan berdasar pada zona waktu alih-alih Universal Coordinated Time "
 "(UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -737,12 +750,12 @@ msgstr ""
 "termasuk bilah kepala opsional dan widget popover. Penanganan kata sandi "
 "telah ditingkatkan dengan integrasi PolicyKit jika tersedia."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Rilis ini memperbaiki dua kutu baru dan menyertakan pemutakhiran terjemahan."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -750,7 +763,7 @@ msgstr ""
 "Rilis ini memperbaiki sebuah regresi di mana aplikasi tidak bisa dimulai "
 "pada beberapa sistem."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -761,7 +774,7 @@ msgstr ""
 "pencarian telah lama tidak diperbarui, dan dialog yang digunakan untuk "
 "memperbarui basis data telah ditingkatkan."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -769,7 +782,7 @@ msgstr ""
 "Rilis ini memperbaiki dua permasalahan di mana locate tidak dieksekusi "
 "dengan benar dan peningkatan penanganan ikon simbolis yang hilang."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
+#: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -779,7 +792,7 @@ msgstr ""
 "kode yang tidak digunakan, dan memperbaiki permasalahan potensial dengan "
 "daftar dan pemilihan item."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:24
+#: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -787,7 +800,7 @@ msgstr ""
 "Rilis ini memperbaiki sebuah permasalahan keamanan potensial ketika memulai "
 "program, dan memperbaiki sebuah regresi dengan pemilihan beberapa item."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:25
+#: ../data/metainfo/catfish.appdata.xml.in.h:26
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
