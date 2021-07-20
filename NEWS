@@ -1,3 +1,24 @@
+4.16.1
+======
+- Enable sidebar by default (#45)
+- Enable installation using pip (local source) (!20)
+- Add support for searching compressed files (#29)
+- Add persistent settings for searching file contents (#10)
+- Add persistent settings for thumbnail view (#14)
+- Add message and troff mimetypes to fulltext search (!22)
+- Add PDF support to fulltext search (#37)
+- Fix loading in Wayland (#50)
+- Stop current search when new one starts (!28)
+- Use local MIME database info (!21)
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+  Dutch, Eastern Armenian, English (Australia), French, Galician,
+  German, Greek, Hebrew, Hungarian, Icelandic, Indonesian, Interlingue,
+  Italian, Japanese, Korean, Lithuanian, Malay, Norwegian Bokmål,
+  Norwegian Nynorsk, Polish, Portuguese, Portuguese (Brazil), Russian,
+  Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian
+
 4.16.0
 ======
 - Fulltext now searches UTF-7, UTF-8, UTF-16 BE/LE, and UTF-32 BE/LE

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014-2020 Sean Davis <bluesabre@xfce.org> -->
+<!-- Copyright 2014-2021 Sean Davis <bluesabre@xfce.org> -->
 <component type="desktop-application">
   <id>org.xfce.Catfish</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -43,6 +43,15 @@
   </provides>
 
   <releases>
+    <release version="4.16.1" date="2021-07-20">
+      <description>
+        <_p>This release expands fulltext search to support more file types and
+        adds support for searching within compressed files. Searching file contents
+        and the preferred view is now preserved across sessions.
+        </_p>
+      </description>
+    </release>
+
     <release version="4.16.0" date="2021-01-08">
       <description>
         <_p>This release expands fulltext search to support more encodings and
