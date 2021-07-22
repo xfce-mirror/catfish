@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2019
-# Besnik Bleta <besnik@programeshqip.org>, 2020
+# Besnik Bleta <besnik@programeshqip.org>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-25 08:15-0400\n"
+"POT-Creation-Date: 2021-07-20 13:39-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Besnik Bleta <besnik@programeshqip.org>, 2020\n"
+"Last-Translator: Besnik Bleta <besnik@programeshqip.org>, 2021\n"
 "Language-Team: Albanian (https://www.transifex.com/xfce/teams/16840/sq/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,10 +111,14 @@ msgid "Close the search _window after opening a file"
 msgstr "Mbylle _dritaren e kërkimit pasi hapet një kartelë"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
+msgid "Search within compressed files (.zip, .odt, .docx)"
+msgstr "Kërko brenda kartelave të ngjeshura (.zip, .odt, .docx)"
+
+#: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Miscellaneous"
 msgstr "Të ndryshme"
 
-#: ../data/ui/CatfishPreferences.ui.h:19
+#: ../data/ui/CatfishPreferences.ui.h:20
 msgid "Advanced"
 msgstr "E thelluar"
 
@@ -183,7 +187,7 @@ msgstr "Tjetër"
 msgid "Any time"
 msgstr "Kurdo"
 
-#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1583
+#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1713
 msgid "Today"
 msgstr "Sot"
 
@@ -227,48 +231,48 @@ msgstr "Baza e të dhënave është më e vjetër se 7 ditë.  Të përditësohe
 msgid "File Type"
 msgstr "Lloj Kartele"
 
-#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1348
+#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1457
 msgid "Modified"
 msgstr "Ndryshuar më"
 
-#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1793
+#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1935
 msgid "Results will be displayed as soon as they are found."
 msgstr "Përfundimet do të shfaqen sapo të gjenden."
 
-#: ../data/ui/CatfishWindow.ui.h:32
-msgid "Update Search Database"
-msgstr "Përditësoni Bazë të Dhënash Kërkimesh"
-
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:725
+#: ../data/ui/CatfishWindow.ui.h:32 ../catfish/CatfishWindow.py:752
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Anuloje"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Unlock"
 msgstr "Shkyçe"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "<b>Database:</b>"
 msgstr "<b>Bazë të dhënash:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "<b>Updated:</b>"
 msgstr "<b>Përditësuar më:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Përditësoje Bazën e të Dhënave të Kërkimeve</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
 "Për gjetje më të shpejtë përfundimesh kërkimi, lypset të rifreskohet baza e të dhënave të kërkimeve.\n"
 "Ky veprim lyp të drejta përgjegjësi."
+
+#: ../data/ui/CatfishWindow.ui.h:39
+msgid "Update Search Database"
+msgstr "Përditësoni Bazë të Dhënash Kërkimesh"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "Select a Directory"
@@ -361,24 +365,24 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:105
+#: ../catfish/CatfishWindow.py:107
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (kodim i pavlefshëm)"
 
-#: ../catfish/CatfishWindow.py:145
+#: ../catfish/CatfishWindow.py:147
 msgid "translator-credits"
 msgstr "translator-credits"
 
-#: ../catfish/CatfishWindow.py:289
+#: ../catfish/CatfishWindow.py:291
 msgid "Unknown"
 msgstr "I panjohur"
 
-#: ../catfish/CatfishWindow.py:293
+#: ../catfish/CatfishWindow.py:295
 msgid "Never"
 msgstr "Kurrë"
 
-#: ../catfish/CatfishWindow.py:377
+#: ../catfish/CatfishWindow.py:401
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -387,37 +391,37 @@ msgstr ""
 "Jepni më sipër kërkesën tuaj që të gjeni kartelat\n"
 "tuaja ose klikoni ikonën %s për më tepër mundësi."
 
-#: ../catfish/CatfishWindow.py:740
+#: ../catfish/CatfishWindow.py:767
 msgid "An error occurred while updating the database."
 msgstr "Ndodhi një gabim teksa përditësohej baza e të dhënave."
 
-#: ../catfish/CatfishWindow.py:742
+#: ../catfish/CatfishWindow.py:769
 msgid "Authentication failed."
 msgstr "Mirëfilltësimi dështoi."
 
-#: ../catfish/CatfishWindow.py:748
+#: ../catfish/CatfishWindow.py:775
 msgid "Authentication cancelled."
 msgstr "Mirëfilltësimi u anulua."
 
-#: ../catfish/CatfishWindow.py:754
+#: ../catfish/CatfishWindow.py:781
 msgid "Search database updated successfully."
 msgstr "Baza e të dhënave të kërkimeve u përditësua me sukses."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:815
+#: ../catfish/CatfishWindow.py:842
 msgid "Close"
 msgstr "Mbylle"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:829
+#: ../catfish/CatfishWindow.py:856
 msgid "Updating..."
 msgstr "Po përditësohet…"
 
-#: ../catfish/CatfishWindow.py:863
+#: ../catfish/CatfishWindow.py:890
 msgid "Stop Search"
 msgstr "Ndale Kërkimin"
 
-#: ../catfish/CatfishWindow.py:864
+#: ../catfish/CatfishWindow.py:891
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -425,31 +429,31 @@ msgstr ""
 "Kërkimi po kryhet…\n"
 "Që të ndalet, shtypni butonin Anuloje ose tastin Esc."
 
-#: ../catfish/CatfishWindow.py:873
+#: ../catfish/CatfishWindow.py:900
 msgid "Begin Search"
 msgstr "Nise Kërkimin"
 
-#: ../catfish/CatfishWindow.py:1169
+#: ../catfish/CatfishWindow.py:1204
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" s’u hap dot."
 
-#: ../catfish/CatfishWindow.py:1221
+#: ../catfish/CatfishWindow.py:1330
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" s’u ruajt dot."
 
-#: ../catfish/CatfishWindow.py:1238
+#: ../catfish/CatfishWindow.py:1347
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" s’u fshi dot."
 
-#: ../catfish/CatfishWindow.py:1277
+#: ../catfish/CatfishWindow.py:1386
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Ruajeni \"%s\" si…"
 
-#: ../catfish/CatfishWindow.py:1312
+#: ../catfish/CatfishWindow.py:1421
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -458,7 +462,7 @@ msgstr ""
 "Jeni i sigurt se doni të fshihet \n"
 "\"%s\" përgjithmonë?"
 
-#: ../catfish/CatfishWindow.py:1316
+#: ../catfish/CatfishWindow.py:1425
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -467,39 +471,39 @@ msgstr ""
 "Jeni i sigurt se doni të fshihen \n"
 "përgjithmonë %i kartelat e përzgjedhura?"
 
-#: ../catfish/CatfishWindow.py:1319
+#: ../catfish/CatfishWindow.py:1428
 msgid "If you delete a file, it is permanently lost."
 msgstr "Nëse fshini një kartelë, humbet përgjithmonë."
 
-#: ../catfish/CatfishWindow.py:1342
+#: ../catfish/CatfishWindow.py:1451
 msgid "Filename"
 msgstr "Emër kartele"
 
-#: ../catfish/CatfishWindow.py:1344
+#: ../catfish/CatfishWindow.py:1453
 msgid "Size"
 msgstr "Madhësi"
 
-#: ../catfish/CatfishWindow.py:1346
+#: ../catfish/CatfishWindow.py:1455
 msgid "Location"
 msgstr "Vendndodhje"
 
-#: ../catfish/CatfishWindow.py:1358
+#: ../catfish/CatfishWindow.py:1467
 msgid "Preview"
 msgstr "Paraparje"
 
-#: ../catfish/CatfishWindow.py:1366
+#: ../catfish/CatfishWindow.py:1475
 msgid "Details"
 msgstr "Hollësi"
 
-#: ../catfish/CatfishWindow.py:1585
+#: ../catfish/CatfishWindow.py:1715
 msgid "Yesterday"
 msgstr "Dje"
 
-#: ../catfish/CatfishWindow.py:1666
+#: ../catfish/CatfishWindow.py:1796
 msgid "No files found."
 msgstr "S’u gjetën kartela."
 
-#: ../catfish/CatfishWindow.py:1668
+#: ../catfish/CatfishWindow.py:1798
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -507,29 +511,29 @@ msgstr ""
 "Provoni ta bëni kërkimin tuaj më pak\n"
 "të hollësishëm ose provoni në një drejtori tjetër."
 
-#: ../catfish/CatfishWindow.py:1675
+#: ../catfish/CatfishWindow.py:1805
 msgid "1 file found."
 msgstr "U gjet 1 kartelë."
 
-#: ../catfish/CatfishWindow.py:1677
+#: ../catfish/CatfishWindow.py:1807
 #, python-format
 msgid "%i files found."
 msgstr "U gjetën %i kartela."
 
-#: ../catfish/CatfishWindow.py:1683
+#: ../catfish/CatfishWindow.py:1813
 msgid "bytes"
 msgstr "bajte"
 
-#: ../catfish/CatfishWindow.py:1791 ../catfish/CatfishWindow.py:1801
+#: ../catfish/CatfishWindow.py:1933 ../catfish/CatfishWindow.py:1942
 msgid "Searching..."
 msgstr "Po kërkohet…"
 
-#: ../catfish/CatfishWindow.py:1799
+#: ../catfish/CatfishWindow.py:1940
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Po kërkohet për \"%s\""
 
-#: ../catfish/CatfishWindow.py:1888
+#: ../catfish/CatfishWindow.py:2048
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Përfundime kërkimi për \"%s\""
@@ -605,6 +609,26 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release expands fulltext search to support more file types and adds "
+"support for searching within compressed files. Searching file contents and "
+"the preferred view is now preserved across sessions."
+msgstr ""
+"Kjo hedhje në qarkullim zgjeron kërkimin në krejt tekstin, për të mbuluar më"
+" tepër lloje kartelash dhe shton mbulim për kërkim brenda kartelash të "
+"ngjeshura. Kërkimi në lëndë kartelash dhe pamja e parapëlqyer tanimë ruhen "
+"nga sesioni në sesion."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
+"This release expands fulltext search to support more encodings and match all"
+" keywords instead of matching any."
+msgstr ""
+"Kjo hedhje në qarkullim zgjeron aftësinë për kërkim teksti të plotë, për të "
+"mbuluar më tepër kodime dhe për gjetje përputhjesh për krejt fjalëkyçat, në "
+"vend se për cilindo prej tyre."
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
+msgid ""
 "This release better integrates with the Xfce desktop, better supports the "
 "Zeitgeist datahub, and includes many bugfixes and usability improvements."
 msgstr ""
@@ -612,7 +636,7 @@ msgstr ""
 " qendër të dhënash Zeitgeist, dhe përfshin mjaft ndreqje të metash dhe "
 "përmirësime përdorimi."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
@@ -620,7 +644,7 @@ msgstr ""
 "Kjo hedhje në qarkullim zgjidh gabime paketimi për Debian dhe përfshin "
 "burime të përditësuara."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
@@ -628,7 +652,7 @@ msgstr ""
 "Kjo hedhje në qarkullim shton mbulim për xhirim nën Wayland dhe përmban "
 "dialogë të rifreskuar me kontrolle të thjeshtuar."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
@@ -636,7 +660,7 @@ msgstr ""
 "Kjo hedhje në qarkullim merret me disa gabime në nisje, si dhe me probleme "
 "të ndryshme me ndjekje lidhjesh simbolike."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
@@ -645,7 +669,7 @@ msgstr ""
 " të parë një dialog të ri mbi parapëlqimet, dhe përmirëson përfundime "
 "kërkimesh dhe funksionimin në përgjithësi."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
@@ -653,7 +677,7 @@ msgstr ""
 "Kjo hedhje në qarkullim sjell përmirësimi punimi përmes përjashtimit të "
 "drejtorive jo të zakonshme kërkimi."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
@@ -661,7 +685,7 @@ msgstr ""
 "Kjo hedhje në qarkullim sjell integrim më të mirë me desktopin, mbulim për "
 "OpenBSD-në dhe Wayland-in, dhe mbulim të përmirësuar përkthimesh."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -674,7 +698,7 @@ msgstr ""
 "tërhiqen në aplikacione të tjera. Miniaturat prodhohen vetëm kur kërkohet "
 "nga përdoruesi."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -687,11 +711,11 @@ msgstr ""
 "Objektet e shfaqura në fund të dritares së përfundimeve tani mund të "
 "përdoren me krejt temat grafike të desktopit."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid "This is a minor translations-only release."
 msgstr "Kjo është një hedhje e vockël në qarkullim, vetëm për ca përkthime."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -699,7 +723,7 @@ msgstr ""
 "Kjo hedhje në qarkullim përfshin disa përmirësime të funksionimit dhe "
 "përditësime të shumta përkthimesh."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -708,7 +732,7 @@ msgstr ""
 " zonën kohore, në vend se me Kohën e Bashkërenduar Universale (Universal "
 "Coordinated Time - UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -721,7 +745,7 @@ msgstr ""
 "djathtë të miut. Filtrat mbi intervale datash tani zbatohen sipas zonën "
 "kohore, në vend se sipas Kohës së Bashkërenduar Universale (UTC)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -736,13 +760,13 @@ msgstr ""
 " Shfrytëzimi i fjalëkalimeve është përmirësuar përmes integrimit të "
 "PolicyKit-it, kur kjo është e mundur."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Kjo hedhje në qarkullim ndreq dy të meta dhe përfshin përditësime të "
 "përkthimeve."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -750,7 +774,7 @@ msgstr ""
 "Kjo hedhje në qarkullim ndreq një hap mbrapa, nën të cilin aplikacioni "
 "s’është në gjendje të niset në disa sisteme."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -761,7 +785,7 @@ msgstr ""
 "është e vjetruar, shfaqet një InfoBar, dhe janë përmirësuar dialogët e "
 "përdorur gjatë përditësimit të bazës së të dhënave."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -770,7 +794,7 @@ msgstr ""
 "përmbushej si duhet, dhe përmirëson trajtimin e ikonave simbolike kur "
 "mungojnë."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
+#: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -780,7 +804,7 @@ msgstr ""
 "fjalëkalimeve, u pastrua kod i papërdorur, dhe u ndreqën probleme potenciale"
 " me përzgjedhje listash dhe objektesh."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:24
+#: ../data/metainfo/catfish.appdata.xml.in.h:26
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -789,7 +813,7 @@ msgstr ""
 "e programit dhe ndreq një hap mbrapa në përzgjedhjen e shumë zërave "
 "njëherësh."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:25
+#: ../data/metainfo/catfish.appdata.xml.in.h:27
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
