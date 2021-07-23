@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-08 15:56-0400\n"
+"POT-Creation-Date: 2021-07-20 13:39-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2021\n"
 "Language-Team: Slovenian (https://www.transifex.com/xfce/teams/16840/sl/)\n"
@@ -114,10 +114,14 @@ msgid "Close the search _window after opening a file"
 msgstr "_Zapri iskalno okno po odprtju datoteke"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
+msgid "Search within compressed files (.zip, .odt, .docx)"
+msgstr ""
+
+#: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Miscellaneous"
 msgstr "Razno"
 
-#: ../data/ui/CatfishPreferences.ui.h:19
+#: ../data/ui/CatfishPreferences.ui.h:20
 msgid "Advanced"
 msgstr "Napredno"
 
@@ -186,7 +190,7 @@ msgstr "Drugo"
 msgid "Any time"
 msgstr "Kadarkoli"
 
-#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1606
+#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1713
 msgid "Today"
 msgstr "Danes"
 
@@ -230,48 +234,48 @@ msgstr "Baza iskanj je starejša od sedmih dni. Posodobim zdaj?"
 msgid "File Type"
 msgstr "Vrsta datoteke"
 
-#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1368
+#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1457
 msgid "Modified"
 msgstr "Spremenjeno"
 
-#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1816
+#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1935
 msgid "Results will be displayed as soon as they are found."
 msgstr "Rezultati bodo prikazani takoj, ko bodo najdeni."
 
-#: ../data/ui/CatfishWindow.ui.h:32
-msgid "Update Search Database"
-msgstr "Posodobi iskalno bazo"
-
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:745
+#: ../data/ui/CatfishWindow.ui.h:32 ../catfish/CatfishWindow.py:752
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Unlock"
 msgstr "Odkleni"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "<b>Database:</b>"
 msgstr "<b>Podatkovna baza:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "<b>Updated:</b>"
 msgstr "<b>Updated:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Posodobi iskalno podatkovno bazo</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
 "Za hitrejše iskanje mora biti podatkovna baza iskanj osevežena.\n"
 "To dejanje zahteva skrbniške pravice."
+
+#: ../data/ui/CatfishWindow.ui.h:39
+msgid "Update Search Database"
+msgstr "Posodobi iskalno bazo"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "Select a Directory"
@@ -363,24 +367,24 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:105
+#: ../catfish/CatfishWindow.py:107
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (napačno kodiranje)"
 
-#: ../catfish/CatfishWindow.py:145
+#: ../catfish/CatfishWindow.py:147
 msgid "translator-credits"
 msgstr "zasluge-prevajalcev"
 
-#: ../catfish/CatfishWindow.py:289
+#: ../catfish/CatfishWindow.py:291
 msgid "Unknown"
 msgstr "Neznano"
 
-#: ../catfish/CatfishWindow.py:293
+#: ../catfish/CatfishWindow.py:295
 msgid "Never"
 msgstr "Nikoli"
 
-#: ../catfish/CatfishWindow.py:398
+#: ../catfish/CatfishWindow.py:401
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -389,37 +393,37 @@ msgstr ""
 "Zgoraj vnesite poizvedbo za iskanje datotek\n"
 "ali kliknite na %s ikono za več možnosti."
 
-#: ../catfish/CatfishWindow.py:760
+#: ../catfish/CatfishWindow.py:767
 msgid "An error occurred while updating the database."
 msgstr "Napaka pri posodobaljanjau podatkovne baze."
 
-#: ../catfish/CatfishWindow.py:762
+#: ../catfish/CatfishWindow.py:769
 msgid "Authentication failed."
 msgstr "Avtentifikacija ni uspela."
 
-#: ../catfish/CatfishWindow.py:768
+#: ../catfish/CatfishWindow.py:775
 msgid "Authentication cancelled."
 msgstr "Overjanje je bilo prekinjeno."
 
-#: ../catfish/CatfishWindow.py:774
+#: ../catfish/CatfishWindow.py:781
 msgid "Search database updated successfully."
 msgstr "Baza iskanj je bila uspešno posodobljena."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:835
+#: ../catfish/CatfishWindow.py:842
 msgid "Close"
 msgstr "Zapri"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:849
+#: ../catfish/CatfishWindow.py:856
 msgid "Updating..."
 msgstr "Posodabljanje..."
 
-#: ../catfish/CatfishWindow.py:883
+#: ../catfish/CatfishWindow.py:890
 msgid "Stop Search"
 msgstr "Zaključi iskanje"
 
-#: ../catfish/CatfishWindow.py:884
+#: ../catfish/CatfishWindow.py:891
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -427,31 +431,31 @@ msgstr ""
 "Iskanje poteka...\n"
 "Pritniste gumb za prekinitev ali tipko escapa za zaustavitev iskanja."
 
-#: ../catfish/CatfishWindow.py:893
+#: ../catfish/CatfishWindow.py:900
 msgid "Begin Search"
 msgstr "Začni z iskanjem"
 
-#: ../catfish/CatfishWindow.py:1189
+#: ../catfish/CatfishWindow.py:1204
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" ni bilo mogoče odpreti."
 
-#: ../catfish/CatfishWindow.py:1241
+#: ../catfish/CatfishWindow.py:1330
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" ni bilo mogoče shraniti."
 
-#: ../catfish/CatfishWindow.py:1258
+#: ../catfish/CatfishWindow.py:1347
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" ni bilo mogoče izbrisati."
 
-#: ../catfish/CatfishWindow.py:1297
+#: ../catfish/CatfishWindow.py:1386
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Shrani \"%s\" kot..."
 
-#: ../catfish/CatfishWindow.py:1332
+#: ../catfish/CatfishWindow.py:1421
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -460,7 +464,7 @@ msgstr ""
 "Ali ste prepričani, da želite \n"
 "trajno izbrisati \"%s\"?"
 
-#: ../catfish/CatfishWindow.py:1336
+#: ../catfish/CatfishWindow.py:1425
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -469,39 +473,39 @@ msgstr ""
 "Ste prepričani, da želite\n"
 "za stalno izbrisati %i izbranih datotek?"
 
-#: ../catfish/CatfishWindow.py:1339
+#: ../catfish/CatfishWindow.py:1428
 msgid "If you delete a file, it is permanently lost."
 msgstr "Če izbrišete datoteko, je za vedno izgubljena."
 
-#: ../catfish/CatfishWindow.py:1362
+#: ../catfish/CatfishWindow.py:1451
 msgid "Filename"
 msgstr "Ime datoteke"
 
-#: ../catfish/CatfishWindow.py:1364
+#: ../catfish/CatfishWindow.py:1453
 msgid "Size"
 msgstr "Velikost"
 
-#: ../catfish/CatfishWindow.py:1366
+#: ../catfish/CatfishWindow.py:1455
 msgid "Location"
 msgstr "Lokacija"
 
-#: ../catfish/CatfishWindow.py:1378
+#: ../catfish/CatfishWindow.py:1467
 msgid "Preview"
 msgstr "Predogled"
 
-#: ../catfish/CatfishWindow.py:1386
+#: ../catfish/CatfishWindow.py:1475
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: ../catfish/CatfishWindow.py:1608
+#: ../catfish/CatfishWindow.py:1715
 msgid "Yesterday"
 msgstr "Včeraj"
 
-#: ../catfish/CatfishWindow.py:1689
+#: ../catfish/CatfishWindow.py:1796
 msgid "No files found."
 msgstr "Ni najdenih datotek."
 
-#: ../catfish/CatfishWindow.py:1691
+#: ../catfish/CatfishWindow.py:1798
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -509,29 +513,29 @@ msgstr ""
 "Poskusite z manj določenim iskanjem\n"
 "ali poskusite v drugi mapi."
 
-#: ../catfish/CatfishWindow.py:1698
+#: ../catfish/CatfishWindow.py:1805
 msgid "1 file found."
 msgstr "Ena datoteka je bila najdena."
 
-#: ../catfish/CatfishWindow.py:1700
+#: ../catfish/CatfishWindow.py:1807
 #, python-format
 msgid "%i files found."
 msgstr "%i datotek je bilo najdenih."
 
-#: ../catfish/CatfishWindow.py:1706
+#: ../catfish/CatfishWindow.py:1813
 msgid "bytes"
 msgstr "bajtov"
 
-#: ../catfish/CatfishWindow.py:1814 ../catfish/CatfishWindow.py:1823
+#: ../catfish/CatfishWindow.py:1933 ../catfish/CatfishWindow.py:1942
 msgid "Searching..."
 msgstr "Iskanje"
 
-#: ../catfish/CatfishWindow.py:1821
+#: ../catfish/CatfishWindow.py:1940
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "V iskanju \"%s\""
 
-#: ../catfish/CatfishWindow.py:1910
+#: ../catfish/CatfishWindow.py:2048
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Rezultati iskanja \"%s\""
@@ -604,13 +608,20 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release expands fulltext search to support more file types and adds "
+"support for searching within compressed files. Searching file contents and "
+"the preferred view is now preserved across sessions."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release expands fulltext search to support more encodings and match all"
 " keywords instead of matching any."
 msgstr ""
 "Ta različica širi iskanje celotnega besedila s podporo več kodam in iskanjem"
 " vseh ključnih besed namesto katerekoli od njih."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release better integrates with the Xfce desktop, better supports the "
 "Zeitgeist datahub, and includes many bugfixes and usability improvements."
@@ -618,7 +629,7 @@ msgstr ""
 "Ta izdaja ima boljšo integracijo z namizjem xfce, boljšo podporo za "
 "Zeitgeist podatkovni hub in vsebuje številne popravke in izboljšave."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
@@ -626,7 +637,7 @@ msgstr ""
 "Ta izdaja odpravlja napake pri pakiranju za Debian in vsebuje optimatizirane"
 " vire."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
@@ -634,7 +645,7 @@ msgstr ""
 "Ta izdaja dodaja podporo za izvajanje pod Wayland-om in ponuja prenovljene "
 "dialoge s poenostavljenimi kontrolami."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
@@ -642,7 +653,7 @@ msgstr ""
 "Ta izdaja naslavlja nekatere napake ob zagonu, kot tudi težave s "
 "simboličnimi povezavami."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
@@ -650,7 +661,7 @@ msgstr ""
 "Ta različica ima številne vidne izboljšave, uvaja nov dialog za lastnosti in"
 " izboljšuje rezultate iskanj ter učinkovitost."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
@@ -658,7 +669,7 @@ msgstr ""
 "Ta različica prinaša večjo učinkovitost z izključevanjem map, ki niso "
 "pogosto rabljene."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
@@ -666,7 +677,7 @@ msgstr ""
 "Ta različica ponuja boljšo integracijo z namizjem, podporo za OpenBDS in "
 "Wayland ter izoboljšano podporo prevodom."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -677,7 +688,7 @@ msgstr ""
 " številnih hroščev. Niz v narekovajih so posleh pravilno obdelani, datoteke "
 "je mogoče vleči v druge aplikacije, sličice se generirajo le po potrebi."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -689,17 +700,17 @@ msgstr ""
 "drugim apliakcijam. Predmeti, ki so prikazani na dnu okna z rezultati, so "
 "sedaj dosegljivi z vsemi temami namizji."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid "This is a minor translations-only release."
 msgstr "To je manjši popravek prevodov."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr "Ta izdaja ima izboljšano zmogljivost in številne popravke prevodov."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -707,7 +718,7 @@ msgstr ""
 "Ta izdaja prikazuje vse časovne oznake v skladu s časovnim pasom in ne UTC "
 "časom."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -719,7 +730,7 @@ msgstr ""
 "funkcionalnost srednje in desne tipke miške. Datumski razponi sedaj "
 "ustrezajo časovnemu pasu in in več UTC."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -732,11 +743,11 @@ msgstr ""
 "seta orodji, vključno z naslovnimi pasicami in pojavnimi widgeti. "
 "Upravljanje gesel je izboljšano z uporabo PolicyKit (če je na voljo)."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr "Ta izdja popravlja dva hrošča in dopolnuje prevod."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -744,7 +755,7 @@ msgstr ""
 "Ta izdaja odpravlja regresijo, ko se aplikacije na nekaterih sistemih ni "
 "mogla pognati."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -754,7 +765,7 @@ msgstr ""
 "iskalna baza zastarela, se pojavi informacijska pasica, dialogi za "
 "posodabljanje baze pa so bili izboljšani."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
+#: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -762,7 +773,7 @@ msgstr ""
 "Ta izdaja dve napaki, ko lociranje ni bilo pravilno izvedeno in ozboljša "
 "delo z manjkajočimi simbilnimi ikonami."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:24
+#: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -772,7 +783,7 @@ msgstr ""
 "neuporabljeno kodo in popravlja možne težave s szenami in izbrianjem "
 "predmetov."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:25
+#: ../data/metainfo/catfish.appdata.xml.in.h:26
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -780,7 +791,7 @@ msgstr ""
 "Ta izdaja popravlja potencialen varnostni problem s zagonom programa in "
 "odpravlja napako pri izbiranju več vrstic."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:26
+#: ../data/metainfo/catfish.appdata.xml.in.h:27
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
