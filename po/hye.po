@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-25 08:15-0400\n"
+"POT-Creation-Date: 2021-07-20 13:39-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Arman Harutyunyan <arman.harut468@gmail.com>, 2020\n"
 "Language-Team: Eastern Armenian (https://www.transifex.com/xfce/teams/16840/hye/)\n"
@@ -112,10 +112,14 @@ msgid "Close the search _window after opening a file"
 msgstr "Փակէք որոնման պատուհանը _նիշքը բացելուց յետոյ"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
+msgid "Search within compressed files (.zip, .odt, .docx)"
+msgstr ""
+
+#: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Miscellaneous"
 msgstr "Զանազան"
 
-#: ../data/ui/CatfishPreferences.ui.h:19
+#: ../data/ui/CatfishPreferences.ui.h:20
 msgid "Advanced"
 msgstr "Բարելաւուած"
 
@@ -183,7 +187,7 @@ msgstr "Այլ"
 msgid "Any time"
 msgstr "Ցանկացած ժամանակ"
 
-#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1583
+#: ../data/ui/CatfishWindow.ui.h:18 ../catfish/CatfishWindow.py:1713
 msgid "Today"
 msgstr "Այսաւր"
 
@@ -227,48 +231,48 @@ msgstr "Որոնման շտեմարանն աւելի քան 7 աւրուայ է�
 msgid "File Type"
 msgstr "Նիշի տիպ"
 
-#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1348
+#: ../data/ui/CatfishWindow.ui.h:29 ../catfish/CatfishWindow.py:1457
 msgid "Modified"
 msgstr "Փոփոխուած"
 
-#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1793
+#: ../data/ui/CatfishWindow.ui.h:31 ../catfish/CatfishWindow.py:1935
 msgid "Results will be displayed as soon as they are found."
 msgstr "Արդիւնքը կը ցուցադրուի, երբ այն գտնուի։"
 
-#: ../data/ui/CatfishWindow.ui.h:32
-msgid "Update Search Database"
-msgstr "Թարմացնել որոնման շտեմարանը"
-
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:725
+#: ../data/ui/CatfishWindow.ui.h:32 ../catfish/CatfishWindow.py:752
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Չեղարկել"
 
-#: ../data/ui/CatfishWindow.ui.h:34
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Unlock"
 msgstr "Արգելաբացել"
 
-#: ../data/ui/CatfishWindow.ui.h:35
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "<b>Database:</b>"
 msgstr "<b>Շտեմարան․</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "<b>Updated:</b>"
 msgstr "<b>Թարմացուած․</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:36
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Թարմացնել որոնման շտեմարանը</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
 "Աւելի արագ որոնման համար, թարմացրէք շտեմարանը։\n"
 "Հարկաւոր է վարիչի արտաւնութիւններ։"
+
+#: ../data/ui/CatfishWindow.ui.h:39
+msgid "Update Search Database"
+msgstr "Թարմացնել որոնման շտեմարանը"
 
 #: ../data/ui/CatfishWindow.ui.h:40
 msgid "Select a Directory"
@@ -363,24 +367,24 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:105
+#: ../catfish/CatfishWindow.py:107
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s(անվաւեր այլագրում)"
 
-#: ../catfish/CatfishWindow.py:145
+#: ../catfish/CatfishWindow.py:147
 msgid "translator-credits"
 msgstr "E-Hayq LLC, 2019"
 
-#: ../catfish/CatfishWindow.py:289
+#: ../catfish/CatfishWindow.py:291
 msgid "Unknown"
 msgstr "Անյայտ"
 
-#: ../catfish/CatfishWindow.py:293
+#: ../catfish/CatfishWindow.py:295
 msgid "Never"
 msgstr "Երբեք"
 
-#: ../catfish/CatfishWindow.py:377
+#: ../catfish/CatfishWindow.py:401
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -389,37 +393,37 @@ msgstr ""
 "Մուտքագրէք Ձեր հարցումը վերեւում, որպէսզի գտնէք Ձեր նիշքերը \n"
 "կամ կտտացրէք %s պատկերակի վրա` լրացուցիչ ընտրանքների համար:"
 
-#: ../catfish/CatfishWindow.py:740
+#: ../catfish/CatfishWindow.py:767
 msgid "An error occurred while updating the database."
 msgstr "Շտեմարանի թարմացման սխալ։"
 
-#: ../catfish/CatfishWindow.py:742
+#: ../catfish/CatfishWindow.py:769
 msgid "Authentication failed."
 msgstr "Վաւերացման ձախողում։"
 
-#: ../catfish/CatfishWindow.py:748
+#: ../catfish/CatfishWindow.py:775
 msgid "Authentication cancelled."
 msgstr "Վաւերացման չեղարկում։"
 
-#: ../catfish/CatfishWindow.py:754
+#: ../catfish/CatfishWindow.py:781
 msgid "Search database updated successfully."
 msgstr "Շտեմարանի թարմացումը կատարուած է։"
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:815
+#: ../catfish/CatfishWindow.py:842
 msgid "Close"
 msgstr "Փակել"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:829
+#: ../catfish/CatfishWindow.py:856
 msgid "Updating..."
 msgstr "Թարմացում․․․"
 
-#: ../catfish/CatfishWindow.py:863
+#: ../catfish/CatfishWindow.py:890
 msgid "Stop Search"
 msgstr "Դադարեցնել"
 
-#: ../catfish/CatfishWindow.py:864
+#: ../catfish/CatfishWindow.py:891
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -427,31 +431,31 @@ msgstr ""
 "Որոնումն ընթացքի մէջ է․․․\n"
 "Սեղմէք չեղարկման կոճակը կամ Escape ստեղնը դադարի համար։"
 
-#: ../catfish/CatfishWindow.py:873
+#: ../catfish/CatfishWindow.py:900
 msgid "Begin Search"
 msgstr "Սկսել"
 
-#: ../catfish/CatfishWindow.py:1169
+#: ../catfish/CatfishWindow.py:1204
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Անհնար է բացել %s֊ը։"
 
-#: ../catfish/CatfishWindow.py:1221
+#: ../catfish/CatfishWindow.py:1330
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Անհնար է պահել %s֊ը։"
 
-#: ../catfish/CatfishWindow.py:1238
+#: ../catfish/CatfishWindow.py:1347
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Անհնար է ջնջել %s֊ը։"
 
-#: ../catfish/CatfishWindow.py:1277
+#: ../catfish/CatfishWindow.py:1386
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Պահել %s֊ը որպէս․․․"
 
-#: ../catfish/CatfishWindow.py:1312
+#: ../catfish/CatfishWindow.py:1421
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -460,7 +464,7 @@ msgstr ""
 "Ջնջե՞լ\n"
 "%s֊ն անվերադարձ։"
 
-#: ../catfish/CatfishWindow.py:1316
+#: ../catfish/CatfishWindow.py:1425
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -469,39 +473,39 @@ msgstr ""
 "Ջնջե՞լ\n"
 "նշուած %i նիշերը։"
 
-#: ../catfish/CatfishWindow.py:1319
+#: ../catfish/CatfishWindow.py:1428
 msgid "If you delete a file, it is permanently lost."
 msgstr "Նիշերը ջնջուում են անվերադարձ։"
 
-#: ../catfish/CatfishWindow.py:1342
+#: ../catfish/CatfishWindow.py:1451
 msgid "Filename"
 msgstr "Նշանուն"
 
-#: ../catfish/CatfishWindow.py:1344
+#: ../catfish/CatfishWindow.py:1453
 msgid "Size"
 msgstr "Չափս"
 
-#: ../catfish/CatfishWindow.py:1346
+#: ../catfish/CatfishWindow.py:1455
 msgid "Location"
 msgstr "Տեղադրութիւն"
 
-#: ../catfish/CatfishWindow.py:1358
+#: ../catfish/CatfishWindow.py:1467
 msgid "Preview"
 msgstr "Նախադիտում"
 
-#: ../catfish/CatfishWindow.py:1366
+#: ../catfish/CatfishWindow.py:1475
 msgid "Details"
 msgstr "Մանրամասնութիւններ"
 
-#: ../catfish/CatfishWindow.py:1585
+#: ../catfish/CatfishWindow.py:1715
 msgid "Yesterday"
 msgstr "Երեկ"
 
-#: ../catfish/CatfishWindow.py:1666
+#: ../catfish/CatfishWindow.py:1796
 msgid "No files found."
 msgstr "Նիշերը չեն գտնուել։"
 
-#: ../catfish/CatfishWindow.py:1668
+#: ../catfish/CatfishWindow.py:1798
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -509,29 +513,29 @@ msgstr ""
 "Փորձէք կատարել ոչ այդքան յատուկ\n"
 "որոնում կամ փորձէք այլ նշարանում։"
 
-#: ../catfish/CatfishWindow.py:1675
+#: ../catfish/CatfishWindow.py:1805
 msgid "1 file found."
 msgstr "1 նիշ է գտնուել։"
 
-#: ../catfish/CatfishWindow.py:1677
+#: ../catfish/CatfishWindow.py:1807
 #, python-format
 msgid "%i files found."
 msgstr "%i նիշերը գտնուած չեն։"
 
-#: ../catfish/CatfishWindow.py:1683
+#: ../catfish/CatfishWindow.py:1813
 msgid "bytes"
 msgstr "բայթեր"
 
-#: ../catfish/CatfishWindow.py:1791 ../catfish/CatfishWindow.py:1801
+#: ../catfish/CatfishWindow.py:1933 ../catfish/CatfishWindow.py:1942
 msgid "Searching..."
 msgstr "Որոնում․․․"
 
-#: ../catfish/CatfishWindow.py:1799
+#: ../catfish/CatfishWindow.py:1940
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Որոնում ենք %s ֊ը"
 
-#: ../catfish/CatfishWindow.py:1888
+#: ../catfish/CatfishWindow.py:2048
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Որոնում ենք արդիւնք %s֊ի համար "
@@ -605,11 +609,24 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release expands fulltext search to support more file types and adds "
+"support for searching within compressed files. Searching file contents and "
+"the preferred view is now preserved across sessions."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
+"This release expands fulltext search to support more encodings and match all"
+" keywords instead of matching any."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
+msgid ""
 "This release better integrates with the Xfce desktop, better supports the "
 "Zeitgeist datahub, and includes many bugfixes and usability improvements."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
@@ -617,7 +634,7 @@ msgstr ""
 "Այս թողարկումը լուծում է Debian- ի փաթեթաւորման սխալները եւ ներառում է "
 "բարելաւուած միջոցներ:"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
@@ -625,7 +642,7 @@ msgstr ""
 "Այս թողարկումը աւելացնում է աջակցութիւն՝ Wayland-ի ներքոյ աշխատելու համար եւ"
 " պարունակում է թարմացուած երկխաւսութիւններ՝ պարզեցուած հսկիչներով:"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
@@ -633,7 +650,7 @@ msgstr ""
 "Այս թողարկումն հասցէյաւորում է մեկնարկման որոշ սխալներ, ինչպէս նաեւ տարբեր "
 "խնդիրներ՝ շրջանցող խորհրդանշական յղումներով:"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
@@ -642,7 +659,7 @@ msgstr ""
 "նախընտրութիւնների երկխաւսութիւն եւ բարելաւում է որոնման արդիւնքները եւ "
 "կատարողականը:"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
@@ -650,7 +667,7 @@ msgstr ""
 "Այս թողարկումը պարունակում է կատարողական բարելաւումներ` բացառելով հազուադէպ "
 "որոնման նշարաններ:"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
@@ -659,7 +676,7 @@ msgstr ""
 "աջակցութիւն OpenBSD- ի եւ Wayland- ի համար, եւ թարգմանութեան "
 "կատարելագործուած աջակցութեան:"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -671,7 +688,7 @@ msgstr ""
 "մէջ է։ Նիշերի կարելի է տեղադրել այլ յաւելուածներում։ Փոքրապատկերները "
 "ստեղծուուում են միայն ըստ պահանջի։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -683,18 +700,18 @@ msgstr ""
 "յաւելուածների հետ։ Արդիւնքի պատուհանում ցուցադրուող տարրերն արդէն հասանելի "
 "են աշխատասեղանից։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid "This is a minor translations-only release."
 msgstr "Սա սոսկ թարգմանական տարբերակ է։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
 "Տարբերակում թարմացուած է միջերեսը եւ թարմացուած են որոշ թարգմանութիւններ։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
@@ -702,7 +719,7 @@ msgstr ""
 "Տարբերակում ցուցադրուում է բոլոր ժամակնիքները, ըստ ժամագաւտու այլ ոչ "
 "(UTC)֊ի։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -714,7 +731,7 @@ msgstr ""
 "կենտրոնասեղմումի գործառութիւնը։ Տուեալների ընդգրկոյթային զտիչները "
 "կարգաւորուում են ըստ ժամագաւտու այլ ոչ (UTC)֊ի։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -727,18 +744,18 @@ msgstr ""
 "ամենաթարմ յատկութիւնները։ Թարմացուել է գաղտնաբառերի հետ աշխատանքը, որն արդէն"
 " ներառում է PolicyKit֊ը։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Տարբերակում ուղղուած են երկու սխալ եւ թարմացուած են թարգմանութիւնները  "
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr "Տարբերակում ուղղուած է որոշ համակարգերում յաւելուածի միացման խնդիրը։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -748,7 +765,7 @@ msgstr ""
 "InfoBar֊ը ցուցադրուում է, երբ հնանում է որոնման շտեմարանը, մշակուել է նաեւ "
 "շտեմարանի թարմացումը։ "
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -756,7 +773,7 @@ msgstr ""
 "Տարբերակում ուղղուած է երկու խնդիր կապուած որոնման գործողութեան ճիշտ "
 "գործարկման եւ նշանային պատկերակների բացակայութեան հետ կապուած։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
+#: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -766,7 +783,7 @@ msgstr ""
 "մաքրուել է չգործարկուող այլագիրը եւ ուղղուել է ցուցակի ու տարրերի ընտրութեան"
 " հետ կապուած խնդիրները։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:24
+#: ../data/metainfo/catfish.appdata.xml.in.h:26
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -774,7 +791,7 @@ msgstr ""
 "Տարբերակում լուծուած են պաշտպանութեան սխալները, ուղղած է հետադարձը կապը "
 "ընտրուած բազմակի տարրերի հետ։"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:25
+#: ../data/metainfo/catfish.appdata.xml.in.h:27
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
