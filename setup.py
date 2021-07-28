@@ -200,18 +200,11 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
             data_dir = os.path.join(self.prefix, 'share', 'catfish', '')
             script_path = os.path.join(self.prefix, 'bin')
 
-        if using_pip:
-            target_data = os.path.relpath(self.install_data) + os.sep
-            target_pkgdata = os.path.join(site.getuserbase(), 'share', 'catfish')
-            target_scripts = os.path.join(site.getuserbase(), 'bin')
+            if using_pip:
+                target_pkgdata = os.path.join(site.getuserbase(), 'share', 'catfish')
+                target_pkgdata = os.path.realpath(target_pkgdata)
+                data_dir = target_pkgdata
 
-            # Use absolute paths
-            target_data = os.path.realpath(target_data)
-            target_pkgdata = os.path.realpath(target_pkgdata)
-            target_scripts = os.path.realpath(target_scripts)
-
-            data_dir = target_pkgdata
-            script_path = target_scripts
         else:
             # --user install
             self.root = ''  # pylint: disable=W0201
