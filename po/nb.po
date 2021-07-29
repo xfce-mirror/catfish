@@ -126,11 +126,11 @@ msgstr "Avansert"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "Select a Folder"
-msgstr ""
+msgstr "Velg mappe"
 
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "Folder not found!"
-msgstr ""
+msgstr "Fant ikke mappe"
 
 #. Restore Cancel button
 #. Buttons
@@ -141,7 +141,7 @@ msgstr "Avbryt"
 
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "Select Folder"
-msgstr ""
+msgstr "Velg mappe"
 
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Open"
@@ -445,11 +445,11 @@ msgstr "Start søk"
 
 #: ../catfish/CatfishWindow.py:1019
 msgid "No folder selected."
-msgstr ""
+msgstr "Ingen mappe er valgt."
 
 #: ../catfish/CatfishWindow.py:1024
 msgid "Folder not found."
-msgstr ""
+msgstr "Fant ikke mappe."
 
 #: ../catfish/CatfishWindow.py:1254
 #, python-format
