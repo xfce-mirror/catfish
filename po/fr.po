@@ -11,8 +11,8 @@
 # David D, 2019
 # Charles Monzat <c.monzat@laposte.net>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
-# Yannick Le Guen <leguen.yannick@gmail.com>, 2020
 # jc1 <jc1.quebecos@gmail.com>, 2021
+# Yannick Le Guen <leguen.yannick@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -21,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-22 01:18-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: jc1 <jc1.quebecos@gmail.com>, 2021\n"
+"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/xfce/teams/16840/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -132,11 +132,11 @@ msgstr "Avancé"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "Select a Folder"
-msgstr ""
+msgstr "Sélectionner un dossier"
 
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "Folder not found!"
-msgstr ""
+msgstr "Dossier non trouvé !"
 
 #. Restore Cancel button
 #. Buttons
@@ -455,11 +455,11 @@ msgstr "Commencer la recherche"
 
 #: ../catfish/CatfishWindow.py:1019
 msgid "No folder selected."
-msgstr ""
+msgstr "Aucun dossier sélectionné."
 
 #: ../catfish/CatfishWindow.py:1024
 msgid "Folder not found."
-msgstr ""
+msgstr "Dossier non trouvé."
 
 #: ../catfish/CatfishWindow.py:1254
 #, python-format
