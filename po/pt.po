@@ -127,11 +127,11 @@ msgstr "Avançado"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "Select a Folder"
-msgstr ""
+msgstr "Selecione um pasta"
 
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "Folder not found!"
-msgstr ""
+msgstr "Pasta não encontrada!"
 
 #. Restore Cancel button
 #. Buttons
@@ -142,7 +142,7 @@ msgstr "Cancelar"
 
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "Select Folder"
-msgstr ""
+msgstr "Selecionar pasta"
 
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Open"
@@ -450,11 +450,11 @@ msgstr "Iniciar Pesquisa"
 
 #: ../catfish/CatfishWindow.py:1019
 msgid "No folder selected."
-msgstr ""
+msgstr "Nenhuma pasta selecionada."
 
 #: ../catfish/CatfishWindow.py:1024
 msgid "Folder not found."
-msgstr ""
+msgstr "Pasta não encontrada."
 
 #: ../catfish/CatfishWindow.py:1254
 #, python-format
