@@ -31,7 +31,7 @@ __catfish_data_directory__ = '../data/'
 # Location of locate.db file
 __locate_db_path__ = '/var/lib/mlocate/mlocate.db'
 __license__ = 'GPL-2+'
-__version__ = '4.16.1'
+__version__ = '4.16.2'
 __url__ = 'https://docs.xfce.org/apps/catfish/start'
 
 

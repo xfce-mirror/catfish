@@ -1,3 +1,22 @@
+4.16.2
+======
+- Use standard icon name application-x-executable-symbolic instead of
+  applications-other-symbolic
+- Fix install with rpm/pkgbuild/pip (Fixes #58 59)
+- Added keyboard hotkeys for search entry, new open dialog
+- Fix Thunar "Show in FM" bug, better FM support (Fixes #43)
+- Stops freezes with special files when zip search enabled
+- Better and safer refreshing of selected results (fixes #48)
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+  Dutch, Eastern Armenian, English (Australia), Estonian, Finnish,
+  French, Galician, German, Greek, Hebrew, Hungarian, Icelandic,
+  Indonesian, Interlingue, Italian, Japanese, Kabyle, Korean,
+  Lithuanian, Malay, Norwegian Bokmål, Norwegian Nynorsk, Polish,
+  Portuguese, Portuguese (Brazil), Russian, Serbian, Slovak, Slovenian,
+  Spanish, Swedish, Thai, Turkish, Ukrainian
+
 4.16.1
 ======
 - Enable sidebar by default (#45)

@@ -43,6 +43,15 @@
   </provides>
 
   <releases>
+    <release version="4.16.2" date="2021-07-31">
+      <description>
+        <_p>This release improves file manager support, zip file support,
+        and handling selected files. It also improves keyboard shortcuts for
+        starting a search or selecting a new search path.
+        </_p>
+      </description>
+    </release>
+    
     <release version="4.16.1" date="2021-07-20">
       <description>
         <_p>This release expands fulltext search to support more file types and
