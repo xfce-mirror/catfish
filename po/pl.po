@@ -251,7 +251,7 @@ msgstr "Baza danych wyszukiwania ma ponad 7 dni. Czy ją zaktualizować?"
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "File Type"
-msgstr "Rodzaj pliku"
+msgstr "Typ pliku"
 
 #: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:1507
 msgid "Modified"
@@ -259,7 +259,7 @@ msgstr "Zmodyfikowano"
 
 #: ../data/ui/CatfishWindow.ui.h:35 ../catfish/CatfishWindow.py:1985
 msgid "Results will be displayed as soon as they are found."
-msgstr "Wyniki zostaną wyświetlone, jak tylko zostaną odnalezione."
+msgstr "Wyniki zostaną wyświetlone, jak tylko zostaną znalezione."
 
 #: ../data/ui/CatfishWindow.ui.h:36
 msgid "Unlock"
@@ -524,7 +524,7 @@ msgstr "Wczoraj"
 
 #: ../catfish/CatfishWindow.py:1846
 msgid "No files found."
-msgstr "Nie odnaleziono plików."
+msgstr "Nie znaleziono plików."
 
 #: ../catfish/CatfishWindow.py:1848
 msgid ""
@@ -536,12 +536,12 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:1855
 msgid "1 file found."
-msgstr "Odnaleziono 1 plik."
+msgstr "Znaleziono 1 plik."
 
 #: ../catfish/CatfishWindow.py:1857
 #, python-format
 msgid "%i files found."
-msgstr "Odnaleziono %i plików."
+msgstr "Znaleziono %i pliki(-ów)."
 
 #: ../catfish/CatfishWindow.py:1863
 msgid "bytes"
@@ -610,12 +610,11 @@ msgid ""
 "modification date, file type, and file contents, users will no longer be "
 "dependent on the file manager or organization skills."
 msgstr ""
-"Catfish jest małą, szybką, ale potężną wyszukiwarką plików. Dysponując "
-"minimalistycznym interfejsem i stawiając nacisk na wyniki, pomaga "
-"użytkownikom znaleźć pliki, których ci potrzebują nie korzystając z "
-"menadżera plików. Wraz z potężnymi filtrami wyszukiwania, takimi jak data, "
-"rodzaj pliku oraz jego zawartość, użytkownicy nie będą dłużej skazani na "
-"bycie zależnym od menadżera plików oraz umiejętności organizacyjnych."
+"Catfish to małe, szybkie i potężne narzędzie do wyszukiwania plików. Dzięki "
+"minimalistycznemu interfejsowi z naciskiem na wyniki pomaga użytkownikom "
+"znaleźć potrzebne pliki bez menedżera plików. Dzięki potężnym filtrom, takim"
+" jak data modyfikacji, typ pliku oraz jego zawartość, użytkownicy nie będą "
+"już zależni od menedżera plików lub umiejętności organizacyjnych."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "The main Catfish window displaying image search results"
