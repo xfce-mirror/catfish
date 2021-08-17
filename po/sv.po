@@ -628,6 +628,9 @@ msgid ""
 "support for searching within compressed files. Searching file contents and "
 "the preferred view is now preserved across sessions."
 msgstr ""
+"Denna version utökar fulltextsökning för att stödja fler filtyper och lägger"
+" till stöd för sökning i komprimerade filer. Sökning i filinnehåll och den "
+"föredragna vyn bevaras nu för alla sessioner."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
