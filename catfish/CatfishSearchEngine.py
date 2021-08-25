@@ -214,8 +214,13 @@ class CatfishSearchEngine:
                         yield True
                         continue
 
-                    if method.method_name == 'fulltext' or  \
-                            zipfile.is_zipfile(filename) or \
+                    if search_zips and method.method_name == 'walk':
+                        if os.path.isfile(filename) and \
+                                zipfile.is_zipfile(filename):
+                            yield filename
+                            continue
+
+                    if method.method_name == 'fulltext' or \
                             all(key in
                                 os.path.basename(filename).lower()
                                 for key in keys):
@@ -231,7 +236,6 @@ class CatfishSearchEngine:
                         filename = filename.strip()
 
                         if len(wildcard_chunks) == 0 or \
-                                zipfile.is_zipfile(filename) or \
                                 method.method_name == 'fulltext':
                             yield filename
                             file_count += 1
@@ -270,11 +274,11 @@ class CatfishSearchEngine:
         with zipfile.ZipFile(fullpath, 'r') as z:
             for member in z.infolist():
                 for method in self.methods:
-                    if method.method_name is 'walk':
+                    if method.method_name == 'walk':
                         if self.search_filenames(
                                 member.filename, keywords, search_exact):
                             yield (member.filename, member.file_size, member.date_time)
-                    if method.method_name is 'fulltext':
+                    if method.method_name == 'fulltext':
                         if method.search_zip(z, member, keyword_list):
                             yield (member.filename, member.file_size, member.date_time)
 
@@ -548,7 +552,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
     def search_text(self, lines, keywords):
         if self.exact:
             for line in lines:
-                if " ".join(keywords) in line:
+                if " ".join(keywords) in line.lower():
                     return True
         else:
             match_list = set()
