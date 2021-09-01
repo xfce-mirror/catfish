@@ -1992,7 +1992,8 @@ class CatfishWindow(Window):
         self.builder.get_object("splash_status").show()
         self.builder.get_object("welcome_area").hide()
         show_results = False
-        self.get_window().set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
+        self.get_window().set_cursor(Gdk.Cursor.new_from_name(
+             Gdk.Display.get_default(), "progress"))
         self.set_title(_("Searching for \"%s\"") % keywords)
         self.spinner.show()
         self.statusbar_label.set_label(_("Searching..."))
