@@ -184,9 +184,15 @@ class CatfishWindow(Window):
             "menus.application.advanced")
 
         # -- Sidebar -- #
+        css = Gtk.CssProvider()
+        css.load_from_data(b".sidebar .view {background-color: transparent;}")
+        screen = Gdk.Screen.get_default()
+        style = Gtk.StyleContext()
+        style.add_provider_for_screen(
+              screen, css, Gtk.STYLE_PROVIDER_PRIORITY_SETTINGS)
         self.button_time_custom = builder.get_named_object(
             "sidebar.modified.options")
-        self.button_format_custom = builder.get_named_object(
+        self.button_format_custom = builder.get_object(
             "sidebar.filetype.options")
 
         # -- Status Bar -- *
