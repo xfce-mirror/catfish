@@ -640,6 +640,10 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Questo rilascio migliora il supporti del gestore dei file, il supporto ai "
+"file zip e la gestione dei file selezionati. Migliora anche le scorciatoie "
+"da tastiera per avviare una ricerca o per selezionare un nuovo percorso di "
+"ricerca."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
