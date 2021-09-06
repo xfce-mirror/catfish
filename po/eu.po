@@ -627,6 +627,9 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Argitaratze honek fitxategien kudeaketa, zip fitxategien euskarria, eta "
+"hautatutako fitxategien erabilera hobetzen ditu. Bilaketa bat hasteko edo "
+"bilaketa bide berri baterako teklatuaren lasterbideak hobetzen ditu ere."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
