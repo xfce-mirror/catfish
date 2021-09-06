@@ -43,7 +43,7 @@ msgstr "Pesquisar o sistema de ficheiros"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: ../org.xfce.Catfish.desktop.in.h:5
 msgid "files;find;locate;lookup;search;"
-msgstr "files;find;locate;lookup;search;"
+msgstr "ficheiros;encontrar;localizar;procurar;pesquisar;"
 
 #: ../data/ui/CatfishPreferences.ui.h:1
 msgid "Catfish Preferences"
@@ -636,6 +636,9 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Esta versão melhora o suporte do gestor de ficheiros, o suporte de ficheiros"
+" zip e o tratamento de ficheiros selecionados. Também melhora as teclas de "
+"atalho para iniciar uma pesquisa ou selecionar um novo caminho de pesquisa."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
