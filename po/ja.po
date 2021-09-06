@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 01:18-0400\n"
+"POT-Creation-Date: 2021-09-05 16:51-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/xfce/teams/16840/ja/)\n"
@@ -136,7 +136,7 @@ msgstr "フォルダーが見つかりません！"
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:753
+#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:766
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "キャンセル"
@@ -209,7 +209,7 @@ msgstr "その他"
 msgid "Any time"
 msgstr "時刻指定なし"
 
-#: ../data/ui/CatfishWindow.ui.h:22 ../catfish/CatfishWindow.py:1763
+#: ../data/ui/CatfishWindow.ui.h:22 ../catfish/CatfishWindow.py:1775
 msgid "Today"
 msgstr "今日"
 
@@ -253,11 +253,11 @@ msgstr "検索データベースは 7 日以上更新されていません。今
 msgid "File Type"
 msgstr "ファイル形式"
 
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:1507
+#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:1520
 msgid "Modified"
 msgstr "修正日"
 
-#: ../data/ui/CatfishWindow.ui.h:35 ../catfish/CatfishWindow.py:1985
+#: ../data/ui/CatfishWindow.ui.h:35 ../catfish/CatfishWindow.py:2025
 msgid "Results will be displayed as soon as they are found."
 msgstr "結果は発見し次第表示されます。"
 
@@ -387,15 +387,15 @@ msgstr ""
 "Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2008.\n"
 "Masato Hashimoto <hashimo@xfce.org>, 2012, 2014."
 
-#: ../catfish/CatfishWindow.py:291
+#: ../catfish/CatfishWindow.py:295
 msgid "Unknown"
 msgstr "不明"
 
-#: ../catfish/CatfishWindow.py:295
+#: ../catfish/CatfishWindow.py:299
 msgid "Never"
 msgstr "しない"
 
-#: ../catfish/CatfishWindow.py:402
+#: ../catfish/CatfishWindow.py:409
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -404,37 +404,37 @@ msgstr ""
 "上にクエリを入力してファイルを見つけるか、\n"
 "%s アイコンをクリックしてその他のオプションを選択してください。"
 
-#: ../catfish/CatfishWindow.py:768
+#: ../catfish/CatfishWindow.py:781
 msgid "An error occurred while updating the database."
 msgstr "データベースのアップデート中にエラーが発生しました。"
 
-#: ../catfish/CatfishWindow.py:770
+#: ../catfish/CatfishWindow.py:783
 msgid "Authentication failed."
 msgstr "認証に失敗しました。"
 
-#: ../catfish/CatfishWindow.py:776
+#: ../catfish/CatfishWindow.py:789
 msgid "Authentication cancelled."
 msgstr "認証はキャンセルされました。"
 
-#: ../catfish/CatfishWindow.py:782
+#: ../catfish/CatfishWindow.py:795
 msgid "Search database updated successfully."
 msgstr "検索データベースはアップデートされました。"
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:843
+#: ../catfish/CatfishWindow.py:856
 msgid "Close"
 msgstr "閉じる"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:857
+#: ../catfish/CatfishWindow.py:870
 msgid "Updating..."
 msgstr "アップデート中..."
 
-#: ../catfish/CatfishWindow.py:891
+#: ../catfish/CatfishWindow.py:904
 msgid "Stop Search"
 msgstr "検索を停止"
 
-#: ../catfish/CatfishWindow.py:892
+#: ../catfish/CatfishWindow.py:905
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -442,39 +442,39 @@ msgstr ""
 "検索中...\n"
 "中止するにはキャンセルボタンをクリックするかEscキーを押してください。"
 
-#: ../catfish/CatfishWindow.py:901
+#: ../catfish/CatfishWindow.py:914
 msgid "Begin Search"
 msgstr "検索を開始"
 
-#: ../catfish/CatfishWindow.py:1019
+#: ../catfish/CatfishWindow.py:1032
 msgid "No folder selected."
 msgstr "フォルダーが選択されていません。"
 
-#: ../catfish/CatfishWindow.py:1024
+#: ../catfish/CatfishWindow.py:1037
 msgid "Folder not found."
 msgstr "フォルダーが見つかりません。"
 
-#: ../catfish/CatfishWindow.py:1254
+#: ../catfish/CatfishWindow.py:1267
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" を開けませんでした。"
 
-#: ../catfish/CatfishWindow.py:1380
+#: ../catfish/CatfishWindow.py:1393
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" は保存されていません。"
 
-#: ../catfish/CatfishWindow.py:1397
+#: ../catfish/CatfishWindow.py:1410
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" は削除できません。"
 
-#: ../catfish/CatfishWindow.py:1436
+#: ../catfish/CatfishWindow.py:1449
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "\"%s\" を別名で保存..."
 
-#: ../catfish/CatfishWindow.py:1471
+#: ../catfish/CatfishWindow.py:1484
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -483,7 +483,7 @@ msgstr ""
 "本当に \"%s\" を\n"
 "完全に削除しますか？"
 
-#: ../catfish/CatfishWindow.py:1475
+#: ../catfish/CatfishWindow.py:1488
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -492,39 +492,39 @@ msgstr ""
 "本当に %i 個のファイルを\n"
 "完全に削除しますか？"
 
-#: ../catfish/CatfishWindow.py:1478
+#: ../catfish/CatfishWindow.py:1491
 msgid "If you delete a file, it is permanently lost."
 msgstr "削除されたファイルは二度と復元できません。"
 
-#: ../catfish/CatfishWindow.py:1501
+#: ../catfish/CatfishWindow.py:1514
 msgid "Filename"
 msgstr "ファイル名"
 
-#: ../catfish/CatfishWindow.py:1503
+#: ../catfish/CatfishWindow.py:1516
 msgid "Size"
 msgstr "サイズ"
 
-#: ../catfish/CatfishWindow.py:1505
+#: ../catfish/CatfishWindow.py:1518
 msgid "Location"
 msgstr "位置"
 
-#: ../catfish/CatfishWindow.py:1517
+#: ../catfish/CatfishWindow.py:1530
 msgid "Preview"
 msgstr "プレビュー"
 
-#: ../catfish/CatfishWindow.py:1525
+#: ../catfish/CatfishWindow.py:1537
 msgid "Details"
 msgstr "詳細"
 
-#: ../catfish/CatfishWindow.py:1765
+#: ../catfish/CatfishWindow.py:1777
 msgid "Yesterday"
 msgstr "昨日"
 
-#: ../catfish/CatfishWindow.py:1846
+#: ../catfish/CatfishWindow.py:1858
 msgid "No files found."
 msgstr "ファイルが一つも見つかりません。"
 
-#: ../catfish/CatfishWindow.py:1848
+#: ../catfish/CatfishWindow.py:1860
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -532,29 +532,29 @@ msgstr ""
 "検索語を減らすか、\n"
 "ほかのフォルダーを検索してください。"
 
-#: ../catfish/CatfishWindow.py:1855
+#: ../catfish/CatfishWindow.py:1867
 msgid "1 file found."
 msgstr "1つのファイルを発見。"
 
-#: ../catfish/CatfishWindow.py:1857
+#: ../catfish/CatfishWindow.py:1869
 #, python-format
 msgid "%i files found."
 msgstr "%i つのファイルを発見。"
 
-#: ../catfish/CatfishWindow.py:1863
+#: ../catfish/CatfishWindow.py:1875
 msgid "bytes"
 msgstr "bytes"
 
-#: ../catfish/CatfishWindow.py:1983 ../catfish/CatfishWindow.py:1992
+#: ../catfish/CatfishWindow.py:2023 ../catfish/CatfishWindow.py:2033
 msgid "Searching..."
 msgstr "検索しています..."
 
-#: ../catfish/CatfishWindow.py:1990
+#: ../catfish/CatfishWindow.py:2031
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "\"%s\" を検索中"
 
-#: ../catfish/CatfishWindow.py:2098
+#: ../catfish/CatfishWindow.py:2137
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "\"%s\" の検索結果"
@@ -622,63 +622,70 @@ msgstr "メインの Catfish ウィンドウに利用可能なフィルタとフ
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release improves file manager support, zip file support, and handling "
+"selected files. It also improves keyboard shortcuts for starting a search or"
+" selecting a new search path."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release expands fulltext search to support more file types and adds "
 "support for searching within compressed files. Searching file contents and "
 "the preferred view is now preserved across sessions."
 msgstr ""
 "このリリースでは全文検索が拡張され、より多くのファイルタイプがサポートされ、圧縮ファイル内の検索サポートが追加されています。ファイル内容と優先ビューの検索が、セッション間で保持されるようになりました。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release expands fulltext search to support more encodings and match all"
 " keywords instead of matching any."
 msgstr ""
 "このリリースでは全文検索が拡張され、より多くのエンコーディングサポートと、任意のキーワードではなくすべてのキーワードにマッチするようになりました。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release better integrates with the Xfce desktop, better supports the "
 "Zeitgeist datahub, and includes many bugfixes and usability improvements."
 msgstr ""
 "このリリースではXfceデスクトップとの統合が改善され、Zeitgeistデータハブのサポートが強化されています。多くのバグが修正され、使いやすさが向上しています。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
 msgstr "このリリースでは、Debian のパッケージングエラーが修正され、最適化された資源が含まれています。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr "このリリースでは、Wayland で実行するためのサポートが追加され、簡易化された操作に刷新したダイアログが特徴となっています。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr "このリリースでは、いくつかの起動エラーと、シンボリックリンクトラバーサルに関するさまざまな問題に対処しています。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
 msgstr "このリリースには多くの外観の改善が含まれ、新しい設定ダイアログが導入され、検索結果とパフォーマンスが向上しています。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr "このリリースでは一般的ではない検索ディレクトリを除外することで、パフォーマンスが向上しています。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
 msgstr "このリリースの特徴はデスクトップ統合の改善、OpenBSDおよびWaylandのサポート、翻訳サポートの改善です。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -689,7 +696,7 @@ msgstr ""
 "引用符で囲まれた検索文字列は正しく処理されるようになりました。 ファイルは他のアプリケーションにドラッグできるようになりました。 "
 "サムネイルはユーザーが要求した際に生成されます。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -698,23 +705,23 @@ msgid ""
 msgstr ""
 "このリリースでは、サムネイル処理と多数のバグ修正によっていくつか問題が改善されています。アイコンのプレビューが改善され、他のアプリケーションと一致するようになりました。結果ウィンドウの下部に表示される項目は、すべてのデスクトップテーマでアクセスできるようになりました。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid "This is a minor translations-only release."
 msgstr "これは翻訳のみのマイナーリリースです。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr "このリリースでは、いくつかのパフォーマンスの改善と多くの翻訳更新が行われています。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr "今回のリリースでは、世界協定時刻 (UTC) の代わりにタイムゾーンに従って、全てのファイルタイムスタンプが表示されるようになりました。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -724,7 +731,7 @@ msgstr ""
 "このリリースでは、結果ウィンドウに関するいくつかのバグが修正されています。 ファイルは削除されたとき、結果リストから再び削除されます。 "
 "中間および右クリック機能が復活しました。 日付範囲フィルタは、世界協定時刻 (UTC) ではなく、タイムゾーンに従って適用されるようになりました。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -735,17 +742,17 @@ msgstr ""
 "このリリースでは、重要なインタフェースの更新、検索速度の向上、いくつかのバグの修正が行われています。オプションのヘッダーバーやポップオーバーウィジェットを含む、GTK+"
 " ツールキットの最新機能のいくつかを利用することによってワークフローが向上しました。 PolicyKit の統合により、パスワード処理が改善されました。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr "このリリースでは、2つの新しいバグ修正と翻訳の更新が含まれます。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr "このリリースでは、一部のシステムでアプリケーションを起動できないリグレッション問題が修正されています。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
+#: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -753,13 +760,13 @@ msgid ""
 msgstr ""
 "このリリースでは複数のキーワードでの検索ができなくなっていた問題を解決しました。検索データベースが古くなると情報バーが表示されるようにもなり、データベースのアップデートについてのダイアログも改善されました。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:24
+#: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr "このリリースでは、locate が正しく実行されない問題と欠けているシンボリックアイコンの処理を改善する問題が修正されています。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:25
+#: ../data/metainfo/catfish.appdata.xml.in.h:26
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -767,13 +774,13 @@ msgid ""
 msgstr ""
 "この安定版のリリースでは、パスワードダイアログの信頼性を改善し、未使用のコードを削除し、リスト選択とアイテム選択に関する潜在的な問題を修正しました。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:26
+#: ../data/metainfo/catfish.appdata.xml.in.h:27
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr "このリリースでは、起動時の潜在的なセキュリティの問題を修正しました。また、複数項目の選択に関する問題についても修正しました。"
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:27
+#: ../data/metainfo/catfish.appdata.xml.in.h:28
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
