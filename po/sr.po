@@ -627,6 +627,9 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Ово издање побољшава подршку управника датотека, подршку зипу и управљање "
+"означеним датотекама. Такође, побољшава пречице дугмади за покретање "
+"претраге и одабир нове путање претраге."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
@@ -644,7 +647,7 @@ msgid ""
 " keywords instead of matching any."
 msgstr ""
 "Ово издање проширује потпуну претрагу писма ради подршке додатним кодирањима"
-" и поклапања свих кључних речи уместо делимичних поклапања. "
+" и поклапања свих кључних речи уместо делимичних поклапања."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
