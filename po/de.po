@@ -643,6 +643,10 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Diese Version verbessert die Unterstützung der Dateiverwaltung, die "
+"Unterstützung von Zip-Dateien und die Handhabung ausgewählter Dateien. Sie "
+"verbessert auch die Tastenkombinationen für den Start einer Suche oder die "
+"Auswahl eines neuen Suchpfads."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
