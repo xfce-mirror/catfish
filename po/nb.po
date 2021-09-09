@@ -628,6 +628,9 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Denne utgivelsen forbedrer støtte for filbehandleren, zip-filer og "
+"håndtering av valgte filer. Den forbedrer også hurtigtaster for å starte søk"
+" eller velge ny søkesti."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
