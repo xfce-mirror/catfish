@@ -621,6 +621,8 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"גרסה זו משפרת תמיכה במנהל קבצים, תמיכה בקבצי זיפ, וטיפול בקבצים נבחרים. היא "
+"גם משפרת קיצורי מקלדת להתחלת חיפוש או לבחירת נתיב חיפוש חדש."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
