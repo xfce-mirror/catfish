@@ -8,8 +8,8 @@
 # Nick Schermer <nick@xfce.org>, 2018
 # Kukuh Syafaat <syafaatkukuh@gmail.com>, 2019
 # Ardjuna <Asyura.x@gmail.com>, 2020
-# Triyan W. Nugroho <triyan.wn@gmail.com>, 2021
 # Faisal Rachmadin <frachmadin@gmail.com>, 2021
+# Triyan W. Nugroho <triyan.wn@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-05 16:51-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Faisal Rachmadin <frachmadin@gmail.com>, 2021\n"
+"Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>, 2021\n"
 "Language-Team: Indonesian (https://www.transifex.com/xfce/teams/16840/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -388,7 +388,7 @@ msgid "translator-credits"
 msgstr ""
 "Andhika Padmawan <andhika.padmawan@gmail.com>, 2012.\n"
 "Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
-"Triyan W. Nugroho <triyan.wn@gmail.com>, 2020."
+"Triyan W. Nugroho <triyan.wn@gmail.com>, 2020-2021."
 
 #: ../catfish/CatfishWindow.py:295
 msgid "Unknown"
@@ -636,6 +636,9 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Rilis ini meningkatkan dukungan peramban berkas, dukungan berkas zip, dan "
+"penanganan berkas-berkas terpilih. Serta meningkatkan pintasan papan tik "
+"untuk memulai sebuah pencarian atau memilih sebuah path pencarian baru."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
