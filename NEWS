@@ -1,3 +1,19 @@
+4.16.3
+======
+- Update "Searching..." Cursor
+- Sidebar background color bugfix
+- Fixes for syntax, fulltext zip search, special files (fixes #62)
+- Adds symbolic link icons, better icon updating (fixes #46)
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+  Dutch, Eastern Armenian, English (Australia), Estonian, Finnish,
+  French, Galician, German, Greek, Hebrew, Hungarian, Icelandic,
+  Indonesian, Interlingue, Italian, Japanese, Korean, Lithuanian,
+  Malay, Norwegian Bokmål, Norwegian Nynorsk, Polish, Portuguese,
+  Portuguese (Brazil), Russian, Serbian, Slovak, Slovenian, Spanish,
+  Swedish, Thai, Turkish, Ukrainian
+
 4.16.2
 ======
 - Use standard icon name application-x-executable-symbolic instead of
