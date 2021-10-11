@@ -628,6 +628,9 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Ta izdaja izboljšuje podporo za urejevalnik datotek, popdoro zip datotekam "
+"in ravnanje z izbranimi datotekami. Izboljšane so bljižnice na tipkovnici za"
+" iskanje ali izbiranje nove poti za iskanje."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
