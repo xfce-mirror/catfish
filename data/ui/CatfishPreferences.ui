@@ -296,6 +296,23 @@
                                 <property name="position">1</property>
                               </packing>
                             </child>
+                            <child>
+                              <object class="GtkCheckButton" id="do_show_size_binary">
+                                <property name="label" translatable="yes">Show file sizes in binary format</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">False</property>
+                                <property name="tooltip-text" translatable="yes">Uncheck to show file size in decimal format</property>
+                                <property name="use-underline">True</property>
+                                <property name="draw-indicator">True</property>
+                                <signal name="toggled" handler="on_do_show_size_binary_toggled" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
                           </object>
                         </child>
                       </object>
