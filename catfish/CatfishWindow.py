@@ -1095,6 +1095,8 @@ class CatfishWindow(Window):
                 self.hidden_files.set_active(setting)
             if prop == "show-sidebar":
                 self.set_sidebar_active(setting)
+            if prop == 'file-size-binary':
+                self.refilter()
 
     # -- Sidebar -- #
     def set_sidebar_active(self, active):
@@ -1872,12 +1874,18 @@ class CatfishWindow(Window):
         """Make a file size human readable."""
         if isinstance(size, str):
             size = int(size)
-        suffixes = [_('bytes'), 'kB', 'MB', 'GB', 'TB']
+        show_binary_size = self.settings.get_setting('file-size-binary')
+        if show_binary_size:
+            div = 1024
+            suffixes = [_('bytes'), 'KiB', 'MiB', 'GiB', 'TiB']
+        else:
+            div = 1000
+            suffixes = [_('bytes'), 'kB', 'MB', 'GB', 'TB']
         suffixIndex = 0
-        if size > 1024:
-            while size > 1024:
+        if size > div:
+            while size > div:
                 suffixIndex += 1
-                size = size / 1024.0
+                size = size / float(div)
             return "%.*f %s" % (precision, size, suffixes[suffixIndex])
         return "%i %s" % (size, suffixes[0])
 
