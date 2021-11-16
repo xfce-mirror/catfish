@@ -60,8 +60,10 @@ def parse_options():
     parser.add_option('', '--start', action='store_true',
                       help=_("If path and query are provided, start searching "
                              "when the application is displayed."))
+    parser.add_option('', '--sort', help=_("set a default column to sort by "
+                             "(name|size|path|date|type),(asc|desc)"))
     parser.set_defaults(icons_large=0, thumbnails=0, time_iso=0,
-                        path=None, start=False,
+                        path=None, start=False, sort=None,
                         exact=0, hidden=0, fulltext=0, file_action='open')
 
     (options, args) = parser.parse_args()
