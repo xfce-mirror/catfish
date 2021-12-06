@@ -116,10 +116,10 @@ class SudoDialog(Gtk.Dialog):
                  name=None, retries=-1):
         """Initialize the SudoDialog."""
         # initialize the dialog
-        super(SudoDialog, self).__init__(title=title,
-                                         transient_for=parent,
-                                         modal=True,
-                                         destroy_with_parent=True)
+        super().__init__(title=title,
+                         transient_for=parent,
+                         modal=True,
+                         destroy_with_parent=True)
         #
         self.connect("show", self.on_show)
         if title is None:
