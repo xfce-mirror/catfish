@@ -12,8 +12,8 @@
 # Nick Schermer <nick@xfce.org>, 2020
 # Andre Miranda <andre42m@gmail.com>, 2020
 # C. E., 2020
-# Lucas Wilm <lucaswilm@gmail.com>, 2021
 # The Cat, 2021
+# Lucas Wilm <lucaswilm@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -22,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-05 16:51-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: The Cat, 2021\n"
+"Last-Translator: Lucas Wilm <lucaswilm@gmail.com>, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/xfce/teams/16840/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -131,11 +131,11 @@ msgstr "Avançado"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "Select a Folder"
-msgstr ""
+msgstr "Selecione uma pasta"
 
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "Folder not found!"
-msgstr ""
+msgstr "Pasta não encontrada!"
 
 #. Restore Cancel button
 #. Buttons
@@ -146,7 +146,7 @@ msgstr "Cancelar"
 
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "Select Folder"
-msgstr ""
+msgstr "Selecionar pasta"
 
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Open"
@@ -455,11 +455,11 @@ msgstr "Começar a pesquisa"
 
 #: ../catfish/CatfishWindow.py:1032
 msgid "No folder selected."
-msgstr ""
+msgstr "Nenhuma pasta selecionada."
 
 #: ../catfish/CatfishWindow.py:1037
 msgid "Folder not found."
-msgstr ""
+msgstr "Pasta não encontrada."
 
 #: ../catfish/CatfishWindow.py:1267
 #, python-format
@@ -641,6 +641,10 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Esta versão melhora o suporte do gerenciador de arquivos, o suporte a "
+"arquivos zip e o manuseio de arquivos selecionados. Também melhora os "
+"atalhos de teclado para iniciar uma pesquisa ou selecionar um novo caminho "
+"de pesquisa."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
@@ -648,6 +652,10 @@ msgid ""
 "support for searching within compressed files. Searching file contents and "
 "the preferred view is now preserved across sessions."
 msgstr ""
+"Esta versão expande a pesquisa de texto completo para suportar mais tipos de"
+" arquivos e adiciona suporte para pesquisa dentro de arquivos compactados. A"
+" pesquisa do conteúdo dos arquivos e a visualização preferida é agora "
+"preservada ao longo das sessões."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
