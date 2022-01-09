@@ -9,7 +9,7 @@
 # Nick Schermer <nick@xfce.org>, 2020
 # Påvel Nicklasson <pavel2@frimix.se>, 2020
 # Arve Eriksson <031299870@telia.com>, 2020
-# Luna Jernberg <bittin@cafe8bitar.se>, 2021
+# Luna Jernberg <bittin@cafe8bitar.se>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-05 16:51-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>, 2021\n"
+"Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>, 2022\n"
 "Language-Team: Swedish (https://www.transifex.com/xfce/teams/16840/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -628,6 +628,9 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Den här versionen förbättrar stödet för filhanteraren, stödet för zip-filer "
+"och hanteringen av valda filer. Den förbättrar också tangentbordsgenvägar "
+"för att starta en sökning eller välja en ny sökväg."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
