@@ -260,6 +260,8 @@ class CatfishWindow(Window):
         self.treeview.drag_source_add_text_targets()
         self.file_menu = builder.get_named_object("menus.file.menu")
         self.file_menu_save = builder.get_named_object("menus.file.save")
+        self.file_menu_open = builder.get_object("file_menu_open")
+        self.file_menu_open_with = builder.get_object("file_menu_open_with")
         self.file_menu_delete = builder.get_named_object("menus.file.delete")
         self.treeview_click_on = False
 
@@ -1278,11 +1280,12 @@ class CatfishWindow(Window):
                 self.open_file(filename)
         self.open_compressed_files(compressed_files)
 
-    def open_compressed_files(self, compressed_files):
+    def open_compressed_files(self, compressed_files, open_method=None):
         for filename in compressed_files:
-            archive = filename.split('//ARCHIVE//')[0]
-            fname = filename.split('//ARCHIVE//')[1]
+            archive, fname = filename.split('//ARCHIVE//')
             if fname.endswith('/'):
+                if open_method == 'open_with':
+                    return archive
                 self.open_file(archive)
                 continue
             with zipfile.ZipFile(archive) as z:
@@ -1290,7 +1293,33 @@ class CatfishWindow(Window):
                 fileinfo.filename = os.path.basename(fname)
                 extract_dir = tempfile.mkdtemp(dir=self.tmpdir.name)
                 tmpfile = z.extract(fname, path=extract_dir)
+                if open_method == 'open_with':
+                    return tmpfile
                 self.open_file(tmpfile)
+
+    def on_menu_open_with_activate(self, widget):
+        file_set = set()
+        filenames = self.selected_filenames
+        for filename in filenames:
+            if '//ARCHIVE//' in filename:
+                file_set.add(self.open_compressed_files([filename],
+                             'open_with'))
+            else:
+                file_set.add(filename)
+
+        gfilename = Gio.File.new_for_path(next(iter(file_set)))
+        app_chooser = Gtk.AppChooserDialog(gfile=gfilename)
+        ac_widget = app_chooser.get_widget()
+        ac_widget.set_show_fallback(True)
+
+        if app_chooser.run() == Gtk.ResponseType.OK:
+            LOGGER.debug("Opening %s" % file_set)
+            app = app_chooser.get_app_info()
+            for filename in file_set:
+                gfile = Gio.File.new_for_path(filename)
+                Gio.AppInfo.launch(app, [gfile])
+            app_chooser.destroy()
+        app_chooser.destroy()
 
     def on_menu_filemanager_activate(self, widget):  # pylint: disable=W0613
         """Open the selected file in the default file manager."""
@@ -1602,7 +1631,10 @@ class CatfishWindow(Window):
     def treemodel_get_row_filename(self, model, row):
         """Get the filename from a specified row."""
         if zipfile.is_zipfile(model[row][3]):
-            filename = model[row][3] + "//ARCHIVE//" + model[row][1]
+            if model[row][5] == 'inode/directory':
+                filename = model[row][3] + "//ARCHIVE//" + model[row][1] + '/'
+            else:
+                filename = model[row][3] + "//ARCHIVE//" + model[row][1]
         else:
             filename = os.path.join(model[row][3], model[row][1])
         return filename
@@ -1678,19 +1710,17 @@ class CatfishWindow(Window):
 
     def treeview_right_click(self, treeview, event=None):
         self.maintain_treeview_stats(treeview, event)
-        # Checks if archive
         directory = os.path.isdir(self.selected_filenames[0]) or \
             self.selected_filenames[0].endswith("/")
-        show_save_option = len(self.selected_filenames) == 1 and not \
+        show_on_single_file = len(self.selected_filenames) == 1 and not \
             directory
-        self.file_menu_save.set_visible(show_save_option)
+        self.file_menu_save.set_visible(show_on_single_file)
         writeable = True
         for filename in self.selected_filenames:
-            if type(filename) is list:
-                filename = os.path.join(filename[0], filename[1])
             if not os.access(filename, os.W_OK):
                 writeable = False
         self.file_menu_delete.set_sensitive(writeable)
+        self.file_menu_open.set_label(self.set_right_click_open_label())
         self.file_menu.popup_at_pointer()
         return True
 
@@ -1715,6 +1745,26 @@ class CatfishWindow(Window):
         else:
             handled = False
         return handled
+
+    def set_right_click_open_label(self):
+        if len(self.selected_filenames) > 1:
+            return _('Open with default applications')
+
+        filename = self.selected_filenames[0]
+
+        if '//ARCHIVE//' in filename:
+            if filename.endswith('/'):
+                filename = filename.split('//ARCHIVE//')[0]
+            else:
+                mime = self.guess_mimetype(filename)
+                app = Gio.AppInfo.get_default_for_type(mime, False)
+
+        if os.path.exists(filename):
+            gfile = Gio.File.new_for_path(filename)
+            app = Gio.File.query_default_handler(gfile)
+
+        app_name = app.get_display_name()
+        return (_('Open with') + ' "{}"'.format(app_name))
 
     def new_column(self, label, colid, special=None, markup=False):
         """New Column function for creating TreeView columns easily."""
