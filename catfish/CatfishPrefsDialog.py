@@ -56,6 +56,8 @@ class CatfishPrefsDialog(PrefsDialog):
             self.builder.get_object("close_after_select").set_active(True)
         if self.settings.get_setting("search-compressed-files"):
             self.builder.get_object("search_in_compressed_files").set_active(True)
+        if self.settings.get_setting("file-size-binary"):
+            self.builder.get_object("do_show_size_binary").set_active(True)
         self.set_exclude_directories(
             self.settings.get_setting("exclude-paths"))
         self.process_events = True
@@ -89,6 +91,15 @@ class CatfishPrefsDialog(PrefsDialog):
         else:
             self.settings.set_setting("show-sidebar", False)
         self.changed_properties.append("show-sidebar")
+
+    def on_do_show_size_binary_toggled(self, widget):
+        if not self.process_events:
+            return
+        if widget.get_active():
+            self.settings.set_setting("file-size-binary", True)
+        else:
+            self.settings.set_setting("file-size-binary", False)
+        self.changed_properties.append("file-size-binary")
 
     def on_close_after_select_toggled(self, widget):
         if not self.process_events:
