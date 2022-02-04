@@ -8,6 +8,7 @@
 # dsafsadf <heneral@gmail.com>, 2019
 # Yarema aka Knedlyk <yupadmin@gmail.com>, 2020
 # Vasyl Khrystiuk <h6.msangel@gmail.com>, 2020
+# Andrij Mizyk <andmizyk@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-05 16:51-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Vasyl Khrystiuk <h6.msangel@gmail.com>, 2020\n"
+"Last-Translator: Andrij Mizyk <andmizyk@gmail.com>, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/xfce/teams/16840/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -114,7 +115,7 @@ msgstr "Закрити _вікно пошуку після відкриття ф
 
 #: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Search within compressed files (.zip, .odt, .docx)"
-msgstr ""
+msgstr "Шукати у стиснених файлах (.zip, .odt, .docx)"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Miscellaneous"
@@ -126,11 +127,11 @@ msgstr "Додатково"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "Select a Folder"
-msgstr ""
+msgstr "Вибрати теку"
 
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "Folder not found!"
-msgstr ""
+msgstr "Теку не знайдено!"
 
 #. Restore Cancel button
 #. Buttons
@@ -141,7 +142,7 @@ msgstr "Скасувати"
 
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "Select Folder"
-msgstr ""
+msgstr "Вибрати теку"
 
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Open"
@@ -174,6 +175,7 @@ msgstr "Розширення файлів"
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr ""
+"Уведіть розділений комою список розширень файлів (напр. odt, png, txt)"
 
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Documents"
@@ -217,7 +219,7 @@ msgstr "Цей тиждень"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "This month"
-msgstr ""
+msgstr "Цей місяць"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "Custom"
@@ -395,6 +397,8 @@ msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
+"Уведіть свій запит вище, щоб шукати файли\n"
+"або клацніть значок %s, щоб отримати більше параметрів."
 
 #: ../catfish/CatfishWindow.py:781
 msgid "An error occurred while updating the database."
@@ -440,11 +444,11 @@ msgstr "Почати пошук"
 
 #: ../catfish/CatfishWindow.py:1032
 msgid "No folder selected."
-msgstr ""
+msgstr "Не вибрано теки."
 
 #: ../catfish/CatfishWindow.py:1037
 msgid "Folder not found."
-msgstr ""
+msgstr "Теку не знайдено."
 
 #: ../catfish/CatfishWindow.py:1267
 #, python-format
@@ -624,6 +628,9 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"У цьому випуску покращено підтримку файлового керівника, підтримку файлів "
+"zip і обробку виділених файлів. Також покращено комбінації клавіш для "
+"початку пошуку або виділення нового шляху пошуку."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
@@ -637,6 +644,8 @@ msgid ""
 "This release expands fulltext search to support more encodings and match all"
 " keywords instead of matching any."
 msgstr ""
+"Цей випуск розширює повнотекстовий пошук для підтримки більшої кількості "
+"кодувань і відповідати всім ключовим словам замість відповідання будь-чому."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
@@ -649,6 +658,8 @@ msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
 msgstr ""
+"Цей випуск вирішує помилки пакування для Debian і включає оптимізовані "
+"набори тестування."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
