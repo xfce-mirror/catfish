@@ -229,8 +229,8 @@
   <object class="GtkBox" id="filetype_popover">
     <property name="visible">True</property>
     <property name="can-focus">False</property>
-    <property name="margin-left">8</property>
-    <property name="margin-right">8</property>
+    <property name="margin-start">8</property>
+    <property name="margin-end">8</property>
     <property name="margin-top">2</property>
     <property name="margin-bottom">8</property>
     <property name="orientation">vertical</property>
@@ -406,8 +406,8 @@
   <object class="GtkBox" id="modified_popover">
     <property name="visible">True</property>
     <property name="can-focus">False</property>
-    <property name="margin-left">8</property>
-    <property name="margin-right">8</property>
+    <property name="margin-start">8</property>
+    <property name="margin-end">8</property>
     <property name="margin-top">2</property>
     <property name="margin-bottom">8</property>
     <property name="spacing">10</property>
@@ -653,8 +653,8 @@
             <child internal-child="content_area">
               <object class="GtkBox" id="infobar-content_area1">
                 <property name="can-focus">False</property>
-                <property name="margin-left">3</property>
-                <property name="margin-right">3</property>
+                <property name="margin-start">3</property>
+                <property name="margin-end">3</property>
                 <property name="spacing">16</property>
                 <child>
                   <object class="GtkImage" id="infobar_icon">
@@ -730,7 +730,7 @@
                                 <property name="height-request">28</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="margin-left">9</property>
+                                <property name="margin-start">9</property>
                                 <property name="label" translatable="yes">File Type</property>
                                 <property name="xalign">0</property>
                                 <attributes>
@@ -834,7 +834,7 @@
                                     <property name="can-focus">False</property>
                                     <property name="halign">end</property>
                                     <property name="valign">end</property>
-                                    <property name="margin-right">8</property>
+                                    <property name="margin-end">8</property>
                                     <property name="margin-bottom">6</property>
                                     <property name="xalign">1</property>
                                     <property name="yalign">1</property>
@@ -870,7 +870,7 @@
                                 <property name="height-request">28</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="margin-left">9</property>
+                                <property name="margin-start">9</property>
                                 <property name="label" translatable="yes">Modified</property>
                                 <property name="xalign">0</property>
                                 <attributes>
@@ -1127,7 +1127,6 @@
                             <property name="can-focus">True</property>
                             <property name="model">results_liststore</property>
                             <property name="reorderable">True</property>
-                            <property name="rules-hint">True</property>
                             <property name="enable-search">False</property>
                             <property name="rubber-banding">True</property>
                             <property name="enable-grid-lines">vertical</property>
@@ -1238,8 +1237,8 @@
           <object class="GtkGrid" id="grid1">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="margin-left">5</property>
-            <property name="margin-right">5</property>
+            <property name="margin-start">5</property>
+            <property name="margin-end">5</property>
             <property name="row-spacing">6</property>
             <property name="column-spacing">12</property>
             <child>
@@ -1360,8 +1359,8 @@ This action requires administrative rights.</property>
                 <child internal-child="content_area">
                   <object class="GtkBox" id="infobar-content_area2">
                     <property name="can-focus">False</property>
-                    <property name="margin-left">3</property>
-                    <property name="margin-right">3</property>
+                    <property name="margin-start">3</property>
+                    <property name="margin-end">3</property>
                     <property name="spacing">8</property>
                     <child>
                       <object class="GtkImage" id="update_dialog_infobar_icon">
@@ -1451,6 +1450,7 @@ This action requires administrative rights.</property>
     <property name="can-default">True</property>
     <property name="has-default">True</property>
     <property name="valign">center</property>
+    <property name="hexpand">True</property>
     <property name="invisible-char">•</property>
     <property name="caps-lock-warning">False</property>
     <property name="secondary-icon-name">edit-find-symbolic</property>
@@ -1462,6 +1462,9 @@ This action requires administrative rights.</property>
     <signal name="activate" handler="on_search_entry_activate" swapped="no"/>
     <signal name="changed" handler="on_search_entry_changed" swapped="no"/>
     <signal name="icon-press" handler="on_search_entry_icon_press" swapped="no"/>
+    <style>
+      <class name="catfish_search_entry"/>
+    </style>
   </object>
   <object class="GtkImage" id="toolbar_view_list_icon">
     <property name="visible">True</property>
