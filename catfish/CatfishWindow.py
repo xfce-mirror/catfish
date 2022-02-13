@@ -897,13 +897,16 @@ class CatfishWindow(Window):
         icon_name = "edit-find-symbolic"
         sensitive = True
         button_tooltip_text = None
+        css = Gtk.CssProvider()
 
         # Search running
         if self.search_in_progress:
-            icon_name = "process-stop"
+            icon_name = "process-stop-symbolic"
             button_tooltip_text = _('Stop Search')
             entry_tooltip_text = _("Search is in progress...\nPress the "
                                    "cancel button or the Escape key to stop.")
+            css.load_from_data(b".catfish_search_entry image:last-child \
+                                  {color: @error_color;}")
 
         # Search not running
         else:
@@ -913,14 +916,20 @@ class CatfishWindow(Window):
             if len(entry_text) > 0:
                 button_tooltip_text = _('Begin Search')
                 query = entry_text
+                css.load_from_data(b".catfish_search_entry image:last-child \
+                                      {color: @theme_text_color;}")
             else:
                 sensitive = False
+                css.load_from_data(b".catfish_search_entry image:last-child \
+                                      {color: @theme_unfocused_fg_color;}")
 
+        self.search_entry.get_style_context().add_provider(
+            css, Gtk.STYLE_PROVIDER_PRIORITY_SETTINGS)
         self.search_entry.set_icon_from_icon_name(
             Gtk.EntryIconPosition.SECONDARY, icon_name)
+        self.search_entry.set_tooltip_text(entry_tooltip_text)
         self.search_entry.set_icon_tooltip_text(
             Gtk.EntryIconPosition.SECONDARY, button_tooltip_text)
-        self.search_entry.set_tooltip_text(entry_tooltip_text)
         self.search_entry.set_icon_activatable(
             Gtk.EntryIconPosition.SECONDARY, sensitive)
         self.search_entry.set_icon_sensitive(
@@ -1499,8 +1508,19 @@ class CatfishWindow(Window):
                                    text="")
         dialog.set_markup(surrogate_escape(dialog_text))
 
-        dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.NO,
-                           Gtk.STOCK_DELETE, Gtk.ResponseType.YES)
+        cancel = dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.NO)
+        delete = dialog.add_button(Gtk.STOCK_DELETE, Gtk.ResponseType.YES)
+
+        cancel_image = Gtk.Image.new_from_icon_name("window-close-symbolic",
+                                                     Gtk.IconSize.BUTTON)
+        delete_image = Gtk.Image.new_from_icon_name("edit-delete-symbolic",
+                                                     Gtk.IconSize.BUTTON)
+        cancel_image.set_property("use-fallback", True)
+        delete_image.set_property("use-fallback", True)
+
+        cancel.set_image(cancel_image)
+        delete.set_image(delete_image)
+        delete.get_style_context().add_class("destructive-action")
 
         dialog.set_default_response(Gtk.ResponseType.NO)
         response = dialog.run()
