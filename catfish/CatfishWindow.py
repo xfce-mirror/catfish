@@ -32,7 +32,7 @@ import time
 import zipfile
 import tempfile
 from locale import gettext as _
-from shutil import copy2, rmtree
+from shutil import copy2, rmtree, which
 from xml.sax.saxutils import escape
 
 # Thunar Integration
@@ -1181,6 +1181,25 @@ class CatfishWindow(Window):
         # Reload the results filter.
         self.refilter()
 
+    def get_file_manager(self):
+        opsys = os.environ.get("XDG_CURRENT_DESKTOP", "").lower()
+        if opsys == 'xfce':
+            return self.get_exo_preferred_file_manager()
+        elif opsys == 'gnome':
+            fm = Gio.app_info_get_default_for_type('inode/directory', '')
+            return fm.get_executable()
+        else:
+            xdg = subprocess.check_output(['xdg-mime', 'query',
+                                          'default', 'inode/directory'])
+            xdg_dirs = os.environ.get('XDG_DATA_DIRS').split(':')
+            desktop_file = xdg.decode().strip()
+            for folder in xdg_dirs:
+                launcher = os.path.join(folder, 'applications', desktop_file)
+                if os.path.exists(launcher):
+                    break
+            gdesktop = Gio.DesktopAppInfo.new_from_filename(launcher)
+            return gdesktop.get_executable()
+
     def thunar_display_path(self, path):
         bus = dbus.SessionBus()
         obj = bus.get_object('org.xfce.Thunar', '/org/xfce/FileManager')
@@ -1204,43 +1223,21 @@ class CatfishWindow(Window):
         return apps
 
     def get_exo_preferred_file_manager(self):
-        config = [GLib.get_user_config_dir()] + GLib.get_system_config_dirs()
+        config_dir = GLib.get_user_config_dir()
         data_dir = GLib.get_user_data_dir()
         custFM = data_dir+"/xfce4/helpers/custom-FileManager.desktop"
-        config_dirs = sorted(set(config), reverse=True)
 
-        for config_dir in config_dirs:
-            cfg = "%s/xfce4/helpers.rc" % config_dir
-            if os.path.exists(cfg):
-                apps = self.get_exo_preferred_applications(cfg)
+        cfg = config_dir + "/xfce4/helpers.rc"
+        if os.path.exists(cfg):
+            apps = self.get_exo_preferred_applications(cfg)
+            if 'FileManager' in apps:
                 if 'custom-FileManager' in apps['FileManager']:
                     with open(custFM) as f:
                         for line in f:
                             CFM = line.replace('X-XFCE-Commands=', '').strip()
                             if 'X-XFCE-Commands=' in line:
                                 return CFM
-
-                if 'FileManager' in apps:
-                    return apps['FileManager']
-
-        return "Thunar"
-
-    def using_thunar_fm(self):
-        if os.environ.get("XDG_CURRENT_DESKTOP", "").lower() == 'xfce':
-            fm = self.get_exo_preferred_file_manager()
-            return "thunar" in fm.lower()
-
-        fm = subprocess.check_output(['xdg-mime', 'query', 'default',
-                                      'inode/directory'])
-        fm = fm.decode("utf-8", errors="replace")
-        if "thunar" in fm.lower():
-            return True
-
-        if "exo-file-manager" in fm.lower():
-            fm = self.get_exo_preferred_file_manager()
-            return "thunar" in fm.lower()
-
-        return False
+                return apps['FileManager']
 
     def open_file(self, filename):
         """Open the specified filename in its default application."""
@@ -1294,31 +1291,35 @@ class CatfishWindow(Window):
 
     def on_menu_filemanager_activate(self, widget):  # pylint: disable=W0613
         """Open the selected file in the default file manager."""
-
-        file_manager = self.get_exo_preferred_file_manager().lower()
         files, dirs, nfiles = self.on_menu_filemanager_get_file_lists()
         num = len(files)
+        try:
+            file_manager = self.get_file_manager().lower()
 
-        if 'nemo' or 'elementary' in file_manager:
-            num = len(nfiles)
+            if 'nemo' or 'elementary' in file_manager:
+                num = len(nfiles)
 
-        if 'thunar' in file_manager:
-            for filename in files:
-                self.thunar_display_path(filename)
-        elif 'nautilus' in file_manager:
-            for filename in files:
-                subprocess.Popen([file_manager, '--select', filename])
-        elif 'nemo' in file_manager:
-            for nfilename in nfiles:
-                subprocess.Popen([file_manager, nfilename])
-        elif 'elementary' in file_manager:
-            for nfilename in nfiles:
-                subprocess.Popen([file_manager, '-n', nfilename])
-        else:
-            for dirname in dirs:
-                subprocess.Popen([file_manager, dirname])
+            if 'thunar' in file_manager:
+                for filename in files:
+                    self.thunar_display_path(filename)
+            elif 'nautilus' in file_manager:
+                for filename in files:
+                    subprocess.Popen([file_manager, '--select', filename])
+            elif 'nemo' in file_manager:
+                for nfilename in nfiles:
+                    subprocess.Popen([file_manager, nfilename])
+            elif 'elementary' in file_manager:
+                for nfilename in nfiles:
+                    subprocess.Popen([file_manager, '-n', nfilename])
+            else:
+                for dirname in dirs:
+                    subprocess.Popen([file_manager, dirname])
 
-        LOGGER.debug("Opening file manager for %i path(s)" % num)
+            LOGGER.debug("Opening file manager for %i path(s)" % num)
+        except AttributeError:
+            LOGGER.debug("Default file manager not set")
+            subprocess.Popen(['xdg-open', 'file:///'])
+            return
         return
 
     def on_menu_filemanager_get_file_lists(self):
