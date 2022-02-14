@@ -232,6 +232,9 @@ class Window(Gtk.Window):
         headerbar.set_custom_title(search)
         headerbar.pack_end(button)
 
+        search.set_margin_start(42)
+        search.set_margin_end(42)
+
         self.set_titlebar(headerbar)
         headerbar.show_all()
 
@@ -245,7 +248,6 @@ class Window(Gtk.Window):
 
         toolitem = Gtk.ToolItem.new()
         toolitem.add(search)
-        search.set_hexpand(True)
         toolitem.set_expand(True)
         toolitem.set_margin_end(6)
         toolbar.insert(toolitem, 1)
