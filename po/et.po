@@ -690,15 +690,15 @@ msgid ""
 "preferences dialog, and improves search results and performance."
 msgstr ""
 "Selle versiooniga oleme parandanud rakenduse välimust, lisanud uue "
-"eelistuste vaate ning parandanud otsngute jõudlust ning tulemuste kuvamist."
+"eelistuste vaate ning parandanud otsingute jõudlust ning tulemuste kuvamist."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
-"Selle versiooniga oleme parandanud otsingute jõudlust (eemaldasime mõned "
-"mittevajalikud otsingukaustad)."
+"Eemaldades mõned mittevajalikud otsingukaustad oleme selle versiooniga oleme"
+" parandanud otsingute jõudlust."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
