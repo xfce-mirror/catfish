@@ -1213,15 +1213,15 @@ class CatfishWindow(Window):
             cfg = "%s/xfce4/helpers.rc" % config_dir
             if os.path.exists(cfg):
                 apps = self.get_exo_preferred_applications(cfg)
-                if 'custom-FileManager' in apps['FileManager']:
-                    with open(custFM) as f:
-                        for line in f:
-                            CFM = line.replace('X-XFCE-Commands=', '').strip()
-                            if 'X-XFCE-Commands=' in line:
-                                return CFM
-
                 if 'FileManager' in apps:
+                    if 'custom-FileManager' in apps['FileManager']:
+                        with open(custFM) as f:
+                            for line in f:
+                                CFM = line.replace('X-XFCE-Commands=', '').strip()
+                                if 'X-XFCE-Commands=' in line:
+                                    return CFM
                     return apps['FileManager']
+
 
         return "Thunar"
 
