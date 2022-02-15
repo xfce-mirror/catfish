@@ -37,8 +37,8 @@ DEFAULT_SETTINGS = {
     'match-results-exactly': (bool, False),
     'close-after-select': (bool, False),
     'search-compressed-files': (bool, False),
-    'window-width': (int, 650),
-    'window-height': (int, 470),
+    'window-width': (int, 700),
+    'window-height': (int, 540),
     'window-x': (int, -1),
     'window-y': (int, -1),
     'exclude-paths': (str, '/dev;~/.cache;~/.gvfs;')
