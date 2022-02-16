@@ -666,36 +666,75 @@ class CatfishWindow(Window):
         icon_name = model[treeiter][0]
         fullpath = os.path.join(model[treeiter][3], model[treeiter][1])
         emblem_icon = 'emblem-symbolic-link'
-        if os.path.isfile(icon_name):
             # Load from thumbnail file.
-            if self.show_thumbnail:
+        if self.show_thumbnail:
+            if os.path.isfile(icon_name):
                 pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon_name)
-                renderer.set_property('pixbuf', pixbuf)
-                return
             else:
                 mimetype = self.guess_mimetype(fullpath)
                 icon_name = self.get_file_icon(fullpath, mimetype)
+                pixbuf = self.get_icon_pixbuf(icon_name)
+
+        if not self.show_thumbnail:
+            mimetype = self.guess_mimetype(fullpath)
+            icon_name = self.get_file_icon(fullpath, mimetype)
+            if os.path.islink(fullpath) and self.icon_theme.has_icon(emblem_icon):
+                pixbuf = self.create_symlink_icon(fullpath, icon_name, emblem_icon)
+            else:
+                pixbuf = self.get_icon_pixbuf(icon_name)
 
         if self.changed_icon_theme:
             mimetype = self.guess_mimetype(fullpath)
             icon_name = self.get_file_icon(fullpath, mimetype)
 
-        if os.path.islink(fullpath) and self.icon_theme.has_icon(emblem_icon):
-            pixbuf = self.create_symlink_icon(fullpath, icon_name, emblem_icon)
-        else:
-            pixbuf = self.get_icon_pixbuf(icon_name)
-
         renderer.set_property('pixbuf', pixbuf)
+
+    def symlink_cell_data_func(self, col, renderer, model, treeiter, data):  # pylint: disable=W0613
+        """Cell Renderer Function for the preview."""
+        fullpath = os.path.join(model[treeiter][3], model[treeiter][1])
+        size = Gtk.icon_size_lookup(Gtk.IconSize.MENU)[1]
+        flag = Gtk.IconLookupFlags.FORCE_SIZE
+        icon = None
+        if os.path.islink(fullpath):
+            icon = self.icon_theme.load_icon('emblem-symbolic-link', size, flag)
+
+        renderer.set_property('pixbuf', icon)
+
 
     def thumbnail_cell_data_func(self, col, renderer, model, treeiter, data):  # pylint: disable=W0613
         """Cell Renderer Function to Thumbnails View."""
         name, size, path, modified = model[treeiter][1:5]
+        fullpath = os.path.join(path, name)
+
         name = escape(name)
-        size = self.format_size(size)
         path = escape(path)
         modified = self.get_date_string(modified)
-        displayed = '<b>%s</b> %s%s%s%s%s' % (name, size, os.linesep, path,
-                                              os.linesep, modified)
+        size = self.format_size(size)
+
+        title_name = _("Name: ")
+        title_path = _("Location: ")
+        title_target = _("Link To: ")
+        title_info = _("Info: ")
+
+        if os.path.islink(fullpath):
+            target = os.readlink(fullpath)
+            details_sym = (title_name, name, os.linesep,
+                           title_path, path, os.linesep,
+                           title_target, target, os.linesep,
+                           title_info, modified, size)
+            displayed = '<b>%s</b>%s%s' \
+                         '<b>%s</b>%s%s' \
+                         '<b>%s</b>%s%s' \
+                         '<b>%s</b>%s (%s)' % details_sym
+
+        else:
+            details_file = (title_name, name, os.linesep,
+                            title_path, path, os.linesep,
+                            title_info, modified, size)
+            displayed = '<b>%s</b>%s%s' \
+                        '<b>%s</b>%s%s' \
+                        '<b>%s</b>%s (%s)' % details_file
+
         renderer.set_property('markup', displayed)
 
     def load_symbolic_icon(self, icon_name, size, state=Gtk.StateFlags.ACTIVE):
@@ -1530,6 +1569,13 @@ class CatfishWindow(Window):
         column = Gtk.TreeViewColumn(_('Preview'), cell)
         self.treeview.append_column(column)
         column.set_cell_data_func(cell, self.preview_cell_data_func, None)
+
+        # Make the Symlink Column
+        cell = Gtk.CellRendererPixbuf()
+        column = Gtk.TreeViewColumn(_('🔗'), cell)
+        self.treeview.append_column(column)
+        column.set_alignment(0.5)
+        column.set_cell_data_func(cell, self.symlink_cell_data_func, None)
 
         # Make the Details Column
         cell = Gtk.CellRendererText()
