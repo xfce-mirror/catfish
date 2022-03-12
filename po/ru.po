@@ -118,7 +118,7 @@ msgstr "Закрывать о_кно поиска при открытии фай
 
 #: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Search within compressed files (.zip, .odt, .docx)"
-msgstr ""
+msgstr "Поиск в сжатых файлах (.zip, .odt, .docx)"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Miscellaneous"
