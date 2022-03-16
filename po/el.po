@@ -7,11 +7,11 @@
 # Georgios Zarkadas <georgios.zarkadas@gmail.com>, 2018
 # Xfce Bot <transifex@xfce.org>, 2018
 # Panagiotis Mantzios <pmantzios@hotmail.com>, 2018
-# Ápo. <apostolos.papadimitriu@gmail.com>, 2019
 # Πέτρος Σαμαράς <psamaras1@gmail.com>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
 # Ioannis LM, 2020
 # Στέργιος Γέμελας <sgemelas@protonmail.com>, 2021
+# Ápo. <apostolos.papadimitriu@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -20,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-05 16:51-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Στέργιος Γέμελας <sgemelas@protonmail.com>, 2021\n"
+"Last-Translator: Ápo. <apostolos.papadimitriu@gmail.com>, 2022\n"
 "Language-Team: Greek (https://www.transifex.com/xfce/teams/16840/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -643,6 +643,10 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Αυτή η έκδοση βελτιώνει την υποστήριξη του διαχειριστή αρχείων, την "
+"υποστήριξη αρχείων zip και τον χειρισμό επιλεγμένων αρχείων. Βελτιώνει "
+"επίσης τις συντομεύσεις πληκτρολογίου για εκκίνηση αναζήτησης ή επιλογή νέας"
+" διαδρομής αναζήτησης."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
