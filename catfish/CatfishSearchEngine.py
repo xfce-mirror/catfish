@@ -345,7 +345,7 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
 
     def __init__(self):
         """Initialize the 'walk' Search Method."""
-        CatfishSearchMethod.__init__(self, "walk")
+        super().__init__("walk")
         self.running = False
 
     def get_dir_list(self, root, dirs, xdg_list,
@@ -488,7 +488,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
 
     def __init__(self):
         """Initialize the 'fulltext' search method."""
-        CatfishSearchMethod.__init__(self, "fulltext")
+        super().__init__("fulltext")
         self.force_stop = False
         self.running = False
         self.exact = False
@@ -658,7 +658,7 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
 
     def __init__(self):
         """Initialize the Zeitgeist SearchMethod."""
-        CatfishSearchMethod.__init__(self, "zeitgeist")
+        super().__init__("zeitgeist")
         self.stop_search = False
         self.events = []
 
@@ -726,7 +726,7 @@ class CatfishSearchMethodExternal(CatfishSearchMethod):
 
     def __init__(self, method_name):
         """Initialize the external method class."""
-        CatfishSearchMethod.__init__(self, method_name)
+        super().__init__(method_name)
         self.pid = -1
         self.command = []
         self.process = None
@@ -791,7 +791,7 @@ class CatfishSearchMethod_Locate(CatfishSearchMethodExternal):
 
     def __init__(self):
         """Initialize the Locate SearchMethod."""
-        CatfishSearchMethodExternal.__init__(self, "locate")
+        super().__init__("locate")
         self.caps = self.get_capabilities()
         if self.caps["existing"]:
             self.command = ["locate", "-i", "%path*%keywords*", "--existing"]
