@@ -798,9 +798,7 @@
                                         <property name="title">column</property>
                                         <property name="expand">True</property>
                                         <child>
-                                          <object class="GtkCellRendererText" id="cellrenderertext1">
-                                            <property name="ellipsize">end</property>
-                                          </object>
+                                          <object class="GtkCellRendererText" id="cellrenderertext1"/>
                                           <attributes>
                                             <attribute name="text">1</attribute>
                                           </attributes>
@@ -809,10 +807,11 @@
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn" id="treeviewcolumn6">
+                                        <property name="sizing">fixed</property>
+                                        <property name="fixed-width">30</property>
                                         <property name="title">column</property>
                                         <child>
                                           <object class="GtkCellRendererPixbuf" id="cellrendererpixbuf3">
-                                            <property name="xpad">6</property>
                                             <property name="icon-name">document-properties-symbolic</property>
                                           </object>
                                           <attributes>
@@ -834,8 +833,8 @@
                                     <property name="can-focus">False</property>
                                     <property name="halign">end</property>
                                     <property name="valign">end</property>
-                                    <property name="margin-end">8</property>
-                                    <property name="margin-bottom">6</property>
+                                    <property name="margin-end">7</property>
+                                    <property name="margin-bottom">8</property>
                                     <property name="xalign">1</property>
                                     <property name="yalign">1</property>
                                     <child>
@@ -939,9 +938,7 @@
                                         <property name="title">column</property>
                                         <property name="expand">True</property>
                                         <child>
-                                          <object class="GtkCellRendererText" id="cellrenderertext2">
-                                            <property name="ellipsize">end</property>
-                                          </object>
+                                          <object class="GtkCellRendererText" id="cellrenderertext2"/>
                                           <attributes>
                                             <attribute name="text">1</attribute>
                                           </attributes>
@@ -950,10 +947,11 @@
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn" id="treeviewcolumn5">
+                                        <property name="sizing">fixed</property>
+                                        <property name="fixed-width">30</property>
                                         <property name="title">column</property>
                                         <child>
                                           <object class="GtkCellRendererPixbuf" id="cellrendererpixbuf4">
-                                            <property name="xpad">6</property>
                                             <property name="icon-name">document-properties-symbolic</property>
                                           </object>
                                           <attributes>
@@ -975,8 +973,8 @@
                                     <property name="can-focus">False</property>
                                     <property name="halign">end</property>
                                     <property name="valign">end</property>
-                                    <property name="margin-right">8</property>
-                                    <property name="margin-bottom">8</property>
+                                    <property name="margin-end">7</property>
+                                    <property name="margin-bottom">10</property>
                                     <property name="xalign">1</property>
                                     <property name="yalign">1</property>
                                     <child>
