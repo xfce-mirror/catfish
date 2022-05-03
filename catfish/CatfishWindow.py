@@ -589,7 +589,7 @@ class CatfishWindow(Window):
             return realpath
         return None
 
-    def parse_path_option(self, options, args):  # pylint: disable=W0613
+    def parse_path_option(self, args):  # pylint: disable=W0613
         # Set the selected folder path. Allow legacy --path option.
         path = None
 
@@ -614,12 +614,31 @@ class CatfishWindow(Window):
 
         return path
 
+    def parse_sort_option(self):
+        column_id, order = None, Gtk.SortType.ASCENDING
+
+        if self.options.sort:
+            args = self.options.sort.lower().split(',')
+            column = args[0]
+            if   column == 'name': column_id = 1
+            elif column == 'size': column_id = 2
+            elif column == 'path': column_id = 3
+            elif column == 'date': column_id = 4
+            elif column == 'type': column_id = 5
+
+            if len(args) > 1 and args[1].startswith('d'):
+                order = Gtk.SortType.DESCENDING
+
+        return (column_id, order)
+
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
         self.options = options
-        self.options.path = self.parse_path_option(options, args)
+        self.options.path = self.parse_path_option(args)
 
         self.folderchooser.set_filename(self.options.path)
+
+        self.sort = self.parse_sort_option()
 
         # Set non-flags as search keywords.
         self.search_entry.set_text(' '.join(args))
@@ -2125,6 +2144,8 @@ class CatfishWindow(Window):
         self.results_filter.set_visible_func(self.results_filter_func)
         sort = Gtk.TreeModelSort(model=self.results_filter)
         sort.set_sort_func(2, self.size_sort_func, None)
+        if self.sort[0]: # command-line sort method
+            sort.set_sort_column_id(self.sort[0], self.sort[1])
         self.treeview.set_model(sort)
         sort.get_model().get_model().clear()
         self.treeview.columns_autosize()
