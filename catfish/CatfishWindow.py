@@ -638,7 +638,7 @@ class CatfishWindow(Window):
             self.options.hidden or
             self.settings.get_setting('show-hidden-files'))
         self.fulltext.set_active(
-            self.options.fulltext or 
+            self.options.fulltext or
             self.settings.get_setting('search-file-contents'))
         self.sidebar_toggle_menu.set_active(
             self.settings.get_setting('show-sidebar'))
@@ -1234,7 +1234,7 @@ class CatfishWindow(Window):
                                 if 'X-XFCE-Commands=' in line:
                                     return CFM
                     return apps['FileManager']
-    
+
         return "Thunar"
 
     def using_thunar_fm(self):
