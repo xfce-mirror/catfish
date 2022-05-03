@@ -1152,6 +1152,7 @@
                             <property name="enable-search">False</property>
                             <property name="rubber-banding">True</property>
                             <property name="enable-grid-lines">vertical</property>
+                            <signal name="key-press-event" handler="on_treeview_key_press_event" swapped="no"/>
                             <signal name="button-release-event" handler="on_treeview_button_press_event" swapped="no"/>
                             <signal name="cursor-changed" handler="on_treeview_cursor_changed" swapped="no"/>
                             <signal name="drag-begin" handler="on_treeview_drag_begin" swapped="no"/>
