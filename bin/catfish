@@ -38,7 +38,7 @@ PROJECT_ROOT_DIRECTORY = os.path.abspath(
     os.path.dirname(os.path.dirname(os.path.realpath(sys.argv[0]))))
 
 # Add project root directory to python search path
-sys.path.append(PROJECT_ROOT_DIRECTORY)
+sys.path.insert(0, PROJECT_ROOT_DIRECTORY)
 
 import catfish
 catfish.main()
