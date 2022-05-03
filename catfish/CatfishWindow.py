@@ -1648,7 +1648,7 @@ class CatfishWindow(Window):
         return 0
 
     def update_treeview_stats(self, treeview, event=None):
-        if event:
+        if event and hasattr(event, 'x'):
             self.treeview_set_cursor_if_unset(treeview,
                                               int(event.x),
                                               int(event.y))
@@ -1735,6 +1735,13 @@ class CatfishWindow(Window):
         else:
             handled = False
         return handled
+
+    def on_treeview_key_press_event(self, treeview, event):
+        if "Control" in self.keys_pressed and "a" in self.keys_pressed:
+            sel = treeview.get_selection()
+            sel.select_all()
+            self.update_treeview_stats(treeview, event)
+        return False
 
     def new_column(self, label, colid, special=None, markup=False):
         """New Column function for creating TreeView columns easily."""
