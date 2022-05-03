@@ -148,6 +148,13 @@
     <property name="use-fallback">True</property>
     <property name="icon_size">1</property>
   </object>
+  <object class="GtkImage" id="file_menu_open_with_icon">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixel-size">16</property>
+    <property name="icon-name">applications-system--symbolic</property>
+    <property name="use-fallback">True</property>
+  </object>
   <object class="GtkImage" id="file_menu_save_icon">
     <property name="visible">True</property>
     <property name="can-focus">False</property>
@@ -167,6 +174,23 @@
         <property name="image">file_menu_open_icon</property>
         <property name="use-stock">False</property>
         <signal name="activate" handler="on_menu_open_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="file_menu_open_with">
+        <property name="label" translatable="yes">_Open with...</property>
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="use-underline">True</property>
+        <property name="image">file_menu_open_with_icon</property>
+        <property name="use-stock">False</property>
+        <signal name="activate" handler="on_menu_open_with_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="file_menu_sep0">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
       </object>
     </child>
     <child>
@@ -216,7 +240,7 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="file_menu_delete">
-        <property name="label" translatable="yes">_Delete</property>
+        <property name="label" translatable="yes">_Delete...</property>
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <property name="use-underline">True</property>
