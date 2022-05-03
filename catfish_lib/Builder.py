@@ -48,7 +48,7 @@ class Builder(Gtk.Builder):
 
     def __init__(self):
         """Initialize the GtkBuilder instance."""
-        Gtk.Builder.__init__(self)
+        super().__init__()
         self.widgets = {}
         self.glade_handler_dict = {}
         self.connections = []
