@@ -339,7 +339,7 @@ class Window(Gtk.Window):
             self.destroy()
             return True
         if "Control" in keys and ("h" in keys or "H" in keys):
-            self.hidden_files.activate()
+            self.hidden_files.clicked()
             return True
         if 'F9' in keys:
             self.on_sidebar_toggle_toggled(widget)
