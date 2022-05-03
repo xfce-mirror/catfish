@@ -37,6 +37,7 @@ DEFAULT_SETTINGS = {
     'match-results-exactly': (bool, False),
     'close-after-select': (bool, False),
     'search-compressed-files': (bool, False),
+    'file-size-binary': (bool, True),
     'window-width': (int, 700),
     'window-height': (int, 540),
     'window-x': (int, -1),
