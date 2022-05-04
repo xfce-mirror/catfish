@@ -8,16 +8,16 @@
 # Xfce Bot <transifex@xfce.org>, 2018
 # Nick Schermer <nick@xfce.org>, 2020
 # Dušan Kazik <prescott66@gmail.com>, 2021
-# Jan Ziak <0xe2.0x9a.0x9b@gmail.com>, 2021
+# Jan Ziak <0xe2.0x9a.0x9b@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-05 16:51-0400\n"
+"POT-Creation-Date: 2022-05-03 17:19-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Jan Ziak <0xe2.0x9a.0x9b@gmail.com>, 2021\n"
+"Last-Translator: Jan Ziak <0xe2.0x9a.0x9b@gmail.com>, 2022\n"
 "Language-Team: Slovak (https://www.transifex.com/xfce/teams/16840/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Language: sk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:34
+#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:35
 #: ../catfish_lib/catfishconfig.py:88
 msgid "Catfish File Search"
 msgstr "Vyhľadávač súborov Catfish"
@@ -78,50 +78,58 @@ msgid "Show filter _sidebar"
 msgstr "Zobraziť postranný panel _filtrovania"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
+msgid "Show file sizes in binary format"
+msgstr "Zobraziť veľkosti súborov v binárnom formáte"
+
+#: ../data/ui/CatfishPreferences.ui.h:10
+msgid "Uncheck to show file size in decimal format"
+msgstr "Zrušením začiarknutia sa veľkosť súboru zobrazí v desiatkovom formáte"
+
+#: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
 msgstr "Voľby zobrazenia"
 
-#: ../data/ui/CatfishPreferences.ui.h:10
+#: ../data/ui/CatfishPreferences.ui.h:12
 msgid "Appearance"
 msgstr "Vzhľad"
 
-#: ../data/ui/CatfishPreferences.ui.h:11
+#: ../data/ui/CatfishPreferences.ui.h:13
 msgid "Path"
 msgstr "Cesta"
 
-#: ../data/ui/CatfishPreferences.ui.h:12
+#: ../data/ui/CatfishPreferences.ui.h:14
 msgid "Add Directory..."
 msgstr "Pridá adresár..."
 
-#: ../data/ui/CatfishPreferences.ui.h:13
+#: ../data/ui/CatfishPreferences.ui.h:15
 msgid "_Add"
 msgstr "_Pridať"
 
-#: ../data/ui/CatfishPreferences.ui.h:14
+#: ../data/ui/CatfishPreferences.ui.h:16
 msgid "Remove Directory"
 msgstr "Odstráni adresár"
 
-#: ../data/ui/CatfishPreferences.ui.h:15
+#: ../data/ui/CatfishPreferences.ui.h:17
 msgid "_Remove"
 msgstr "O_dstrániť"
 
-#: ../data/ui/CatfishPreferences.ui.h:16
+#: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Exclude Directories"
 msgstr "Vylúčené adresáre"
 
-#: ../data/ui/CatfishPreferences.ui.h:17
+#: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Close the search _window after opening a file"
 msgstr "Zavrieť _okno vyhľadávanie po otvorení súboru"
 
-#: ../data/ui/CatfishPreferences.ui.h:18
+#: ../data/ui/CatfishPreferences.ui.h:20
 msgid "Search within compressed files (.zip, .odt, .docx)"
 msgstr "Hľadať v komprimovaných súboroch (.zip, .odt, .docx)"
 
-#: ../data/ui/CatfishPreferences.ui.h:19
+#: ../data/ui/CatfishPreferences.ui.h:21
 msgid "Miscellaneous"
 msgstr "Rôzne"
 
-#: ../data/ui/CatfishPreferences.ui.h:20
+#: ../data/ui/CatfishPreferences.ui.h:22
 msgid "Advanced"
 msgstr "Rozšírené"
 
@@ -135,7 +143,7 @@ msgstr "Priečinok sa nenašiel!"
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:766
+#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:787
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -148,135 +156,139 @@ msgstr "Vyberte priečinok"
 msgid "_Open"
 msgstr "_Otvoriť"
 
+#: ../data/ui/CatfishWindow.ui.h:6
+msgid "_Open with..."
+msgstr "_Otvoriť pomocou..."
+
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
-#: ../data/ui/CatfishWindow.ui.h:7
+#: ../data/ui/CatfishWindow.ui.h:8
 msgid "Show in _File Manager"
 msgstr "Zobraziť v _Správcovi súborov"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
-#: ../data/ui/CatfishWindow.ui.h:9
+#: ../data/ui/CatfishWindow.ui.h:10
 msgid "_Copy Location"
 msgstr "_Kopírovať umiestnenie"
 
-#: ../data/ui/CatfishWindow.ui.h:10
+#: ../data/ui/CatfishWindow.ui.h:11
 msgid "_Save as..."
 msgstr "_Uložiť ako..."
 
-#: ../data/ui/CatfishWindow.ui.h:11
-msgid "_Delete"
-msgstr "O_dstrániť"
-
 #: ../data/ui/CatfishWindow.ui.h:12
+msgid "_Delete..."
+msgstr "_Vymazať..."
+
+#: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
 msgstr "Prípony súborov"
 
-#: ../data/ui/CatfishWindow.ui.h:13
+#: ../data/ui/CatfishWindow.ui.h:14
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr "Zadajte čiarkami oddelený zoznam prípon súborov (napr. odt, png, txt)"
 
-#: ../data/ui/CatfishWindow.ui.h:14
+#: ../data/ui/CatfishWindow.ui.h:15
 msgid "Documents"
 msgstr "Dokumenty"
 
-#: ../data/ui/CatfishWindow.ui.h:15
+#: ../data/ui/CatfishWindow.ui.h:16
 msgid "Folders"
 msgstr "Priečinky"
 
-#: ../data/ui/CatfishWindow.ui.h:16
+#: ../data/ui/CatfishWindow.ui.h:17
 msgid "Images"
 msgstr "Obrázky"
 
-#: ../data/ui/CatfishWindow.ui.h:17
+#: ../data/ui/CatfishWindow.ui.h:18
 msgid "Music"
 msgstr "Hudba"
 
-#: ../data/ui/CatfishWindow.ui.h:18
+#: ../data/ui/CatfishWindow.ui.h:19
 msgid "Videos"
 msgstr "Videá"
 
-#: ../data/ui/CatfishWindow.ui.h:19
+#: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: ../data/ui/CatfishWindow.ui.h:20
+#: ../data/ui/CatfishWindow.ui.h:21
 msgid "Other"
 msgstr "Iné"
 
-#: ../data/ui/CatfishWindow.ui.h:21
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "Any time"
 msgstr "Kedykoľvek"
 
-#: ../data/ui/CatfishWindow.ui.h:22 ../catfish/CatfishWindow.py:1775
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1872
 msgid "Today"
 msgstr "Dnes"
 
-#: ../data/ui/CatfishWindow.ui.h:23
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "This week"
 msgstr "Tento týždeň"
 
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:25
 msgid "This month"
 msgstr "Tento mesiac"
 
-#: ../data/ui/CatfishWindow.ui.h:25
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "Custom"
 msgstr "Vlastné"
 
-#: ../data/ui/CatfishWindow.ui.h:26
+#: ../data/ui/CatfishWindow.ui.h:27
 msgid "Go to Today"
 msgstr "Prejsť na dnešok"
 
-#: ../data/ui/CatfishWindow.ui.h:27
+#: ../data/ui/CatfishWindow.ui.h:28
 msgid "<b>Start Date</b>"
 msgstr "<b>Počiatočný dátum</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "<b>End Date</b>"
 msgstr "<b>Koncový dátum</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:29 ../catfish_lib/Window.py:231
+#: ../data/ui/CatfishWindow.ui.h:30 ../catfish_lib/Window.py:231
 msgid "Catfish"
 msgstr "Catfish"
 
-#: ../data/ui/CatfishWindow.ui.h:30
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "Update"
 msgstr "Aktualizovať"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:32
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr "Databáza vyhľadávania je staršia ako 7 dní. Má sa teraz aktualizovať?"
 
-#: ../data/ui/CatfishWindow.ui.h:32
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "File Type"
 msgstr "Typ súboru"
 
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:1520
+#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1589
 msgid "Modified"
 msgstr "Zmenený"
 
-#: ../data/ui/CatfishWindow.ui.h:35 ../catfish/CatfishWindow.py:2025
+#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2128
 msgid "Results will be displayed as soon as they are found."
 msgstr "Výsledky budú zobrazené okamžite, ako sa niečo nájde."
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "Unlock"
 msgstr "Odomknúť"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "<b>Database:</b>"
 msgstr "<b>Databáza:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "<b>Updated:</b>"
 msgstr "<b>Aktualizovaná:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Aktualizácia databázy vyhľadávania</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -284,47 +296,47 @@ msgstr ""
 "Pre rýchlejšie výsledky vyhľadávania musí byť databáza vyhľadávania obnovená.\n"
 "Tento úkon vyžaduje práva správcu."
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "Update Search Database"
 msgstr "Aktualizácia databázy vyhľadávania"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "Search for files"
 msgstr "Vyhľadajte súbory"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "Compact List"
 msgstr "Kompaktný zoznam"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "Thumbnails"
 msgstr "Miniatúry"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid "Show _sidebar"
 msgstr "Zobraziť po_stranný panel"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:48
 msgid "Show _hidden files"
 msgstr "Zobraziť _skryté súbory"
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:49
 msgid "Search file _contents"
 msgstr "Vyhľadať o_bsah súborov"
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:50
 msgid "_Match results exactly"
 msgstr "Vy_hľadať presnú zhodu"
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:51
 msgid "_Refresh search index..."
 msgstr "_Obnoviť index vyhľadávania..."
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:52
 msgid "_Preferences"
 msgstr "Nas_tavenia"
 
-#: ../data/ui/CatfishWindow.ui.h:52
+#: ../data/ui/CatfishWindow.ui.h:53
 msgid "_About"
 msgstr "_O aplikácii"
 
@@ -373,6 +385,12 @@ msgstr ""
 "Ak je poskytnutá cesta a požiadavka, začne vyhľadávanie po zobrazení "
 "aplikácie."
 
+#: ../catfish/__init__.py:63
+msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
+msgstr ""
+"nastaviť predvolený stĺpec na triedenie podľa "
+"(názov|veľkosť|cesta|dátum|typ),(vzostup|zostup)"
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
 #: ../catfish/CatfishWindow.py:107
@@ -388,15 +406,15 @@ msgstr ""
 "Tomáš Vadina <kyberdev@gmail.com>\n"
 "Dušan Kazik <prescott66@gmail.com>"
 
-#: ../catfish/CatfishWindow.py:295
+#: ../catfish/CatfishWindow.py:297
 msgid "Unknown"
 msgstr "Neznáme"
 
-#: ../catfish/CatfishWindow.py:299
+#: ../catfish/CatfishWindow.py:301
 msgid "Never"
 msgstr "Nikdy"
 
-#: ../catfish/CatfishWindow.py:409
+#: ../catfish/CatfishWindow.py:411
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -405,37 +423,37 @@ msgstr ""
 "Vyššie zadajte vašu požiadavku na nájdenie súborov,\n"
 "alebo kliknite na ikonu %s pre viac volieb."
 
-#: ../catfish/CatfishWindow.py:781
+#: ../catfish/CatfishWindow.py:802
 msgid "An error occurred while updating the database."
 msgstr "Počas aktualizácie databázy sa vyskytla chyba."
 
-#: ../catfish/CatfishWindow.py:783
+#: ../catfish/CatfishWindow.py:804
 msgid "Authentication failed."
 msgstr "Overenie zlyhalo."
 
-#: ../catfish/CatfishWindow.py:789
+#: ../catfish/CatfishWindow.py:810
 msgid "Authentication cancelled."
 msgstr "Overenie totožnosti zrušené."
 
-#: ../catfish/CatfishWindow.py:795
+#: ../catfish/CatfishWindow.py:816
 msgid "Search database updated successfully."
 msgstr "Databáza bola úspešne aktualizovaná."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:856
+#: ../catfish/CatfishWindow.py:877
 msgid "Close"
 msgstr "Zatvoriť"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:870
+#: ../catfish/CatfishWindow.py:891
 msgid "Updating..."
 msgstr "Aktualizuje sa..."
 
-#: ../catfish/CatfishWindow.py:904
+#: ../catfish/CatfishWindow.py:926
 msgid "Stop Search"
 msgstr "Zastaviť vyhľadávanie"
 
-#: ../catfish/CatfishWindow.py:905
+#: ../catfish/CatfishWindow.py:927
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -443,39 +461,39 @@ msgstr ""
 "Prebieha vyhľadávanie...\n"
 "Vyhľadávanie zrušíte stlačením tlačidla zrušiť alebo klávesy Escape."
 
-#: ../catfish/CatfishWindow.py:914
+#: ../catfish/CatfishWindow.py:938
 msgid "Begin Search"
 msgstr "Spustí vyhľadávanie"
 
-#: ../catfish/CatfishWindow.py:1032
+#: ../catfish/CatfishWindow.py:1062
 msgid "No folder selected."
 msgstr "Nie je vybratý žiadny priečinok."
 
-#: ../catfish/CatfishWindow.py:1037
+#: ../catfish/CatfishWindow.py:1067
 msgid "Folder not found."
 msgstr "Priečinok sa nenašiel."
 
-#: ../catfish/CatfishWindow.py:1267
+#: ../catfish/CatfishWindow.py:1298
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Nepodarilo sa otvoriť „%s“."
 
-#: ../catfish/CatfishWindow.py:1393
+#: ../catfish/CatfishWindow.py:1451
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Nepodarilo sa uložiť „%s“."
 
-#: ../catfish/CatfishWindow.py:1410
+#: ../catfish/CatfishWindow.py:1468
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Nepodarilo sa odstrániť „%s“."
 
-#: ../catfish/CatfishWindow.py:1449
+#: ../catfish/CatfishWindow.py:1507
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Uloženie „%s“ ako..."
 
-#: ../catfish/CatfishWindow.py:1484
+#: ../catfish/CatfishWindow.py:1542
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -484,7 +502,7 @@ msgstr ""
 "Ste si istý, že chcete natrvalo \n"
 "odstrániť „%s“?"
 
-#: ../catfish/CatfishWindow.py:1488
+#: ../catfish/CatfishWindow.py:1546
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -493,39 +511,47 @@ msgstr ""
 "Ste si istý, že chcete natrvalo zmazať \n"
 "%i vybraných súborov?"
 
-#: ../catfish/CatfishWindow.py:1491
+#: ../catfish/CatfishWindow.py:1549
 msgid "If you delete a file, it is permanently lost."
 msgstr "Ak súbor vymažete, bude nenávratne stratený."
 
-#: ../catfish/CatfishWindow.py:1514
+#: ../catfish/CatfishWindow.py:1583
 msgid "Filename"
 msgstr "Názov súboru"
 
-#: ../catfish/CatfishWindow.py:1516
+#: ../catfish/CatfishWindow.py:1585
 msgid "Size"
 msgstr "Veľkosť"
 
-#: ../catfish/CatfishWindow.py:1518
+#: ../catfish/CatfishWindow.py:1587
 msgid "Location"
 msgstr "Umiestnenie"
 
-#: ../catfish/CatfishWindow.py:1530
+#: ../catfish/CatfishWindow.py:1599
 msgid "Preview"
 msgstr "Náhľad"
 
-#: ../catfish/CatfishWindow.py:1537
+#: ../catfish/CatfishWindow.py:1606
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: ../catfish/CatfishWindow.py:1777
+#: ../catfish/CatfishWindow.py:1791
+msgid "Open with default applications"
+msgstr "Otvoriť pomocou predvolených aplikácií"
+
+#: ../catfish/CatfishWindow.py:1807
+msgid "Open with"
+msgstr "Otvoriť pomocou"
+
+#: ../catfish/CatfishWindow.py:1874
 msgid "Yesterday"
 msgstr "Včera"
 
-#: ../catfish/CatfishWindow.py:1858
+#: ../catfish/CatfishWindow.py:1955
 msgid "No files found."
 msgstr "Žiadny súbor sa nenašiel."
 
-#: ../catfish/CatfishWindow.py:1860
+#: ../catfish/CatfishWindow.py:1957
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -533,29 +559,29 @@ msgstr ""
 "Skúste menej špecifikovať vaše vyhľadávanie\n"
 "alebo skúste iný adresár."
 
-#: ../catfish/CatfishWindow.py:1867
+#: ../catfish/CatfishWindow.py:1964
 msgid "1 file found."
 msgstr "Našiel sa jeden súbor."
 
-#: ../catfish/CatfishWindow.py:1869
+#: ../catfish/CatfishWindow.py:1966
 #, python-format
 msgid "%i files found."
 msgstr "%i súborov nájdených."
 
-#: ../catfish/CatfishWindow.py:1875
+#: ../catfish/CatfishWindow.py:1975 ../catfish/CatfishWindow.py:1978
 msgid "bytes"
 msgstr "bajtov"
 
-#: ../catfish/CatfishWindow.py:2023 ../catfish/CatfishWindow.py:2033
+#: ../catfish/CatfishWindow.py:2126 ../catfish/CatfishWindow.py:2136
 msgid "Searching..."
 msgstr "Vyhľadáva sa..."
 
-#: ../catfish/CatfishWindow.py:2031
+#: ../catfish/CatfishWindow.py:2134
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Vyhľadáva sa „%s“"
 
-#: ../catfish/CatfishWindow.py:2137
+#: ../catfish/CatfishWindow.py:2242
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Výsledky vyhľadávania „%s“"
@@ -747,6 +773,8 @@ msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
+"Toto vydanie obsahuje niekoľko vylepšení výkonu a množstvo aktualizácií "
+"prekladov."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
@@ -777,6 +805,11 @@ msgid ""
 "headerbars and popover widgets. Password handling has been improved with the"
 " integration of PolicyKit when available."
 msgstr ""
+"Toto vydanie obsahuje významnú aktualizáciu rozhrania, zlepšuje rýchlosť "
+"vyhľadávania a opravuje niekoľko chýb. Pracovný postup bol vylepšený, "
+"využívajúc niektoré z najnovších funkcií súpravy nástrojov GTK+, vrátane "
+"voliteľných hlavičiek a kontextových okien. Spracovanie hesiel bolo "
+"vylepšené integráciou PolicyKit, keď je k dispozícii."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid "This release fixes two new bugs and includes updated translations."
@@ -795,12 +828,18 @@ msgid ""
 "supported. An InfoBar is now displayed when the search database is outdated,"
 " and the dialogs used to update the database have been improved."
 msgstr ""
+"Toto vydanie opravuje regresiu funkcionality, po ktorej už nebolo "
+"podporované vyhľadávanie s viacerými výrazmi. Keď je vyhľadávacia databáza "
+"zastaraná, zobrazí sa informačný panel, a boli vylepšené dialógové okná "
+"používané na aktualizáciu databázy."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
+"Toto vydanie opravuje dva problémy, pri ktorých lokalizácia nebola vykonaná "
+"správne, a zlepšuje spracovanie chýbajúcich symbolických ikon."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:26
 msgid ""
@@ -828,3 +867,8 @@ msgid ""
 "distributions. Accessibility was enhanced as all strings have been made "
 "translatable and keyboard accelerators have been improved."
 msgstr ""
+"Prvé vydanie zo série 1.0.x zaviedlo aktualizované rozhranie a opravilo "
+"množstvo dlhotrvajúcich chýb. Vylepšenia predvolených povolení odstránili "
+"množstvo upozornení pri vytváraní balíkov pre distribúcie. Zlepšila sa "
+"prístupnosť, pretože sa stali preložiteľnými všetky reťazce, a boli "
+"vylepšené klávesové akcelerátory."
