@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-05 16:51-0400\n"
+"POT-Creation-Date: 2022-05-03 17:19-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/xfce/teams/16840/ja/)\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:34
+#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:35
 #: ../catfish_lib/catfishconfig.py:88
 msgid "Catfish File Search"
 msgstr "Catfish ファイル検索"
@@ -79,50 +79,58 @@ msgid "Show filter _sidebar"
 msgstr "フィルターサイドバーを表示(_S)"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
+msgid "Show file sizes in binary format"
+msgstr ""
+
+#: ../data/ui/CatfishPreferences.ui.h:10
+msgid "Uncheck to show file size in decimal format"
+msgstr ""
+
+#: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
 msgstr "表示オプション"
 
-#: ../data/ui/CatfishPreferences.ui.h:10
+#: ../data/ui/CatfishPreferences.ui.h:12
 msgid "Appearance"
 msgstr "外観"
 
-#: ../data/ui/CatfishPreferences.ui.h:11
+#: ../data/ui/CatfishPreferences.ui.h:13
 msgid "Path"
 msgstr "パス"
 
-#: ../data/ui/CatfishPreferences.ui.h:12
+#: ../data/ui/CatfishPreferences.ui.h:14
 msgid "Add Directory..."
 msgstr "ディレクトリを追加..."
 
-#: ../data/ui/CatfishPreferences.ui.h:13
+#: ../data/ui/CatfishPreferences.ui.h:15
 msgid "_Add"
 msgstr "追加(_A)"
 
-#: ../data/ui/CatfishPreferences.ui.h:14
+#: ../data/ui/CatfishPreferences.ui.h:16
 msgid "Remove Directory"
 msgstr "ディレクトリを削除"
 
-#: ../data/ui/CatfishPreferences.ui.h:15
+#: ../data/ui/CatfishPreferences.ui.h:17
 msgid "_Remove"
 msgstr "削除(_R)"
 
-#: ../data/ui/CatfishPreferences.ui.h:16
+#: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Exclude Directories"
 msgstr "ディレクトリを除外"
 
-#: ../data/ui/CatfishPreferences.ui.h:17
+#: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Close the search _window after opening a file"
 msgstr "ファイルを開いた後に検索ウィンドウを閉じる(_W)"
 
-#: ../data/ui/CatfishPreferences.ui.h:18
+#: ../data/ui/CatfishPreferences.ui.h:20
 msgid "Search within compressed files (.zip, .odt, .docx)"
 msgstr "圧縮ファイル (.zip, .odt, .docx) 内を検索"
 
-#: ../data/ui/CatfishPreferences.ui.h:19
+#: ../data/ui/CatfishPreferences.ui.h:21
 msgid "Miscellaneous"
 msgstr "その他"
 
-#: ../data/ui/CatfishPreferences.ui.h:20
+#: ../data/ui/CatfishPreferences.ui.h:22
 msgid "Advanced"
 msgstr "詳細"
 
@@ -136,7 +144,7 @@ msgstr "フォルダーが見つかりません！"
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:766
+#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:787
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "キャンセル"
@@ -149,135 +157,139 @@ msgstr "フォルダーを選択"
 msgid "_Open"
 msgstr "開く(_O)"
 
+#: ../data/ui/CatfishWindow.ui.h:6
+msgid "_Open with..."
+msgstr ""
+
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
-#: ../data/ui/CatfishWindow.ui.h:7
+#: ../data/ui/CatfishWindow.ui.h:8
 msgid "Show in _File Manager"
 msgstr "ファイルマネージャーで開く(_F)"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
-#: ../data/ui/CatfishWindow.ui.h:9
+#: ../data/ui/CatfishWindow.ui.h:10
 msgid "_Copy Location"
 msgstr "位置のコピー(_C)"
 
-#: ../data/ui/CatfishWindow.ui.h:10
+#: ../data/ui/CatfishWindow.ui.h:11
 msgid "_Save as..."
 msgstr "別名で保存(_S)..."
 
-#: ../data/ui/CatfishWindow.ui.h:11
-msgid "_Delete"
-msgstr "削除(_D)"
-
 #: ../data/ui/CatfishWindow.ui.h:12
+msgid "_Delete..."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
 msgstr "ファイル拡張子"
 
-#: ../data/ui/CatfishWindow.ui.h:13
+#: ../data/ui/CatfishWindow.ui.h:14
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr "ファイル拡張子のリストをコンマ区切りで入力してください（例: odt, png, txt）"
 
-#: ../data/ui/CatfishWindow.ui.h:14
+#: ../data/ui/CatfishWindow.ui.h:15
 msgid "Documents"
 msgstr "文書"
 
-#: ../data/ui/CatfishWindow.ui.h:15
+#: ../data/ui/CatfishWindow.ui.h:16
 msgid "Folders"
 msgstr "フォルダー"
 
-#: ../data/ui/CatfishWindow.ui.h:16
+#: ../data/ui/CatfishWindow.ui.h:17
 msgid "Images"
 msgstr "画像"
 
-#: ../data/ui/CatfishWindow.ui.h:17
+#: ../data/ui/CatfishWindow.ui.h:18
 msgid "Music"
 msgstr "音楽"
 
-#: ../data/ui/CatfishWindow.ui.h:18
+#: ../data/ui/CatfishWindow.ui.h:19
 msgid "Videos"
 msgstr "動画"
 
-#: ../data/ui/CatfishWindow.ui.h:19
+#: ../data/ui/CatfishWindow.ui.h:20
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: ../data/ui/CatfishWindow.ui.h:20
+#: ../data/ui/CatfishWindow.ui.h:21
 msgid "Other"
 msgstr "その他"
 
-#: ../data/ui/CatfishWindow.ui.h:21
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "Any time"
 msgstr "時刻指定なし"
 
-#: ../data/ui/CatfishWindow.ui.h:22 ../catfish/CatfishWindow.py:1775
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1872
 msgid "Today"
 msgstr "今日"
 
-#: ../data/ui/CatfishWindow.ui.h:23
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "This week"
 msgstr "今週"
 
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:25
 msgid "This month"
 msgstr "今月"
 
-#: ../data/ui/CatfishWindow.ui.h:25
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "Custom"
 msgstr "カスタム"
 
-#: ../data/ui/CatfishWindow.ui.h:26
+#: ../data/ui/CatfishWindow.ui.h:27
 msgid "Go to Today"
 msgstr "今日へ移動"
 
-#: ../data/ui/CatfishWindow.ui.h:27
+#: ../data/ui/CatfishWindow.ui.h:28
 msgid "<b>Start Date</b>"
 msgstr "<b>開始日</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "<b>End Date</b>"
 msgstr "<b>終了日</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:29 ../catfish_lib/Window.py:231
+#: ../data/ui/CatfishWindow.ui.h:30 ../catfish_lib/Window.py:231
 msgid "Catfish"
 msgstr "Catfish"
 
-#: ../data/ui/CatfishWindow.ui.h:30
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "Update"
 msgstr "アップデート"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:32
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr "検索データベースは 7 日以上更新されていません。今すぐアップデートしますか？"
 
-#: ../data/ui/CatfishWindow.ui.h:32
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "File Type"
 msgstr "ファイル形式"
 
-#: ../data/ui/CatfishWindow.ui.h:33 ../catfish/CatfishWindow.py:1520
+#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1589
 msgid "Modified"
 msgstr "修正日"
 
-#: ../data/ui/CatfishWindow.ui.h:35 ../catfish/CatfishWindow.py:2025
+#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2128
 msgid "Results will be displayed as soon as they are found."
 msgstr "結果は発見し次第表示されます。"
 
-#: ../data/ui/CatfishWindow.ui.h:36
+#: ../data/ui/CatfishWindow.ui.h:37
 msgid "Unlock"
 msgstr "ロックの解除"
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:38
 msgid "<b>Database:</b>"
 msgstr "<b>データベース:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "<b>Updated:</b>"
 msgstr "<b>アップデート:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>検索データベースのアップデート</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -285,47 +297,47 @@ msgstr ""
 "検索結果を速く表示するために、検索データベースを更新する必要があります。\n"
 "このためには管理者権限が必要です。"
 
-#: ../data/ui/CatfishWindow.ui.h:42
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid "Update Search Database"
 msgstr "検索データベースのアップデート"
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:44
 msgid "Search for files"
 msgstr "ファイルを検索します"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "Compact List"
 msgstr "コンパクトリスト"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "Thumbnails"
 msgstr "サムネイル"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid "Show _sidebar"
 msgstr "サイドバーを表示(_S)"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:48
 msgid "Show _hidden files"
 msgstr "隠しファイルを表示する(_H)"
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:49
 msgid "Search file _contents"
 msgstr "ファイルの内容を検索(_C)"
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:50
 msgid "_Match results exactly"
 msgstr "正確に一致(_M)"
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:51
 msgid "_Refresh search index..."
 msgstr "検索インデックスを更新(_R)..."
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:52
 msgid "_Preferences"
 msgstr "設定(_P)"
 
-#: ../data/ui/CatfishWindow.ui.h:52
+#: ../data/ui/CatfishWindow.ui.h:53
 msgid "_About"
 msgstr "このアプリケーションについて(_A)"
 
@@ -372,6 +384,10 @@ msgid ""
 "displayed."
 msgstr "パスと検索クエリが指定されているならば、プログラムが表示された時に検索を開始します。"
 
+#: ../catfish/__init__.py:63
+msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
+msgstr ""
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
 #: ../catfish/CatfishWindow.py:107
@@ -387,15 +403,15 @@ msgstr ""
 "Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2008.\n"
 "Masato Hashimoto <hashimo@xfce.org>, 2012, 2014."
 
-#: ../catfish/CatfishWindow.py:295
+#: ../catfish/CatfishWindow.py:297
 msgid "Unknown"
 msgstr "不明"
 
-#: ../catfish/CatfishWindow.py:299
+#: ../catfish/CatfishWindow.py:301
 msgid "Never"
 msgstr "しない"
 
-#: ../catfish/CatfishWindow.py:409
+#: ../catfish/CatfishWindow.py:411
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -404,37 +420,37 @@ msgstr ""
 "上にクエリを入力してファイルを見つけるか、\n"
 "%s アイコンをクリックしてその他のオプションを選択してください。"
 
-#: ../catfish/CatfishWindow.py:781
+#: ../catfish/CatfishWindow.py:802
 msgid "An error occurred while updating the database."
 msgstr "データベースのアップデート中にエラーが発生しました。"
 
-#: ../catfish/CatfishWindow.py:783
+#: ../catfish/CatfishWindow.py:804
 msgid "Authentication failed."
 msgstr "認証に失敗しました。"
 
-#: ../catfish/CatfishWindow.py:789
+#: ../catfish/CatfishWindow.py:810
 msgid "Authentication cancelled."
 msgstr "認証はキャンセルされました。"
 
-#: ../catfish/CatfishWindow.py:795
+#: ../catfish/CatfishWindow.py:816
 msgid "Search database updated successfully."
 msgstr "検索データベースはアップデートされました。"
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:856
+#: ../catfish/CatfishWindow.py:877
 msgid "Close"
 msgstr "閉じる"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:870
+#: ../catfish/CatfishWindow.py:891
 msgid "Updating..."
 msgstr "アップデート中..."
 
-#: ../catfish/CatfishWindow.py:904
+#: ../catfish/CatfishWindow.py:926
 msgid "Stop Search"
 msgstr "検索を停止"
 
-#: ../catfish/CatfishWindow.py:905
+#: ../catfish/CatfishWindow.py:927
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -442,39 +458,39 @@ msgstr ""
 "検索中...\n"
 "中止するにはキャンセルボタンをクリックするかEscキーを押してください。"
 
-#: ../catfish/CatfishWindow.py:914
+#: ../catfish/CatfishWindow.py:938
 msgid "Begin Search"
 msgstr "検索を開始"
 
-#: ../catfish/CatfishWindow.py:1032
+#: ../catfish/CatfishWindow.py:1062
 msgid "No folder selected."
 msgstr "フォルダーが選択されていません。"
 
-#: ../catfish/CatfishWindow.py:1037
+#: ../catfish/CatfishWindow.py:1067
 msgid "Folder not found."
 msgstr "フォルダーが見つかりません。"
 
-#: ../catfish/CatfishWindow.py:1267
+#: ../catfish/CatfishWindow.py:1298
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" を開けませんでした。"
 
-#: ../catfish/CatfishWindow.py:1393
+#: ../catfish/CatfishWindow.py:1451
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" は保存されていません。"
 
-#: ../catfish/CatfishWindow.py:1410
+#: ../catfish/CatfishWindow.py:1468
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" は削除できません。"
 
-#: ../catfish/CatfishWindow.py:1449
+#: ../catfish/CatfishWindow.py:1507
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "\"%s\" を別名で保存..."
 
-#: ../catfish/CatfishWindow.py:1484
+#: ../catfish/CatfishWindow.py:1542
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -483,7 +499,7 @@ msgstr ""
 "本当に \"%s\" を\n"
 "完全に削除しますか？"
 
-#: ../catfish/CatfishWindow.py:1488
+#: ../catfish/CatfishWindow.py:1546
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -492,39 +508,47 @@ msgstr ""
 "本当に %i 個のファイルを\n"
 "完全に削除しますか？"
 
-#: ../catfish/CatfishWindow.py:1491
+#: ../catfish/CatfishWindow.py:1549
 msgid "If you delete a file, it is permanently lost."
 msgstr "削除されたファイルは二度と復元できません。"
 
-#: ../catfish/CatfishWindow.py:1514
+#: ../catfish/CatfishWindow.py:1583
 msgid "Filename"
 msgstr "ファイル名"
 
-#: ../catfish/CatfishWindow.py:1516
+#: ../catfish/CatfishWindow.py:1585
 msgid "Size"
 msgstr "サイズ"
 
-#: ../catfish/CatfishWindow.py:1518
+#: ../catfish/CatfishWindow.py:1587
 msgid "Location"
 msgstr "位置"
 
-#: ../catfish/CatfishWindow.py:1530
+#: ../catfish/CatfishWindow.py:1599
 msgid "Preview"
 msgstr "プレビュー"
 
-#: ../catfish/CatfishWindow.py:1537
+#: ../catfish/CatfishWindow.py:1606
 msgid "Details"
 msgstr "詳細"
 
-#: ../catfish/CatfishWindow.py:1777
+#: ../catfish/CatfishWindow.py:1791
+msgid "Open with default applications"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1807
+msgid "Open with"
+msgstr ""
+
+#: ../catfish/CatfishWindow.py:1874
 msgid "Yesterday"
 msgstr "昨日"
 
-#: ../catfish/CatfishWindow.py:1858
+#: ../catfish/CatfishWindow.py:1955
 msgid "No files found."
 msgstr "ファイルが一つも見つかりません。"
 
-#: ../catfish/CatfishWindow.py:1860
+#: ../catfish/CatfishWindow.py:1957
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -532,29 +556,29 @@ msgstr ""
 "検索語を減らすか、\n"
 "ほかのフォルダーを検索してください。"
 
-#: ../catfish/CatfishWindow.py:1867
+#: ../catfish/CatfishWindow.py:1964
 msgid "1 file found."
 msgstr "1つのファイルを発見。"
 
-#: ../catfish/CatfishWindow.py:1869
+#: ../catfish/CatfishWindow.py:1966
 #, python-format
 msgid "%i files found."
 msgstr "%i つのファイルを発見。"
 
-#: ../catfish/CatfishWindow.py:1875
+#: ../catfish/CatfishWindow.py:1975 ../catfish/CatfishWindow.py:1978
 msgid "bytes"
 msgstr "bytes"
 
-#: ../catfish/CatfishWindow.py:2023 ../catfish/CatfishWindow.py:2033
+#: ../catfish/CatfishWindow.py:2126 ../catfish/CatfishWindow.py:2136
 msgid "Searching..."
 msgstr "検索しています..."
 
-#: ../catfish/CatfishWindow.py:2031
+#: ../catfish/CatfishWindow.py:2134
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "\"%s\" を検索中"
 
-#: ../catfish/CatfishWindow.py:2137
+#: ../catfish/CatfishWindow.py:2242
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "\"%s\" の検索結果"
