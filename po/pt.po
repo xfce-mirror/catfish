@@ -9,7 +9,7 @@
 # Sérgio Marques <smarquespt@gmail.com>, 2020
 # Nuno Miguel <nunomgue@gmail.com>, 2020
 # José Vieira <jvieira33@sapo.pt>, 2021
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-03 17:19-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2021\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2022\n"
 "Language-Team: Portuguese (https://www.transifex.com/xfce/teams/16840/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,7 +55,7 @@ msgstr "Fe_char"
 
 #: ../data/ui/CatfishPreferences.ui.h:3
 msgid "Classic (_Titlebar)"
-msgstr "Clássica (Barra de _título)"
+msgstr "Clássico (Barra de _título)"
 
 #: ../data/ui/CatfishPreferences.ui.h:4
 msgid "_Modern (CSD)"
@@ -79,11 +79,11 @@ msgstr "Mo_strar filtro barra lateral"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Mostrar tamanhos de ficheiros em formato binário"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Desmarcar para mostrar o tamanho do ficheiro em formato decimal"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -158,7 +158,7 @@ msgstr "Abrir"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Open with..."
-msgstr ""
+msgstr "Abrir c_om..."
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -178,7 +178,7 @@ msgstr "Guardar como..."
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "_Delete..."
-msgstr ""
+msgstr "_Eliminar..."
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
@@ -340,7 +340,7 @@ msgstr "_Preferências"
 
 #: ../data/ui/CatfishWindow.ui.h:53
 msgid "_About"
-msgstr "_Sobre"
+msgstr "_Acerca"
 
 #: ../catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
@@ -391,6 +391,8 @@ msgstr ""
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"definir uma coluna predefinida para ordenar por "
+"(nome|tamanho|caminho|data|tipo),(asc|desc)"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -536,11 +538,11 @@ msgstr "Detalhes"
 
 #: ../catfish/CatfishWindow.py:1791
 msgid "Open with default applications"
-msgstr ""
+msgstr "Abrir com aplicações predefinidas"
 
 #: ../catfish/CatfishWindow.py:1807
 msgid "Open with"
-msgstr ""
+msgstr "Abrir com"
 
 #: ../catfish/CatfishWindow.py:1874
 msgid "Yesterday"
