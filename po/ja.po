@@ -9,8 +9,8 @@
 # Ken DEGUCHI <kdeguchi@sz.tokoha-u.ac.jp>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
 # YAMADA Shinichirou <yamada_strong_yamada_nice_64bit@yahoo.co.jp>, 2020
-# Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2021
 # UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2021
+# Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-03 17:19-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2021\n"
+"Last-Translator: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/xfce/teams/16840/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -80,11 +80,11 @@ msgstr "フィルターサイドバーを表示(_S)"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "2進数でファイルサイズを表示"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "ファイルサイズを10進数で表示する場合、チェックをはずす"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -159,7 +159,7 @@ msgstr "開く(_O)"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Open with..."
-msgstr ""
+msgstr "アプリケーションで開く...(_O)"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -179,7 +179,7 @@ msgstr "別名で保存(_S)..."
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "_Delete..."
-msgstr ""
+msgstr "削除...(_D)"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
@@ -386,7 +386,7 @@ msgstr "パスと検索クエリが指定されているならば、プログラ
 
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
-msgstr ""
+msgstr " (名前 | サイズ| ファイルパス | 日付 | ファイルタイプ),(asc|desc) でソートするよう、デフォルトの列を設定"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -534,11 +534,11 @@ msgstr "詳細"
 
 #: ../catfish/CatfishWindow.py:1791
 msgid "Open with default applications"
-msgstr ""
+msgstr "デフォルトアプリケーションで開く"
 
 #: ../catfish/CatfishWindow.py:1807
 msgid "Open with"
-msgstr ""
+msgstr "アプリケーションで開く"
 
 #: ../catfish/CatfishWindow.py:1874
 msgid "Yesterday"
