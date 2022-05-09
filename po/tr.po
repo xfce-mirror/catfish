@@ -9,9 +9,9 @@
 # Nick Schermer <nick@xfce.org>, 2020
 # Volkan Gezer <volkangezer@gmail.com>, 2020
 # Serdar Sağlam <teknomobil@msn.com>, 2020
-# Demiray Muhterem <mdemiray@msn.com>, 2021
 # Emin Tufan Çetin <etcetin@gmail.com>, 2022
 # Sabri Ünal <libreajans@gmail.com>, 2022
+# Demiray Muhterem <mdemiray@msn.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -20,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-03 17:19-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>, 2022\n"
+"Last-Translator: Demiray Muhterem <mdemiray@msn.com>, 2022\n"
 "Language-Team: Turkish (https://www.transifex.com/xfce/teams/16840/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -82,11 +82,11 @@ msgstr "Süzgeç _kenar çubuğunu göster"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Dosya boyutlarını ikilik biçiminde göster"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Dosya boyutunu ondalık biçimde göstermek için işareti kaldırın"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -391,6 +391,8 @@ msgstr "Yol ve sorgu sağlanırsa, uygulama görüntülendiğinde aramaya başla
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"(ad|boyut|yol|tarih|tür),(artan|azalan) biçiminde sıralamak için varsayılan "
+"bir sütun ayarlayın"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
