@@ -81,11 +81,11 @@ msgstr "Visa _sidofält för filter"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Visa filstorlek i binärt format"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Avmarkera för att visa filstorleken i decimalformat"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -160,7 +160,7 @@ msgstr "_Öppna"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Open with..."
-msgstr ""
+msgstr "_Öppna med..."
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -180,7 +180,7 @@ msgstr "_Spara som..."
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "_Delete..."
-msgstr ""
+msgstr "_Radera..."
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
@@ -531,11 +531,11 @@ msgstr "Detaljer"
 
 #: ../catfish/CatfishWindow.py:1791
 msgid "Open with default applications"
-msgstr ""
+msgstr "Öppna med standardprogram"
 
 #: ../catfish/CatfishWindow.py:1807
 msgid "Open with"
-msgstr ""
+msgstr "Öppna med"
 
 #: ../catfish/CatfishWindow.py:1874
 msgid "Yesterday"
