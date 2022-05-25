@@ -76,11 +76,12 @@ msgstr "Näita _filtreerivat külgpaani"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Näita failide suurusi kahendvormingus"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
 msgstr ""
+"Kui valik pole kasutusel, siis kuvatakse failide suurused kümnendvormingus"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -155,7 +156,7 @@ msgstr "_Ava"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Open with..."
-msgstr ""
+msgstr "_Ava rakendusega..."
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -175,7 +176,7 @@ msgstr "_Salvesta kui"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "_Delete..."
-msgstr ""
+msgstr "_Kustuta..."
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
@@ -387,6 +388,8 @@ msgstr ""
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"määra veerg, mille alusel vaikimisi toimub sortimine "
+"(nimi|suurus|asukoht|kuupäev|tüüp),(kasvavalt|kahanevalt)"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -532,11 +535,11 @@ msgstr "Üksikasjalik teave"
 
 #: ../catfish/CatfishWindow.py:1791
 msgid "Open with default applications"
-msgstr ""
+msgstr "Ava vaikimisi rakendustega"
 
 #: ../catfish/CatfishWindow.py:1807
 msgid "Open with"
-msgstr ""
+msgstr "Ava muu rakendusega"
 
 #: ../catfish/CatfishWindow.py:1874
 msgid "Yesterday"
@@ -707,6 +710,8 @@ msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
+"Selle versiooniga parandasime mõned vead rakenduse käivitamisel ning "
+"sümbolnimede järgi liikumisel."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
