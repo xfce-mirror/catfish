@@ -6,7 +6,7 @@
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2018
 # Nick Schermer <nick@xfce.org>, 2020
-# Саша Петровић <salepetronije@gmail.com>, 2021
+# Саша Петровић <salepetronije@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-03 17:19-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Саша Петровић <salepetronije@gmail.com>, 2021\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>, 2022\n"
 "Language-Team: Serbian (https://www.transifex.com/xfce/teams/16840/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,11 +76,11 @@ msgstr "Приказуј бочну_ траку услова"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Приказуј величине датотека у бинарном облику"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Одзначи ради приказивања величине датотеке у децималном облику"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -155,7 +155,7 @@ msgstr "_Отвори"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Open with..."
-msgstr ""
+msgstr "_Отвори помоћу..."
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -175,7 +175,7 @@ msgstr "_Сачувај као..."
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "_Delete..."
-msgstr ""
+msgstr "_Избриши..."
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
@@ -386,6 +386,8 @@ msgstr ""
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"постави подразумевану колону ради распореда по "
+"(имену|величини|путањи|времену|врсти),(силазно|узлазно)"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -529,11 +531,11 @@ msgstr "Појединости"
 
 #: ../catfish/CatfishWindow.py:1791
 msgid "Open with default applications"
-msgstr ""
+msgstr "Отвори помоћу подразумеваних програма"
 
 #: ../catfish/CatfishWindow.py:1807
 msgid "Open with"
-msgstr ""
+msgstr "Отвори помоћу"
 
 #: ../catfish/CatfishWindow.py:1874
 msgid "Yesterday"
