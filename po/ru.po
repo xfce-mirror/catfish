@@ -11,8 +11,8 @@
 # Aleksandr P, 2020
 # Igor <f2404@yandex.ru>, 2020
 # Alexander Filёv, 2020
-# Andrei Stepanov, 2022
 # Виктор, 2022
+# Andrei Stepanov, 2022
 # 
 #, fuzzy
 msgid ""
@@ -21,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-03 17:19-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Виктор, 2022\n"
+"Last-Translator: Andrei Stepanov, 2022\n"
 "Language-Team: Russian (https://www.transifex.com/xfce/teams/16840/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -83,11 +83,11 @@ msgstr "Показывать _боковую панель фильтров"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Отображать размеры файлов в двоичном формате"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Снимите флажок, чтобы показывать размер файла в десятичном формате"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -162,7 +162,7 @@ msgstr "_Открыть"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Open with..."
-msgstr ""
+msgstr "_Открыть в…"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -182,7 +182,7 @@ msgstr "_Сохранить как..."
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "_Delete..."
-msgstr ""
+msgstr "_Удалить"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
@@ -392,6 +392,8 @@ msgstr "Если путь и запрос указаны, начинать по�
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"установите столбец по умолчанию для сортировки по "
+"(name|size|path|date|type),(asc|desc)"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -540,11 +542,11 @@ msgstr "Детали"
 
 #: ../catfish/CatfishWindow.py:1791
 msgid "Open with default applications"
-msgstr ""
+msgstr "Открыть в приложениях по умолчанию"
 
 #: ../catfish/CatfishWindow.py:1807
 msgid "Open with"
-msgstr ""
+msgstr "Открыть в"
 
 #: ../catfish/CatfishWindow.py:1874
 msgid "Yesterday"
