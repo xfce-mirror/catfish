@@ -103,7 +103,7 @@ msgstr "Διαδρομή"
 
 #: ../data/ui/CatfishPreferences.ui.h:14
 msgid "Add Directory..."
-msgstr "Προσθήκη φακέλου"
+msgstr "Προσθήκη καταλόγου..."
 
 #: ../data/ui/CatfishPreferences.ui.h:15
 msgid "_Add"
@@ -111,7 +111,7 @@ msgstr "_Προσθήκη"
 
 #: ../data/ui/CatfishPreferences.ui.h:16
 msgid "Remove Directory"
-msgstr "Διαγραφή φακέλου"
+msgstr "Διαγραφή καταλόγου"
 
 #: ../data/ui/CatfishPreferences.ui.h:17
 msgid "_Remove"
@@ -119,7 +119,7 @@ msgstr "_Αφαίρεση"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Exclude Directories"
-msgstr "Εξαίρεση φακέλων"
+msgstr "Εξαίρεση καταλόγων"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Close the search _window after opening a file"
@@ -566,7 +566,7 @@ msgid ""
 "or try another directory."
 msgstr ""
 "Δοκιμάστε να κάνετε την αναζήτησή σας πιο γενική\n"
-"ή δοκιμάστε έναν άλλο φάκελο."
+"ή δοκιμάστε έναν άλλο κατάλογο."
 
 #: ../catfish/CatfishWindow.py:1964
 msgid "1 file found."
@@ -742,8 +742,8 @@ msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
-"Αυτή η έκδοση παρουσιάζει βελτιώσεις απόδοσης εξαιρώντας τους μη "
-"συνηθισμένους φακέλους στην αναζήτηση."
+"Αυτή η έκδοση παρουσιάζει βελτιώσεις επιδόσεων εξαιρώντας τους μη "
+"συνηθισμένους καταλόγους στην αναζήτηση."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
