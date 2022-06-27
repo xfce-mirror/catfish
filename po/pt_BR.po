@@ -14,6 +14,7 @@
 # C. E., 2020
 # The Cat, 2021
 # Lucas Wilm <lucaswilm@gmail.com>, 2022
+# Wellington Almeida <wsalmeida6@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -22,13 +23,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-03 17:19-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Lucas Wilm <lucaswilm@gmail.com>, 2022\n"
+"Last-Translator: Wellington Almeida <wsalmeida6@gmail.com>, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/xfce/teams/16840/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:35
 #: ../catfish_lib/catfishconfig.py:88
@@ -83,11 +84,11 @@ msgstr "Mostrar filtro na barra lateral"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Mostrar tamanhos de arquivo em formato binário"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Desmarque para mostrar o tamanho do arquivo em formato decimal"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -162,7 +163,7 @@ msgstr "_Abrir"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Open with..."
-msgstr ""
+msgstr "_Abrir com..."
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -182,7 +183,7 @@ msgstr "_Salvar como..."
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "_Delete..."
-msgstr ""
+msgstr "_Excluir..."
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
@@ -541,11 +542,11 @@ msgstr "Detalhes"
 
 #: ../catfish/CatfishWindow.py:1791
 msgid "Open with default applications"
-msgstr ""
+msgstr "Abra com aplicativos padrão"
 
 #: ../catfish/CatfishWindow.py:1807
 msgid "Open with"
-msgstr ""
+msgstr "Abrir com"
 
 #: ../catfish/CatfishWindow.py:1874
 msgid "Yesterday"
