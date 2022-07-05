@@ -388,6 +388,8 @@ msgstr "Om sökväg och fråga tillhandahålls, börja sök då programmet visas
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"ställ in en standard kolumn att sortera efter "
+"(namn|storlek|sökväg|datum|typ),(association|beskrivning)"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
