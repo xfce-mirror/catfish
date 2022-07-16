@@ -1214,14 +1214,18 @@ class CatfishWindow(Window):
         self.refilter()
 
     def thunar_display_path(self, path):
-        bus = dbus.SessionBus()
-        obj = bus.get_object('org.xfce.Thunar', '/org/xfce/FileManager')
-        iface = dbus.Interface(obj, 'org.xfce.FileManager')
+        try:
+            bus = dbus.SessionBus()
+            obj = bus.get_object('org.xfce.Thunar', '/org/xfce/FileManager')
+            iface = dbus.Interface(obj, 'org.xfce.FileManager')
 
-        method = iface.get_dbus_method('DisplayFolderAndSelect')
-        dirname = os.path.dirname(path)
-        filename = os.path.basename(path)
-        return method(dirname, filename, '', '')
+            method = iface.get_dbus_method('DisplayFolderAndSelect')
+            dirname = os.path.dirname(path)
+            filename = os.path.basename(path)
+            method(dirname, filename, '', '')
+            return True
+        except:
+            return False
 
     def get_exo_preferred_applications(self, filename):
         apps = {}
@@ -1256,22 +1260,33 @@ class CatfishWindow(Window):
 
         return "Thunar"
 
-    def using_thunar_fm(self):
+    def get_preferred_file_manager(self):
         if os.environ.get("XDG_CURRENT_DESKTOP", "").lower() == 'xfce':
-            fm = self.get_exo_preferred_file_manager()
-            return "thunar" in fm.lower()
+            return self.get_exo_preferred_file_manager()
 
-        fm = subprocess.check_output(['xdg-mime', 'query', 'default',
-                                      'inode/directory'])
-        fm = fm.decode("utf-8", errors="replace")
-        if "thunar" in fm.lower():
-            return True
+        app = Gio.AppInfo.get_default_for_type('inode/directory', False)
 
-        if "exo-file-manager" in fm.lower():
-            fm = self.get_exo_preferred_file_manager()
-            return "thunar" in fm.lower()
+        if app is None:
+            desktop = subprocess.check_output(['xdg-mime', 'query', 'default',
+                                               'inode/directory'])
+            desktop = desktop.decode("utf-8", errors="replace")
+            desktop = desktop.strip()
 
-        return False
+            for appinfo in Gio.AppInfo.get_all():
+                if appinfo.get_id() == desktop:
+                    app = appinfo
+                    break
+
+        if app is None:
+            return ""
+
+        if "exo-file-manager" in app.get_id().lower():
+            return self.get_exo_preferred_file_manager()
+
+        return app.get_executable()
+
+    def using_thunar_fm(self):
+        return "thunar" in self.get_preferred_file_manager().lower()
 
     def open_file(self, filename):
         """Open the specified filename in its default application."""
@@ -1353,7 +1368,7 @@ class CatfishWindow(Window):
     def on_menu_filemanager_activate(self, widget):  # pylint: disable=W0613
         """Open the selected file in the default file manager."""
 
-        file_manager = self.get_exo_preferred_file_manager().lower()
+        file_manager = self.get_preferred_file_manager().lower()
         files, dirs, nfiles = self.on_menu_filemanager_get_file_lists()
         num = len(files)
 
@@ -1362,7 +1377,8 @@ class CatfishWindow(Window):
 
         if 'thunar' in file_manager:
             for filename in files:
-                self.thunar_display_path(filename)
+                if not self.thunar_display_path(filename):
+                    subprocess.Popen([file_manager, filename])
         elif 'nautilus' in file_manager:
             for filename in files:
                 subprocess.Popen([file_manager, '--select', filename])
