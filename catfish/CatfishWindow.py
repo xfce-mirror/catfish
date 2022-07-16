@@ -1278,15 +1278,12 @@ class CatfishWindow(Window):
                     break
 
         if app is None:
-            return ""
+            return "xdg-open"
 
         if "exo-file-manager" in app.get_id().lower():
             return self.get_exo_preferred_file_manager()
 
         return app.get_executable()
-
-    def using_thunar_fm(self):
-        return "thunar" in self.get_preferred_file_manager().lower()
 
     def open_file(self, filename):
         """Open the specified filename in its default application."""

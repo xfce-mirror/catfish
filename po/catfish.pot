@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-16 18:10-0400\n"
+"POT-Creation-Date: 2022-07-16 18:24-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -208,7 +208,7 @@ msgstr ""
 msgid "Any time"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1888
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1886
 msgid "Today"
 msgstr ""
 
@@ -252,11 +252,11 @@ msgstr ""
 msgid "File Type"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1605
+#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1603
 msgid "Modified"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2144
+#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2142
 msgid "Results will be displayed as soon as they are found."
 msgstr ""
 
@@ -447,109 +447,109 @@ msgstr ""
 msgid "Folder not found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1313
+#: ../catfish/CatfishWindow.py:1310
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1467
+#: ../catfish/CatfishWindow.py:1465
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1484
+#: ../catfish/CatfishWindow.py:1482
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1523
+#: ../catfish/CatfishWindow.py:1521
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1558
+#: ../catfish/CatfishWindow.py:1556
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1562
+#: ../catfish/CatfishWindow.py:1560
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1565
+#: ../catfish/CatfishWindow.py:1563
 msgid "If you delete a file, it is permanently lost."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1599
+#: ../catfish/CatfishWindow.py:1597
 msgid "Filename"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1601
+#: ../catfish/CatfishWindow.py:1599
 msgid "Size"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1603
+#: ../catfish/CatfishWindow.py:1601
 msgid "Location"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1615
+#: ../catfish/CatfishWindow.py:1613
 msgid "Preview"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1622
+#: ../catfish/CatfishWindow.py:1620
 msgid "Details"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1807
+#: ../catfish/CatfishWindow.py:1805
 msgid "Open with default applications"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1823
+#: ../catfish/CatfishWindow.py:1821
 msgid "Open with"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1890
+#: ../catfish/CatfishWindow.py:1888
 msgid "Yesterday"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1971
+#: ../catfish/CatfishWindow.py:1969
 msgid "No files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1973
+#: ../catfish/CatfishWindow.py:1971
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1980
+#: ../catfish/CatfishWindow.py:1978
 msgid "1 file found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1982
+#: ../catfish/CatfishWindow.py:1980
 #, python-format
 msgid "%i files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1991 ../catfish/CatfishWindow.py:1994
+#: ../catfish/CatfishWindow.py:1989 ../catfish/CatfishWindow.py:1992
 msgid "bytes"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:2142 ../catfish/CatfishWindow.py:2152
+#: ../catfish/CatfishWindow.py:2140 ../catfish/CatfishWindow.py:2150
 msgid "Searching..."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:2150
+#: ../catfish/CatfishWindow.py:2148
 #, python-format
 msgid "Searching for \"%s\""
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:2258
+#: ../catfish/CatfishWindow.py:2256
 #, python-format
 msgid "Search results for \"%s\""
 msgstr ""
