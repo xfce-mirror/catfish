@@ -257,7 +257,7 @@ msgstr "업데이트"
 
 #: ../data/ui/CatfishWindow.ui.h:32
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr "검색 데이터베이스가 7일 이상 되었습니다. 지금 업데이트 하시겠습니까?"
+msgstr "검색 데이터베이스가 7일 이상 되었습니다. 지금 업데이트 하시렵니까?"
 
 #: ../data/ui/CatfishWindow.ui.h:33
 msgid "File Type"
@@ -499,7 +499,7 @@ msgstr "\"%s\"를 영구히 삭제 하시렵니까?"
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
-msgstr "%i 선택된 파일들을 영구히 삭제 하시겠습니까?"
+msgstr "%i 선택된 파일들을 영구히 삭제 하시렵니까?"
 
 #: ../catfish/CatfishWindow.py:1549
 msgid "If you delete a file, it is permanently lost."
