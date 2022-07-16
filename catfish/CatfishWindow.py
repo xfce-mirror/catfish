@@ -1261,7 +1261,7 @@ class CatfishWindow(Window):
         return "Thunar"
 
     def get_preferred_file_manager(self):
-        if os.environ.get("XDG_CURRENT_DESKTOP", "").lower() == 'xfce':
+        if helpers.xdg_current_desktop() == 'xfce':
             return self.get_exo_preferred_file_manager()
 
         app = Gio.AppInfo.get_default_for_type('inode/directory', False)
@@ -1294,7 +1294,7 @@ class CatfishWindow(Window):
         if filename.endswith('.AppImage') and os.access(filename, os.X_OK):
             command = [filename]
         elif os.path.isdir(filename) and \
-                os.environ.get("XDG_CURRENT_DESKTOP", "").lower() == 'xfce':
+                helpers.xdg_current_desktop() == 'xfce':
             command = ['exo-open', '--launch', 'FileManager', filename]
         else:
             command = ['xdg-open', filename]

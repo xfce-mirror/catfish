@@ -39,6 +39,16 @@ def check_gobject_version(major_version, minor_version, micro=0):
     return gobject_version >= (major_version, minor_version, micro)
 
 
+def xdg_current_desktop():
+    desktop = os.environ.get("ORIGINAL_XDG_CURRENT_DESKTOP", None)
+    if desktop is None:
+        desktop = os.environ.get("XDG_CURRENT_DESKTOP", "")
+    desktop = desktop.lower()
+    if desktop == "ubuntu:gnome":
+        return "gnome"
+    return desktop
+
+
 # Define a context manager to suppress stdout and stderr.
 class suppress_stdout_stderr(object):
     '''

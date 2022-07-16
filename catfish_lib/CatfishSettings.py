@@ -23,6 +23,8 @@ import gi
 gi.require_version('Xfconf', '0')
 from gi.repository import Xfconf
 
+from catfish_lib import helpers
+
 Xfconf.init()
 
 DEFAULT_SETTINGS_FILE = os.path.join(os.getenv('HOME'),
@@ -64,8 +66,7 @@ class CatfishSettings:
         self.read()
 
     def get_current_desktop(self):
-        current_desktop = os.environ.get("XDG_CURRENT_DESKTOP", "")
-        current_desktop = current_desktop.lower()
+        current_desktop = helpers.xdg_current_desktop()
         for desktop in ["budgie", "pantheon", "gnome"]:
             if desktop in current_desktop:
                 return desktop
