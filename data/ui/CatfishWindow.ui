@@ -1152,11 +1152,11 @@
                             <property name="enable-search">False</property>
                             <property name="rubber-banding">True</property>
                             <property name="enable-grid-lines">vertical</property>
-                            <signal name="key-press-event" handler="on_treeview_key_press_event" swapped="no"/>
                             <signal name="button-release-event" handler="on_treeview_button_press_event" swapped="no"/>
                             <signal name="cursor-changed" handler="on_treeview_cursor_changed" swapped="no"/>
                             <signal name="drag-begin" handler="on_treeview_drag_begin" swapped="no"/>
                             <signal name="drag-data-get" handler="on_treeview_drag_data_get" swapped="no"/>
+                            <signal name="key-press-event" handler="on_treeview_key_press_event" swapped="no"/>
                             <signal name="row-activated" handler="on_treeview_row_activated" swapped="no"/>
                             <child internal-child="selection">
                               <object class="GtkTreeSelection" id="results_treeview_selection"/>
@@ -1738,7 +1738,7 @@ This action requires administrative rights.</property>
       </object>
     </child>
     <child>
-      <object class="GtkListBoxRow" id="listseprow4">
+      <object class="GtkListBoxRow" id="application_menu_update_sep">
         <property name="visible">True</property>
         <property name="sensitive">False</property>
         <property name="can-focus">False</property>

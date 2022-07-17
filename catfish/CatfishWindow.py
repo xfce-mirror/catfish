@@ -306,6 +306,7 @@ class CatfishWindow(Window):
                 infobar.show()
         else:
             menuitem.hide()
+            builder.get_named_object("menus.application.update_separator").hide()
 
         self.format_mimetype_box = \
             builder.get_named_object("dialogs.filetype.mimetypes.box")

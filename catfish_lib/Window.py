@@ -61,6 +61,7 @@ __builder__ = {
             "fulltext": "application_menu_fulltext",
             "advanced": "application_menu_advanced",
             "update": "application_menu_update",
+            "update_separator": "application_menu_update_sep",
             "preferences": "application_menu_prefs",
         },
         # File Context Menu
