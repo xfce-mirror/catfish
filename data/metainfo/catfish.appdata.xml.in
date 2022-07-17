@@ -43,6 +43,15 @@
   </provides>
 
   <releases>
+    <release version="4.16.4" date="2022-07-17">
+      <description>
+        <_p>This release improves keyboard shortcuts, desktop environment
+        integration, file manager support, and general look and feel. It also
+        features several bug fixes for non-Xfce users.
+        </_p>
+      </description>
+    </release>
+
     <release version="4.16.3" date="2021-09-26">
       <description>
         <_p>This release improves file manager support, zip file support,

@@ -1,3 +1,31 @@
+4.16.4
+======
+- Add "Open with" right click item and dialog (#12)
+- Add a command-line option for setting default sort method
+- Add Ctrl+A accelerator for the treeview (#64)
+- Add option to show file size in binary or decimal
+- Cosmetic changes for search entry and delete dialog
+- Fix Ctrl+H not always toggling hidden files
+- Fix DE detection when launched from Electron apps
+- Fix exo file manager lookup for non-existent keys (#64)
+- Fix file manager lookup outside of Xfce
+- Fix GNOME DE detection in Ubuntu
+- Improve application menu appearance
+- Improve default width for the sidebar
+- Prepend the project root directory to sys.path
+- Support running without Xfconf (no preference saving)
+- Switch to using the super() method
+- Use correct executable for elementary Files
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+  Dutch, Eastern Armenian, English (Australia), Estonian, Finnish,
+  French, Galician, German, Greek, Hebrew, Hungarian, Icelandic,
+  Indonesian, Interlingue, Italian, Japanese, Korean, Lithuanian,
+  Malay, Norwegian Bokmål, Norwegian Nynorsk, Polish, Portuguese,
+  Portuguese (Brazil), Russian, Serbian, Slovak, Slovenian, Spanish,
+  Swedish, Thai, Turkish, Ukrainian
+
 4.16.3
 ======
 - Update "Searching..." Cursor
