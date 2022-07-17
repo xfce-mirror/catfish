@@ -20,12 +20,17 @@ import os
 
 import gi
 
-gi.require_version('Xfconf', '0')
-from gi.repository import Xfconf
+try:
+    gi.require_version('Xfconf', '0')
+    from gi.repository import Xfconf
+    XFCONF_SUPPORT = True
+except ValueError:
+    XFCONF_SUPPORT = False
 
 from catfish_lib import helpers
 
-Xfconf.init()
+if XFCONF_SUPPORT:
+    Xfconf.init()
 
 DEFAULT_SETTINGS_FILE = os.path.join(os.getenv('HOME'),
                                      '.config/catfish/catfish.rc')
@@ -54,7 +59,8 @@ class CatfishSettings:
 
     def __init__(self, settings_file=DEFAULT_SETTINGS_FILE):
         """Initialize the CatfishSettings instance."""
-        self.channel = Xfconf.Channel.new("catfish")
+        if XFCONF_SUPPORT:
+            self.channel = Xfconf.Channel.new("catfish")
         try:
             settings_dir = os.path.dirname(settings_file)
             if not os.path.exists(settings_dir):
@@ -139,7 +145,7 @@ class CatfishSettings:
             typing = value[0]
             xfconf_prop = "/%s" % key
             self.settings[key] = value[1]
-            if self.channel.has_property(xfconf_prop):
+            if XFCONF_SUPPORT and self.channel.has_property(xfconf_prop):
                 if typing == bool:
                     self.settings[key] = self.channel.get_bool(xfconf_prop, value[1])
                 elif typing == int:
@@ -162,6 +168,8 @@ class CatfishSettings:
 
     def write(self):
         """Write the current settings to the settings Xfconf channel."""
+        if not XFCONF_SUPPORT:
+            return
         for key, value in DEFAULT_SETTINGS.items():
             if key == 'use-headerbar' and \
                     not self.headerbar_configured:
