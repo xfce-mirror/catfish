@@ -2,7 +2,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #   Catfish - a versatile file searching tool
 #   Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
-#   Copyright (C) 2012-2020 Sean Davis <bluesabre@xfce.org>
+#   Copyright (C) 2012-2022 Sean Davis <bluesabre@xfce.org>
 #
 #   This program is free software: you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License version 2, as published
@@ -424,7 +424,8 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
             GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DOWNLOAD),
             GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_MUSIC),
             GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_PICTURES),
-            GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_PUBLIC_SHARE),
+            GLib.get_user_special_dir(
+                GLib.UserDirectory.DIRECTORY_PUBLIC_SHARE),
             GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_TEMPLATES),
             GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_VIDEOS),
         ]

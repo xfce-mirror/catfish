@@ -2,7 +2,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #   Catfish - a versatile file searching tool
 #   Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
-#   Copyright (C) 2012-2020 Sean Davis <bluesabre@xfce.org>
+#   Copyright (C) 2012-2022 Sean Davis <bluesabre@xfce.org>
 #
 #   This program is free software: you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License version 2, as published
@@ -34,11 +34,12 @@ except ImportError:
     sys.exit(1)
 assert DistUtilsExtra.auto.__version__ >= '2.18', \
     'DistUtilsExtra.auto >= 2.18 required, found %s' \
-        % DistUtilsExtra.auto.__version__
+    % DistUtilsExtra.auto.__version__
 
 python_version = float("%i.%02i" % sys.version_info[:2])
 assert python_version >= 3.02, \
     'Python >= 3.2 required, found %s' % str(python_version)
+
 
 def update_config(libdir, values={}):
     """Update the configuration file at installation time."""
@@ -187,7 +188,8 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
                (self.distribution.get_name(),
                 self.distribution.get_version())))
 
-        using_pip = os.path.basename(os.path.dirname(__file__)).startswith('pip-')
+        using_pip = os.path.basename(
+            os.path.dirname(__file__)).startswith('pip-')
 
         if not self.prefix:
             self.prefix = ''  # pylint: disable=W0201
@@ -201,7 +203,8 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
             script_path = os.path.join(self.prefix, 'bin')
 
             if using_pip:
-                target_pkgdata = os.path.join(site.getuserbase(), 'share', 'catfish')
+                target_pkgdata = os.path.join(
+                    site.getuserbase(), 'share', 'catfish')
                 target_pkgdata = os.path.realpath(target_pkgdata)
                 data_dir = target_pkgdata
 

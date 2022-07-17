@@ -2,7 +2,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #   Catfish - a versatile file searching tool
 #   Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
-#   Copyright (C) 2012-2020 Sean Davis <bluesabre@xfce.org>
+#   Copyright (C) 2012-2022 Sean Davis <bluesabre@xfce.org>
 #
 #   This program is free software: you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License version 2, as published
@@ -61,7 +61,7 @@ def parse_options():
                       help=_("If path and query are provided, start searching "
                              "when the application is displayed."))
     parser.add_option('', '--sort', help=_("set a default column to sort by "
-                             "(name|size|path|date|type),(asc|desc)"))
+                                           "(name|size|path|date|type),(asc|desc)"))
     parser.set_defaults(icons_large=0, thumbnails=0, time_iso=0,
                         path=None, start=False, sort=None,
                         exact=0, hidden=0, fulltext=0, file_action='open')

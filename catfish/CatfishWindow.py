@@ -2,7 +2,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #   Catfish - a versatile file searching tool
 #   Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
-#   Copyright (C) 2012-2020 Sean Davis <bluesabre@xfce.org>
+#   Copyright (C) 2012-2022 Sean Davis <bluesabre@xfce.org>
 #
 #   This program is free software: you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License version 2, as published
@@ -189,7 +189,7 @@ class CatfishWindow(Window):
         screen = Gdk.Screen.get_default()
         style = Gtk.StyleContext()
         style.add_provider_for_screen(
-              screen, css, Gtk.STYLE_PROVIDER_PRIORITY_SETTINGS)
+            screen, css, Gtk.STYLE_PROVIDER_PRIORITY_SETTINGS)
         self.button_time_custom = builder.get_named_object(
             "sidebar.modified.options")
         self.button_format_custom = builder.get_named_object(
@@ -306,7 +306,8 @@ class CatfishWindow(Window):
                 infobar.show()
         else:
             menuitem.hide()
-            builder.get_named_object("menus.application.update_separator").hide()
+            builder.get_named_object(
+                "menus.application.update_separator").hide()
 
         self.format_mimetype_box = \
             builder.get_named_object("dialogs.filetype.mimetypes.box")
@@ -350,7 +351,7 @@ class CatfishWindow(Window):
 
             if (window_x >= 0 and window_y >= 0):
                 if (window_x + window_width <= screen_width) and \
-                (window_y + window_height <= screen_height):
+                        (window_y + window_height <= screen_height):
                     self.move(window_x, window_y)
 
         self.refresh_search_entry()
@@ -561,7 +562,6 @@ class CatfishWindow(Window):
             widget.set_halign(Gtk.Align.END)
             widget.show()
 
-
     def on_floating_bar_draw(self, widget, cairo_t):
         """Draw the floating statusbar."""
         context = widget.get_style_context()
@@ -621,11 +621,16 @@ class CatfishWindow(Window):
         if self.options.sort:
             args = self.options.sort.lower().split(',')
             column = args[0]
-            if   column == 'name': column_id = 1
-            elif column == 'size': column_id = 2
-            elif column == 'path': column_id = 3
-            elif column == 'date': column_id = 4
-            elif column == 'type': column_id = 5
+            if column == 'name':
+                column_id = 1
+            elif column == 'size':
+                column_id = 2
+            elif column == 'path':
+                column_id = 3
+            elif column == 'date':
+                column_id = 4
+            elif column == 'type':
+                column_id = 5
 
             if len(args) > 1 and args[1].startswith('d'):
                 order = Gtk.SortType.DESCENDING
@@ -1056,7 +1061,7 @@ class CatfishWindow(Window):
         fc_toolbutton = self.builder.get_object("toolbar_folderchooser")
         fc_warning = self.builder.get_object("no_folder_warning")
         fc_warning_label = self.builder.get_object("no_folder_warning_label")
-        fc_warning_hide = GLib.timeout_add_seconds (3, self.hide_fc_warning)
+        fc_warning_hide = GLib.timeout_add_seconds(3, self.hide_fc_warning)
         folder = fc_dialog.get_filename()
 
         if folder is None:
@@ -1098,7 +1103,7 @@ class CatfishWindow(Window):
         for key in fc_hotkeys:
             key, mod = Gtk.accelerator_parse(key)
             fc_toolbutton.add_accelerator(signal, accelerators,
-                                           key, mod, Gtk.AccelFlags.VISIBLE)
+                                          key, mod, Gtk.AccelFlags.VISIBLE)
 
     def on_menu_fulltext_toggled(self, widget):
         """Toggle the fulltext settings, and restart the search."""
@@ -1254,7 +1259,8 @@ class CatfishWindow(Window):
                     if 'custom-FileManager' in apps['FileManager']:
                         with open(custFM) as f:
                             for line in f:
-                                CFM = line.replace('X-XFCE-Commands=', '').strip()
+                                CFM = line.replace(
+                                    'X-XFCE-Commands=', '').strip()
                                 if 'X-XFCE-Commands=' in line:
                                     return CFM
                     return apps['FileManager']
@@ -1433,7 +1439,8 @@ class CatfishWindow(Window):
         text = str(os.linesep).join(locations)
         clipboard.set_text(text, -1)
         clipboard.store()
-        LOGGER.debug("Copying %i filename(s) to the clipboard" % len(locations))
+        LOGGER.debug("Copying %i filename(s) to the clipboard" %
+                     len(locations))
 
     def on_menu_save_activate(self, widget):  # pylint: disable=W0613
         """Show a save dialog and possibly write the results to a file."""
@@ -1452,7 +1459,7 @@ class CatfishWindow(Window):
 
         else:
             filename = self.get_save_dialog(
-                       surrogate_escape(selected_file))
+                surrogate_escape(selected_file))
             original = selected_file
             if filename:
                 try:
@@ -1576,9 +1583,9 @@ class CatfishWindow(Window):
         delete = dialog.add_button(Gtk.STOCK_DELETE, Gtk.ResponseType.YES)
 
         cancel_image = Gtk.Image.new_from_icon_name("window-close-symbolic",
-                                                     Gtk.IconSize.BUTTON)
+                                                    Gtk.IconSize.BUTTON)
         delete_image = Gtk.Image.new_from_icon_name("edit-delete-symbolic",
-                                                     Gtk.IconSize.BUTTON)
+                                                    Gtk.IconSize.BUTTON)
         cancel_image.set_property("use-fallback", True)
         delete_image.set_property("use-fallback", True)
 
@@ -2120,7 +2127,7 @@ class CatfishWindow(Window):
 
     def perform_zip_query(self, filename, keywords, search_exact):
         for member, uncompressed_size, date_time in \
-               self.search_engine.search_zip(filename, keywords, search_exact):
+                self.search_engine.search_zip(filename, keywords, search_exact):
             dt = datetime.datetime(*date_time).timestamp()
             mimetype = self.guess_mimetype(member)
             icon = self.get_file_icon(member, mimetype)
@@ -2145,7 +2152,7 @@ class CatfishWindow(Window):
         self.builder.get_object("welcome_area").hide()
         show_results = False
         self.get_window().set_cursor(Gdk.Cursor.new_from_name(
-             Gdk.Display.get_default(), "progress"))
+            Gdk.Display.get_default(), "progress"))
         self.set_title(_("Searching for \"%s\"") % keywords)
         self.spinner.show()
         self.statusbar_label.set_label(_("Searching..."))
@@ -2166,7 +2173,7 @@ class CatfishWindow(Window):
         self.results_filter.set_visible_func(self.results_filter_func)
         sort = Gtk.TreeModelSort(model=self.results_filter)
         sort.set_sort_func(2, self.size_sort_func, None)
-        if self.sort[0]: # command-line sort method
+        if self.sort[0]:  # command-line sort method
             sort.set_sort_column_id(self.sort[0], self.sort[1])
         self.treeview.set_model(sort)
         sort.get_model().get_model().clear()
@@ -2220,19 +2227,21 @@ class CatfishWindow(Window):
                         parent = None
                         if not self.filter_formats['fulltext']:
                             if self.search_engine.search_filenames(filename, keywords, search_exact):
-                                parent = model.append(None, [icon_name, displayed, size, path, modified, mimetype, hidden, search_exact])
+                                parent = model.append(
+                                    None, [icon_name, displayed, size, path, modified, mimetype, hidden, search_exact])
                         if not search_zips:
                             continue
                         try:
                             for row in self.perform_zip_query(filename, keywords, search_exact):
                                 if not parent:
-                                    parent = model.append(None, [icon_name, displayed, size, path, modified, mimetype, hidden, search_exact])
+                                    parent = model.append(
+                                        None, [icon_name, displayed, size, path, modified, mimetype, hidden, search_exact])
                                 model.append(parent, row)
                         except zipfile.BadZipFile as e:
                             LOGGER.debug(f'{e}: {path}')
                     else:
                         model.append(None, [icon_name, displayed, size, path, modified,
-                                  mimetype, hidden, exact])
+                                            mimetype, hidden, exact])
 
                     if not show_results:
                         if len(self.treeview.get_model()) > 0:

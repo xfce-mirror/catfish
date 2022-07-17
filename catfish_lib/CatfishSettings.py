@@ -2,7 +2,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #   Catfish - a versatile file searching tool
 #   Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
-#   Copyright (C) 2012-2020 Sean Davis <bluesabre@xfce.org>
+#   Copyright (C) 2012-2022 Sean Davis <bluesabre@xfce.org>
 #
 #   This program is free software: you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License version 2, as published
@@ -147,11 +147,14 @@ class CatfishSettings:
             self.settings[key] = value[1]
             if XFCONF_SUPPORT and self.channel.has_property(xfconf_prop):
                 if typing == bool:
-                    self.settings[key] = self.channel.get_bool(xfconf_prop, value[1])
+                    self.settings[key] = self.channel.get_bool(
+                        xfconf_prop, value[1])
                 elif typing == int:
-                    self.settings[key] = self.channel.get_int(xfconf_prop, value[1])
+                    self.settings[key] = self.channel.get_int(
+                        xfconf_prop, value[1])
                 elif typing == str:
-                    self.settings[key] = self.channel.get_string(xfconf_prop, value[1])
+                    self.settings[key] = self.channel.get_string(
+                        xfconf_prop, value[1])
             elif key in rc_settings.keys():
                 self.settings[key] = rc_settings[key]
 
@@ -163,7 +166,7 @@ class CatfishSettings:
                 self.settings['use-headerbar'] = False
         else:
             self.headerbar_configured = True
-        
+
         self.delete_settings_file()
 
     def write(self):

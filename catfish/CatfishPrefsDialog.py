@@ -2,7 +2,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #   Catfish - a versatile file searching tool
 #   Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>
-#   Copyright (C) 2012-2020 Sean Davis <bluesabre@xfce.org>
+#   Copyright (C) 2012-2022 Sean Davis <bluesabre@xfce.org>
 #
 #   This program is free software: you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License version 2, as published
@@ -55,7 +55,8 @@ class CatfishPrefsDialog(PrefsDialog):
         if self.settings.get_setting("close-after-select"):
             self.builder.get_object("close_after_select").set_active(True)
         if self.settings.get_setting("search-compressed-files"):
-            self.builder.get_object("search_in_compressed_files").set_active(True)
+            self.builder.get_object(
+                "search_in_compressed_files").set_active(True)
         if self.settings.get_setting("file-size-binary"):
             self.builder.get_object("do_show_size_binary").set_active(True)
         self.set_exclude_directories(
