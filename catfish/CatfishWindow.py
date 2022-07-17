@@ -1366,24 +1366,25 @@ class CatfishWindow(Window):
     def on_menu_filemanager_activate(self, widget):  # pylint: disable=W0613
         """Open the selected file in the default file manager."""
 
-        file_manager = self.get_preferred_file_manager().lower()
+        file_manager = self.get_preferred_file_manager()
+        fm = file_manager.lower()
         files, dirs, nfiles = self.on_menu_filemanager_get_file_lists()
         num = len(files)
 
-        if 'nemo' or 'elementary' in file_manager:
+        if 'nemo' or 'io.elementary.files' in fm:
             num = len(nfiles)
 
-        if 'thunar' in file_manager:
+        if 'thunar' in fm:
             for filename in files:
                 if not self.thunar_display_path(filename):
                     subprocess.Popen([file_manager, filename])
-        elif 'nautilus' in file_manager:
+        elif 'nautilus' in fm:
             for filename in files:
                 subprocess.Popen([file_manager, '--select', filename])
-        elif 'nemo' in file_manager:
+        elif 'nemo' in fm:
             for nfilename in nfiles:
                 subprocess.Popen([file_manager, nfilename])
-        elif 'elementary' in file_manager:
+        elif 'io.elementary.files' in fm:
             for nfilename in nfiles:
                 subprocess.Popen([file_manager, '-n', nfilename])
         else:
