@@ -1703,13 +1703,11 @@ This action requires administrative rights.</property>
           <object class="GtkBox" id="box1">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="margin-left">9</property>
-            <property name="margin-right">9</property>
-            <property name="spacing">8</property>
             <child>
               <object class="GtkImage" id="image1">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
+                <property name="xpad">4</property>
                 <property name="pixel-size">16</property>
                 <property name="icon-name">view-refresh-symbolic</property>
                 <property name="icon_size">1</property>
@@ -1759,13 +1757,11 @@ This action requires administrative rights.</property>
           <object class="GtkBox" id="box4">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="margin-left">9</property>
-            <property name="margin-right">9</property>
-            <property name="spacing">8</property>
             <child>
               <object class="GtkImage" id="image3">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
+                <property name="xpad">4</property>
                 <property name="pixel-size">16</property>
                 <property name="icon-name">document-properties-symbolic</property>
                 <property name="use-fallback">True</property>
@@ -1803,13 +1799,11 @@ This action requires administrative rights.</property>
           <object class="GtkBox" id="box2">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="margin-left">9</property>
-            <property name="margin-right">9</property>
-            <property name="spacing">8</property>
             <child>
               <object class="GtkImage" id="image2">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
+                <property name="xpad">4</property>
                 <property name="pixel-size">16</property>
                 <property name="icon-name">help-about-symbolic</property>
                 <property name="icon_size">1</property>
