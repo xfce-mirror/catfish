@@ -289,12 +289,11 @@ class CatfishSearchEngine:
             if " ".join(keywords) in fname.lower():
                 return True
         else:
-            match_list = set()
-            for kword in keywords:
-                if kword in fname.lower():
-                    match_list.add(kword)
-                if len(set(keywords)) == len(match_list):
-                    return True
+            fname = fname.lower()
+            for kword in set(keywords):
+                if kword not in fname:
+                    return False
+            return True
 
     def set_exact(self, exact):
         """Set method for exact"""
@@ -556,12 +555,15 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                 if " ".join(keywords) in line.lower():
                     return True
         else:
-            match_list = set()
+            keywords = list(set(keywords))
+            match_found = [False for i in range(len(keywords))]
+            match_found_count = 0
             for line in lines:
-                for kword in keywords:
-                    if kword in line.lower():
-                        match_list.add(kword)
-                if len(set(keywords)) == len(match_list):
+                for i in range(len(keywords)):
+                    if (not match_found[i]) and keywords[i] in line.lower():
+                        match_found[i] = True
+                        match_found_count += 1
+                if match_found_count == len(keywords):
                     return True
 
     def search_zip(self, z, member, keywords):
@@ -674,7 +676,7 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
 
     def run(self, keywords, path, search_zips, regex=False, exclude_paths=[]):
         """Run the Zeitgeist SearchMethod."""
-        keywords = " ".join(keywords)
+        keywords = " ".join(keywords).lower()
         self.stop_search = False
         event_template = Zeitgeist.Event()
 
@@ -705,7 +707,7 @@ class CatfishSearchMethod_Zeitgeist(CatfishSearchMethod):
                 if uri.startswith('file://'):
                     fullname = str(uri[7:])
                     filepath, filename = os.path.split(fullname)
-                    if keywords.lower() in filename and \
+                    if keywords in filename and \
                             uri not in uniques and \
                             path in filepath:
                         uniques.append(uri)
