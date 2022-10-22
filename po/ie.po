@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Caarmi, 2020
+# Caarmi, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-03 17:19-0400\n"
+"POT-Creation-Date: 2022-07-17 16:43-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Caarmi, 2020\n"
+"Last-Translator: Caarmi, 2022\n"
 "Language-Team: Interlingue (https://www.transifex.com/xfce/teams/16840/ie/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,11 +74,11 @@ msgstr "Panel _láteral de filtre"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Monstrar grandores de files in li binari formate"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Vacui por mostrar grandores in li decimal formate"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -118,7 +118,7 @@ msgstr "Cluder li f_enestre pos apertion de un file"
 
 #: ../data/ui/CatfishPreferences.ui.h:20
 msgid "Search within compressed files (.zip, .odt, .docx)"
-msgstr ""
+msgstr "Serchar in compresset files (.zip, .odt, .docx)"
 
 #: ../data/ui/CatfishPreferences.ui.h:21
 msgid "Miscellaneous"
@@ -130,22 +130,22 @@ msgstr "Avansat"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "Select a Folder"
-msgstr ""
+msgstr "Selecte un fólder"
 
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "Folder not found!"
-msgstr ""
+msgstr "Fólder ne trovat!"
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:787
+#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:793
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Anullar"
 
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "Select Folder"
-msgstr ""
+msgstr "Selecter fólder"
 
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Open"
@@ -153,7 +153,7 @@ msgstr "_Aperter"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Open with..."
-msgstr ""
+msgstr "_Aperter per..."
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -173,7 +173,7 @@ msgstr "_Gardar quam..."
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "_Delete..."
-msgstr ""
+msgstr "_Remover..."
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
@@ -182,6 +182,7 @@ msgstr "Extensiones de file"
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr ""
+"Provide un liste de extensiones, separat con commas (p.ex. odt, png, txt)"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "Documents"
@@ -215,7 +216,7 @@ msgstr "Altri"
 msgid "Any time"
 msgstr "Alquel témpor"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1872
+#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1894
 msgid "Today"
 msgstr "Hodie"
 
@@ -225,7 +226,7 @@ msgstr "Ho-semane"
 
 #: ../data/ui/CatfishWindow.ui.h:25
 msgid "This month"
-msgstr ""
+msgstr "Ho-mensu"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "Custom"
@@ -243,7 +244,7 @@ msgstr "<b>Initial date</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>Final date</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:30 ../catfish_lib/Window.py:231
+#: ../data/ui/CatfishWindow.ui.h:30 ../catfish_lib/Window.py:232
 msgid "Catfish"
 msgstr "Catfish"
 
@@ -260,11 +261,11 @@ msgstr ""
 msgid "File Type"
 msgstr "Tip de file"
 
-#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1589
+#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1611
 msgid "Modified"
 msgstr "Modificat"
 
-#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2128
+#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2150
 msgid "Results will be displayed as soon as they are found."
 msgstr "Li resultates va esser monstrat bentost que ili es trovat."
 
@@ -384,6 +385,8 @@ msgstr ""
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"ordinar secun ti columne "
+"(name=nómine|size=grandor|path=rute|date|type),(asc|desc)"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -404,7 +407,7 @@ msgstr "Ínconosset"
 msgid "Never"
 msgstr "Nequande"
 
-#: ../catfish/CatfishWindow.py:411
+#: ../catfish/CatfishWindow.py:413
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -413,37 +416,37 @@ msgstr ""
 "Provide un demande por sercha de vor files\n"
 "o fa un clic sur li icone %s por plu optiones."
 
-#: ../catfish/CatfishWindow.py:802
+#: ../catfish/CatfishWindow.py:808
 msgid "An error occurred while updating the database."
 msgstr "Un error evenit actualisante li base de data."
 
-#: ../catfish/CatfishWindow.py:804
+#: ../catfish/CatfishWindow.py:810
 msgid "Authentication failed."
 msgstr "Autentication ne successat."
 
-#: ../catfish/CatfishWindow.py:810
+#: ../catfish/CatfishWindow.py:816
 msgid "Authentication cancelled."
 msgstr "Autentication annulat."
 
-#: ../catfish/CatfishWindow.py:816
+#: ../catfish/CatfishWindow.py:822
 msgid "Search database updated successfully."
 msgstr "Li base de data de sercha es actualisat."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:877
+#: ../catfish/CatfishWindow.py:883
 msgid "Close"
 msgstr "Cluder"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:891
+#: ../catfish/CatfishWindow.py:897
 msgid "Updating..."
 msgstr "Actualisante..."
 
-#: ../catfish/CatfishWindow.py:926
+#: ../catfish/CatfishWindow.py:932
 msgid "Stop Search"
 msgstr "Haltar li sercha"
 
-#: ../catfish/CatfishWindow.py:927
+#: ../catfish/CatfishWindow.py:933
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -451,39 +454,39 @@ msgstr ""
 "Serchante...\n"
 "Fa clic sur li buton Anullar or tippa Escape por interrupter."
 
-#: ../catfish/CatfishWindow.py:938
+#: ../catfish/CatfishWindow.py:944
 msgid "Begin Search"
 msgstr "Comensar li sercha"
 
-#: ../catfish/CatfishWindow.py:1062
+#: ../catfish/CatfishWindow.py:1068
 msgid "No folder selected."
-msgstr ""
+msgstr "Null fólder selectet."
 
-#: ../catfish/CatfishWindow.py:1067
+#: ../catfish/CatfishWindow.py:1073
 msgid "Folder not found."
-msgstr ""
+msgstr "Fólder ne trovat."
 
-#: ../catfish/CatfishWindow.py:1298
+#: ../catfish/CatfishWindow.py:1317
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "«%s» ne posset esser apertet"
 
-#: ../catfish/CatfishWindow.py:1451
+#: ../catfish/CatfishWindow.py:1473
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "«%s» ne posset esser salvat"
 
-#: ../catfish/CatfishWindow.py:1468
+#: ../catfish/CatfishWindow.py:1490
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "«%s» ne posset esser deletet."
 
-#: ../catfish/CatfishWindow.py:1507
+#: ../catfish/CatfishWindow.py:1529
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Gardar «%s» quam..."
 
-#: ../catfish/CatfishWindow.py:1542
+#: ../catfish/CatfishWindow.py:1564
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -492,7 +495,7 @@ msgstr ""
 "Esque vu vole remover\n"
 "«%s» permanentmen?"
 
-#: ../catfish/CatfishWindow.py:1546
+#: ../catfish/CatfishWindow.py:1568
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -501,75 +504,75 @@ msgstr ""
 "Esque vu vole deleter %i selectet\n"
 "files permanentmen?"
 
-#: ../catfish/CatfishWindow.py:1549
+#: ../catfish/CatfishWindow.py:1571
 msgid "If you delete a file, it is permanently lost."
 msgstr "Si vu delete un file, it va esser perdit irrevocabilmen."
 
-#: ../catfish/CatfishWindow.py:1583
+#: ../catfish/CatfishWindow.py:1605
 msgid "Filename"
 msgstr "Fil-nómine"
 
-#: ../catfish/CatfishWindow.py:1585
+#: ../catfish/CatfishWindow.py:1607
 msgid "Size"
 msgstr "Grandore"
 
-#: ../catfish/CatfishWindow.py:1587
+#: ../catfish/CatfishWindow.py:1609
 msgid "Location"
 msgstr "Localisation"
 
-#: ../catfish/CatfishWindow.py:1599
+#: ../catfish/CatfishWindow.py:1621
 msgid "Preview"
 msgstr "Previder"
 
-#: ../catfish/CatfishWindow.py:1606
+#: ../catfish/CatfishWindow.py:1628
 msgid "Details"
 msgstr "Detallies"
 
-#: ../catfish/CatfishWindow.py:1791
+#: ../catfish/CatfishWindow.py:1813
 msgid "Open with default applications"
-msgstr ""
+msgstr "Aperter per predefinit applicationes"
 
-#: ../catfish/CatfishWindow.py:1807
+#: ../catfish/CatfishWindow.py:1829
 msgid "Open with"
-msgstr ""
+msgstr "Aperter per"
 
-#: ../catfish/CatfishWindow.py:1874
+#: ../catfish/CatfishWindow.py:1896
 msgid "Yesterday"
 msgstr "Yer"
 
-#: ../catfish/CatfishWindow.py:1955
+#: ../catfish/CatfishWindow.py:1977
 msgid "No files found."
 msgstr "Null files trovat"
 
-#: ../catfish/CatfishWindow.py:1957
+#: ../catfish/CatfishWindow.py:1979
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr "Fa vor sercha minu specific o usa un altri fólder."
 
-#: ../catfish/CatfishWindow.py:1964
+#: ../catfish/CatfishWindow.py:1986
 msgid "1 file found."
 msgstr "1 file trovat"
 
-#: ../catfish/CatfishWindow.py:1966
+#: ../catfish/CatfishWindow.py:1988
 #, python-format
 msgid "%i files found."
 msgstr "%i files trovat"
 
-#: ../catfish/CatfishWindow.py:1975 ../catfish/CatfishWindow.py:1978
+#: ../catfish/CatfishWindow.py:1997 ../catfish/CatfishWindow.py:2000
 msgid "bytes"
 msgstr "octetes"
 
-#: ../catfish/CatfishWindow.py:2126 ../catfish/CatfishWindow.py:2136
+#: ../catfish/CatfishWindow.py:2148 ../catfish/CatfishWindow.py:2158
 msgid "Searching..."
 msgstr "Sercha..."
 
-#: ../catfish/CatfishWindow.py:2134
+#: ../catfish/CatfishWindow.py:2156
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Serchante por «%s»..."
 
-#: ../catfish/CatfishWindow.py:2242
+#: ../catfish/CatfishWindow.py:2266
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Resultates del sercha por «%s»"
@@ -643,67 +646,74 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release improves keyboard shortcuts, desktop environment integration, "
+"file manager support, and general look and feel. It also features several "
+"bug fixes for non-Xfce users."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release improves file manager support, zip file support, and handling "
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release expands fulltext search to support more file types and adds "
 "support for searching within compressed files. Searching file contents and "
 "the preferred view is now preserved across sessions."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release expands fulltext search to support more encodings and match all"
 " keywords instead of matching any."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release better integrates with the Xfce desktop, better supports the "
 "Zeitgeist datahub, and includes many bugfixes and usability improvements."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -711,7 +721,7 @@ msgid ""
 " generated when requested by the user."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -719,11 +729,11 @@ msgid ""
 "now accessible with all desktop themes."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid "This is a minor translations-only release."
 msgstr "Ti es un minori version solmen por actualisation de traductiones."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
@@ -731,13 +741,13 @@ msgstr ""
 "Ti-ci publication provide quelc ameliorationes de performantie e numerosi "
 "actualisamentes de traduction."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -745,7 +755,7 @@ msgid ""
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -754,44 +764,44 @@ msgid ""
 " integration of PolicyKit when available."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Ti-ci publication correcte du nov errores e include actualisat traductiones."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
+#: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:24
+#: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
 " and the dialogs used to update the database have been improved."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:25
+#: ../data/metainfo/catfish.appdata.xml.in.h:26
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:26
+#: ../data/metainfo/catfish.appdata.xml.in.h:27
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
 "selection."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:27
+#: ../data/metainfo/catfish.appdata.xml.in.h:28
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:28
+#: ../data/metainfo/catfish.appdata.xml.in.h:29
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
