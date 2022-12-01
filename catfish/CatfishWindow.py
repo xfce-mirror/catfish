@@ -1304,7 +1304,12 @@ class CatfishWindow(Window):
                 helpers.xdg_current_desktop() == 'xfce':
             command = ['exo-open', '--launch', 'FileManager', filename]
         else:
-            command = ['xdg-open', filename]
+            try:
+                uri = "file://" + filename
+                Gio.AppInfo.launch_default_for_uri(uri)
+            except:
+                self.on_menu_open_with_activate(self)
+            return
         try:
             subprocess.Popen(command, shell=False)
             if self.settings.get_setting('close-after-select'):
@@ -1809,24 +1814,29 @@ class CatfishWindow(Window):
         return handled
 
     def set_right_click_open_label(self):
-        if len(self.selected_filenames) > 1:
-            return _('Open with default applications')
+        try:
+            self.file_menu_open.set_visible(True)
+            if len(self.selected_filenames) > 1:
+                return _('Open with default applications')
 
-        filename = self.selected_filenames[0]
+            filename = self.selected_filenames[0]
 
-        if '//ARCHIVE//' in filename:
-            if filename.endswith('/'):
-                filename = filename.split('//ARCHIVE//')[0]
-            else:
-                mime = self.guess_mimetype(filename)
-                app = Gio.AppInfo.get_default_for_type(mime, False)
+            if '//ARCHIVE//' in filename:
+                if filename.endswith('/'):
+                    filename = filename.split('//ARCHIVE//')[0]
+                else:
+                    mime = self.guess_mimetype(filename)
+                    app = Gio.AppInfo.get_default_for_type(mime, False)
 
-        if os.path.exists(filename):
-            gfile = Gio.File.new_for_path(filename)
-            app = Gio.File.query_default_handler(gfile)
+            if os.path.exists(filename):
+                gfile = Gio.File.new_for_path(filename)
+                app = Gio.File.query_default_handler(gfile)
 
-        app_name = app.get_display_name()
-        return (_('Open with') + ' "{}"'.format(app_name))
+            app_name = app.get_display_name()
+            return (_('Open with') + ' "{}"'.format(app_name))
+        except:
+            self.file_menu_open.set_visible(False)
+            return _('No application found')
 
     def on_treeview_key_press_event(self, treeview, event):
         if "Control" in self.keys_pressed and "a" in self.keys_pressed:
