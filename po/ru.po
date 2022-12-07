@@ -10,10 +10,11 @@
 # Nick Schermer <nick@xfce.org>, 2019
 # Aleksandr P, 2020
 # Igor <f2404@yandex.ru>, 2020
-# Alexander Filёv, 2020
+# AlexanderFilev, 2020
 # Виктор, 2022
 # Andrei Stepanov, 2022
 # Igor Vornovskii, 2022
+# Артём Котлубай, 2022
 # 
 #, fuzzy
 msgid ""
@@ -22,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-17 16:43-0400\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Igor Vornovskii, 2022\n"
+"Last-Translator: Артём Котлубай, 2022\n"
 "Language-Team: Russian (https://www.transifex.com/xfce/teams/16840/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,7 +105,7 @@ msgstr "Путь"
 
 #: ../data/ui/CatfishPreferences.ui.h:14
 msgid "Add Directory..."
-msgstr "Добавить каталог..."
+msgstr "Добавить папку..."
 
 #: ../data/ui/CatfishPreferences.ui.h:15
 msgid "_Add"
@@ -112,7 +113,7 @@ msgstr "До_бавить"
 
 #: ../data/ui/CatfishPreferences.ui.h:16
 msgid "Remove Directory"
-msgstr "Удалить каталог"
+msgstr "Удалить папку"
 
 #: ../data/ui/CatfishPreferences.ui.h:17
 msgid "_Remove"
@@ -120,7 +121,7 @@ msgstr "_Удалить"
 
 #: ../data/ui/CatfishPreferences.ui.h:18
 msgid "Exclude Directories"
-msgstr "Не включать каталоги"
+msgstr "Не включать папки"
 
 #: ../data/ui/CatfishPreferences.ui.h:19
 msgid "Close the search _window after opening a file"
@@ -140,11 +141,11 @@ msgstr "Расширенный"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "Select a Folder"
-msgstr "Выбор каталога"
+msgstr "Выбор папки"
 
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "Folder not found!"
-msgstr "Каталог не найден!"
+msgstr "Папка не найдена!"
 
 #. Restore Cancel button
 #. Buttons
@@ -155,7 +156,7 @@ msgstr "Отмена"
 
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "Select Folder"
-msgstr "Выбор каталога"
+msgstr "Выбор папки"
 
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Open"
@@ -169,13 +170,13 @@ msgstr "_Открыть в…"
 #. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:8
 msgid "Show in _File Manager"
-msgstr "Показать в _файловом менеджере"
+msgstr "Показать в _проводнике"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
 #: ../data/ui/CatfishWindow.ui.h:10
 msgid "_Copy Location"
-msgstr "_Копировать адрес"
+msgstr "_Скопировать адрес"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "_Save as..."
@@ -241,7 +242,7 @@ msgstr "Этот месяц"
 
 #: ../data/ui/CatfishWindow.ui.h:26
 msgid "Custom"
-msgstr "Указать период"
+msgstr "Указать дату"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "Go to Today"
@@ -277,7 +278,7 @@ msgstr "Изменён"
 
 #: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2150
 msgid "Results will be displayed as soon as they are found."
-msgstr "Результат отобразится, как только будет получен."
+msgstr "Выдача отобразится, как только будет получена."
 
 #: ../data/ui/CatfishWindow.ui.h:37
 msgid "Unlock"
@@ -300,8 +301,8 @@ msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
-"Для ускорения результатов, поисковая база данных должна быть обновлена.\n"
-"Действие требует прав администратора."
+"Для ускорения поисковой выдачи, поисковая база данных должна быть обновлена.\n"
+"Действие требует прав суперпользователя."
 
 #: ../data/ui/CatfishWindow.ui.h:43
 msgid "Update Search Database"
@@ -341,7 +342,7 @@ msgstr "Обновить поисковый _индекс..."
 
 #: ../data/ui/CatfishWindow.ui.h:52
 msgid "_Preferences"
-msgstr "Па_раметры"
+msgstr "_Настройки"
 
 #: ../data/ui/CatfishWindow.ui.h:53
 msgid "_About"
@@ -465,7 +466,7 @@ msgid ""
 "Press the cancel button or the Escape key to stop."
 msgstr ""
 "Поиск...\n"
-"Нажмите «Отмена» или клавишу Esc, чтобы остановить процесс."
+"Нажмите «Отмена» или клавишу Esc, чтобы остановить выполнение."
 
 #: ../catfish/CatfishWindow.py:944
 msgid "Begin Search"
@@ -473,11 +474,11 @@ msgstr "Начать поиск"
 
 #: ../catfish/CatfishWindow.py:1068
 msgid "No folder selected."
-msgstr "Каталог не выбран."
+msgstr "Папка не выбрана."
 
 #: ../catfish/CatfishWindow.py:1073
 msgid "Folder not found."
-msgstr "Каталог не найден."
+msgstr "Папка не найдена."
 
 #: ../catfish/CatfishWindow.py:1317
 #, python-format
@@ -641,10 +642,10 @@ msgid ""
 "modification date, file type, and file contents, users will no longer be "
 "dependent on the file manager or organization skills."
 msgstr ""
-"Catfish — это небольшая, быстрая и мощная программа поиска файлов. "
-"Минималистичный интерфейс, заточенный на результат, помогает пользователям "
+"Catfish — это небольшое, быстрое и мощное приложение поиска файлов. "
+"Упрощённый интерфейс, заточенный на результат, помогает пользователям "
 "находить нужные файлы. С такими мощными фильтрами, как: дата изменения, тип "
-"и содержимое файла пользователь более не зависит от файлового менеджера и "
+"и содержимое файла пользователь более не зависит от проводника и "
 "организационных навыков."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
@@ -745,8 +746,7 @@ msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
-"Этот выпуск улучшает производительность, исключая из поиска нечастые "
-"директории."
+"Этот выпуск улучшает производительность, исключая из поиска нечастые папки."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
@@ -764,9 +764,9 @@ msgid ""
 " generated when requested by the user."
 msgstr ""
 "Этот выпуск обеспечивает улучшенную производительность и лучшую интеграцию с"
-" рабочим столом, а также несколько долгоживущих багов. Поиск строк в "
-"кавычках теперь работает корректно. Файлы можно перетаскивать в другие "
-"приложения. Значки генерируются только по запросу пользователя."
+" оболочкой, а также исправление нескольких долгоживущих ошибок. Поиск строк "
+"в кавычках теперь работает правильно. Файлы можно перетаскивать в другие "
+"приложения. Эскизы образуются только по запросу пользователя."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
