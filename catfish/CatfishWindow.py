@@ -54,6 +54,7 @@ from catfish.CatfishSearchEngine import CatfishSearchEngine, get_keyword_list
 from catfish_lib import catfishconfig, helpers, get_about
 from catfish_lib import CatfishSettings, SudoDialog, Window
 from catfish_lib import Thumbnailer
+from catfish_lib import FiletypeLists
 
 LOGGER = logging.getLogger('catfish')
 
@@ -1943,8 +1944,10 @@ class CatfishWindow(Window):
                 return True
         if self.filter_formats['documents']:
             use_filters = True
-            if mimetype.startswith("text"):
-                return True
+            for filetype in \
+            FiletypeLists.text_list() + FiletypeLists.document_list():
+                if filetype in mimetype.lower():
+                    return True
         if self.filter_formats['applications']:
             use_filters = True
             if mimetype.startswith("application"):
