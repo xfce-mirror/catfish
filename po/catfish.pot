@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-17 16:43-0400\n"
+"POT-Creation-Date: 2022-12-23 09:00-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:35
+#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:37
 #: ../catfish_lib/catfishconfig.py:88
 msgid "Catfish File Search"
 msgstr ""
@@ -201,128 +201,136 @@ msgid "Applications"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:21
-msgid "Other"
+msgid "Archives"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:22
-msgid "Any time"
+msgid "Other"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1894
-msgid "Today"
+#: ../data/ui/CatfishWindow.ui.h:23
+msgid "Extension..."
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:24
-msgid "This week"
+msgid "Any time"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:25
-msgid "This month"
+#: ../data/ui/CatfishWindow.ui.h:25 ../catfish/CatfishWindow.py:1894
+msgid "Today"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:26
-msgid "Custom"
+msgid "This week"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:27
-msgid "Go to Today"
+msgid "This month"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:28
-msgid "<b>Start Date</b>"
+msgid "Custom..."
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:29
-msgid "<b>End Date</b>"
+msgid "Go to Today"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:30 ../catfish_lib/Window.py:232
-msgid "Catfish"
+#: ../data/ui/CatfishWindow.ui.h:30
+msgid "<b>Start Date</b>"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:31
-msgid "Update"
+msgid "<b>End Date</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:32
-msgid "The search database is more than 7 days old.  Update now?"
+#: ../data/ui/CatfishWindow.ui.h:32 ../catfish_lib/Window.py:233
+msgid "Catfish"
 msgstr ""
 
 #: ../data/ui/CatfishWindow.ui.h:33
+msgid "Update"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:34
+msgid "The search database is more than 7 days old.  Update now?"
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "File Type"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1611
+#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:1611
 msgid "Modified"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2150
+#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:2193
 msgid "Results will be displayed as soon as they are found."
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Unlock"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "<b>Database:</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "<b>Updated:</b>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "<big><b>Update Search Database</b></big>"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "Update Search Database"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "Search for files"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid "Compact List"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:48
 msgid "Thumbnails"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:49
 msgid "Show _sidebar"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:50
 msgid "Show _hidden files"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:51
 msgid "Search file _contents"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:52
 msgid "_Match results exactly"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:53
 msgid "_Refresh search index..."
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:52
+#: ../data/ui/CatfishWindow.ui.h:54
 msgid "_Preferences"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:53
+#: ../data/ui/CatfishWindow.ui.h:55
 msgid "_About"
 msgstr ""
 
@@ -517,39 +525,39 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1977
+#: ../catfish/CatfishWindow.py:2020
 msgid "No files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1979
+#: ../catfish/CatfishWindow.py:2022
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1986
+#: ../catfish/CatfishWindow.py:2029
 msgid "1 file found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1988
+#: ../catfish/CatfishWindow.py:2031
 #, python-format
 msgid "%i files found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1997 ../catfish/CatfishWindow.py:2000
+#: ../catfish/CatfishWindow.py:2040 ../catfish/CatfishWindow.py:2043
 msgid "bytes"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:2148 ../catfish/CatfishWindow.py:2158
+#: ../catfish/CatfishWindow.py:2191 ../catfish/CatfishWindow.py:2201
 msgid "Searching..."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:2156
+#: ../catfish/CatfishWindow.py:2199
 #, python-format
 msgid "Searching for \"%s\""
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:2266
+#: ../catfish/CatfishWindow.py:2309
 #, python-format
 msgid "Search results for \"%s\""
 msgstr ""
