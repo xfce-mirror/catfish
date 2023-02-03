@@ -57,7 +57,7 @@ msgstr "_Κλείσιμο"
 
 #: ../data/ui/CatfishPreferences.ui.h:3
 msgid "Classic (_Titlebar)"
-msgstr "Κλασικό (Μπάρα _τίτλου)"
+msgstr "Κλασικό (Γραμμή _τίτλου)"
 
 #: ../data/ui/CatfishPreferences.ui.h:4
 msgid "_Modern (CSD)"
@@ -322,7 +322,7 @@ msgstr "Μικρογραφίες"
 
 #: ../data/ui/CatfishWindow.ui.h:47
 msgid "Show _sidebar"
-msgstr "Εμφάνιση πλευρικής _μπάρας"
+msgstr "Εμφάνιση πλευρικής μ_πάρας"
 
 #: ../data/ui/CatfishWindow.ui.h:48
 msgid "Show _hidden files"
