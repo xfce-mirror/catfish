@@ -390,6 +390,8 @@ msgstr "Якщо шлях і запит надано, почати пошук п
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"установіть колонку за замовчуванням для сортировки по "
+"(name|size|path|date|type),(asc|desc)"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -655,6 +657,9 @@ msgid ""
 "file manager support, and general look and feel. It also features several "
 "bug fixes for non-Xfce users."
 msgstr ""
+"У цьому випуску покращено комбінації клавіш, інтеграцію робочого середовища,"
+" підтримку файлового менеджера та загальний вигляд. Він також містить кілька"
+" виправлень помилок для тих, хто не користуються Xfce."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
