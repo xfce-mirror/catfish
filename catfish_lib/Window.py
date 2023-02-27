@@ -99,8 +99,9 @@ __builder__ = {
                 "music": "sidebar_filter_music_icon",
                 "videos": "sidebar_filter_videos_icon",
                 "applications": "sidebar_filter_applications_icon",
-                "custom": "sidebar_filter_custom_filetype_icon",
-                "options": "sidebar_filter_custom_options_icon"
+                "archives": "sidebar_filter_archives_icon",
+                "other": "sidebar_filter_other_icon",
+                "extension": "sidebar_filter_custom_extension_icon"
             }
         }
     },

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.38.2 -->
+<!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.16"/>
   <requires lib="catfish_window" version="1.0"/>
@@ -360,9 +360,25 @@
         <col id="5">False</col>
       </row>
       <row>
-        <col id="0">folder-saved-search-symbolic</col>
+        <col id="0">package-x-generic-symbolic</col>
+        <col id="1" translatable="yes">Archives</col>
+        <col id="2">archives</col>
+        <col id="3">False</col>
+        <col id="4">True</col>
+        <col id="5">False</col>
+      </row>
+      <row>
+        <col id="0">applications-other-symbolic</col>
         <col id="1" translatable="yes">Other</col>
         <col id="2">other</col>
+        <col id="3">False</col>
+        <col id="4">True</col>
+        <col id="5">False</col>
+      </row>
+      <row>
+        <col id="0">folder-saved-search-symbolic</col>
+        <col id="1" translatable="yes">Extension...</col>
+        <col id="2">extension</col>
         <col id="3">False</col>
         <col id="4">True</col>
         <col id="5">False</col>
@@ -419,7 +435,7 @@
       </row>
       <row>
         <col id="0">document-open-recent-symbolic</col>
-        <col id="1" translatable="yes">Custom</col>
+        <col id="1" translatable="yes">Custom...</col>
         <col id="2">custom</col>
         <col id="3">False</col>
         <col id="4">True</col>
@@ -850,7 +866,7 @@
                                   </packing>
                                 </child>
                                 <child type="overlay">
-                                  <object class="GtkAlignment" id="other_helper">
+                                  <object class="GtkAlignment" id="extension_helper">
                                     <property name="width-request">16</property>
                                     <property name="height-request">16</property>
                                     <property name="visible">True</property>
@@ -1020,6 +1036,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="padding">4</property>
                             <property name="position">2</property>
                           </packing>
                         </child>
