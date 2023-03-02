@@ -37,6 +37,8 @@ import gi
 gi.require_version('GLib', '2.0')  # noqa
 from gi.repository import GLib
 
+from catfish_lib import FiletypeLists
+
 try:
     gi.require_version('Zeitgeist', '2.0')
     from gi.repository import Zeitgeist
@@ -530,16 +532,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
     def is_txt(self, filename):
         """Checks if text mimetype."""
         mime = str(mimetypes.guess_type(filename)[0])
-        text_list = ('ardour', 'audacity', 'desktop', 'document',
-                     'fontforge', 'java', 'json', 'm4', 'mbox',
-                     'message', 'mimearchive', 'msg', 'none', 'perl',
-                     'pgp-keys', 'php', 'postscript', 'rtf',
-                     'ruby', 'shellscript', 'spreadsheet', 'sql',
-                     'subrip', 'text', 'troff', 'url', 'winhlp',
-                     'x-bittorent', 'x-cue', 'x-extension-cfg',
-                     'x-glade', 'x-mpegurl', 'x-sami', 'x-theme',
-                     'x-trash', 'xml', 'xpixmap', 'yaml')
-        for filetype in text_list:
+        for filetype in FiletypeLists.text_list():
             if filetype in mime.lower():
                 return True
 
