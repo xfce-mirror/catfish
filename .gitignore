@@ -8,3 +8,5 @@ __pycache__
 MANIFEST
 dist/
 data/metainfo/catfish.appdata.xml
+catfish.egg-info/
+po/catfish.pot
