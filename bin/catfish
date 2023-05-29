@@ -19,10 +19,11 @@
 import os
 import sys
 
+PREFIX = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 import locale
 locale.textdomain('catfish')
-
+locale.bindtextdomain('catfish', os.path.join(PREFIX, 'share/locale'))
 
 import gi
 gi.require_version('Gtk', '3.0')
@@ -33,12 +34,11 @@ if Gtk.check_version(3, 10, 0):
     print("Gtk version too old, version 3.10 required.")
     sys.exit(1)
 
-# Get project root directory (enable symlink and trunk execution)
-PROJECT_ROOT_DIRECTORY = os.path.abspath(
-    os.path.dirname(os.path.dirname(os.path.realpath(sys.argv[0]))))
-
-# Add project root directory to python search path
-sys.path.insert(0, PROJECT_ROOT_DIRECTORY)
+# Add project site-packages directory to python search path if needed
+import site
+if PREFIX not in site.PREFIXES:
+    site.PREFIXES.append(PREFIX)
+    site.main()
 
 import catfish
 catfish.main()
