@@ -1471,7 +1471,6 @@ This action requires administrative rights.</property>
     <property name="visible">True</property>
     <property name="can-focus">True</property>
     <property name="can-default">True</property>
-    <property name="has-default">True</property>
     <property name="valign">center</property>
     <property name="hexpand">True</property>
     <property name="invisible-char">•</property>
@@ -1601,7 +1600,6 @@ This action requires administrative rights.</property>
                 <property name="accel-widget">application_menu_advanced</property>
               </object>
             </child>
-            <accelerator key="F9" signal="activate"/>
           </object>
         </child>
       </object>
@@ -1641,7 +1639,6 @@ This action requires administrative rights.</property>
                 <property name="accel-widget">application_menu_hidden</property>
               </object>
             </child>
-            <accelerator key="h" signal="activate" modifiers="GDK_CONTROL_MASK"/>
           </object>
         </child>
       </object>

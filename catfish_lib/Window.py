@@ -214,6 +214,13 @@ class Window(Gtk.Window):
         else:
             self.setup_toolbar(chooser, search, button)
 
+        accel_group = Gtk.AccelGroup.new()
+        self.add_accel_group(accel_group)
+        button = self.builder.get_named_object("menus.application.advanced")
+        button.add_accelerator("activate", accel_group, Gdk.KEY_F9, 0, Gtk.AccelFlags.VISIBLE)
+        button = self.builder.get_named_object("menus.application.hidden")
+        button.add_accelerator("activate", accel_group, Gdk.KEY_h, Gdk.ModifierType.CONTROL_MASK, Gtk.AccelFlags.VISIBLE)
+
         search.grab_focus()
         self.keys_pressed = []
 
