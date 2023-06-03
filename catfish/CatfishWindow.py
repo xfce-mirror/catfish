@@ -1602,14 +1602,10 @@ class CatfishWindow(Window):
         """Prepare the list view in the results pane."""
         for column in self.treeview.get_columns():
             self.treeview.remove_column(column)
-        self.treeview.append_column(self.new_column(_('Filename'), 1,
-                                                    'icon', 1))
-        self.treeview.append_column(self.new_column(_('Size'), 2,
-                                                    'filesize'))
-        self.treeview.append_column(self.new_column(_('Location'), 3,
-                                                    'ellipsize'))
-        self.treeview.append_column(self.new_column(_('Modified'), 4,
-                                                    'date', 1))
+        self.treeview.append_column(self.new_column(_('Filename'), 1))
+        self.treeview.append_column(self.new_column(_('Size'), 2))
+        self.treeview.append_column(self.new_column(_('Location'), 3))
+        self.treeview.append_column(self.new_column(_('Modified'), 4))
         self.icon_size = Gtk.IconSize.MENU
 
     def setup_large_view(self):
@@ -1835,9 +1831,9 @@ class CatfishWindow(Window):
             self.update_treeview_stats(treeview, event)
         return False
 
-    def new_column(self, label, colid, special=None, markup=False):
+    def new_column(self, label, colid):
         """New Column function for creating TreeView columns easily."""
-        if special == 'icon':
+        if colid == 1:
             column = Gtk.TreeViewColumn(label)
             cell = Gtk.CellRendererPixbuf()
             column.pack_start(cell, False)
@@ -1847,24 +1843,19 @@ class CatfishWindow(Window):
             column.add_attribute(cell, 'text', colid)
         else:
             cell = Gtk.CellRendererText()
-            if markup:
-                column = Gtk.TreeViewColumn(label, cell, markup=colid)
-            else:
-                column = Gtk.TreeViewColumn(label, cell, text=colid)
-            if special == 'ellipsize':
-                column.set_min_width(120)
-                cell.set_property('ellipsize', Pango.EllipsizeMode.START)
-            elif special == 'filesize':
+            column = Gtk.TreeViewColumn(label, cell)
+            if colid == 2:
                 cell.set_property('xalign', 1.0)
-                column.set_cell_data_func(cell,
-                                          self.cell_data_func_filesize, colid)
-            elif special == 'date':
-                column.set_cell_data_func(cell,
-                                          self.cell_data_func_modified, colid)
+                column.set_cell_data_func(cell, self.cell_data_func_filesize, colid)
+            elif colid == 3:
+                column.set_min_width(120)
+                column.set_expand(True)
+                cell.set_property('ellipsize', Pango.EllipsizeMode.START)
+                column.add_attribute(cell, 'text', colid)
+            elif colid == 4:
+                column.set_cell_data_func(cell, self.cell_data_func_modified, colid)
         column.set_sort_column_id(colid)
         column.set_resizable(True)
-        if colid == 3:
-            column.set_expand(True)
         return column
 
     def cell_data_func_filesize(self, column, cell_renderer,  # pylint: disable=W0613
