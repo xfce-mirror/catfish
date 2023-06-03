@@ -1625,7 +1625,7 @@ class CatfishWindow(Window):
         # Make the Details Column
         cell = Gtk.CellRendererText()
         cell.set_property("ellipsize", Pango.EllipsizeMode.END)
-        column = Gtk.TreeViewColumn(_("Details"), cell, markup=1)
+        column = Gtk.TreeViewColumn(_("Details"), cell)
 
         column.set_sort_column_id(1)
         column.set_resizable(True)
