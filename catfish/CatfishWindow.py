@@ -692,25 +692,33 @@ class CatfishWindow(Window):
         """Cell Renderer Function for the preview."""
         icon_name = model[treeiter][0]
         fullpath = os.path.join(model[treeiter][3], model[treeiter][1])
+        mimetype = self.guess_mimetype(fullpath)
         emblem_icon = 'emblem-symbolic-link'
-        if os.path.isfile(icon_name):
-            # Load from thumbnail file.
-            if self.show_thumbnail:
+
+
+        if self.show_thumbnail:
+            if os.path.islink(fullpath):
+                if os.path.isfile(icon_name):
+                    pixbuf = self.create_symlink_thumb(fullpath, icon_name, emblem_icon)
+                else:
+                    pixbuf = self.create_symlink_icon(fullpath, icon_name, emblem_icon)
+
+            elif os.path.isfile(icon_name):
                 pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon_name)
-                renderer.set_property('pixbuf', pixbuf)
-                return
             else:
-                mimetype = self.guess_mimetype(fullpath)
-                icon_name = self.get_file_icon(fullpath, mimetype)
+                pixbuf = self.get_icon_pixbuf(icon_name)
+
+        elif not self.show_thumbnail:
+
+            icon_name = self.get_file_icon(fullpath, mimetype)
+            if os.path.islink(fullpath):
+                pixbuf = self.create_symlink_icon(fullpath, icon_name, emblem_icon)
+            else:
+                pixbuf = self.get_icon_pixbuf(icon_name)
+
 
         if self.changed_icon_theme:
-            mimetype = self.guess_mimetype(fullpath)
             icon_name = self.get_file_icon(fullpath, mimetype)
-
-        if os.path.islink(fullpath) and self.icon_theme.has_icon(emblem_icon):
-            pixbuf = self.create_symlink_icon(fullpath, icon_name, emblem_icon)
-        else:
-            pixbuf = self.get_icon_pixbuf(icon_name)
 
         renderer.set_property('pixbuf', pixbuf)
 
@@ -2018,11 +2026,56 @@ class CatfishWindow(Window):
         self.changed_icon_theme = True
         return
 
+
+    def create_symlink_thumb(self, fullpath, icon_name, emblem_icon):
+        """Create an image preview thumbnail with symlink emblem for
+        image-based files when searching in thumbnail mode"""
+
+
+        # Get thumbnail (already generated with self.get_thumbnail)
+        thumb = GdkPixbuf.Pixbuf.new_from_file(icon_name)
+        thumb_w = thumb.get_width()
+        thumb_h = thumb.get_height()
+
+        # Load emblem, scale down so small thumbnails aren't blocked
+        emb_size = Gtk.icon_size_lookup(self.icon_size)[1]
+        emb_resize = 24
+        load = self.icon_theme.load_icon
+        if thumb_w <= 24 or thumb_h <=24:
+            emblem = load(emblem_icon, 48, 0)
+            emblem = GdkPixbuf.Pixbuf.scale_simple(emblem,
+                         16, 16, GdkPixbuf.InterpType.BILINEAR)
+        else:
+            emblem = load(emblem_icon, emb_size, 0)
+            emblem = GdkPixbuf.Pixbuf.scale_simple(emblem,
+                     emb_resize, emb_resize, GdkPixbuf.InterpType.BILINEAR)
+
+        emb_w = emblem.get_width()
+        emb_h = emblem.get_height()
+
+
+        # Canvas must be larger than size of thumb and offset emblem
+        canvas_w = thumb_w+20
+        canvas_h = thumb_h+20
+        canvas = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace(0),
+                                     True, 8, canvas_w, canvas_h)
+        canvas.fill(0)
+
+        #Center the thumbnail onto canvas
+        thumb.composite(canvas, 10, 10, thumb_w, thumb_h, 10.0, 10.0,
+                       1.0, 1.0, GdkPixbuf.InterpType.BILINEAR, 255)
+
+        #Apply emblem to canvas, offset to bottom right
+        emb_x, emb_y = (canvas_w-emb_w, canvas_h-emb_h)
+        emblem.composite(canvas, emb_x, emb_y, emb_w, emb_h,
+                         float(emb_x), float(emb_y), 1.0, 1.0,
+                         GdkPixbuf.InterpType.BILINEAR, 255)
+
+        return canvas
+
     def create_symlink_icon(self, fullpath, icon_name, emblem_icon):
-        """Creates a new transparent 22x21px image. Then centers and
-        overlays/composites the mimetype icon. The emblem icon is then
-        resized, offset and overlayed onto the 22x21px + mimetype image,
-        creating the symbolic icon."""
+        """Create mimetype icon with symlink emblem for
+        non-image files in both list and thumbnail modes"""
 
         load = self.icon_theme.load_icon
         icon_size = Gtk.icon_size_lookup(self.icon_size)[1]
@@ -2030,19 +2083,24 @@ class CatfishWindow(Window):
         icon = load(icon_name, icon_size, Gtk.IconLookupFlags.FORCE_SIZE)
         emblem = load(emblem_icon, icon_size, 0)
 
+
+        filter = GdkPixbuf.InterpType.BILINEAR
+
         # Set GdkPixbuf composite properties (icon sizes, offsets)
-        filtr = GdkPixbuf.InterpType.BILINEAR
+        # Composite image must be larger than icon with emblem combined
+
         if self.show_thumbnail is False:
+            # In list search, icons are 16px
             new_sizex, new_sizey = (22, 21)
             emb_resize = 12
             icon_destx, icon_desty, icon_offx, icon_offy = (3, 2, 3.0, 2.0)
             emb_destx, emb_desty, emb_offx, emb_offy = (10, 9, 10.0, 9.0)
-
         else:
-            new_sizex, new_sizey = (50, 50)
+            # In thumbnail search, icons are 48px
+            new_sizex, new_sizey = (54, 54)
             emb_resize = 24
             icon_destx, icon_desty, icon_offx, icon_offy = (2, 2, 2.0, 2.0)
-            emb_destx, emb_desty, emb_offx, emb_offy = (26, 26, 26.0, 26.0)
+            emb_destx, emb_desty, emb_offx, emb_offy = (30, 30, 30.0, 30.0)
 
         # Create new icon, overlay icon, scale emblem, overlay emblem on top
         new_icon = GdkPixbuf.Pixbuf.new(
@@ -2051,14 +2109,14 @@ class CatfishWindow(Window):
 
         GdkPixbuf.Pixbuf.composite(
             icon, new_icon, icon_destx, icon_desty, icon_size,
-            icon_size, icon_offx, icon_offy, 1.0, 1.0, filtr, 255)
+            icon_size, icon_offx, icon_offy, 1.0, 1.0, filter, 255)
 
         emb_scaled = GdkPixbuf.Pixbuf.scale_simple(
-            emblem, emb_resize, emb_resize, filtr)
+            emblem, emb_resize, emb_resize, filter)
 
         GdkPixbuf.Pixbuf.composite(
             emb_scaled, new_icon, emb_destx, emb_desty, emb_resize,
-            emb_resize, emb_offx, emb_offy, 1.0, 1.0, filtr, 255)
+            emb_resize, emb_offx, emb_offy, 1.0, 1.0, filter, 255)
 
         return new_icon
 
