@@ -1768,6 +1768,9 @@ class CatfishWindow(Window):
         return True
 
     def treeview_right_click(self, treeview, event=None):
+        if not self.selected_filenames:
+            return False
+
         self.maintain_treeview_stats(treeview, event)
         directory = os.path.isdir(self.selected_filenames[0]) or \
             self.selected_filenames[0].endswith("/")
