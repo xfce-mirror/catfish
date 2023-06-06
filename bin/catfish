@@ -34,11 +34,12 @@ if Gtk.check_version(3, 10, 0):
     print("Gtk version too old, version 3.10 required.")
     sys.exit(1)
 
-# Add project site-packages directory to python search path if needed
+# Prepend project site-packages directory to python search path if needed
 import site
 if PREFIX not in site.PREFIXES:
-    site.PREFIXES.append(PREFIX)
+    site.PREFIXES.insert(0, PREFIX)
     site.main()
+    sys.path.insert(0, sys.path.pop())
 
 import catfish
 catfish.main()
