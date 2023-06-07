@@ -29,7 +29,7 @@ __all__ = [
 # files). By default, this is ../data, relative your trunk layout
 __catfish_data_directory__ = '../data/'
 # Location of locate.db file
-__locate_db_path__ = '/var/lib/mlocate/mlocate.db'
+__locate_db_paths__ = ('/var/lib/plocate/plocate.db', '/var/lib/mlocate/mlocate.db')
 __license__ = 'GPL-2+'
 __version__ = '4.16.4'
 __url__ = 'https://docs.xfce.org/apps/catfish/start'
@@ -72,7 +72,10 @@ def get_data_path():
 def get_locate_db_path():
     """Return the location of the locate.db file
     """
-    return __locate_db_path__
+    for path in __locate_db_paths__:
+        if os.access(os.path.dirname(path), os.F_OK):
+            return path
+    return __locate_db_paths__[0]
 
 
 def get_version():
