@@ -696,27 +696,24 @@ class CatfishWindow(Window):
         mimetype = self.guess_mimetype(fullpath)
         emblem_icon = 'emblem-symbolic-link'
 
-
         if self.show_thumbnail:
             if os.path.islink(fullpath):
                 if os.path.isfile(icon_name):
                     pixbuf = self.create_symlink_thumb(fullpath, icon_name, emblem_icon)
                 else:
                     pixbuf = self.create_symlink_icon(fullpath, icon_name, emblem_icon)
-
             elif os.path.isfile(icon_name):
                 pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon_name)
             else:
                 pixbuf = self.get_icon_pixbuf(icon_name)
 
-        elif not self.show_thumbnail:
+        else:
 
             icon_name = self.get_file_icon(fullpath, mimetype)
             if os.path.islink(fullpath):
                 pixbuf = self.create_symlink_icon(fullpath, icon_name, emblem_icon)
             else:
                 pixbuf = self.get_icon_pixbuf(icon_name)
-
 
         if self.changed_icon_theme:
             icon_name = self.get_file_icon(fullpath, mimetype)
@@ -2061,18 +2058,18 @@ class CatfishWindow(Window):
 
 
         # Canvas must be larger than size of thumb and offset emblem
-        canvas_w = thumb_w+20
-        canvas_h = thumb_h+20
+        canvas_w = thumb_w + 20
+        canvas_h = thumb_h + 20
         canvas = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace(0),
-                                     True, 8, canvas_w, canvas_h)
+                                      True, 8, canvas_w, canvas_h)
         canvas.fill(0)
 
         #Center the thumbnail onto canvas
         thumb.composite(canvas, 10, 10, thumb_w, thumb_h, 10.0, 10.0,
-                       1.0, 1.0, GdkPixbuf.InterpType.BILINEAR, 255)
+                        1.0, 1.0, GdkPixbuf.InterpType.BILINEAR, 255)
 
         #Apply emblem to canvas, offset to bottom right
-        emb_x, emb_y = (canvas_w-emb_w, canvas_h-emb_h)
+        emb_x, emb_y = (canvas_w - emb_w, canvas_h - emb_h)
         emblem.composite(canvas, emb_x, emb_y, emb_w, emb_h,
                          float(emb_x), float(emb_y), 1.0, 1.0,
                          GdkPixbuf.InterpType.BILINEAR, 255)
