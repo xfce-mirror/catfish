@@ -1839,7 +1839,7 @@ class CatfishWindow(Window):
             return (_('Open with') + ' "{}"'.format(app_name))
         except:
             self.file_menu_open.set_visible(False)
-            return _('No application found')
+            return ''
 
     def on_treeview_key_press_event(self, treeview, event):
         if "Control" in self.keys_pressed and "a" in self.keys_pressed:
