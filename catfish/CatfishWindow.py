@@ -2037,20 +2037,11 @@ class CatfishWindow(Window):
         thumb_h = thumb.get_height()
 
         # Load emblem, scale down so small thumbnails aren't blocked
-        emb_size = Gtk.icon_size_lookup(self.icon_size)[1]
-        emb_resize = 24
-        load = self.icon_theme.load_icon
-        if thumb_w <= 24 or thumb_h <=24:
-            emblem = load(emblem_icon, 48, 0)
-            emblem = GdkPixbuf.Pixbuf.scale_simple(emblem,
-                         16, 16, GdkPixbuf.InterpType.BILINEAR)
-        else:
-            emblem = load(emblem_icon, emb_size, 0)
-            emblem = GdkPixbuf.Pixbuf.scale_simple(emblem,
-                     emb_resize, emb_resize, GdkPixbuf.InterpType.BILINEAR)
+        emb_size = Gtk.icon_size_lookup(self.icon_size)[1] / 2
+        if thumb_w <= emb_size or thumb_h <= emb_size:
+            emb_size = 16
 
-        emb_w = emblem.get_width()
-        emb_h = emblem.get_height()
+        emblem = self.icon_theme.load_icon(emblem_icon, emb_size, Gtk.IconLookupFlags.FORCE_SIZE)
 
         # Canvas must be larger than size of thumb and offset emblem
         canvas_w = thumb_w + 20
@@ -2064,8 +2055,8 @@ class CatfishWindow(Window):
                         1.0, 1.0, GdkPixbuf.InterpType.BILINEAR, 255)
 
         #Apply emblem to canvas, offset to bottom right
-        emb_x, emb_y = (canvas_w - emb_w, canvas_h - emb_h)
-        emblem.composite(canvas, emb_x, emb_y, emb_w, emb_h,
+        emb_x, emb_y = (canvas_w - emb_size, canvas_h - emb_size)
+        emblem.composite(canvas, emb_x, emb_y, emb_size, emb_size,
                          float(emb_x), float(emb_y), 1.0, 1.0,
                          GdkPixbuf.InterpType.BILINEAR, 255)
 
