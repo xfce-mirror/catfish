@@ -706,9 +706,7 @@ class CatfishWindow(Window):
                 pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon_name)
             else:
                 pixbuf = self.get_icon_pixbuf(icon_name)
-
         else:
-
             icon_name = self.get_file_icon(fullpath, mimetype)
             if os.path.islink(fullpath):
                 pixbuf = self.create_symlink_icon(fullpath, icon_name, emblem_icon)
@@ -2029,11 +2027,9 @@ class CatfishWindow(Window):
         self.changed_icon_theme = True
         return
 
-
     def create_symlink_thumb(self, fullpath, icon_name, emblem_icon):
         """Create an image preview thumbnail with symlink emblem for
         image-based files when searching in thumbnail mode"""
-
 
         # Get thumbnail (already generated with self.get_thumbnail)
         thumb = GdkPixbuf.Pixbuf.new_from_file(icon_name)
@@ -2055,7 +2051,6 @@ class CatfishWindow(Window):
 
         emb_w = emblem.get_width()
         emb_h = emblem.get_height()
-
 
         # Canvas must be larger than size of thumb and offset emblem
         canvas_w = thumb_w + 20
@@ -2085,7 +2080,6 @@ class CatfishWindow(Window):
 
         icon = load(icon_name, icon_size, Gtk.IconLookupFlags.FORCE_SIZE)
         emblem = load(emblem_icon, icon_size, 0)
-
 
         filter = GdkPixbuf.InterpType.BILINEAR
 
