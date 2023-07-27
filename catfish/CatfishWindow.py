@@ -1930,23 +1930,6 @@ class CatfishWindow(Window):
         if modified > self.filter_timerange[1]:
             return False
 
-        apps_list = ['android.package', 'appimage', 'debian.binary',
-                     'apple-diskimage', 'flatpak', 'java-archive',
-                     'rpm', 'vnd.snap', 'x-msdos', 'x-msi',
-                     'x-desktop']
-
-        arch_list = ['7z', 'archive', 'arj', 'bzip', 'comicbook',
-                     'compressed', 'cpio', 'epub', 'gzip',
-                     'java-pack200', 'lha', 'lhz', 'lzma', 'lzop',
-                     'vnd.oasis.opendocument', 'vnd.rar', 'stuffit',
-                     'tar', 'x-ace', 'x-pak', 'x-shar', 'xz', 'zip',
-                     'zstd', 'java-archive', 'debian.binary',
-                     'flatpak', 'vnd.snap', 'appimage', 'x-ms-dos',
-                     'x-msi', 'apple-diskimage', 'android.package',
-                     'rpm', 'java-archive']
-        arch_ext_list = ['.ar', '.ear', '.pea', '.war']
-        filter_lists = ['image', 'audio', 'video', 'text']
-
         # mimetype
         mimetype = model[treeiter][5]
         filename = os.path.basename(model[treeiter][1])
@@ -1975,15 +1958,15 @@ class CatfishWindow(Window):
                     return True
         if self.filter_formats['applications']:
             use_filters = True
-            for item in apps_list:
+            for item in FiletypeLists.app_list():
                 if item in mimetype.lower():
                     return True
         if self.filter_formats['archives']:
             use_filters = True
-            for item in arch_list:
+            for item in FiletypeLists.arch_list():
                 if item in mimetype.lower():
                     return True
-            for item in arch_ext_list:
+            for item in FiletypeLists.arch_ext_list():
                 if item in os.path.splitext(filename)[1]:
                     return True
         if self.filter_formats['other']:
@@ -1993,10 +1976,10 @@ class CatfishWindow(Window):
             in_list = False
             if mimetype == 'inode/directory':
                 folder = True
-            for item in filter_lists:
+            for item in FiletypeLists.filter_list():
                 if mimetype.startswith(item):
                     startswith = True
-            for item in apps_list + arch_list:
+            for item in FiletypeLists.app_list() + FiletypeLists.arch_list():
                 if item in mimetype.lower():
                     in_list = True
             if not folder and not startswith and not in_list:

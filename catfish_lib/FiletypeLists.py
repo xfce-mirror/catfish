@@ -33,3 +33,29 @@ def text_list():
 def document_list():
     doc_list = ('pdf', 'ebook', 'epub', 'msword')
     return doc_list
+
+def app_list():
+    app_list = ('android.package', 'appimage', 'debian.binary',
+                'apple-diskimage', 'flatpak', 'java-archive',
+                'rpm', 'vnd.snap', 'x-msdos', 'x-msi', 'x-desktop')
+    return app_list
+
+def arch_list():
+    arch_list = ('7z', 'archive', 'arj', 'bzip', 'comicbook',
+                 'compressed', 'cpio', 'epub', 'gzip',
+                 'java-pack200', 'lha', 'lhz', 'lzma', 'lzop',
+                 'vnd.oasis.opendocument', 'vnd.rar', 'stuffit',
+                 'tar', 'x-ace', 'x-pak', 'x-shar', 'xz', 'zip',
+                 'zstd', 'java-archive', 'debian.binary',
+                 'flatpak', 'vnd.snap', 'appimage', 'x-ms-dos',
+                 'x-msi', 'apple-diskimage', 'android.package',
+                 'rpm', 'java-archive')
+    return arch_list
+
+def arch_ext_list():
+    arch_ext_list = ('.ar', '.ear', '.pea', '.war')
+    return arch_ext_list
+
+def filter_list():
+    filter_list = ('image', 'audio', 'video', 'text')
+    return filter_list
