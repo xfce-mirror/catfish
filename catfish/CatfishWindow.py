@@ -123,8 +123,8 @@ class CatfishWindow(Window):
 
     filter_formats = {'documents': False, 'folders': False, 'images': False,
                       'music': False, 'videos': False, 'applications': False,
-                      'other': False, 'exact': False, 'hidden': False,
-                      'fulltext': False}
+                      'archives': False, 'other': False, 'extension': False,
+                      'exact': False, 'hidden': False, 'fulltext': False}
 
     filter_custom_extensions = []
     filter_custom_use_mimetype = False
@@ -486,7 +486,7 @@ class CatfishWindow(Window):
         model = treeview.get_model()
         treeiter = model.get_iter(path)
         row = model[treeiter]
-        showPopup = row[2] == "other" and row[5] == 0
+        showPopup = row[2] == "extension" and row[5] == 0
         if treeview.get_column(2) == column:
             if row[5]:
                 popover = self.get_popover(row[2], builder)
@@ -495,7 +495,7 @@ class CatfishWindow(Window):
             row[3], row[4] = row[4], row[3]
         else:
             row[3], row[4] = row[4], row[3]
-        if row[2] == 'other' or row[2] == 'custom':
+        if row[2] == 'extension' or row[2] == 'custom':
             row[5] = row[3]
         if showPopup and row[5]:
             popover = self.get_popover(row[2], builder)
@@ -504,7 +504,7 @@ class CatfishWindow(Window):
         self.refilter()
 
     def get_popover(self, name, builder):
-        if name == "other":
+        if name == "extension":
             popover_id = "filetype"
         elif name == "custom":
             popover_id = "modified"
@@ -1930,8 +1930,26 @@ class CatfishWindow(Window):
         if modified > self.filter_timerange[1]:
             return False
 
+        apps_list = ['android.package', 'appimage', 'debian.binary',
+                     'apple-diskimage', 'flatpak', 'java-archive',
+                     'rpm', 'vnd.snap', 'x-msdos', 'x-msi',
+                     'x-desktop']
+
+        arch_list = ['7z', 'archive', 'arj', 'bzip', 'comicbook',
+                     'compressed', 'cpio', 'epub', 'gzip',
+                     'java-pack200', 'lha', 'lhz', 'lzma', 'lzop',
+                     'vnd.oasis.opendocument', 'vnd.rar', 'stuffit',
+                     'tar', 'x-ace', 'x-pak', 'x-shar', 'xz', 'zip',
+                     'zstd', 'java-archive', 'debian.binary',
+                     'flatpak', 'vnd.snap', 'appimage', 'x-ms-dos',
+                     'x-msi', 'apple-diskimage', 'android.package',
+                     'rpm', 'java-archive']
+        arch_ext_list = ['.ar', '.ear', '.pea', '.war']
+        filter_lists = ['image', 'audio', 'video', 'text']
+
         # mimetype
         mimetype = model[treeiter][5]
+        filename = os.path.basename(model[treeiter][1])
         use_filters = False
         if self.filter_formats['folders']:
             use_filters = True
@@ -1957,9 +1975,33 @@ class CatfishWindow(Window):
                     return True
         if self.filter_formats['applications']:
             use_filters = True
-            if mimetype.startswith("application"):
-                return True
+            for item in apps_list:
+                if item in mimetype.lower():
+                    return True
+        if self.filter_formats['archives']:
+            use_filters = True
+            for item in arch_list:
+                if item in mimetype.lower():
+                    return True
+            for item in arch_ext_list:
+                if item in os.path.splitext(filename)[1]:
+                    return True
         if self.filter_formats['other']:
+            use_filters = True
+            folder = False
+            startswith = False
+            in_list = False
+            if mimetype == 'inode/directory':
+                folder = True
+            for item in filter_lists:
+                if mimetype.startswith(item):
+                    startswith = True
+            for item in apps_list + arch_list:
+                if item in mimetype.lower():
+                    in_list = True
+            if not folder and not startswith and not in_list:
+                return True
+        if self.filter_formats['extension']:
             use_filters = True
             extension = os.path.splitext(model[treeiter][1])[1]
             if extension in self.filter_custom_extensions:
