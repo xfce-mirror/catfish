@@ -8,19 +8,19 @@
 # Xfce Bot <transifex@xfce.org>, 2018
 # Panagiotis Mantzios <pmantzios@hotmail.com>, 2018
 # Πέτρος Σαμαράς <psamaras1@gmail.com>, 2019
-# Nick Schermer <nick@xfce.org>, 2020
 # Στέργιος Γέμελας <sgemelas@protonmail.com>, 2021
 # Ápo. <apostolos.papadimitriu@gmail.com>, 2022
 # Ioannis LM, 2023
+# Nick Schermer <nick@xfce.org>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 00:50+0200\n"
+"POT-Creation-Date: 2023-07-28 00:48+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Ioannis LM, 2023\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>, 2023\n"
 "Language-Team: Greek (https://app.transifex.com/xfce/teams/16840/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,8 +28,8 @@ msgstr ""
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:35
-#: ../catfish_lib/catfishconfig.py:88
+#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:37
+#: ../catfish_lib/catfishconfig.py:91
 msgid "Catfish File Search"
 msgstr "Αναζήτηση αρχείων Catfish"
 
@@ -147,7 +147,7 @@ msgstr "Ο φάκελος δεν βρέθηκε!"
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:793
+#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:797
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Ακύρωση"
@@ -219,84 +219,92 @@ msgid "Applications"
 msgstr "Εφαρμογές"
 
 #: ../data/ui/CatfishWindow.ui.h:21
+msgid "Archives"
+msgstr "Συμπιεσμένα αρχεία"
+
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "Άλλο"
 
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:23
+msgid "Extension..."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
 msgstr "Οποιαδήποτε ώρα"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1894
+#: ../data/ui/CatfishWindow.ui.h:25 ../catfish/CatfishWindow.py:1902
 msgid "Today"
 msgstr "Σήμερα"
 
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
 msgstr "Αυτήν την εβδομάδα"
 
-#: ../data/ui/CatfishWindow.ui.h:25
+#: ../data/ui/CatfishWindow.ui.h:27
 msgid "This month"
 msgstr "Αυτόν τον μήνα"
 
-#: ../data/ui/CatfishWindow.ui.h:26
-msgid "Custom"
-msgstr "Προσαρμοσμένη"
+#: ../data/ui/CatfishWindow.ui.h:28
+msgid "Custom..."
+msgstr "Προσαρμογή..."
 
-#: ../data/ui/CatfishWindow.ui.h:27
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "Go to Today"
 msgstr "Μετάβαση στο σήμερα"
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:30
 msgid "<b>Start Date</b>"
 msgstr "<b>Αρχική ημερομηνία</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "<b>End Date</b>"
 msgstr "<b>Τελική ημερομηνία</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:30 ../catfish_lib/Window.py:232
+#: ../data/ui/CatfishWindow.ui.h:32 ../catfish_lib/Window.py:240
 msgid "Catfish"
 msgstr "Catfish"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Update"
 msgstr "Ανανέωση"
 
-#: ../data/ui/CatfishWindow.ui.h:32
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
 "Η βάση δεδομένων αναζήτησης είναι παλαιότερη από 7 ημέρες. Να ανανεωθεί "
 "τώρα;"
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "File Type"
 msgstr "Τύπος αρχείου"
 
-#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1611
+#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:1617
 msgid "Modified"
 msgstr "Τροποποιήθηκε"
 
-#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2150
+#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:2222
 msgid "Results will be displayed as soon as they are found."
 msgstr "Τα αποτελέσματα θα εμφανίζονται αμέσως μόλις βρίσκονται."
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Unlock"
 msgstr "Ξεκλείδωμα"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "<b>Database:</b>"
 msgstr "<b>Βάση δεδομένων:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "<b>Updated:</b>"
 msgstr "<b>Ανανεώθηκε:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Ανανέωση βάσης δεδομένων αναζήτησης</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -304,47 +312,47 @@ msgstr ""
 "Για γρηγορότερα αποτελέσματα, η βάση δεδομένων αναζήτησης πρέπει να ανανεωθεί.\n"
 "Αυτή η λειτουργία απαιτεί δικαιώματα διαχειριστή."
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "Update Search Database"
 msgstr "Ανανέωση βάσης δεδομένων αναζήτησης"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "Search for files"
 msgstr "Αναζήτηση αρχείων"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid "Compact List"
 msgstr "Συμπαγής λίστα"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:48
 msgid "Thumbnails"
 msgstr "Μικρογραφίες"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:49
 msgid "Show _sidebar"
 msgstr "Εμφάνιση πλευρικής μ_πάρας"
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:50
 msgid "Show _hidden files"
 msgstr "Εμφάνιση _κρυφών αρχείων"
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:51
 msgid "Search file _contents"
 msgstr "Αναζήτηση στο _περιεχόμενο των αρχείων "
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:52
 msgid "_Match results exactly"
 msgstr "_Ταίριασμα αποτελεσμάτων με ακρίβεια"
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:53
 msgid "_Refresh search index..."
 msgstr "Ανανέωση _περιεχομένων ευρετηρίου..."
 
-#: ../data/ui/CatfishWindow.ui.h:52
+#: ../data/ui/CatfishWindow.ui.h:54
 msgid "_Preferences"
 msgstr "_Προτιμήσεις"
 
-#: ../data/ui/CatfishWindow.ui.h:53
+#: ../data/ui/CatfishWindow.ui.h:55
 msgid "_About"
 msgstr "Π_ερί"
 
@@ -403,27 +411,27 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:107
+#: ../catfish/CatfishWindow.py:108
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (άκυρη κωδικοποίηση)"
 
-#: ../catfish/CatfishWindow.py:147
+#: ../catfish/CatfishWindow.py:148
 msgid "translator-credits"
 msgstr ""
 "Σταύρος Γιαννούρης <stavrosg@serverhive.com>\n"
 "Πέτρος Σαμαράς <petros@theoreio.gr>\n"
 "Ιωάννης"
 
-#: ../catfish/CatfishWindow.py:297
+#: ../catfish/CatfishWindow.py:298
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: ../catfish/CatfishWindow.py:301
+#: ../catfish/CatfishWindow.py:302
 msgid "Never"
 msgstr "Ποτέ"
 
-#: ../catfish/CatfishWindow.py:413
+#: ../catfish/CatfishWindow.py:414
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -432,37 +440,37 @@ msgstr ""
 "Εισάγετε την αναζήτησή σας επάνω για να βρείτε τα αρχεία σας\n"
 "ή κάνετε κλικ στο εικονίδιο %s για περισσότερες επιλογές."
 
-#: ../catfish/CatfishWindow.py:808
+#: ../catfish/CatfishWindow.py:812
 msgid "An error occurred while updating the database."
 msgstr "Εμφανίστηκε λάθος κατά την ανανέωση της βάσης δεδομένων."
 
-#: ../catfish/CatfishWindow.py:810
+#: ../catfish/CatfishWindow.py:814
 msgid "Authentication failed."
 msgstr "Η ταυτοποίηση απέτυχε."
 
-#: ../catfish/CatfishWindow.py:816
+#: ../catfish/CatfishWindow.py:820
 msgid "Authentication cancelled."
 msgstr "Η ταυτοποίηση ακυρώθηκε."
 
-#: ../catfish/CatfishWindow.py:822
+#: ../catfish/CatfishWindow.py:826
 msgid "Search database updated successfully."
 msgstr "Η βάση δεδομένων αναζήτησης ανανεώθηκε με επιτυχία."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:883
+#: ../catfish/CatfishWindow.py:887
 msgid "Close"
 msgstr "Κλείσιμο"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:897
+#: ../catfish/CatfishWindow.py:901
 msgid "Updating..."
 msgstr "Ενημέρωση..."
 
-#: ../catfish/CatfishWindow.py:932
+#: ../catfish/CatfishWindow.py:936
 msgid "Stop Search"
 msgstr "Διακοπή αναζήτησης"
 
-#: ../catfish/CatfishWindow.py:933
+#: ../catfish/CatfishWindow.py:937
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -470,39 +478,39 @@ msgstr ""
 "Αναζήτηση σε εξέλιξη...\n"
 "Για διακοπή πατήστε το κουμπί ακύρωσης ή το πλήκτρο Escape."
 
-#: ../catfish/CatfishWindow.py:944
+#: ../catfish/CatfishWindow.py:948
 msgid "Begin Search"
 msgstr "Έναρξη αναζήτησης"
 
-#: ../catfish/CatfishWindow.py:1068
+#: ../catfish/CatfishWindow.py:1072
 msgid "No folder selected."
 msgstr "Δεν επιλέχθηκε φάκελος."
 
-#: ../catfish/CatfishWindow.py:1073
+#: ../catfish/CatfishWindow.py:1077
 msgid "Folder not found."
 msgstr "Ο φάκελος δεν βρέθηκε."
 
-#: ../catfish/CatfishWindow.py:1317
+#: ../catfish/CatfishWindow.py:1326
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Αδυναμία ανοίγματος \"%s\"."
 
-#: ../catfish/CatfishWindow.py:1473
+#: ../catfish/CatfishWindow.py:1482
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Αδυναμία αποθήκευσης \"%s\"."
 
-#: ../catfish/CatfishWindow.py:1490
+#: ../catfish/CatfishWindow.py:1499
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Αδυναμία διαγραφής \"%s\"."
 
-#: ../catfish/CatfishWindow.py:1529
+#: ../catfish/CatfishWindow.py:1538
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Αποθήκευση \"%s\" ως..."
 
-#: ../catfish/CatfishWindow.py:1564
+#: ../catfish/CatfishWindow.py:1573
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -511,7 +519,7 @@ msgstr ""
 "Θέλετε σίγουρα να \n"
 "διαγράψετε οριστικά το \"%s\";"
 
-#: ../catfish/CatfishWindow.py:1568
+#: ../catfish/CatfishWindow.py:1577
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -520,47 +528,47 @@ msgstr ""
 "Θέλετε σίγουρα να \n"
 "διαγράψετε οριστικά τα %i επιλεγμένα αρχεία;"
 
-#: ../catfish/CatfishWindow.py:1571
+#: ../catfish/CatfishWindow.py:1580
 msgid "If you delete a file, it is permanently lost."
 msgstr "Εάν διαγράψετε ένα αρχείο, χάνεται οριστικά."
 
-#: ../catfish/CatfishWindow.py:1605
+#: ../catfish/CatfishWindow.py:1614
 msgid "Filename"
 msgstr "Όνομα αρχείου"
 
-#: ../catfish/CatfishWindow.py:1607
+#: ../catfish/CatfishWindow.py:1615
 msgid "Size"
 msgstr "Μέγεθος"
 
-#: ../catfish/CatfishWindow.py:1609
+#: ../catfish/CatfishWindow.py:1616
 msgid "Location"
 msgstr "Τοποθεσία"
 
-#: ../catfish/CatfishWindow.py:1621
+#: ../catfish/CatfishWindow.py:1626
 msgid "Preview"
 msgstr "Προεπισκόπιση"
 
-#: ../catfish/CatfishWindow.py:1628
+#: ../catfish/CatfishWindow.py:1633
 msgid "Details"
 msgstr "Λεπτομέρειες"
 
-#: ../catfish/CatfishWindow.py:1813
+#: ../catfish/CatfishWindow.py:1823
 msgid "Open with default applications"
 msgstr "Άνοιγμα με προκαθορισμένες εφαρμογές"
 
-#: ../catfish/CatfishWindow.py:1829
+#: ../catfish/CatfishWindow.py:1839
 msgid "Open with"
 msgstr "Άνοιγμα με"
 
-#: ../catfish/CatfishWindow.py:1896
+#: ../catfish/CatfishWindow.py:1904
 msgid "Yesterday"
 msgstr "Χθες"
 
-#: ../catfish/CatfishWindow.py:1977
+#: ../catfish/CatfishWindow.py:2012
 msgid "No files found."
 msgstr "Δεν βρέθηκαν αρχεία."
 
-#: ../catfish/CatfishWindow.py:1979
+#: ../catfish/CatfishWindow.py:2014
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -568,34 +576,34 @@ msgstr ""
 "Δοκιμάστε να κάνετε την αναζήτησή σας πιο γενική\n"
 "ή δοκιμάστε έναν άλλο κατάλογο."
 
-#: ../catfish/CatfishWindow.py:1986
+#: ../catfish/CatfishWindow.py:2021
 msgid "1 file found."
 msgstr "Βρέθηκε 1 αρχείο."
 
-#: ../catfish/CatfishWindow.py:1988
+#: ../catfish/CatfishWindow.py:2023
 #, python-format
 msgid "%i files found."
 msgstr "Βρέθηκαν %i αρχεία."
 
-#: ../catfish/CatfishWindow.py:1997 ../catfish/CatfishWindow.py:2000
+#: ../catfish/CatfishWindow.py:2032 ../catfish/CatfishWindow.py:2035
 msgid "bytes"
 msgstr "bytes"
 
-#: ../catfish/CatfishWindow.py:2148 ../catfish/CatfishWindow.py:2158
+#: ../catfish/CatfishWindow.py:2220 ../catfish/CatfishWindow.py:2230
 msgid "Searching..."
 msgstr "Αναζήτηση..."
 
-#: ../catfish/CatfishWindow.py:2156
+#: ../catfish/CatfishWindow.py:2228
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Αναζήτηση για \"%s\""
 
-#: ../catfish/CatfishWindow.py:2266
+#: ../catfish/CatfishWindow.py:2338
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Αποτελέσματα αναζήτησης για \"%s\""
 
-#: ../catfish_lib/catfishconfig.py:91
+#: ../catfish_lib/catfishconfig.py:94
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish είναι ένα ευέλικτο εργαλείο αναζήτησης αρχείων."
 
