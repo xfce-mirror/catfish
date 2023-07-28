@@ -7,26 +7,26 @@
 # Eirik Dekko <edekko@gmail.com>, 2018
 # Harald H. <haarektrans@gmail.com>, 2019
 # Nick Schermer <nick@xfce.org>, 2020
-# Allan Nordhøy <epost@anotheragency.no>, 2020
-# heskjestad <cato@heskjestad.xyz>, 2022
+# Allan Nordhøy <epost@anotheragency.no>, 2023
+# heskjestad <cato@heskjestad.xyz>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-17 16:43-0400\n"
+"POT-Creation-Date: 2023-07-28 00:48+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2022\n"
-"Language-Team: Norwegian Bokmål (https://www.transifex.com/xfce/teams/16840/nb/)\n"
+"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2023\n"
+"Language-Team: Norwegian Bokmål (https://app.transifex.com/xfce/teams/16840/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:35
-#: ../catfish_lib/catfishconfig.py:88
+#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:37
+#: ../catfish_lib/catfishconfig.py:91
 msgid "Catfish File Search"
 msgstr "Catfish Filsøk"
 
@@ -142,7 +142,7 @@ msgstr "Fant ikke mappe"
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:793
+#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:797
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Avbryt"
@@ -212,82 +212,90 @@ msgid "Applications"
 msgstr "Programmer"
 
 #: ../data/ui/CatfishWindow.ui.h:21
+msgid "Archives"
+msgstr "Arkiv"
+
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "Andre"
 
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:23
+msgid "Extension..."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
 msgstr "Når som helst"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1894
+#: ../data/ui/CatfishWindow.ui.h:25 ../catfish/CatfishWindow.py:1902
 msgid "Today"
 msgstr "Idag"
 
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
 msgstr "Denne uka"
 
-#: ../data/ui/CatfishWindow.ui.h:25
+#: ../data/ui/CatfishWindow.ui.h:27
 msgid "This month"
 msgstr "Denne måneden"
 
-#: ../data/ui/CatfishWindow.ui.h:26
-msgid "Custom"
-msgstr "Tilpasset"
+#: ../data/ui/CatfishWindow.ui.h:28
+msgid "Custom..."
+msgstr "Egendefinert …"
 
-#: ../data/ui/CatfishWindow.ui.h:27
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "Go to Today"
 msgstr "Gå til idag"
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:30
 msgid "<b>Start Date</b>"
 msgstr "<b>Startdato</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "<b>End Date</b>"
 msgstr "<b>Sluttdato</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:30 ../catfish_lib/Window.py:232
+#: ../data/ui/CatfishWindow.ui.h:32 ../catfish_lib/Window.py:240
 msgid "Catfish"
 msgstr "Catfish"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Update"
 msgstr "Oppdater"
 
-#: ../data/ui/CatfishWindow.ui.h:32
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr "Søkedatabasen er over 7 dager gammel. Vil du oppdatere den nå?"
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "File Type"
 msgstr "Filtype"
 
-#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1611
+#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:1617
 msgid "Modified"
 msgstr "Endret"
 
-#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2150
+#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:2222
 msgid "Results will be displayed as soon as they are found."
 msgstr "Resultatene vil vises så fort de blir funnet."
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Unlock"
 msgstr "Lås opp"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "<b>Database:</b>"
 msgstr "<b>Database:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "<b>Updated:</b>"
 msgstr "<b>Oppdatert:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Oppdater databasen</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -295,47 +303,47 @@ msgstr ""
 "For raskere søkeresultat må databasen oppdateres.\n"
 "Dette krever administrative rettigheter."
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "Update Search Database"
 msgstr "Oppdater databasen"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "Search for files"
 msgstr "Søk etter filer"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid "Compact List"
 msgstr "Kompakt visning"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:48
 msgid "Thumbnails"
 msgstr "Miniaturbilder"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:49
 msgid "Show _sidebar"
 msgstr "Vis _sidestolpe"
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:50
 msgid "Show _hidden files"
 msgstr "Vis _skjulte filer"
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:51
 msgid "Search file _contents"
 msgstr "Søk i _filinnhold"
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:52
 msgid "_Match results exactly"
 msgstr "Finn _kun eksakte treff"
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:53
 msgid "_Refresh search index..."
 msgstr "_Oppdater søkeindeks …"
 
-#: ../data/ui/CatfishWindow.ui.h:52
+#: ../data/ui/CatfishWindow.ui.h:54
 msgid "_Preferences"
 msgstr "_Innstillinger"
 
-#: ../data/ui/CatfishWindow.ui.h:53
+#: ../data/ui/CatfishWindow.ui.h:55
 msgid "_About"
 msgstr "_Om"
 
@@ -390,27 +398,27 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:107
+#: ../catfish/CatfishWindow.py:108
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (ugyldig tegnkoding)"
 
-#: ../catfish/CatfishWindow.py:147
+#: ../catfish/CatfishWindow.py:148
 msgid "translator-credits"
 msgstr ""
 "haarek - Harald <https://www.transifex.com/accounts/profile/haarek/>\n"
 "kingu - Allan Nordhøy <https://www.transifex.com/accounts/profile/kingu/>\n"
 "papparonny - Ronny K. M. Olufsen <https://www.transifex.com/accounts/profile/papparonny/>"
 
-#: ../catfish/CatfishWindow.py:297
+#: ../catfish/CatfishWindow.py:298
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: ../catfish/CatfishWindow.py:301
+#: ../catfish/CatfishWindow.py:302
 msgid "Never"
 msgstr "Aldri"
 
-#: ../catfish/CatfishWindow.py:413
+#: ../catfish/CatfishWindow.py:414
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -419,37 +427,37 @@ msgstr ""
 "Skriv inn søkekriteriet ditt for å finne filene dine\n"
 "eller klikk på %s-ikonet for mer informasjon."
 
-#: ../catfish/CatfishWindow.py:808
+#: ../catfish/CatfishWindow.py:812
 msgid "An error occurred while updating the database."
 msgstr "En feil oppsto under oppdatering av databasen."
 
-#: ../catfish/CatfishWindow.py:810
+#: ../catfish/CatfishWindow.py:814
 msgid "Authentication failed."
 msgstr "Autentiseringen mislyktes."
 
-#: ../catfish/CatfishWindow.py:816
+#: ../catfish/CatfishWindow.py:820
 msgid "Authentication cancelled."
 msgstr "Autentiseringen ble avbrutt."
 
-#: ../catfish/CatfishWindow.py:822
+#: ../catfish/CatfishWindow.py:826
 msgid "Search database updated successfully."
 msgstr "Databaseoppdatering fullført."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:883
+#: ../catfish/CatfishWindow.py:887
 msgid "Close"
 msgstr "Lukk"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:897
+#: ../catfish/CatfishWindow.py:901
 msgid "Updating..."
 msgstr "Oppdaterer …"
 
-#: ../catfish/CatfishWindow.py:932
+#: ../catfish/CatfishWindow.py:936
 msgid "Stop Search"
 msgstr "Stopp søk"
 
-#: ../catfish/CatfishWindow.py:933
+#: ../catfish/CatfishWindow.py:937
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -457,39 +465,39 @@ msgstr ""
 "Søker …\n"
 "Trykk på Avbryt eller Esc-tasten for å stoppe søket."
 
-#: ../catfish/CatfishWindow.py:944
+#: ../catfish/CatfishWindow.py:948
 msgid "Begin Search"
 msgstr "Start søk"
 
-#: ../catfish/CatfishWindow.py:1068
+#: ../catfish/CatfishWindow.py:1072
 msgid "No folder selected."
 msgstr "Ingen mappe er valgt."
 
-#: ../catfish/CatfishWindow.py:1073
+#: ../catfish/CatfishWindow.py:1077
 msgid "Folder not found."
 msgstr "Fant ikke mappe."
 
-#: ../catfish/CatfishWindow.py:1317
+#: ../catfish/CatfishWindow.py:1326
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Klarte ikke åpne «%s»."
 
-#: ../catfish/CatfishWindow.py:1473
+#: ../catfish/CatfishWindow.py:1482
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Klarte ikke lagre «%s»."
 
-#: ../catfish/CatfishWindow.py:1490
+#: ../catfish/CatfishWindow.py:1499
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Klarte ikke slette «%s»."
 
-#: ../catfish/CatfishWindow.py:1529
+#: ../catfish/CatfishWindow.py:1538
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Lagre «%s» som …"
 
-#: ../catfish/CatfishWindow.py:1564
+#: ../catfish/CatfishWindow.py:1573
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -498,7 +506,7 @@ msgstr ""
 "Er du sikker på at du vil\n"
 "slette «%s» for godt?"
 
-#: ../catfish/CatfishWindow.py:1568
+#: ../catfish/CatfishWindow.py:1577
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -507,47 +515,47 @@ msgstr ""
 "Er du sikker på at du vil\n"
 "slette de %i markerte filene for godt?"
 
-#: ../catfish/CatfishWindow.py:1571
+#: ../catfish/CatfishWindow.py:1580
 msgid "If you delete a file, it is permanently lost."
 msgstr "Hvis du sletter en fil, er den borte for alltid."
 
-#: ../catfish/CatfishWindow.py:1605
+#: ../catfish/CatfishWindow.py:1614
 msgid "Filename"
 msgstr "Filnavn"
 
-#: ../catfish/CatfishWindow.py:1607
+#: ../catfish/CatfishWindow.py:1615
 msgid "Size"
 msgstr "Størrelse"
 
-#: ../catfish/CatfishWindow.py:1609
+#: ../catfish/CatfishWindow.py:1616
 msgid "Location"
 msgstr "Plassering"
 
-#: ../catfish/CatfishWindow.py:1621
+#: ../catfish/CatfishWindow.py:1626
 msgid "Preview"
 msgstr "Forhåndsvisning"
 
-#: ../catfish/CatfishWindow.py:1628
+#: ../catfish/CatfishWindow.py:1633
 msgid "Details"
 msgstr "Detaljer"
 
-#: ../catfish/CatfishWindow.py:1813
+#: ../catfish/CatfishWindow.py:1823
 msgid "Open with default applications"
 msgstr "Åpne med forvalgte programmer"
 
-#: ../catfish/CatfishWindow.py:1829
+#: ../catfish/CatfishWindow.py:1839
 msgid "Open with"
 msgstr "Åpne med"
 
-#: ../catfish/CatfishWindow.py:1896
+#: ../catfish/CatfishWindow.py:1904
 msgid "Yesterday"
 msgstr "Igår"
 
-#: ../catfish/CatfishWindow.py:1977
+#: ../catfish/CatfishWindow.py:2012
 msgid "No files found."
 msgstr "Fant ingen filer."
 
-#: ../catfish/CatfishWindow.py:1979
+#: ../catfish/CatfishWindow.py:2014
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -555,34 +563,34 @@ msgstr ""
 "Prøv å gjøre søket mindre spesifikt\n"
 "eller prøv en annen mappe."
 
-#: ../catfish/CatfishWindow.py:1986
+#: ../catfish/CatfishWindow.py:2021
 msgid "1 file found."
 msgstr "Fant 1 fil."
 
-#: ../catfish/CatfishWindow.py:1988
+#: ../catfish/CatfishWindow.py:2023
 #, python-format
 msgid "%i files found."
 msgstr "Fant %i filer."
 
-#: ../catfish/CatfishWindow.py:1997 ../catfish/CatfishWindow.py:2000
+#: ../catfish/CatfishWindow.py:2032 ../catfish/CatfishWindow.py:2035
 msgid "bytes"
 msgstr "byte"
 
-#: ../catfish/CatfishWindow.py:2148 ../catfish/CatfishWindow.py:2158
+#: ../catfish/CatfishWindow.py:2220 ../catfish/CatfishWindow.py:2230
 msgid "Searching..."
 msgstr "Søker …"
 
-#: ../catfish/CatfishWindow.py:2156
+#: ../catfish/CatfishWindow.py:2228
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Søker etter «%s»"
 
-#: ../catfish/CatfishWindow.py:2266
+#: ../catfish/CatfishWindow.py:2338
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Søkeresultatet for «%s»"
 
-#: ../catfish_lib/catfishconfig.py:91
+#: ../catfish_lib/catfishconfig.py:94
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish er et allsidig verktøy for filsøk."
 
