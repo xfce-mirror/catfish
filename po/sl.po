@@ -4,31 +4,31 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Nick Schermer <nick@xfce.org>, 2018
 # Xfce Bot <transifex@xfce.org>, 2018
 # Kernc, 2018
 # ansich <mojmejlzaforume@gmail.com>, 2018
-# 8b03701f910565d01acaec9ce3f558ab_e9f0fee <b5b06e8f85fb8288fe43ad0bc2422d94_32848>, 2020
 # Martin Srebotnjak <miles@filmsi.net>, 2022
 # Arnold Marko <arnold.marko@gmail.com>, 2022
+# 8b03701f910565d01acaec9ce3f558ab_e9f0fee <b5b06e8f85fb8288fe43ad0bc2422d94_32848>, 2023
+# Nick Schermer <nick@xfce.org>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-17 16:43-0400\n"
+"POT-Creation-Date: 2023-07-28 00:48+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2022\n"
-"Language-Team: Slovenian (https://www.transifex.com/xfce/teams/16840/sl/)\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>, 2023\n"
+"Language-Team: Slovenian (https://app.transifex.com/xfce/teams/16840/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
-#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:35
-#: ../catfish_lib/catfishconfig.py:88
+#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:37
+#: ../catfish_lib/catfishconfig.py:91
 msgid "Catfish File Search"
 msgstr "Catfish iskanje datotek"
 
@@ -145,7 +145,7 @@ msgstr "Mapa ni bila najdena."
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:793
+#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:797
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Prekliči"
@@ -216,82 +216,90 @@ msgid "Applications"
 msgstr "Aplikacije"
 
 #: ../data/ui/CatfishWindow.ui.h:21
+msgid "Archives"
+msgstr "Arhivi"
+
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "Drugo"
 
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:23
+msgid "Extension..."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
 msgstr "Kadarkoli"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1894
+#: ../data/ui/CatfishWindow.ui.h:25 ../catfish/CatfishWindow.py:1902
 msgid "Today"
 msgstr "Danes"
 
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
 msgstr "Ta teden"
 
-#: ../data/ui/CatfishWindow.ui.h:25
+#: ../data/ui/CatfishWindow.ui.h:27
 msgid "This month"
 msgstr "Ta mesec"
 
-#: ../data/ui/CatfishWindow.ui.h:26
-msgid "Custom"
-msgstr "Po meri"
+#: ../data/ui/CatfishWindow.ui.h:28
+msgid "Custom..."
+msgstr "Po meri ..."
 
-#: ../data/ui/CatfishWindow.ui.h:27
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "Go to Today"
 msgstr "Pojdi na danes"
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:30
 msgid "<b>Start Date</b>"
 msgstr "<b>Začetni datum</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "<b>End Date</b>"
 msgstr "<b>Končni datum</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:30 ../catfish_lib/Window.py:232
+#: ../data/ui/CatfishWindow.ui.h:32 ../catfish_lib/Window.py:240
 msgid "Catfish"
 msgstr "Catfish"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Update"
 msgstr "Posodobi"
 
-#: ../data/ui/CatfishWindow.ui.h:32
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr "Baza iskanj je starejša od sedmih dni. Posodobim zdaj?"
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "File Type"
 msgstr "Vrsta datoteke"
 
-#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1611
+#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:1617
 msgid "Modified"
 msgstr "Spremenjeno"
 
-#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2150
+#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:2222
 msgid "Results will be displayed as soon as they are found."
 msgstr "Rezultati bodo prikazani takoj, ko bodo najdeni."
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Unlock"
 msgstr "Odkleni"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "<b>Database:</b>"
 msgstr "<b>Podatkovna baza:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "<b>Updated:</b>"
 msgstr "<b>Updated:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Posodobi iskalno podatkovno bazo</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -299,47 +307,47 @@ msgstr ""
 "Za hitrejše iskanje mora biti podatkovna baza iskanj osevežena.\n"
 "To dejanje zahteva skrbniške pravice."
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "Update Search Database"
 msgstr "Posodobi iskalno bazo"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "Search for files"
 msgstr "Iskanje datotek"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid "Compact List"
 msgstr "Kompaktni seznam"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:48
 msgid "Thumbnails"
 msgstr "Sličice"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:49
 msgid "Show _sidebar"
 msgstr "Prikaži _stranski pano"
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:50
 msgid "Show _hidden files"
 msgstr "Prikaži skri_te datoteke"
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:51
 msgid "Search file _contents"
 msgstr "Išči vsebino datote_k"
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:52
 msgid "_Match results exactly"
 msgstr "_Točno ujemanje rezultatov"
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:53
 msgid "_Refresh search index..."
 msgstr "Osveži iskalni indeks..."
 
-#: ../data/ui/CatfishWindow.ui.h:52
+#: ../data/ui/CatfishWindow.ui.h:54
 msgid "_Preferences"
 msgstr "_Možnosti"
 
-#: ../data/ui/CatfishWindow.ui.h:53
+#: ../data/ui/CatfishWindow.ui.h:55
 msgid "_About"
 msgstr "_O programu"
 
@@ -395,24 +403,24 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:107
+#: ../catfish/CatfishWindow.py:108
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (napačno kodiranje)"
 
-#: ../catfish/CatfishWindow.py:147
+#: ../catfish/CatfishWindow.py:148
 msgid "translator-credits"
 msgstr "zasluge-prevajalcev"
 
-#: ../catfish/CatfishWindow.py:297
+#: ../catfish/CatfishWindow.py:298
 msgid "Unknown"
 msgstr "Neznano"
 
-#: ../catfish/CatfishWindow.py:301
+#: ../catfish/CatfishWindow.py:302
 msgid "Never"
 msgstr "Nikoli"
 
-#: ../catfish/CatfishWindow.py:413
+#: ../catfish/CatfishWindow.py:414
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -421,37 +429,37 @@ msgstr ""
 "Zgoraj vnesite poizvedbo za iskanje datotek\n"
 "ali kliknite na %s ikono za več možnosti."
 
-#: ../catfish/CatfishWindow.py:808
+#: ../catfish/CatfishWindow.py:812
 msgid "An error occurred while updating the database."
 msgstr "Napaka pri posodobaljanjau podatkovne baze."
 
-#: ../catfish/CatfishWindow.py:810
+#: ../catfish/CatfishWindow.py:814
 msgid "Authentication failed."
 msgstr "Avtentifikacija ni uspela."
 
-#: ../catfish/CatfishWindow.py:816
+#: ../catfish/CatfishWindow.py:820
 msgid "Authentication cancelled."
 msgstr "Overjanje je bilo prekinjeno."
 
-#: ../catfish/CatfishWindow.py:822
+#: ../catfish/CatfishWindow.py:826
 msgid "Search database updated successfully."
 msgstr "Baza iskanj je bila uspešno posodobljena."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:883
+#: ../catfish/CatfishWindow.py:887
 msgid "Close"
 msgstr "Zapri"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:897
+#: ../catfish/CatfishWindow.py:901
 msgid "Updating..."
 msgstr "Posodabljanje..."
 
-#: ../catfish/CatfishWindow.py:932
+#: ../catfish/CatfishWindow.py:936
 msgid "Stop Search"
 msgstr "Zaključi iskanje"
 
-#: ../catfish/CatfishWindow.py:933
+#: ../catfish/CatfishWindow.py:937
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -459,39 +467,39 @@ msgstr ""
 "Iskanje poteka...\n"
 "Pritniste gumb za prekinitev ali tipko escapa za zaustavitev iskanja."
 
-#: ../catfish/CatfishWindow.py:944
+#: ../catfish/CatfishWindow.py:948
 msgid "Begin Search"
 msgstr "Začni z iskanjem"
 
-#: ../catfish/CatfishWindow.py:1068
+#: ../catfish/CatfishWindow.py:1072
 msgid "No folder selected."
 msgstr "Nobena mapa ni izbrana."
 
-#: ../catfish/CatfishWindow.py:1073
+#: ../catfish/CatfishWindow.py:1077
 msgid "Folder not found."
 msgstr "Mapa ni bila najdena."
 
-#: ../catfish/CatfishWindow.py:1317
+#: ../catfish/CatfishWindow.py:1326
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" ni bilo mogoče odpreti."
 
-#: ../catfish/CatfishWindow.py:1473
+#: ../catfish/CatfishWindow.py:1482
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" ni bilo mogoče shraniti."
 
-#: ../catfish/CatfishWindow.py:1490
+#: ../catfish/CatfishWindow.py:1499
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" ni bilo mogoče izbrisati."
 
-#: ../catfish/CatfishWindow.py:1529
+#: ../catfish/CatfishWindow.py:1538
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Shrani \"%s\" kot..."
 
-#: ../catfish/CatfishWindow.py:1564
+#: ../catfish/CatfishWindow.py:1573
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -500,7 +508,7 @@ msgstr ""
 "Ali ste prepričani, da želite \n"
 "trajno izbrisati \"%s\"?"
 
-#: ../catfish/CatfishWindow.py:1568
+#: ../catfish/CatfishWindow.py:1577
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -509,47 +517,47 @@ msgstr ""
 "Ste prepričani, da želite\n"
 "za stalno izbrisati %i izbranih datotek?"
 
-#: ../catfish/CatfishWindow.py:1571
+#: ../catfish/CatfishWindow.py:1580
 msgid "If you delete a file, it is permanently lost."
 msgstr "Če izbrišete datoteko, je za vedno izgubljena."
 
-#: ../catfish/CatfishWindow.py:1605
+#: ../catfish/CatfishWindow.py:1614
 msgid "Filename"
 msgstr "Ime datoteke"
 
-#: ../catfish/CatfishWindow.py:1607
+#: ../catfish/CatfishWindow.py:1615
 msgid "Size"
 msgstr "Velikost"
 
-#: ../catfish/CatfishWindow.py:1609
+#: ../catfish/CatfishWindow.py:1616
 msgid "Location"
 msgstr "Lokacija"
 
-#: ../catfish/CatfishWindow.py:1621
+#: ../catfish/CatfishWindow.py:1626
 msgid "Preview"
 msgstr "Predogled"
 
-#: ../catfish/CatfishWindow.py:1628
+#: ../catfish/CatfishWindow.py:1633
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: ../catfish/CatfishWindow.py:1813
+#: ../catfish/CatfishWindow.py:1823
 msgid "Open with default applications"
 msgstr "Odpri s privzetimi programi"
 
-#: ../catfish/CatfishWindow.py:1829
+#: ../catfish/CatfishWindow.py:1839
 msgid "Open with"
 msgstr "Odpri z"
 
-#: ../catfish/CatfishWindow.py:1896
+#: ../catfish/CatfishWindow.py:1904
 msgid "Yesterday"
 msgstr "Včeraj"
 
-#: ../catfish/CatfishWindow.py:1977
+#: ../catfish/CatfishWindow.py:2012
 msgid "No files found."
 msgstr "Ni najdenih datotek."
 
-#: ../catfish/CatfishWindow.py:1979
+#: ../catfish/CatfishWindow.py:2014
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -557,34 +565,34 @@ msgstr ""
 "Poskusite z manj določenim iskanjem\n"
 "ali poskusite v drugi mapi."
 
-#: ../catfish/CatfishWindow.py:1986
+#: ../catfish/CatfishWindow.py:2021
 msgid "1 file found."
 msgstr "Ena datoteka je bila najdena."
 
-#: ../catfish/CatfishWindow.py:1988
+#: ../catfish/CatfishWindow.py:2023
 #, python-format
 msgid "%i files found."
 msgstr "%i datotek je bilo najdenih."
 
-#: ../catfish/CatfishWindow.py:1997 ../catfish/CatfishWindow.py:2000
+#: ../catfish/CatfishWindow.py:2032 ../catfish/CatfishWindow.py:2035
 msgid "bytes"
 msgstr "bajtov"
 
-#: ../catfish/CatfishWindow.py:2148 ../catfish/CatfishWindow.py:2158
+#: ../catfish/CatfishWindow.py:2220 ../catfish/CatfishWindow.py:2230
 msgid "Searching..."
 msgstr "Iskanje"
 
-#: ../catfish/CatfishWindow.py:2156
+#: ../catfish/CatfishWindow.py:2228
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "V iskanju \"%s\""
 
-#: ../catfish/CatfishWindow.py:2266
+#: ../catfish/CatfishWindow.py:2338
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Rezultati iskanja \"%s\""
 
-#: ../catfish_lib/catfishconfig.py:91
+#: ../catfish_lib/catfishconfig.py:94
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish je vsestransko orodje za iskanje datotek."
 
