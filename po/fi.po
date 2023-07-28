@@ -5,29 +5,29 @@
 # 
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2018
-# Nick Schermer <nick@xfce.org>, 2019
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2020
 # Pasi Lallinaho <pasi@shimmerproject.org>, 2020
 # Ammuu5, 2020
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2021
+# Nick Schermer <nick@xfce.org>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-03 17:19-0400\n"
+"POT-Creation-Date: 2023-07-28 00:48+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>, 2021\n"
-"Language-Team: Finnish (https://www.transifex.com/xfce/teams/16840/fi/)\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>, 2023\n"
+"Language-Team: Finnish (https://app.transifex.com/xfce/teams/16840/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:35
-#: ../catfish_lib/catfishconfig.py:88
+#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:37
+#: ../catfish_lib/catfishconfig.py:91
 msgid "Catfish File Search"
 msgstr "Catfish-tiedostohaku"
 
@@ -144,7 +144,7 @@ msgstr ""
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:787
+#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:797
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Peru"
@@ -215,82 +215,90 @@ msgid "Applications"
 msgstr "Sovellukset"
 
 #: ../data/ui/CatfishWindow.ui.h:21
+msgid "Archives"
+msgstr "Arkistonhallinta"
+
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "Muu"
 
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:23
+msgid "Extension..."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
 msgstr "Koska tahansa"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1872
+#: ../data/ui/CatfishWindow.ui.h:25 ../catfish/CatfishWindow.py:1902
 msgid "Today"
 msgstr "Tänään"
 
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
 msgstr "Tällä viikolla"
 
-#: ../data/ui/CatfishWindow.ui.h:25
+#: ../data/ui/CatfishWindow.ui.h:27
 msgid "This month"
 msgstr "Tässä kuussa"
 
-#: ../data/ui/CatfishWindow.ui.h:26
-msgid "Custom"
-msgstr "Mukautettu"
+#: ../data/ui/CatfishWindow.ui.h:28
+msgid "Custom..."
+msgstr "Mukautettu..."
 
-#: ../data/ui/CatfishWindow.ui.h:27
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "Go to Today"
 msgstr "Siirry tähän päivään"
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:30
 msgid "<b>Start Date</b>"
 msgstr "<b>Aloituspäivä</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "<b>End Date</b>"
 msgstr "<b>Päättymispäivä</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:30 ../catfish_lib/Window.py:231
+#: ../data/ui/CatfishWindow.ui.h:32 ../catfish_lib/Window.py:240
 msgid "Catfish"
 msgstr "Catfish"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Update"
 msgstr "Päivitä"
 
-#: ../data/ui/CatfishWindow.ui.h:32
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr "Hakutietokanta on yli 7 päivää vanha. Päivitetäänkö se nyt?"
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "File Type"
 msgstr "Tiedostotyyppi"
 
-#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1589
+#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:1617
 msgid "Modified"
 msgstr "Muokattu"
 
-#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2128
+#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:2222
 msgid "Results will be displayed as soon as they are found."
 msgstr "Tulokset näytetään heti kun niitä löydetään."
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Unlock"
 msgstr "Avaa lukitus"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "<b>Database:</b>"
 msgstr "<b>Tietokanta:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "<b>Updated:</b>"
 msgstr "<b>Päivitetty:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Päivitä hakutietokanta</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -298,47 +306,47 @@ msgstr ""
 "Jotta voit saada nopeampia hakutuloksia, hakutietokanta pitää päivittää.\n"
 "Tämä toimito vaatii pääkäyttäjän oikeudet."
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "Update Search Database"
 msgstr "Päivitä hakutietokanta"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "Search for files"
 msgstr "Etsi tiedostoja"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid "Compact List"
 msgstr "Tiivis luettelo"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:48
 msgid "Thumbnails"
 msgstr "Pikkukuvat"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:49
 msgid "Show _sidebar"
 msgstr "Näytä _sivupalkki"
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:50
 msgid "Show _hidden files"
 msgstr "Näytä _piilotiedostot"
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:51
 msgid "Search file _contents"
 msgstr "Hae _tiedostojen sisällöistä"
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:52
 msgid "_Match results exactly"
 msgstr ""
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:53
 msgid "_Refresh search index..."
 msgstr "_Päivitä hakuindeksi..."
 
-#: ../data/ui/CatfishWindow.ui.h:52
+#: ../data/ui/CatfishWindow.ui.h:54
 msgid "_Preferences"
 msgstr "_Asetukset"
 
-#: ../data/ui/CatfishWindow.ui.h:53
+#: ../data/ui/CatfishWindow.ui.h:55
 msgid "_About"
 msgstr "_Tietoja"
 
@@ -393,63 +401,63 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:107
+#: ../catfish/CatfishWindow.py:108
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (virheellinen merkistökoodaus)"
 
-#: ../catfish/CatfishWindow.py:147
+#: ../catfish/CatfishWindow.py:148
 msgid "translator-credits"
 msgstr ""
 "Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, Pasi Lallinaho "
 "<pasi@shimmerproject.org>"
 
-#: ../catfish/CatfishWindow.py:297
+#: ../catfish/CatfishWindow.py:298
 msgid "Unknown"
 msgstr "Tuntematon"
 
-#: ../catfish/CatfishWindow.py:301
+#: ../catfish/CatfishWindow.py:302
 msgid "Never"
 msgstr "Ei koskaan"
 
-#: ../catfish/CatfishWindow.py:411
+#: ../catfish/CatfishWindow.py:414
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:802
+#: ../catfish/CatfishWindow.py:812
 msgid "An error occurred while updating the database."
 msgstr "Tietokantaa päivittäessä tapahtui virhe."
 
-#: ../catfish/CatfishWindow.py:804
+#: ../catfish/CatfishWindow.py:814
 msgid "Authentication failed."
 msgstr "Tunnistus epäonnistui."
 
-#: ../catfish/CatfishWindow.py:810
+#: ../catfish/CatfishWindow.py:820
 msgid "Authentication cancelled."
 msgstr "Tunnistus keskeytetty."
 
-#: ../catfish/CatfishWindow.py:816
+#: ../catfish/CatfishWindow.py:826
 msgid "Search database updated successfully."
 msgstr "Hakutietokanta päivitettiin onnistuneesti."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:877
+#: ../catfish/CatfishWindow.py:887
 msgid "Close"
 msgstr "Sulje"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:891
+#: ../catfish/CatfishWindow.py:901
 msgid "Updating..."
 msgstr "Päivitetään..."
 
-#: ../catfish/CatfishWindow.py:926
+#: ../catfish/CatfishWindow.py:936
 msgid "Stop Search"
 msgstr "Keskeytä haku"
 
-#: ../catfish/CatfishWindow.py:927
+#: ../catfish/CatfishWindow.py:937
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -457,39 +465,39 @@ msgstr ""
 "Haku käynnissä...\n"
 "Paina peruutuspainiketta tai Escape-näppäintä keskeyttääksesi."
 
-#: ../catfish/CatfishWindow.py:938
+#: ../catfish/CatfishWindow.py:948
 msgid "Begin Search"
 msgstr "Aloita haku"
 
-#: ../catfish/CatfishWindow.py:1062
+#: ../catfish/CatfishWindow.py:1072
 msgid "No folder selected."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1067
+#: ../catfish/CatfishWindow.py:1077
 msgid "Folder not found."
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1298
+#: ../catfish/CatfishWindow.py:1326
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Tiedostoa \"%s\" ei voitu avata."
 
-#: ../catfish/CatfishWindow.py:1451
+#: ../catfish/CatfishWindow.py:1482
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Tiedostoa \"%s\" ei voitu tallentaa."
 
-#: ../catfish/CatfishWindow.py:1468
+#: ../catfish/CatfishWindow.py:1499
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Tiedostoa \"%s\" ei voitu poistaa."
 
-#: ../catfish/CatfishWindow.py:1507
+#: ../catfish/CatfishWindow.py:1538
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Tallenna \"%s\" nimellä..."
 
-#: ../catfish/CatfishWindow.py:1542
+#: ../catfish/CatfishWindow.py:1573
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -498,7 +506,7 @@ msgstr ""
 "Haluatko varmasti poistaa \n"
 "kohteen \"%s\" pysyvästi?"
 
-#: ../catfish/CatfishWindow.py:1546
+#: ../catfish/CatfishWindow.py:1577
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -507,47 +515,47 @@ msgstr ""
 "Haluatko varmasti poistaa \n"
 "%i tiedostoa pysyvästi?"
 
-#: ../catfish/CatfishWindow.py:1549
+#: ../catfish/CatfishWindow.py:1580
 msgid "If you delete a file, it is permanently lost."
 msgstr "Jos poistat tiedoston, sitä ei voi palauttaa."
 
-#: ../catfish/CatfishWindow.py:1583
+#: ../catfish/CatfishWindow.py:1614
 msgid "Filename"
 msgstr "Tiedoston nimi"
 
-#: ../catfish/CatfishWindow.py:1585
+#: ../catfish/CatfishWindow.py:1615
 msgid "Size"
 msgstr "Koko"
 
-#: ../catfish/CatfishWindow.py:1587
+#: ../catfish/CatfishWindow.py:1616
 msgid "Location"
 msgstr "Sijainti"
 
-#: ../catfish/CatfishWindow.py:1599
+#: ../catfish/CatfishWindow.py:1626
 msgid "Preview"
 msgstr "Esikatselu"
 
-#: ../catfish/CatfishWindow.py:1606
+#: ../catfish/CatfishWindow.py:1633
 msgid "Details"
 msgstr "Tiedot"
 
-#: ../catfish/CatfishWindow.py:1791
+#: ../catfish/CatfishWindow.py:1823
 msgid "Open with default applications"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1807
+#: ../catfish/CatfishWindow.py:1839
 msgid "Open with"
 msgstr ""
 
-#: ../catfish/CatfishWindow.py:1874
+#: ../catfish/CatfishWindow.py:1904
 msgid "Yesterday"
 msgstr "Eilen"
 
-#: ../catfish/CatfishWindow.py:1955
+#: ../catfish/CatfishWindow.py:2012
 msgid "No files found."
 msgstr "Tiedostoja ei löytynyt."
 
-#: ../catfish/CatfishWindow.py:1957
+#: ../catfish/CatfishWindow.py:2014
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -555,34 +563,34 @@ msgstr ""
 "Yritä tehdä haustasi vähemmän yksityiskohtainen\n"
 "tai yritä toista hakemistoa."
 
-#: ../catfish/CatfishWindow.py:1964
+#: ../catfish/CatfishWindow.py:2021
 msgid "1 file found."
 msgstr "Löydettiin 1 tiedosto."
 
-#: ../catfish/CatfishWindow.py:1966
+#: ../catfish/CatfishWindow.py:2023
 #, python-format
 msgid "%i files found."
 msgstr "Löydettiin %i tiedostoa."
 
-#: ../catfish/CatfishWindow.py:1975 ../catfish/CatfishWindow.py:1978
+#: ../catfish/CatfishWindow.py:2032 ../catfish/CatfishWindow.py:2035
 msgid "bytes"
 msgstr "tavua"
 
-#: ../catfish/CatfishWindow.py:2126 ../catfish/CatfishWindow.py:2136
+#: ../catfish/CatfishWindow.py:2220 ../catfish/CatfishWindow.py:2230
 msgid "Searching..."
 msgstr "Haetaan..."
 
-#: ../catfish/CatfishWindow.py:2134
+#: ../catfish/CatfishWindow.py:2228
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "Etsitään \"%s\""
 
-#: ../catfish/CatfishWindow.py:2242
+#: ../catfish/CatfishWindow.py:2338
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "Hakutulokset haulle \"%s\""
 
-#: ../catfish_lib/catfishconfig.py:91
+#: ../catfish_lib/catfishconfig.py:94
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish on monipuolinen tiedostonhakutyökalu."
 
@@ -650,67 +658,74 @@ msgstr "Catfishin pääikkuna suodattimien ja suodatettujen hakutulosten kera"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
 msgid ""
+"This release improves keyboard shortcuts, desktop environment integration, "
+"file manager support, and general look and feel. It also features several "
+"bug fixes for non-Xfce users."
+msgstr ""
+
+#: ../data/metainfo/catfish.appdata.xml.in.h:6
+msgid ""
 "This release improves file manager support, zip file support, and handling "
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
+#: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
 "This release expands fulltext search to support more file types and adds "
 "support for searching within compressed files. Searching file contents and "
 "the preferred view is now preserved across sessions."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
+#: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release expands fulltext search to support more encodings and match all"
 " keywords instead of matching any."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
+#: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release better integrates with the Xfce desktop, better supports the "
 "Zeitgeist datahub, and includes many bugfixes and usability improvements."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
+#: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
+#: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
+#: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
+#: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
+#: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
 "This release features performance improvements by excluding uncommon search "
 "directories."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
+#: ../data/metainfo/catfish.appdata.xml.in.h:15
 msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
+#: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
 "This release features improved performance, better desktop integration, and "
 "a number of long-standing bugs. Quoted search strings are now correctly "
@@ -718,7 +733,7 @@ msgid ""
 " generated when requested by the user."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
+#: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
 "This release features several improvements to thumbnail processing and "
 "numerous bug fixes. Icon previews have been improved and will now match "
@@ -726,23 +741,23 @@ msgid ""
 "now accessible with all desktop themes."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
+#: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid "This is a minor translations-only release."
 msgstr "Tämä on pieni, vain käännöksiä päivittävä julkaisu."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
+#: ../data/metainfo/catfish.appdata.xml.in.h:19
 msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
+#: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
+#: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
 "This release fixes several bugs related to the results window. Files are "
 "once again removed from the results list when deleted. Middle- and right-"
@@ -750,7 +765,7 @@ msgid ""
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
+#: ../data/metainfo/catfish.appdata.xml.in.h:22
 msgid ""
 "This release includes a significant interface refresh, improves search "
 "speed, and fixes several bugs. The workflow has been improved, utilizing "
@@ -759,12 +774,12 @@ msgid ""
 " integration of PolicyKit when available."
 msgstr ""
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
+#: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid "This release fixes two new bugs and includes updated translations."
 msgstr ""
 "Tämä julkaisu korjaa kaksi uutta bugia ja sisältää päivitetyt käännökset."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
+#: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
@@ -772,7 +787,7 @@ msgstr ""
 "Tämä julkaisu korjaa regression joka esti sovelluksen käynnistymisen "
 "joillain järjestelmillä."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:24
+#: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
 "This release fixes a regression where multiple search terms were no longer "
 "supported. An InfoBar is now displayed when the search database is outdated,"
@@ -782,7 +797,7 @@ msgstr ""
 "tuettu. Tietopalkki näytetään nyt kun hakutietokanta on vanhentunut, ja "
 "tietokannan päivitysikkunoita parannettiin."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:25
+#: ../data/metainfo/catfish.appdata.xml.in.h:26
 msgid ""
 "This release fixes two issues where locate would not be properly executed "
 "and improves handling of missing symbolic icons."
@@ -790,7 +805,7 @@ msgstr ""
 "Tämä julkaisu korjaa kaksi ongelmaa jossa locate:a ei suoritettu oikein ja "
 "parantaa puuttuvien symboolisten kuvakkeiden käsittelyä."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:26
+#: ../data/metainfo/catfish.appdata.xml.in.h:27
 msgid ""
 "This stable release improved the reliability of the password dialog, cleaned"
 " up unused code, and fixed potential issues with the list and item "
@@ -800,7 +815,7 @@ msgstr ""
 "käyttämätöntä koodia, ja mahdolliset ongelmat listan ja kohteiden valinnassa"
 " korjattu."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:27
+#: ../data/metainfo/catfish.appdata.xml.in.h:28
 msgid ""
 "This release fixed a potential security issue with program startup and fixed"
 " a regression with selecting multiple items."
@@ -808,7 +823,7 @@ msgstr ""
 "Tämä julkaisuu korjaa mahdollisen turvaongelman ohjelman käynnistyksessä ja "
 "korjaa regression useiden kohteiden valinnassa."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:28
+#: ../data/metainfo/catfish.appdata.xml.in.h:29
 msgid ""
 "The first release in the 1.0.x series introduced a refreshed interface and "
 "fixed a number of long-standing bugs. Improvements to the default "
