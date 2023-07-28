@@ -6,27 +6,27 @@
 # Translators:
 # Cybertramp <paran_son@outlook.com>, 2018
 # Xfce Bot <transifex@xfce.org>, 2018
-# Nick Schermer <nick@xfce.org>, 2020
 # 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2020
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2022
+# Nick Schermer <nick@xfce.org>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-17 16:43-0400\n"
+"POT-Creation-Date: 2023-07-28 00:48+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>, 2022\n"
-"Language-Team: Korean (https://www.transifex.com/xfce/teams/16840/ko/)\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/xfce/teams/16840/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:35
-#: ../catfish_lib/catfishconfig.py:88
+#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:37
+#: ../catfish_lib/catfishconfig.py:91
 msgid "Catfish File Search"
 msgstr "메기 파일 검색기"
 
@@ -142,7 +142,7 @@ msgstr "폴더가 없습니다!"
 
 #. Restore Cancel button
 #. Buttons
-#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:793
+#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:797
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "취소"
@@ -212,82 +212,90 @@ msgid "Applications"
 msgstr "프로그램"
 
 #: ../data/ui/CatfishWindow.ui.h:21
+msgid "Archives"
+msgstr "압축 파일"
+
+#: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
 msgstr "기타"
 
-#: ../data/ui/CatfishWindow.ui.h:22
+#: ../data/ui/CatfishWindow.ui.h:23
+msgid "Extension..."
+msgstr ""
+
+#: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
 msgstr "언제든지"
 
-#: ../data/ui/CatfishWindow.ui.h:23 ../catfish/CatfishWindow.py:1894
+#: ../data/ui/CatfishWindow.ui.h:25 ../catfish/CatfishWindow.py:1902
 msgid "Today"
 msgstr "오늘"
 
-#: ../data/ui/CatfishWindow.ui.h:24
+#: ../data/ui/CatfishWindow.ui.h:26
 msgid "This week"
 msgstr "이번 주"
 
-#: ../data/ui/CatfishWindow.ui.h:25
+#: ../data/ui/CatfishWindow.ui.h:27
 msgid "This month"
 msgstr "이달"
 
-#: ../data/ui/CatfishWindow.ui.h:26
-msgid "Custom"
-msgstr "사용자 정의"
+#: ../data/ui/CatfishWindow.ui.h:28
+msgid "Custom..."
+msgstr "사용자 정의..."
 
-#: ../data/ui/CatfishWindow.ui.h:27
+#: ../data/ui/CatfishWindow.ui.h:29
 msgid "Go to Today"
 msgstr "오늘로 이동"
 
-#: ../data/ui/CatfishWindow.ui.h:28
+#: ../data/ui/CatfishWindow.ui.h:30
 msgid "<b>Start Date</b>"
 msgstr "<b>시작일</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:29
+#: ../data/ui/CatfishWindow.ui.h:31
 msgid "<b>End Date</b>"
 msgstr "<b>종료일</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:30 ../catfish_lib/Window.py:232
+#: ../data/ui/CatfishWindow.ui.h:32 ../catfish_lib/Window.py:240
 msgid "Catfish"
 msgstr "메기"
 
-#: ../data/ui/CatfishWindow.ui.h:31
+#: ../data/ui/CatfishWindow.ui.h:33
 msgid "Update"
 msgstr "업데이트"
 
-#: ../data/ui/CatfishWindow.ui.h:32
+#: ../data/ui/CatfishWindow.ui.h:34
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr "검색 데이터베이스가 7일 이상 되었습니다. 지금 업데이트 하시렵니까?"
 
-#: ../data/ui/CatfishWindow.ui.h:33
+#: ../data/ui/CatfishWindow.ui.h:35
 msgid "File Type"
 msgstr "파일 형식"
 
-#: ../data/ui/CatfishWindow.ui.h:34 ../catfish/CatfishWindow.py:1611
+#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:1617
 msgid "Modified"
 msgstr "수정됨"
 
-#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:2150
+#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:2222
 msgid "Results will be displayed as soon as they are found."
 msgstr "발견되는 즉시 검색결과가 표시됩니다."
 
-#: ../data/ui/CatfishWindow.ui.h:37
+#: ../data/ui/CatfishWindow.ui.h:39
 msgid "Unlock"
 msgstr "잠금 해제"
 
-#: ../data/ui/CatfishWindow.ui.h:38
+#: ../data/ui/CatfishWindow.ui.h:40
 msgid "<b>Database:</b>"
 msgstr "<b>데이터베이스:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:39
+#: ../data/ui/CatfishWindow.ui.h:41
 msgid "<b>Updated:</b>"
 msgstr "<b>업데이트:</b>"
 
-#: ../data/ui/CatfishWindow.ui.h:40
+#: ../data/ui/CatfishWindow.ui.h:42
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>검색 데이터베이스 업데이트</b></big>"
 
-#: ../data/ui/CatfishWindow.ui.h:41
+#: ../data/ui/CatfishWindow.ui.h:43
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -295,47 +303,47 @@ msgstr ""
 "검색 결과를 빠르게 나타내려면, 검색 데이터베이스 최신화가 필요합니다.\n"
 "이 작업은 관리자 권한이 필요합니다."
 
-#: ../data/ui/CatfishWindow.ui.h:43
+#: ../data/ui/CatfishWindow.ui.h:45
 msgid "Update Search Database"
 msgstr "검색 데이터베이스 업데이트"
 
-#: ../data/ui/CatfishWindow.ui.h:44
+#: ../data/ui/CatfishWindow.ui.h:46
 msgid "Search for files"
 msgstr "파일 검색"
 
-#: ../data/ui/CatfishWindow.ui.h:45
+#: ../data/ui/CatfishWindow.ui.h:47
 msgid "Compact List"
 msgstr "간단한 목록"
 
-#: ../data/ui/CatfishWindow.ui.h:46
+#: ../data/ui/CatfishWindow.ui.h:48
 msgid "Thumbnails"
 msgstr "썸네일"
 
-#: ../data/ui/CatfishWindow.ui.h:47
+#: ../data/ui/CatfishWindow.ui.h:49
 msgid "Show _sidebar"
 msgstr "가장자리 창 표시(_S)"
 
-#: ../data/ui/CatfishWindow.ui.h:48
+#: ../data/ui/CatfishWindow.ui.h:50
 msgid "Show _hidden files"
 msgstr "숨겨진 파일 표시(_H)"
 
-#: ../data/ui/CatfishWindow.ui.h:49
+#: ../data/ui/CatfishWindow.ui.h:51
 msgid "Search file _contents"
 msgstr "파일 내용 검색(_C)"
 
-#: ../data/ui/CatfishWindow.ui.h:50
+#: ../data/ui/CatfishWindow.ui.h:52
 msgid "_Match results exactly"
 msgstr "일치하는 결과만(_M)"
 
-#: ../data/ui/CatfishWindow.ui.h:51
+#: ../data/ui/CatfishWindow.ui.h:53
 msgid "_Refresh search index..."
 msgstr "검색 인덱스 새로 고침(_R)..."
 
-#: ../data/ui/CatfishWindow.ui.h:52
+#: ../data/ui/CatfishWindow.ui.h:54
 msgid "_Preferences"
 msgstr "기본 설정(_P)"
 
-#: ../data/ui/CatfishWindow.ui.h:53
+#: ../data/ui/CatfishWindow.ui.h:55
 msgid "_About"
 msgstr "정보(_A)"
 
@@ -388,27 +396,27 @@ msgstr "정렬 기본 기준을 설정합니다(name|size|path|date|type),(asc|d
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:107
+#: ../catfish/CatfishWindow.py:108
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s(잘못된 인코딩)"
 
-#: ../catfish/CatfishWindow.py:147
+#: ../catfish/CatfishWindow.py:148
 msgid "translator-credits"
 msgstr ""
 "Kibum Han <yui@yui.pe.kr>\n"
 "Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Jung-gyu Park <bagjunggyu@gmail.com>"
 
-#: ../catfish/CatfishWindow.py:297
+#: ../catfish/CatfishWindow.py:298
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: ../catfish/CatfishWindow.py:301
+#: ../catfish/CatfishWindow.py:302
 msgid "Never"
 msgstr "안함"
 
-#: ../catfish/CatfishWindow.py:413
+#: ../catfish/CatfishWindow.py:414
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -417,37 +425,37 @@ msgstr ""
 "찾을 파일에 대한 요청문을 입력하거나\n"
 "%s 아이콘을 눌러 더 많은 옵션을 보십시오."
 
-#: ../catfish/CatfishWindow.py:808
+#: ../catfish/CatfishWindow.py:812
 msgid "An error occurred while updating the database."
 msgstr "데이터베이스를 업데이트 하는 동안 에러가 발생하였습니다."
 
-#: ../catfish/CatfishWindow.py:810
+#: ../catfish/CatfishWindow.py:814
 msgid "Authentication failed."
 msgstr "인증에 실패함."
 
-#: ../catfish/CatfishWindow.py:816
+#: ../catfish/CatfishWindow.py:820
 msgid "Authentication cancelled."
 msgstr "인증이 취소됨."
 
-#: ../catfish/CatfishWindow.py:822
+#: ../catfish/CatfishWindow.py:826
 msgid "Search database updated successfully."
 msgstr "성공적으로 검색 데이터베이스를 업데이트 하였습니다."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:883
+#: ../catfish/CatfishWindow.py:887
 msgid "Close"
 msgstr "닫기"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:897
+#: ../catfish/CatfishWindow.py:901
 msgid "Updating..."
 msgstr "업데이트 중..."
 
-#: ../catfish/CatfishWindow.py:932
+#: ../catfish/CatfishWindow.py:936
 msgid "Stop Search"
 msgstr "검색 중지"
 
-#: ../catfish/CatfishWindow.py:933
+#: ../catfish/CatfishWindow.py:937
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -455,93 +463,93 @@ msgstr ""
 "검색 진행 중...\n"
 "멈추려면 취소 단추 또는 Esc 키를 누르십시오."
 
-#: ../catfish/CatfishWindow.py:944
+#: ../catfish/CatfishWindow.py:948
 msgid "Begin Search"
 msgstr "검색 시작"
 
-#: ../catfish/CatfishWindow.py:1068
+#: ../catfish/CatfishWindow.py:1072
 msgid "No folder selected."
 msgstr "선택한 폴더가 없습니다."
 
-#: ../catfish/CatfishWindow.py:1073
+#: ../catfish/CatfishWindow.py:1077
 msgid "Folder not found."
 msgstr "폴더가 없습니다."
 
-#: ../catfish/CatfishWindow.py:1317
+#: ../catfish/CatfishWindow.py:1326
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\"을(를) 열 수 없습니다."
 
-#: ../catfish/CatfishWindow.py:1473
+#: ../catfish/CatfishWindow.py:1482
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\"을(를) 저장할 수 없습니다."
 
-#: ../catfish/CatfishWindow.py:1490
+#: ../catfish/CatfishWindow.py:1499
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\"을(를) 삭제할 수 없습니다."
 
-#: ../catfish/CatfishWindow.py:1529
+#: ../catfish/CatfishWindow.py:1538
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "\"%s\"을(를) 다른 이름으로 저장..."
 
-#: ../catfish/CatfishWindow.py:1564
+#: ../catfish/CatfishWindow.py:1573
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr "\"%s\"를 영구히 삭제 하시렵니까?"
 
-#: ../catfish/CatfishWindow.py:1568
+#: ../catfish/CatfishWindow.py:1577
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr "%i 선택된 파일들을 영구히 삭제 하시렵니까?"
 
-#: ../catfish/CatfishWindow.py:1571
+#: ../catfish/CatfishWindow.py:1580
 msgid "If you delete a file, it is permanently lost."
 msgstr "만약 파일을 삭제하면, 영구히 사라집니다."
 
-#: ../catfish/CatfishWindow.py:1605
+#: ../catfish/CatfishWindow.py:1614
 msgid "Filename"
 msgstr "파일 이름"
 
-#: ../catfish/CatfishWindow.py:1607
+#: ../catfish/CatfishWindow.py:1615
 msgid "Size"
 msgstr "크기"
 
-#: ../catfish/CatfishWindow.py:1609
+#: ../catfish/CatfishWindow.py:1616
 msgid "Location"
 msgstr "위치"
 
-#: ../catfish/CatfishWindow.py:1621
+#: ../catfish/CatfishWindow.py:1626
 msgid "Preview"
 msgstr "미리 보기"
 
-#: ../catfish/CatfishWindow.py:1628
+#: ../catfish/CatfishWindow.py:1633
 msgid "Details"
 msgstr "자세히"
 
-#: ../catfish/CatfishWindow.py:1813
+#: ../catfish/CatfishWindow.py:1823
 msgid "Open with default applications"
 msgstr "기본 프로그램으로 열기"
 
-#: ../catfish/CatfishWindow.py:1829
+#: ../catfish/CatfishWindow.py:1839
 msgid "Open with"
 msgstr "다른 프로그램으로 열기"
 
-#: ../catfish/CatfishWindow.py:1896
+#: ../catfish/CatfishWindow.py:1904
 msgid "Yesterday"
 msgstr "어제"
 
-#: ../catfish/CatfishWindow.py:1977
+#: ../catfish/CatfishWindow.py:2012
 msgid "No files found."
 msgstr "파일을 찾지 못했습니다."
 
-#: ../catfish/CatfishWindow.py:1979
+#: ../catfish/CatfishWindow.py:2014
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -549,34 +557,34 @@ msgstr ""
 "검색 조건을 좀 더 단순히 하거나\n"
 "다른 디렉토리에서 시도해보세요."
 
-#: ../catfish/CatfishWindow.py:1986
+#: ../catfish/CatfishWindow.py:2021
 msgid "1 file found."
 msgstr "파일 하나를 찾았습니다."
 
-#: ../catfish/CatfishWindow.py:1988
+#: ../catfish/CatfishWindow.py:2023
 #, python-format
 msgid "%i files found."
 msgstr "%i개의 파일을 찾았습니다."
 
-#: ../catfish/CatfishWindow.py:1997 ../catfish/CatfishWindow.py:2000
+#: ../catfish/CatfishWindow.py:2032 ../catfish/CatfishWindow.py:2035
 msgid "bytes"
 msgstr "바이트"
 
-#: ../catfish/CatfishWindow.py:2148 ../catfish/CatfishWindow.py:2158
+#: ../catfish/CatfishWindow.py:2220 ../catfish/CatfishWindow.py:2230
 msgid "Searching..."
 msgstr "검색 중..."
 
-#: ../catfish/CatfishWindow.py:2156
+#: ../catfish/CatfishWindow.py:2228
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "\"%s\"을(를) 찾는 중"
 
-#: ../catfish/CatfishWindow.py:2266
+#: ../catfish/CatfishWindow.py:2338
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "\"%s\"에 대한 검색 결과"
 
-#: ../catfish_lib/catfishconfig.py:91
+#: ../catfish_lib/catfishconfig.py:94
 msgid "Catfish is a versatile file searching tool."
 msgstr "메기는 다용도 파일 검색 도구입니다."
 
