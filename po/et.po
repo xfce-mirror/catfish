@@ -213,7 +213,7 @@ msgstr "Rakendused"
 
 #: ../data/ui/CatfishWindow.ui.h:21
 msgid "Archives"
-msgstr ""
+msgstr "Arhiivid"
 
 #: ../data/ui/CatfishWindow.ui.h:22
 msgid "Other"
@@ -221,7 +221,7 @@ msgstr "Muud"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "Extension..."
-msgstr ""
+msgstr "Laiend..."
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -753,6 +753,8 @@ msgid ""
 "This release features better desktop integration, support for OpenBSD and "
 "Wayland, and improved translation support."
 msgstr ""
+"Selles versiooniga on lisatud parem lõimimine töölauakeskonnaga, OpenBSD ja "
+"Waylandi tugi ning täiendatud tõlkeid."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:16
 msgid ""
@@ -761,6 +763,10 @@ msgid ""
 "processed. Files can be dragged into other applications. Thumbnails are only"
 " generated when requested by the user."
 msgstr ""
+"Selle versiooniga oleme parandanud jõudlust ja lõimimist töölauakeskonnaga "
+"ning teinud korda mõned kaua parandamata vead. Jutumärkidega otsingusõnade "
+"tõlgendamine on nüüd korras. Faile saad lohistada teistesse rakendustesse "
+"ning pisipildid loome vaid siis, kui kasutaja seda on soovinud."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:17
 msgid ""
@@ -787,6 +793,8 @@ msgid ""
 "This release now displays all file timestamps according to timezone instead "
 "of Universal Coordinated Time (UTC)."
 msgstr ""
+"Sellest versioonist alates kuvame failide ajatempleid vastavalt ajavööndile "
+"senise universaalse koordineeritud maailmaaja (UTC) asemel."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:21
 msgid ""
@@ -807,13 +815,15 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:23
 msgid "This release fixes two new bugs and includes updated translations."
-msgstr ""
+msgstr "Selle versiooniga parandasime kaks uut viga ning täiendasime tõlkeid."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:24
 msgid ""
 "This release fixes a regression where the application is unable to start on "
 "some systems."
 msgstr ""
+"Selle versiooniga parandasime regressiooni, mis ei võimaldanud rakendusel "
+"mõnedes operatsioonisüsteemides käivituda."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:25
 msgid ""
