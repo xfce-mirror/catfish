@@ -227,7 +227,7 @@ msgstr "Altro"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "Extension..."
-msgstr ""
+msgstr "Estensione…"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
