@@ -43,6 +43,10 @@
   </provides>
 
   <releases>
+    <release version="4.18.0" date="2023-08-06">
+      <description>https://gitlab.xfce.org/apps/catfish/-/milestones/1</description>
+    </release>
+
     <release version="4.16.4" date="2022-07-17">
       <description>
         <_p>This release improves keyboard shortcuts, desktop environment
