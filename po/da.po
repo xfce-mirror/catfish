@@ -155,7 +155,7 @@ msgstr "_Åbn"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Open with..."
-msgstr ""
+msgstr "_Åbn med ..."
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -175,7 +175,7 @@ msgstr "_Gem som ..."
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "_Delete..."
-msgstr ""
+msgstr "_Slet ..."
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
@@ -220,7 +220,7 @@ msgstr "Andet"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "Extension..."
-msgstr ""
+msgstr "Endelse ..."
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -543,7 +543,7 @@ msgstr ""
 
 #: ../catfish/CatfishWindow.py:1839
 msgid "Open with"
-msgstr ""
+msgstr "Åbn med"
 
 #: ../catfish/CatfishWindow.py:1904
 msgid "Yesterday"
