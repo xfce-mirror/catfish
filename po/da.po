@@ -76,11 +76,11 @@ msgstr "Vis filter-_sidelinje"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Vis filstørrelser i binært format"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Fravælg for at vise filstørrelser i decimalt format"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -393,6 +393,8 @@ msgstr ""
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"indstil en standardkolonne til at sortere efter "
+"(name|size|path|date|type),(asc|desc)"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -539,7 +541,7 @@ msgstr "Detaljer"
 
 #: ../catfish/CatfishWindow.py:1823
 msgid "Open with default applications"
-msgstr ""
+msgstr "Åbn med standardprogrammer"
 
 #: ../catfish/CatfishWindow.py:1839
 msgid "Open with"
@@ -661,6 +663,9 @@ msgid ""
 "file manager support, and general look and feel. It also features several "
 "bug fixes for non-Xfce users."
 msgstr ""
+"Denne udgivelse forbedrer tastaturgenveje, integration af skrivebordsmiljø, "
+"understøttelse af filhåndtering og udseende og fremtoning. Den har også "
+"mange fejlrettelser til ikke-Xfce-brugere."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
@@ -766,8 +771,8 @@ msgid ""
 "other applications. Items displayed at the bottom of the results window are "
 "now accessible with all desktop themes."
 msgstr ""
-"Denne udgivelse byder på adskillige forbedringer til behandling af miniature"
-" og mange fejlrettelser. Forhåndsvisning af ikoner er blevet forbedret og "
+"Denne udgivelse byder på mange forbedringer til behandling af miniature og "
+"mange fejlrettelser. Forhåndsvisning af ikoner er blevet forbedret og "
 "matcher nu andre programmer. Punkter som vises nederst i resultatsvinduet og"
 " kan nu tilgås med alle skrivebordstemaer."
 
@@ -780,8 +785,8 @@ msgid ""
 "This release features several performance improvements and numerous "
 "translation updates."
 msgstr ""
-"Denne udgivelse byder på adskillige forbedringer til ydelsen og opdateringer"
-" af oversættelser."
+"Denne udgivelse byder på mange forbedringer til ydelsen og opdateringer af "
+"oversættelser."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:20
 msgid ""
@@ -798,8 +803,8 @@ msgid ""
 "click functionality has been restored. Date range filters are now applied "
 "according to timezone instead of Universal Coordinated Time (UTC)."
 msgstr ""
-"Denne udgivelse retter adskillige fejl i forbindelse med resultater-vinduet."
-" Filer fjernes nu igen fra resultatslisten når de slettes. Midter- og "
+"Denne udgivelse retter mange fejl i forbindelse med resultater-vinduet. "
+"Filer fjernes nu igen fra resultatslisten når de slettes. Midter- og "
 "højreklik er tilbage. Datoområdefiltre anvendes nu i henhold til tidszone i "
 "stedet for Universal Coordinated Time (UTC)."
 
@@ -812,8 +817,8 @@ msgid ""
 " integration of PolicyKit when available."
 msgstr ""
 "Denne udgivelse inkluderer en betydelig genopfriskning af grænsefladen, "
-"forbedre søgehastighed og rettelse af adskillige fejl. Arbejdsgangen er "
-"blevet forbedret, som gør brug af nogen af de seneste faciliteter i "
+"forbedre søgehastighed og rettelse af mange fejl. Arbejdsgangen er blevet "
+"forbedret, som gør brug af nogen af de seneste faciliteter i "
 "GTK+-toolkittet, inklusiv valgfrie headerlinjer og popover-widgets. "
 "Adgangskodehåndtering er blevet forbedret med integreringen af PolicyKit når"
 " det er tilgængeligt."
