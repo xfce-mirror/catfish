@@ -1776,6 +1776,7 @@ class CatfishWindow(Window):
         return True
 
     def treeview_right_click(self, treeview, event=None):
+        self.update_treeview_stats(treeview, event)
         if not self.selected_filenames:
             return False
 
