@@ -782,7 +782,7 @@ msgstr ""
 "Šioje laidoje yra keli patobulinimai, skirti miniatiūrų apdorojimui ir "
 "daugybė klaidų ištaisymų. Piktogramų peržiūros buvo patobulintos ir dabar "
 "jos atitiks kitas programas. Rezultatų apačioje rodomi elementai dabar yra "
-"pasiekiami su visomis darbalaukio temomis."
+"pasiekiami su visais darbalaukio apipavidalinimais."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:18
 msgid "This is a minor translations-only release."
