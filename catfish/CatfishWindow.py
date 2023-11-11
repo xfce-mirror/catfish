@@ -319,6 +319,11 @@ class CatfishWindow(Window):
             ['zeitgeist', 'locate', 'walk'],
             self.settings.get_setting("exclude-paths"))
 
+        if self.ripgrep_installed():
+            self.fulltext_method = 'ripgrep'
+        else:
+            self.fulltext_method = 'fulltext'
+
         self.icon_theme = Gtk.IconTheme.get_default()
         self.icon_theme.connect('changed', self.changed_icon)
         self.changed_icon_theme = False
@@ -771,6 +776,14 @@ class CatfishWindow(Window):
 
         item_date = datetime.datetime.fromtimestamp(modified)
         return (locate, db, item_date, changed)
+
+    def ripgrep_installed(self):
+        """Test if ripgrep binary is installed."""
+        path = get_application_path('rg')
+        if path is None:
+            return False
+        else:
+            return True
 
     def on_filters_changed(self, box, row, user_data=None):  # pylint: disable=W0613
         if row.is_selected():
@@ -2264,7 +2277,7 @@ class CatfishWindow(Window):
         # Check if this is a fulltext query or standard query.
         if self.filter_formats['fulltext']:
             self.search_engine = \
-                CatfishSearchEngine(['fulltext'],
+                CatfishSearchEngine([self.fulltext_method],
                                     self.settings.get_setting("exclude-paths"))
             self.search_engine.set_exact(self.filter_formats['exact'])
         else:
