@@ -19,6 +19,8 @@
 import os
 
 import gi
+gi.require_version('GLib', '2.0')  # noqa
+from gi.repository import GLib
 
 try:
     gi.require_version('Xfconf', '0')
@@ -32,8 +34,7 @@ from catfish_lib import helpers
 if XFCONF_SUPPORT:
     Xfconf.init()
 
-DEFAULT_SETTINGS_FILE = os.path.join(os.getenv('HOME'),
-                                     '.config/catfish/catfish.rc')
+DEFAULT_SETTINGS_FILE = os.path.join(GLib.get_user_config_dir(), 'catfish/catfish.rc')
 DEFAULT_SETTINGS = {
     'use-headerbar': (bool, None),
     'show-hidden-files': (bool, False),
