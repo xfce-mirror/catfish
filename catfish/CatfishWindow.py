@@ -27,6 +27,7 @@ import datetime
 import logging
 import mimetypes
 import os
+import pathlib
 import subprocess
 import time
 import zipfile
@@ -1309,7 +1310,7 @@ class CatfishWindow(Window):
             command = ['exo-open', '--launch', 'FileManager', filename]
         else:
             try:
-                uri = "file://" + filename
+                uri = pathlib.Path(filename).as_uri()
                 Gio.AppInfo.launch_default_for_uri(uri)
             except:
                 self.on_menu_open_with_activate(self)
@@ -1690,7 +1691,7 @@ class CatfishWindow(Window):
             text = str(os.linesep).join(self.selected_filenames)
             selection.set_text(text, -1)
 
-            uris = ['file://' + path for path in self.selected_filenames]
+            uris = [pathlib.Path(path).as_uri() for path in self.selected_filenames]
             selection.set_uris(uris)
 
             return True

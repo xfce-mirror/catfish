@@ -66,14 +66,6 @@ def get_builder(builder_file_name):
     return builder
 
 
-def get_media_file(media_file_name):
-    """Return the path to the specified media file."""
-    media_filename = get_data_file('media', '%s' % (media_file_name,))
-    if os.path.exists(media_filename):
-        return "file:///" + media_filename
-    return None
-
-
 class NullHandler(logging.Handler):
 
     """NullHander class."""
