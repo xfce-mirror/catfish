@@ -37,8 +37,8 @@ assert DistUtilsExtra.auto.__version__ >= '2.18', \
     % DistUtilsExtra.auto.__version__
 
 python_version = float("%i.%02i" % sys.version_info[:2])
-assert python_version >= 3.02, \
-    'Python >= 3.2 required, found %s' % str(python_version)
+assert python_version >= 3.04, \
+    'Python >= 3.4 required, found %s' % str(python_version)
 
 
 def update_config(libdir, values={}):
