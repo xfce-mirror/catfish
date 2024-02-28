@@ -190,7 +190,7 @@ msgstr "Estensioni dei file"
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr ""
-"Insrire una lista di estensioni separati da virgole (per esempio odt, png, "
+"Inserire una lista di estensioni separati da virgole (per esempio odt, png, "
 "txt)"
 
 #: ../data/ui/CatfishWindow.ui.h:15
