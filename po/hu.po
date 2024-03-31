@@ -5,10 +5,10 @@
 # 
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2018
-# Balázs Meskó <meskobalazs@mailbox.org>, 2019
 # kelemeng <kelemeng@ubuntu.com>, 2020
 # Gábor P., 2020
 # Nick Schermer <nick@xfce.org>, 2023
+# Balázs Meskó <meskobalazs@mailbox.org>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-28 00:48+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>, 2023\n"
+"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>, 2024\n"
 "Language-Team: Hungarian (https://app.transifex.com/xfce/teams/16840/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +36,7 @@ msgstr "Fájlkeresés"
 
 #: ../org.xfce.Catfish.desktop.in.h:3
 msgid "Search the file system"
-msgstr "Keresés a fájlrendszerben"
+msgstr "Keresés a fájlrendszeren"
 
 #. TRANSLATORS: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -46,7 +46,7 @@ msgstr "fájlok;keresés;"
 
 #: ../data/ui/CatfishPreferences.ui.h:1
 msgid "Catfish Preferences"
-msgstr "Catfish beállításai"
+msgstr "A Catfish beállításai"
 
 #: ../data/ui/CatfishPreferences.ui.h:2
 msgid "_Close"
@@ -54,7 +54,7 @@ msgstr "_Bezárás"
 
 #: ../data/ui/CatfishPreferences.ui.h:3
 msgid "Classic (_Titlebar)"
-msgstr "_Klasszikus (Címsáv)"
+msgstr "_Klasszikus (címsáv)"
 
 #: ../data/ui/CatfishPreferences.ui.h:4
 msgid "_Modern (CSD)"
@@ -78,11 +78,11 @@ msgstr "_Szűrők megjelenítése az oldalsávon"
 
 #: ../data/ui/CatfishPreferences.ui.h:9
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Fájlméretek megjelenítése bináris formátumban"
 
 #: ../data/ui/CatfishPreferences.ui.h:10
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Kapcsolja ki, hogy decimális formátumban jelenítse meg"
 
 #: ../data/ui/CatfishPreferences.ui.h:11
 msgid "Display Options"
@@ -98,7 +98,7 @@ msgstr "Útvonal"
 
 #: ../data/ui/CatfishPreferences.ui.h:14
 msgid "Add Directory..."
-msgstr "Könyvtár hozzáadása..."
+msgstr "Könyvtár hozzáadása…"
 
 #: ../data/ui/CatfishPreferences.ui.h:15
 msgid "_Add"
@@ -122,7 +122,7 @@ msgstr "Kereső_ablak bezárása egy fájl megnyitása után"
 
 #: ../data/ui/CatfishPreferences.ui.h:20
 msgid "Search within compressed files (.zip, .odt, .docx)"
-msgstr ""
+msgstr "Keresés a tömörített fájlokban (.zip, .odt, .docx)"
 
 #: ../data/ui/CatfishPreferences.ui.h:21
 msgid "Miscellaneous"
@@ -134,22 +134,22 @@ msgstr "Speciális"
 
 #: ../data/ui/CatfishWindow.ui.h:1
 msgid "Select a Folder"
-msgstr ""
+msgstr "Válasszon mappát"
 
 #: ../data/ui/CatfishWindow.ui.h:2
 msgid "Folder not found!"
-msgstr ""
+msgstr "A mappa nem található!"
 
 #. Restore Cancel button
 #. Buttons
 #: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:797
 #: ../catfish_lib/SudoDialog.py:184
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "Mégse"
 
 #: ../data/ui/CatfishWindow.ui.h:4
 msgid "Select Folder"
-msgstr ""
+msgstr "Mappa választása"
 
 #: ../data/ui/CatfishWindow.ui.h:5
 msgid "_Open"
@@ -157,7 +157,7 @@ msgstr "_Megnyitás"
 
 #: ../data/ui/CatfishWindow.ui.h:6
 msgid "_Open with..."
-msgstr ""
+msgstr "_Megnyitás mással…"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -173,11 +173,11 @@ msgstr "Hely _másolása"
 
 #: ../data/ui/CatfishWindow.ui.h:11
 msgid "_Save as..."
-msgstr "Menté_s másként..."
+msgstr "Menté_s másként…"
 
 #: ../data/ui/CatfishWindow.ui.h:12
 msgid "_Delete..."
-msgstr ""
+msgstr "_Törlés…"
 
 #: ../data/ui/CatfishWindow.ui.h:13
 msgid "File Extensions"
@@ -186,6 +186,8 @@ msgstr "Fájlkiterjesztések"
 #: ../data/ui/CatfishWindow.ui.h:14
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr ""
+"Adja meg a fájlkiterjesztések vesszővel elválasztott listáját (például odt, "
+"png, txt)"
 
 #: ../data/ui/CatfishWindow.ui.h:15
 msgid "Documents"
@@ -221,7 +223,7 @@ msgstr "Egyéb"
 
 #: ../data/ui/CatfishWindow.ui.h:23
 msgid "Extension..."
-msgstr ""
+msgstr "Kiterjesztés…"
 
 #: ../data/ui/CatfishWindow.ui.h:24
 msgid "Any time"
@@ -237,7 +239,7 @@ msgstr "Ezen a héten"
 
 #: ../data/ui/CatfishWindow.ui.h:27
 msgid "This month"
-msgstr ""
+msgstr "Ebben a hónapban"
 
 #: ../data/ui/CatfishWindow.ui.h:28
 msgid "Custom..."
@@ -265,11 +267,11 @@ msgstr "Frissítés"
 
 #: ../data/ui/CatfishWindow.ui.h:34
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr "A keresési adatbázis 7 napnál régebbi. Frissítés most?"
+msgstr "A keresési adatbázis 7 napnál régebbi. Frissíti most?"
 
 #: ../data/ui/CatfishWindow.ui.h:35
 msgid "File Type"
-msgstr "Fájl típus"
+msgstr "Fájltípus"
 
 #: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:1617
 msgid "Modified"
@@ -277,7 +279,7 @@ msgstr "Módosítva"
 
 #: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:2222
 msgid "Results will be displayed as soon as they are found."
-msgstr "Az eredmények azonnal megjelennek ha van találat."
+msgstr "A találatok azonnal megjelennek a keresés során."
 
 #: ../data/ui/CatfishWindow.ui.h:39
 msgid "Unlock"
@@ -300,7 +302,7 @@ msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
-"Gyorsabb keresés érdekében a keresési adatbázis frissítésére van szükség.\n"
+"A gyorsabb keresés érdekében a keresési adatbázis frissítésére van szükség.\n"
 "Ez a művelet rendszergazdai jogokat igényel."
 
 #: ../data/ui/CatfishWindow.ui.h:45
@@ -337,7 +339,7 @@ msgstr "_Pontosan egyező találatok"
 
 #: ../data/ui/CatfishWindow.ui.h:53
 msgid "_Refresh search index..."
-msgstr "_Keresési index frissítése..."
+msgstr "_Keresési index frissítése…"
 
 #: ../data/ui/CatfishWindow.ui.h:54
 msgid "_Preferences"
@@ -349,12 +351,12 @@ msgstr "_Névjegy"
 
 #: ../catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
-msgstr "Használat: %prog [kapcsoldók] útvonal lekérdezés"
+msgstr "Használat: %prog [kapcsolók] útvonal lekérdezés"
 
 #: ../catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr ""
-"Hibakereső üzenetek megjelenítése (a -vv a catfish_lib hibaüzeneteit is "
+"Hibakeresési üzenetek megjelenítése (a -vv a catfish_lib hibaüzeneteit is "
 "megjeleníti)"
 
 #: ../catfish/__init__.py:47
@@ -380,7 +382,7 @@ msgstr "Pontos egyezés"
 
 #: ../catfish/__init__.py:57
 msgid "Include hidden files"
-msgstr "Rejtett fájlok bele vétele"
+msgstr "Rejtett fájlok belevétele"
 
 #: ../catfish/__init__.py:59
 msgid "Perform fulltext search"
@@ -391,12 +393,12 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
-"Keresés indítása az alkalmazás megjelenítésekor ha az útvonal és a kifejezés"
-" meg van adva."
+"Keresés indítása az alkalmazás megjelenítésekor, ha az útvonal és a "
+"kifejezés meg van adva."
 
 #: ../catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
-msgstr ""
+msgstr "oszloprendezés beállítása: (name|size|path|date|type),(asc|desc)"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -407,7 +409,9 @@ msgstr "%s (érvénytelen kódolás)"
 
 #: ../catfish/CatfishWindow.py:148
 msgid "translator-credits"
-msgstr "Kelemen Gábor <kelemeng at gnome dot hu>"
+msgstr ""
+"Kelemen Gábor <kelemeng at gnome dot hu>\n"
+"Meskó Balázs <mesko dot balazs at fsf dot hu>"
 
 #: ../catfish/CatfishWindow.py:298
 msgid "Unknown"
@@ -424,19 +428,19 @@ msgid ""
 "or click the %s icon for more options."
 msgstr ""
 "Írja be a keresendő kifejezést a fenti mezőbe\n"
-"vagy kattintson a(z) %s ikonra további beállításokért."
+"vagy kattintson a(z) %s ikonra a további beállításokért."
 
 #: ../catfish/CatfishWindow.py:812
 msgid "An error occurred while updating the database."
-msgstr "Hiba történt az adatbázis frissítése közben."
+msgstr "Hiba történt az adatbázis frissítése során."
 
 #: ../catfish/CatfishWindow.py:814
 msgid "Authentication failed."
-msgstr "A hitelesítés meghiúsult."
+msgstr "A hitelesítés sikertelen."
 
 #: ../catfish/CatfishWindow.py:820
 msgid "Authentication cancelled."
-msgstr "Hitelesítés megszakítva."
+msgstr "A hitelesítés megszakítva."
 
 #: ../catfish/CatfishWindow.py:826
 msgid "Search database updated successfully."
@@ -450,7 +454,7 @@ msgstr "Bezárás"
 #. Set the dialog status to running.
 #: ../catfish/CatfishWindow.py:901
 msgid "Updating..."
-msgstr "Frissítés..."
+msgstr "Frissítés…"
 
 #: ../catfish/CatfishWindow.py:936
 msgid "Stop Search"
@@ -461,8 +465,8 @@ msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
-"Keresés folyamatban...\n"
-"Nyomja le a mégse gombot vagy az Escape billentyűt a megszakításhoz."
+"Keresés folyamatban…\n"
+"Nyomja meg a mégse gombot vagy az Escape billentyűt a megszakításhoz."
 
 #: ../catfish/CatfishWindow.py:948
 msgid "Begin Search"
@@ -470,31 +474,31 @@ msgstr "Keresés indítása"
 
 #: ../catfish/CatfishWindow.py:1072
 msgid "No folder selected."
-msgstr ""
+msgstr "Nincs mappa kiválasztva."
 
 #: ../catfish/CatfishWindow.py:1077
 msgid "Folder not found."
-msgstr ""
+msgstr "A mappa nem található."
 
 #: ../catfish/CatfishWindow.py:1326
 #, python-format
 msgid "\"%s\" could not be opened."
-msgstr "„%s” nem nyitható meg."
+msgstr "A(z) „%s” nem nyitható meg."
 
 #: ../catfish/CatfishWindow.py:1482
 #, python-format
 msgid "\"%s\" could not be saved."
-msgstr "„%s” nem menthető."
+msgstr "A(z) „%s” nem menthető."
 
 #: ../catfish/CatfishWindow.py:1499
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr "„%s” nem törölhető."
+msgstr "A(z) „%s” nem törölhető."
 
 #: ../catfish/CatfishWindow.py:1538
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "\"%s\" mentése másként..."
+msgstr "A(z) „%s” mentése másként…"
 
 #: ../catfish/CatfishWindow.py:1573
 #, python-format
@@ -502,7 +506,7 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
-"Biztos, hogy véglegesen törölni szeretné \n"
+"Biztos, hogy véglegesen törli \n"
 "a(z) „%s” fájlt?"
 
 #: ../catfish/CatfishWindow.py:1577
@@ -511,7 +515,7 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
-"Biztos, hogy véglegesen törölni szeretné\n"
+"Biztos, hogy véglegesen törli \n"
 "a kijelölt %i fájlt?"
 
 #: ../catfish/CatfishWindow.py:1580
@@ -540,11 +544,11 @@ msgstr "Részletek"
 
 #: ../catfish/CatfishWindow.py:1823
 msgid "Open with default applications"
-msgstr ""
+msgstr "Megnyitás az alapértelmezett alkalmazásokkal"
 
 #: ../catfish/CatfishWindow.py:1839
 msgid "Open with"
-msgstr ""
+msgstr "Megnyitás mással"
 
 #: ../catfish/CatfishWindow.py:1904
 msgid "Yesterday"
@@ -559,7 +563,7 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
-"Próbáljon kevésbé pontos keresést végrehajtani\n"
+"Próbáljon kevésbé pontos keresést végrehajtani,\n"
 "vagy próbálja meg egy másik könyvtárban."
 
 #: ../catfish/CatfishWindow.py:2021
@@ -577,12 +581,12 @@ msgstr "bájt"
 
 #: ../catfish/CatfishWindow.py:2220 ../catfish/CatfishWindow.py:2230
 msgid "Searching..."
-msgstr "Keresés..."
+msgstr "Keresés…"
 
 #: ../catfish/CatfishWindow.py:2228
 #, python-format
 msgid "Searching for \"%s\""
-msgstr "„%s” keresése"
+msgstr "Keresés erre: „%s”"
 
 #: ../catfish/CatfishWindow.py:2338
 #, python-format
@@ -591,7 +595,7 @@ msgstr "Találatok erre: „%s”"
 
 #: ../catfish_lib/catfishconfig.py:94
 msgid "Catfish is a versatile file searching tool."
-msgstr "A Catfish egy rugalmas fájlkereső eszköz."
+msgstr "A Catfish egy sokoldalú fájlkereső eszköz."
 
 #: ../catfish_lib/SudoDialog.py:126
 msgid "Password Required"
@@ -599,7 +603,7 @@ msgstr "Jelszó szükséges"
 
 #: ../catfish_lib/SudoDialog.py:163
 msgid "Incorrect password... try again."
-msgstr "Érvénytelen jelszó... próbálja újra."
+msgstr "Helytelen jelszó… próbálja újra."
 
 #: ../catfish_lib/SudoDialog.py:173
 msgid "Password:"
@@ -614,8 +618,8 @@ msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
-"Adja meg a jelszavát\n"
-"a rendszergazdai feladat végrehajtásához."
+"Adja meg a jelszavát a\n"
+"rendszergazdai feladatok végrehajtásához."
 
 #: ../catfish_lib/SudoDialog.py:207
 #, python-format
@@ -623,12 +627,12 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
-"A(z) '%s' alkalmazás lehetővé teszi önnek\n"
+"A(z) „%s” alkalmazás lehetővé teszi\n"
 "a rendszer lényeges részeinek módosítását."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:1
 msgid "Versatile file searching tool"
-msgstr "Rugalmas fájlkereső eszköz"
+msgstr "Sokoldalú fájlkereső eszköz"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:2
 msgid ""
@@ -646,14 +650,14 @@ msgstr ""
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:3
 msgid "The main Catfish window displaying image search results"
-msgstr "A Catfish főablaka a képkeresés eredményét jeleníti meg"
+msgstr "A Catfish főablaka egy képkeresés eredményét jeleníti meg"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:4
 msgid ""
 "The main Catfish window displaying available filters and filtered search "
 "results"
 msgstr ""
-"A Catfish főablaka az elérhető szűrőket és a szűrt keresés eredményét "
+"A Catfish főablaka az elérhető szűrőket és a szűrt keresési találatokat "
 "jeleníti meg"
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:5
@@ -662,6 +666,9 @@ msgid ""
 "file manager support, and general look and feel. It also features several "
 "bug fixes for non-Xfce users."
 msgstr ""
+"Ez a kiadás fejleszti a gyorsbillentyűket, az asztali környezettel való "
+"integrációt, a fájlkezelő-támogatást, és általában a kinézetet és működést. "
+"Számos hibajavítást is nyújt a nem Xfce felhasználóknak."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:6
 msgid ""
@@ -669,6 +676,9 @@ msgid ""
 "selected files. It also improves keyboard shortcuts for starting a search or"
 " selecting a new search path."
 msgstr ""
+"Ez a kiadás fejleszti a fájlkezelő-támogatást, a ZIP-fájlok támogatását és a"
+" kiválasztott fájlok kezelését. Fejleszti a gyorsbillentyűk kezelését is a "
+"keresés indításakor vagy egy új keresési útvonal kiválasztásakor."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:7
 msgid ""
@@ -676,42 +686,60 @@ msgid ""
 "support for searching within compressed files. Searching file contents and "
 "the preferred view is now preserved across sessions."
 msgstr ""
+"Ez a kiadás kibővíti a teljes szöveges keresést, hogy több fájltípust "
+"támogasson, és hozzáadja a tömörített fájlokban való keresés támogatását. A "
+"fájlok tartalmában történő keresés és az előnyben részesített nézet nem lesz"
+" megőrizve a munkamenetek közt."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:8
 msgid ""
 "This release expands fulltext search to support more encodings and match all"
 " keywords instead of matching any."
 msgstr ""
+"Ez a kiadás kibővíti a teljes szöveges keresést, hogy több kódolást "
+"támogasson, és az összes kulcsszó egyezését keresi, nem csak valamelyikét."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:9
 msgid ""
 "This release better integrates with the Xfce desktop, better supports the "
 "Zeitgeist datahub, and includes many bugfixes and usability improvements."
 msgstr ""
+"Ez a kiadás jobban beépül az Xfce asztali környezetbe, jobban támogatja a "
+"Zeitgeist adatközpontot, és számos hibajavítást és használathatósági "
+"fejlesztést tartalmaz."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:10
 msgid ""
 "This release resolves packaging errors for Debian and includes optimized "
 "assets."
 msgstr ""
+"Ez a kiadás megoldja a Debiant érintő csomagolási hibákat, és optimalizált "
+"erőforrásokat tartalmaz."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:11
 msgid ""
 "This release adds support for running under Wayland and features refreshed "
 "dialogs with simplified controls."
 msgstr ""
+"Ez a kiadás hozzáadja a Wayland alatti futtatás támogatását, valamint "
+"frissítette párbeszédablakokat biztosít, egyszerűsített vezérlőelemekkel."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:12
 msgid ""
 "This release addresses some startup errors as well as various issues with "
 "traversing symbolic links."
 msgstr ""
+"Ez a kiadás bizonyos indítási hibákat, és egyéb, szimbolikus linkek "
+"bejárását érintő problémákat orvosol."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:13
 msgid ""
 "This release includes many appearance improvements, introduces a new "
 "preferences dialog, and improves search results and performance."
 msgstr ""
+"Ez a kiadás megjelenést érintő fejlesztéseket tartalmaz, új beállítási "
+"párbeszédablakot vezet be, és javítja a keresési találatokat valamint a "
+"teljesítményt."
 
 #: ../data/metainfo/catfish.appdata.xml.in.h:14
 msgid ""
