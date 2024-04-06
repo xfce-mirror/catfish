@@ -15,249 +15,350 @@
 #
 #   You should have received a copy of the GNU General Public License along
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
+# pylint: disable=attribute-defined-outside-init
+# pylint: disable=missing-function-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=missing-module-docstring
+# pylint: disable=access-member-before-definition
+# pylint: disable=import-outside-toplevel
 
-import codecs
 import os
+import re
 import shutil
 import sys
 import subprocess
-import site
+
+import setuptools
+from setuptools.command.install import install
+from setuptools.command.sdist import sdist
+
+try:
+    from setuptools.command.build import build
+except ImportError:
+    # Old setuptools don't have setuptools.command.build
+    from distutils.command.build import build # pylint: disable=W4901
 
 __version__ = '4.18.0'
 __url__ = 'https://docs.xfce.org/apps/catfish/start'
+GITLAB = 'https://gitlab.xfce.org/apps/catfish'
+PKGNAME = 'catfish'
+DESKTOP = 'org.xfce.Catfish.desktop'
+APPDATA = 'catfish.appdata.xml'
 
-try:
-    import DistUtilsExtra.auto
-except ImportError:
-    sys.stderr.write("To build catfish you need "
-                     "https://launchpad.net/python-distutils-extra\n")
-    sys.exit(1)
-assert DistUtilsExtra.auto.__version__ >= '2.18', \
-    'DistUtilsExtra.auto >= 2.18 required, found %s' \
-    % DistUtilsExtra.auto.__version__
+if sys.version_info < (3, 7):
+    raise SystemExit('Python >= 3.7 required')
 
-python_version = float("%i.%02i" % sys.version_info[:2])
-assert python_version >= 3.04, \
-    'Python >= 3.4 required, found %s' % str(python_version)
+class Build(build):
+    user_options = build.user_options + [
+        ('build-data', None, 'build directory for data'),
+    ]
+    def get_sub_commands(self):
+        return super().get_sub_commands() + ['build_pot', 'build_i18n']
 
+    def initialize_options(self):
+        super().initialize_options()
+        self.build_data = None
 
-def update_config(libdir, values={}):
-    """Update the configuration file at installation time."""
-    filename = os.path.join(libdir, 'catfish_lib', 'catfishconfig.py')
-    oldvalues = {}
-    try:
-        fin = codecs.open(filename, 'r', encoding='utf-8')
-        fout = codecs.open(filename + '.new', 'w', encoding='utf-8')
+    def finalize_options(self):
+        super().finalize_options()
+        if self.build_data is None:
+            self.build_data = os.path.join(self.build_base, 'share')
 
-        for line in fin:
-            fields = line.split(' = ')  # Separate variable from value
-            if fields[0] in values:
-                oldvalues[fields[0]] = fields[1].strip()
-                line = "%s = %s\n" % (fields[0], values[fields[0]])
-            fout.write(line)
+class BuildPot(setuptools.Command):
+    description = 'Build POT files by xgettext'
+    user_options = [
+        ('build-pot=', 'b', "directory to write POT files to"),
+    ]
+    def initialize_options(self):
+        self.build_pot = None
 
-        fout.flush()
-        fout.close()
-        fin.close()
-        os.rename(fout.name, fin.name)
-    except (OSError, IOError):
-        sys.stderr.write("ERROR: Can't find %s" % filename)
-        sys.exit(1)
-    return oldvalues
+    def finalize_options(self):
+        if self.build_pot is None:
+            self.build_pot = 'po'
 
-
-def get_icon_files(root, target_data):
-    files = []
-    for extension in ["png", "svg"]:
-        icon_name = "org.xfce.catfish.%s" % extension
-        filename = os.path.join(root, icon_name)
-        if os.path.exists(filename):
-            files.append(filename)
-    if len(files) == 0:
-        sys.stderr.write("ERROR: Can't find icons in %s" % root)
-        sys.exit(1)
-    return files
-
-
-def move_icon_file(root, icon_size, target_data):
-    """Move the icon files to their installation prefix."""
-    old_icon_path = os.path.normpath(
-        os.path.join(root, target_data, 'share', 'catfish', 'media', icon_size))
-
-    for old_icon_file in get_icon_files(old_icon_path, target_data):
-        icon_name = os.path.basename(old_icon_file)
-        icon_path = os.path.normpath(
-            os.path.join(root, target_data, 'share', 'icons',
-                         'hicolor', icon_size, 'apps'))
-        icon_file = os.path.join(icon_path, icon_name)
-
-        # Get the real paths.
-        old_icon_file = os.path.realpath(old_icon_file)
-        icon_file = os.path.realpath(icon_file)
-
-        if not os.path.exists(icon_path):
-            os.makedirs(icon_path)
-        if old_icon_file != icon_file:
-            print("Moving icon file: %s -> %s" % (old_icon_file, icon_file))
-            os.rename(old_icon_file, icon_file)
-
-    # Media/icon_size is now empty
-    if len(os.listdir(old_icon_path)) == 0:
-        print("Removing empty directory: %s" % old_icon_path)
-        os.rmdir(old_icon_path)
-
-    return icon_file
+    def run(self):
+        cmd = [
+            'xgettext', f'--default-domain={PKGNAME}', '--from-code=UTF-8',
+            '--files-from=po/POTFILES.in', '--directory=.',
+            '--keyword=_', '--keyword=C_:1c,2', '--add-comments=TRANSLATORS:',
+            '--copyright-holder=The Xfce development team.',
+            f'--msgid-bugs-address={GITLAB}',
+            f'--package-name={PKGNAME}',
+            f'--output={self.build_pot}/{PKGNAME}.pot'
+        ]
+        print(" ".join(cmd))
+        try:
+            subprocess.check_call(cmd)
+        except (OSError, subprocess.CalledProcessError):
+            sys.stderr.write("Cannot generate thunar.pot.\n"
+            "'xgettext' 0.19.8 or later is required.")
 
 
-def move_icon_files(root, target_data):
-    """Move the icon files to their installation prefix."""
-    files = []
+def get_linguas(filename):
+    linguas = []
+    with open(filename, 'r', encoding="utf-8") as f:
+        for line in f:
+            line = line.partition('#')[0]
+            line = line.strip()
+            linguas += re.split(r'\s+', line)
+    return linguas
 
-    for icon_size in ["16x16", "48x48", "128x128", "scalable"]:
-        files.append(move_icon_file(root, icon_size, target_data))
-    media_path = os.path.normpath(
-        os.path.join(root, target_data, 'share', 'catfish', 'media'))
+class BuildI18n(setuptools.Command):
+    description = 'Build mo, desktop and xml files'
+    user_options = [
+        ('build-i18n=', 'b', "directory to write i18n files to"),
+    ]
+    def initialize_options(self):
+        self.build_i18n = None
 
-    # Media is now empty
-    if len(os.listdir(media_path)) == 0:
-        print("Removing empty directory: %s" % media_path)
-        os.rmdir(media_path)
+    def finalize_options(self):
+        self.set_undefined_options(
+            'build',
+            ('build_data', 'build_i18n'),
+        )
+        self.build_lib = self.build_i18n
+        self.linguas = get_linguas('po/LINGUAS')
 
-    return files
+    def get_mo_file(self, lang):
+        return f'{self.build_i18n}/mo/{lang}.mo'
+
+    def run(self):
+        appdatacmd = [
+            "msgfmt", "-d", "po", "--xml",
+            "--template", f"data/metainfo/{APPDATA}.in",
+            "-o", f"{self.build_i18n}/metainfo/{APPDATA}"
+        ]
+        desktopcmd = [
+            "msgfmt", "-d", "po", "--desktop",
+            "--template", f"{DESKTOP}.in",
+            "-o", f"{self.build_i18n}/applications/{DESKTOP}"
+        ]
+        # Build mo files
+        os.makedirs(f'{self.build_i18n}/mo', exist_ok=True)
+        for ll in self.linguas:
+            cmd = [
+                'msgfmt', '-c', '--statistics', '--verbose',
+                '-o', self.get_mo_file(ll), f'po/{ll}.po'
+            ]
+            print(" ".join(cmd))
+            subprocess.check_call(cmd)
+
+        # desktop and appdata files are already valid,
+        # if we failed to msgfmt (because of old msgfmt), just copy
+        os.makedirs(f'{self.build_i18n}/applications', exist_ok=True)
+        os.makedirs(f'{self.build_i18n}/metainfo', exist_ok=True)
+        try:
+            subprocess.check_call(desktopcmd)
+        except (OSError, subprocess.CalledProcessError):
+            shutil.copy(f"{DESKTOP}.in",
+                f"{self.build_i18n}/applications/{DESKTOP}")
+
+        try:
+            subprocess.check_call(appdatacmd)
+        except (OSError, subprocess.CalledProcessError):
+            shutil.copy(f"data/metainfo/{APPDATA}.in",
+                f"{self.build_i18n}/metainfo/{APPDATA}")
+
+    def get_source_files(self):
+        result = [f'po/{ll}.po' for ll in self.linguas]
+        return result + [
+            f'{DESKTOP}.in',
+            f'data/metainfo/{APPDATA}.in'
+        ]
+
+    def get_outputs(self):
+        result = [self.get_mo_file(ll) for ll in self.linguas]
+        return result + [
+            f'{self.build_i18n}/applications/{DESKTOP}',
+            f'{self.build_i18n}/metainfo/{APPDATA}',
+        ]
+
+    def get_output_mapping(self):
+        result = {self.get_mo_file(ll): f'po/{ll}.po' for ll in self.linguas}
+        result[f'{self.build_i18n}/applications/{DESKTOP}'] = f'{DESKTOP}.in'
+        result[f'{self.build_i18n}/{APPDATA}'] = f'data/{APPDATA}.in'
+        return result
 
 
-def get_desktop_file(root, target_data):
-    """Move the desktop file to its installation prefix."""
-    desktop_path = os.path.realpath(
-        os.path.join(root, target_data, 'share', 'applications'))
-    desktop_file = os.path.join(desktop_path, 'org.xfce.Catfish.desktop')
-    return desktop_file
-
-
-def update_desktop_file(filename, script_path):
-    """Update the desktop file with prefixed paths."""
-    try:
-        fin = codecs.open(filename, 'r', encoding='utf-8')
-        fout = codecs.open(filename + '.new', 'w', encoding='utf-8')
-
-        for line in fin:
-            if 'Exec=' in line:
-                cmd = line.split("=")[1].split(None, 1)
-                line = "Exec=%s" % os.path.join(script_path, 'catfish')
-                if len(cmd) > 1:
-                    line += " %s" % cmd[1].strip()  # Add script arguments back
-                line += "\n"
-            fout.write(line)
-        fout.flush()
-        fout.close()
-        fin.close()
-        os.rename(fout.name, fin.name)
-    except (OSError, IOError):
-        sys.stderr.write("ERROR: Can't find %s" % filename)
-        sys.exit(1)
-
-
-def get_metainfo_file():
-    """Prebuild the metainfo file so it can be installed."""
-    source = "data/metainfo/catfish.appdata.xml.in"
-    target = "data/metainfo/catfish.appdata.xml"
-    cmd = ["intltool-merge", "-d", "po", "--xml-style", source, target]
-    print(" ".join(cmd))
-    subprocess.call(cmd)
-    return target
-
-
-def cleanup_metainfo_files(root, target_data):
-    metainfo_dir = os.path.normpath(
-        os.path.join(root, target_data, 'share', 'catfish', 'metainfo'))
-    if os.path.exists(metainfo_dir):
-        shutil.rmtree(metainfo_dir)
-
-
-class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
-
+class Install(install):
     """Command Class to install and update the directory."""
+    def finalize_options(self):
+        super().finalize_options()
+        if self.prefix is None:
+            self.prefix = ''
 
     def run(self):
         """Run the setup commands."""
-        metainfo = get_metainfo_file()
+        super().run()
+        distname = self.distribution.get_name()
+        distver = self.distribution.get_version()
+        print(f"=== Installing {distname}, version {distver} ===")
 
-        DistUtilsExtra.auto.install_auto.run(self)
-
-        print(("=== Installing %s, version %s ===" %
-               (self.distribution.get_name(),
-                self.distribution.get_version())))
-
-        using_pip = os.path.basename(
-            os.path.dirname(__file__)).startswith('pip-')
-
-        if not self.prefix:
-            self.prefix = ''  # pylint: disable=W0201
+        share_dir = os.path.join(self.install_data, 'share')
+        bin_dir = self.install_scripts
 
         if self.root:
-            target_data = os.path.relpath(
-                self.install_data, self.root) + os.sep
-            target_scripts = os.path.join(self.install_scripts, '')
+            share_dir = os.sep + os.path.relpath(share_dir, self.root)
+            bin_dir = os.sep + os.path.relpath(bin_dir, self.root)
 
-            data_dir = os.path.join(self.prefix, 'share', 'catfish', '')
-            script_path = os.path.join(self.prefix, 'bin')
+        data_dir = os.path.join(share_dir, 'catfish')
+        bin_dir = os.path.abspath(bin_dir)
 
-            if using_pip:
-                target_pkgdata = os.path.join(
-                    site.getuserbase(), 'share', 'catfish')
-                target_pkgdata = os.path.realpath(target_pkgdata)
-                data_dir = target_pkgdata
+        print(f"Root: {self.root}")
+        print(f"Prefix: {self.prefix}\n")
+        print(f"Target Data:    {share_dir}")
+        print(f"Target Scripts: {bin_dir}\n")
+        print(f"Catfish Data Directory: {data_dir}")
 
-        else:
-            # --user install
-            self.root = ''  # pylint: disable=W0201
-            target_data = os.path.relpath(self.install_data) + os.sep
-            target_pkgdata = os.path.join(target_data, 'share', 'catfish', '')
-            target_scripts = os.path.join(self.install_scripts, '')
+        values = {
+            '__catfish_data_directory__': f"'{data_dir}'",
+            '__version__': f"'{distver}'"
+        }
+        self.update_config(values)
+        uidir = os.path.join(self.install_data, 'share/catfish/ui')
+        self.copy_tree('data/ui', uidir)
+        self.install_icons()
+        self.install_man()
+        self.install_metainfo()
+        self.install_desktop_file(bin_dir)
+        self.install_mo_files()
 
-            # Use absolute paths
-            target_data = os.path.realpath(target_data)
-            target_pkgdata = os.path.realpath(target_pkgdata)
-            target_scripts = os.path.realpath(target_scripts)
+    def install_icons(self):
+        hicolor = os.path.join(self.install_data, 'share/icons/hicolor')
+        for r, subdirs, files in os.walk('data/media'):
+            if files:
+                resolution = os.path.basename(r)
+                tgt = os.path.join(hicolor, resolution, 'apps')
+                os.makedirs(tgt, exist_ok=True)
+                for f in files:
+                    self.copy_file(os.path.join(r, f), tgt)
 
-            data_dir = target_pkgdata
-            script_path = target_scripts
+    def install_mo_files(self):
+        for ll in get_linguas('po/LINGUAS'):
+            dstdir = os.path.join(self.install_data, f'share/locale/{ll}/LC_MESSAGES')
+            os.makedirs(dstdir, exist_ok=True)
+            self.copy_file(
+                os.path.join(self.build_base, 'share/mo', f"{ll}.mo"),
+                os.path.join(dstdir, f'{PKGNAME}.mo'))
 
-        print(("Root: %s" % self.root))
-        print(("Prefix: %s\n" % self.prefix))
+    def install_man(self):
+        man1dir = os.path.join(self.install_data, 'share/man/man1')
+        os.makedirs(man1dir, exist_ok=True)
+        self.copy_file('catfish.1',
+            os.path.join(self.install_data, 'share/man/man1'))
 
-        print(("Target Data:    %s" % target_data))
-        print(("Target Scripts: %s\n" % target_scripts))
-        print(("Catfish Data Directory: %s" % data_dir))
+    def install_metainfo(self):
+        metainfodir = os.path.join(self.install_data, 'share/metainfo')
+        os.makedirs(metainfodir, exist_ok=True)
+        self.copy_file(os.path.join(self.build_base, 'share/metainfo', APPDATA),
+            metainfodir)
 
-        values = {'__catfish_data_directory__': "'%s'" % (data_dir),
-                  '__version__': "'%s'" % self.distribution.get_version()}
-        update_config(self.install_lib, values)
+    def update_config(self, values):
+        """Update the configuration file at installation time."""
+        fname = os.path.join(self.install_lib, 'catfish_lib', 'catfishconfig.py')
+        oldvalues = {}
+        with open(fname, 'r', encoding='utf-8') as fin, \
+                open(f'{fname}.tmp', 'w', encoding='utf-8') as fout:
+            for line in fin:
+                fields = line.partition(' = ')
+                if fields[0] in values:
+                    oldvalues[fields[0]] = fields[1].strip()
+                    line = f'{fields[0]} = {values[fields[0]]}\n'
+                fout.write(line)
+            fout.flush()
+        os.rename(f'{fname}.tmp', fname)
+        return oldvalues
 
-        desktop_file = get_desktop_file(self.root, target_data)
-        print(("Desktop File: %s\n" % desktop_file))
-        move_icon_files(self.root, target_data)
-        update_desktop_file(desktop_file, script_path)
+    def install_desktop_file(self, bin_dir):
+        """Update the desktop file with prefixed paths."""
+        build_ = os.path.join(self.build_base, 'share/applications', DESKTOP)
+        tmp_ = f'{build_}.tmp'
+        dstdir = os.path.join(self.install_data, 'share/applications')
+        os.makedirs(dstdir, exist_ok=True)
+        with open(build_, 'r', encoding='utf-8') as fin, \
+                open(tmp_, 'w', encoding='utf-8') as fout:
+            for line in fin:
+                if line.startswith('Exec='):
+                    delim = ''
+                    args = ''
+                    cmd = line.partition('=')[2].split(None, 1)
+                    if len(cmd) > 1:
+                        delim = ' '
+                        args = cmd[1].strip()
+                    catfish = os.path.join(bin_dir, 'catfish')
+                    line = f'Exec={catfish}{delim}{args}\n'
+                fout.write(line)
 
-        cleanup_metainfo_files(self.root, target_data)
-        os.remove(metainfo)
+        dstfile = os.path.join(dstdir, DESKTOP)
+        self.copy_file(tmp_, dstfile)
 
 
-# Verify the build directory is clean
-FOLDER = "dist/catfish-%s" % __version__
-if os.path.exists(FOLDER):
-    sys.stderr.write("Build directory 'dist' is not clean.\n"
-                     "Please manually remove %s" % FOLDER)
-    sys.exit(1)
+class SDist(sdist):
+    def initialize_options(self):
+        super().initialize_options()
+        self.formats = ['bztar']
 
-# Hacky, default releases to bztar
-DEFAULT_RELEASE_BUILD = False
-if "sdist" in sys.argv:
-    if "--formats" not in " ".join(sys.argv[1:]):
-        sys.argv.append("--formats=bztar")
-        DEFAULT_RELEASE_BUILD = True
+    def run(self):
+        folder = f"dist/catfish-{__version__}"
+        if os.path.exists(folder):
+            sys.stderr.write("Build directory 'dist' is not clean.\n")
+            sys.stderr.write(f"Please manually remove {folder}")
+            sys.exit(1)
+        super().run()
+        if self.formats == ['bztar']:
+            bzfile = f"dist/catfish-{__version__}.tar.bz2"
+            self.sign_release(bzfile)
+            self.print_contents(bzfile)
 
-DistUtilsExtra.auto.setup(
+    def sign_release(self, bzfile):
+        import hashlib
+        if not os.path.exists(bzfile):
+            sys.stderr.write(f"Expected file '{bzfile}' was not found.")
+            sys.exit(1)
+
+        md5 = hashlib.md5()
+        sha1 = hashlib.sha1()
+        sha256 = hashlib.sha256()
+        # Read in chunk, avoid OOM
+        with open(bzfile, 'rb') as f:
+            chunk = f.read(8192)
+            while chunk:
+                md5.update(chunk)
+                sha1.update(chunk)
+                sha256.update(chunk)
+                chunk = f.read(8192)
+
+        print("")
+        print(f"{bzfile} written")
+        print(f"  MD5:    {md5.hexdigest()}")
+        print(f"  SHA1:   {sha1.hexdigest()}")
+        print(f"  SHA256: {sha256.hexdigest()}")
+        print("")
+
+    def print_contents(self, bzfile):
+        import tarfile
+
+        print("Contents:")
+        contents = {}
+        with tarfile.open(bzfile, 'r:bz2') as tar:
+            for tarinfo in tar:
+                if not tarinfo.isdir():
+                    basedir = os.path.dirname(tarinfo.name)
+                    if basedir not in contents:
+                        contents[basedir] = [tarinfo.name]
+                    else:
+                        contents[basedir].append(tarinfo.name)
+
+        for basedir, files in contents.items():
+            indent = ""
+            indent = ' ' * len(basedir.split('/'))
+            print(f"{indent}{basedir}/")
+            indent += "  "
+            for fname in files:
+                print(indent + fname)
+
+setuptools.setup(
     name='catfish',
     version=__version__,
     license='GPL-2+',
@@ -269,48 +370,16 @@ DistUtilsExtra.auto.setup(
                      'simple, using only Gtk+3. You can configure it to your '
                      'needs by using several command line options.',
     url=__url__,
+    scripts=['bin/catfish'],
+    packages = ['catfish', 'catfish_lib'],
     data_files=[
         ('share/man/man1', ['catfish.1']),
-        ('share/metainfo/', ['data/metainfo/catfish.appdata.xml'])
     ],
-    cmdclass={'install': InstallAndUpdateDataDirectory}
+    cmdclass={
+        'build': Build,
+        'build_pot': BuildPot,
+        'build_i18n': BuildI18n,
+        'install': Install,
+        'sdist': SDist
+    }
 )
-
-# Simplify Xfce release process by providing sums
-if DEFAULT_RELEASE_BUILD:
-    import hashlib
-    import tarfile
-
-    BZFILE = "dist/catfish-%s.tar.bz2" % __version__
-    if not os.path.exists(BZFILE):
-        sys.stderr.write("Expected file '%s' was not found.")
-        sys.exit(1)
-
-    CONTENTS = open(BZFILE, 'rb').read()
-
-    print("")
-    print("%s written" % BZFILE)
-    print("  MD5:    %s" % hashlib.md5(CONTENTS).hexdigest())
-    print("  SHA1:   %s" % hashlib.sha1(CONTENTS).hexdigest())
-    print("  SHA256: %s" % hashlib.sha256(CONTENTS).hexdigest())
-    print("")
-    print("Contents:")
-
-    CONTENTS = {}
-    TAR = tarfile.open(BZFILE, "r:bz2")
-    for tarinfo in TAR:
-        if not tarinfo.isdir():
-            basedir = os.path.dirname(tarinfo.name)
-            if basedir not in CONTENTS.keys():
-                CONTENTS[basedir] = []
-            CONTENTS[basedir].append(tarinfo.name)
-    TAR.close()
-
-    for basedir in CONTENTS.keys():  # pylint: disable=C0201
-        indent = ""
-        for i in range(0, len(basedir.split("/"))):
-            indent += "  "
-        print("%s%s/" % (indent, basedir))
-        indent += "  "
-        for fname in CONTENTS[basedir]:
-            print(indent + fname)
