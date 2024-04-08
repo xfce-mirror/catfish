@@ -13,6 +13,8 @@ translations:
 build:
   stage: build
   script:
+    - apt update -q -y
+    - apt install -y python3-setuptools
     - python3 setup.py sdist
   rules:
     # If there are changes to .po, never run. We also check
