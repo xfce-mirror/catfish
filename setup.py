@@ -30,9 +30,13 @@ import sys
 import subprocess
 
 import setuptools
-from setuptools.command.build import build
 from setuptools.command.install import install
 from setuptools.command.sdist import sdist
+
+try:
+    from setuptools.command.build import build
+except:
+    from distutils.command.build import build
 
 __version__ = '4.18.0'
 __url__ = 'https://docs.xfce.org/apps/catfish/start'
