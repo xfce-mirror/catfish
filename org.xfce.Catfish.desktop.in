@@ -1,9 +1,9 @@
 [Desktop Entry]
-_Name=Catfish File Search
-_GenericName=File search
-_Comment=Search the file system
+Name=Catfish File Search
+GenericName=File search
+Comment=Search the file system
 # TRANSLATORS: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-_Keywords=files;find;locate;lookup;search;
+Keywords=files;find;locate;lookup;search;
 Categories=GNOME;GTK;Utility;
 Exec=catfish %f
 Icon=org.xfce.catfish

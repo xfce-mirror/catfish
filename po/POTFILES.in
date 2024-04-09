@@ -18,8 +18,8 @@
 org.xfce.Catfish.desktop.in
 
 # Glade Files
-[type: gettext/glade]data/ui/CatfishPreferences.ui
-[type: gettext/glade]data/ui/CatfishWindow.ui
+data/ui/CatfishPreferences.ui
+data/ui/CatfishWindow.ui
 
 # Python Files
 catfish/__init__.py
@@ -37,4 +37,4 @@ catfish_lib/Thumbnailer.py
 catfish_lib/Window.py
 
 # XML Files
-[type: gettext/xml]data/metainfo/catfish.appdata.xml.in
+data/metainfo/catfish.appdata.xml.in
