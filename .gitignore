@@ -5,8 +5,3 @@ __pycache__
 *.rej
 *.orig
 *.pyc
-MANIFEST
-dist/
-data/metainfo/catfish.appdata.xml
-catfish.egg-info/
-po/catfish.pot
