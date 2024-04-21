@@ -260,7 +260,8 @@ class Install(install):
 
     def update_config(self, values):
         """Update the configuration file at installation time."""
-        fname = os.path.join(self.install_lib, 'catfish_lib', 'catfishconfig.py')
+        fname = os.path.join('catfish_lib', 'defs.py.in')
+        destfname = os.path.join(self.install_lib, 'catfish_lib', 'defs.py')
         oldvalues = {}
         with open(fname, 'r', encoding='utf-8') as fin, \
                 open(f'{fname}.tmp', 'w', encoding='utf-8') as fout:
@@ -271,7 +272,7 @@ class Install(install):
                     line = f'{fields[0]} = {values[fields[0]]}\n'
                 fout.write(line)
             fout.flush()
-        os.rename(f'{fname}.tmp', fname)
+        os.rename(f'{fname}.tmp', destfname)
         return oldvalues
 
     def install_desktop_file(self, bin_dir):
