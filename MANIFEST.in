@@ -1,7 +1,7 @@
 include AUTHORS COPYING catfish.1 org.xfce.Catfish.desktop.in INSTALL NEWS README.md
 include bin/*
 recursive-include catfish *.py
-recursive-include catfish_lib *.py
+recursive-include catfish_lib *.py *.in
 recursive-include data *.svg *.ui *.in
 recursive-include po *.po *.in LINGUAS
 recursive-exclude catfish *~ *.orig *.rej *.pyc
