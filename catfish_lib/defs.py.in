@@ -1,0 +1,2 @@
+__catfish_data_directory__ = @CATFISH_DATA_DIRECTORY@
+__version__ = @VERSION@
