@@ -25,15 +25,18 @@ __all__ = [
     'get_locate_db_path',
 ]
 
-# Where your project will look for your data (for instance, images and ui
-# files). By default, this is ../data, relative your trunk layout
-__catfish_data_directory__ = '../data/'
 # Location of locate.db file
 __locate_db_paths__ = ('/var/lib/plocate/plocate.db', '/var/lib/mlocate/mlocate.db')
 __license__ = 'GPL-2+'
-__version__ = '4.18.0'
 __url__ = 'https://docs.xfce.org/apps/catfish/start'
 
+try:
+    from .defs import __version__, __catfish_data_directory__
+except ImportError:
+    __version__ = '4.18.0'
+    # Where your project will look for your data (for instance, images and ui
+    # files). By default, this is ../data, relative your trunk layout
+    __catfish_data_directory__ = '../data'
 
 class project_path_not_found(Exception):
 
