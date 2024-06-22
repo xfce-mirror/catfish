@@ -1,37 +1,24 @@
-image: xfce/xfce-build:latest
+include:
+  - project: 'xfce/xfce4-dev-tools'
+    file: '/ci/build_project.yml'
 
-stages:
-  - build
+build-gcc:
+  rules:
+    - when: never
 
-translations:
-  extends: .translation
-  stage: build
-  script:
-    #  Could validate translations, but for now just pass
-    - "true"
+build-clang:
+  rules:
+    - when: never
 
 build:
-  stage: build
+  extends: .build
   script:
-    - python3 setup.py sdist
-  rules:
-    # If there are changes to .po, never run. We also check
-    # BEFORE_SHA to see if it is zeros, in which case we are
-    # running on a manual trigger or scheduled pipeline. In
-    # that case, changes resolves to true so we need to check
-    # both.
-    - if: '$CI_COMMIT_BEFORE_SHA != "0000000000000000000000000000000000000000"'
-      changes:
-      - "po/*.po"
-      when: never
-    # Otherwise, always run
-    - when: always
+    - apt update && apt install -y meson python3-dbus python3-pexpect desktop-file-utils
+    - meson setup build
+    - meson compile -C build
 
-.translation:
-  rules:
-    # If there are changes to .po, run this job
-    - changes:
-      - "po/*.po"
-      when: always
-    # Otherwise, never run
-    - when: never
+distcheck:
+  script:
+    - apt update && apt install -y meson python3-dbus python3-pexpect desktop-file-utils
+    - meson setup build
+    - meson dist -C build
