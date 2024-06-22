@@ -30,14 +30,11 @@ See [NEWS](https://gitlab.xfce.org/apps/catfish/-/blob/master/NEWS) for details 
 
 ### Installation
 
-From source: 
+From source:
 
-    local/user install:
-        python3 setup.py install --user
-    system-wide/root install:
-        sudo python3 setup.py install
- 
- For detailed installation instructions, see [INSTALL](https://gitlab.xfce.org/apps/catfish/-/blob/master/INSTALL)
+    meson setup build
+    meson compile -C build
+    meson install -C build
 
 ### Reporting Bugs
 
