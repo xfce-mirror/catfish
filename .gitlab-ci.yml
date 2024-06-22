@@ -1,37 +1,5 @@
-image: xfce/xfce-build:latest
-
-stages:
-  - build
-
-translations:
-  extends: .translation
-  stage: build
-  script:
-    #  Could validate translations, but for now just pass
-    - "true"
-
-build:
-  stage: build
-  script:
-    - python3 setup.py sdist
-  rules:
-    # If there are changes to .po, never run. We also check
-    # BEFORE_SHA to see if it is zeros, in which case we are
-    # running on a manual trigger or scheduled pipeline. In
-    # that case, changes resolves to true so we need to check
-    # both.
-    - if: '$CI_COMMIT_BEFORE_SHA != "0000000000000000000000000000000000000000"'
-      changes:
-      - "po/*.po"
-      when: never
-    # Otherwise, always run
-    - when: always
-
-.translation:
-  rules:
-    # If there are changes to .po, run this job
-    - changes:
-      - "po/*.po"
-      when: always
-    # Otherwise, never run
-    - when: never
+include:
+  - project: 'xfce/xfce4-dev-tools'
+    # https://gitlab.xfce.org/xfce/xfce4-dev-tools/-/merge_requests/98/diffs?diff_id=39838
+    ref: f359030e5bf43ce6f022962fa9b1316baf47ef76
+    file: 'ci/build_project_meson.yaml'
