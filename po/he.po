@@ -1,20 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.catfish package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2020
-# Elishai Eliyahu <elishai@mailfence.com>, 2022
+# Nick Schermer <nick@xfce.org>, 2024
+# Xfce Bot <transifex@xfce.org>, 2024
+# 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2024
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2024
+# Elishai Eliyahu <elishai@mailfence.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-24 00:49+0200\n"
+"Project-Id-Version: xfce-apps.catfish\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-06-24 12:49+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Elishai Eliyahu <elishai@mailfence.com>, 2022\n"
+"Last-Translator: Elishai Eliyahu <elishai@mailfence.com>, 2024\n"
 "Language-Team: Hebrew (https://app.transifex.com/xfce/teams/16840/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,73 +25,396 @@ msgstr ""
 "Language: he\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
 
-#: ../catfish/__init__.py:39
+#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1083
+#: catfish_lib/catfishconfig.py:94
+msgid "Catfish File Search"
+msgstr "חיפוש קבצים שפמנון"
+
+#: org.xfce.Catfish.desktop.in:4
+msgid "File search"
+msgstr "חיפוש קבצים"
+
+#: org.xfce.Catfish.desktop.in:5
+msgid "Search the file system"
+msgstr "חפש במערכת הקבצים"
+
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: org.xfce.Catfish.desktop.in:7
+msgid "files;find;locate;lookup;search;"
+msgstr "קבצים;מצא;אתר;חפש;חפש;"
+
+#: data/ui/CatfishPreferences.ui:14
+msgid "Catfish Preferences"
+msgstr "העדפות שפמנון"
+
+#: data/ui/CatfishPreferences.ui:30
+msgid "_Close"
+msgstr "_סגור"
+
+#: data/ui/CatfishPreferences.ui:111
+msgid "Classic (_Titlebar)"
+msgstr "קלאסי (_Titlebar)"
+
+#: data/ui/CatfishPreferences.ui:161
+msgid "_Modern (CSD)"
+msgstr "_מודרני (CSD)"
+
+#: data/ui/CatfishPreferences.ui:213
+msgid "Your new window layout will be applied after restarting Catfish."
+msgstr "סידור החלון החדש שלך יופעל לאחר אתחול שפמנון."
+
+#: data/ui/CatfishPreferences.ui:236
+msgid "Window Layout"
+msgstr "סידור חלון"
+
+#: data/ui/CatfishPreferences.ui:269
+msgid "Show _hidden files in the results"
+msgstr "הצג בתוצאות קבצים _נסתרים"
+
+#: data/ui/CatfishPreferences.ui:285
+msgid "Show filter _sidebar"
+msgstr "הצג _סרגל צד סינון"
+
+#: data/ui/CatfishPreferences.ui:301
+msgid "Show file sizes in binary format"
+msgstr "הצג גודל קבצים בפורמט בינארי"
+
+#: data/ui/CatfishPreferences.ui:305
+msgid "Uncheck to show file size in decimal format"
+msgstr "בטל סימון כדי להציג גודל קבצים בפורמט דצימלי"
+
+#: data/ui/CatfishPreferences.ui:324
+msgid "Display Options"
+msgstr "אפשרויות תצוגה"
+
+#: data/ui/CatfishPreferences.ui:340
+msgid "Appearance"
+msgstr "מראה"
+
+#: data/ui/CatfishPreferences.ui:382
+msgid "Path"
+msgstr "נתיב"
+
+#: data/ui/CatfishPreferences.ui:409
+msgid "Add Directory..."
+msgstr "הוסף ספריה..."
+
+#: data/ui/CatfishPreferences.ui:410
+msgid "_Add"
+msgstr "הו_סף"
+
+#: data/ui/CatfishPreferences.ui:424
+msgid "Remove Directory"
+msgstr "הסר ספריה"
+
+#: data/ui/CatfishPreferences.ui:425
+msgid "_Remove"
+msgstr "_הסר"
+
+#: data/ui/CatfishPreferences.ui:453
+msgid "Exclude Directories"
+msgstr "אל תכלול ספריות"
+
+#: data/ui/CatfishPreferences.ui:485
+msgid "Close the search _window after opening a file"
+msgstr "סגור את _חלון החיפוש לאחר פתיחת קובץ"
+
+#: data/ui/CatfishPreferences.ui:501
+msgid "Search within compressed files (.zip, .odt, .docx)"
+msgstr "חפש בתוך קבצים מכווצים (.zip, .odt, .docx)"
+
+#: data/ui/CatfishPreferences.ui:523
+msgid "Miscellaneous"
+msgstr "שונות"
+
+#: data/ui/CatfishPreferences.ui:539
+msgid "Advanced"
+msgstr "מתקדם"
+
+#: data/ui/CatfishWindow.ui:10 data/ui/CatfishWindow.ui:119
+msgid "Select a Folder"
+msgstr "בחר תיקייה"
+
+#: data/ui/CatfishWindow.ui:53
+msgid "Folder not found!"
+msgstr "תיקייה לא נמצאת!"
+
+#. Restore Cancel button
+#. Buttons
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1226
+#: catfish/CatfishWindow.py:798 catfish_lib/SudoDialog.py:184
+msgid "Cancel"
+msgstr "בטל"
+
+#: data/ui/CatfishWindow.ui:84
+msgid "Select Folder"
+msgstr "בחר תיקייה"
+
+#: data/ui/CatfishWindow.ui:170
+msgid "_Open"
+msgstr "_פתח"
+
+#: data/ui/CatfishWindow.ui:181
+msgid "_Open with..."
+msgstr "_פתח עם..."
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:198
+msgid "Show in _File Manager"
+msgstr "הצג במנהל ה_קבצים"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:215
+msgid "_Copy Location"
+msgstr "_העתק מיקום"
+
+#: data/ui/CatfishWindow.ui:226
+msgid "_Save as..."
+msgstr "_שמור בשם..."
+
+#: data/ui/CatfishWindow.ui:243
+msgid "_Delete..."
+msgstr "_מחק..."
+
+#: data/ui/CatfishWindow.ui:267
+msgid "File Extensions"
+msgstr "הרחבות קבצים"
+
+#: data/ui/CatfishWindow.ui:288
+msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
+msgstr "הכנס רשימה מופרדת בפסיקים של סיומות קבצים (למשל odt, png, txt)"
+
+#: data/ui/CatfishWindow.ui:316
+msgid "Documents"
+msgstr "מסמכים"
+
+#: data/ui/CatfishWindow.ui:324
+msgid "Folders"
+msgstr "תיקיות"
+
+#: data/ui/CatfishWindow.ui:332
+msgid "Images"
+msgstr "תמונות"
+
+#: data/ui/CatfishWindow.ui:340
+msgid "Music"
+msgstr "מוסיקה"
+
+#: data/ui/CatfishWindow.ui:348
+msgid "Videos"
+msgstr "סרטים"
+
+#: data/ui/CatfishWindow.ui:356
+msgid "Applications"
+msgstr "יישומים"
+
+#: data/ui/CatfishWindow.ui:364
+msgid "Archives"
+msgstr "ארכיונים"
+
+#: data/ui/CatfishWindow.ui:372
+msgid "Other"
+msgstr "אחר"
+
+#: data/ui/CatfishWindow.ui:380
+msgid "Extension..."
+msgstr "הרחבה..."
+
+#: data/ui/CatfishWindow.ui:406
+msgid "Any time"
+msgstr "כל זמן"
+
+#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1904
+msgid "Today"
+msgstr "היום"
+
+#: data/ui/CatfishWindow.ui:422
+msgid "This week"
+msgstr "השבוע"
+
+#: data/ui/CatfishWindow.ui:430
+msgid "This month"
+msgstr "חודש זה"
+
+#: data/ui/CatfishWindow.ui:438
+msgid "Custom..."
+msgstr "התאמה אישית…"
+
+#: data/ui/CatfishWindow.ui:510 data/ui/CatfishWindow.ui:605
+msgid "Go to Today"
+msgstr "לך להיום"
+
+#: data/ui/CatfishWindow.ui:538
+msgid "<b>Start Date</b>"
+msgstr "<b>תאריך התחלה</b>"
+
+#: data/ui/CatfishWindow.ui:633
+msgid "<b>End Date</b>"
+msgstr "<b>תאריך סיום</b>"
+
+#: data/ui/CatfishWindow.ui:648 catfish_lib/Window.py:240
+#: data/metainfo/catfish.appdata.xml.in:7
+msgid "Catfish"
+msgstr "שפמנון"
+
+#: data/ui/CatfishWindow.ui:675
+msgid "Update"
+msgstr "עדכון"
+
+#: data/ui/CatfishWindow.ui:716
+msgid "The search database is more than 7 days old.  Update now?"
+msgstr "מאגר נתוני החיפוש הוא בן יותר מ־7 ימים. לעדכן עכשיו?"
+
+#: data/ui/CatfishWindow.ui:774
+msgid "File Type"
+msgstr "סוג קובץ"
+
+#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1618
+msgid "Modified"
+msgstr "עודכן"
+
+#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2224
+msgid "Results will be displayed as soon as they are found."
+msgstr "תוצאות יוצגו ברגע שהן נמצאות."
+
+#: data/ui/CatfishWindow.ui:1240
+msgid "Unlock"
+msgstr "פתח"
+
+#: data/ui/CatfishWindow.ui:1292
+msgid "<b>Database:</b>"
+msgstr "<b>מאגר נתונים:</b>"
+
+#: data/ui/CatfishWindow.ui:1305
+msgid "<b>Updated:</b>"
+msgstr "<b>עודכן:</b>"
+
+#: data/ui/CatfishWindow.ui:1318
+msgid "<big><b>Update Search Database</b></big>"
+msgstr "<big><b>עדכן מאגר חיפוש</b></big>"
+
+#: data/ui/CatfishWindow.ui:1332
+msgid ""
+"For faster search results, the search database needs to be refreshed.\n"
+"This action requires administrative rights."
+msgstr ""
+"לתוצאות חיפוש מהירות יותר, מאגר החיפוש צריך לעבור רענון.\n"
+"פעולה זו מצריכה סמכויות ניהוליות."
+
+#: data/ui/CatfishWindow.ui:1464
+msgid "Update Search Database"
+msgstr "עדכן מאגר חיפוש"
+
+#: data/ui/CatfishWindow.ui:1488
+msgid "Search for files"
+msgstr "חפש קבצים"
+
+#: data/ui/CatfishWindow.ui:1533
+msgid "Compact List"
+msgstr "רשימה קומפקטית"
+
+#: data/ui/CatfishWindow.ui:1552
+msgid "Thumbnails"
+msgstr "תמונות ממוזערות"
+
+#: data/ui/CatfishWindow.ui:1603
+msgid "Show _sidebar"
+msgstr "הצג סרגל _צד"
+
+#: data/ui/CatfishWindow.ui:1642
+msgid "Show _hidden files"
+msgstr "הצג _קבצים נסתרים"
+
+#: data/ui/CatfishWindow.ui:1657
+msgid "Search file _contents"
+msgstr "חפש ב_תכולת הקובץ"
+
+#: data/ui/CatfishWindow.ui:1674
+msgid "_Match results exactly"
+msgstr "_התאם בדיוק את התוצאות"
+
+#: data/ui/CatfishWindow.ui:1727
+msgid "_Refresh search index..."
+msgstr "_רענן אינדקס חיפוש..."
+
+#: data/ui/CatfishWindow.ui:1782
+msgid "_Preferences"
+msgstr "_העדפות"
+
+#: data/ui/CatfishWindow.ui:1823
+msgid "_About"
+msgstr "על _אודות"
+
+#: catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
 msgstr "שימוש: %prog [options] path query"
 
-#: ../catfish/__init__.py:44
+#: catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr "הצג הודעות debug (בנוסף catfish_lib בעזרת -vv) "
 
-#: ../catfish/__init__.py:47
+#: catfish/__init__.py:47
 msgid "Use large icons"
 msgstr "השתמש באיקונים גדולים"
 
-#: ../catfish/__init__.py:49
+#: catfish/__init__.py:49
 msgid "Use thumbnails"
 msgstr "השתמש בתמונות ממוזערות"
 
-#: ../catfish/__init__.py:51
+#: catfish/__init__.py:51
 msgid "Display time in ISO format"
 msgstr "הצג שעה בפורמט ISO "
 
 #. Translators: Do not translate PATH, it is a variable.
-#: ../catfish/__init__.py:53
+#: catfish/__init__.py:53
 msgid "Set the default search path"
 msgstr "קבע את נתיב חיפוש ברירת המחדל"
 
-#: ../catfish/__init__.py:55
+#: catfish/__init__.py:55
 msgid "Perform exact match"
 msgstr "בצע התאמה מדויקת"
 
-#: ../catfish/__init__.py:57
+#: catfish/__init__.py:57
 msgid "Include hidden files"
 msgstr "כלול קבצים חבויים"
 
-#: ../catfish/__init__.py:59
+#: catfish/__init__.py:59
 msgid "Perform fulltext search"
 msgstr "בצע חיפוש טקסט מלא"
 
-#: ../catfish/__init__.py:61
+#: catfish/__init__.py:61
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr "אם סופקו נתיב ושאלה, התחל חיפוש ברגע שהאפליקציה מוצגת."
 
-#: ../catfish/__init__.py:63
+#: catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr "קבע עמודת ברירת מחדל למיון (name|size|path|date|type),(asc|desc)"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:109
+#: catfish/CatfishWindow.py:109
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (קידוד לא חוקי)"
 
-#: ../catfish/CatfishWindow.py:149
+#: catfish/CatfishWindow.py:149
 msgid "translator-credits"
 msgstr "שבחים-מתרגמים"
 
-#: ../catfish/CatfishWindow.py:299
+#: catfish/CatfishWindow.py:299
 msgid "Unknown"
 msgstr "לא ידוע"
 
-#: ../catfish/CatfishWindow.py:303
+#: catfish/CatfishWindow.py:303
 msgid "Never"
 msgstr "אף פעם"
 
-#: ../catfish/CatfishWindow.py:415
+#: catfish/CatfishWindow.py:415
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -97,43 +423,37 @@ msgstr ""
 "הכנס את השאילתה שלך למעלה כדי למצוא את הקבצים שלך\n"
 "או הקלק על אייקון %s לאפשרויות נוספות. "
 
-#. Restore Cancel button
-#. Buttons
-#: ../catfish/CatfishWindow.py:798 ../catfish_lib/SudoDialog.py:184
-msgid "Cancel"
-msgstr "בטל"
-
-#: ../catfish/CatfishWindow.py:813
+#: catfish/CatfishWindow.py:813
 msgid "An error occurred while updating the database."
 msgstr "אירעה שגיאה בעת עדכון מאגר הנתונים."
 
-#: ../catfish/CatfishWindow.py:815
+#: catfish/CatfishWindow.py:815
 msgid "Authentication failed."
 msgstr "אימות נכשל."
 
-#: ../catfish/CatfishWindow.py:821
+#: catfish/CatfishWindow.py:821
 msgid "Authentication cancelled."
 msgstr "אימות בוטל."
 
-#: ../catfish/CatfishWindow.py:827
+#: catfish/CatfishWindow.py:827
 msgid "Search database updated successfully."
 msgstr "מאגר חיפוש עודכן בהצלחה."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:888
+#: catfish/CatfishWindow.py:888
 msgid "Close"
 msgstr "סגור"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:902
+#: catfish/CatfishWindow.py:902
 msgid "Updating..."
 msgstr "מעדכן..."
 
-#: ../catfish/CatfishWindow.py:937
+#: catfish/CatfishWindow.py:937
 msgid "Stop Search"
 msgstr "עצור חיפוש"
 
-#: ../catfish/CatfishWindow.py:938
+#: catfish/CatfishWindow.py:938
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -141,39 +461,39 @@ msgstr ""
 "חיפוש בעבודה...\n"
 "לחץ על כפתור ביטול או מקש אסקייפ לעצירה."
 
-#: ../catfish/CatfishWindow.py:949
+#: catfish/CatfishWindow.py:949
 msgid "Begin Search"
 msgstr "התחל חיפוש"
 
-#: ../catfish/CatfishWindow.py:1073
+#: catfish/CatfishWindow.py:1073
 msgid "No folder selected."
 msgstr "לא נבחרה תיקייה."
 
-#: ../catfish/CatfishWindow.py:1078
+#: catfish/CatfishWindow.py:1078
 msgid "Folder not found."
 msgstr "תיקייה לא נמצאת."
 
-#: ../catfish/CatfishWindow.py:1327
+#: catfish/CatfishWindow.py:1327
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" לא היה ניתן לפתיחה."
 
-#: ../catfish/CatfishWindow.py:1483
+#: catfish/CatfishWindow.py:1483
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" לא היה ניתן לשמירה."
 
-#: ../catfish/CatfishWindow.py:1500
+#: catfish/CatfishWindow.py:1500
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" לא היה ניתן למחיקה."
 
-#: ../catfish/CatfishWindow.py:1539
+#: catfish/CatfishWindow.py:1539
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "שמור \"%s\" כ..."
 
-#: ../catfish/CatfishWindow.py:1574
+#: catfish/CatfishWindow.py:1574
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -182,7 +502,7 @@ msgstr ""
 "האם אתה בטוח שברצונך\n"
 "למחוק לצמיתות את \"%s\"?"
 
-#: ../catfish/CatfishWindow.py:1578
+#: catfish/CatfishWindow.py:1578
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -191,55 +511,47 @@ msgstr ""
 "האם אתה בטוח שברצונך\n"
 "למחוק לצמיתות את %i הקבצים הנבחרים?"
 
-#: ../catfish/CatfishWindow.py:1581
+#: catfish/CatfishWindow.py:1581
 msgid "If you delete a file, it is permanently lost."
 msgstr "אם אתה מוחק קובץ, הוא אובד לצמיתות."
 
-#: ../catfish/CatfishWindow.py:1615
+#: catfish/CatfishWindow.py:1615
 msgid "Filename"
 msgstr "שם קובץ"
 
-#: ../catfish/CatfishWindow.py:1616
+#: catfish/CatfishWindow.py:1616
 msgid "Size"
 msgstr "גודל"
 
-#: ../catfish/CatfishWindow.py:1617
+#: catfish/CatfishWindow.py:1617
 msgid "Location"
 msgstr "מיקום"
 
-#: ../catfish/CatfishWindow.py:1618
-msgid "Modified"
-msgstr "עודכן"
-
-#: ../catfish/CatfishWindow.py:1627
+#: catfish/CatfishWindow.py:1627
 msgid "Preview"
 msgstr "תצוגה מקדימה"
 
-#: ../catfish/CatfishWindow.py:1634
+#: catfish/CatfishWindow.py:1634
 msgid "Details"
 msgstr "פרטים"
 
-#: ../catfish/CatfishWindow.py:1825
+#: catfish/CatfishWindow.py:1825
 msgid "Open with default applications"
 msgstr "פתח עם ישומי ברירת מחדל"
 
-#: ../catfish/CatfishWindow.py:1841
+#: catfish/CatfishWindow.py:1841
 msgid "Open with"
 msgstr "פתח עם"
 
-#: ../catfish/CatfishWindow.py:1904
-msgid "Today"
-msgstr "היום"
-
-#: ../catfish/CatfishWindow.py:1906
+#: catfish/CatfishWindow.py:1906
 msgid "Yesterday"
 msgstr "אתמול"
 
-#: ../catfish/CatfishWindow.py:2014
+#: catfish/CatfishWindow.py:2014
 msgid "No files found."
 msgstr "לא נמצאו קבצים."
 
-#: ../catfish/CatfishWindow.py:2016
+#: catfish/CatfishWindow.py:2016
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -247,62 +559,54 @@ msgstr ""
 "נסה לעשות את החיפוש שלך פחות ספיציפי\n"
 "או נסה ספריה אחרת."
 
-#: ../catfish/CatfishWindow.py:2023
+#: catfish/CatfishWindow.py:2023
 msgid "1 file found."
 msgstr "קובץ 1 נמצא."
 
-#: ../catfish/CatfishWindow.py:2025
+#: catfish/CatfishWindow.py:2025
 #, python-format
 msgid "%i files found."
 msgstr "%i קבצים נמצאו."
 
-#: ../catfish/CatfishWindow.py:2034 ../catfish/CatfishWindow.py:2037
+#: catfish/CatfishWindow.py:2034 catfish/CatfishWindow.py:2037
 msgid "bytes"
 msgstr "בייטים"
 
-#: ../catfish/CatfishWindow.py:2222 ../catfish/CatfishWindow.py:2232
+#: catfish/CatfishWindow.py:2222 catfish/CatfishWindow.py:2232
 msgid "Searching..."
 msgstr "מחפש..."
 
-#: ../catfish/CatfishWindow.py:2224
-msgid "Results will be displayed as soon as they are found."
-msgstr "תוצאות יוצגו ברגע שהן נמצאות."
-
-#: ../catfish/CatfishWindow.py:2230
+#: catfish/CatfishWindow.py:2230
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "מחפש את \"%s\""
 
-#: ../catfish/CatfishWindow.py:2340
+#: catfish/CatfishWindow.py:2340
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "תוצאות חיפוש עבור \"%s\""
 
-#: ../catfish_lib/catfishconfig.py:94
-msgid "Catfish File Search"
-msgstr "חיפוש קבצים שפמנון"
-
-#: ../catfish_lib/catfishconfig.py:97
+#: catfish_lib/catfishconfig.py:97
 msgid "Catfish is a versatile file searching tool."
 msgstr "שפמנון הוא כלי חיפוש קבצים רב שימושי."
 
-#: ../catfish_lib/SudoDialog.py:126
+#: catfish_lib/SudoDialog.py:126
 msgid "Password Required"
 msgstr "נדרשת סיסמה"
 
-#: ../catfish_lib/SudoDialog.py:163
+#: catfish_lib/SudoDialog.py:163
 msgid "Incorrect password... try again."
 msgstr "סיסמה לא נכונה... נסה שוב."
 
-#: ../catfish_lib/SudoDialog.py:173
+#: catfish_lib/SudoDialog.py:173
 msgid "Password:"
 msgstr "סיסמה:"
 
-#: ../catfish_lib/SudoDialog.py:187
+#: catfish_lib/SudoDialog.py:187
 msgid "OK"
 msgstr "אישור"
 
-#: ../catfish_lib/SudoDialog.py:205
+#: catfish_lib/SudoDialog.py:205
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
@@ -310,7 +614,7 @@ msgstr ""
 "הכנס את הסיסמה שלך\n"
 "לביצוע פעולות ניהוליות."
 
-#: ../catfish_lib/SudoDialog.py:207
+#: catfish_lib/SudoDialog.py:207
 #, python-format
 msgid ""
 "The application '%s' lets you\n"
@@ -319,6 +623,29 @@ msgstr ""
 "האפליקציה '%s' מאפשרת לך\n"
 "לשנות חלקים עיקריים במערכת שלך."
 
-#: ../catfish_lib/Window.py:240
-msgid "Catfish"
-msgstr "שפמנון"
+#: data/metainfo/catfish.appdata.xml.in:8
+msgid "Versatile file searching tool"
+msgstr "כלי חיפוש קבצים רב שימושי"
+
+#: data/metainfo/catfish.appdata.xml.in:11
+msgid ""
+"Catfish is a small, fast, and powerful file search utility. Featuring a "
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
+msgstr ""
+"שפמנון היא תוכנה קטנה, מהירה ועוצמתית לחיפוש קבצים. עם ממשק מינימלי בדגש על "
+"תוצאות, היא עוזרת למשתמשים למצוא את הקבצים שהם צריכים ללא מנהל קבצים. עם "
+"מסננים עוצמתיים כמו תאריך עדכון, סוג קובץ ותכולת קובץ, משתמשים כבר לא יהיו "
+"תלויים במנהל הקבצים או ביכולות ארגון."
+
+#: data/metainfo/catfish.appdata.xml.in:25
+msgid "The main Catfish window displaying image search results"
+msgstr "החלון הראשי של שפמנון המציג תוצאות חיפוש תמונה"
+
+#: data/metainfo/catfish.appdata.xml.in:29
+msgid ""
+"The main Catfish window displaying available filters and filtered search "
+"results"
+msgstr "החלון הראשי של שפמנון המציג מסננים זמינים ותוצאות חיפוש מסוננות"
