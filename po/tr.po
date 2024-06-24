@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.catfish package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Xfce Bot <transifex@xfce.org>, 2018
-# Serdar Sağlam <teknomobil@msn.com>, 2019
-# Necdet Yücel <necdetyucel@gmail.com>, 2019
-# Emin Tufan Çetin <etcetin@gmail.com>, 2022
-# b83946de5835331df42b9ffcc43e6a33_05e65cd <73a30e0a984b2291d4915f37112ad292_814039>, 2022
-# Demiray Muhterem <mdemiray@msn.com>, 2022
+# b83946de5835331df42b9ffcc43e6a33_05e65cd <73a30e0a984b2291d4915f37112ad292_814039>, 2024
+# Necdet Yücel <necdetyucel@gmail.com>, 2024
+# Nick Schermer <nick@xfce.org>, 2024
+# Emin Tufan Çetin <etcetin@gmail.com>, 2024
+# Demiray Muhterem <mdemiray@msn.com>, 2024
+# Serdar Sağlam <teknomobil@msn.com>, 2024
+# Xfce Bot <transifex@xfce.org>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-24 00:49+0200\n"
+"Project-Id-Version: xfce-apps.catfish\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-06-24 12:49+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Demiray Muhterem <mdemiray@msn.com>, 2022\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>, 2024\n"
 "Language-Team: Turkish (https://app.transifex.com/xfce/teams/16840/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,51 +27,376 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../catfish/__init__.py:39
+#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1083
+#: catfish_lib/catfishconfig.py:94
+msgid "Catfish File Search"
+msgstr "Catfish Dosya Arayıcı"
+
+#: org.xfce.Catfish.desktop.in:4
+msgid "File search"
+msgstr "Dosya ara"
+
+#: org.xfce.Catfish.desktop.in:5
+msgid "Search the file system"
+msgstr "Dosya sisteminde ara"
+
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: org.xfce.Catfish.desktop.in:7
+msgid "files;find;locate;lookup;search;"
+msgstr "dosyalar;bul;konum;arama;ara;göz atma;gözatma;bakma;"
+
+#: data/ui/CatfishPreferences.ui:14
+msgid "Catfish Preferences"
+msgstr "Catfish Tercihleri"
+
+#: data/ui/CatfishPreferences.ui:30
+msgid "_Close"
+msgstr "_Kapat"
+
+#: data/ui/CatfishPreferences.ui:111
+msgid "Classic (_Titlebar)"
+msgstr "Klasik (_Başlık çubuğu)"
+
+#: data/ui/CatfishPreferences.ui:161
+msgid "_Modern (CSD)"
+msgstr "_Çağdaş (CSD)"
+
+#: data/ui/CatfishPreferences.ui:213
+msgid "Your new window layout will be applied after restarting Catfish."
+msgstr ""
+"Yeni pencere düzeniniz Catfish yeniden başlatıldıktan sonra uygulanacaktır."
+
+#: data/ui/CatfishPreferences.ui:236
+msgid "Window Layout"
+msgstr "Pencere Düzeni"
+
+#: data/ui/CatfishPreferences.ui:269
+msgid "Show _hidden files in the results"
+msgstr "Sonuçlarda _gizli dosyaları göster"
+
+#: data/ui/CatfishPreferences.ui:285
+msgid "Show filter _sidebar"
+msgstr "Süzgeç _kenar çubuğunu göster"
+
+#: data/ui/CatfishPreferences.ui:301
+msgid "Show file sizes in binary format"
+msgstr "Dosya boyutlarını ikilik biçiminde göster"
+
+#: data/ui/CatfishPreferences.ui:305
+msgid "Uncheck to show file size in decimal format"
+msgstr "Dosya boyutunu ondalık biçimde göstermek için işareti kaldırın"
+
+#: data/ui/CatfishPreferences.ui:324
+msgid "Display Options"
+msgstr "Görünüm Seçenekleri"
+
+#: data/ui/CatfishPreferences.ui:340
+msgid "Appearance"
+msgstr "Görünüm"
+
+#: data/ui/CatfishPreferences.ui:382
+msgid "Path"
+msgstr "Yol"
+
+#: data/ui/CatfishPreferences.ui:409
+msgid "Add Directory..."
+msgstr "Dizin Ekle..."
+
+#: data/ui/CatfishPreferences.ui:410
+msgid "_Add"
+msgstr "_Ekle"
+
+#: data/ui/CatfishPreferences.ui:424
+msgid "Remove Directory"
+msgstr "Dizini Kaldır"
+
+#: data/ui/CatfishPreferences.ui:425
+msgid "_Remove"
+msgstr "_Kaldır"
+
+#: data/ui/CatfishPreferences.ui:453
+msgid "Exclude Directories"
+msgstr "Dizinleri Dışla"
+
+#: data/ui/CatfishPreferences.ui:485
+msgid "Close the search _window after opening a file"
+msgstr "Dosyayı açınca arama _penceresini kapat"
+
+#: data/ui/CatfishPreferences.ui:501
+msgid "Search within compressed files (.zip, .odt, .docx)"
+msgstr "Sıkıştırılmış dosyalar içinde arama yapın (.zip, .odt, .docx)"
+
+#: data/ui/CatfishPreferences.ui:523
+msgid "Miscellaneous"
+msgstr "Türlü"
+
+#: data/ui/CatfishPreferences.ui:539
+msgid "Advanced"
+msgstr "Gelişmiş"
+
+#: data/ui/CatfishWindow.ui:10 data/ui/CatfishWindow.ui:119
+msgid "Select a Folder"
+msgstr "Klasör Seç"
+
+#: data/ui/CatfishWindow.ui:53
+msgid "Folder not found!"
+msgstr "Klasör bulunamadı!"
+
+#. Restore Cancel button
+#. Buttons
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1226
+#: catfish/CatfishWindow.py:798 catfish_lib/SudoDialog.py:184
+msgid "Cancel"
+msgstr "İptal"
+
+#: data/ui/CatfishWindow.ui:84
+msgid "Select Folder"
+msgstr "Klasör Seç"
+
+#: data/ui/CatfishWindow.ui:170
+msgid "_Open"
+msgstr "_Aç"
+
+#: data/ui/CatfishWindow.ui:181
+msgid "_Open with..."
+msgstr "Birlikte _aç..."
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:198
+msgid "Show in _File Manager"
+msgstr "_Dosya Yöneticisinde Göster"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:215
+msgid "_Copy Location"
+msgstr "Konumu _Kopyala"
+
+#: data/ui/CatfishWindow.ui:226
+msgid "_Save as..."
+msgstr "_Farklı Kaydet..."
+
+#: data/ui/CatfishWindow.ui:243
+msgid "_Delete..."
+msgstr "_Sil..."
+
+#: data/ui/CatfishWindow.ui:267
+msgid "File Extensions"
+msgstr "Dosya Uzantıları"
+
+#: data/ui/CatfishWindow.ui:288
+msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
+msgstr ""
+"Dosya uzantılarının virgülle ayrılmış listesini gir (ör. odt, png, txt)"
+
+#: data/ui/CatfishWindow.ui:316
+msgid "Documents"
+msgstr "Belgeler"
+
+#: data/ui/CatfishWindow.ui:324
+msgid "Folders"
+msgstr "Klasörler"
+
+#: data/ui/CatfishWindow.ui:332
+msgid "Images"
+msgstr "Görüntüler"
+
+#: data/ui/CatfishWindow.ui:340
+msgid "Music"
+msgstr "Müzik"
+
+#: data/ui/CatfishWindow.ui:348
+msgid "Videos"
+msgstr "Videolar"
+
+#: data/ui/CatfishWindow.ui:356
+msgid "Applications"
+msgstr "Uygulamalar"
+
+#: data/ui/CatfishWindow.ui:364
+msgid "Archives"
+msgstr "Arşivler"
+
+#: data/ui/CatfishWindow.ui:372
+msgid "Other"
+msgstr "Diğer"
+
+#: data/ui/CatfishWindow.ui:380
+msgid "Extension..."
+msgstr "Eklenti..."
+
+#: data/ui/CatfishWindow.ui:406
+msgid "Any time"
+msgstr "Herhangi bir zaman"
+
+#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1904
+msgid "Today"
+msgstr "Bugün"
+
+#: data/ui/CatfishWindow.ui:422
+msgid "This week"
+msgstr "Bu hafta"
+
+#: data/ui/CatfishWindow.ui:430
+msgid "This month"
+msgstr "Bu ay"
+
+#: data/ui/CatfishWindow.ui:438
+msgid "Custom..."
+msgstr "Özel..."
+
+#: data/ui/CatfishWindow.ui:510 data/ui/CatfishWindow.ui:605
+msgid "Go to Today"
+msgstr "Bugüne Git"
+
+#: data/ui/CatfishWindow.ui:538
+msgid "<b>Start Date</b>"
+msgstr "<b>Başlangıç Tarihi</b>"
+
+#: data/ui/CatfishWindow.ui:633
+msgid "<b>End Date</b>"
+msgstr "<b>Bitiş Tarihi</b>"
+
+#: data/ui/CatfishWindow.ui:648 catfish_lib/Window.py:240
+#: data/metainfo/catfish.appdata.xml.in:7
+msgid "Catfish"
+msgstr "Catfish"
+
+#: data/ui/CatfishWindow.ui:675
+msgid "Update"
+msgstr "Güncelle"
+
+#: data/ui/CatfishWindow.ui:716
+msgid "The search database is more than 7 days old.  Update now?"
+msgstr "Arama veri tabanı 7 günden daha eski. Şimdi güncellensin mi?"
+
+#: data/ui/CatfishWindow.ui:774
+msgid "File Type"
+msgstr "Dosya Türü"
+
+#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1618
+msgid "Modified"
+msgstr "Değiştirildi"
+
+#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2224
+msgid "Results will be displayed as soon as they are found."
+msgstr "Sonuçlar bulunduğu anda gösterilecek."
+
+#: data/ui/CatfishWindow.ui:1240
+msgid "Unlock"
+msgstr "Kilidi Aç"
+
+#: data/ui/CatfishWindow.ui:1292
+msgid "<b>Database:</b>"
+msgstr "<b>Veri Tabanı:</b>"
+
+#: data/ui/CatfishWindow.ui:1305
+msgid "<b>Updated:</b>"
+msgstr "<b>Güncellendi:</b>"
+
+#: data/ui/CatfishWindow.ui:1318
+msgid "<big><b>Update Search Database</b></big>"
+msgstr "<big><b>Arama Veri Tabanını Güncelle</b></big>"
+
+#: data/ui/CatfishWindow.ui:1332
+msgid ""
+"For faster search results, the search database needs to be refreshed.\n"
+"This action requires administrative rights."
+msgstr ""
+"Aramaların hızlıca sonuçlanması için veri tabanının yenilenmesi gerekir.\n"
+"Bu eylem yönetici yetkileri gerektirir."
+
+#: data/ui/CatfishWindow.ui:1464
+msgid "Update Search Database"
+msgstr "Arama Veri Tabanını Güncelle"
+
+#: data/ui/CatfishWindow.ui:1488
+msgid "Search for files"
+msgstr "Dosyaları ara"
+
+#: data/ui/CatfishWindow.ui:1533
+msgid "Compact List"
+msgstr "Sıkışık Liste"
+
+#: data/ui/CatfishWindow.ui:1552
+msgid "Thumbnails"
+msgstr "Küçük Resimler"
+
+#: data/ui/CatfishWindow.ui:1603
+msgid "Show _sidebar"
+msgstr "_Kenar çubuğunu göster"
+
+#: data/ui/CatfishWindow.ui:1642
+msgid "Show _hidden files"
+msgstr "Gizli dosyaları g_öster"
+
+#: data/ui/CatfishWindow.ui:1657
+msgid "Search file _contents"
+msgstr "Dosya _içeriğini ara"
+
+#: data/ui/CatfishWindow.ui:1674
+msgid "_Match results exactly"
+msgstr "Sonuçları tam olarak _eşleştir"
+
+#: data/ui/CatfishWindow.ui:1727
+msgid "_Refresh search index..."
+msgstr "Arama dizinini _yenile..."
+
+#: data/ui/CatfishWindow.ui:1782
+msgid "_Preferences"
+msgstr "_Tercihler"
+
+#: data/ui/CatfishWindow.ui:1823
+msgid "_About"
+msgstr "_Hakkında"
+
+#: catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
 msgstr "Kullanım: %prog [seçenekler] yol sorgu"
 
-#: ../catfish/__init__.py:44
+#: catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr ""
 "Hata ayıklama iletilerini göster (-vv veya catfish_lib hataları gösterir)"
 
-#: ../catfish/__init__.py:47
+#: catfish/__init__.py:47
 msgid "Use large icons"
 msgstr "Büyük simgeler kullan"
 
-#: ../catfish/__init__.py:49
+#: catfish/__init__.py:49
 msgid "Use thumbnails"
 msgstr "Küçük resimler kullan"
 
-#: ../catfish/__init__.py:51
+#: catfish/__init__.py:51
 msgid "Display time in ISO format"
 msgstr "Zamanı ISO biçiminde göster"
 
 #. Translators: Do not translate PATH, it is a variable.
-#: ../catfish/__init__.py:53
+#: catfish/__init__.py:53
 msgid "Set the default search path"
 msgstr "Öntanımlı arama yolunu ayarla"
 
-#: ../catfish/__init__.py:55
+#: catfish/__init__.py:55
 msgid "Perform exact match"
 msgstr "Tam eşleşme uygula"
 
-#: ../catfish/__init__.py:57
+#: catfish/__init__.py:57
 msgid "Include hidden files"
 msgstr "Gizli dosyaları içer"
 
-#: ../catfish/__init__.py:59
+#: catfish/__init__.py:59
 msgid "Perform fulltext search"
 msgstr "Tam metin araması uygula"
 
-#: ../catfish/__init__.py:61
+#: catfish/__init__.py:61
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr "Yol ve sorgu sağlanırsa, uygulama görüntülendiğinde aramaya başlayın."
 
-#: ../catfish/__init__.py:63
+#: catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
 "(ad|boyut|yol|tarih|tür),(artan|azalan) biçiminde sıralamak için varsayılan "
@@ -78,12 +404,12 @@ msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:109
+#: catfish/CatfishWindow.py:109
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (geçersiz kodlama)"
 
-#: ../catfish/CatfishWindow.py:149
+#: catfish/CatfishWindow.py:149
 msgid "translator-credits"
 msgstr ""
 "Onur Küçük \n"
@@ -92,15 +418,15 @@ msgstr ""
 "Serdar Sağlam\n"
 "Emin Tufan Çetin"
 
-#: ../catfish/CatfishWindow.py:299
+#: catfish/CatfishWindow.py:299
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: ../catfish/CatfishWindow.py:303
+#: catfish/CatfishWindow.py:303
 msgid "Never"
 msgstr "Asla"
 
-#: ../catfish/CatfishWindow.py:415
+#: catfish/CatfishWindow.py:415
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -110,43 +436,37 @@ msgstr ""
 "sorgunuzu girin veya daha çok \n"
 "seçenek için %s simgesini tıklayın."
 
-#. Restore Cancel button
-#. Buttons
-#: ../catfish/CatfishWindow.py:798 ../catfish_lib/SudoDialog.py:184
-msgid "Cancel"
-msgstr "İptal"
-
-#: ../catfish/CatfishWindow.py:813
+#: catfish/CatfishWindow.py:813
 msgid "An error occurred while updating the database."
 msgstr "Veri tabanı güncellenirken hata oluştu."
 
-#: ../catfish/CatfishWindow.py:815
+#: catfish/CatfishWindow.py:815
 msgid "Authentication failed."
 msgstr "Doğrulama başarısız oldu."
 
-#: ../catfish/CatfishWindow.py:821
+#: catfish/CatfishWindow.py:821
 msgid "Authentication cancelled."
 msgstr "Doğrulama iptal edildi."
 
-#: ../catfish/CatfishWindow.py:827
+#: catfish/CatfishWindow.py:827
 msgid "Search database updated successfully."
 msgstr "Arama veri tabanı başarıyla güncellendi."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:888
+#: catfish/CatfishWindow.py:888
 msgid "Close"
 msgstr "Kapat"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:902
+#: catfish/CatfishWindow.py:902
 msgid "Updating..."
 msgstr "Güncelleniyor..."
 
-#: ../catfish/CatfishWindow.py:937
+#: catfish/CatfishWindow.py:937
 msgid "Stop Search"
 msgstr "Aramayı Durdur"
 
-#: ../catfish/CatfishWindow.py:938
+#: catfish/CatfishWindow.py:938
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -154,39 +474,39 @@ msgstr ""
 "Aranıyor...\n"
 "Durdurmak için iptal düğmesine veya Esc tuşuna bas."
 
-#: ../catfish/CatfishWindow.py:949
+#: catfish/CatfishWindow.py:949
 msgid "Begin Search"
 msgstr "Aramaya Başla"
 
-#: ../catfish/CatfishWindow.py:1073
+#: catfish/CatfishWindow.py:1073
 msgid "No folder selected."
 msgstr "Klasör seçilmedi."
 
-#: ../catfish/CatfishWindow.py:1078
+#: catfish/CatfishWindow.py:1078
 msgid "Folder not found."
 msgstr "Klasör bulunamadı."
 
-#: ../catfish/CatfishWindow.py:1327
+#: catfish/CatfishWindow.py:1327
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" açılamadı."
 
-#: ../catfish/CatfishWindow.py:1483
+#: catfish/CatfishWindow.py:1483
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" kaydedilemedi."
 
-#: ../catfish/CatfishWindow.py:1500
+#: catfish/CatfishWindow.py:1500
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" silinemedi."
 
-#: ../catfish/CatfishWindow.py:1539
+#: catfish/CatfishWindow.py:1539
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "\"%s\" dosyasını farklı kaydet..."
 
-#: ../catfish/CatfishWindow.py:1574
+#: catfish/CatfishWindow.py:1574
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -195,7 +515,7 @@ msgstr ""
 "\"%s\" dosyasını kalıcı olarak silmek \n"
 "istediğinizden emin misiniz?"
 
-#: ../catfish/CatfishWindow.py:1578
+#: catfish/CatfishWindow.py:1578
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -204,55 +524,47 @@ msgstr ""
 "%i seçili dosyayı kalıcı olarak silmek \n"
 "istediğinizden emin misiniz?"
 
-#: ../catfish/CatfishWindow.py:1581
+#: catfish/CatfishWindow.py:1581
 msgid "If you delete a file, it is permanently lost."
 msgstr "Dosya silerseniz, kalıcı olarak yitirilir."
 
-#: ../catfish/CatfishWindow.py:1615
+#: catfish/CatfishWindow.py:1615
 msgid "Filename"
 msgstr "Dosya Adı"
 
-#: ../catfish/CatfishWindow.py:1616
+#: catfish/CatfishWindow.py:1616
 msgid "Size"
 msgstr "Boyut"
 
-#: ../catfish/CatfishWindow.py:1617
+#: catfish/CatfishWindow.py:1617
 msgid "Location"
 msgstr "Konum"
 
-#: ../catfish/CatfishWindow.py:1618
-msgid "Modified"
-msgstr "Değiştirildi"
-
-#: ../catfish/CatfishWindow.py:1627
+#: catfish/CatfishWindow.py:1627
 msgid "Preview"
 msgstr "Ön İzleme"
 
-#: ../catfish/CatfishWindow.py:1634
+#: catfish/CatfishWindow.py:1634
 msgid "Details"
 msgstr "Ayrıntılar"
 
-#: ../catfish/CatfishWindow.py:1825
+#: catfish/CatfishWindow.py:1825
 msgid "Open with default applications"
 msgstr "Öntanımlı uygulamalar ile aç"
 
-#: ../catfish/CatfishWindow.py:1841
+#: catfish/CatfishWindow.py:1841
 msgid "Open with"
 msgstr "Birlikte aç"
 
-#: ../catfish/CatfishWindow.py:1904
-msgid "Today"
-msgstr "Bugün"
-
-#: ../catfish/CatfishWindow.py:1906
+#: catfish/CatfishWindow.py:1906
 msgid "Yesterday"
 msgstr "Dün"
 
-#: ../catfish/CatfishWindow.py:2014
+#: catfish/CatfishWindow.py:2014
 msgid "No files found."
 msgstr "Hiç dosya bulunamadı."
 
-#: ../catfish/CatfishWindow.py:2016
+#: catfish/CatfishWindow.py:2016
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -260,62 +572,54 @@ msgstr ""
 "Aramanızı daha az özel yapmayı deneyin\n"
 "veya farklı dizin deneyin."
 
-#: ../catfish/CatfishWindow.py:2023
+#: catfish/CatfishWindow.py:2023
 msgid "1 file found."
 msgstr "1 dosya bulundu."
 
-#: ../catfish/CatfishWindow.py:2025
+#: catfish/CatfishWindow.py:2025
 #, python-format
 msgid "%i files found."
 msgstr "%i dosya bulundu."
 
-#: ../catfish/CatfishWindow.py:2034 ../catfish/CatfishWindow.py:2037
+#: catfish/CatfishWindow.py:2034 catfish/CatfishWindow.py:2037
 msgid "bytes"
 msgstr "bayt"
 
-#: ../catfish/CatfishWindow.py:2222 ../catfish/CatfishWindow.py:2232
+#: catfish/CatfishWindow.py:2222 catfish/CatfishWindow.py:2232
 msgid "Searching..."
 msgstr "Aranıyor..."
 
-#: ../catfish/CatfishWindow.py:2224
-msgid "Results will be displayed as soon as they are found."
-msgstr "Sonuçlar bulunduğu anda gösterilecek."
-
-#: ../catfish/CatfishWindow.py:2230
+#: catfish/CatfishWindow.py:2230
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "\"%s\" aranıyor"
 
-#: ../catfish/CatfishWindow.py:2340
+#: catfish/CatfishWindow.py:2340
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "\"%s\" için arama sonuçları"
 
-#: ../catfish_lib/catfishconfig.py:94
-msgid "Catfish File Search"
-msgstr "Catfish Dosya Arayıcı"
-
-#: ../catfish_lib/catfishconfig.py:97
+#: catfish_lib/catfishconfig.py:97
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish, çok yönlü dosya arama aracıdır."
 
-#: ../catfish_lib/SudoDialog.py:126
+#: catfish_lib/SudoDialog.py:126
 msgid "Password Required"
 msgstr "Parola Gerekiyor"
 
-#: ../catfish_lib/SudoDialog.py:163
+#: catfish_lib/SudoDialog.py:163
 msgid "Incorrect password... try again."
 msgstr "Yanlış parola... yeniden deneyin."
 
-#: ../catfish_lib/SudoDialog.py:173
+#: catfish_lib/SudoDialog.py:173
 msgid "Password:"
 msgstr "Parola:"
 
-#: ../catfish_lib/SudoDialog.py:187
+#: catfish_lib/SudoDialog.py:187
 msgid "OK"
 msgstr "Tamam"
 
-#: ../catfish_lib/SudoDialog.py:205
+#: catfish_lib/SudoDialog.py:205
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
@@ -323,7 +627,7 @@ msgstr ""
 "Yönetici görevlerini\n"
 "tamamlamak için parolanızı girin."
 
-#: ../catfish_lib/SudoDialog.py:207
+#: catfish_lib/SudoDialog.py:207
 #, python-format
 msgid ""
 "The application '%s' lets you\n"
@@ -332,6 +636,32 @@ msgstr ""
 "'%s' uygulaması size izin veriyor\n"
 "sisteminizin önemli parçalarını değiştirebilmek için."
 
-#: ../catfish_lib/Window.py:240
-msgid "Catfish"
-msgstr "Catfish"
+#: data/metainfo/catfish.appdata.xml.in:8
+msgid "Versatile file searching tool"
+msgstr "Çok yönlü dosya arama aracı"
+
+#: data/metainfo/catfish.appdata.xml.in:11
+msgid ""
+"Catfish is a small, fast, and powerful file search utility. Featuring a "
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
+msgstr ""
+"Catfish küçük, hızlı ve güçlü dosya arama programıdır. Sonuç odaklı ve "
+"minimal arayüz ile kullanıcıların gereksindikleri dosyaları dosya yöneticisi"
+" olmadan bulmalarına yardımcı olur. Değiştirme tarihi, dosya türü ve dosya "
+"içeriği gibi güçlü süzgeçlerle kullanıcılar artık dosya yöneticisi veya "
+"düzenleme becerilerine bağımlı kalmayacaklardır."
+
+#: data/metainfo/catfish.appdata.xml.in:25
+msgid "The main Catfish window displaying image search results"
+msgstr "Görsel arama sonuçlarını gösteren ana Catfish penceresi"
+
+#: data/metainfo/catfish.appdata.xml.in:29
+msgid ""
+"The main Catfish window displaying available filters and filtered search "
+"results"
+msgstr ""
+"Geçerli süzgeçleri ve süzülmüş arama sonuçlarını gösteren ana Catfish "
+"penceresi"
