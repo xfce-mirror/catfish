@@ -6,346 +6,23 @@
 # Translators:
 # Cybertramp <paran_son@outlook.com>, 2018
 # Xfce Bot <transifex@xfce.org>, 2018
-# 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2020
-# Nick Schermer <nick@xfce.org>, 2023
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2024
+# 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2019
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-28 00:48+0200\n"
+"POT-Creation-Date: 2024-06-24 00:49+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>, 2024\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>, 2022\n"
 "Language-Team: Korean (https://app.transifex.com/xfce/teams/16840/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../org.xfce.Catfish.desktop.in.h:1 ../data/ui/CatfishWindow.ui.h:37
-#: ../catfish_lib/catfishconfig.py:91
-msgid "Catfish File Search"
-msgstr "메기 파일 검색기"
-
-#: ../org.xfce.Catfish.desktop.in.h:2
-msgid "File search"
-msgstr "파일 검색"
-
-#: ../org.xfce.Catfish.desktop.in.h:3
-msgid "Search the file system"
-msgstr "파일 시스템 검색"
-
-#. TRANSLATORS: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
-#: ../org.xfce.Catfish.desktop.in.h:5
-msgid "files;find;locate;lookup;search;"
-msgstr "files;파일;find;찾기;locate;위치;지정;lookup;search;검색;"
-
-#: ../data/ui/CatfishPreferences.ui.h:1
-msgid "Catfish Preferences"
-msgstr "메기 기본 설정"
-
-#: ../data/ui/CatfishPreferences.ui.h:2
-msgid "_Close"
-msgstr "닫기(_C)"
-
-#: ../data/ui/CatfishPreferences.ui.h:3
-msgid "Classic (_Titlebar)"
-msgstr "클래식(제목 표시줄)(_T)"
-
-#: ../data/ui/CatfishPreferences.ui.h:4
-msgid "_Modern (CSD)"
-msgstr "모던(CSD)(_M)"
-
-#: ../data/ui/CatfishPreferences.ui.h:5
-msgid "Your new window layout will be applied after restarting Catfish."
-msgstr "메기를 다시 시작하면 창을 새로 배치합니다."
-
-#: ../data/ui/CatfishPreferences.ui.h:6
-msgid "Window Layout"
-msgstr "창 배치"
-
-#: ../data/ui/CatfishPreferences.ui.h:7
-msgid "Show _hidden files in the results"
-msgstr "결과에 숨김 파일 표시(_H)"
-
-#: ../data/ui/CatfishPreferences.ui.h:8
-msgid "Show filter _sidebar"
-msgstr "필터 가장자리 창 표시(_S)"
-
-#: ../data/ui/CatfishPreferences.ui.h:9
-msgid "Show file sizes in binary format"
-msgstr "2진 형식으로 파일 크기 표시"
-
-#: ../data/ui/CatfishPreferences.ui.h:10
-msgid "Uncheck to show file size in decimal format"
-msgstr "10진 형식으로 파일 크기를 나타내려면 표시를 끕니다"
-
-#: ../data/ui/CatfishPreferences.ui.h:11
-msgid "Display Options"
-msgstr "표시 옵션"
-
-#: ../data/ui/CatfishPreferences.ui.h:12
-msgid "Appearance"
-msgstr "모양새"
-
-#: ../data/ui/CatfishPreferences.ui.h:13
-msgid "Path"
-msgstr "경로"
-
-#: ../data/ui/CatfishPreferences.ui.h:14
-msgid "Add Directory..."
-msgstr "디렉터리 추가..."
-
-#: ../data/ui/CatfishPreferences.ui.h:15
-msgid "_Add"
-msgstr "추가(_A)"
-
-#: ../data/ui/CatfishPreferences.ui.h:16
-msgid "Remove Directory"
-msgstr "디렉터리 제거"
-
-#: ../data/ui/CatfishPreferences.ui.h:17
-msgid "_Remove"
-msgstr "제거(_R)"
-
-#: ../data/ui/CatfishPreferences.ui.h:18
-msgid "Exclude Directories"
-msgstr "제외 디렉터리"
-
-#: ../data/ui/CatfishPreferences.ui.h:19
-msgid "Close the search _window after opening a file"
-msgstr "파일을 연 후 검색 창 닫기(_W)"
-
-#: ../data/ui/CatfishPreferences.ui.h:20
-msgid "Search within compressed files (.zip, .odt, .docx)"
-msgstr "압축 파일만 검색 (.zip, .odt, .docx)"
-
-#: ../data/ui/CatfishPreferences.ui.h:21
-msgid "Miscellaneous"
-msgstr "기타"
-
-#: ../data/ui/CatfishPreferences.ui.h:22
-msgid "Advanced"
-msgstr "복잡"
-
-#: ../data/ui/CatfishWindow.ui.h:1
-msgid "Select a Folder"
-msgstr "폴더를 선택하십시오"
-
-#: ../data/ui/CatfishWindow.ui.h:2
-msgid "Folder not found!"
-msgstr "폴더가 없습니다!"
-
-#. Restore Cancel button
-#. Buttons
-#: ../data/ui/CatfishWindow.ui.h:3 ../catfish/CatfishWindow.py:797
-#: ../catfish_lib/SudoDialog.py:184
-msgid "Cancel"
-msgstr "취소"
-
-#: ../data/ui/CatfishWindow.ui.h:4
-msgid "Select Folder"
-msgstr "폴더 선택"
-
-#: ../data/ui/CatfishWindow.ui.h:5
-msgid "_Open"
-msgstr "열기(_O)"
-
-#: ../data/ui/CatfishWindow.ui.h:6
-msgid "_Open with..."
-msgstr "다른 프로그램으로 열기(_O)..."
-
-#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
-#. Location, Save _As, _Delete
-#: ../data/ui/CatfishWindow.ui.h:8
-msgid "Show in _File Manager"
-msgstr "파일 관리자에 표시(_F)"
-
-#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
-#. Location, Save _As, _Delete
-#: ../data/ui/CatfishWindow.ui.h:10
-msgid "_Copy Location"
-msgstr "위치 복사(_C)"
-
-#: ../data/ui/CatfishWindow.ui.h:11
-msgid "_Save as..."
-msgstr "다른 이름으로 저장(_S)..."
-
-#: ../data/ui/CatfishWindow.ui.h:12
-msgid "_Delete..."
-msgstr "삭제(_D)..."
-
-#: ../data/ui/CatfishWindow.ui.h:13
-msgid "File Extensions"
-msgstr "파일 확장자"
-
-#: ../data/ui/CatfishWindow.ui.h:14
-msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
-msgstr "파일 확장자를 쉼표 구분 목록 형식으로 입력하십시오 (예: odt, png, txt)"
-
-#: ../data/ui/CatfishWindow.ui.h:15
-msgid "Documents"
-msgstr "문서"
-
-#: ../data/ui/CatfishWindow.ui.h:16
-msgid "Folders"
-msgstr "폴더"
-
-#: ../data/ui/CatfishWindow.ui.h:17
-msgid "Images"
-msgstr "그림"
-
-#: ../data/ui/CatfishWindow.ui.h:18
-msgid "Music"
-msgstr "음악"
-
-#: ../data/ui/CatfishWindow.ui.h:19
-msgid "Videos"
-msgstr "동영상"
-
-#: ../data/ui/CatfishWindow.ui.h:20
-msgid "Applications"
-msgstr "프로그램"
-
-#: ../data/ui/CatfishWindow.ui.h:21
-msgid "Archives"
-msgstr "압축 파일"
-
-#: ../data/ui/CatfishWindow.ui.h:22
-msgid "Other"
-msgstr "기타"
-
-#: ../data/ui/CatfishWindow.ui.h:23
-msgid "Extension..."
-msgstr "확장자..."
-
-#: ../data/ui/CatfishWindow.ui.h:24
-msgid "Any time"
-msgstr "언제든지"
-
-#: ../data/ui/CatfishWindow.ui.h:25 ../catfish/CatfishWindow.py:1902
-msgid "Today"
-msgstr "오늘"
-
-#: ../data/ui/CatfishWindow.ui.h:26
-msgid "This week"
-msgstr "이번 주"
-
-#: ../data/ui/CatfishWindow.ui.h:27
-msgid "This month"
-msgstr "이달"
-
-#: ../data/ui/CatfishWindow.ui.h:28
-msgid "Custom..."
-msgstr "사용자 정의..."
-
-#: ../data/ui/CatfishWindow.ui.h:29
-msgid "Go to Today"
-msgstr "오늘로 이동"
-
-#: ../data/ui/CatfishWindow.ui.h:30
-msgid "<b>Start Date</b>"
-msgstr "<b>시작일</b>"
-
-#: ../data/ui/CatfishWindow.ui.h:31
-msgid "<b>End Date</b>"
-msgstr "<b>종료일</b>"
-
-#: ../data/ui/CatfishWindow.ui.h:32 ../catfish_lib/Window.py:240
-msgid "Catfish"
-msgstr "메기"
-
-#: ../data/ui/CatfishWindow.ui.h:33
-msgid "Update"
-msgstr "업데이트"
-
-#: ../data/ui/CatfishWindow.ui.h:34
-msgid "The search database is more than 7 days old.  Update now?"
-msgstr "검색 데이터베이스가 7일 이상 되었습니다. 지금 업데이트 하시렵니까?"
-
-#: ../data/ui/CatfishWindow.ui.h:35
-msgid "File Type"
-msgstr "파일 형식"
-
-#: ../data/ui/CatfishWindow.ui.h:36 ../catfish/CatfishWindow.py:1617
-msgid "Modified"
-msgstr "수정됨"
-
-#: ../data/ui/CatfishWindow.ui.h:38 ../catfish/CatfishWindow.py:2222
-msgid "Results will be displayed as soon as they are found."
-msgstr "발견되는 즉시 검색결과가 표시됩니다."
-
-#: ../data/ui/CatfishWindow.ui.h:39
-msgid "Unlock"
-msgstr "잠금 해제"
-
-#: ../data/ui/CatfishWindow.ui.h:40
-msgid "<b>Database:</b>"
-msgstr "<b>데이터베이스:</b>"
-
-#: ../data/ui/CatfishWindow.ui.h:41
-msgid "<b>Updated:</b>"
-msgstr "<b>업데이트:</b>"
-
-#: ../data/ui/CatfishWindow.ui.h:42
-msgid "<big><b>Update Search Database</b></big>"
-msgstr "<big><b>검색 데이터베이스 업데이트</b></big>"
-
-#: ../data/ui/CatfishWindow.ui.h:43
-msgid ""
-"For faster search results, the search database needs to be refreshed.\n"
-"This action requires administrative rights."
-msgstr ""
-"검색 결과를 빠르게 나타내려면, 검색 데이터베이스 최신화가 필요합니다.\n"
-"이 작업은 관리자 권한이 필요합니다."
-
-#: ../data/ui/CatfishWindow.ui.h:45
-msgid "Update Search Database"
-msgstr "검색 데이터베이스 업데이트"
-
-#: ../data/ui/CatfishWindow.ui.h:46
-msgid "Search for files"
-msgstr "파일 검색"
-
-#: ../data/ui/CatfishWindow.ui.h:47
-msgid "Compact List"
-msgstr "간단한 목록"
-
-#: ../data/ui/CatfishWindow.ui.h:48
-msgid "Thumbnails"
-msgstr "썸네일"
-
-#: ../data/ui/CatfishWindow.ui.h:49
-msgid "Show _sidebar"
-msgstr "가장자리 창 표시(_S)"
-
-#: ../data/ui/CatfishWindow.ui.h:50
-msgid "Show _hidden files"
-msgstr "숨겨진 파일 표시(_H)"
-
-#: ../data/ui/CatfishWindow.ui.h:51
-msgid "Search file _contents"
-msgstr "파일 내용 검색(_C)"
-
-#: ../data/ui/CatfishWindow.ui.h:52
-msgid "_Match results exactly"
-msgstr "일치하는 결과만(_M)"
-
-#: ../data/ui/CatfishWindow.ui.h:53
-msgid "_Refresh search index..."
-msgstr "검색 인덱스 새로 고침(_R)..."
-
-#: ../data/ui/CatfishWindow.ui.h:54
-msgid "_Preferences"
-msgstr "기본 설정(_P)"
-
-#: ../data/ui/CatfishWindow.ui.h:55
-msgid "_About"
-msgstr "정보(_A)"
 
 #: ../catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
@@ -396,27 +73,27 @@ msgstr "정렬 기본 기준을 설정합니다(name|size|path|date|type),(asc|d
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: ../catfish/CatfishWindow.py:108
+#: ../catfish/CatfishWindow.py:109
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s(잘못된 인코딩)"
 
-#: ../catfish/CatfishWindow.py:148
+#: ../catfish/CatfishWindow.py:149
 msgid "translator-credits"
 msgstr ""
 "Kibum Han <yui@yui.pe.kr>\n"
 "Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Jung-gyu Park <bagjunggyu@gmail.com>"
 
-#: ../catfish/CatfishWindow.py:298
+#: ../catfish/CatfishWindow.py:299
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: ../catfish/CatfishWindow.py:302
+#: ../catfish/CatfishWindow.py:303
 msgid "Never"
 msgstr "안함"
 
-#: ../catfish/CatfishWindow.py:414
+#: ../catfish/CatfishWindow.py:415
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -425,37 +102,43 @@ msgstr ""
 "찾을 파일에 대한 요청문을 입력하거나\n"
 "%s 아이콘을 눌러 더 많은 옵션을 보십시오."
 
-#: ../catfish/CatfishWindow.py:812
+#. Restore Cancel button
+#. Buttons
+#: ../catfish/CatfishWindow.py:798 ../catfish_lib/SudoDialog.py:184
+msgid "Cancel"
+msgstr "취소"
+
+#: ../catfish/CatfishWindow.py:813
 msgid "An error occurred while updating the database."
 msgstr "데이터베이스를 업데이트 하는 동안 에러가 발생하였습니다."
 
-#: ../catfish/CatfishWindow.py:814
+#: ../catfish/CatfishWindow.py:815
 msgid "Authentication failed."
 msgstr "인증에 실패함."
 
-#: ../catfish/CatfishWindow.py:820
+#: ../catfish/CatfishWindow.py:821
 msgid "Authentication cancelled."
 msgstr "인증이 취소됨."
 
-#: ../catfish/CatfishWindow.py:826
+#: ../catfish/CatfishWindow.py:827
 msgid "Search database updated successfully."
 msgstr "성공적으로 검색 데이터베이스를 업데이트 하였습니다."
 
 #. Update the Cancel button to Close, make it default
-#: ../catfish/CatfishWindow.py:887
+#: ../catfish/CatfishWindow.py:888
 msgid "Close"
 msgstr "닫기"
 
 #. Set the dialog status to running.
-#: ../catfish/CatfishWindow.py:901
+#: ../catfish/CatfishWindow.py:902
 msgid "Updating..."
 msgstr "업데이트 중..."
 
-#: ../catfish/CatfishWindow.py:936
+#: ../catfish/CatfishWindow.py:937
 msgid "Stop Search"
 msgstr "검색 중지"
 
-#: ../catfish/CatfishWindow.py:937
+#: ../catfish/CatfishWindow.py:938
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -463,93 +146,101 @@ msgstr ""
 "검색 진행 중...\n"
 "멈추려면 취소 단추 또는 Esc 키를 누르십시오."
 
-#: ../catfish/CatfishWindow.py:948
+#: ../catfish/CatfishWindow.py:949
 msgid "Begin Search"
 msgstr "검색 시작"
 
-#: ../catfish/CatfishWindow.py:1072
+#: ../catfish/CatfishWindow.py:1073
 msgid "No folder selected."
 msgstr "선택한 폴더가 없습니다."
 
-#: ../catfish/CatfishWindow.py:1077
+#: ../catfish/CatfishWindow.py:1078
 msgid "Folder not found."
 msgstr "폴더가 없습니다."
 
-#: ../catfish/CatfishWindow.py:1326
+#: ../catfish/CatfishWindow.py:1327
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\"을(를) 열 수 없습니다."
 
-#: ../catfish/CatfishWindow.py:1482
+#: ../catfish/CatfishWindow.py:1483
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\"을(를) 저장할 수 없습니다."
 
-#: ../catfish/CatfishWindow.py:1499
+#: ../catfish/CatfishWindow.py:1500
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\"을(를) 삭제할 수 없습니다."
 
-#: ../catfish/CatfishWindow.py:1538
+#: ../catfish/CatfishWindow.py:1539
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "\"%s\"을(를) 다른 이름으로 저장..."
 
-#: ../catfish/CatfishWindow.py:1573
+#: ../catfish/CatfishWindow.py:1574
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr "\"%s\"를 영구히 삭제 하시렵니까?"
 
-#: ../catfish/CatfishWindow.py:1577
+#: ../catfish/CatfishWindow.py:1578
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr "%i 선택된 파일들을 영구히 삭제 하시렵니까?"
 
-#: ../catfish/CatfishWindow.py:1580
+#: ../catfish/CatfishWindow.py:1581
 msgid "If you delete a file, it is permanently lost."
 msgstr "만약 파일을 삭제하면, 영구히 사라집니다."
 
-#: ../catfish/CatfishWindow.py:1614
+#: ../catfish/CatfishWindow.py:1615
 msgid "Filename"
 msgstr "파일 이름"
 
-#: ../catfish/CatfishWindow.py:1615
+#: ../catfish/CatfishWindow.py:1616
 msgid "Size"
 msgstr "크기"
 
-#: ../catfish/CatfishWindow.py:1616
+#: ../catfish/CatfishWindow.py:1617
 msgid "Location"
 msgstr "위치"
 
-#: ../catfish/CatfishWindow.py:1626
+#: ../catfish/CatfishWindow.py:1618
+msgid "Modified"
+msgstr "수정됨"
+
+#: ../catfish/CatfishWindow.py:1627
 msgid "Preview"
 msgstr "미리 보기"
 
-#: ../catfish/CatfishWindow.py:1633
+#: ../catfish/CatfishWindow.py:1634
 msgid "Details"
 msgstr "자세히"
 
-#: ../catfish/CatfishWindow.py:1823
+#: ../catfish/CatfishWindow.py:1825
 msgid "Open with default applications"
 msgstr "기본 프로그램으로 열기"
 
-#: ../catfish/CatfishWindow.py:1839
+#: ../catfish/CatfishWindow.py:1841
 msgid "Open with"
 msgstr "다른 프로그램으로 열기"
 
 #: ../catfish/CatfishWindow.py:1904
+msgid "Today"
+msgstr "오늘"
+
+#: ../catfish/CatfishWindow.py:1906
 msgid "Yesterday"
 msgstr "어제"
 
-#: ../catfish/CatfishWindow.py:2012
+#: ../catfish/CatfishWindow.py:2014
 msgid "No files found."
 msgstr "파일을 찾지 못했습니다."
 
-#: ../catfish/CatfishWindow.py:2014
+#: ../catfish/CatfishWindow.py:2016
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -557,34 +248,42 @@ msgstr ""
 "검색 조건을 좀 더 단순히 하거나\n"
 "다른 디렉토리에서 시도해보세요."
 
-#: ../catfish/CatfishWindow.py:2021
+#: ../catfish/CatfishWindow.py:2023
 msgid "1 file found."
 msgstr "파일 하나를 찾았습니다."
 
-#: ../catfish/CatfishWindow.py:2023
+#: ../catfish/CatfishWindow.py:2025
 #, python-format
 msgid "%i files found."
 msgstr "%i개의 파일을 찾았습니다."
 
-#: ../catfish/CatfishWindow.py:2032 ../catfish/CatfishWindow.py:2035
+#: ../catfish/CatfishWindow.py:2034 ../catfish/CatfishWindow.py:2037
 msgid "bytes"
 msgstr "바이트"
 
-#: ../catfish/CatfishWindow.py:2220 ../catfish/CatfishWindow.py:2230
+#: ../catfish/CatfishWindow.py:2222 ../catfish/CatfishWindow.py:2232
 msgid "Searching..."
 msgstr "검색 중..."
 
-#: ../catfish/CatfishWindow.py:2228
+#: ../catfish/CatfishWindow.py:2224
+msgid "Results will be displayed as soon as they are found."
+msgstr "발견되는 즉시 검색결과가 표시됩니다."
+
+#: ../catfish/CatfishWindow.py:2230
 #, python-format
 msgid "Searching for \"%s\""
 msgstr "\"%s\"을(를) 찾는 중"
 
-#: ../catfish/CatfishWindow.py:2338
+#: ../catfish/CatfishWindow.py:2340
 #, python-format
 msgid "Search results for \"%s\""
 msgstr "\"%s\"에 대한 검색 결과"
 
 #: ../catfish_lib/catfishconfig.py:94
+msgid "Catfish File Search"
+msgstr "메기 파일 검색기"
+
+#: ../catfish_lib/catfishconfig.py:97
 msgid "Catfish is a versatile file searching tool."
 msgstr "메기는 다용도 파일 검색 도구입니다."
 
@@ -619,217 +318,6 @@ msgid ""
 "modify essential parts of your system."
 msgstr "\"%s\" 응용 프로그램을 사용하여 시스템의 필수 부분을 수정 할 수있습니다."
 
-#: ../data/metainfo/catfish.appdata.xml.in.h:1
-msgid "Versatile file searching tool"
-msgstr "다양한 검색 도구"
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:2
-msgid ""
-"Catfish is a small, fast, and powerful file search utility. Featuring a "
-"minimal interface with an emphasis on results, it helps users find the files"
-" they need without a file manager. With powerful filters such as "
-"modification date, file type, and file contents, users will no longer be "
-"dependent on the file manager or organization skills."
-msgstr ""
-"메기는 작고 빠르며 강력한 기능을 보유한 파일 검색 유틸리티입니다. 간단한 인터페이스를 사용하여 결과에 중점을 두었으며, 파일 관리자 "
-"없이 필요한 파일들을 찾는데 도움을 줍니다. 수정 일시, 파일 형식, 파일 내용, 사용자와 같은 필터는 더 이상 파일관리자 또는 조직 "
-"기술에 의존할 필요가 없습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:3
-msgid "The main Catfish window displaying image search results"
-msgstr "그림 검색 결과를 나타내는 메인 메기 창"
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:4
-msgid ""
-"The main Catfish window displaying available filters and filtered search "
-"results"
-msgstr "가용 조건과 조건으로 걸러낸 검색 결과를 나타내는 메인 메기 창"
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:5
-msgid ""
-"This release improves keyboard shortcuts, desktop environment integration, "
-"file manager support, and general look and feel. It also features several "
-"bug fixes for non-Xfce users."
-msgstr ""
-"이번 출시 버전에서는 키보드 바로 가기 키, 데스크톱 환경 통합, 파일 관리자 지원, 일반 모양새를 개선했습니다. Xfce 사용자가 아닌"
-" 다른 사용자에게서 온 다양한 버그 문제를 해결했습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:6
-msgid ""
-"This release improves file manager support, zip file support, and handling "
-"selected files. It also improves keyboard shortcuts for starting a search or"
-" selecting a new search path."
-msgstr ""
-"이번 출시 버전에서는 파일 관리자 지원, zip 파일 지원, 선택 파일 처리 기능을 개선했습니다. 검색을 시작할 때 또는 새 검색 경로를"
-" 선택할 때 키보드 바로 가기 키를 개선했습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:7
-msgid ""
-"This release expands fulltext search to support more file types and adds "
-"support for searching within compressed files. Searching file contents and "
-"the preferred view is now preserved across sessions."
-msgstr ""
-"이번 출시 버전에서는 더 많은 파일 형식을 지원하도록 전체 문구 검색 기능을 확장했으며, 압축 파일 검색 지원도 추가했습니다. 파일 내용"
-" 검색 및 설정 보기 형태는 세션을 바꾸더라도 유지합니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:8
-msgid ""
-"This release expands fulltext search to support more encodings and match all"
-" keywords instead of matching any."
-msgstr ""
-"이번 출시 버전에서는 더 많은 인코딩과 일부만 일치하는 조건이 아닌 모든 키워드가 일치하는 조건을 지원하도록 전체 문장 검색 기능을 "
-"확장했습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:9
-msgid ""
-"This release better integrates with the Xfce desktop, better supports the "
-"Zeitgeist datahub, and includes many bugfixes and usability improvements."
-msgstr ""
-"이번 출시 버전에서는 Xfce 데스크톱 통합, 짜이트 가이스트 데이터 허브 지원 개선, 수많은 문제 해결 및, 사용성 개선 결과물이 "
-"들어갔습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:10
-msgid ""
-"This release resolves packaging errors for Debian and includes optimized "
-"assets."
-msgstr "이 릴리즈에서는 데비안의 패키징 문제를 해결하고 최적화한 어셋을 넣었습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:11
-msgid ""
-"This release adds support for running under Wayland and features refreshed "
-"dialogs with simplified controls."
-msgstr "이 릴리즈에서는 웨일랜드 기반 실행 기능을 추가하였고 대화 상자의 컨트롤을 단순화하였습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:12
-msgid ""
-"This release addresses some startup errors as well as various issues with "
-"traversing symbolic links."
-msgstr "이 릴리즈에서는 심볼릭 링크를 따라갈 때와 같은 다양한 시작 문제 일부를 해결했습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:13
-msgid ""
-"This release includes many appearance improvements, introduces a new "
-"preferences dialog, and improves search results and performance."
-msgstr "이 릴리스에서는 다양한 모양새 개선을 이루었습니다. 새 대화상자 속성을 도입하였고, 검색 결과 표시와 성능을 개선했습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:14
-msgid ""
-"This release features performance improvements by excluding uncommon search "
-"directories."
-msgstr "이번 릴리스에서는 흔하지 않은 검색 디렉터리를 제외하여 검색 성능을 개선하는 기능을 갖추었습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:15
-msgid ""
-"This release features better desktop integration, support for OpenBSD and "
-"Wayland, and improved translation support."
-msgstr "이번 릴리스에서는 OpenBSD, 웨일랜드를 지원하여 더 나은 데스크톱 통합 기능을 갖추었으며, 번역을 개선했습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:16
-msgid ""
-"This release features improved performance, better desktop integration, and "
-"a number of long-standing bugs. Quoted search strings are now correctly "
-"processed. Files can be dragged into other applications. Thumbnails are only"
-" generated when requested by the user."
-msgstr ""
-"이 릴리스에서는 성능을 개선했고 데스크톱에 좀 더 어우러지도록 했으며, 오랫동안 남아있던 많은 버그를 수정했습니다. 따옴표로 감싼 검색 "
-"문자열을 이제 제대로 처리합니다. 파일을 다른 프로그램으로 끌어다 넣을 수 있습니다. 미리 보기 그림은 사용자가 요청할 때만 만듭니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:17
-msgid ""
-"This release features several improvements to thumbnail processing and "
-"numerous bug fixes. Icon previews have been improved and will now match "
-"other applications. Items displayed at the bottom of the results window are "
-"now accessible with all desktop themes."
-msgstr ""
-"이 릴리스에서는 몇가지 미리 보기 그림 처리 기능을 개선하고 다양한 문제를 수정했습니다. 미리 보기 아이콘을 개선했으며 다른 프로그램과 "
-"어우러집니다. 결과 화면 하단에 나타나는 항목은 모든 데스크톱 테마에서 접근할 수 있습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:18
-msgid "This is a minor translations-only release."
-msgstr "이 출시판은 사소한 번역을 추가했습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:19
-msgid ""
-"This release features several performance improvements and numerous "
-"translation updates."
-msgstr "이 릴리스에서는 다양한 부분에서 성능 개선을 진행했으며, 수많은 언어로의 번역 업데이트를 실었습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:20
-msgid ""
-"This release now displays all file timestamps according to timezone instead "
-"of Universal Coordinated Time (UTC)."
-msgstr "이 릴리즈는 UTC(세계협정표준시)에 따른 모든 타임 스탬프를 표시합니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:21
-msgid ""
-"This release fixes several bugs related to the results window. Files are "
-"once again removed from the results list when deleted. Middle- and right-"
-"click functionality has been restored. Date range filters are now applied "
-"according to timezone instead of Universal Coordinated Time (UTC)."
-msgstr ""
-"이 릴리즈는 결과 창에 관련된 몇몇 버그가 수정되었습니다. 파일을 삭제하면 목록에서 다시 한 번 제거됩니다. 중간과 오른쪽 클릭 기능은 "
-"복구되었습니다. 날짜 범위 필터는 이제 UTC(세계협정표준시)에 따라 적용됩니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:22
-msgid ""
-"This release includes a significant interface refresh, improves search "
-"speed, and fixes several bugs. The workflow has been improved, utilizing "
-"some of the latest features of the GTK+ toolkit, including optional "
-"headerbars and popover widgets. Password handling has been improved with the"
-" integration of PolicyKit when available."
-msgstr ""
-"이 릴리즈는 중요한 최신 인터페이스가 들어있으며, 검색 속도를 개선했고, 몇몇 버그를 수정했습니다. 처리 흐름을 개선했으며, GTK+ "
-"toolkit의 최신 기능을 사용하며, 추가적으로 더 나은 위젯과 헤더바를 추가 하고 있습니다. 암호 처리 기능은 PolicyKit "
-"통합으로 개선했습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:23
-msgid "This release fixes two new bugs and includes updated translations."
-msgstr "이 릴리즈는 2가지의 새로운 버그를 수정 하고 번역 업데이트를 포함합니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:24
-msgid ""
-"This release fixes a regression where the application is unable to start on "
-"some systems."
-msgstr "이 릴리즈는 일부 시스템에서 실행 불가능한 문제를 해결했습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:25
-msgid ""
-"This release fixes a regression where multiple search terms were no longer "
-"supported. An InfoBar is now displayed when the search database is outdated,"
-" and the dialogs used to update the database have been improved."
-msgstr ""
-"이 릴리즈는 다중 검색이 불가능 했던 점이 수정되었습니다. 정보 표시줄에 검색 데이터베이스가 오래된 경우 표시되며, 데이터베이스 "
-"업데이트를 하기위한 대화상자가 향상되었습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:26
-msgid ""
-"This release fixes two issues where locate would not be properly executed "
-"and improves handling of missing symbolic icons."
-msgstr "이 릴리즈는 locate가 제대로 실행되지 않고 누락 된 기호 아이콘의 처리를 향상시키는 두 가지 문제를 수정합니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:27
-msgid ""
-"This stable release improved the reliability of the password dialog, cleaned"
-" up unused code, and fixed potential issues with the list and item "
-"selection."
-msgstr ""
-"이번 안정적인 릴리즈는 암호 대화상자의 신뢰성을 향상시키고, 사용되지 않는 코드를 청소하였으며, 잠재적인 목록과 요소의 선택 문제를 "
-"수정하였습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:28
-msgid ""
-"This release fixed a potential security issue with program startup and fixed"
-" a regression with selecting multiple items."
-msgstr "이 릴리즈는 프로그램이 시작될 때 잠재적인 보안 문제를 해결하였고 여러개를 선택 할 때의 회귀문제를 해결 하였습니다."
-
-#: ../data/metainfo/catfish.appdata.xml.in.h:29
-msgid ""
-"The first release in the 1.0.x series introduced a refreshed interface and "
-"fixed a number of long-standing bugs. Improvements to the default "
-"permissions eliminated a number of warnings when packaging for "
-"distributions. Accessibility was enhanced as all strings have been made "
-"translatable and keyboard accelerators have been improved."
-msgstr ""
-"1.0.x 시리즈의 첫 번째 릴리스에서는 새로 고쳐진 인터페이스가 도입되어 오랫동안 계속되는 많은 버그가 수정되었습니다. 기본 사용 "
-"권한을 향상 시키면서 배포판에 프로그램을 포함하면서 여러 가지 경고가 제거되었습니다. 모든 문자열을 번역 하였고 키보드 단축키가 향상되어"
-" 접근 가능성이 향상되었습니다."
+#: ../catfish_lib/Window.py:240
+msgid "Catfish"
+msgstr "메기"
