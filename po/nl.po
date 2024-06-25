@@ -181,13 +181,13 @@ msgstr "_Wissen..."
 
 #: data/ui/CatfishWindow.ui:267
 msgid "File Extensions"
-msgstr "Bestandextensies"
+msgstr "Bestandachtervoegsels"
 
 #: data/ui/CatfishWindow.ui:288
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr ""
-"Voer een kommagescheiden lijst in van bestandsachtervoegsels (bijv. odt, "
-"png, txt)"
+"Voer een kommagescheiden lijst in van bestandachtervoegsels (bijv. odt, png,"
+" txt)"
 
 #: data/ui/CatfishWindow.ui:316
 msgid "Documents"
@@ -663,7 +663,7 @@ msgstr ""
 msgid "The main Catfish window displaying image search results"
 msgstr ""
 "Het hoofdvenster van Catfish dat de resultaten toont van "
-"afbeeldingzoekopdracht"
+"afbeeldingzoekopdrachten"
 
 #: data/metainfo/catfish.appdata.xml.in:29
 msgid ""
