@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Luis Borges <roninborges@gmail.com>, 2024
+# Lucas Wilm <lucaswilm@gmail.com>, 2024
 # Marcelo Tobias <marcelo.tobbias@gmail.com>, 2024
 # The Cat, 2024
-# Lucas Wilm <lucaswilm@gmail.com>, 2024
 # Wellington Almeida <wsalmeida6@gmail.com>, 2024
 # Andre Miranda <andre@andreldm.com>, 2024
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2024
 # Nick Schermer <nick@xfce.org>, 2024
 # C. E., 2024
-# Michael Martins <michaelfm21@gmail.com>, 2024
 # Xfce Bot <transifex@xfce.org>, 2024
+# Michael Martins <michaelfm21@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-06-24 12:49+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>, 2024\n"
+"Last-Translator: Michael Martins <michaelfm21@gmail.com>, 2024\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/xfce/teams/16840/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,7 +92,7 @@ msgstr "Desmarque para mostrar o tamanho do arquivo em formato decimal"
 
 #: data/ui/CatfishPreferences.ui:324
 msgid "Display Options"
-msgstr "Opções de exibição"
+msgstr "Opções de Exibição"
 
 #: data/ui/CatfishPreferences.ui:340
 msgid "Appearance"
@@ -140,7 +140,7 @@ msgstr "Avançado"
 
 #: data/ui/CatfishWindow.ui:10 data/ui/CatfishWindow.ui:119
 msgid "Select a Folder"
-msgstr "Selecione uma pasta"
+msgstr "Selecione uma Pasta"
 
 #: data/ui/CatfishWindow.ui:53
 msgid "Folder not found!"
@@ -155,7 +155,7 @@ msgstr "Cancelar"
 
 #: data/ui/CatfishWindow.ui:84
 msgid "Select Folder"
-msgstr "Selecionar pasta"
+msgstr "Selecionar Pasta"
 
 #: data/ui/CatfishWindow.ui:170
 msgid "_Open"
@@ -221,7 +221,7 @@ msgstr "Aplicativos"
 
 #: data/ui/CatfishWindow.ui:364
 msgid "Archives"
-msgstr "Pacotes"
+msgstr "Arquivos"
 
 #: data/ui/CatfishWindow.ui:372
 msgid "Other"
@@ -314,7 +314,7 @@ msgstr ""
 
 #: data/ui/CatfishWindow.ui:1464
 msgid "Update Search Database"
-msgstr "Atualizar a base de dados de pesquisa"
+msgstr "Atualizar a Base de dados de Pesquisa"
 
 #: data/ui/CatfishWindow.ui:1488
 msgid "Search for files"
