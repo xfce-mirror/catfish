@@ -1303,6 +1303,7 @@ class CatfishWindow(Window):
 
         if type(filename) is list:
             filename = filename[0]
+
         if filename.endswith('.AppImage') and os.access(filename, os.X_OK):
             command = [filename]
         elif os.path.isdir(filename) and \
@@ -1314,7 +1315,11 @@ class CatfishWindow(Window):
                 Gio.AppInfo.launch_default_for_uri(uri)
             except:
                 self.on_menu_open_with_activate(self)
+
+            if self.settings.get_setting('close-after-select'):
+                self.destroy()
             return
+
         try:
             subprocess.Popen(command, shell=False)
             if self.settings.get_setting('close-after-select'):
