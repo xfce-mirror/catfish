@@ -2,21 +2,13 @@ include:
   - project: 'xfce/xfce4-dev-tools'
     file: '/ci/build_project.yml'
 
-build-gcc:
+build-gcc-meson:
   rules:
     - when: never
 
-build-clang:
+build-clang-meson:
   rules:
     - when: never
 
-build:
-  extends: .build
-  script:
-    - meson setup build
-    - meson compile -C build
-
-distcheck:
-  script:
-    - meson setup build
-    - meson dist -C build
+build-meson:
+  extends: .build-meson
