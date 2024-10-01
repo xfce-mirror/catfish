@@ -211,7 +211,7 @@ msgstr "Filmy"
 
 #: data/ui/CatfishWindow.ui:356
 msgid "Applications"
-msgstr "Aplikacje"
+msgstr "Programy"
 
 #: data/ui/CatfishWindow.ui:364
 msgid "Archives"
@@ -370,7 +370,7 @@ msgstr "Używa miniatur"
 
 #: catfish/__init__.py:51
 msgid "Display time in ISO format"
-msgstr "Wypisuje czas w formacie ISO"
+msgstr "Wypisuje godzinę w formacie ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: catfish/__init__.py:53
@@ -547,7 +547,7 @@ msgstr "Szczegóły"
 
 #: catfish/CatfishWindow.py:1825
 msgid "Open with default applications"
-msgstr "Otwórz za pomocą aplikacji domyślnych"
+msgstr "Otwórz za pomocą domyślnych programów"
 
 #: catfish/CatfishWindow.py:1841
 msgid "Open with"
