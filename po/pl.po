@@ -280,7 +280,7 @@ msgstr "Zmodyfikowano"
 
 #: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2224
 msgid "Results will be displayed as soon as they are found."
-msgstr "Wyniki zostaną wyświetlone, jak tylko zostaną znalezione."
+msgstr "Wyniki zostaną wyświetlone natychmiast po ich znalezieniu."
 
 #: data/ui/CatfishWindow.ui:1240
 msgid "Unlock"
@@ -304,7 +304,7 @@ msgid ""
 "This action requires administrative rights."
 msgstr ""
 "Celem uzyskania szybszych wyników wyszukiwania należy odświeżyć bazę danych wyszukiwania.\n"
-"To działanie wymaga uprawnień administratora."
+"Ta czynność wymaga uprawnień administratora."
 
 #: data/ui/CatfishWindow.ui:1464
 msgid "Update Search Database"
@@ -430,7 +430,7 @@ msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
-"Wpisz powyżej swoje zapytanie, aby odnaleźć pliki\n"
+"Wpisz powyżej swoje zapytanie, aby odnaleźć pliki,\n"
 "albo kliknij ikonę %s, aby uzyskać więcej opcji."
 
 #: catfish/CatfishWindow.py:813
@@ -469,7 +469,7 @@ msgid ""
 "Press the cancel button or the Escape key to stop."
 msgstr ""
 "Wyszukiwanie w toku...\n"
-"Naciśnij przycisk Anuluj, lub klawisz Escape, aby przerwać."
+"Naciśnij przycisk Anuluj lub klawisz Escape, aby przerwać."
 
 #: catfish/CatfishWindow.py:949
 msgid "Begin Search"
@@ -519,7 +519,7 @@ msgid ""
 "permanently delete the %i selected files?"
 msgstr ""
 "Czy na pewno chcesz \n"
-"trwale usunąć %i zaznaczonych plików?"
+"trwale usunąć zaznaczone pliki: %i?"
 
 #: catfish/CatfishWindow.py:1581
 msgid "If you delete a file, it is permanently lost."
@@ -576,7 +576,7 @@ msgstr "Znaleziono 1 plik."
 #: catfish/CatfishWindow.py:2025
 #, python-format
 msgid "%i files found."
-msgstr "Znaleziono %i pliki(-ów)."
+msgstr "Znaleziono pliki: %i."
 
 #: catfish/CatfishWindow.py:2034 catfish/CatfishWindow.py:2037
 msgid "bytes"
