@@ -1318,15 +1318,13 @@ class CatfishWindow(Window):
 
             if self.settings.get_setting('close-after-select'):
                 self.destroy()
-            else:
-                return
+            return
 
         try:
             subprocess.Popen(command, shell=False)
             if self.settings.get_setting('close-after-select'):
                 self.destroy()
-            else:
-                return
+            return
         except Exception as msg:
             LOGGER.debug('Exception encountered while opening %s.' +
                          '\n  Exception: %s' +
