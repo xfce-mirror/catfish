@@ -2232,7 +2232,7 @@ class CatfishWindow(Window):
         show_results = False
         self.get_window().set_cursor(Gdk.Cursor.new_from_name(
             Gdk.Display.get_default(), "progress"))
-        self.set_title(_("Searching for \"%s\"") % keywords)
+        self.set_title(_("\"%s\" - searching | Catfish") % keywords)
         self.spinner.show()
         self.statusbar_label.set_label(_("Searching..."))
 
@@ -2342,7 +2342,7 @@ class CatfishWindow(Window):
         window = self.get_window()
         if window is not None:
             window.set_cursor(None)
-        self.set_title(_('Search results for \"%s\"') % keywords)
+        self.set_title(_('\"%s\" - results | Catfish') % keywords)
         self.spinner.hide()
 
         n_results = 0
