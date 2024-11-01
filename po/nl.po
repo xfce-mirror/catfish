@@ -593,12 +593,12 @@ msgstr "Aan het zoeken..."
 #: catfish/CatfishWindow.py:2235
 #, python-format
 msgid "\"%s\" - searching | Catfish"
-msgstr ""
+msgstr "'%s' - doorzoeken | Catfish"
 
 #: catfish/CatfishWindow.py:2345
 #, python-format
 msgid "\"%s\" - results | Catfish"
-msgstr ""
+msgstr "'%s' - resultaten | Catfish"
 
 #: catfish_lib/catfishconfig.py:97
 msgid "Catfish is a versatile file searching tool."
