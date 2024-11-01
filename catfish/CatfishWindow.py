@@ -2277,9 +2277,13 @@ class CatfishWindow(Window):
 
         # Check if this is a fulltext query or standard query.
         if self.filter_formats['fulltext']:
+			# Using a list to allow other formats in the future
+            smart_search=[]
+            if self.settings.get_setting("html-smart-search"):
+                smart_search.append('html')
             self.search_engine = \
                 CatfishSearchEngine(['fulltext'],
-                                    self.settings.get_setting("exclude-paths"))
+                                    self.settings.get_setting("exclude-paths"),smart_search=smart_search)
             self.search_engine.set_exact(self.filter_formats['exact'])
         else:
             self.search_engine = CatfishSearchEngine(
