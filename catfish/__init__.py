@@ -62,6 +62,10 @@ def parse_options():
                              "when the application is displayed."))
     parser.add_option('', '--sort', help=_("set a default column to sort by "
                                            "(name|size|path|date|type),(asc|desc)"))
+    parser.add_option('', '--close-after-select', action='store_true',dest='close_after_select',
+                      help=_('Close after selecting a file'))
+    parser.add_option('', '--persist-after-select', action='store_true',dest='persist_after_select',
+                      help=_('Do not close after selecting a file'))
     parser.set_defaults(icons_large=0, thumbnails=0, time_iso=0,
                         path=None, start=False, sort=None,
                         exact=0, hidden=0, fulltext=0, file_action='open')
@@ -79,6 +83,9 @@ def main():
     # Run the application.
     window = CatfishWindow.CatfishWindow()
     window.parse_options(options, args)
+    if(window.options.persist_after_select and window.options.close_after_select):
+        print("Error: Conflicting options \"--close-after-select\" and \"--persist-after-select\"")
+        return
     window.show()
 
     # Allow application shutdown with Ctrl-C in terminal
