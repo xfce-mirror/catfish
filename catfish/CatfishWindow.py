@@ -1316,12 +1316,7 @@ class CatfishWindow(Window):
             except:
                 self.on_menu_open_with_activate(self)
 
-            if self.options.close_after_select and self.options.persist_after_select:
-                if self.settings.get_setting('close-after-select'):
-                    self.destroy()
-                else:
-                    return
-            elif self.options.persist_after_select:
+            if self.options.persist_after_select:
                 return
             elif self.options.close_after_select:
                 self.destroy()
@@ -1331,12 +1326,7 @@ class CatfishWindow(Window):
 
         try:
             subprocess.Popen(command, shell=False)
-            if self.options.close_after_select and self.options.persist_after_select:
-                if self.settings.get_setting('close-after-select'):
-                    self.destroy()
-                else:
-                    return
-            elif self.options.persist_after_select:
+            if self.options.persist_after_select:
                 return
             elif self.options.close_after_select:
                 self.destroy()
