@@ -83,6 +83,9 @@ def main():
     # Run the application.
     window = CatfishWindow.CatfishWindow()
     window.parse_options(options, args)
+    if(window.options.persist_after_select and window.options.close_after_select):
+        print("Error: Conflicting options \"--close-after-select\" and \"--persist-after-select\"")
+        return
     window.show()
 
     # Allow application shutdown with Ctrl-C in terminal
