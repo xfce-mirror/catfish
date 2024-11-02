@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-10-31 12:50+0100\n"
+"POT-Creation-Date: 2024-11-02 00:53+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2024\n"
 "Language-Team: Czech (https://app.transifex.com/xfce/teams/16840/cs/)\n"
@@ -78,11 +78,12 @@ msgstr "Zobrazit _postranní panel filtru"
 
 #: data/ui/CatfishPreferences.ui:301
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Zobrazit velikosti souborů v binárním formátu"
 
 #: data/ui/CatfishPreferences.ui:305
 msgid "Uncheck to show file size in decimal format"
 msgstr ""
+"Odšktněte tuto volbu pro zobrazení velikosti souboru v desítkovém formátu"
 
 #: data/ui/CatfishPreferences.ui:324
 msgid "Display Options"
@@ -122,7 +123,7 @@ msgstr "Zavřít _okno hledání po otevření souboru"
 
 #: data/ui/CatfishPreferences.ui:501
 msgid "Search within compressed files (.zip, .odt, .docx)"
-msgstr ""
+msgstr "Vyhledávat v komprimovaných souborech (.zip, .odt, .docx)"
 
 #: data/ui/CatfishPreferences.ui:523
 msgid "Miscellaneous"
@@ -134,11 +135,11 @@ msgstr "Pokročilá"
 
 #: data/ui/CatfishWindow.ui:10 data/ui/CatfishWindow.ui:119
 msgid "Select a Folder"
-msgstr ""
+msgstr "Vyberte složku"
 
 #: data/ui/CatfishWindow.ui:53
 msgid "Folder not found!"
-msgstr ""
+msgstr "Složka nenalezena"
 
 #. Restore Cancel button
 #. Buttons
@@ -149,7 +150,7 @@ msgstr "Zrušit"
 
 #: data/ui/CatfishWindow.ui:84
 msgid "Select Folder"
-msgstr ""
+msgstr "Vyberte složku"
 
 #: data/ui/CatfishWindow.ui:170
 msgid "_Open"
@@ -157,7 +158,7 @@ msgstr "_Otevřít"
 
 #: data/ui/CatfishWindow.ui:181
 msgid "_Open with..."
-msgstr ""
+msgstr "_Otevřít pomocí..."
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -177,7 +178,7 @@ msgstr "_Uložit jako…"
 
 #: data/ui/CatfishWindow.ui:243
 msgid "_Delete..."
-msgstr ""
+msgstr "_Smazat..."
 
 #: data/ui/CatfishWindow.ui:267
 msgid "File Extensions"
@@ -221,13 +222,13 @@ msgstr "Ostatní"
 
 #: data/ui/CatfishWindow.ui:380
 msgid "Extension..."
-msgstr ""
+msgstr "_Rozšíření..."
 
 #: data/ui/CatfishWindow.ui:406
 msgid "Any time"
 msgstr "Kdykoli"
 
-#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1909
+#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1917
 msgid "Today"
 msgstr "Dnes"
 
@@ -274,11 +275,11 @@ msgstr ""
 msgid "File Type"
 msgstr "Typ souboru"
 
-#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1623
+#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1631
 msgid "Modified"
 msgstr "Změněno"
 
-#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2229
+#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2237
 msgid "Results will be displayed as soon as they are found."
 msgstr "Výsledky se zobrazí ihned po nalezení."
 
@@ -398,6 +399,16 @@ msgstr ""
 #: catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"nastavit výchozí sloupec pro řazení "
+"(název|velikost|cesta|datum|typ),(vzest|sest)"
+
+#: catfish/__init__.py:66
+msgid "Close after selecting a file"
+msgstr "Zavřít po vybrání souboru"
+
+#: catfish/__init__.py:68
+msgid "Do not close after selecting a file"
+msgstr "Nezavírat po vybrání souboru"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -473,40 +484,40 @@ msgstr "Zahájit vyhledávání"
 
 #: catfish/CatfishWindow.py:1073
 msgid "No folder selected."
-msgstr ""
+msgstr "Žádná vybraná složka."
 
 #: catfish/CatfishWindow.py:1078
 msgid "Folder not found."
-msgstr ""
+msgstr "Složka nenalezena."
 
-#: catfish/CatfishWindow.py:1332
+#: catfish/CatfishWindow.py:1340
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "%s nelze otevřít."
 
-#: catfish/CatfishWindow.py:1488
+#: catfish/CatfishWindow.py:1496
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "%s nelze uložit."
 
-#: catfish/CatfishWindow.py:1505
+#: catfish/CatfishWindow.py:1513
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "%s nelze smazat."
 
-#: catfish/CatfishWindow.py:1544
+#: catfish/CatfishWindow.py:1552
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Uložit „%s“ jako..."
 
-#: catfish/CatfishWindow.py:1579
+#: catfish/CatfishWindow.py:1587
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr "Opravdu chcete „%s“ trvale smazat?"
 
-#: catfish/CatfishWindow.py:1583
+#: catfish/CatfishWindow.py:1591
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -515,47 +526,47 @@ msgstr ""
 "Opravdu chcete trvale smazat\n"
 "%i vybraných souborů?"
 
-#: catfish/CatfishWindow.py:1586
+#: catfish/CatfishWindow.py:1594
 msgid "If you delete a file, it is permanently lost."
 msgstr "Pokud soubor smažete, bude nenávratně ztracen."
 
-#: catfish/CatfishWindow.py:1620
+#: catfish/CatfishWindow.py:1628
 msgid "Filename"
 msgstr "Název souboru"
 
-#: catfish/CatfishWindow.py:1621
+#: catfish/CatfishWindow.py:1629
 msgid "Size"
 msgstr "Velikost"
 
-#: catfish/CatfishWindow.py:1622
+#: catfish/CatfishWindow.py:1630
 msgid "Location"
 msgstr "Umístění"
 
-#: catfish/CatfishWindow.py:1632
+#: catfish/CatfishWindow.py:1640
 msgid "Preview"
 msgstr "Náhled"
 
-#: catfish/CatfishWindow.py:1639
+#: catfish/CatfishWindow.py:1647
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: catfish/CatfishWindow.py:1830
+#: catfish/CatfishWindow.py:1838
 msgid "Open with default applications"
-msgstr ""
+msgstr "Otevřít výchozími aplikacemi"
 
-#: catfish/CatfishWindow.py:1846
+#: catfish/CatfishWindow.py:1854
 msgid "Open with"
-msgstr ""
+msgstr "Otevřít pomocí"
 
-#: catfish/CatfishWindow.py:1911
+#: catfish/CatfishWindow.py:1919
 msgid "Yesterday"
 msgstr "Včera"
 
-#: catfish/CatfishWindow.py:2019
+#: catfish/CatfishWindow.py:2027
 msgid "No files found."
 msgstr "Nenalezeny žádné soubory."
 
-#: catfish/CatfishWindow.py:2021
+#: catfish/CatfishWindow.py:2029
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -563,32 +574,32 @@ msgstr ""
 "Zkuste být při hledání méně konkrétní\n"
 "nebo zkuste jiný adresář."
 
-#: catfish/CatfishWindow.py:2028
+#: catfish/CatfishWindow.py:2036
 msgid "1 file found."
 msgstr "Nalezen jeden soubor."
 
-#: catfish/CatfishWindow.py:2030
+#: catfish/CatfishWindow.py:2038
 #, python-format
 msgid "%i files found."
 msgstr "Nalezeno %i souborů."
 
-#: catfish/CatfishWindow.py:2039 catfish/CatfishWindow.py:2042
+#: catfish/CatfishWindow.py:2047 catfish/CatfishWindow.py:2050
 msgid "bytes"
 msgstr "bajtů"
 
-#: catfish/CatfishWindow.py:2227 catfish/CatfishWindow.py:2237
+#: catfish/CatfishWindow.py:2235 catfish/CatfishWindow.py:2245
 msgid "Searching..."
 msgstr "Vyhledávání..."
 
-#: catfish/CatfishWindow.py:2235
+#: catfish/CatfishWindow.py:2243
 #, python-format
 msgid "\"%s\" - searching | Catfish"
-msgstr ""
+msgstr "%s - vyhledávání | Catfish"
 
-#: catfish/CatfishWindow.py:2345
+#: catfish/CatfishWindow.py:2353
 #, python-format
 msgid "\"%s\" - results | Catfish"
-msgstr ""
+msgstr "%s - výsledky | Catfish"
 
 #: catfish_lib/catfishconfig.py:97
 msgid "Catfish is a versatile file searching tool."
