@@ -9,17 +9,17 @@
 # YAMADA Shinichirou <yamada_strong_yamada_nice_64bit@yahoo.co.jp>, 2024
 # Nick Schermer <nick@xfce.org>, 2024
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2024
-# UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2024
 # Xfce Bot <transifex@xfce.org>, 2024
+# UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-10-31 12:50+0100\n"
+"POT-Creation-Date: 2024-11-02 00:53+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>, 2024\n"
+"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/xfce/teams/16840/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -229,7 +229,7 @@ msgstr "拡張子..."
 msgid "Any time"
 msgstr "時刻指定なし"
 
-#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1909
+#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1917
 msgid "Today"
 msgstr "今日"
 
@@ -274,11 +274,11 @@ msgstr "検索データベースは 7 日以上更新されていません。今
 msgid "File Type"
 msgstr "ファイル形式"
 
-#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1623
+#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1631
 msgid "Modified"
 msgstr "修正日"
 
-#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2229
+#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2237
 msgid "Results will be displayed as soon as they are found."
 msgstr "結果は発見し次第表示されます。"
 
@@ -397,6 +397,14 @@ msgstr "パスと検索クエリが指定されているならば、プログラ
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr " (名前 | サイズ| ファイルパス | 日付 | ファイルタイプ),(asc|desc) でソートするよう、デフォルトの列を設定"
 
+#: catfish/__init__.py:66
+msgid "Close after selecting a file"
+msgstr "ファイルの選択後に閉じる"
+
+#: catfish/__init__.py:68
+msgid "Do not close after selecting a file"
+msgstr "ファイルの選択後に閉じない"
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
 #: catfish/CatfishWindow.py:109
@@ -479,27 +487,27 @@ msgstr "フォルダーが選択されていません。"
 msgid "Folder not found."
 msgstr "フォルダーが見つかりません。"
 
-#: catfish/CatfishWindow.py:1332
+#: catfish/CatfishWindow.py:1340
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" を開けませんでした。"
 
-#: catfish/CatfishWindow.py:1488
+#: catfish/CatfishWindow.py:1496
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" は保存されていません。"
 
-#: catfish/CatfishWindow.py:1505
+#: catfish/CatfishWindow.py:1513
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" は削除できません。"
 
-#: catfish/CatfishWindow.py:1544
+#: catfish/CatfishWindow.py:1552
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "\"%s\" を別名で保存..."
 
-#: catfish/CatfishWindow.py:1579
+#: catfish/CatfishWindow.py:1587
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -508,7 +516,7 @@ msgstr ""
 "本当に \"%s\" を\n"
 "完全に削除しますか？"
 
-#: catfish/CatfishWindow.py:1583
+#: catfish/CatfishWindow.py:1591
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -517,47 +525,47 @@ msgstr ""
 "本当に %i 個のファイルを\n"
 "完全に削除しますか？"
 
-#: catfish/CatfishWindow.py:1586
+#: catfish/CatfishWindow.py:1594
 msgid "If you delete a file, it is permanently lost."
 msgstr "削除されたファイルは二度と復元できません。"
 
-#: catfish/CatfishWindow.py:1620
+#: catfish/CatfishWindow.py:1628
 msgid "Filename"
 msgstr "ファイル名"
 
-#: catfish/CatfishWindow.py:1621
+#: catfish/CatfishWindow.py:1629
 msgid "Size"
 msgstr "サイズ"
 
-#: catfish/CatfishWindow.py:1622
+#: catfish/CatfishWindow.py:1630
 msgid "Location"
 msgstr "位置"
 
-#: catfish/CatfishWindow.py:1632
+#: catfish/CatfishWindow.py:1640
 msgid "Preview"
 msgstr "プレビュー"
 
-#: catfish/CatfishWindow.py:1639
+#: catfish/CatfishWindow.py:1647
 msgid "Details"
 msgstr "詳細"
 
-#: catfish/CatfishWindow.py:1830
+#: catfish/CatfishWindow.py:1838
 msgid "Open with default applications"
 msgstr "デフォルトアプリケーションで開く"
 
-#: catfish/CatfishWindow.py:1846
+#: catfish/CatfishWindow.py:1854
 msgid "Open with"
 msgstr "アプリケーションで開く"
 
-#: catfish/CatfishWindow.py:1911
+#: catfish/CatfishWindow.py:1919
 msgid "Yesterday"
 msgstr "昨日"
 
-#: catfish/CatfishWindow.py:2019
+#: catfish/CatfishWindow.py:2027
 msgid "No files found."
 msgstr "ファイルが一つも見つかりません。"
 
-#: catfish/CatfishWindow.py:2021
+#: catfish/CatfishWindow.py:2029
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -565,32 +573,32 @@ msgstr ""
 "検索語を減らすか、\n"
 "ほかのフォルダーを検索してください。"
 
-#: catfish/CatfishWindow.py:2028
+#: catfish/CatfishWindow.py:2036
 msgid "1 file found."
 msgstr "1つのファイルを発見。"
 
-#: catfish/CatfishWindow.py:2030
+#: catfish/CatfishWindow.py:2038
 #, python-format
 msgid "%i files found."
 msgstr "%i つのファイルを発見。"
 
-#: catfish/CatfishWindow.py:2039 catfish/CatfishWindow.py:2042
+#: catfish/CatfishWindow.py:2047 catfish/CatfishWindow.py:2050
 msgid "bytes"
 msgstr "bytes"
 
-#: catfish/CatfishWindow.py:2227 catfish/CatfishWindow.py:2237
+#: catfish/CatfishWindow.py:2235 catfish/CatfishWindow.py:2245
 msgid "Searching..."
 msgstr "検索しています..."
 
-#: catfish/CatfishWindow.py:2235
+#: catfish/CatfishWindow.py:2243
 #, python-format
 msgid "\"%s\" - searching | Catfish"
-msgstr ""
+msgstr "\"%s\" - 検索中 | Catfish"
 
-#: catfish/CatfishWindow.py:2345
+#: catfish/CatfishWindow.py:2353
 #, python-format
 msgid "\"%s\" - results | Catfish"
-msgstr ""
+msgstr "\"%s\" - 結果 | Catfish"
 
 #: catfish_lib/catfishconfig.py:97
 msgid "Catfish is a versatile file searching tool."
