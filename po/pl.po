@@ -46,7 +46,7 @@ msgstr "pliki;znajdź;wyszukaj;zlokalizuj;szukaj;"
 
 #: data/ui/CatfishPreferences.ui:14
 msgid "Catfish Preferences"
-msgstr "Preferencje Catfish"
+msgstr "Preferencje wyszukiwarki"
 
 #: data/ui/CatfishPreferences.ui:30
 msgid "_Close"
