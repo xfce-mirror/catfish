@@ -54,6 +54,8 @@ class CatfishPrefsDialog(PrefsDialog):
             self.builder.get_object("do_show_sidebar").set_active(True)
         if self.settings.get_setting("close-after-select"):
             self.builder.get_object("close_after_select").set_active(True)
+        if self.settings.get_setting("html-smart-search"):
+            self.builder.get_object("html_smart_search").set_active(True)
         if self.settings.get_setting("search-compressed-files"):
             self.builder.get_object(
                 "search_in_compressed_files").set_active(True)
@@ -110,6 +112,15 @@ class CatfishPrefsDialog(PrefsDialog):
         else:
             self.settings.set_setting("close-after-select", False)
         self.changed_properties.append("close-after-select")
+        
+    def on_html_smart_search_toggled(self, widget):
+        if not self.process_events:
+            return
+        if widget.get_active():
+            self.settings.set_setting("html-smart-search", True)
+        else:
+            self.settings.set_setting("html-smart-search", False)
+        self.changed_properties.append("html-smart-search")
 
     def on_search_in_compressed_files_toggled(self, widget):
         if not self.process_events:
