@@ -1081,12 +1081,14 @@ class CatfishWindow(Window):
         elif os.path.isdir(folder):
             fc_toolbutton.set_filename(folder)
             fc_dialog.close()
+            self.search_entry.grab_focus()
 
     def hide_fc_warning(self):
         self.builder.get_object("no_folder_warning").hide()
 
     def open_folder_dialog(self, widget):
         self.builder.get_object("fc_open_dialog").show()
+        self.keys_pressed = []
 
     def toolbar_hotkeys(self):
         window = self.builder.get_object("Catfish")
