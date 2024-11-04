@@ -1007,6 +1007,13 @@ class CatfishWindow(Window):
         task = self.get_suggestions(text)
         GLib.idle_add(next, task)
 
+    def on_search_entry_key_press(self,widget,event):
+        print(event.keyval)
+        # Change focus on down key
+        if (event.keyval==65364):
+            if(len(self.builder.get_object('results_treeview').get_model())):
+                self.set_focus(self.builder.get_object('results_treeview'))
+
     def get_suggestions(self, keywords):
         """Load suggestions from the suggestions engine into the search entry
         completion."""
@@ -1861,6 +1868,8 @@ class CatfishWindow(Window):
             sel = treeview.get_selection()
             sel.select_all()
             self.update_treeview_stats(treeview, event)
+        if event.keyval==47:
+            self.set_focus(self.builder.get_object('toolbar_search'))
         return False
 
     def new_column(self, label, colid):
