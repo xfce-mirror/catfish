@@ -1008,7 +1008,6 @@ class CatfishWindow(Window):
         GLib.idle_add(next, task)
 
     def on_search_entry_key_press(self,widget,event):
-        print(event.keyval)
         # Change focus on down key
         if (event.keyval==65364):
             if(len(self.builder.get_object('results_treeview').get_model())):
