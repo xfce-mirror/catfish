@@ -1013,7 +1013,10 @@ class CatfishWindow(Window):
             if self.builder.get_object('results_treeview').get_model().iter_n_children():
                 tree = self.builder.get_object('results_treeview')
                 self.set_focus(tree)
-                tree.get_selection().select_path(0)
+                sel = tree.get_selection()
+                sel.unselect_all()
+                sel.select_path(0)
+                tree.set_cursor(0)
 
     def get_suggestions(self, keywords):
         """Load suggestions from the suggestions engine into the search entry
