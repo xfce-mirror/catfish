@@ -1874,11 +1874,11 @@ class CatfishWindow(Window):
             self.update_treeview_stats(treeview, event)
         if event.keyval == Gdk.KEY_Up:
             sel = treeview.get_selection()
-            if sel.count_selected_rows()==1:
-                if sel.get_selected_rows()[1][0].get_indices()==[0]:
+            if sel.count_selected_rows() == 1:
+                if sel.get_selected_rows()[1][0].get_indices() == [0]:
                     sel.unselect_all()
                     self.set_focus(self.builder.get_object('toolbar_search'))
-        if event.keyval==Gdk.KEY_slash:
+        if event.keyval == Gdk.KEY_slash:
             self.set_focus(self.builder.get_object('toolbar_search'))
             self.builder.get_object('results_treeview').get_selection().unselect_all()
         return False
