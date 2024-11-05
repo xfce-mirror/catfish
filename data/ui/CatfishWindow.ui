@@ -1489,6 +1489,7 @@ This action requires administrative rights.</property>
     <signal name="activate" handler="on_search_entry_activate" swapped="no"/>
     <signal name="changed" handler="on_search_entry_changed" swapped="no"/>
     <signal name="icon-press" handler="on_search_entry_icon_press" swapped="no"/>
+    <signal name="key-press-event" handler="on_search_entry_key_press" swapped="no"/>
     <style>
       <class name="catfish_search_entry"/>
     </style>
