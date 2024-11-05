@@ -1880,6 +1880,7 @@ class CatfishWindow(Window):
                     self.set_focus(self.builder.get_object('toolbar_search'))
         if event.keyval==Gdk.KEY_slash:
             self.set_focus(self.builder.get_object('toolbar_search'))
+            self.builder.get_object('results_treeview').get_selection().unselect_all()
         return False
 
     def new_column(self, label, colid):
