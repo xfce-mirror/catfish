@@ -1009,8 +1009,8 @@ class CatfishWindow(Window):
 
     def on_search_entry_key_press(self,widget,event):
         # Change focus on down key
-        if (event.keyval==65364):
-            if(len(self.builder.get_object('results_treeview').get_model())):
+        if event.keyval == Gdk.KEY_Down:
+            if self.builder.get_object('results_treeview').get_model().iter_n_children():
                 self.set_focus(self.builder.get_object('results_treeview'))
 
     def get_suggestions(self, keywords):
@@ -1867,7 +1867,13 @@ class CatfishWindow(Window):
             sel = treeview.get_selection()
             sel.select_all()
             self.update_treeview_stats(treeview, event)
-        if event.keyval==47:
+        if event.keyval==Gdk.KEY_Up:
+            sel = treeview.get_selection()
+            if sel.count_selected_rows()==1:
+                if sel.get_selected_rows()[1][0].get_indices()==[0]:
+                    sel.unselect_all()
+                    self.set_focus(self.builder.get_object('toolbar_search'))
+        if event.keyval==Gdk.KEY_slash:
             self.set_focus(self.builder.get_object('toolbar_search'))
         return False
 
