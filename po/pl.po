@@ -54,7 +54,7 @@ msgstr "Za_mknij"
 
 #: data/ui/CatfishPreferences.ui:111
 msgid "Classic (_Titlebar)"
-msgstr "Klasyczny (_Pasek tytułu)"
+msgstr "_Klasyczny (pasek tytułu)"
 
 #: data/ui/CatfishPreferences.ui:161
 msgid "_Modern (CSD)"
@@ -63,7 +63,8 @@ msgstr "_Nowoczesny (CSD)"
 #: data/ui/CatfishPreferences.ui:213
 msgid "Your new window layout will be applied after restarting Catfish."
 msgstr ""
-"Nowy układ okna zostanie zastosowany po ponownym uruchomieniu Catfish."
+"Nowy układ okna zostanie zastosowany po ponownym uruchomieniu programu "
+"Catfish."
 
 #: data/ui/CatfishPreferences.ui:236
 msgid "Window Layout"
@@ -83,7 +84,7 @@ msgstr "Pokaż rozmiary plików w formacie binarnym"
 
 #: data/ui/CatfishPreferences.ui:305
 msgid "Uncheck to show file size in decimal format"
-msgstr "Odznacz, aby pokazywać rozmiar pliku w formacie dziesiętnym"
+msgstr "Odznacz, aby pokazywać rozmiar pliku w formacie dziesiętnym"
 
 #: data/ui/CatfishPreferences.ui:324
 msgid "Display Options"
@@ -123,7 +124,7 @@ msgstr "Zamknij okno _wyszukiwania po otwarciu pliku"
 
 #: data/ui/CatfishPreferences.ui:501
 msgid "Search within compressed files (.zip, .odt, .docx)"
-msgstr "Przeszukaj w plikach skompresowanych (.zip, .odt, .docx)"
+msgstr "Przeszukaj w plikach skompresowanych (.zip, .odt, .docx)"
 
 #: data/ui/CatfishPreferences.ui:523
 msgid "Miscellaneous"
@@ -352,7 +353,7 @@ msgstr "O programi_e"
 
 #: catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
-msgstr "Użycie: %prog [opcje] zapytanie ścieżki"
+msgstr "Użycie: %prog [opcje] ścieżka zapytanie"
 
 #: catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
@@ -574,7 +575,7 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
-"Spróbuj mniej dookreślić swoje wyszukiwanie\n"
+"Spróbuj mniej konkretnie określić wyszukiwanie\n"
 "lub spróbuj przeszukać inny katalog."
 
 #: catfish/CatfishWindow.py:2036
@@ -653,11 +654,11 @@ msgid ""
 "modification date, file type, and file contents, users will no longer be "
 "dependent on the file manager or organization skills."
 msgstr ""
-"Catfish to małe, szybkie i potężne narzędzie do wyszukiwania plików. Dzięki "
-"minimalistycznemu interfejsowi z naciskiem na wyniki pomaga użytkownikom "
-"znaleźć potrzebne pliki bez menedżera plików. Dzięki potężnym filtrom, takim"
-" jak data modyfikacji, typ pliku oraz jego zawartość, użytkownicy nie będą "
-"już zależni od menedżera plików lub umiejętności organizacyjnych."
+"Catfish to małe, szybkie i potężne narzędzie do wyszukiwania plików. Ma "
+"minimalistyczny interfejs z naciskiem na wyniki, pomaga użytkownikom znaleźć"
+" potrzebne pliki bez menedżera plików. Dzięki potężnym filtrom, takim jak "
+"data modyfikacji, typ pliku oraz jego zawartość, użytkownicy nie będą już "
+"zależni od menedżera plików lub umiejętności organizacyjnych."
 
 #: data/metainfo/catfish.appdata.xml.in:25
 msgid "The main Catfish window displaying image search results"
