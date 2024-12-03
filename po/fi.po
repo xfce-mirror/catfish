@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-10-31 12:50+0100\n"
+"POT-Creation-Date: 2024-11-02 00:53+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>, 2024\n"
 "Language-Team: Finnish (https://app.transifex.com/xfce/teams/16840/fi/)\n"
@@ -135,7 +135,7 @@ msgstr "Edistynyt"
 
 #: data/ui/CatfishWindow.ui:10 data/ui/CatfishWindow.ui:119
 msgid "Select a Folder"
-msgstr ""
+msgstr "Valitse kansio"
 
 #: data/ui/CatfishWindow.ui:53
 msgid "Folder not found!"
@@ -229,7 +229,7 @@ msgstr ""
 msgid "Any time"
 msgstr "Koska tahansa"
 
-#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1909
+#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1917
 msgid "Today"
 msgstr "Tänään"
 
@@ -274,11 +274,11 @@ msgstr "Hakutietokanta on yli 7 päivää vanha. Päivitetäänkö se nyt?"
 msgid "File Type"
 msgstr "Tiedostotyyppi"
 
-#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1623
+#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1631
 msgid "Modified"
 msgstr "Muokattu"
 
-#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2229
+#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2237
 msgid "Results will be displayed as soon as they are found."
 msgstr "Tulokset näytetään heti kun niitä löydetään."
 
@@ -399,6 +399,14 @@ msgstr ""
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
 
+#: catfish/__init__.py:66
+msgid "Close after selecting a file"
+msgstr ""
+
+#: catfish/__init__.py:68
+msgid "Do not close after selecting a file"
+msgstr ""
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
 #: catfish/CatfishWindow.py:109
@@ -477,27 +485,27 @@ msgstr ""
 msgid "Folder not found."
 msgstr ""
 
-#: catfish/CatfishWindow.py:1332
+#: catfish/CatfishWindow.py:1340
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Tiedostoa \"%s\" ei voitu avata."
 
-#: catfish/CatfishWindow.py:1488
+#: catfish/CatfishWindow.py:1496
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Tiedostoa \"%s\" ei voitu tallentaa."
 
-#: catfish/CatfishWindow.py:1505
+#: catfish/CatfishWindow.py:1513
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Tiedostoa \"%s\" ei voitu poistaa."
 
-#: catfish/CatfishWindow.py:1544
+#: catfish/CatfishWindow.py:1552
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Tallenna \"%s\" nimellä..."
 
-#: catfish/CatfishWindow.py:1579
+#: catfish/CatfishWindow.py:1587
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -506,7 +514,7 @@ msgstr ""
 "Haluatko varmasti poistaa \n"
 "kohteen \"%s\" pysyvästi?"
 
-#: catfish/CatfishWindow.py:1583
+#: catfish/CatfishWindow.py:1591
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -515,47 +523,47 @@ msgstr ""
 "Haluatko varmasti poistaa \n"
 "%i tiedostoa pysyvästi?"
 
-#: catfish/CatfishWindow.py:1586
+#: catfish/CatfishWindow.py:1594
 msgid "If you delete a file, it is permanently lost."
 msgstr "Jos poistat tiedoston, sitä ei voi palauttaa."
 
-#: catfish/CatfishWindow.py:1620
+#: catfish/CatfishWindow.py:1628
 msgid "Filename"
 msgstr "Tiedoston nimi"
 
-#: catfish/CatfishWindow.py:1621
+#: catfish/CatfishWindow.py:1629
 msgid "Size"
 msgstr "Koko"
 
-#: catfish/CatfishWindow.py:1622
+#: catfish/CatfishWindow.py:1630
 msgid "Location"
 msgstr "Sijainti"
 
-#: catfish/CatfishWindow.py:1632
+#: catfish/CatfishWindow.py:1640
 msgid "Preview"
 msgstr "Esikatselu"
 
-#: catfish/CatfishWindow.py:1639
+#: catfish/CatfishWindow.py:1647
 msgid "Details"
 msgstr "Tiedot"
 
-#: catfish/CatfishWindow.py:1830
+#: catfish/CatfishWindow.py:1838
 msgid "Open with default applications"
 msgstr ""
 
-#: catfish/CatfishWindow.py:1846
+#: catfish/CatfishWindow.py:1854
 msgid "Open with"
 msgstr ""
 
-#: catfish/CatfishWindow.py:1911
+#: catfish/CatfishWindow.py:1919
 msgid "Yesterday"
 msgstr "Eilen"
 
-#: catfish/CatfishWindow.py:2019
+#: catfish/CatfishWindow.py:2027
 msgid "No files found."
 msgstr "Tiedostoja ei löytynyt."
 
-#: catfish/CatfishWindow.py:2021
+#: catfish/CatfishWindow.py:2029
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -563,29 +571,29 @@ msgstr ""
 "Yritä tehdä haustasi vähemmän yksityiskohtainen\n"
 "tai yritä toista hakemistoa."
 
-#: catfish/CatfishWindow.py:2028
+#: catfish/CatfishWindow.py:2036
 msgid "1 file found."
 msgstr "Löydettiin 1 tiedosto."
 
-#: catfish/CatfishWindow.py:2030
+#: catfish/CatfishWindow.py:2038
 #, python-format
 msgid "%i files found."
 msgstr "Löydettiin %i tiedostoa."
 
-#: catfish/CatfishWindow.py:2039 catfish/CatfishWindow.py:2042
+#: catfish/CatfishWindow.py:2047 catfish/CatfishWindow.py:2050
 msgid "bytes"
 msgstr "tavua"
 
-#: catfish/CatfishWindow.py:2227 catfish/CatfishWindow.py:2237
+#: catfish/CatfishWindow.py:2235 catfish/CatfishWindow.py:2245
 msgid "Searching..."
 msgstr "Haetaan..."
 
-#: catfish/CatfishWindow.py:2235
+#: catfish/CatfishWindow.py:2243
 #, python-format
 msgid "\"%s\" - searching | Catfish"
 msgstr ""
 
-#: catfish/CatfishWindow.py:2345
+#: catfish/CatfishWindow.py:2353
 #, python-format
 msgid "\"%s\" - results | Catfish"
 msgstr ""
