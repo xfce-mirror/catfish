@@ -72,7 +72,7 @@ msgstr "Układ okna"
 
 #: data/ui/CatfishPreferences.ui:269
 msgid "Show _hidden files in the results"
-msgstr "Pokaż _ukryte pliki w wynikach"
+msgstr "Pokaż _ukryte pliki w wynikach"
 
 #: data/ui/CatfishPreferences.ui:285
 msgid "Show filter _sidebar"
@@ -80,7 +80,7 @@ msgstr "Pokaż pasek _boczny filtru"
 
 #: data/ui/CatfishPreferences.ui:301
 msgid "Show file sizes in binary format"
-msgstr "Pokaż rozmiary plików w formacie binarnym"
+msgstr "Pokaż rozmiary plików w formacie binarnym"
 
 #: data/ui/CatfishPreferences.ui:305
 msgid "Uncheck to show file size in decimal format"
@@ -165,7 +165,7 @@ msgstr "_Otwórz za pomocą..."
 #. Location, Save _As, _Delete
 #: data/ui/CatfishWindow.ui:198
 msgid "Show in _File Manager"
-msgstr "Pokaż w _menedżerze plików"
+msgstr "Pokaż w _menedżerze plików"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -371,7 +371,7 @@ msgstr "Używa miniatur"
 
 #: catfish/__init__.py:51
 msgid "Display time in ISO format"
-msgstr "Wypisuje godzinę w formacie ISO"
+msgstr "Wypisuje godzinę w formacie ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: catfish/__init__.py:53
@@ -395,7 +395,7 @@ msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
-"Jeśli podano ścieżkę i zapytanie, wyszukiwanie rozpoczyna się, gdy program "
+"Jeśli podano ścieżkę i zapytanie, wyszukiwanie rozpoczyna się, gdy program "
 "jest wyświetlony."
 
 #: catfish/__init__.py:63
