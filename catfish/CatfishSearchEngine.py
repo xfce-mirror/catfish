@@ -107,7 +107,7 @@ class CatfishSearchEngine:
     to perform a query.  Each backend is a CatfishSearchMethod"""
 
     def __init__(self, methods=['zeitgeist', 'locate', 'walk'],
-                 exclude_paths=[]):
+                 exclude_paths=[],smart_search=[]):
         """Initialize the CatfishSearchEngine.  Provide a list of methods to
         be included in the search backends.  Available backends include:
 
@@ -137,6 +137,7 @@ class CatfishSearchEngine:
         if 'walk' in methods:
             self.add_method(CatfishSearchMethod_Walk)
         self.exclude_paths = exclude_paths
+        self.smart_search = smart_search
         initialized = []
         for method in self.methods:
             initialized.append(method.method_name)
@@ -203,7 +204,7 @@ class CatfishSearchEngine:
                 "[%i] Starting search method: %s",
                 self.engine_id, method.method_name)
             for filename in method.run(keywords, path, search_zips, regex,
-                                       self.exclude_paths):
+                                       self.exclude_paths,self.smart_search):
                 if isinstance(filename, str) and path in filename:
                     found_bad = False
                     for filepath in exclude:
@@ -542,6 +543,51 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
             if self.search_text(pdf.stdout, keywords):
                 return True
 
+    def search_html(self, fullpath, keywords,charset):
+        stripped_text=self.strip_html(fullpath,charset)
+        if self.search_text(stripped_text, keywords):
+            return True
+
+    def strip_html(self,fullpath,charset):
+        open_file = open(fullpath, 'r', encoding=charset)
+        html_text=[]
+        inside_body_tag=False
+        inside_script_tag=False
+        inside_style_tag=False
+        with open_file as file_text:
+            for line in file_text:
+                if "<body>" in line:
+                    inside_body_tag=True
+                    line=line.split("<body>",1)[1]
+                if "</body>" in line:
+                    html_text.append(line.split("</body>")[0])
+                    return html_text
+                if inside_body_tag:
+                    if inside_script_tag:
+                        if not(re.search(r'(<script.*?>)|(</script>)',line)):
+                            continue
+                        if re.search(r'^.*?</script>',line):
+                            line=re.sub(r'^.*?</script>','',line,count=1)
+                            inside_script_tag=False
+                    line=re.sub(r'<script.*?>.*?</script>','',line)
+                    if re.search('<script.*?>.*?$',line):
+                        line=re.sub('<script.*?>.*?$','',line)
+                        inside_script_tag=True
+                    if inside_style_tag:
+                        if not(re.search(r'(<style.*?>)|(</style>)',line)):
+                            continue
+                        if re.search(r'^.*?</style>',line):
+                            line=re.sub(r'^.*?</style>','',line,count=1)
+                            inside_style_tag=False
+                    line=re.sub(r'<style.*?>.*?</style>','',line)
+                    if re.search('<style.*?>.*?$',line):
+                        line=re.sub('<style.*?>.*?$','',line)
+                        inside_style_tag=True
+                    line=re.sub('<.*?>','',line)
+                    html_text.append(line)
+        return html_text
+
+
     def search_text(self, lines, keywords):
         if self.exact:
             for line in lines:
@@ -568,7 +614,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
             except UnicodeError:
                 return False
 
-    def run(self, keywords, path, search_zips, regex=False, exclude_paths=[]):  # noqa
+    def run(self, keywords, path, search_zips, regex=False, exclude_paths=[],smart_search=[]):  # noqa
         """Run the search method using keywords and path.  regex is not used
         by this search method.
 
@@ -604,6 +650,14 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                         continue
                     if os.path.getsize(fullpath) == 0:
                         continue
+                    # Check character encoding
+                    charset = self.check_charset(root, filename)
+                    if "html" in smart_search:
+                              if fullpath.lower().endswith('.html') or fullpath.lower().endswith('.htm'):
+                                   if self.search_html(fullpath,keywords,charset):
+                                        yield fullpath
+                                   else:
+                                        continue
                     if fullpath.lower().endswith('.pdf'):
                         if self.search_pdf(fullpath, keywords):
                             yield fullpath
@@ -612,8 +666,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
                     # Skip if not text file.
                     if not self.is_txt(filename):
                         continue
-                    # Check character encoding, skip if binary.
-                    charset = self.check_charset(root, filename)
+                    # Skip if binary.
                     if charset == 'binary':
                         continue
 
