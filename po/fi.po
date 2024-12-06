@@ -43,6 +43,7 @@ msgstr "Hae tiedostojärjestelmästä"
 #: org.xfce.Catfish.desktop.in:7
 msgid "files;find;locate;lookup;search;"
 msgstr ""
+"files;find;locate;lookup;search;tiedostot;paikanna;löydä;etsi;hae;haku;"
 
 #: data/ui/CatfishPreferences.ui:14
 msgid "Catfish Preferences"
@@ -79,11 +80,11 @@ msgstr "Näytä suodatus_sivupalkki"
 
 #: data/ui/CatfishPreferences.ui:301
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Näytä tiedostojen koot binäärimuodossa"
 
 #: data/ui/CatfishPreferences.ui:305
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Posita valinta näyttääksesi tiedoston koon desimaalimuodossa"
 
 #: data/ui/CatfishPreferences.ui:324
 msgid "Display Options"
@@ -123,7 +124,7 @@ msgstr "Sulje _hakuikkuna tiedoston avaamisen jälkeen"
 
 #: data/ui/CatfishPreferences.ui:501
 msgid "Search within compressed files (.zip, .odt, .docx)"
-msgstr ""
+msgstr "Etsi pakatuista tiedostoista (.zip, .odt, .docx)"
 
 #: data/ui/CatfishPreferences.ui:523
 msgid "Miscellaneous"
@@ -139,7 +140,7 @@ msgstr "Valitse kansio"
 
 #: data/ui/CatfishWindow.ui:53
 msgid "Folder not found!"
-msgstr ""
+msgstr "Kansiota ei löydy!"
 
 #. Restore Cancel button
 #. Buttons
@@ -150,7 +151,7 @@ msgstr "Peru"
 
 #: data/ui/CatfishWindow.ui:84
 msgid "Select Folder"
-msgstr ""
+msgstr "Valitse kansio"
 
 #: data/ui/CatfishWindow.ui:170
 msgid "_Open"
@@ -158,7 +159,7 @@ msgstr "_Avaa"
 
 #: data/ui/CatfishWindow.ui:181
 msgid "_Open with..."
-msgstr ""
+msgstr "_Avaa sovelluksessa..."
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -178,7 +179,7 @@ msgstr "_Tallenna nimellä..."
 
 #: data/ui/CatfishWindow.ui:243
 msgid "_Delete..."
-msgstr ""
+msgstr "_Poista..."
 
 #: data/ui/CatfishWindow.ui:267
 msgid "File Extensions"
@@ -336,7 +337,7 @@ msgstr "Hae _tiedostojen sisällöistä"
 
 #: data/ui/CatfishWindow.ui:1674
 msgid "_Match results exactly"
-msgstr ""
+msgstr "_Vain täsmälliset vastaavuudet"
 
 #: data/ui/CatfishWindow.ui:1727
 msgid "_Refresh search index..."
@@ -401,11 +402,11 @@ msgstr ""
 
 #: catfish/__init__.py:66
 msgid "Close after selecting a file"
-msgstr ""
+msgstr "Sulje tiedoston valinnan jälkeen"
 
 #: catfish/__init__.py:68
 msgid "Do not close after selecting a file"
-msgstr ""
+msgstr "Älä sulje tiedoston valinnan jälkeen"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -434,6 +435,8 @@ msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
+"Kirjoita hakuehto alle löytääksesi tiedostosi\n"
+"tai napsauta %s nähdäksesi lisäasetukset."
 
 #: catfish/CatfishWindow.py:813
 msgid "An error occurred while updating the database."
@@ -479,11 +482,11 @@ msgstr "Aloita haku"
 
 #: catfish/CatfishWindow.py:1073
 msgid "No folder selected."
-msgstr ""
+msgstr "Kansiota ei ole valittu."
 
 #: catfish/CatfishWindow.py:1078
 msgid "Folder not found."
-msgstr ""
+msgstr "Kansiota ei löydy."
 
 #: catfish/CatfishWindow.py:1340
 #, python-format
@@ -549,11 +552,11 @@ msgstr "Tiedot"
 
 #: catfish/CatfishWindow.py:1838
 msgid "Open with default applications"
-msgstr ""
+msgstr "Avaa oletussovelluksilla"
 
 #: catfish/CatfishWindow.py:1854
 msgid "Open with"
-msgstr ""
+msgstr "Avaa sovelluksessa"
 
 #: catfish/CatfishWindow.py:1919
 msgid "Yesterday"
@@ -591,12 +594,12 @@ msgstr "Haetaan..."
 #: catfish/CatfishWindow.py:2243
 #, python-format
 msgid "\"%s\" - searching | Catfish"
-msgstr ""
+msgstr "\"%s\" - etsitään | Catfish"
 
 #: catfish/CatfishWindow.py:2353
 #, python-format
 msgid "\"%s\" - results | Catfish"
-msgstr ""
+msgstr "\"%s\" - tulokset | Catfish"
 
 #: catfish_lib/catfishconfig.py:97
 msgid "Catfish is a versatile file searching tool."
