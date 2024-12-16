@@ -8,15 +8,16 @@
 # Xfce Bot <transifex@xfce.org>, 2024
 # Nick Schermer <nick@xfce.org>, 2024
 # beriain, 2024
+# Eder Etxebarria Rojo, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-10-31 12:50+0100\n"
+"POT-Creation-Date: 2024-11-02 00:53+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: beriain, 2024\n"
+"Last-Translator: Eder Etxebarria Rojo, 2024\n"
 "Language-Team: Basque (https://app.transifex.com/xfce/teams/16840/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,11 +78,11 @@ msgstr "Erakutsi iragaziaren alboko barra"
 
 #: data/ui/CatfishPreferences.ui:301
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Erakutsi fitxategi-tamainak formatu bitarrean"
 
 #: data/ui/CatfishPreferences.ui:305
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Desmarkatu fitxategiaren tamaina formatu hamartarrean erakusteko"
 
 #: data/ui/CatfishPreferences.ui:324
 msgid "Display Options"
@@ -156,7 +157,7 @@ msgstr "_Ireki"
 
 #: data/ui/CatfishWindow.ui:181
 msgid "_Open with..."
-msgstr ""
+msgstr "_Ireki honekin..."
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -176,7 +177,7 @@ msgstr "Gorde honela..."
 
 #: data/ui/CatfishWindow.ui:243
 msgid "_Delete..."
-msgstr ""
+msgstr "_Ezabatu..."
 
 #: data/ui/CatfishWindow.ui:267
 msgid "File Extensions"
@@ -221,13 +222,13 @@ msgstr "Besteak"
 
 #: data/ui/CatfishWindow.ui:380
 msgid "Extension..."
-msgstr ""
+msgstr "Hedapena..."
 
 #: data/ui/CatfishWindow.ui:406
 msgid "Any time"
 msgstr "Edonoiz"
 
-#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1909
+#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1917
 msgid "Today"
 msgstr "Gaur"
 
@@ -272,11 +273,11 @@ msgstr "Bilaketa datu-basea 7 egun baino zaharragoa da. Eguneratu orain?"
 msgid "File Type"
 msgstr "Fitxategi mota"
 
-#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1623
+#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1631
 msgid "Modified"
 msgstr "Aldatuta"
 
-#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2229
+#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2237
 msgid "Results will be displayed as soon as they are found."
 msgstr "Emaitzak aurkitu ahala erakutsiko dira."
 
@@ -396,6 +397,16 @@ msgstr ""
 #: catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"ezarri zutabe lehenetsia hauen arabera sailkatzeko "
+"(izena|tamaina|bidea|data|mota),(gorakorra|beherakorra)"
+
+#: catfish/__init__.py:66
+msgid "Close after selecting a file"
+msgstr ""
+
+#: catfish/__init__.py:68
+msgid "Do not close after selecting a file"
+msgstr ""
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -475,34 +486,34 @@ msgstr "Ez da karpetarik hautatu"
 msgid "Folder not found."
 msgstr "Karpeta ez da aurkitu."
 
-#: catfish/CatfishWindow.py:1332
+#: catfish/CatfishWindow.py:1340
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "Ezin izan da \"%s\" ireki."
 
-#: catfish/CatfishWindow.py:1488
+#: catfish/CatfishWindow.py:1496
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Ezin izan da \"%s\" gorde."
 
-#: catfish/CatfishWindow.py:1505
+#: catfish/CatfishWindow.py:1513
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Ezin izan da \"%s\" ezabatu."
 
-#: catfish/CatfishWindow.py:1544
+#: catfish/CatfishWindow.py:1552
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Gorde \"%s\" honela..."
 
-#: catfish/CatfishWindow.py:1579
+#: catfish/CatfishWindow.py:1587
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr "\"%s\" betiko ezabatu nahi duzu?"
 
-#: catfish/CatfishWindow.py:1583
+#: catfish/CatfishWindow.py:1591
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -511,47 +522,47 @@ msgstr ""
 "Hautatutako %i fitxategiak betiko\n"
 "ezabatu nahi dituzu?"
 
-#: catfish/CatfishWindow.py:1586
+#: catfish/CatfishWindow.py:1594
 msgid "If you delete a file, it is permanently lost."
 msgstr "Fitxategi bat ezabatzen baduzu, betiko galduko da."
 
-#: catfish/CatfishWindow.py:1620
+#: catfish/CatfishWindow.py:1628
 msgid "Filename"
 msgstr "Fitxategi-izena"
 
-#: catfish/CatfishWindow.py:1621
+#: catfish/CatfishWindow.py:1629
 msgid "Size"
 msgstr "Tamaina"
 
-#: catfish/CatfishWindow.py:1622
+#: catfish/CatfishWindow.py:1630
 msgid "Location"
 msgstr "Kokapena"
 
-#: catfish/CatfishWindow.py:1632
+#: catfish/CatfishWindow.py:1640
 msgid "Preview"
 msgstr "Aurrebista"
 
-#: catfish/CatfishWindow.py:1639
+#: catfish/CatfishWindow.py:1647
 msgid "Details"
 msgstr "Xehetasunak"
 
-#: catfish/CatfishWindow.py:1830
+#: catfish/CatfishWindow.py:1838
 msgid "Open with default applications"
 msgstr ""
 
-#: catfish/CatfishWindow.py:1846
+#: catfish/CatfishWindow.py:1854
 msgid "Open with"
 msgstr ""
 
-#: catfish/CatfishWindow.py:1911
+#: catfish/CatfishWindow.py:1919
 msgid "Yesterday"
 msgstr "Atzo"
 
-#: catfish/CatfishWindow.py:2019
+#: catfish/CatfishWindow.py:2027
 msgid "No files found."
 msgstr "Ez da fitxategirik aurkitu."
 
-#: catfish/CatfishWindow.py:2021
+#: catfish/CatfishWindow.py:2029
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -559,29 +570,29 @@ msgstr ""
 "Saiatu bilaketa ez hain zehatza egiten\n"
 "edo saiatu beste karpeta batean bilatzen."
 
-#: catfish/CatfishWindow.py:2028
+#: catfish/CatfishWindow.py:2036
 msgid "1 file found."
 msgstr "Fitxategi 1 aurkitu da."
 
-#: catfish/CatfishWindow.py:2030
+#: catfish/CatfishWindow.py:2038
 #, python-format
 msgid "%i files found."
 msgstr "%i fitxategi aurkitu dira."
 
-#: catfish/CatfishWindow.py:2039 catfish/CatfishWindow.py:2042
+#: catfish/CatfishWindow.py:2047 catfish/CatfishWindow.py:2050
 msgid "bytes"
 msgstr "byte"
 
-#: catfish/CatfishWindow.py:2227 catfish/CatfishWindow.py:2237
+#: catfish/CatfishWindow.py:2235 catfish/CatfishWindow.py:2245
 msgid "Searching..."
 msgstr "Bilatzen..."
 
-#: catfish/CatfishWindow.py:2235
+#: catfish/CatfishWindow.py:2243
 #, python-format
 msgid "\"%s\" - searching | Catfish"
 msgstr ""
 
-#: catfish/CatfishWindow.py:2345
+#: catfish/CatfishWindow.py:2353
 #, python-format
 msgid "\"%s\" - results | Catfish"
 msgstr ""
