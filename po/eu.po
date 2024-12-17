@@ -402,11 +402,11 @@ msgstr ""
 
 #: catfish/__init__.py:66
 msgid "Close after selecting a file"
-msgstr ""
+msgstr "Fitxategi bat hautatu ondoren itxi"
 
 #: catfish/__init__.py:68
 msgid "Do not close after selecting a file"
-msgstr ""
+msgstr "Ez itxi fitxategi bat hautatu ondoren"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -548,11 +548,11 @@ msgstr "Xehetasunak"
 
 #: catfish/CatfishWindow.py:1838
 msgid "Open with default applications"
-msgstr ""
+msgstr "Ireki lehenetsitako aplikazioekin"
 
 #: catfish/CatfishWindow.py:1854
 msgid "Open with"
-msgstr ""
+msgstr "Ireki honekin"
 
 #: catfish/CatfishWindow.py:1919
 msgid "Yesterday"
@@ -590,12 +590,12 @@ msgstr "Bilatzen..."
 #: catfish/CatfishWindow.py:2243
 #, python-format
 msgid "\"%s\" - searching | Catfish"
-msgstr ""
+msgstr "\"%s\" - bilatzen | Catfish"
 
 #: catfish/CatfishWindow.py:2353
 #, python-format
 msgid "\"%s\" - results | Catfish"
-msgstr ""
+msgstr "\"%s\" - emaitzak | Catfish"
 
 #: catfish_lib/catfishconfig.py:97
 msgid "Catfish is a versatile file searching tool."
