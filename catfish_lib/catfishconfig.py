@@ -33,7 +33,7 @@ __url__ = 'https://docs.xfce.org/apps/catfish/start'
 try:
     from .defs import __version__, __catfish_data_directory__
 except ImportError:
-    __version__ = '4.18.0'
+    __version__ = '4.20.0'
     # Where your project will look for your data (for instance, images and ui
     # files). By default, this is ../data, relative your trunk layout
     __catfish_data_directory__ = '../data'

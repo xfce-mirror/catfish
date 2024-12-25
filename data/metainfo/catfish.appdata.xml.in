@@ -43,6 +43,10 @@
   </provides>
 
   <releases>
+    <release version="4.20.0" date="2024-12-25">
+      <description>https://gitlab.xfce.org/apps/catfish/-/milestones/8</description>
+    </release>
+
     <release version="4.18.0" date="2023-08-06">
       <description>https://gitlab.xfce.org/apps/catfish/-/milestones/1</description>
     </release>

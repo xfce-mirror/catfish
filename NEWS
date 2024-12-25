@@ -1,3 +1,32 @@
+4.20.0 (2024-12-25)
+======
+- I18n: Update po/LINGUAS list
+- Hotkeys to transfer focus
+- Add Close/Persist after select CLI flags
+- Improve window titles
+- ci: Update references for autotools/meson split
+- Honor close-after-select in all cases
+- I18n: Update po/LINGUAS list
+- I18n: Update po/LINGUAS list
+- Adapt .gitlab-ci.yml
+- build: Remove setuptools build
+- build: Port to meson
+- Add file to help transifex
+- build: Rewrite setup.py
+- Build correct URIs for filenames (Fixes #104)
+- settings: Honor XDG_CONFIG_HOME (Fixes #102)
+- Update tree view stats on right click (Fixes #101)
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Asturian, Basque, Belarusian,
+  Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian,
+  Czech, Danish, Dutch, Eastern Armenian, English (Australia), English
+  (United Kingdom), Estonian, Finnish, French, Galician, German, Greek,
+  Hebrew, Hungarian, Icelandic, Indonesian, Interlingue, Italian,
+  Japanese, Kabyle, Kazakh, Korean, Latvian, Lithuanian, Malay,
+  Norwegian Bokmål, Norwegian Nynorsk, Occitan (post 1500), Polish,
+  Portuguese, Portuguese (Brazil), Romanian, Russian, Serbian, Sinhala,
+  Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian
+
 4.18.0 (2023-08-06)
 ======
 - Filters: Add Archives, Other, update Apps
