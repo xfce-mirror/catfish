@@ -1,4 +1,4 @@
-project('catfish', version : '4.20.0', meson_version : '>= 0.59.0')
+project('catfish', version : '4.20.0-dev', meson_version : '>= 0.59.0')
 
 gnome = import('gnome')
 i18n = import('i18n')
