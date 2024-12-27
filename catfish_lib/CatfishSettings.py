@@ -44,6 +44,7 @@ DEFAULT_SETTINGS = {
     'search-file-contents': (bool, False),
     'match-results-exactly': (bool, False),
     'close-after-select': (bool, False),
+    'html-smart-search':(bool,False),
     'search-compressed-files': (bool, False),
     'file-size-binary': (bool, True),
     'window-width': (int, 700),
