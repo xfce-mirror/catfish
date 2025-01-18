@@ -9,6 +9,7 @@
 # Vinzenz Vietzke <vinz@vinzv.de>, 2024
 # Xfce Bot <transifex@xfce.org>, 2024
 # Andreas Eitel <github-aneitel@online.de>, 2024
+# Sebastian Schwab, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-11-02 00:53+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Andreas Eitel <github-aneitel@online.de>, 2024\n"
+"Last-Translator: Sebastian Schwab, 2025\n"
 "Language-Team: German (https://app.transifex.com/xfce/teams/16840/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -287,7 +288,7 @@ msgstr "Ergebnisse werden angezeigt, sobald sie gefunden werden."
 
 #: data/ui/CatfishWindow.ui:1240
 msgid "Unlock"
-msgstr "Entsprerren"
+msgstr "Entsperren"
 
 #: data/ui/CatfishWindow.ui:1292
 msgid "<b>Database:</b>"
