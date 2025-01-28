@@ -162,6 +162,13 @@
     <property name="icon-name">document-save-as-symbolic</property>
     <property name="use-fallback">True</property>
   </object>
+  <object class="GtkImage" id="file_menu_copy_to_icon">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixel-size">16</property>
+    <property name="icon-name">folder-move-symbolic</property>
+    <property name="use-fallback">True</property>
+  </object>
   <object class="GtkMenu" id="file_menu">
     <property name="visible">True</property>
     <property name="can-focus">False</property>
@@ -230,6 +237,17 @@
         <property name="image">file_menu_save_icon</property>
         <property name="use-stock">False</property>
         <signal name="activate" handler="on_menu_save_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="file_menu_copy_to">
+        <property name="label" translatable="yes">_Copy selected to folder...</property>
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="use-underline">True</property>
+        <property name="image">file_menu_copy_to_icon</property>
+        <property name="use-stock">False</property>
+        <signal name="activate" handler="on_menu_copy_to_activate" swapped="no"/>
       </object>
     </child>
     <child>
