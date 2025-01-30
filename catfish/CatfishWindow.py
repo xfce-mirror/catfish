@@ -1511,7 +1511,7 @@ class CatfishWindow(Window):
         """Show a folder dialog and copy the selected files to that directory."""
         selected_file = self.selected_filenames[0]
         foldername = self.get_save_dialog(
-            'Search Results',
+            _'Save Selected Results',
             Gtk.FileChooserAction.SELECT_FOLDER)
         original = selected_file
         if foldername:
@@ -1519,7 +1519,7 @@ class CatfishWindow(Window):
                 # Check if the selected folder is empty
                 # If so, create a subdirectory
                 if os.listdir(foldername):
-                    new_folder = 'search_results_%s' % str(datetime.datetime.now()).replace(' ', '_')
+                    new_folder = 'catfish_search_results_%s' % str(datetime.datetime.now()).replace(' ', '_').split('.')[0]
                     foldername = os.path.join(foldername, new_folder)
                     os.mkdir(foldername)
                 # Try to save the files.
