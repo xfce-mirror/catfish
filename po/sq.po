@@ -6,16 +6,16 @@
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2024
 # Xfce Bot <transifex@xfce.org>, 2024
-# Besnik Bleta <besnik@programeshqip.org>, 2024
+# Besnik Bleta <besnik@programeshqip.org>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-11-02 00:53+0100\n"
+"POT-Creation-Date: 2025-01-31 12:50+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Besnik Bleta <besnik@programeshqip.org>, 2024\n"
+"Last-Translator: Besnik Bleta <besnik@programeshqip.org>, 2025\n"
 "Language-Team: Albanian (https://app.transifex.com/xfce/teams/16840/sq/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Language: sq\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1083
+#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1101
 #: catfish_lib/catfishconfig.py:94
 msgid "Catfish File Search"
 msgstr "Kërkim Kartelash Catfish"
@@ -141,7 +141,7 @@ msgstr "S’u gjet dosje!"
 
 #. Restore Cancel button
 #. Buttons
-#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1226
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1244
 #: catfish/CatfishWindow.py:798 catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Anuloje"
@@ -150,153 +150,157 @@ msgstr "Anuloje"
 msgid "Select Folder"
 msgstr "Përzgjidhje Dosje"
 
-#: data/ui/CatfishWindow.ui:170
+#: data/ui/CatfishWindow.ui:177
 msgid "_Open"
 msgstr "_Hape"
 
-#: data/ui/CatfishWindow.ui:181
+#: data/ui/CatfishWindow.ui:188
 msgid "_Open with..."
 msgstr "_Hapeni me…"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
-#: data/ui/CatfishWindow.ui:198
+#: data/ui/CatfishWindow.ui:205
 msgid "Show in _File Manager"
 msgstr "Shfaqe në _Përgjegjës Kartelash"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
-#: data/ui/CatfishWindow.ui:215
+#: data/ui/CatfishWindow.ui:222
 msgid "_Copy Location"
 msgstr "_Kopjoji Vendndodhjen"
 
-#: data/ui/CatfishWindow.ui:226
+#: data/ui/CatfishWindow.ui:233
 msgid "_Save as..."
 msgstr "_Ruajeni si…"
 
-#: data/ui/CatfishWindow.ui:243
+#: data/ui/CatfishWindow.ui:244
+msgid "_Copy selected items to folder..."
+msgstr "_Kopjo në dosje objektet e përzgjedhur…"
+
+#: data/ui/CatfishWindow.ui:261
 msgid "_Delete..."
 msgstr "_Fshini…"
 
-#: data/ui/CatfishWindow.ui:267
+#: data/ui/CatfishWindow.ui:285
 msgid "File Extensions"
 msgstr "Zgjatime Kartelash"
 
-#: data/ui/CatfishWindow.ui:288
+#: data/ui/CatfishWindow.ui:306
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr ""
 "Jepni një listë zgjatimesh kartelash, ndarë me presje (p.sh., odt, png, txt)"
 
-#: data/ui/CatfishWindow.ui:316
+#: data/ui/CatfishWindow.ui:334
 msgid "Documents"
 msgstr "Dokumente"
 
-#: data/ui/CatfishWindow.ui:324
+#: data/ui/CatfishWindow.ui:342
 msgid "Folders"
 msgstr "Dosje"
 
-#: data/ui/CatfishWindow.ui:332
+#: data/ui/CatfishWindow.ui:350
 msgid "Images"
 msgstr "Figura"
 
-#: data/ui/CatfishWindow.ui:340
+#: data/ui/CatfishWindow.ui:358
 msgid "Music"
 msgstr "Muzikë"
 
-#: data/ui/CatfishWindow.ui:348
+#: data/ui/CatfishWindow.ui:366
 msgid "Videos"
 msgstr "Video"
 
-#: data/ui/CatfishWindow.ui:356
+#: data/ui/CatfishWindow.ui:374
 msgid "Applications"
 msgstr "Aplikacione"
 
-#: data/ui/CatfishWindow.ui:364
+#: data/ui/CatfishWindow.ui:382
 msgid "Archives"
 msgstr "Arkiva"
 
-#: data/ui/CatfishWindow.ui:372
+#: data/ui/CatfishWindow.ui:390
 msgid "Other"
 msgstr "Tjetër"
 
-#: data/ui/CatfishWindow.ui:380
+#: data/ui/CatfishWindow.ui:398
 msgid "Extension..."
 msgstr "Zgjatim…"
 
-#: data/ui/CatfishWindow.ui:406
+#: data/ui/CatfishWindow.ui:424
 msgid "Any time"
 msgstr "Kurdo"
 
-#: data/ui/CatfishWindow.ui:414 catfish/CatfishWindow.py:1917
+#: data/ui/CatfishWindow.ui:432 catfish/CatfishWindow.py:1963
 msgid "Today"
 msgstr "Sot"
 
-#: data/ui/CatfishWindow.ui:422
+#: data/ui/CatfishWindow.ui:440
 msgid "This week"
 msgstr "Këtë javë"
 
-#: data/ui/CatfishWindow.ui:430
+#: data/ui/CatfishWindow.ui:448
 msgid "This month"
 msgstr "Këtë muaj"
 
-#: data/ui/CatfishWindow.ui:438
+#: data/ui/CatfishWindow.ui:456
 msgid "Custom..."
 msgstr "Vetjak…"
 
-#: data/ui/CatfishWindow.ui:510 data/ui/CatfishWindow.ui:605
+#: data/ui/CatfishWindow.ui:528 data/ui/CatfishWindow.ui:623
 msgid "Go to Today"
 msgstr "Shko te Sot"
 
-#: data/ui/CatfishWindow.ui:538
+#: data/ui/CatfishWindow.ui:556
 msgid "<b>Start Date</b>"
 msgstr "<b>Datë Fillimi</b>"
 
-#: data/ui/CatfishWindow.ui:633
+#: data/ui/CatfishWindow.ui:651
 msgid "<b>End Date</b>"
 msgstr "<b>Datë Përfundimi</b>"
 
-#: data/ui/CatfishWindow.ui:648 catfish_lib/Window.py:240
+#: data/ui/CatfishWindow.ui:666 catfish_lib/Window.py:240
 #: data/metainfo/catfish.appdata.xml.in:7
 msgid "Catfish"
 msgstr "Catfish"
 
-#: data/ui/CatfishWindow.ui:675
+#: data/ui/CatfishWindow.ui:693
 msgid "Update"
 msgstr "Përditësoje"
 
-#: data/ui/CatfishWindow.ui:716
+#: data/ui/CatfishWindow.ui:734
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr "Baza e të dhënave është më e vjetër se 7 ditë.  Të përditësohet tani?"
 
-#: data/ui/CatfishWindow.ui:774
+#: data/ui/CatfishWindow.ui:792
 msgid "File Type"
 msgstr "Lloj Kartele"
 
-#: data/ui/CatfishWindow.ui:913 catfish/CatfishWindow.py:1631
+#: data/ui/CatfishWindow.ui:931 catfish/CatfishWindow.py:1668
 msgid "Modified"
 msgstr "Ndryshuar më"
 
-#: data/ui/CatfishWindow.ui:1104 catfish/CatfishWindow.py:2237
+#: data/ui/CatfishWindow.ui:1122 catfish/CatfishWindow.py:2283
 msgid "Results will be displayed as soon as they are found."
 msgstr "Përfundimet do të shfaqen sapo të gjenden."
 
-#: data/ui/CatfishWindow.ui:1240
+#: data/ui/CatfishWindow.ui:1258
 msgid "Unlock"
 msgstr "Shkyçe"
 
-#: data/ui/CatfishWindow.ui:1292
+#: data/ui/CatfishWindow.ui:1310
 msgid "<b>Database:</b>"
 msgstr "<b>Bazë të dhënash:</b>"
 
-#: data/ui/CatfishWindow.ui:1305
+#: data/ui/CatfishWindow.ui:1323
 msgid "<b>Updated:</b>"
 msgstr "<b>Përditësuar më:</b>"
 
-#: data/ui/CatfishWindow.ui:1318
+#: data/ui/CatfishWindow.ui:1336
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Përditësoje Bazën e të Dhënave të Kërkimeve</b></big>"
 
-#: data/ui/CatfishWindow.ui:1332
+#: data/ui/CatfishWindow.ui:1350
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -304,47 +308,47 @@ msgstr ""
 "Për gjetje më të shpejtë përfundimesh kërkimi, lypset të rifreskohet baza e të dhënave të kërkimeve.\n"
 "Ky veprim lyp të drejta përgjegjësi."
 
-#: data/ui/CatfishWindow.ui:1464
+#: data/ui/CatfishWindow.ui:1482
 msgid "Update Search Database"
 msgstr "Përditësoni Bazë të Dhënash Kërkimesh"
 
-#: data/ui/CatfishWindow.ui:1488
+#: data/ui/CatfishWindow.ui:1506
 msgid "Search for files"
 msgstr "Kërkoni për kartela"
 
-#: data/ui/CatfishWindow.ui:1533
+#: data/ui/CatfishWindow.ui:1552
 msgid "Compact List"
 msgstr "Listë e Ngjeshur"
 
-#: data/ui/CatfishWindow.ui:1552
+#: data/ui/CatfishWindow.ui:1571
 msgid "Thumbnails"
 msgstr "Miniatura"
 
-#: data/ui/CatfishWindow.ui:1603
+#: data/ui/CatfishWindow.ui:1622
 msgid "Show _sidebar"
 msgstr "Shfaq _anështyllë"
 
-#: data/ui/CatfishWindow.ui:1642
+#: data/ui/CatfishWindow.ui:1661
 msgid "Show _hidden files"
 msgstr "Shfaq kartela të _fshehura"
 
-#: data/ui/CatfishWindow.ui:1657
+#: data/ui/CatfishWindow.ui:1676
 msgid "Search file _contents"
 msgstr "Kërko te _lëndë kartele"
 
-#: data/ui/CatfishWindow.ui:1674
+#: data/ui/CatfishWindow.ui:1693
 msgid "_Match results exactly"
 msgstr "Përputhje _saktësisht e përfundimeve"
 
-#: data/ui/CatfishWindow.ui:1727
+#: data/ui/CatfishWindow.ui:1746
 msgid "_Refresh search index..."
 msgstr "_Rifreskoni tregues kërkimesh…"
 
-#: data/ui/CatfishWindow.ui:1782
+#: data/ui/CatfishWindow.ui:1801
 msgid "_Preferences"
 msgstr "_Parapëlqime"
 
-#: data/ui/CatfishWindow.ui:1823
+#: data/ui/CatfishWindow.ui:1842
 msgid "_About"
 msgstr "_Rreth"
 
@@ -477,35 +481,39 @@ msgstr ""
 msgid "Begin Search"
 msgstr "Nise Kërkimin"
 
-#: catfish/CatfishWindow.py:1073
+#: catfish/CatfishWindow.py:1084
 msgid "No folder selected."
 msgstr "S’u përzgjodh dosje."
 
-#: catfish/CatfishWindow.py:1078
+#: catfish/CatfishWindow.py:1089
 msgid "Folder not found."
 msgstr "S’u gjet dosje."
 
-#: catfish/CatfishWindow.py:1340
+#: catfish/CatfishWindow.py:1351
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" s’u hap dot."
 
-#: catfish/CatfishWindow.py:1496
+#: catfish/CatfishWindow.py:1507 catfish/CatfishWindow.py:1533
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" s’u ruajt dot."
 
-#: catfish/CatfishWindow.py:1513
+#: catfish/CatfishWindow.py:1514
+msgid "Selected Results"
+msgstr "Përfundime të Përzgjedhura"
+
+#: catfish/CatfishWindow.py:1549
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" s’u fshi dot."
 
-#: catfish/CatfishWindow.py:1552
+#: catfish/CatfishWindow.py:1588
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Ruajeni \"%s\" si…"
 
-#: catfish/CatfishWindow.py:1587
+#: catfish/CatfishWindow.py:1624
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -514,7 +522,7 @@ msgstr ""
 "Jeni i sigurt se doni të fshihet \n"
 "\"%s\" përgjithmonë?"
 
-#: catfish/CatfishWindow.py:1591
+#: catfish/CatfishWindow.py:1628
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -523,47 +531,47 @@ msgstr ""
 "Jeni i sigurt se doni të fshihen \n"
 "përgjithmonë %i kartelat e përzgjedhura?"
 
-#: catfish/CatfishWindow.py:1594
+#: catfish/CatfishWindow.py:1631
 msgid "If you delete a file, it is permanently lost."
 msgstr "Nëse fshini një kartelë, humbet përgjithmonë."
 
-#: catfish/CatfishWindow.py:1628
+#: catfish/CatfishWindow.py:1665
 msgid "Filename"
 msgstr "Emër kartele"
 
-#: catfish/CatfishWindow.py:1629
+#: catfish/CatfishWindow.py:1666
 msgid "Size"
 msgstr "Madhësi"
 
-#: catfish/CatfishWindow.py:1630
+#: catfish/CatfishWindow.py:1667
 msgid "Location"
 msgstr "Vendndodhje"
 
-#: catfish/CatfishWindow.py:1640
+#: catfish/CatfishWindow.py:1677
 msgid "Preview"
 msgstr "Paraparje"
 
-#: catfish/CatfishWindow.py:1647
+#: catfish/CatfishWindow.py:1684
 msgid "Details"
 msgstr "Hollësi"
 
-#: catfish/CatfishWindow.py:1838
+#: catfish/CatfishWindow.py:1875
 msgid "Open with default applications"
 msgstr "Hapi me aplikacionet parazgjedhje"
 
-#: catfish/CatfishWindow.py:1854
+#: catfish/CatfishWindow.py:1891
 msgid "Open with"
 msgstr "Hape me"
 
-#: catfish/CatfishWindow.py:1919
+#: catfish/CatfishWindow.py:1965
 msgid "Yesterday"
 msgstr "Dje"
 
-#: catfish/CatfishWindow.py:2027
+#: catfish/CatfishWindow.py:2073
 msgid "No files found."
 msgstr "S’u gjetën kartela."
 
-#: catfish/CatfishWindow.py:2029
+#: catfish/CatfishWindow.py:2075
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -571,29 +579,29 @@ msgstr ""
 "Provoni ta bëni kërkimin tuaj më pak\n"
 "të hollësishëm ose provoni në një drejtori tjetër."
 
-#: catfish/CatfishWindow.py:2036
+#: catfish/CatfishWindow.py:2082
 msgid "1 file found."
 msgstr "U gjet 1 kartelë."
 
-#: catfish/CatfishWindow.py:2038
+#: catfish/CatfishWindow.py:2084
 #, python-format
 msgid "%i files found."
 msgstr "U gjetën %i kartela."
 
-#: catfish/CatfishWindow.py:2047 catfish/CatfishWindow.py:2050
+#: catfish/CatfishWindow.py:2093 catfish/CatfishWindow.py:2096
 msgid "bytes"
 msgstr "bajte"
 
-#: catfish/CatfishWindow.py:2235 catfish/CatfishWindow.py:2245
+#: catfish/CatfishWindow.py:2281 catfish/CatfishWindow.py:2291
 msgid "Searching..."
 msgstr "Po kërkohet…"
 
-#: catfish/CatfishWindow.py:2243
+#: catfish/CatfishWindow.py:2289
 #, python-format
 msgid "\"%s\" - searching | Catfish"
 msgstr "“%s” - po kërkohet | Catfish"
 
-#: catfish/CatfishWindow.py:2353
+#: catfish/CatfishWindow.py:2399
 #, python-format
 msgid "\"%s\" - results | Catfish"
 msgstr "“%s” - përfundime | Catfish"
