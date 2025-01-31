@@ -1507,6 +1507,31 @@ class CatfishWindow(Window):
                     self.get_error_dialog(_('\"%s\" could not be saved.') %
                                           os.path.basename(filename), str(msg))
 
+    def on_menu_copy_to_activate(self, widget):
+        """Show a folder dialog and copy the selected files to that directory."""
+        selected_file = self.selected_filenames[0]
+        foldername = self.get_save_dialog(
+            _('Selected Results'),
+            Gtk.FileChooserAction.SELECT_FOLDER)
+        original = selected_file
+        if foldername:
+            try:
+                # Check if the selected folder is empty
+                # If so, create a subdirectory
+                if os.listdir(foldername):
+                    new_folder = 'catfish_search_results_%s' % str(datetime.datetime.now()).replace(' ', '_').split('.')[0]
+                    foldername = os.path.join(foldername, new_folder)
+                    os.mkdir(foldername)
+                # Try to save the files.
+                for filename in self.selected_filenames:
+                    copy2(filename, foldername)
+
+            except Exception as msg:
+                # If the file save fails, throw an error.
+                LOGGER.debug('Exception encountered while saving %s.' +
+                             '\n  Exception: %s', foldername, msg)
+                self.get_error_dialog(_('\"%s\" could not be saved.') %
+                                      os.path.basename(foldername), str(msg))
     def delete_file(self, filename):
         try:
             # Delete the file.
@@ -1554,7 +1579,7 @@ class CatfishWindow(Window):
         self.remove_filenames_from_treeview(filenames)
         self.refilter()
 
-    def get_save_dialog(self, filename):
+    def get_save_dialog(self, filename, action=Gtk.FileChooserAction.SAVE):
         """Show the Save As FileChooserDialog.
 
         Return the filename, or None if cancelled."""
@@ -1562,11 +1587,12 @@ class CatfishWindow(Window):
 
         dialog = Gtk.FileChooserDialog(title=_('Save "%s" as...') % basename,
                                        transient_for=self,
-                                       action=Gtk.FileChooserAction.SAVE)
+                                       action=action)
         dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
                            Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT)
         dialog.set_default_response(Gtk.ResponseType.REJECT)
-        dialog.set_current_name(basename.replace('�', '_'))
+        if action == Gtk.FileChooserAction.SAVE or action == Gtk.FileChooserAction.CREATE_FOLDER:
+            dialog.set_current_name(basename.replace('�', '_'))
         dialog.set_do_overwrite_confirmation(True)
         response = dialog.run()
         save_as = dialog.get_filename()
