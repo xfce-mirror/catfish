@@ -1511,7 +1511,7 @@ class CatfishWindow(Window):
         """Show a folder dialog and copy the selected files to that directory."""
         selected_file = self.selected_filenames[0]
         foldername = self.get_save_dialog(
-            _'Save Selected Results',
+            _('Selected Results'),
             Gtk.FileChooserAction.SELECT_FOLDER)
         original = selected_file
         if foldername:
