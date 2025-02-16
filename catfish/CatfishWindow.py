@@ -1465,8 +1465,10 @@ class CatfishWindow(Window):
         dialog = Gtk.Dialog()
         dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
                            Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT)
+        dialog.set_default_response(Gtk.ResponseType.ACCEPT)
         box = dialog.get_content_area()
         entry = Gtk.Entry()
+        entry.set_activates_default(True)
         basename = os.path.basename(sel_file)
         entry.set_text(basename)
         box.pack_start(Gtk.Label(label="Enter the new name:"), True, True, 8)
@@ -1474,13 +1476,17 @@ class CatfishWindow(Window):
         dialog.show_all()
         resp = dialog.run()
         if resp == Gtk.ResponseType.ACCEPT:
-            stem = os.path.dirname(sel_file)
+            dirname = os.path.dirname(sel_file)
             new_name = entry.get_text()
-            os.rename(sel_file, os.path.join(stem, new_name))
+            os.rename(sel_file, os.path.join(dirname, new_name))
             model = self.treeview.get_model().get_model()
             treeiter = model.get_iter(sel)
             row = model[treeiter]
-            if not(self.search_keyword in new_name):
+            if self.settings.get_setting('match-results-exactly'):
+                compare = (self.search_keyword, new_name)
+            else:
+                compare = (self.search_keyword.lower(), new_name.lower())
+            if not(compare[0] in compare[1]):
                 self.remove_filenames_from_treeview((sel_file,))
                 self.refilter()
             else:
