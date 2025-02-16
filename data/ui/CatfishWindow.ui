@@ -212,6 +212,16 @@
       </object>
     </child>
     <child>
+      <object class="GtkImageMenuItem" id="file_menu_rename">
+        <property name="label" translatable="yes">_Rename</property>
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="use-underline">True</property>
+        <property name="use-stock">False</property>
+        <signal name="activate" handler="on_menu_rename_activate" swapped="no"/>
+      </object>
+    </child>
+    <child>
       <object class="GtkSeparatorMenuItem" id="file_menu_sep1">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
