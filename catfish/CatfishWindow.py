@@ -265,6 +265,7 @@ class CatfishWindow(Window):
         self.file_menu_open = builder.get_object("file_menu_open")
         self.file_menu_open_with = builder.get_object("file_menu_open_with")
         self.file_menu_delete = builder.get_named_object("menus.file.delete")
+        self.file_menu_rename = builder.get_object("file_menu_rename")
         self.treeview_click_on = False
 
         # -- Update Search Index Dialog -- #
@@ -986,7 +987,8 @@ class CatfishWindow(Window):
             self.yesterday = self.today - datetime.timedelta(days=1)
             self.this_week = self.today - datetime.timedelta(days=6)
 
-            task = self.perform_query(widget.get_text())
+            self.search_keyword = widget.get_text()
+            task = self.perform_query(self.search_keyword)
             GLib.idle_add(next, task)
 
     def on_search_entry_icon_press(self, widget, event, user_data):  # pylint: disable=W0613
@@ -1457,6 +1459,42 @@ class CatfishWindow(Window):
                 nfiles.add(os.path.dirname(filename))
         return files, dirs, nfiles
 
+    def on_menu_rename_activate(self, widget):
+        sel = self.treeview.get_selection().get_selected_rows()[1][0]
+        sel_file = self.selected_filenames[0]
+        dialog = Gtk.Dialog()
+        dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
+                           Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT)
+        dialog.set_default_response(Gtk.ResponseType.ACCEPT)
+        box = dialog.get_content_area()
+        entry = Gtk.Entry()
+        entry.set_activates_default(True)
+        basename = os.path.basename(sel_file)
+        entry.set_text(basename)
+        box.pack_start(Gtk.Label(label="Enter the new name:"), True, True, 8)
+        box.pack_start(entry, True, True, 8)
+        dialog.show_all()
+        resp = dialog.run()
+        if resp == Gtk.ResponseType.ACCEPT:
+            dirname = os.path.dirname(sel_file)
+            new_name = entry.get_text()
+            os.rename(sel_file, os.path.join(dirname, new_name))
+            model = self.treeview.get_model().get_model()
+            treeiter = model.get_iter(sel)
+            row = model[treeiter]
+            if self.settings.get_setting('match-results-exactly'):
+                compare = (self.search_keyword, new_name)
+            else:
+                compare = (self.search_keyword.lower(), new_name.lower())
+            if not(compare[0] in compare[1]):
+                self.remove_filenames_from_treeview((sel_file,))
+                self.refilter()
+            else:
+                row[1] = new_name
+            LOGGER.debug("Renaming %s to %s" % (basename, new_name))
+        dialog.destroy()
+        return True
+
     def on_menu_copy_location_activate(self, widget):  # pylint: disable=W0613
         """Copy the selected file name to the clipboard."""
         clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
@@ -1843,6 +1881,10 @@ class CatfishWindow(Window):
                 writeable = False
         self.file_menu_delete.set_sensitive(writeable)
         self.file_menu_open.set_label(self.set_right_click_open_label())
+        if len(self.selected_filenames) > 1:
+            self.file_menu_rename.hide()
+        else:
+            self.file_menu_rename.show()
         self.file_menu.popup_at_pointer()
         return True
 
@@ -1907,6 +1949,9 @@ class CatfishWindow(Window):
         if event.keyval == Gdk.KEY_slash:
             self.set_focus(self.builder.get_object('toolbar_search'))
             self.builder.get_object('results_treeview').get_selection().unselect_all()
+        if event.keyval == Gdk.KEY_F2:
+             if len(self.selected_filenames) == 1:
+                 self.on_menu_rename_activate(None)
         return False
 
     def new_column(self, label, colid):
