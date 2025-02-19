@@ -1952,6 +1952,9 @@ class CatfishWindow(Window):
         if event.keyval == Gdk.KEY_F2:
              if len(self.selected_filenames) == 1:
                  self.on_menu_rename_activate(None)
+        if event.keyval == Gdk.KEY_Delete:
+            self.on_menu_delete_activate(None)
+
         return False
 
     def new_column(self, label, colid):
