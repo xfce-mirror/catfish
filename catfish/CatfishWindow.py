@@ -1954,7 +1954,8 @@ class CatfishWindow(Window):
                  self.on_menu_rename_activate(None)
         if event.keyval == Gdk.KEY_Delete:
             self.on_menu_delete_activate(None)
-
+        if "Control" in self.keys_pressed and "Shift" in self.keys_pressed and "C" in self.keys_pressed:
+            self.on_menu_copy_location_activate(None)
         return False
 
     def new_column(self, label, colid):
