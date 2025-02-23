@@ -29,7 +29,7 @@ try:
 except ValueError:
     XFCONF_SUPPORT = False
 
-from catfish_lib import helpers
+from catfish_lib import helpers, CatfishColumn
 
 if XFCONF_SUPPORT:
     Xfconf.init()
@@ -50,7 +50,8 @@ DEFAULT_SETTINGS = {
     'window-height': (int, 540),
     'window-x': (int, -1),
     'window-y': (int, -1),
-    'exclude-paths': (str, '/dev;~/.cache;~/.gvfs;')
+    'exclude-paths': (str, '/dev;~/.cache;~/.gvfs;'),
+    'columns': (str, 'name;path;size;date')
 }
 
 
@@ -99,13 +100,15 @@ class CatfishSettings:
                         exclude_directories.append(path)
                 exclude_directories.sort()
                 return exclude_directories
+            if key == "columns":
+                return  [CatfishColumn.all_columns[x] for x in self.settings[key].strip().split(';')]
             return self.settings[key]
         return None
 
     def set_setting(self, key, value):
         """Set the value for the specified key."""
         if key in self.settings:
-            if key == "exclude-paths":
+            if key == "exclude-paths" or key == "columns":
                 value = ";".join(value)
             if key == 'use-headerbar':
                 self.headerbar_configured = True
