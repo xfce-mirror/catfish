@@ -9,6 +9,7 @@ catfish_lib_sources = [
   'SudoDialog.py',
   'Thumbnailer.py',
   'Window.py',
+  'CatfishColumn.py'
 ]
 
 catfish_lib_defs_conf = configuration_data()

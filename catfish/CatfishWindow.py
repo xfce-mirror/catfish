@@ -32,6 +32,7 @@ import subprocess
 import time
 import zipfile
 import tempfile
+from enum import IntEnum
 from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
@@ -56,6 +57,7 @@ from catfish_lib import catfishconfig, helpers, get_about
 from catfish_lib import CatfishSettings, SudoDialog, Window
 from catfish_lib import Thumbnailer
 from catfish_lib import FiletypeLists
+from catfish_lib import CatfishColumn
 
 LOGGER = logging.getLogger('catfish')
 
@@ -164,6 +166,9 @@ class CatfishWindow(Window):
         self.AboutDialog = self.get_about_dialog
 
         self.settings = CatfishSettings.CatfishSettings()
+
+        CatfishColumn.all_columns['size'].set_col_render_func(self.cell_data_func_filesize)
+        CatfishColumn.all_columns['date'].set_col_render_func(self.cell_data_func_modified)
 
         # -- Folder Chooser Combobox -- #
         self.folderchooser = builder.get_named_object("toolbar.folderchooser")
@@ -640,6 +645,36 @@ class CatfishWindow(Window):
 
         return (column_id, order)
 
+    def parse_columns_option(self):
+        columns = []
+        default_columns = self.settings.get_setting('columns')
+
+        if self.options.col:
+            args = self.options.col.lower().split(',')
+            for arg in args:
+                try:
+                    columns.append(CatfishColumn.all_columns[arg])
+                except KeyError:
+                    continue
+
+        if len(columns) < 1:
+            columns = default_columns
+
+        return tuple(columns)
+
+    def parse_colsize_option(self):
+        if self.options.col_size:
+            try:
+                column_widths = [int(x) for x in self.options.col_size.split(',')]
+            except ValueError:
+                column_widths = [-1 for x in self.options.col_size.split(',')]
+        else:
+            column_widths = []
+        if len(column_widths) < len(self.columns):
+            for i in range(len(column_widths), len(self.columns)):
+                column_widths.append(-1)
+        return column_widths
+
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
         self.options = options
@@ -648,6 +683,9 @@ class CatfishWindow(Window):
         self.folderchooser.set_filename(self.options.path)
 
         self.sort = self.parse_sort_option()
+
+        self.columns = self.parse_columns_option()
+        self.column_sizes = self.parse_colsize_option()
 
         # Set non-flags as search keywords.
         self.search_entry.set_text(' '.join(args))
@@ -1700,10 +1738,8 @@ class CatfishWindow(Window):
         """Prepare the list view in the results pane."""
         for column in self.treeview.get_columns():
             self.treeview.remove_column(column)
-        self.treeview.append_column(self.new_column(_('Filename'), 1))
-        self.treeview.append_column(self.new_column(_('Size'), 2))
-        self.treeview.append_column(self.new_column(_('Location'), 3))
-        self.treeview.append_column(self.new_column(_('Modified'), 4))
+        for (col, size) in zip(self.columns, self.column_sizes):
+            self.treeview.append_column(self.new_column(col, size))
         self.icon_size = Gtk.IconSize.MENU
 
     def setup_large_view(self):
@@ -1958,32 +1994,29 @@ class CatfishWindow(Window):
             self.on_menu_copy_location_activate(None)
         return False
 
-    def new_column(self, label, colid):
+    def new_column(self, column):
         """New Column function for creating TreeView columns easily."""
-        if colid == 1:
-            column = Gtk.TreeViewColumn(label)
+        tree_column = Gtk.TreeViewColumn()
+        tree_column.set_title(column.display_name)
+        if column.colname == 'name':
             cell = Gtk.CellRendererPixbuf()
-            column.pack_start(cell, False)
-            column.set_cell_data_func(cell, self.preview_cell_data_func, None)
-            cell = Gtk.CellRendererText()
-            column.pack_start(cell, False)
-            column.add_attribute(cell, 'text', colid)
+            tree_column.pack_start(cell, False)
+            tree_column.set_cell_data_func(cell, self.preview_cell_data_func, None)
+        cell = Gtk.CellRendererText()
+        tree_column.pack_start(cell, False)
+        if column.col_rend_func:
+            tree_column.set_cell_data_func(cell, column.col_rend_func, column.colid)
         else:
-            cell = Gtk.CellRendererText()
-            column = Gtk.TreeViewColumn(label, cell)
-            if colid == 2:
-                cell.set_property('xalign', 1.0)
-                column.set_cell_data_func(cell, self.cell_data_func_filesize, colid)
-            elif colid == 3:
-                column.set_min_width(120)
-                column.set_expand(True)
-                cell.set_property('ellipsize', Pango.EllipsizeMode.START)
-                column.add_attribute(cell, 'text', colid)
-            elif colid == 4:
-                column.set_cell_data_func(cell, self.cell_data_func_modified, colid)
-        column.set_sort_column_id(colid)
-        column.set_resizable(True)
-        return column
+            tree_column.add_attribute(cell, 'text', column.colid)
+        if column.colname ==  'path':
+            cell.set_property('ellipsize', Pango.EllipsizeMode.START)
+        tree_column.set_resizable(True)
+        if size == -1:
+            tree_column.set_expand(True)
+        else:
+            tree_column.set_fixed_width(size)
+        tree_column.set_sort_column_id(column.colid)
+        return tree_column
 
     def cell_data_func_filesize(self, column, cell_renderer,  # pylint: disable=W0613
                                 tree_model, tree_iter, cellid):
