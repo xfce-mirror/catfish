@@ -32,7 +32,6 @@ import subprocess
 import time
 import zipfile
 import tempfile
-from enum import IntEnum
 from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
@@ -1994,7 +1993,7 @@ class CatfishWindow(Window):
             self.on_menu_copy_location_activate(None)
         return False
 
-    def new_column(self, column):
+    def new_column(self, column, size):
         """New Column function for creating TreeView columns easily."""
         tree_column = Gtk.TreeViewColumn()
         tree_column.set_title(column.display_name)
