@@ -132,6 +132,7 @@ class CatfishWindow(Window):
 
     mimetypes = dict()
     search_in_progress = False
+    disable_search = False
 
     def get_about_dialog(self):
         about = get_about()
@@ -642,6 +643,10 @@ class CatfishWindow(Window):
 
     def parse_options(self, options, args):
         """Parse commandline arguments into Catfish runtime settings."""
+
+        # While options are set, suppress searches started by toggling options
+        self.disable_search = True
+
         self.options = options
         self.options.path = self.parse_path_option(args)
 
@@ -687,6 +692,9 @@ class CatfishWindow(Window):
             self.show_thumbnail = False
             self.setup_small_view()
             self.list_toggle.set_active(True)
+
+        # Re-enable searching before parsing --start option
+        self.disable_search = False
 
         if self.options.start:
             self.on_search_entry_activate(self.search_entry)
@@ -972,24 +980,25 @@ class CatfishWindow(Window):
 
     def on_search_entry_activate(self, widget):
         """If the search entry is not empty, and there is no ongoing search, perform the query."""
-        if len(widget.get_text()) > 0:
+        if not self.disable_search:
+            if len(widget.get_text()) > 0:
 
-            # If a search is in progress, stop it
-            if self.search_in_progress:
-                self.stop_search = True
-                self.search_engine.stop()
+                # If a search is in progress, stop it
+                if self.search_in_progress:
+                    self.stop_search = True
+                    self.search_engine.stop()
 
-            self.statusbar.show()
+                self.statusbar.show()
 
-            # Store search start time for displaying friendly dates
-            now = datetime.datetime.now()
-            self.today = datetime.datetime(now.year, now.month, now.day)
-            self.yesterday = self.today - datetime.timedelta(days=1)
-            self.this_week = self.today - datetime.timedelta(days=6)
+                # Store search start time for displaying friendly dates
+                now = datetime.datetime.now()
+                self.today = datetime.datetime(now.year, now.month, now.day)
+                self.yesterday = self.today - datetime.timedelta(days=1)
+                self.this_week = self.today - datetime.timedelta(days=6)
 
-            self.search_keyword = widget.get_text()
-            task = self.perform_query(self.search_keyword)
-            GLib.idle_add(next, task)
+                self.search_keyword = widget.get_text()
+                task = self.perform_query(self.search_keyword)
+                GLib.idle_add(next, task)
 
     def on_search_entry_icon_press(self, widget, event, user_data):  # pylint: disable=W0613
         """If search in progress, stop the search, otherwise, start."""
