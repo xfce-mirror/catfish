@@ -2135,7 +2135,8 @@ class CatfishWindow(Window):
             files_str = ngettext("file", "files", count)
             duration_str = ngettext("second", "seconds", duration)
 
-            self.statusbar_label.set_label(_("{n} {files} found in {m:.{prec}f} {seconds}").format(n=count, files=files_str, prec=d_precision, m=duration, seconds=duration_str))
+            self.statusbar_label.set_label(_("{n} {files} found in {m:.{prec}f} {seconds}").format(
+                n=count, files=files_str, prec=d_precision, m=duration, seconds=duration_str))
 
     def format_size(self, size, precision=1):
         """Make a file size human readable."""
