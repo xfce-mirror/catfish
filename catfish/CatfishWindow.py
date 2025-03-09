@@ -32,6 +32,7 @@ import subprocess
 import time
 import zipfile
 import tempfile
+from gettext import ngettext
 from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
@@ -2120,11 +2121,12 @@ class CatfishWindow(Window):
         try:
             self.results_filter.refilter()
             n_results = len(self.treeview.get_model())
-            self.show_results(n_results)
+            duration = self.search_engine.stop_time - self.search_engine.start_time
+            self.show_results(n_results, duration)
         except AttributeError:
             pass
 
-    def show_results(self, count):
+    def show_results(self, count, duration):
         if count == 0:
             self.builder.get_object("results_scrolledwindow").hide()
             self.builder.get_object("splash").show()
@@ -2137,10 +2139,13 @@ class CatfishWindow(Window):
         else:
             self.builder.get_object("splash").hide()
             self.builder.get_object("results_scrolledwindow").show()
-            if count == 1:
-                self.statusbar_label.set_label(_("1 file found."))
-            else:
-                self.statusbar_label.set_label(_("%i files found.") % count)
+            
+            d_precision = 0 if duration > 10 else 1
+            duration = round(duration, d_precision)
+            files_str = ngettext("file", "files", count)
+            duration_str = ngettext("second", "seconds", duration)
+
+            self.statusbar_label.set_label(_("{n} {files} found in {m:.{prec}f} {seconds}").format(n=count, files=files_str, prec=d_precision, m=duration, seconds=duration_str))
 
     def format_size(self, size, precision=1):
         """Make a file size human readable."""
@@ -2461,7 +2466,8 @@ class CatfishWindow(Window):
         n_results = 0
         if self.treeview.get_model() is not None:
             n_results = len(self.treeview.get_model())
-        self.show_results(n_results)
+        duration = self.search_engine.stop_time - self.search_engine.start_time
+        self.show_results(n_results, duration)
 
         self.search_in_progress = False
         self.refresh_search_entry()
