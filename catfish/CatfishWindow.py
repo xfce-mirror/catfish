@@ -2385,6 +2385,7 @@ class CatfishWindow(Window):
         folder = self.folderchooser.get_filename()
 
         results = []
+        n_results = 0
 
         # Check if this is a fulltext query or standard query.
         if self.filter_formats['fulltext']:
@@ -2441,12 +2442,16 @@ class CatfishWindow(Window):
                         model.append(None, [icon_name, displayed, size, path, modified,
                                             mimetype, hidden, exact])
 
-                    if not show_results:
-                        if len(self.treeview.get_model()) > 0:
+                    if self.treeview.get_model() is not None:
+                        n_results = len(self.treeview.get_model())
+                    if n_results > 0:
+                        if not show_results:
                             show_results = True
                             self.builder.get_object("splash").hide()
                             self.builder.get_object(
                                 "results_scrolledwindow").show()
+                        duration = time.time() - self.search_engine.start_time
+                        self.show_results(n_results, duration)
 
                 except OSError:
                     # file no longer exists
@@ -2464,7 +2469,6 @@ class CatfishWindow(Window):
         self.set_title(_('\"%s\" - results | Catfish') % keywords)
         self.spinner.hide()
 
-        n_results = 0
         if self.treeview.get_model() is not None:
             n_results = len(self.treeview.get_model())
         duration = self.search_engine.stop_time - self.search_engine.start_time
