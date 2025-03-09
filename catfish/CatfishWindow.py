@@ -32,6 +32,7 @@ import subprocess
 import time
 import zipfile
 import tempfile
+from gettext import ngettext
 from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
@@ -2141,10 +2142,10 @@ class CatfishWindow(Window):
             
             d_precision = 0 if duration > 10 else 1
             duration = round(duration, d_precision)
-            c_plural = "" if count == 1 else "s"
-            d_plural = "" if duration == 1 else "s"
+            files_str = ngettext("file", "files", count)
+            duration_str = ngettext("second", "seconds", duration)
 
-            self.statusbar_label.set_label(_("%i file%s found in %.*f second%s") % (count, c_plural, d_precision, duration, d_plural))
+            self.statusbar_label.set_label(_("{n} {files} found in {m:.{prec}f} {seconds}").format(n=count, files=files_str, prec=d_precision, m=duration, seconds=duration_str))
 
     def format_size(self, size, precision=1):
         """Make a file size human readable."""
