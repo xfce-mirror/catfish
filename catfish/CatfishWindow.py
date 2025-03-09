@@ -1015,8 +1015,9 @@ class CatfishWindow(Window):
         if text is None:
             return
 
-        task = self.get_suggestions(text)
-        GLib.idle_add(next, task)
+        if not disable_search:
+            task = self.get_suggestions(text)
+            GLib.idle_add(next, task)
 
     def on_search_entry_key_press(self,widget,event):
         # Change focus on down key
