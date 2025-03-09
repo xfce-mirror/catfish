@@ -1015,7 +1015,7 @@ class CatfishWindow(Window):
         if text is None:
             return
 
-        if not disable_search:
+        if not self.disable_search:
             task = self.get_suggestions(text)
             GLib.idle_add(next, task)
 
