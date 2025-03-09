@@ -2120,11 +2120,12 @@ class CatfishWindow(Window):
         try:
             self.results_filter.refilter()
             n_results = len(self.treeview.get_model())
-            self.show_results(n_results)
+            duration = self.search_engine.stop_time - self.search_engine.start_time
+            self.show_results(n_results, duration)
         except AttributeError:
             pass
 
-    def show_results(self, count):
+    def show_results(self, count, duration):
         if count == 0:
             self.builder.get_object("results_scrolledwindow").hide()
             self.builder.get_object("splash").show()
@@ -2137,10 +2138,13 @@ class CatfishWindow(Window):
         else:
             self.builder.get_object("splash").hide()
             self.builder.get_object("results_scrolledwindow").show()
-            if count == 1:
-                self.statusbar_label.set_label(_("1 file found."))
-            else:
-                self.statusbar_label.set_label(_("%i files found.") % count)
+            
+            d_precision = 0 if duration > 10 else 1
+            duration = round(duration, d_precision)
+            c_plural = "" if count == 1 else "s"
+            d_plural = "" if duration == 1 else "s"
+
+            self.statusbar_label.set_label(_("%i file%s found in %.*f second%s") % (count, c_plural, d_precision, duration, d_plural))
 
     def format_size(self, size, precision=1):
         """Make a file size human readable."""
@@ -2461,7 +2465,8 @@ class CatfishWindow(Window):
         n_results = 0
         if self.treeview.get_model() is not None:
             n_results = len(self.treeview.get_model())
-        self.show_results(n_results)
+        duration = self.search_engine.stop_time - self.search_engine.start_time
+        self.show_results(n_results, duration)
 
         self.search_in_progress = False
         self.refresh_search_entry()
