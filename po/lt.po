@@ -592,22 +592,22 @@ msgstr ""
 #: catfish/CatfishWindow.py:2145
 msgid "file"
 msgid_plural "files"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "failas"
+msgstr[1] "failai"
+msgstr[2] "failų"
+msgstr[3] "failas"
 
 #: catfish/CatfishWindow.py:2146
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "sekundė"
+msgstr[1] "sekundės"
+msgstr[2] "sekundžių"
+msgstr[3] "sekundė"
 
 #: catfish/CatfishWindow.py:2148
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
-msgstr ""
+msgstr "Rasta: {n} {files} per {m:.{prec}f} {seconds}"
 
 #: catfish/CatfishWindow.py:2158 catfish/CatfishWindow.py:2161
 msgid "bytes"
