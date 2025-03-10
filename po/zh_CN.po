@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-02-18 00:48+0100\n"
+"POT-Creation-Date: 2025-03-10 00:49+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2025\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/xfce/teams/16840/zh_CN/)\n"
@@ -145,7 +145,7 @@ msgstr "未找到文件夹！"
 #. Restore Cancel button
 #. Buttons
 #: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1254
-#: catfish/CatfishWindow.py:799 catfish_lib/SudoDialog.py:184
+#: catfish/CatfishWindow.py:808 catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "取消"
 
@@ -237,7 +237,7 @@ msgstr "扩展名..."
 msgid "Any time"
 msgstr "任何时间"
 
-#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2008
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2023
 msgid "Today"
 msgstr "今天"
 
@@ -282,11 +282,11 @@ msgstr "搜索数据库已超过7天，是否现在更新？"
 msgid "File Type"
 msgstr "文件类型"
 
-#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1706
+#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1717
 msgid "Modified"
 msgstr "修改时间"
 
-#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2328
+#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2348
 msgid "Results will be displayed as soon as they are found."
 msgstr "结果将在查找后立即显示。"
 
@@ -415,12 +415,12 @@ msgstr "选择文件后不要关闭"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: catfish/CatfishWindow.py:109
+#: catfish/CatfishWindow.py:110
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (无效的编码)"
 
-#: catfish/CatfishWindow.py:149
+#: catfish/CatfishWindow.py:151
 msgid "translator-credits"
 msgstr ""
 "Hunt Xu <huntxu@live.cn>, 2009.\n"
@@ -429,15 +429,15 @@ msgstr ""
 "玉堂白鹤 <yjwork@qq.com>, 2016.\n"
 "Xiaobo Zhou <zhouxiaobo.500@gmail.com>, 2013, 2014, 2017, 2018, 2021."
 
-#: catfish/CatfishWindow.py:300
+#: catfish/CatfishWindow.py:302
 msgid "Unknown"
 msgstr "未知"
 
-#: catfish/CatfishWindow.py:304
+#: catfish/CatfishWindow.py:306
 msgid "Never"
 msgstr "从不"
 
-#: catfish/CatfishWindow.py:416
+#: catfish/CatfishWindow.py:418
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -446,37 +446,37 @@ msgstr ""
 "在上面输入您要查找的文件或者\n"
 "点击 %s图标获取更多选项。"
 
-#: catfish/CatfishWindow.py:814
+#: catfish/CatfishWindow.py:823
 msgid "An error occurred while updating the database."
 msgstr "在更新数据库时发生错误。"
 
-#: catfish/CatfishWindow.py:816
+#: catfish/CatfishWindow.py:825
 msgid "Authentication failed."
 msgstr "认证失败。"
 
-#: catfish/CatfishWindow.py:822
+#: catfish/CatfishWindow.py:831
 msgid "Authentication cancelled."
 msgstr "认证取消。"
 
-#: catfish/CatfishWindow.py:828
+#: catfish/CatfishWindow.py:837
 msgid "Search database updated successfully."
 msgstr "搜索数据库更新成功。"
 
 #. Update the Cancel button to Close, make it default
-#: catfish/CatfishWindow.py:889
+#: catfish/CatfishWindow.py:898
 msgid "Close"
 msgstr "关闭"
 
 #. Set the dialog status to running.
-#: catfish/CatfishWindow.py:903
+#: catfish/CatfishWindow.py:912
 msgid "Updating..."
 msgstr "正在更新..."
 
-#: catfish/CatfishWindow.py:938
+#: catfish/CatfishWindow.py:947
 msgid "Stop Search"
 msgstr "停止搜索"
 
-#: catfish/CatfishWindow.py:939
+#: catfish/CatfishWindow.py:948
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -484,43 +484,43 @@ msgstr ""
 "搜索进行中...\n"
 "点击取消按钮或按Esc键可以停止。"
 
-#: catfish/CatfishWindow.py:950
+#: catfish/CatfishWindow.py:959
 msgid "Begin Search"
 msgstr "开始搜索"
 
-#: catfish/CatfishWindow.py:1086
+#: catfish/CatfishWindow.py:1097
 msgid "No folder selected."
 msgstr "未选择文件夹。"
 
-#: catfish/CatfishWindow.py:1091
+#: catfish/CatfishWindow.py:1102
 msgid "Folder not found."
 msgstr "未找到文件夹。"
 
-#: catfish/CatfishWindow.py:1353
+#: catfish/CatfishWindow.py:1364
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "无法打开 \"%s\"。"
 
-#: catfish/CatfishWindow.py:1545 catfish/CatfishWindow.py:1571
+#: catfish/CatfishWindow.py:1556 catfish/CatfishWindow.py:1582
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "无法保存 \"%s\"。"
 
-#: catfish/CatfishWindow.py:1552
+#: catfish/CatfishWindow.py:1563
 msgid "Selected Results"
 msgstr "选择结果"
 
-#: catfish/CatfishWindow.py:1587
+#: catfish/CatfishWindow.py:1598
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "无法删除 \"%s\"。"
 
-#: catfish/CatfishWindow.py:1626
+#: catfish/CatfishWindow.py:1637
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "将 \"%s\" 另存为..."
 
-#: catfish/CatfishWindow.py:1662
+#: catfish/CatfishWindow.py:1673
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -529,54 +529,54 @@ msgstr ""
 "您确定要永久删除\n"
 "\"%s\"?"
 
-#: catfish/CatfishWindow.py:1666
+#: catfish/CatfishWindow.py:1677
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr "您确定要删除选中的文件%i吗？"
 
-#: catfish/CatfishWindow.py:1669
+#: catfish/CatfishWindow.py:1680
 msgid "If you delete a file, it is permanently lost."
 msgstr "如果您删除该文件，它会永久丢失。"
 
-#: catfish/CatfishWindow.py:1703
+#: catfish/CatfishWindow.py:1714
 msgid "Filename"
 msgstr "文件名"
 
-#: catfish/CatfishWindow.py:1704
+#: catfish/CatfishWindow.py:1715
 msgid "Size"
 msgstr "大小"
 
-#: catfish/CatfishWindow.py:1705
+#: catfish/CatfishWindow.py:1716
 msgid "Location"
 msgstr "位置"
 
-#: catfish/CatfishWindow.py:1715
+#: catfish/CatfishWindow.py:1726
 msgid "Preview"
 msgstr "预览"
 
-#: catfish/CatfishWindow.py:1722
+#: catfish/CatfishWindow.py:1733
 msgid "Details"
 msgstr "详细信息"
 
-#: catfish/CatfishWindow.py:1917
+#: catfish/CatfishWindow.py:1928
 msgid "Open with default applications"
 msgstr "使用默认应用程序打开"
 
-#: catfish/CatfishWindow.py:1933
+#: catfish/CatfishWindow.py:1944
 msgid "Open with"
 msgstr "打开方式"
 
-#: catfish/CatfishWindow.py:2010
+#: catfish/CatfishWindow.py:2025
 msgid "Yesterday"
 msgstr "昨天"
 
-#: catfish/CatfishWindow.py:2118
+#: catfish/CatfishWindow.py:2134
 msgid "No files found."
 msgstr "没有找到文件。"
 
-#: catfish/CatfishWindow.py:2120
+#: catfish/CatfishWindow.py:2136
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -584,29 +584,34 @@ msgstr ""
 "尝试少指定一些搜索关键词\n"
 "或者尝试其它目录。"
 
-#: catfish/CatfishWindow.py:2127
-msgid "1 file found."
-msgstr "找到1个文件。"
+#: catfish/CatfishWindow.py:2145
+msgid "file"
+msgid_plural "files"
+msgstr[0] "文件"
 
-#: catfish/CatfishWindow.py:2129
-#, python-format
-msgid "%i files found."
-msgstr "找到 %i 个文件。"
+#: catfish/CatfishWindow.py:2146
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "秒"
 
-#: catfish/CatfishWindow.py:2138 catfish/CatfishWindow.py:2141
+#: catfish/CatfishWindow.py:2148
+msgid "{n} {files} found in {m:.{prec}f} {seconds}"
+msgstr ""
+
+#: catfish/CatfishWindow.py:2158 catfish/CatfishWindow.py:2161
 msgid "bytes"
 msgstr "字节"
 
-#: catfish/CatfishWindow.py:2326 catfish/CatfishWindow.py:2336
+#: catfish/CatfishWindow.py:2346 catfish/CatfishWindow.py:2356
 msgid "Searching..."
 msgstr "搜索中..."
 
-#: catfish/CatfishWindow.py:2334
+#: catfish/CatfishWindow.py:2354
 #, python-format
 msgid "\"%s\" - searching | Catfish"
 msgstr "\"%s\" - 正在搜索 | Catfish"
 
-#: catfish/CatfishWindow.py:2444
+#: catfish/CatfishWindow.py:2464
 #, python-format
 msgid "\"%s\" - results | Catfish"
 msgstr "\"%s\" - 结果 | Catfish"
