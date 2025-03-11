@@ -596,7 +596,7 @@ msgstr[0] "秒"
 
 #: catfish/CatfishWindow.py:2148
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
-msgstr ""
+msgstr "在 {m:.{prec}f} {seconds}内发现 {n}个{files}"
 
 #: catfish/CatfishWindow.py:2158 catfish/CatfishWindow.py:2161
 msgid "bytes"
