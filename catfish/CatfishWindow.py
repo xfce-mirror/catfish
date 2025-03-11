@@ -122,6 +122,7 @@ class CatfishWindow(Window):
     filter_timerange = (0.0, 9999999999.0)
     start_date = datetime.datetime.now()
     end_date = datetime.datetime.now()
+    results_timer_id = 0
 
     filter_formats = {'documents': False, 'folders': False, 'images': False,
                       'music': False, 'videos': False, 'applications': False,
@@ -2120,22 +2121,32 @@ class CatfishWindow(Window):
         """Reload the results filter, update the statusbar to reflect count."""
         try:
             self.results_filter.refilter()
-            n_results = len(self.treeview.get_model())
-            duration = self.search_engine.stop_time - self.search_engine.start_time
-            self.show_results(n_results, duration)
+            self.update_results()
         except AttributeError:
             pass
 
+    def update_results(self):
+        count = 0
+        if self.treeview.get_model() is not None:
+            count = len(self.treeview.get_model())
+        if self.search_in_progress:
+            duration = time.time() - self.search_engine.start_time
+        else:
+            duration = self.search_engine.stop_time - self.search_engine.start_time
+        self.show_results(count, duration)
+        return True
+
     def show_results(self, count, duration):
         if count == 0:
-            self.builder.get_object("results_scrolledwindow").hide()
-            self.builder.get_object("splash").show()
-            self.builder.get_object(
-                "splash_title").set_text(_("No files found."))
-            self.builder.get_object("splash_status").set_text(
-                _("Try making your search less specific\n"
-                  "or try another directory."))
-            self.builder.get_object("splash_status").show()
+            if not self.search_in_progress:
+                self.builder.get_object("results_scrolledwindow").hide()
+                self.builder.get_object("splash").show()
+                self.builder.get_object(
+                    "splash_title").set_text(_("No files found."))
+                self.builder.get_object("splash_status").set_text(
+                    _("Try making your search less specific\n"
+                      "or try another directory."))
+                self.builder.get_object("splash_status").show()
         else:
             self.builder.get_object("splash").hide()
             self.builder.get_object("results_scrolledwindow").show()
@@ -2353,7 +2364,6 @@ class CatfishWindow(Window):
             Gdk.Display.get_default(), "progress"))
         self.set_title(_("\"%s\" - searching | Catfish") % keywords)
         self.spinner.show()
-        self.statusbar_label.set_label(_("Searching..."))
 
         self.search_in_progress = True
         self.refresh_search_entry()
@@ -2385,6 +2395,9 @@ class CatfishWindow(Window):
         folder = self.folderchooser.get_filename()
 
         results = []
+
+        # Add a periodic timer to update the results
+        self.results_timer_id = GObject.timeout_add(100, self.update_results)
 
         # Check if this is a fulltext query or standard query.
         if self.filter_formats['fulltext']:
@@ -2464,14 +2477,12 @@ class CatfishWindow(Window):
         self.set_title(_('\"%s\" - results | Catfish') % keywords)
         self.spinner.hide()
 
-        n_results = 0
-        if self.treeview.get_model() is not None:
-            n_results = len(self.treeview.get_model())
-        duration = self.search_engine.stop_time - self.search_engine.start_time
-        self.show_results(n_results, duration)
-
         self.search_in_progress = False
         self.refresh_search_entry()
+
+        # Display results and stop the results timer
+        GObject.source_remove(self.results_timer_id)
+        self.update_results()
 
         self.stop_search = False
         yield False
