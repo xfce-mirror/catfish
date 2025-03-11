@@ -598,18 +598,18 @@ msgstr ""
 #: catfish/CatfishWindow.py:2145
 msgid "file"
 msgid_plural "files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "dosya"
+msgstr[1] "dosya"
 
 #: catfish/CatfishWindow.py:2146
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "saniye"
+msgstr[1] "saniye"
 
 #: catfish/CatfishWindow.py:2148
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
-msgstr ""
+msgstr "{n} {files} {m:.{prec}f} {seconds} içinde bulundu"
 
 #: catfish/CatfishWindow.py:2158 catfish/CatfishWindow.py:2161
 msgid "bytes"
