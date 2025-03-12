@@ -601,18 +601,18 @@ msgstr ""
 #: catfish/CatfishWindow.py:2145
 msgid "file"
 msgid_plural "files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Datei"
+msgstr[1] "Dateien"
 
 #: catfish/CatfishWindow.py:2146
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Sekunde"
+msgstr[1] "Sekunden"
 
 #: catfish/CatfishWindow.py:2148
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
-msgstr ""
+msgstr "{n} {Dateien} in {m:.{prec}f} {Sekunden} gefunden"
 
 #: catfish/CatfishWindow.py:2158 catfish/CatfishWindow.py:2161
 msgid "bytes"
