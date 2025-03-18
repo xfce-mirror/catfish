@@ -1263,7 +1263,7 @@ class CatfishWindow(Window):
         except:
             return False
 
-    def get_exo_preferred_applications(self, filename):
+    def get_xfce_preferred_applications(self, filename):
         apps = {}
         if os.path.exists(filename):
             with open(filename, "r") as infile:
@@ -1275,7 +1275,7 @@ class CatfishWindow(Window):
                             apps[key] = value
         return apps
 
-    def get_exo_preferred_file_manager(self):
+    def get_xfce_preferred_file_manager(self):
         config = [GLib.get_user_config_dir()] + GLib.get_system_config_dirs()
         data_dir = GLib.get_user_data_dir()
         custFM = data_dir+"/xfce4/helpers/custom-FileManager.desktop"
@@ -1284,7 +1284,7 @@ class CatfishWindow(Window):
         for config_dir in config_dirs:
             cfg = "%s/xfce4/helpers.rc" % config_dir
             if os.path.exists(cfg):
-                apps = self.get_exo_preferred_applications(cfg)
+                apps = self.get_xfce_preferred_applications(cfg)
                 if 'FileManager' in apps:
                     if 'custom-FileManager' in apps['FileManager']:
                         with open(custFM) as f:
@@ -1299,7 +1299,7 @@ class CatfishWindow(Window):
 
     def get_preferred_file_manager(self):
         if helpers.xdg_current_desktop() == 'xfce':
-            return self.get_exo_preferred_file_manager()
+            return self.get_xfce_preferred_file_manager()
 
         app = Gio.AppInfo.get_default_for_type('inode/directory', False)
 
@@ -1317,8 +1317,8 @@ class CatfishWindow(Window):
         if app is None:
             return "xdg-open"
 
-        if "exo-file-manager" in app.get_id().lower():
-            return self.get_exo_preferred_file_manager()
+        if "xfce4-file-manager" in app.get_id().lower():
+            return self.get_xfce_preferred_file_manager()
 
         return app.get_executable()
 
@@ -1333,7 +1333,10 @@ class CatfishWindow(Window):
             command = [filename]
         elif os.path.isdir(filename) and \
                 helpers.xdg_current_desktop() == 'xfce':
-            command = ['exo-open', '--launch', 'FileManager', filename]
+            if GLib.find_program_in_path('xfce-open') is not None:
+                command = ['xfce-open', '--launch', 'FileManager', filename]
+            else:
+                command = ['exo-open', '--launch', 'FileManager', filename]
         else:
             try:
                 uri = pathlib.Path(filename).as_uri()
