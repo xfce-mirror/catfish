@@ -9,6 +9,7 @@
 # Balázs Meskó <meskobalazs@mailbox.org>, 2024
 # Gábor P., 2024
 # László Varga, 2024
+# Csani10, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-03-10 00:49+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: László Varga, 2024\n"
+"Last-Translator: Csani10, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/xfce/teams/16840/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -167,7 +168,7 @@ msgstr "Megjelenítés a _fájlkezelőben"
 
 #: data/ui/CatfishWindow.ui:216
 msgid "_Rename"
-msgstr ""
+msgstr "_Átnevezés"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -181,7 +182,7 @@ msgstr "Menté_s másként…"
 
 #: data/ui/CatfishWindow.ui:254
 msgid "_Copy selected items to folder..."
-msgstr ""
+msgstr "Kiválasztott elemek _másolása a mappába..."
 
 #: data/ui/CatfishWindow.ui:271
 msgid "_Delete..."
@@ -509,7 +510,7 @@ msgstr "A(z) „%s” nem menthető."
 
 #: catfish/CatfishWindow.py:1563
 msgid "Selected Results"
-msgstr ""
+msgstr "Kiválasztott eredmények"
 
 #: catfish/CatfishWindow.py:1598
 #, python-format
