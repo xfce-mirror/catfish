@@ -139,7 +139,7 @@ msgstr "Προχωρημένα"
 
 #: data/ui/CatfishWindow.ui:10 data/ui/CatfishWindow.ui:119
 msgid "Select a Folder"
-msgstr "Επιλέξτε φάκελο"
+msgstr "Επιλογή ενός φακέλου"
 
 #: data/ui/CatfishWindow.ui:53
 msgid "Folder not found!"
@@ -150,7 +150,7 @@ msgstr "Ο φάκελος δεν βρέθηκε!"
 #: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1254
 #: catfish/CatfishWindow.py:808 catfish_lib/SudoDialog.py:184
 msgid "Cancel"
-msgstr "Ακύρωση"
+msgstr "Άκυρο"
 
 #: data/ui/CatfishWindow.ui:84
 msgid "Select Folder"
@@ -172,7 +172,7 @@ msgstr "Εμ_φάνιση στον διαχειριστή αρχείων"
 
 #: data/ui/CatfishWindow.ui:216
 msgid "_Rename"
-msgstr ""
+msgstr "_Μετονομασία"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -186,7 +186,7 @@ msgstr "Απο_θήκευση ως..."
 
 #: data/ui/CatfishWindow.ui:254
 msgid "_Copy selected items to folder..."
-msgstr ""
+msgstr "Αντιγ_ραφή επιλεγμένων σε φάκελο..."
 
 #: data/ui/CatfishWindow.ui:271
 msgid "_Delete..."
@@ -282,7 +282,7 @@ msgstr "Ανανέωση"
 #: data/ui/CatfishWindow.ui:744
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
-"Η βάση δεδομένων αναζήτησης είναι παλαιότερη από 7 ημέρες. Να ανανεωθεί "
+"Η βάση δεδομένων αναζήτησης είναι παλαιότερη των 7 ημερών. Να ανανεωθεί "
 "τώρα;"
 
 #: data/ui/CatfishWindow.ui:802
@@ -367,7 +367,7 @@ msgstr "_Σχετικά με"
 
 #: catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
-msgstr "Χρήση: %πρόγραμμα [επιλογές] διαδρομές αναζήτηση"
+msgstr "Χρήση: %prog [επιλογές] διαδρομή αναζήτησης"
 
 #: catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
@@ -402,7 +402,7 @@ msgstr "Να συμπεριλαμβάνονται κρυφά αρχεία"
 
 #: catfish/__init__.py:59
 msgid "Perform fulltext search"
-msgstr "Εκτέλεση αναζήτησης πλήρους κειμένου"
+msgstr "Εκτέλεση αναζήτησης στο πλήρες κείμενο"
 
 #: catfish/__init__.py:61
 msgid ""
@@ -415,7 +415,7 @@ msgstr ""
 #: catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
-"ορισμός προεπιλεγμένης στήλης για ταξινόμηση με "
+"ορισμός προεπιλεγμένης στήλης για ταξινόμηση κατά "
 "(όνομα|μέγεθος|διαδρομή|ημερομηνία|τύπος), (αύξ|φθίν)"
 
 #: catfish/__init__.py:66
@@ -459,7 +459,8 @@ msgstr ""
 
 #: catfish/CatfishWindow.py:823
 msgid "An error occurred while updating the database."
-msgstr "Εμφανίστηκε λάθος κατά την ανανέωση της βάσης δεδομένων."
+msgstr ""
+"Εμφανίστηκε κάποιο λάθος κατά την διάρκεια ανανέωσης της βάσης δεδομένων."
 
 #: catfish/CatfishWindow.py:825
 msgid "Authentication failed."
@@ -519,17 +520,17 @@ msgstr "Αδυναμία αποθήκευσης \"%s\"."
 
 #: catfish/CatfishWindow.py:1563
 msgid "Selected Results"
-msgstr ""
+msgstr "Επιλεγμένα αποτελέσματα"
 
 #: catfish/CatfishWindow.py:1598
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr "Αδυναμία διαγραφής \"%s\"."
+msgstr "Αδυναμία διαγραφής του \"%s\"."
 
 #: catfish/CatfishWindow.py:1637
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "Αποθήκευση \"%s\" ως..."
+msgstr "Αποθήκευση του \"%s\" ως..."
 
 #: catfish/CatfishWindow.py:1673
 #, python-format
@@ -600,14 +601,14 @@ msgstr ""
 #: catfish/CatfishWindow.py:2145
 msgid "file"
 msgid_plural "files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "αρχείο"
+msgstr[1] "αρχεία"
 
 #: catfish/CatfishWindow.py:2146
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "δευτερόλεπτο"
+msgstr[1] "δευτερόλεπτα"
 
 #: catfish/CatfishWindow.py:2148
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
@@ -633,7 +634,7 @@ msgstr "\"%s\" - αποτελέσματα | Catfish"
 
 #: catfish_lib/catfishconfig.py:97
 msgid "Catfish is a versatile file searching tool."
-msgstr "Catfish είναι ένα ευέλικτο εργαλείο αναζήτησης αρχείων."
+msgstr "Το Catfish είναι ένα ευέλικτο εργαλείο αναζήτησης αρχείων."
 
 #: catfish_lib/SudoDialog.py:126
 msgid "Password Required"
@@ -690,8 +691,7 @@ msgstr ""
 #: data/metainfo/catfish.appdata.xml.in:25
 msgid "The main Catfish window displaying image search results"
 msgstr ""
-"Το κυρίως παράθυρο του Catfish εμφανίζει τα αποτελέσματα αναζήτησης από "
-"εικόνες"
+"Το κυρίως παράθυρο του Catfish εμφανίζει αποτελέσματα αναζήτησης από εικόνες"
 
 #: data/metainfo/catfish.appdata.xml.in:29
 msgid ""
