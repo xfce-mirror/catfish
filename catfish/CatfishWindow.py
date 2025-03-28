@@ -2393,7 +2393,7 @@ class CatfishWindow(Window):
         model.set_sort_func(2, self.size_sort_func, None)
         if self.sort[0]:  # command-line sort method
             model.set_sort_column_id(self.sort[0], self.sort[1])
-        self.treeview.set_model(model)
+        self.treeview.set_model(self.results_filter)
         model.clear()
         self.treeview.columns_autosize()
 
