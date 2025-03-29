@@ -2354,6 +2354,9 @@ class CatfishWindow(Window):
         """Run the search query with the specified keywords."""
         self.stop_search = False
 
+        search_zips = self.settings.get_setting('search-compressed-files')
+        search_exact = self.settings.get_setting('match-results-exactly')
+
         # Update the interface to Search Mode
         self.builder.get_object("results_scrolledwindow").hide()
         self.builder.get_object("splash").show()
@@ -2376,18 +2379,22 @@ class CatfishWindow(Window):
             Gtk.main_iteration()
 
         # icon, name, size, path, modified, mimetype, hidden, exact
-        model = Gtk.TreeStore(str, str, GObject.TYPE_INT64,
+        if search_zips:
+            model = Gtk.TreeStore(str, str, GObject.TYPE_INT64,
+                              str, float, str, bool, bool)
+        else:
+            model = Gtk.ListStore(str, str, GObject.TYPE_INT64,
                               str, float, str, bool, bool)
 
         # Initialize the results filter.
         self.results_filter = model.filter_new()
         self.results_filter.set_visible_func(self.results_filter_func)
-        sort = Gtk.TreeModelSort(model=self.results_filter)
-        sort.set_sort_func(2, self.size_sort_func, None)
+        model.set_default_sort_func(lambda w,x,y,z: 0)
+        model.set_sort_func(2, self.size_sort_func, None)
         if self.sort[0]:  # command-line sort method
-            sort.set_sort_column_id(self.sort[0], self.sort[1])
-        self.treeview.set_model(sort)
-        sort.get_model().get_model().clear()
+            model.set_sort_column_id(self.sort[0], self.sort[1])
+        self.treeview.set_model(self.results_filter)
+        model.clear()
         self.treeview.columns_autosize()
 
         # Enable multiple-selection
@@ -2414,8 +2421,6 @@ class CatfishWindow(Window):
                 self.settings.get_setting("exclude-paths")
             )
 
-        search_zips = self.settings.get_setting('search-compressed-files')
-        search_exact = self.settings.get_setting('match-results-exactly')
 
         for filename in self.search_engine.run(keywords, folder, search_zips, regex=True):
             if self.stop_search:
@@ -2441,21 +2446,27 @@ class CatfishWindow(Window):
                         parent = None
                         if not self.filter_formats['fulltext']:
                             if self.search_engine.search_filenames(filename, keywords, search_exact):
-                                parent = model.append(
-                                    None, [icon_name, displayed, size, path, modified, mimetype, hidden, search_exact])
+                                if search_zips:
+                                    parent = model.append(None, [icon_name, displayed, size, path, modified,
+                                        mimetype, hidden, search_exact])
+                                else:
+                                    model.append(
+                                        [icon_name, displayed, size, path, modified, mimetype, hidden, search_exact])
                         if not search_zips:
                             continue
                         try:
                             for row in self.perform_zip_query(filename, keywords, search_exact):
                                 if not parent:
-                                    parent = model.append(
-                                        None, [icon_name, displayed, size, path, modified, mimetype, hidden, search_exact])
+                                    parent = model.append(None,
+                                        [icon_name, displayed, size, path, modified, mimetype, hidden, search_exact])
                                 model.append(parent, row)
                         except zipfile.BadZipFile as e:
                             LOGGER.debug(f'{e}: {path}')
                     else:
-                        model.append(None, [icon_name, displayed, size, path, modified,
-                                            mimetype, hidden, exact])
+                        if search_zips:
+                            model.append(None, [icon_name, displayed, size, path, modified, mimetype, hidden, exact])
+                        else:
+                            model.append([icon_name, displayed, size, path, modified, mimetype, hidden, exact])
 
                     if not show_results:
                         if len(self.treeview.get_model()) > 0:
