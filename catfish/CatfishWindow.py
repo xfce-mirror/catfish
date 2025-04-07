@@ -1907,9 +1907,24 @@ class CatfishWindow(Window):
         self.update_treeview_stats(treeview, event)
         return False
 
-    def on_treeview_button_press_event(self, treeview, event):
-        """Catch single mouse click events on the treeview and rows.
+    def on_treeview_button_press_event (self, treeview, event):
+        """Prevent unwanted selection changes on right-click"""
+        if event.button == 3:
+            event_path = self.treeview.get_path_at_pos(event.x, event.y)
+            if event_path == None:
+                # The click was outside of a row
+                return False
+            if self.treeview.get_selection().path_is_selected(event_path[0]):
+                # The click was on a selected row, don't change selection
+                return True
+            else:
+                # Allow the treeview to update selection to clicked row
+                return False
+        else:
+            return False
 
+    def on_treeview_button_release_event(self, treeview, event):
+        """Catch single mouse click events on the treeview and rows.
             Left Click:     Ignore.
             Middle Click:   Open the selected file.
             Right Click:    Show the popup menu."""
