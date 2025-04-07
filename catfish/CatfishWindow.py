@@ -1380,6 +1380,7 @@ class CatfishWindow(Window):
         self.open_compressed_files(compressed_files)
 
     def open_compressed_files(self, compressed_files, open_method=None):
+        print(compressed_files)
         for filename in compressed_files:
             archive, fname = filename.split('//ARCHIVE//')
             if fname.endswith('/'):
@@ -1766,15 +1767,11 @@ class CatfishWindow(Window):
     # -- Treeview -- #
     def on_treeview_row_activated(self, treeview, path, user_data):  # pylint: disable=W0613
         """Catch row activations by keyboard or mouse double-click."""
-        # Get the filename from the row.
-        model = treeview.get_model()
-        file_path = self.treemodel_get_row_filename(model, path)
-        self.selected_filenames = [file_path]
-        # Open the selected file.
-        if "//ARCHIVE//" in file_path:
-            self.open_compressed_files([self.selected_filenames[0]])
-        else:
-            self.open_file(self.selected_filenames[0])
+        for file_path in self.selected_filenames:
+            if "//ARCHIVE//" in file_path:
+                self.open_compressed_files([file_path])
+            else:
+                self.open_file(file_path)
 
     def on_treeview_drag_begin(self, treeview, context):  # pylint: disable=W0613
         """Treeview DND Begin."""
