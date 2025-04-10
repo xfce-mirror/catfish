@@ -1380,7 +1380,6 @@ class CatfishWindow(Window):
         self.open_compressed_files(compressed_files)
 
     def open_compressed_files(self, compressed_files, open_method=None):
-        print(compressed_files)
         for filename in compressed_files:
             archive, fname = filename.split('//ARCHIVE//')
             if fname.endswith('/'):
