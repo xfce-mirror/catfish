@@ -1906,8 +1906,11 @@ class CatfishWindow(Window):
     def on_treeview_button_press_event (self, treeview, event):
         """Prevent unwanted selection changes on right-click"""
         if event.button == 3:
-            event_path,_,_,_ = self.treeview.get_path_at_pos(event.x, event.y)
-            if self.treeview.get_selection().path_is_selected(event_path):
+            event_path = self.treeview.get_path_at_pos(event.x, event.y)
+            if event_path == None:
+                # The click was outside of a row
+                return False
+            if self.treeview.get_selection().path_is_selected(event_path[0]):
                 # The click was on a selected row, don't change selection
                 return True
             else:
