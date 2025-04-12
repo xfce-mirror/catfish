@@ -333,15 +333,15 @@ msgstr "Miniaturen"
 
 #: data/ui/CatfishWindow.ui:1632
 msgid "Show _sidebar"
-msgstr "Zijbalk tonen"
+msgstr "_Zijbalk tonen"
 
 #: data/ui/CatfishWindow.ui:1671
 msgid "Show _hidden files"
-msgstr "Toon _verborgen bestanden"
+msgstr "_Verborgen bestanden tonen"
 
 #: data/ui/CatfishWindow.ui:1686
 msgid "Search file _contents"
-msgstr "Bestandsinhoud doorzoeken"
+msgstr "Bestand_inhoud doorzoeken"
 
 #: data/ui/CatfishWindow.ui:1703
 msgid "_Match results exactly"
@@ -384,7 +384,7 @@ msgstr "Tijd weergeven in ISO-opmaak"
 #. Translators: Do not translate PATH, it is a variable.
 #: catfish/__init__.py:53
 msgid "Set the default search path"
-msgstr "Stel het standaard-zoekpad in"
+msgstr "Stel het standaardzoekpad in"
 
 #: catfish/__init__.py:55
 msgid "Perform exact match"
@@ -480,19 +480,19 @@ msgstr "Aan het bijwerken…"
 
 #: catfish/CatfishWindow.py:947
 msgid "Stop Search"
-msgstr "Staak zoektocht"
+msgstr "Staak zoektaak"
 
 #: catfish/CatfishWindow.py:948
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
-"Doorzoeking is gaande...\n"
+"Zoektaak is gaande...\n"
 "Druk op de knop Afbreken of op de Esc-toets om stil te zetten."
 
 #: catfish/CatfishWindow.py:959
 msgid "Begin Search"
-msgstr "Begin doorzoeking"
+msgstr "Begin zoektaak"
 
 #: catfish/CatfishWindow.py:1097
 msgid "No folder selected."
@@ -546,7 +546,7 @@ msgstr ""
 
 #: catfish/CatfishWindow.py:1680
 msgid "If you delete a file, it is permanently lost."
-msgstr "Als u een bestand verwijdert, is het voorgoed verloren."
+msgstr "Als u een bestand verwijdert, gaat het voorgoed verloren."
 
 #: catfish/CatfishWindow.py:1714
 msgid "Filename"
@@ -689,8 +689,8 @@ msgstr ""
 #: data/metainfo/catfish.appdata.xml.in:25
 msgid "The main Catfish window displaying image search results"
 msgstr ""
-"Het hoofdvenster van Catfish dat de resultaten toont van zoekopdrachten voor"
-" afbeeldingen"
+"Het hoofdvenster van Catfish dat de resultaten toont van zoektaken voor "
+"afbeeldingen"
 
 #: data/metainfo/catfish.appdata.xml.in:29
 msgid ""
