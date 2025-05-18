@@ -77,7 +77,10 @@ def get_locate_db_path():
 
 def get_version():
     """Return the program version number."""
-    return defs.__version__
+    if '-dev' in defs.__version__:
+        return f"{defs.__version__}-{defs.__revision__}"
+    else:
+        return defs.__version__
 
 
 def get_about():
