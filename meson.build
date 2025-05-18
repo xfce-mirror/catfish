@@ -1,4 +1,11 @@
-project('catfish', version : '4.20.0-dev', meson_version : '>= 0.59.0')
+project(
+  'catfish',
+  version: '4.20.0-dev',
+  license: 'GPL-2.0-or-later',
+  meson_version: '>= 0.56.0',
+)
+
+copyright_year = '2025'
 
 gnome = import('gnome')
 i18n = import('i18n')
@@ -15,15 +22,25 @@ if not python3.language_version().version_compare('>= 3.7')
   error('Python 3.7 or newer is required.')
 endif
 
+dependency_versions = {
+  'glib': '>= 2.50.0',
+  'gtk': '>= 3.22.0',
+  'gdk-pixbuf': '>= 2.42.8',
+  'pango': '>= 1.38.0',
+  'xfce4': '>= 4.16.0',
+  'zeitgeist': '>= 1.0',
+}
+
 # Declare runtime dependency versions here to make packaging more obvious
-dependency('gdk-3.0')
-dependency('gdk-pixbuf-2.0')
-dependency('glib-2.0')
-dependency('gobject-2.0')
-dependency('gtk+-3.0', version: '>= 3.10.0')
-dependency('libxfconf-0')
-dependency('pango')
-dependency('zeitgeist-2.0', required: false)
+dependency('gdk-3.0', version: dependency_versions['gtk'])
+dependency('gdk-pixbuf-2.0', version: dependency_versions['gdk-pixbuf'])
+dependency('glib-2.0', version: dependency_versions['glib'])
+dependency('gobject-2.0', version: dependency_versions['glib'])
+dependency('gtk+-3.0', version: dependency_versions['gtk'])
+dependency('libxfconf-0', version: dependency_versions['xfce4'])
+dependency('pango', version: dependency_versions['pango'])
+# Since this is detected at runtime, meson option is probably not useful here.
+dependency('zeitgeist-2.0', version: dependency_versions['zeitgeist'], required: false)
 
 prefix = get_option('prefix')
 bindir = prefix / get_option('bindir')
@@ -55,9 +72,4 @@ doc_files = [
 install_data(
   doc_files,
   install_dir: datadir / 'doc' / meson.project_name(),
-)
-
-gnome.post_install(
-  gtk_update_icon_cache: true,
-  update_desktop_database: true,
 )

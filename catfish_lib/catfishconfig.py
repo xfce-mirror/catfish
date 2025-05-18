@@ -30,13 +30,7 @@ __locate_db_paths__ = ('/var/lib/plocate/plocate.db', '/var/lib/mlocate/mlocate.
 __license__ = 'GPL-2+'
 __url__ = 'https://docs.xfce.org/apps/catfish/start'
 
-try:
-    from .defs import __version__, __catfish_data_directory__
-except ImportError:
-    __version__ = '4.20.0'
-    # Where your project will look for your data (for instance, images and ui
-    # files). By default, this is ../data, relative your trunk layout
-    __catfish_data_directory__ = '../data'
+from catfish_lib import defs
 
 class project_path_not_found(Exception):
 
@@ -63,7 +57,7 @@ def get_data_path():
 
     # Get pathname absolute or relative.
     path = os.path.join(
-        os.path.dirname(__file__), __catfish_data_directory__)
+        os.path.dirname(__file__), defs.__catfish_data_directory__)
 
     abs_data_path = os.path.abspath(path)
     if not os.path.exists(abs_data_path):
@@ -83,21 +77,24 @@ def get_locate_db_path():
 
 def get_version():
     """Return the program version number."""
-    return __version__
+    if '-dev' in defs.__version__:
+        return f"{defs.__version__}-{defs.__revision__}"
+    else:
+        return defs.__version__
 
 
 def get_about():
     from locale import gettext as _
 
     return {
-        'version': __version__,
+        'version': get_version(),
         'program_name': _('Catfish File Search'),
         'icon_name': 'org.xfce.catfish',
         'website': __url__,
         'comments': _('Catfish is a versatile file searching tool.'),
         'copyright': 'Copyright (C) 2007-2012 Christian Dywan <christian@twotoasts.de>\n'
                      'Copyright (C) 2012-2022 Sean Davis <bluesabre@xfce.org>\n'
-                     'Copyright (C) 2022-2024 The Xfce development team',
+                     f'Copyright (C) 2022-{defs.__copyright_year__} The Xfce development team',
         'authors': [
             'Christian Dywan <christian@twotoasts.de>',
             'Sean Davis <bluesabre@xfce.org>'],
