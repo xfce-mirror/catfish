@@ -14,6 +14,7 @@ catfish_lib_sources = [
 catfish_lib_defs_conf = configuration_data()
 catfish_lib_defs_conf.set_quoted('VERSION', meson.project_version())
 catfish_lib_defs_conf.set_quoted('CATFISH_DATA_DIRECTORY', pkgdatadir)
+catfish_lib_defs_conf.set_quoted('COPYRIGHT_YEAR', copyright_year)
 
 catfish_lib_defs = configure_file(
   input: 'defs.py.in',

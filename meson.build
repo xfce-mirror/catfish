@@ -5,6 +5,8 @@ project(
   meson_version: '>= 0.56.0',
 )
 
+copyright_year = '2025'
+
 gnome = import('gnome')
 i18n = import('i18n')
 python = import('python')
