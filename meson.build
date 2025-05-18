@@ -1,4 +1,9 @@
-project('catfish', version : '4.20.0-dev', meson_version : '>= 0.59.0')
+project(
+  'catfish',
+  version: '4.20.0-dev',
+  license: 'GPL-2.0-or-later',
+  meson_version: '>= 0.56.0',
+)
 
 gnome = import('gnome')
 i18n = import('i18n')
@@ -65,9 +70,4 @@ doc_files = [
 install_data(
   doc_files,
   install_dir: datadir / 'doc' / meson.project_name(),
-)
-
-gnome.post_install(
-  gtk_update_icon_cache: true,
-  update_desktop_database: true,
 )
