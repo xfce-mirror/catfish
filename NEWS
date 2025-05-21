@@ -1,3 +1,33 @@
+4.20.1 (2025-05-21)
+======
+- build: Show git revision info in dev versions
+- build: Automate copyright year management
+- build: Require defs.py
+- build: Relax meson requirements
+- build: Document dependency version requirements
+- Prevent selection change on right-click
+- Support opening multiple files with enter key
+- Improve TreeView performance
+- Replace deprecated exo with libxfce4ui 4.21.0
+- Update files found in real time
+- Display search time in status bar
+- Fix unintended search
+- Add hotkey for copy location
+- Add delete hotkey
+- Rename Files
+- Add a context menu option to send selected files to a folder
+- Complete copyright in about dialog
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Asturian, Basque, Belarusian,
+  Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian,
+  Czech, Danish, Dutch, Eastern Armenian, English (Australia), English
+  (United Kingdom), Estonian, Finnish, French, Galician, German, Greek,
+  Hebrew, Hungarian, Icelandic, Indonesian, Interlingue, Italian,
+  Japanese, Kazakh, Korean, Lithuanian, Malay, Norwegian Bokmål,
+  Norwegian Nynorsk, Occitan (post 1500), Polish, Portuguese,
+  Portuguese (Brazil), Romanian, Russian, Serbian, Slovak, Slovenian,
+  Spanish, Swedish, Thai, Turkish, Ukrainian
+
 4.20.0 (2024-12-25)
 ======
 - I18n: Update po/LINGUAS list
