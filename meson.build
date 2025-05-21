@@ -1,4 +1,4 @@
-project('catfish', version : '4.20.1', license : 'GPL-2.0-or-later', meson_version : '>= 0.56.0')
+project('catfish', version : '4.20.1-dev', license : 'GPL-2.0-or-later', meson_version : '>= 0.56.0')
 
 copyright_year = '2025'
 
