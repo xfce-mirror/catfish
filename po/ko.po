@@ -167,7 +167,7 @@ msgstr "파일 관리자에 표시(_F)"
 
 #: data/ui/CatfishWindow.ui:216
 msgid "_Rename"
-msgstr ""
+msgstr "이름 바꾸기(_R)"
 
 #. This menu contains the menu items: _Open, Show in _File Manager, _Copy
 #. Location, Save _As, _Delete
@@ -181,7 +181,7 @@ msgstr "다른 이름으로 저장(_S)..."
 
 #: data/ui/CatfishWindow.ui:254
 msgid "_Copy selected items to folder..."
-msgstr ""
+msgstr "선택한 항목을 폴더에 복사(_C)..."
 
 #: data/ui/CatfishWindow.ui:271
 msgid "_Delete..."
@@ -504,7 +504,7 @@ msgstr "\"%s\"을(를) 저장할 수 없습니다."
 
 #: catfish/CatfishWindow.py:1563
 msgid "Selected Results"
-msgstr ""
+msgstr "선택한 결과"
 
 #: catfish/CatfishWindow.py:1598
 #, python-format
@@ -581,16 +581,16 @@ msgstr ""
 #: catfish/CatfishWindow.py:2145
 msgid "file"
 msgid_plural "files"
-msgstr[0] ""
+msgstr[0] "파일"
 
 #: catfish/CatfishWindow.py:2146
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
+msgstr[0] "초"
 
 #: catfish/CatfishWindow.py:2148
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
-msgstr ""
+msgstr "{m:.{prec}f} {seconds} 동안 {n} {files} 찾음"
 
 #: catfish/CatfishWindow.py:2158 catfish/CatfishWindow.py:2161
 msgid "bytes"
