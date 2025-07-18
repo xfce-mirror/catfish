@@ -357,7 +357,7 @@ msgstr "P_referencje"
 
 #: data/ui/CatfishWindow.ui:1852
 msgid "_About"
-msgstr "O programi_e"
+msgstr "_O programie"
 
 #: catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
