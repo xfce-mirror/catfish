@@ -36,6 +36,10 @@ From source:
     meson compile -C build
     meson install -C build
 
+### Uninstallation
+
+    % ninja uninstall -C build
+
 ### Reporting Bugs
 
 Visit the [reporting bugs](https://docs.xfce.org/apps/catfish/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
