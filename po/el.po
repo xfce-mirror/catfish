@@ -612,7 +612,7 @@ msgstr[1] "δευτερόλεπτα"
 
 #: catfish/CatfishWindow.py:2148
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
-msgstr ""
+msgstr "{n} {αρχεία} βρέθηκαν σε {m:.{prec}f} {δευτερόλεπτα}"
 
 #: catfish/CatfishWindow.py:2158 catfish/CatfishWindow.py:2161
 msgid "bytes"
