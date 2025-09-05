@@ -40,7 +40,7 @@ msgstr "Recercar dins lo sistèma de fichièrs"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: org.xfce.Catfish.desktop.in:7
 msgid "files;find;locate;lookup;search;"
-msgstr ""
+msgstr "fichièrs;trobar;trapar;localizar;cercar;recercar;recèrca;"
 
 #: data/ui/CatfishPreferences.ui:14
 msgid "Catfish Preferences"
@@ -52,35 +52,36 @@ msgstr "_Tampar"
 
 #: data/ui/CatfishPreferences.ui:111
 msgid "Classic (_Titlebar)"
-msgstr ""
+msgstr "Classic (Barra de _títol"
 
 #: data/ui/CatfishPreferences.ui:161
 msgid "_Modern (CSD)"
-msgstr ""
+msgstr "_Modèrn (CSD)"
 
 #: data/ui/CatfishPreferences.ui:213
 msgid "Your new window layout will be applied after restarting Catfish."
 msgstr ""
+"L'agençament de fenèstra novèl serà aplicat aprèp reaviada de Catfish."
 
 #: data/ui/CatfishPreferences.ui:236
 msgid "Window Layout"
-msgstr ""
+msgstr "Agençament de fenèstra"
 
 #: data/ui/CatfishPreferences.ui:269
 msgid "Show _hidden files in the results"
-msgstr ""
+msgstr "Mostrar los fichièrs _amagats dins los resultats"
 
 #: data/ui/CatfishPreferences.ui:285
 msgid "Show filter _sidebar"
-msgstr ""
+msgstr "Mostrar la _barra lateral de filtre"
 
 #: data/ui/CatfishPreferences.ui:301
 msgid "Show file sizes in binary format"
-msgstr ""
+msgstr "Mostrar las talhas de fichièr al format binari"
 
 #: data/ui/CatfishPreferences.ui:305
 msgid "Uncheck to show file size in decimal format"
-msgstr ""
+msgstr "Desmarcar per afichar la talha de fichièr al format decimal"
 
 #: data/ui/CatfishPreferences.ui:324
 msgid "Display Options"
@@ -104,7 +105,7 @@ msgstr "_Ajustar"
 
 #: data/ui/CatfishPreferences.ui:424
 msgid "Remove Directory"
-msgstr ""
+msgstr "Suprimir repertòri"
 
 #: data/ui/CatfishPreferences.ui:425
 msgid "_Remove"
@@ -112,15 +113,15 @@ msgstr "_Suprimir"
 
 #: data/ui/CatfishPreferences.ui:453
 msgid "Exclude Directories"
-msgstr ""
+msgstr "Exclure los repertòris"
 
 #: data/ui/CatfishPreferences.ui:485
 msgid "Close the search _window after opening a file"
-msgstr ""
+msgstr "Tampar la _fenèstra de recèrca aprèp dobertura d'un fichièr"
 
 #: data/ui/CatfishPreferences.ui:501
 msgid "Search within compressed files (.zip, .odt, .docx)"
-msgstr ""
+msgstr "Cercar dins dels fichièrs compressats (.zip, .odt, .docx)"
 
 #: data/ui/CatfishPreferences.ui:523
 msgid "Miscellaneous"
@@ -136,7 +137,7 @@ msgstr "Causissètz un dorsièr"
 
 #: data/ui/CatfishWindow.ui:53
 msgid "Folder not found!"
-msgstr ""
+msgstr "Dorsièr non trobat !"
 
 #. Restore Cancel button
 #. Buttons
@@ -161,7 +162,7 @@ msgstr "_Dobrir amb..."
 #. Location, Save _As, _Delete
 #: data/ui/CatfishWindow.ui:205
 msgid "Show in _File Manager"
-msgstr ""
+msgstr "Mostrar dins lo gestionari de _fichièrs"
 
 #: data/ui/CatfishWindow.ui:216
 msgid "_Rename"
@@ -179,7 +180,7 @@ msgstr "_Enregistrar jos..."
 
 #: data/ui/CatfishWindow.ui:254
 msgid "_Copy selected items to folder..."
-msgstr ""
+msgstr "_Copiar los elements seleccionats dins lo dorsièr..."
 
 #: data/ui/CatfishWindow.ui:271
 msgid "_Delete..."
@@ -192,6 +193,8 @@ msgstr "Extensions de fichièr"
 #: data/ui/CatfishWindow.ui:316
 msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
 msgstr ""
+"Picatz una lista amb una virgula de separacion de las extensions de fichièrs"
+" (ex. odt, png, txt)"
 
 #: data/ui/CatfishWindow.ui:344
 msgid "Documents"
@@ -255,16 +258,16 @@ msgstr "Anar a uèi"
 
 #: data/ui/CatfishWindow.ui:566
 msgid "<b>Start Date</b>"
-msgstr ""
+msgstr "<b>Data de debuta</b>"
 
 #: data/ui/CatfishWindow.ui:661
 msgid "<b>End Date</b>"
-msgstr ""
+msgstr "<b>Data de fin</b>"
 
 #: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:240
 #: data/metainfo/catfish.appdata.xml.in:7
 msgid "Catfish"
-msgstr ""
+msgstr "Catfish"
 
 #: data/ui/CatfishWindow.ui:703
 msgid "Update"
@@ -272,7 +275,7 @@ msgstr "Metre a jorn"
 
 #: data/ui/CatfishWindow.ui:744
 msgid "The search database is more than 7 days old.  Update now?"
-msgstr ""
+msgstr "La basa de donadas a mai de 7 jorns. L'actualizar ara ?"
 
 #: data/ui/CatfishWindow.ui:802
 msgid "File Type"
@@ -280,11 +283,11 @@ msgstr "Tipe de fichièr"
 
 #: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1717
 msgid "Modified"
-msgstr "Modificat"
+msgstr "Modificacion"
 
 #: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2348
 msgid "Results will be displayed as soon as they are found."
-msgstr ""
+msgstr "Los resultats apareisseràn tre que son trobats."
 
 #: data/ui/CatfishWindow.ui:1268
 msgid "Unlock"
@@ -292,25 +295,27 @@ msgstr "Desverrolhar"
 
 #: data/ui/CatfishWindow.ui:1320
 msgid "<b>Database:</b>"
-msgstr ""
+msgstr "<b>Basa de donadas :</b>"
 
 #: data/ui/CatfishWindow.ui:1333
 msgid "<b>Updated:</b>"
-msgstr ""
+msgstr "<b>Actualizacion :</b>"
 
 #: data/ui/CatfishWindow.ui:1346
 msgid "<big><b>Update Search Database</b></big>"
-msgstr ""
+msgstr "<big><b>Actualizar la basa de donadas de recèrca</b></big>"
 
 #: data/ui/CatfishWindow.ui:1360
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
 msgstr ""
+"Per de resultats de recèrca mai rapids, la basa de donadas de recèrca deu "
+"èsser actualizada. Aquesta accion requerís de dreches d'administracion."
 
 #: data/ui/CatfishWindow.ui:1492
 msgid "Update Search Database"
-msgstr ""
+msgstr "Actualizar la basa de donadas"
 
 #: data/ui/CatfishWindow.ui:1516
 msgid "Search for files"
@@ -318,7 +323,7 @@ msgstr "Recèrca de fichièrs"
 
 #: data/ui/CatfishWindow.ui:1562
 msgid "Compact List"
-msgstr ""
+msgstr "Lista compacta"
 
 #: data/ui/CatfishWindow.ui:1581
 msgid "Thumbnails"
@@ -326,7 +331,7 @@ msgstr "Miniaturas"
 
 #: data/ui/CatfishWindow.ui:1632
 msgid "Show _sidebar"
-msgstr ""
+msgstr "Afichar la _barra laterala"
 
 #: data/ui/CatfishWindow.ui:1671
 msgid "Show _hidden files"
@@ -334,15 +339,15 @@ msgstr "Afic_har los fichièrs amagats"
 
 #: data/ui/CatfishWindow.ui:1686
 msgid "Search file _contents"
-msgstr ""
+msgstr "Recercar dins lo contengut dels fichièrs"
 
 #: data/ui/CatfishWindow.ui:1703
 msgid "_Match results exactly"
-msgstr ""
+msgstr "_Correspondéncia exacta dels resultats"
 
 #: data/ui/CatfishWindow.ui:1756
 msgid "_Refresh search index..."
-msgstr ""
+msgstr "_Refrescar l'indèx de recèrca..."
 
 #: data/ui/CatfishWindow.ui:1811
 msgid "_Preferences"
@@ -354,15 +359,16 @@ msgstr "A _prepaus"
 
 #: catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
-msgstr ""
+msgstr "Utlizacion : %p rog[opcions] emplaçament requèsta"
 
 #: catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr ""
+"Afichar los messatges de desbugatges (-vv desbugarà tanben catfish_lib)"
 
 #: catfish/__init__.py:47
 msgid "Use large icons"
-msgstr ""
+msgstr "Utilizar de grandas icònas"
 
 #: catfish/__init__.py:49
 msgid "Use thumbnails"
@@ -370,16 +376,16 @@ msgstr "Utilizar las miniaturas"
 
 #: catfish/__init__.py:51
 msgid "Display time in ISO format"
-msgstr ""
+msgstr "Afichar l'ora al format ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: catfish/__init__.py:53
 msgid "Set the default search path"
-msgstr ""
+msgstr "Definir l'emplaçament de recèrca per defaut"
 
 #: catfish/__init__.py:55
 msgid "Perform exact match"
-msgstr ""
+msgstr "Realizar de correspondéncias exactas"
 
 #: catfish/__init__.py:57
 msgid "Include hidden files"
@@ -387,32 +393,36 @@ msgstr "Inclure los fichièrs amagats"
 
 #: catfish/__init__.py:59
 msgid "Perform fulltext search"
-msgstr ""
+msgstr "Realizar de recèrcas en tèxt complèt"
 
 #: catfish/__init__.py:61
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
+"Se l'emplaçament e la requèsta son fornits, lançar la recèrca quand "
+"l'aplicacion es afichada."
 
 #: catfish/__init__.py:63
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
+"definir una colomna per defaut per triar per "
+"(name|size|path|date|type),(asc|desc)"
 
 #: catfish/__init__.py:66
 msgid "Close after selecting a file"
-msgstr ""
+msgstr "Tampar aprèp seleccion d'un fichièr"
 
 #: catfish/__init__.py:68
 msgid "Do not close after selecting a file"
-msgstr ""
+msgstr "Tampar pas aprèp seleccion d'un fichièr"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
 #: catfish/CatfishWindow.py:110
 #, python-format
 msgid "%s (invalid encoding)"
-msgstr ""
+msgstr "%s (encodatge invalid)"
 
 #: catfish/CatfishWindow.py:151
 msgid "translator-credits"
@@ -432,10 +442,13 @@ msgid ""
 "Enter your query above to find your files\n"
 "or click the %s icon for more options."
 msgstr ""
+"Picatz vòstra requèsta al dessús per trobar los fichièrs\n"
+"o clicatz l'icòna %s per mai d'opcions."
 
 #: catfish/CatfishWindow.py:823
 msgid "An error occurred while updating the database."
 msgstr ""
+"Una error s'es produsida pendent l'actualizacion de la basa de donadas."
 
 #: catfish/CatfishWindow.py:825
 msgid "Authentication failed."
@@ -443,11 +456,11 @@ msgstr "L'autentificacion a fracassat."
 
 #: catfish/CatfishWindow.py:831
 msgid "Authentication cancelled."
-msgstr ""
+msgstr "Autentificacion anullada."
 
 #: catfish/CatfishWindow.py:837
 msgid "Search database updated successfully."
-msgstr ""
+msgstr "Basa de donadas corrèctament actualizada."
 
 #. Update the Cancel button to Close, make it default
 #: catfish/CatfishWindow.py:898
@@ -461,17 +474,18 @@ msgstr "A s'actualizar..."
 
 #: catfish/CatfishWindow.py:947
 msgid "Stop Search"
-msgstr ""
+msgstr "Arrestar la recèrca"
 
 #: catfish/CatfishWindow.py:948
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
 msgstr ""
+"Recèrca en cors...Quichatz lo boton anullar o la tòca Escap. per arrestar."
 
 #: catfish/CatfishWindow.py:959
 msgid "Begin Search"
-msgstr ""
+msgstr "Lançar la recèrca"
 
 #: catfish/CatfishWindow.py:1097
 msgid "No folder selected."
@@ -479,7 +493,7 @@ msgstr "Cap de dorsièr es pas estat seleccionat."
 
 #: catfish/CatfishWindow.py:1102
 msgid "Folder not found."
-msgstr ""
+msgstr "Dorsièr non trobat."
 
 #: catfish/CatfishWindow.py:1364
 #, python-format
@@ -493,12 +507,12 @@ msgstr "Enregistrament impossible de « %s »."
 
 #: catfish/CatfishWindow.py:1563
 msgid "Selected Results"
-msgstr ""
+msgstr "Resultats seleccionats"
 
 #: catfish/CatfishWindow.py:1598
 #, python-format
 msgid "\"%s\" could not be deleted."
-msgstr ""
+msgstr "« %s » se podiá pas suprimir."
 
 #: catfish/CatfishWindow.py:1637
 #, python-format
@@ -511,6 +525,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete \"%s\"?"
 msgstr ""
+"Volètz vertadièrament\n"
+"suprimir permanentament « %s » ?"
 
 #: catfish/CatfishWindow.py:1677
 #, python-format
@@ -518,6 +534,8 @@ msgid ""
 "Are you sure that you want to \n"
 "permanently delete the %i selected files?"
 msgstr ""
+"Volètz vertadièrament suprimir\n"
+"permanentament los %i fichièrs seleccionats ?"
 
 #: catfish/CatfishWindow.py:1680
 msgid "If you delete a file, it is permanently lost."
@@ -564,22 +582,24 @@ msgid ""
 "Try making your search less specific\n"
 "or try another directory."
 msgstr ""
+"Ensajatz de far una recèrca mens especifica\n"
+"o ensajatz un autre repertòri."
 
 #: catfish/CatfishWindow.py:2145
 msgid "file"
 msgid_plural "files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "fichièr"
+msgstr[1] "fichièrs"
 
 #: catfish/CatfishWindow.py:2146
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "segonda"
+msgstr[1] "segondas"
 
 #: catfish/CatfishWindow.py:2148
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
-msgstr ""
+msgstr "{n} {files} trobats en {m:.{prec}f} {seconds}"
 
 #: catfish/CatfishWindow.py:2158 catfish/CatfishWindow.py:2161
 msgid "bytes"
@@ -592,16 +612,16 @@ msgstr "Recèrca..."
 #: catfish/CatfishWindow.py:2354
 #, python-format
 msgid "\"%s\" - searching | Catfish"
-msgstr ""
+msgstr "« %s » – recèrca | Catfish"
 
 #: catfish/CatfishWindow.py:2464
 #, python-format
 msgid "\"%s\" - results | Catfish"
-msgstr ""
+msgstr "« %s » – resultats | Catfish"
 
 #: catfish_lib/catfishconfig.py:97
 msgid "Catfish is a versatile file searching tool."
-msgstr ""
+msgstr "Catfish es una aisina versatila per recercar de fichièrs."
 
 #: catfish_lib/SudoDialog.py:126
 msgid "Password Required"
@@ -609,7 +629,7 @@ msgstr "Senhal requesit"
 
 #: catfish_lib/SudoDialog.py:163
 msgid "Incorrect password... try again."
-msgstr ""
+msgstr "Senhal incorrècte... tornatz ensajar."
 
 #: catfish_lib/SudoDialog.py:173
 msgid "Password:"
@@ -624,6 +644,8 @@ msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
 msgstr ""
+"Picatz lo senhal per\n"
+"realizar de prètzfaches d'administracion."
 
 #: catfish_lib/SudoDialog.py:207
 #, python-format
@@ -631,10 +653,12 @@ msgid ""
 "The application '%s' lets you\n"
 "modify essential parts of your system."
 msgstr ""
+"L'aplicacion « %s » vos permet de\n"
+"modificar las partidas essencialas del sistèma."
 
 #: data/metainfo/catfish.appdata.xml.in:8
 msgid "Versatile file searching tool"
-msgstr ""
+msgstr "Aisina versatila de recèrca de fichièrs"
 
 #: data/metainfo/catfish.appdata.xml.in:11
 msgid ""
@@ -644,13 +668,21 @@ msgid ""
 "modification date, file type, and file contents, users will no longer be "
 "dependent on the file manager or organization skills."
 msgstr ""
+"Catfish es un utilitari de recèrca de fichièrs pichon, rapid e poderós. Amb "
+"una interfàcia minimalista que met l'accent suls resultats, ajuda los "
+"utilizaires a trobar los fichièrs que lor cal sens gestionari de fichièrs. "
+"Amb de filtres poderoses coma la data de modificacion, lo tipe de fichièr e "
+"lo contengut del fichièr, los utilizaires dependràn pas mai del gestionari "
+"de fichièrs o de las competéncias d'organizacion."
 
 #: data/metainfo/catfish.appdata.xml.in:25
 msgid "The main Catfish window displaying image search results"
-msgstr ""
+msgstr "La fenèstra principala de Catfish qu'aficha los resultats de recèrca"
 
 #: data/metainfo/catfish.appdata.xml.in:29
 msgid ""
 "The main Catfish window displaying available filters and filtered search "
 "results"
 msgstr ""
+"La fenèstra principala de Catfish qu'aficha los filtres disponibles e los "
+"resultats de recèrca filtrats"
