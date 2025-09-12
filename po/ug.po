@@ -1,0 +1,681 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.catfish package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Xfce Bot <transifex@xfce.org>, 2024
+# Nick Schermer <nick@xfce.org>, 2024
+# Abduqadir Abliz <sahranbay@gmail.com>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce-apps.catfish\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-03-10 00:49+0100\n"
+"PO-Revision-Date: 2018-06-28 22:08+0000\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>, 2025\n"
+"Language-Team: Uyghur (https://app.transifex.com/xfce/teams/16840/ug/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ug\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1111
+#: catfish_lib/catfishconfig.py:94
+msgid "Catfish File Search"
+msgstr "Catfish ھۆججەت ئىزدەش"
+
+#: org.xfce.Catfish.desktop.in:4
+msgid "File search"
+msgstr "ھۆججەت ئىزدەش"
+
+#: org.xfce.Catfish.desktop.in:5
+msgid "Search the file system"
+msgstr "ھۆججەت سىستېمىسىنى ئىزدەش"
+
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: org.xfce.Catfish.desktop.in:7
+msgid "files;find;locate;lookup;search;"
+msgstr "ھۆججەت؛ئىزدە؛ئورنى؛سۈرۈشتۈر؛ئىزدەش؛"
+
+#: data/ui/CatfishPreferences.ui:14
+msgid "Catfish Preferences"
+msgstr "Catfish مايىللىقى"
+
+#: data/ui/CatfishPreferences.ui:30
+msgid "_Close"
+msgstr "ياپ(_C)"
+
+#: data/ui/CatfishPreferences.ui:111
+msgid "Classic (_Titlebar)"
+msgstr "ئەنئەنىۋى(ماۋزۇ بالداق)(_T)"
+
+#: data/ui/CatfishPreferences.ui:161
+msgid "_Modern (CSD)"
+msgstr "زامانىۋى(CSD)(_M)"
+
+#: data/ui/CatfishPreferences.ui:213
+msgid "Your new window layout will be applied after restarting Catfish."
+msgstr ""
+"Catfish نى قايتا قوزغاتقاندىن كېيىن يېڭى كۆزنەك جايلاشتۇرۇلۇشىنى قوللىنىدۇ."
+
+#: data/ui/CatfishPreferences.ui:236
+msgid "Window Layout"
+msgstr "كۆزنەك جايلىشىشى"
+
+#: data/ui/CatfishPreferences.ui:269
+msgid "Show _hidden files in the results"
+msgstr "نەتىجىدە يوشۇرۇن ھۆججەتنى كۆرسەت(_H)"
+
+#: data/ui/CatfishPreferences.ui:285
+msgid "Show filter _sidebar"
+msgstr "يان بالداقتا سۈزگۈچنى كۆرسەت(_S)"
+
+#: data/ui/CatfishPreferences.ui:301
+msgid "Show file sizes in binary format"
+msgstr "ھۆججەت چوڭلۇقىنى ئىككىلىك پىچىمدا كۆرسىتىدۇ"
+
+#: data/ui/CatfishPreferences.ui:305
+msgid "Uncheck to show file size in decimal format"
+msgstr "تاللانمىسا ھۆججەت چوڭلۇقىنى ئونلۇق پىچىمدا كۆرسىتىدۇ"
+
+#: data/ui/CatfishPreferences.ui:324
+msgid "Display Options"
+msgstr "كۆرسىتىش تاللانمىسى"
+
+#: data/ui/CatfishPreferences.ui:340
+msgid "Appearance"
+msgstr "كۆرۈنۈشى"
+
+#: data/ui/CatfishPreferences.ui:382
+msgid "Path"
+msgstr "يول"
+
+#: data/ui/CatfishPreferences.ui:409
+msgid "Add Directory..."
+msgstr "مۇندەرىجە قوش…"
+
+#: data/ui/CatfishPreferences.ui:410
+msgid "_Add"
+msgstr "قوش(_A)"
+
+#: data/ui/CatfishPreferences.ui:424
+msgid "Remove Directory"
+msgstr "مۇندەرىجىنى چىقىرىۋەت"
+
+#: data/ui/CatfishPreferences.ui:425
+msgid "_Remove"
+msgstr "چىقىرىۋەت(_R)"
+
+#: data/ui/CatfishPreferences.ui:453
+msgid "Exclude Directories"
+msgstr "مۇندەرىجە مۇستەسنا"
+
+#: data/ui/CatfishPreferences.ui:485
+msgid "Close the search _window after opening a file"
+msgstr "ھۆججەتنى ئاچقاندىن كېيىن ئىزدەش كۆزنىكىنى ياپ(_W)"
+
+#: data/ui/CatfishPreferences.ui:501
+msgid "Search within compressed files (.zip, .odt, .docx)"
+msgstr "پىرىسلانغان ھۆججەتتىن ئىزدە(.zip, .odt, .docx)"
+
+#: data/ui/CatfishPreferences.ui:523
+msgid "Miscellaneous"
+msgstr "باشقىلار"
+
+#: data/ui/CatfishPreferences.ui:539
+msgid "Advanced"
+msgstr "ئالىي"
+
+#: data/ui/CatfishWindow.ui:10 data/ui/CatfishWindow.ui:119
+msgid "Select a Folder"
+msgstr "قىسقۇچ تاللىنىدۇ"
+
+#: data/ui/CatfishWindow.ui:53
+msgid "Folder not found!"
+msgstr "قىسقۇچ تېپىلمىدى!"
+
+#. Restore Cancel button
+#. Buttons
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1254
+#: catfish/CatfishWindow.py:808 catfish_lib/SudoDialog.py:184
+msgid "Cancel"
+msgstr "ۋاز كەچ"
+
+#: data/ui/CatfishWindow.ui:84
+msgid "Select Folder"
+msgstr "قىسقۇچ تاللا"
+
+#: data/ui/CatfishWindow.ui:177
+msgid "_Open"
+msgstr "ئاچ(_O)"
+
+#: data/ui/CatfishWindow.ui:188
+msgid "_Open with..."
+msgstr "ئاچقۇز(_O)…"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:205
+msgid "Show in _File Manager"
+msgstr "ھۆججەت باشقۇرغۇدا كۆرسەت(_F)"
+
+#: data/ui/CatfishWindow.ui:216
+msgid "_Rename"
+msgstr "ئاتىنى ئۆزگەرت(_R)"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:232
+msgid "_Copy Location"
+msgstr "ئادرېسنى كۆچۈر(_C)"
+
+#: data/ui/CatfishWindow.ui:243
+msgid "_Save as..."
+msgstr "باشقا ئاتتا ساقلا(_S)…"
+
+#: data/ui/CatfishWindow.ui:254
+msgid "_Copy selected items to folder..."
+msgstr "تاللانغان تۈرنى قىسقۇچقا كۆچۈر(_C)…"
+
+#: data/ui/CatfishWindow.ui:271
+msgid "_Delete..."
+msgstr "ئۆچۈر(_D)…"
+
+#: data/ui/CatfishWindow.ui:295
+msgid "File Extensions"
+msgstr "ھۆججەت كېڭەيتىلگەن ئاتى"
+
+#: data/ui/CatfishWindow.ui:316
+msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
+msgstr ""
+"پەش بىلەن ئايرىلغان ھۆججەت كېڭەيتىلگەن ئاتى كىرگۈزۈلىدۇ (مەسىلەن، odt, png, "
+"txt)"
+
+#: data/ui/CatfishWindow.ui:344
+msgid "Documents"
+msgstr "پۈتۈك"
+
+#: data/ui/CatfishWindow.ui:352
+msgid "Folders"
+msgstr "قىسقۇچ"
+
+#: data/ui/CatfishWindow.ui:360
+msgid "Images"
+msgstr "سۈرەت"
+
+#: data/ui/CatfishWindow.ui:368
+msgid "Music"
+msgstr "مۇزىكا"
+
+#: data/ui/CatfishWindow.ui:376
+msgid "Videos"
+msgstr "سىن"
+
+#: data/ui/CatfishWindow.ui:384
+msgid "Applications"
+msgstr "پىروگرامما"
+
+#: data/ui/CatfishWindow.ui:392
+msgid "Archives"
+msgstr "ئارخىپ"
+
+#: data/ui/CatfishWindow.ui:400
+msgid "Other"
+msgstr "باشقا"
+
+#: data/ui/CatfishWindow.ui:408
+msgid "Extension..."
+msgstr "كېڭەيتىلمە…"
+
+#: data/ui/CatfishWindow.ui:434
+msgid "Any time"
+msgstr "خالىغان ۋاقىت"
+
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2023
+msgid "Today"
+msgstr "بۈگۈن"
+
+#: data/ui/CatfishWindow.ui:450
+msgid "This week"
+msgstr "بۇ ھەپتە"
+
+#: data/ui/CatfishWindow.ui:458
+msgid "This month"
+msgstr "بۇ ئاي"
+
+#: data/ui/CatfishWindow.ui:466
+msgid "Custom..."
+msgstr "ئىختىيارىي…"
+
+#: data/ui/CatfishWindow.ui:538 data/ui/CatfishWindow.ui:633
+msgid "Go to Today"
+msgstr "بۈگۈنگە يۆتكەل"
+
+#: data/ui/CatfishWindow.ui:566
+msgid "<b>Start Date</b>"
+msgstr "<b>باشلىنىش چېسلاسى</b>"
+
+#: data/ui/CatfishWindow.ui:661
+msgid "<b>End Date</b>"
+msgstr "<b>ئاخىرلىشىش چېسلاسى</b>"
+
+#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:240
+#: data/metainfo/catfish.appdata.xml.in:7
+msgid "Catfish"
+msgstr "Catfish"
+
+#: data/ui/CatfishWindow.ui:703
+msgid "Update"
+msgstr "يېڭىلا"
+
+#: data/ui/CatfishWindow.ui:744
+msgid "The search database is more than 7 days old.  Update now?"
+msgstr "ئىزدەش ساندانى 7 كۈندىن ئېشىپ كەتتى. ھازىر يېڭىلامدۇ؟"
+
+#: data/ui/CatfishWindow.ui:802
+msgid "File Type"
+msgstr "ھۆججەت تۈرى"
+
+#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1717
+msgid "Modified"
+msgstr "ئۆزگەرتىلدى"
+
+#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2348
+msgid "Results will be displayed as soon as they are found."
+msgstr "نەتىجىسىنى تېپىلغان ھامان كۆرسىتىدۇ."
+
+#: data/ui/CatfishWindow.ui:1268
+msgid "Unlock"
+msgstr "قۇلۇپ ئاچ"
+
+#: data/ui/CatfishWindow.ui:1320
+msgid "<b>Database:</b>"
+msgstr "<b>ساندان:</b>"
+
+#: data/ui/CatfishWindow.ui:1333
+msgid "<b>Updated:</b>"
+msgstr "<b>يېڭىلاندى:</b>"
+
+#: data/ui/CatfishWindow.ui:1346
+msgid "<big><b>Update Search Database</b></big>"
+msgstr "<big><b>ئىزدەش ساندانىنى يېڭىلاش</b></big>"
+
+#: data/ui/CatfishWindow.ui:1360
+msgid ""
+"For faster search results, the search database needs to be refreshed.\n"
+"This action requires administrative rights."
+msgstr ""
+"تېخىمۇ تېز ئىزدەش نەتىجىسىگە ئېرىشىش ئۈچۈن، ئىزدەش ساندانى يېڭىلىنىشى كېرەك.\n"
+"بۇ مەشغۇلاتقا باشقۇرغۇچى ئىجازىتى زۆرۈر."
+
+#: data/ui/CatfishWindow.ui:1492
+msgid "Update Search Database"
+msgstr "ئىزدەش ساندانىنى يېڭىلا"
+
+#: data/ui/CatfishWindow.ui:1516
+msgid "Search for files"
+msgstr "ھۆججەت ئىزدە"
+
+#: data/ui/CatfishWindow.ui:1562
+msgid "Compact List"
+msgstr "ئىخچام تىزىم"
+
+#: data/ui/CatfishWindow.ui:1581
+msgid "Thumbnails"
+msgstr "كىچىك سۈرەت"
+
+#: data/ui/CatfishWindow.ui:1632
+msgid "Show _sidebar"
+msgstr "يان بالداقنى كۆرسەت(_S)"
+
+#: data/ui/CatfishWindow.ui:1671
+msgid "Show _hidden files"
+msgstr "يوشۇرۇن ھۆججەتنى كۆرسەت(_H)"
+
+#: data/ui/CatfishWindow.ui:1686
+msgid "Search file _contents"
+msgstr "ھۆججەت مەزمۇنىنى ئىزدە(_C)"
+
+#: data/ui/CatfishWindow.ui:1703
+msgid "_Match results exactly"
+msgstr "دەل ماس كەلگەن نەتىجە(_M)"
+
+#: data/ui/CatfishWindow.ui:1756
+msgid "_Refresh search index..."
+msgstr "ئىزدەش ئىندېكىسىنى يېڭىلا(_R)…"
+
+#: data/ui/CatfishWindow.ui:1811
+msgid "_Preferences"
+msgstr "مايىللىق(_P)"
+
+#: data/ui/CatfishWindow.ui:1852
+msgid "_About"
+msgstr "ھەققىدە(_A)"
+
+#: catfish/__init__.py:39
+msgid "Usage: %prog [options] path query"
+msgstr "ئىشلىتىلىشى: %prog [تاللانما] يول سۈرۈشتۈرۈش"
+
+#: catfish/__init__.py:44
+msgid "Show debug messages (-vv will also debug catfish_lib)"
+msgstr "سازلاش ئۇچۇرىنى كۆرسەت (-vv دا catfish_lib نىمۇ سازلايدۇ)"
+
+#: catfish/__init__.py:47
+msgid "Use large icons"
+msgstr "چوڭ سىنبەلگە ئىشلەت"
+
+#: catfish/__init__.py:49
+msgid "Use thumbnails"
+msgstr "كىچىك سۈرەت ئىشلەت"
+
+#: catfish/__init__.py:51
+msgid "Display time in ISO format"
+msgstr "ۋاقىتنى ISO پىچىمىدا كۆرسەت"
+
+#. Translators: Do not translate PATH, it is a variable.
+#: catfish/__init__.py:53
+msgid "Set the default search path"
+msgstr "كۆڭۈلدىكى ئىزدەش يولىنى تەڭشەيدۇ"
+
+#: catfish/__init__.py:55
+msgid "Perform exact match"
+msgstr "دەل ماسلىشىشنى ئىجرا قىلىدۇ"
+
+#: catfish/__init__.py:57
+msgid "Include hidden files"
+msgstr "يوشۇرۇن ھۆججەتنى ئۆز ئىچىگە ئالىدۇ"
+
+#: catfish/__init__.py:59
+msgid "Perform fulltext search"
+msgstr "تولۇق تېكىستتىن ئىزدەشنى ئىجرا قىلىدۇ"
+
+#: catfish/__init__.py:61
+msgid ""
+"If path and query are provided, start searching when the application is "
+"displayed."
+msgstr ""
+"ئەگەر يول ۋە سۈرۈشتۈرۈش تەمىنلەنگەن بولسا، پىروگرامما كۆرۈنگەندە ئىزدەشنى "
+"باشلايدۇ."
+
+#: catfish/__init__.py:63
+msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
+msgstr ""
+"تارتىپلەيدىغان كۆڭۈلدىكى رەتنى تەڭشەيدۇ (ئات|يول|چېسلا|تۈرى)، "
+"(ئۆسكۈچى|كېمەيگۈچى)"
+
+#: catfish/__init__.py:66
+msgid "Close after selecting a file"
+msgstr "ھۆججەت تاللىغاندىن كېيىن ياپ"
+
+#: catfish/__init__.py:68
+msgid "Do not close after selecting a file"
+msgstr "ھۆججەت تاللىغاندىن كېيىن ياپما"
+
+#. Translators: this text is displayed next to
+#. a filename that is not utf-8 encoded.
+#: catfish/CatfishWindow.py:110
+#, python-format
+msgid "%s (invalid encoding)"
+msgstr "%s (ئىناۋەتسىز كودلاش)"
+
+#: catfish/CatfishWindow.py:151
+msgid "translator-credits"
+msgstr ""
+"غەيرەت ت.كەنجى <gheyret@gmail.com>\n"
+"ئابدۇقادىر ئابلىز <sahranbay@gmail.com>"
+
+#: catfish/CatfishWindow.py:302
+msgid "Unknown"
+msgstr "يوچۇن"
+
+#: catfish/CatfishWindow.py:306
+msgid "Never"
+msgstr "ھەرگىز"
+
+#: catfish/CatfishWindow.py:418
+#, python-format
+msgid ""
+"Enter your query above to find your files\n"
+"or click the %s icon for more options."
+msgstr ""
+"ئۈستىگە ئىزدىمەكچى بولغان ھۆججەت ياكى %s سىنبەلگىنى\n"
+" چېكىپ تېخىمۇ كۆپ تاللانمىغا ئېرىشىڭ."
+
+#: catfish/CatfishWindow.py:823
+msgid "An error occurred while updating the database."
+msgstr "سانداننى يېڭىلاۋاتقاندا خاتالىق كۆرۈلدى."
+
+#: catfish/CatfishWindow.py:825
+msgid "Authentication failed."
+msgstr "دەلىللىيەلمىدى."
+
+#: catfish/CatfishWindow.py:831
+msgid "Authentication cancelled."
+msgstr "دەلىللەش ئەمەلدىن قالدۇرۇلدى."
+
+#: catfish/CatfishWindow.py:837
+msgid "Search database updated successfully."
+msgstr "ئىزدەش ساندانى مۇۋەپپەقىيەتلىك يېڭىلاندى."
+
+#. Update the Cancel button to Close, make it default
+#: catfish/CatfishWindow.py:898
+msgid "Close"
+msgstr "ياپ"
+
+#. Set the dialog status to running.
+#: catfish/CatfishWindow.py:912
+msgid "Updating..."
+msgstr "يېڭىلاۋاتىدۇ…"
+
+#: catfish/CatfishWindow.py:947
+msgid "Stop Search"
+msgstr "ئىزدەشنى توختات"
+
+#: catfish/CatfishWindow.py:948
+msgid ""
+"Search is in progress...\n"
+"Press the cancel button or the Escape key to stop."
+msgstr ""
+"ئىزدەش داۋاملىشىۋاتىدۇ…\n"
+"ۋاز كەچ توپچە بېسىلسا ياكى Escape كۇنۇپكا بېسىلسا توختايدۇ."
+
+#: catfish/CatfishWindow.py:959
+msgid "Begin Search"
+msgstr "ئىزدەشنى باشلا"
+
+#: catfish/CatfishWindow.py:1097
+msgid "No folder selected."
+msgstr "قىسقۇچ تاللانمىدى."
+
+#: catfish/CatfishWindow.py:1102
+msgid "Folder not found."
+msgstr "قىسقۇچ تېپىلمىدى."
+
+#: catfish/CatfishWindow.py:1364
+#, python-format
+msgid "\"%s\" could not be opened."
+msgstr "«%s» نى ئاچقىلى بولمىدى."
+
+#: catfish/CatfishWindow.py:1556 catfish/CatfishWindow.py:1582
+#, python-format
+msgid "\"%s\" could not be saved."
+msgstr "«%s» نى ساقلىيالمىدى."
+
+#: catfish/CatfishWindow.py:1563
+msgid "Selected Results"
+msgstr "تاللانغان نەتىجە"
+
+#: catfish/CatfishWindow.py:1598
+#, python-format
+msgid "\"%s\" could not be deleted."
+msgstr "«%s» نى ئۆچۈرەلمىدى."
+
+#: catfish/CatfishWindow.py:1637
+#, python-format
+msgid "Save \"%s\" as..."
+msgstr "«%s» نى ئاتتا ساقلا…"
+
+#: catfish/CatfishWindow.py:1673
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete \"%s\"?"
+msgstr "«%s» نى راستتىنلا مەڭگۈلۈك ئۆچۈرەمسىز؟"
+
+#: catfish/CatfishWindow.py:1677
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete the %i selected files?"
+msgstr "تاللانغان %i ھۆججەتنى راستتىنلا مەڭگۈلۈك ئۆچۈرەمسىز؟"
+
+#: catfish/CatfishWindow.py:1680
+msgid "If you delete a file, it is permanently lost."
+msgstr "ئەگەر ھۆججەتنى ئۆچۈرسىڭىز، ئۇ مەڭگۈلۈككە يوقىلىدۇ."
+
+#: catfish/CatfishWindow.py:1714
+msgid "Filename"
+msgstr "ھۆججەت ئاتى"
+
+#: catfish/CatfishWindow.py:1715
+msgid "Size"
+msgstr "چوڭلۇقى"
+
+#: catfish/CatfishWindow.py:1716
+msgid "Location"
+msgstr "ئورنى"
+
+#: catfish/CatfishWindow.py:1726
+msgid "Preview"
+msgstr "ئالدىن كۆزەت"
+
+#: catfish/CatfishWindow.py:1733
+msgid "Details"
+msgstr "تەپسىلاتى"
+
+#: catfish/CatfishWindow.py:1928
+msgid "Open with default applications"
+msgstr "كۆڭۈلدىكى پىروگراممىدا ئاچىدۇ"
+
+#: catfish/CatfishWindow.py:1944
+msgid "Open with"
+msgstr "ئاچقۇز"
+
+#: catfish/CatfishWindow.py:2025
+msgid "Yesterday"
+msgstr "تۈنۈگۈن"
+
+#: catfish/CatfishWindow.py:2134
+msgid "No files found."
+msgstr "ھۆججەتلەر تېپىلمىدى."
+
+#: catfish/CatfishWindow.py:2136
+msgid ""
+"Try making your search less specific\n"
+"or try another directory."
+msgstr "ھالقىلىق سۆزنى ئازراق بەلگىلەڭ ياكى باشقا مۇندەرىجىنى سىناڭ."
+
+#: catfish/CatfishWindow.py:2145
+msgid "file"
+msgid_plural "files"
+msgstr[0] "ھۆججەت"
+msgstr[1] "ھۆججەت"
+
+#: catfish/CatfishWindow.py:2146
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "سېكۇنت"
+msgstr[1] "سېكۇنت"
+
+#: catfish/CatfishWindow.py:2148
+msgid "{n} {files} found in {m:.{prec}f} {seconds}"
+msgstr "{n} {files}/{m:.{prec}f}{seconds}"
+
+#: catfish/CatfishWindow.py:2158 catfish/CatfishWindow.py:2161
+msgid "bytes"
+msgstr "بايت"
+
+#: catfish/CatfishWindow.py:2346 catfish/CatfishWindow.py:2356
+msgid "Searching..."
+msgstr "ئىزدەۋاتىدۇ…"
+
+#: catfish/CatfishWindow.py:2354
+#, python-format
+msgid "\"%s\" - searching | Catfish"
+msgstr "\"%s\" - ئىزدەش | Catfish"
+
+#: catfish/CatfishWindow.py:2464
+#, python-format
+msgid "\"%s\" - results | Catfish"
+msgstr "\"%s\" - نەتىجە | Catfish"
+
+#: catfish_lib/catfishconfig.py:97
+msgid "Catfish is a versatile file searching tool."
+msgstr "Catfish كۆپ ئىقتىدارلىق ھۆججەت ئىزدەش قورالى."
+
+#: catfish_lib/SudoDialog.py:126
+msgid "Password Required"
+msgstr "ئىم زۆرۈر"
+
+#: catfish_lib/SudoDialog.py:163
+msgid "Incorrect password... try again."
+msgstr "ئىم خاتا… قايتا سىناڭ."
+
+#: catfish_lib/SudoDialog.py:173
+msgid "Password:"
+msgstr "ئىم:"
+
+#: catfish_lib/SudoDialog.py:187
+msgid "OK"
+msgstr "جەزملە"
+
+#: catfish_lib/SudoDialog.py:205
+msgid ""
+"Enter your password to\n"
+"perform administrative tasks."
+msgstr "باشقۇرغۇچى ئىجازىتىدىكى ۋەزىپىنى ئىجرا قىلىش ئۈچۈن ئىم كىرگۈزۈلىدۇ."
+
+#: catfish_lib/SudoDialog.py:207
+#, python-format
+msgid ""
+"The application '%s' lets you\n"
+"modify essential parts of your system."
+msgstr ""
+"بۇ قوللىنىشچان پىروگرامما  «%s» سىستېمىنىڭ \n"
+"مۇھىم بۆلەكلىرىنى ئۆزگەرتىشىڭىزگە يول قويىدۇ."
+
+#: data/metainfo/catfish.appdata.xml.in:8
+msgid "Versatile file searching tool"
+msgstr "كۆپ ئىقتىدارلىق ھۆججەت ئىزدەش قورالى"
+
+#: data/metainfo/catfish.appdata.xml.in:11
+msgid ""
+"Catfish is a small, fast, and powerful file search utility. Featuring a "
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
+msgstr ""
+"Catfish چاققان، تېز، كۈچلۈك ھۆججەت ئىزدەش قورالى. ئىزدەش نەتىجىسىنى "
+"گەۋدىلەندۈرىدىغان كىچىك كۆرۈنۈشنى ئالاھىدە تەڭشىگەن بولۇپ، ئىشلەتكۈچى ھۆججەت"
+" باشقۇرغۇچنى ئىشلەتمەيمۇ ئىزدىمەكچى بولغان ھۆججەتنى تاپالايدۇ. ھۆججەتنىڭ "
+"چېسلا، تۈرى ۋە مەزمۇنى قاتارلىقلار بويىچە سۈزىدىغان كۈچلۈك ئىقتىدارى بار، "
+"ئىشلەتكۈچىنىڭ باشقا ھۆججەت باشقۇرغۇچ ياكى تەشكىللەش ماھارىتىگە ئىگە بولۇشى "
+"زۆرۈر ئەمەس."
+
+#: data/metainfo/catfish.appdata.xml.in:25
+msgid "The main Catfish window displaying image search results"
+msgstr "Catfish نىڭ ئاساسىي كۆزنىكىدە سۈرەت ئىزدەش نەتىجىسىنى كۆرسىتىدۇ"
+
+#: data/metainfo/catfish.appdata.xml.in:29
+msgid ""
+"The main Catfish window displaying available filters and filtered search "
+"results"
+msgstr ""
+"Catfish نىڭ ئاساسىي كۆزنىكى ئىشلەتكىلى بولىدىغان سۈزگۈچ ۋە سۈزۈلگەندىن "
+"كېيىنكى ئىزدەش نەتىجىسىنى كۆرسىتىدۇ"
