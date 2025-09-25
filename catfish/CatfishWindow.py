@@ -1486,7 +1486,7 @@ class CatfishWindow(Window):
         entry.set_activates_default(True)
         basename = os.path.basename(sel_file)
         entry.set_text(basename)
-        box.pack_start(Gtk.Label(label="Enter the new name:"), True, True, 8)
+        box.pack_start(Gtk.Label(label=_("Enter the new name:")), True, True, 8)
         box.pack_start(entry, True, True, 8)
         dialog.show_all()
         resp = dialog.run()
