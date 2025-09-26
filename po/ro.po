@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-03-10 00:49+0100\n"
+"POT-Creation-Date: 2025-09-26 00:57+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2025\n"
 "Language-Team: Romanian (https://app.transifex.com/xfce/teams/16840/ro/)\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
 #: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1111
-#: catfish_lib/catfishconfig.py:94
+#: catfish_lib/catfishconfig.py:91
 msgid "Catfish File Search"
 msgstr "Căutare de fișiere Catfish"
 
@@ -142,8 +142,8 @@ msgstr "Dosarul nu a fost găsit!"
 
 #. Restore Cancel button
 #. Buttons
-#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1254
-#: catfish/CatfishWindow.py:808 catfish_lib/SudoDialog.py:184
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1255
+#: catfish/CatfishWindow.py:809 catfish_lib/SudoDialog.py:184
 msgid "Cancel"
 msgstr "Anulați"
 
@@ -237,7 +237,7 @@ msgstr "Extensie..."
 msgid "Any time"
 msgstr "Oricând"
 
-#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2023
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2038
 msgid "Today"
 msgstr "Azi"
 
@@ -284,31 +284,31 @@ msgstr ""
 msgid "File Type"
 msgstr "Tipul de fișier"
 
-#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1717
+#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1721
 msgid "Modified"
 msgstr "Modificat"
 
-#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2348
+#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2376
 msgid "Results will be displayed as soon as they are found."
 msgstr "Rezultatele vor fi afișate imediat ce sunt găsite."
 
-#: data/ui/CatfishWindow.ui:1268
+#: data/ui/CatfishWindow.ui:1269
 msgid "Unlock"
 msgstr "Deblocare"
 
-#: data/ui/CatfishWindow.ui:1320
+#: data/ui/CatfishWindow.ui:1321
 msgid "<b>Database:</b>"
 msgstr "<b>Bază de date:</b>"
 
-#: data/ui/CatfishWindow.ui:1333
+#: data/ui/CatfishWindow.ui:1334
 msgid "<b>Updated:</b>"
 msgstr "<b>Actualizată:</b>"
 
-#: data/ui/CatfishWindow.ui:1346
+#: data/ui/CatfishWindow.ui:1347
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Actualizează baza de date de căutare</b></big>"
 
-#: data/ui/CatfishWindow.ui:1360
+#: data/ui/CatfishWindow.ui:1361
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -316,47 +316,47 @@ msgstr ""
 "Pentru rezultate de căutare mai rapide, baza de date de căutare trebuie să fie reîmprospătată.\n"
 "Această acțiune necesită drepturi administrative."
 
-#: data/ui/CatfishWindow.ui:1492
+#: data/ui/CatfishWindow.ui:1493
 msgid "Update Search Database"
 msgstr "Actualizează baza de date de căutare"
 
-#: data/ui/CatfishWindow.ui:1516
+#: data/ui/CatfishWindow.ui:1517
 msgid "Search for files"
 msgstr "Căutare de fișiere"
 
-#: data/ui/CatfishWindow.ui:1562
+#: data/ui/CatfishWindow.ui:1563
 msgid "Compact List"
 msgstr "Listă compactă"
 
-#: data/ui/CatfishWindow.ui:1581
+#: data/ui/CatfishWindow.ui:1582
 msgid "Thumbnails"
 msgstr "Miniaturi"
 
-#: data/ui/CatfishWindow.ui:1632
+#: data/ui/CatfishWindow.ui:1633
 msgid "Show _sidebar"
 msgstr "Afișează _bara laterală"
 
-#: data/ui/CatfishWindow.ui:1671
+#: data/ui/CatfishWindow.ui:1672
 msgid "Show _hidden files"
 msgstr "Afișează _fișierele ascunse"
 
-#: data/ui/CatfishWindow.ui:1686
+#: data/ui/CatfishWindow.ui:1687
 msgid "Search file _contents"
 msgstr "Caută în _conținutul fișierelor"
 
-#: data/ui/CatfishWindow.ui:1703
+#: data/ui/CatfishWindow.ui:1704
 msgid "_Match results exactly"
 msgstr "Rezultate de _potrivire exactă"
 
-#: data/ui/CatfishWindow.ui:1756
+#: data/ui/CatfishWindow.ui:1757
 msgid "_Refresh search index..."
 msgstr "Actualizează indexul de căutare..."
 
-#: data/ui/CatfishWindow.ui:1811
+#: data/ui/CatfishWindow.ui:1812
 msgid "_Preferences"
 msgstr "_Preferințe"
 
-#: data/ui/CatfishWindow.ui:1852
+#: data/ui/CatfishWindow.ui:1853
 msgid "_About"
 msgstr "_Despre"
 
@@ -426,7 +426,7 @@ msgstr "Nu închide după selectarea unui fișier"
 msgid "%s (invalid encoding)"
 msgstr "%s (codificare nevalidă)"
 
-#: catfish/CatfishWindow.py:151
+#: catfish/CatfishWindow.py:152
 msgid "translator-credits"
 msgstr ""
 "cip <c1pr1an@tuta.io>, 2018\n"
@@ -435,15 +435,15 @@ msgstr ""
 "Nick Schermer <nick@xfce.org>, 2024\n"
 "Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024"
 
-#: catfish/CatfishWindow.py:302
+#: catfish/CatfishWindow.py:303
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: catfish/CatfishWindow.py:306
+#: catfish/CatfishWindow.py:307
 msgid "Never"
 msgstr "Niciodată"
 
-#: catfish/CatfishWindow.py:418
+#: catfish/CatfishWindow.py:419
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -452,37 +452,37 @@ msgstr ""
 "Introduceți interogarea mai sus pentru a vă găsi fișierele\n"
 "sau faceți clic pe pictograma %s pentru mai multe opțiuni."
 
-#: catfish/CatfishWindow.py:823
+#: catfish/CatfishWindow.py:824
 msgid "An error occurred while updating the database."
 msgstr "A apărut o eroare în timpul actualizării bazei de date."
 
-#: catfish/CatfishWindow.py:825
+#: catfish/CatfishWindow.py:826
 msgid "Authentication failed."
 msgstr "Autentificarea a eșuat."
 
-#: catfish/CatfishWindow.py:831
+#: catfish/CatfishWindow.py:832
 msgid "Authentication cancelled."
 msgstr "Autentificarea a fost anulată."
 
-#: catfish/CatfishWindow.py:837
+#: catfish/CatfishWindow.py:838
 msgid "Search database updated successfully."
 msgstr "Baza de date de căutare a fost actualizată cu succes."
 
 #. Update the Cancel button to Close, make it default
-#: catfish/CatfishWindow.py:898
+#: catfish/CatfishWindow.py:899
 msgid "Close"
 msgstr "Închide"
 
 #. Set the dialog status to running.
-#: catfish/CatfishWindow.py:912
+#: catfish/CatfishWindow.py:913
 msgid "Updating..."
 msgstr "Se actualizează…"
 
-#: catfish/CatfishWindow.py:947
+#: catfish/CatfishWindow.py:948
 msgid "Stop Search"
 msgstr "Oprește căutarea"
 
-#: catfish/CatfishWindow.py:948
+#: catfish/CatfishWindow.py:949
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -490,43 +490,47 @@ msgstr ""
 "Căutarea este în curs...\n"
 "Apăsați butonul de anulare sau tasta Escape pentru a o opri."
 
-#: catfish/CatfishWindow.py:959
+#: catfish/CatfishWindow.py:960
 msgid "Begin Search"
 msgstr "Începeți căutarea"
 
-#: catfish/CatfishWindow.py:1097
+#: catfish/CatfishWindow.py:1098
 msgid "No folder selected."
 msgstr "Nu a fost selectat niciun dosar."
 
-#: catfish/CatfishWindow.py:1102
+#: catfish/CatfishWindow.py:1103
 msgid "Folder not found."
 msgstr "Dosarul nu a fost găsit."
 
-#: catfish/CatfishWindow.py:1364
+#: catfish/CatfishWindow.py:1368
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "„%s” nu a putut fi deschis."
 
-#: catfish/CatfishWindow.py:1556 catfish/CatfishWindow.py:1582
+#: catfish/CatfishWindow.py:1489
+msgid "Enter the new name:"
+msgstr "Introduceți noul nume:"
+
+#: catfish/CatfishWindow.py:1560 catfish/CatfishWindow.py:1586
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "„%s” nu a putut fi salvat."
 
-#: catfish/CatfishWindow.py:1563
+#: catfish/CatfishWindow.py:1567
 msgid "Selected Results"
 msgstr "Rezultate selectate"
 
-#: catfish/CatfishWindow.py:1598
+#: catfish/CatfishWindow.py:1602
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "„%s” nu a putut fi șters."
 
-#: catfish/CatfishWindow.py:1637
+#: catfish/CatfishWindow.py:1641
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Salvează „%s” ca..."
 
-#: catfish/CatfishWindow.py:1673
+#: catfish/CatfishWindow.py:1677
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -535,7 +539,7 @@ msgstr ""
 "Sunteți sigur că doriți să\n"
 "ștergeți definitiv „%s”?"
 
-#: catfish/CatfishWindow.py:1677
+#: catfish/CatfishWindow.py:1681
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -544,47 +548,47 @@ msgstr ""
 "Sunteți sigur că doriți să \n"
 "ștergeți definitiv cele %i fișiere selectate?"
 
-#: catfish/CatfishWindow.py:1680
+#: catfish/CatfishWindow.py:1684
 msgid "If you delete a file, it is permanently lost."
 msgstr "Dacă ștergeți un fișier, acesta nu mai poate fi recuperat."
 
-#: catfish/CatfishWindow.py:1714
+#: catfish/CatfishWindow.py:1718
 msgid "Filename"
 msgstr "Nume fișier"
 
-#: catfish/CatfishWindow.py:1715
+#: catfish/CatfishWindow.py:1719
 msgid "Size"
 msgstr "Dimensiune"
 
-#: catfish/CatfishWindow.py:1716
+#: catfish/CatfishWindow.py:1720
 msgid "Location"
 msgstr "Locație"
 
-#: catfish/CatfishWindow.py:1726
+#: catfish/CatfishWindow.py:1730
 msgid "Preview"
 msgstr "Previzualizare"
 
-#: catfish/CatfishWindow.py:1733
+#: catfish/CatfishWindow.py:1737
 msgid "Details"
 msgstr "Detalii"
 
-#: catfish/CatfishWindow.py:1928
+#: catfish/CatfishWindow.py:1943
 msgid "Open with default applications"
 msgstr "Deschide cu aplicațiile implicite"
 
-#: catfish/CatfishWindow.py:1944
+#: catfish/CatfishWindow.py:1959
 msgid "Open with"
 msgstr "Deschide cu"
 
-#: catfish/CatfishWindow.py:2025
+#: catfish/CatfishWindow.py:2040
 msgid "Yesterday"
 msgstr "Ieri"
 
-#: catfish/CatfishWindow.py:2134
+#: catfish/CatfishWindow.py:2159
 msgid "No files found."
 msgstr "No files found."
 
-#: catfish/CatfishWindow.py:2136
+#: catfish/CatfishWindow.py:2161
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -592,43 +596,43 @@ msgstr ""
 "Încercați să faceți căutarea mai puțin specifică\n"
 "sau încercați un alt director."
 
-#: catfish/CatfishWindow.py:2145
+#: catfish/CatfishWindow.py:2170
 msgid "file"
 msgid_plural "files"
 msgstr[0] "fișier"
 msgstr[1] "fișiere"
 msgstr[2] "de fișiere"
 
-#: catfish/CatfishWindow.py:2146
+#: catfish/CatfishWindow.py:2171
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "secundă"
 msgstr[1] "secunde"
 msgstr[2] "de secunde"
 
-#: catfish/CatfishWindow.py:2148
+#: catfish/CatfishWindow.py:2173
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
 msgstr "{n} {file} găsite în {m:.{prec}f} {seconds}"
 
-#: catfish/CatfishWindow.py:2158 catfish/CatfishWindow.py:2161
+#: catfish/CatfishWindow.py:2183 catfish/CatfishWindow.py:2186
 msgid "bytes"
 msgstr "octeți"
 
-#: catfish/CatfishWindow.py:2346 catfish/CatfishWindow.py:2356
+#: catfish/CatfishWindow.py:2374
 msgid "Searching..."
 msgstr "Se caută..."
 
-#: catfish/CatfishWindow.py:2354
+#: catfish/CatfishWindow.py:2382
 #, python-format
 msgid "\"%s\" - searching | Catfish"
 msgstr "„%s” - căutare | Catfish"
 
-#: catfish/CatfishWindow.py:2464
+#: catfish/CatfishWindow.py:2502
 #, python-format
 msgid "\"%s\" - results | Catfish"
 msgstr "„%s” - rezultate | Catfish"
 
-#: catfish_lib/catfishconfig.py:97
+#: catfish_lib/catfishconfig.py:94
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish este un instrument versatil de căutare a fișierelor."
 
