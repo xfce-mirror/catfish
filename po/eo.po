@@ -342,15 +342,15 @@ msgstr "Serĉu dosierajn enhavojn"
 
 #: data/ui/CatfishWindow.ui:1704
 msgid "_Match results exactly"
-msgstr ""
+msgstr "_Kongruaj ekzaktaj rezultoj"
 
 #: data/ui/CatfishWindow.ui:1757
 msgid "_Refresh search index..."
-msgstr ""
+msgstr "_Reŝargi serĉindekson..."
 
 #: data/ui/CatfishWindow.ui:1812
 msgid "_Preferences"
-msgstr ""
+msgstr "_Agordoj"
 
 #: data/ui/CatfishWindow.ui:1853
 msgid "_About"
@@ -358,36 +358,36 @@ msgstr "_Pri"
 
 #: catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
-msgstr ""
+msgstr "Uzo: %p rog [opicoj] vojo-informpeto"
 
 #: catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
-msgstr ""
+msgstr "Montri cimspurajn mesaĝojn (-vv ankaŭ cimspuros catfish_lib)"
 
 #: catfish/__init__.py:47
 msgid "Use large icons"
-msgstr ""
+msgstr "Uzi grandajn bildsimbolojn"
 
 #: catfish/__init__.py:49
 msgid "Use thumbnails"
-msgstr ""
+msgstr "Uzi bildetojn"
 
 #: catfish/__init__.py:51
 msgid "Display time in ISO format"
-msgstr ""
+msgstr "Montri tempon per formato ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
 #: catfish/__init__.py:53
 msgid "Set the default search path"
-msgstr ""
+msgstr "Agordi la defaŭltan serĉon path"
 
 #: catfish/__init__.py:55
 msgid "Perform exact match"
-msgstr ""
+msgstr "Plenumi ĝustan kongruon"
 
 #: catfish/__init__.py:57
 msgid "Include hidden files"
-msgstr ""
+msgstr "Inkluzivi kaŝitajn dosierojn"
 
 #: catfish/__init__.py:59
 msgid "Perform fulltext search"
