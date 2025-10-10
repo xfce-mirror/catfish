@@ -450,7 +450,7 @@ msgstr ""
 #: catfish/CatfishWindow.py:824
 msgid "An error occurred while updating the database."
 msgstr ""
-"Una error s'es produsida pendent l'actualizacion de la basa de donadas."
+"Una error s'es produita pendent l'actualizacion de la basa de donadas."
 
 #: catfish/CatfishWindow.py:826
 msgid "Authentication failed."
