@@ -27,6 +27,7 @@ gi.require_version('Gtk', '3.0')  # noqa
 from gi.repository import Gtk
 
 from catfish_lib.PrefsDialog import PrefsDialog
+from catfish_lib import CatfishColumn
 
 LOGGER = logging.getLogger('catfish')
 
@@ -61,6 +62,8 @@ class CatfishPrefsDialog(PrefsDialog):
             self.builder.get_object("do_show_size_binary").set_active(True)
         self.set_exclude_directories(
             self.settings.get_setting("exclude-paths"))
+        self.set_treeview_columns(
+            self.settings.get_setting("columns"))
         self.process_events = True
 
     def on_wl_titlebar_toggled(self, widget):
@@ -132,7 +135,7 @@ class CatfishPrefsDialog(PrefsDialog):
             treeview = self.builder.get_object("exclude_treeview")
             model = treeview.get_model()
             model.append([path])
-            self.treemodel_to_settings(model)
+            self.treemodel_to_settings(model, "exclude-paths", True)
         dlg.destroy()
 
     def on_remove_directory_clicked(self, widget):  # pylint: disable=W0613
@@ -141,21 +144,60 @@ class CatfishPrefsDialog(PrefsDialog):
         sel = treeview.get_selection().get_selected()
         if sel is not None:
             model.remove(sel[1])
-        self.treemodel_to_settings(model)
+        self.treemodel_to_settings(model, "exclude-paths", True)
 
-    def treemodel_to_settings(self, model):
+    def on_add_column_clicked(self, widget):
+        treeview_all = self.builder.get_object("columns_nodisplay_treeview")
+        model_all = treeview_all.get_model()
+        sel = treeview_all.get_selection().get_selected()
+        treeview_vis = self.builder.get_object("columns_display_treeview")
+        model_vis = treeview_vis.get_model()
+        if sel is not None:
+            model_vis.append([sel[0][sel[1]][0],sel[0][sel[1]][1]])
+        self.treemodel_to_settings(model_vis, "columns", False, True)
+
+    def on_remove_column_clicked(self, widget):
+        treeview_vis = self.builder.get_object("columns_display_treeview")
+        model_vis = treeview_vis.get_model()
+        sel = treeview_vis.get_selection().get_selected()
+        if sel is not None:
+            model_vis.remove(sel[1])
+        self.treemodel_to_settings(model_vis, "columns", False, True)
+
+    def on_move_column_up_clicked(self, widget):
+        treeview_vis = self.builder.get_object("columns_display_treeview")
+        model_vis = treeview_vis.get_model()
+        sel = treeview_vis.get_selection().get_selected()
+        if sel[1] is not None:
+            iter_prev = model_vis.iter_previous(sel[1])
+            if iter_prev:
+                model_vis.move_before(sel[1], iter_prev)
+        self.treemodel_to_settings(model_vis, "columns", False, True)
+
+    def on_move_column_down_clicked(self, widget):
+        treeview_vis = self.builder.get_object("columns_display_treeview")
+        model_vis = treeview_vis.get_model()
+        sel = treeview_vis.get_selection().get_selected()
+        if sel[1] is not None:
+            iter_next = model_vis.iter_next(sel[1])
+            if iter_next:
+                model_vis.move_after(sel[1], iter_next)
+        self.treemodel_to_settings(model_vis, "columns", False, True)
+        return
+
+    def treemodel_to_settings(self, model, setting_name, sort, allow_dup=False):
         child = model.iter_children()
 
         rows = []
         while child is not None:
             path = model[child][0]
-            if path not in rows and len(path) > 0:
-                rows.append(path)
+            if len(path) > 0:
+                if path not in rows or allow_dup:
+                    rows.append(path)
             child = model.iter_next(child)
-
-        rows.sort()
-
-        self.settings.set_setting("exclude-paths", rows)
+        if sort:
+            rows.sort()
+        self.settings.set_setting(setting_name, rows)
 
     def set_exclude_directories(self, exclude_directories):
         treeview = self.builder.get_object("exclude_treeview")
@@ -163,3 +205,17 @@ class CatfishPrefsDialog(PrefsDialog):
 
         for path in exclude_directories:
             model.append([path])
+
+    def set_treeview_columns(self, vis_columns):
+        treeview_all = self.builder.get_object("columns_nodisplay_treeview")
+        model_all = treeview_all.get_model()
+
+        for col in CatfishColumn.all_columns:
+            col_obj = CatfishColumn.all_columns[col]
+            model_all.append([col_obj.colname, col_obj.display_name])
+
+        treeview_vis = self.builder.get_object("columns_display_treeview")
+        model_vis = treeview_vis.get_model()
+
+        for col in vis_columns:
+            model_vis.append([col.colname, col.display_name])
