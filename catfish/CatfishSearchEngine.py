@@ -29,6 +29,7 @@ import signal
 import subprocess
 import time
 from itertools import permutations
+from shutil import which
 
 import mimetypes
 import zipfile
@@ -54,14 +55,7 @@ except ValueError:
 
 LOGGER = logging.getLogger('catfish_search')
 ENGINE_COUNT = 0
-
-FNULL = open(os.devnull, 'w')
-if subprocess.call(['which', 'locate'],  # pylint: disable=R1703
-                   stdout=FNULL, stderr=subprocess.STDOUT) == 0:
-    LOCATE_SUPPORT = True
-else:
-    LOCATE_SUPPORT = False
-FNULL.close()
+LOCATE_SUPPORT = which('locate') is not None
 
 
 def get_keyword_list(keywords):
