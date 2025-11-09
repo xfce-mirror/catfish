@@ -25,9 +25,10 @@ import sys
 from locale import gettext as _
 
 import gi
+gi.require_version('GLib', '2.0')  # noqa
 gi.require_version('Gtk', '3.0')  # noqa
 
-from gi.repository import Gtk
+from gi.repository import GLib, Gtk
 
 from catfish import CatfishWindow
 
@@ -79,6 +80,8 @@ def parse_options():
 def main():
     'constructor for your class instances'
     options, args = parse_options()
+
+    GLib.set_prgname('org.xfce.Catfish')
 
     # Run the application.
     window = CatfishWindow.CatfishWindow()
