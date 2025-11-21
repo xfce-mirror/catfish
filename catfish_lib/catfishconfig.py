@@ -84,8 +84,6 @@ def get_version():
 
 
 def get_about():
-    from locale import gettext as _
-
     return {
         'version': get_version(),
         'program_name': _('Catfish File Search'),
