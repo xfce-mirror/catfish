@@ -32,8 +32,6 @@ import subprocess
 import time
 import zipfile
 import tempfile
-from gettext import ngettext
-from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
 
@@ -2170,6 +2168,7 @@ class CatfishWindow(Window):
             files_str = ngettext("file", "files", count)
             duration_str = ngettext("second", "seconds", duration)
 
+            # Translators: Do not translate words between curly braces, they are variables.
             self.statusbar_label.set_label(_("{n} {files} found in {m:.{prec}f} {seconds}").format(
                 n=count, files=files_str, prec=d_precision, m=duration, seconds=duration_str))
 

@@ -22,8 +22,6 @@ import optparse
 import signal
 import sys
 
-from locale import gettext as _
-
 import gi
 gi.require_version('GLib', '2.0')  # noqa
 gi.require_version('Gtk', '3.0')  # noqa
