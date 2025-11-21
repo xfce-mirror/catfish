@@ -65,7 +65,7 @@ msgstr "_Moderno (CSD)"
 
 #: data/ui/CatfishPreferences.ui:213
 msgid "Your new window layout will be applied after restarting Catfish."
-msgstr "Nova razporeditec oken bo uproabljena ob ponovnem zagonu Catfish-a."
+msgstr "Nova razporeditev oken bo uporabljena ob ponovnem zagonu Catfish-a."
 
 #: data/ui/CatfishPreferences.ui:236
 msgid "Window Layout"
@@ -142,7 +142,7 @@ msgstr "Izberi mapo"
 
 #: data/ui/CatfishWindow.ui:53
 msgid "Folder not found!"
-msgstr "Mapa ni bila najdena."
+msgstr "Mapa ni bila najdena!"
 
 #. Restore Cancel button
 #. Buttons
@@ -234,7 +234,7 @@ msgstr "Drugo"
 
 #: data/ui/CatfishWindow.ui:408
 msgid "Extension..."
-msgstr "Končnica"
+msgstr "Končnica..."
 
 #: data/ui/CatfishWindow.ui:434
 msgid "Any time"
@@ -363,11 +363,12 @@ msgstr "_O programu"
 
 #: catfish/__init__.py:39
 msgid "Usage: %prog [options] path query"
-msgstr "Uporaba: %p rog [možnosti]] pot poizvedba"
+msgstr "Uporaba: %p rog [možnosti] pot poizvedba"
 
 #: catfish/__init__.py:44
 msgid "Show debug messages (-vv will also debug catfish_lib)"
-msgstr "Prikaži možnosti razhroščevanja"
+msgstr ""
+"Prikaži možnosti razhroščevanja (-vv bo razhroščeval tudi catfish_lib)"
 
 #: catfish/__init__.py:47
 msgid "Use large icons"
@@ -596,8 +597,8 @@ msgid "file"
 msgid_plural "files"
 msgstr[0] "datoteka"
 msgstr[1] "datoteki"
-msgstr[2] "datotek"
-msgstr[3] "datoteke"
+msgstr[2] "datoteke"
+msgstr[3] "datotek"
 
 #: catfish/CatfishWindow.py:2171
 msgid "second"
@@ -609,7 +610,7 @@ msgstr[3] "sekundah"
 
 #: catfish/CatfishWindow.py:2173
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
-msgstr "{n} {datoteke} najdenih v {m:.{prec}f} {sekundah}"
+msgstr "{n} {files} najdenih v {m:.{prec}f} {seconds}"
 
 #: catfish/CatfishWindow.py:2183 catfish/CatfishWindow.py:2186
 msgid "bytes"
@@ -617,7 +618,7 @@ msgstr "bajtov"
 
 #: catfish/CatfishWindow.py:2374
 msgid "Searching..."
-msgstr "Iskanje"
+msgstr "Iskanje..."
 
 #: catfish/CatfishWindow.py:2382
 #, python-format
@@ -693,4 +694,4 @@ msgid ""
 "The main Catfish window displaying available filters and filtered search "
 "results"
 msgstr ""
-"Glavno Catfish okno, ki prikazuje dostopne filtre in filtrirane rezultate."
+"Glavno Catfish okno, ki prikazuje dostopne filtre in filtrirane rezultate"
