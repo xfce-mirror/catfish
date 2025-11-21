@@ -20,7 +20,6 @@
 # pylint: disable=C0116
 
 import logging
-from locale import gettext as _
 
 from gi.repository import Gtk, Gdk  # pylint: disable=E0611
 

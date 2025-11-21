@@ -25,6 +25,10 @@ import locale
 locale.textdomain('catfish')
 locale.bindtextdomain('catfish', os.path.join(PREFIX, 'share/locale'))
 
+import gettext
+translation = gettext.translation('catfish')
+translation.install(names=['ngettext'])
+
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk

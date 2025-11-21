@@ -17,8 +17,6 @@
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
-from locale import gettext as _
-
 import pexpect
 
 from gi.repository import Gtk, GdkPixbuf
