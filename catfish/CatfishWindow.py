@@ -32,8 +32,6 @@ import subprocess
 import time
 import zipfile
 import tempfile
-from gettext import ngettext
-from locale import gettext as _
 from shutil import copy2, rmtree
 from xml.sax.saxutils import escape
 
