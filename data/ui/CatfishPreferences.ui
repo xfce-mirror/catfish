@@ -9,6 +9,18 @@
       <column type="gchararray"/>
     </columns>
   </object>
+  <object class="GtkListStore" id="liststore2">
+    <columns>
+      <column type="gchararray"/>
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="liststore3">
+    <columns>
+      <column type="gchararray"/>
+      <column type="gchararray"/>
+    </columns>
+  </object>
   <object class="CatfishPrefsDialog" id="catfish_preferences">
     <property name="can-focus">False</property>
     <property name="title" translatable="yes">Catfish Preferences</property>
@@ -537,6 +549,222 @@
               <packing>
                 <property name="name">advanced</property>
                 <property name="title" translatable="yes">Advanced</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox" id="catfish_prefs_columns_layout">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">18</property>
+                <child>
+                  <object class="GtkBox" id="columns_layout_h_box">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="orientation">horizontal</property>
+                    <property name="spacing">18</property>
+                    <child>
+                      <object class="GtkBox" id="columns_nd_outer_box">
+                        <property name="visible">True</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="columns_nodisplay_label">
+                            <property name="visible">True</property>
+                            <property name="label">Available Columns:</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkTreeView" id="columns_nodisplay_treeview">
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="model">liststore2</property>
+                            <property name="enable-search">False</property>
+                            <property name="search-column">0</property>
+                            <child internal-child="selection">
+                              <object class="GtkTreeSelection" id="columns_nodisplay_treeview_sel"/>
+                            </child>
+                            <child>
+                              <object class="GtkTreeViewColumn" id="columns_nodisplay_name">
+                                <property name="title" translatable="yes">Column Name</property>
+                                <child>
+                                  <object class="GtkCellRendererText" id="columns_nodisplay_name_text"/>
+                                  <attributes>
+                                    <attribute name="text">1</attribute>
+                                  </attributes>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkTreeViewColumn" id="columns_nodisplay_id">
+                                <property name="title" translatable="yes">ID</property>
+                                <child>
+                                  <object class="GtkCellRendererText" id="columns_nodisplay_id_text"/>
+                                  <attributes>
+                                    <attribute name="text">0</attribute>
+                                  </attributes>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkToolbar" id="columns_nodisplay_toolbar">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="icon_size">2</property>
+                            <child>
+                              <object class="GtkToolButton" id="dup_add_column">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Add Column...</property>
+                                <property name="label" translatable="yes">_Add</property>
+                                <property name="use-underline">True</property>
+                                <property name="icon-name">list-add-symbolic</property>
+                                <signal name="clicked" handler="on_add_column_clicked" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="homogeneous">True</property>
+                              </packing>
+                            </child>
+                            <style>
+                              <class name="inline-toolbar"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="columns_button_frame">
+                        <property name="visible">True</property>
+                        <property name="orientation">vertical</property>
+                        <property name="hexpand">True</property>
+                        <child>
+                          <object class="GtkLabel" id="columns_display_label">
+                            <property name="visible">True</property>
+                            <property name="label">Currently Used Columns:</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkTreeView" id="columns_display_treeview">
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="model">liststore3</property>
+                            <property name="enable-search">False</property>
+                            <property name="search-column">0</property>
+                            <child internal-child="selection">
+                              <object class="GtkTreeSelection" id="columns_display_treeview_sel"/>
+                            </child>
+                            <child>
+                              <object class="GtkTreeViewColumn" id="columns_display_name">
+                                <property name="title" translatable="yes">Column Name</property>
+                                <child>
+                                  <object class="GtkCellRendererText" id="columns_display_name_text"/>
+                                  <attributes>
+                                    <attribute name="text">1</attribute>
+                                  </attributes>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkTreeViewColumn" id="columns_display_id">
+                                <property name="title" translatable="yes">ID</property>
+                                <child>
+                                  <object class="GtkCellRendererText" id="columns_display_id_text"/>
+                                  <attributes>
+                                    <attribute name="text">0</attribute>
+                                  </attributes>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkToolbar" id="columns_display_toolbar">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="icon_size">2</property>
+                            <child>
+                              <object class="GtkToolButton" id="move_column_up">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Move up...</property>
+                                <property name="label" translatable="yes">_Up</property>
+                                <property name="use-underline">True</property>
+                                <property name="icon-name">go-up-symbolic</property>
+                                <signal name="clicked" handler="on_move_column_up_clicked" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="homogeneous">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkToolButton" id="move_column_down">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Move down...</property>
+                                <property name="label" translatable="yes">_Down</property>
+                                <property name="use-underline">True</property>
+                                <property name="icon-name">go-down-symbolic</property>
+                                <signal name="clicked" handler="on_move_column_down_clicked" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="homogeneous">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkToolButton" id="remove_column">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Remove Column</property>
+                                <property name="label" translatable="yes">_Remove</property>
+                                <property name="use-underline">True</property>
+                                <property name="icon-name">list-remove-symbolic</property>
+                                <signal name="clicked" handler="on_remove_column_clicked" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="homogeneous">True</property>
+                              </packing>
+                            </child>
+                            <style>
+                              <class name="inline-toolbar"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">columns</property>
+                <property name="title" translatable="yes">Columns</property>
                 <property name="position">1</property>
               </packing>
             </child>
