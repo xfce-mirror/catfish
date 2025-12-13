@@ -1,0 +1,686 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.catfish package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Duy Truong Nguyen <truongap.ars@gmail.com>, 2019
+# Xfce Bot <transifex@xfce.org>, 2024
+# Nick Schermer <nick@xfce.org>, 2024
+# Loc Huynh, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce-apps.catfish\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-09-26 00:57+0200\n"
+"PO-Revision-Date: 2018-06-28 22:08+0000\n"
+"Last-Translator: Loc Huynh, 2025\n"
+"Language-Team: Vietnamese (https://app.transifex.com/xfce/teams/16840/vi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1111
+#: catfish_lib/catfishconfig.py:91
+msgid "Catfish File Search"
+msgstr "Tìm kiếm tệp Catfish"
+
+#: org.xfce.Catfish.desktop.in:4
+msgid "File search"
+msgstr "Tìm kiếm tệp"
+
+#: org.xfce.Catfish.desktop.in:5
+msgid "Search the file system"
+msgstr "Tìm kiếm trong hệ thống tệp"
+
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: org.xfce.Catfish.desktop.in:7
+msgid "files;find;locate;lookup;search;"
+msgstr "tệp;tìm;định vị;tra cứu;tìm kiếm;"
+
+#: data/ui/CatfishPreferences.ui:14
+msgid "Catfish Preferences"
+msgstr "Tùy chọn Catfish"
+
+#: data/ui/CatfishPreferences.ui:30
+msgid "_Close"
+msgstr "Đóng lại"
+
+#: data/ui/CatfishPreferences.ui:111
+msgid "Classic (_Titlebar)"
+msgstr "Cổ điển (thanh _tiêu đề)"
+
+#: data/ui/CatfishPreferences.ui:161
+msgid "_Modern (CSD)"
+msgstr "_Hiện đại (CSD)"
+
+#: data/ui/CatfishPreferences.ui:213
+msgid "Your new window layout will be applied after restarting Catfish."
+msgstr "Bố cục cửa sổ mới sẽ được áp dụng sau khi khởi động lại Catfish."
+
+#: data/ui/CatfishPreferences.ui:236
+msgid "Window Layout"
+msgstr "Bố cục cửa sổ"
+
+#: data/ui/CatfishPreferences.ui:269
+msgid "Show _hidden files in the results"
+msgstr "Hiển thị tệp ẩ_n trong kết quả"
+
+#: data/ui/CatfishPreferences.ui:285
+msgid "Show filter _sidebar"
+msgstr "Hiển thị thanh bên bộ _lọc"
+
+#: data/ui/CatfishPreferences.ui:301
+msgid "Show file sizes in binary format"
+msgstr "Hiển thị kích thước tệp ở định dạng nhị phân"
+
+#: data/ui/CatfishPreferences.ui:305
+msgid "Uncheck to show file size in decimal format"
+msgstr "Bỏ chọn để hiển thị kích thước tệp ở định dạng thập phân"
+
+#: data/ui/CatfishPreferences.ui:324
+msgid "Display Options"
+msgstr "Tùy chọn hiển thị"
+
+#: data/ui/CatfishPreferences.ui:340
+msgid "Appearance"
+msgstr "Diện mạo"
+
+#: data/ui/CatfishPreferences.ui:382
+msgid "Path"
+msgstr "Đường dẫn"
+
+#: data/ui/CatfishPreferences.ui:409
+msgid "Add Directory..."
+msgstr "Thêm thư mục..."
+
+#: data/ui/CatfishPreferences.ui:410
+msgid "_Add"
+msgstr "_Thêm"
+
+#: data/ui/CatfishPreferences.ui:424
+msgid "Remove Directory"
+msgstr "Xóa thư mục"
+
+#: data/ui/CatfishPreferences.ui:425
+msgid "_Remove"
+msgstr "_Xóa"
+
+#: data/ui/CatfishPreferences.ui:453
+msgid "Exclude Directories"
+msgstr "Loại trừ thư mục"
+
+#: data/ui/CatfishPreferences.ui:485
+msgid "Close the search _window after opening a file"
+msgstr "Đóng cửa sổ tìm kiếm sau khi mở tệp"
+
+#: data/ui/CatfishPreferences.ui:501
+msgid "Search within compressed files (.zip, .odt, .docx)"
+msgstr "Tìm kiếm trong tệp nén (.zip, .odt, .docx)"
+
+#: data/ui/CatfishPreferences.ui:523
+msgid "Miscellaneous"
+msgstr "Linh tinh"
+
+#: data/ui/CatfishPreferences.ui:539
+msgid "Advanced"
+msgstr "Nâng cao"
+
+#: data/ui/CatfishWindow.ui:10 data/ui/CatfishWindow.ui:119
+msgid "Select a Folder"
+msgstr "Chọn một thư mục"
+
+#: data/ui/CatfishWindow.ui:53
+msgid "Folder not found!"
+msgstr "Không tìm thấy thư mục!"
+
+#. Restore Cancel button
+#. Buttons
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1255
+#: catfish/CatfishWindow.py:809 catfish_lib/SudoDialog.py:184
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#: data/ui/CatfishWindow.ui:84
+msgid "Select Folder"
+msgstr "Chọn thư mục"
+
+#: data/ui/CatfishWindow.ui:177
+msgid "_Open"
+msgstr "_Mở"
+
+#: data/ui/CatfishWindow.ui:188
+msgid "_Open with..."
+msgstr "_Mở với..."
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:205
+msgid "Show in _File Manager"
+msgstr "Hiển thị trong trình quản lý tệp"
+
+#: data/ui/CatfishWindow.ui:216
+msgid "_Rename"
+msgstr "Đổi _tên"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:232
+msgid "_Copy Location"
+msgstr "_Sao chép vị trí"
+
+#: data/ui/CatfishWindow.ui:243
+msgid "_Save as..."
+msgstr "_Lưu thành..."
+
+#: data/ui/CatfishWindow.ui:254
+msgid "_Copy selected items to folder..."
+msgstr "_Sao chép các mục đã chọn vào thư mục..."
+
+#: data/ui/CatfishWindow.ui:271
+msgid "_Delete..."
+msgstr "_Xóa..."
+
+#: data/ui/CatfishWindow.ui:295
+msgid "File Extensions"
+msgstr "Phần mở rộng tệp"
+
+#: data/ui/CatfishWindow.ui:316
+msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
+msgstr ""
+"Nhập danh sách phần mở rộng tệp cách nhau bởi dấu phẩy (ví dụ: odt, png, "
+"txt)"
+
+#: data/ui/CatfishWindow.ui:344
+msgid "Documents"
+msgstr "Tài liệu"
+
+#: data/ui/CatfishWindow.ui:352
+msgid "Folders"
+msgstr "Thư mục"
+
+#: data/ui/CatfishWindow.ui:360
+msgid "Images"
+msgstr "Ảnh"
+
+#: data/ui/CatfishWindow.ui:368
+msgid "Music"
+msgstr "Nhạc"
+
+#: data/ui/CatfishWindow.ui:376
+msgid "Videos"
+msgstr "Video"
+
+#: data/ui/CatfishWindow.ui:384
+msgid "Applications"
+msgstr "Ứng dụng"
+
+#: data/ui/CatfishWindow.ui:392
+msgid "Archives"
+msgstr "Tệp nén"
+
+#: data/ui/CatfishWindow.ui:400
+msgid "Other"
+msgstr "Khác"
+
+#: data/ui/CatfishWindow.ui:408
+msgid "Extension..."
+msgstr "Phần mở rộng..."
+
+#: data/ui/CatfishWindow.ui:434
+msgid "Any time"
+msgstr "Bất kỳ lúc nào"
+
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2038
+msgid "Today"
+msgstr "Hôm nay"
+
+#: data/ui/CatfishWindow.ui:450
+msgid "This week"
+msgstr "Tuần này"
+
+#: data/ui/CatfishWindow.ui:458
+msgid "This month"
+msgstr "Tháng này"
+
+#: data/ui/CatfishWindow.ui:466
+msgid "Custom..."
+msgstr "Tùy chỉnh..."
+
+#: data/ui/CatfishWindow.ui:538 data/ui/CatfishWindow.ui:633
+msgid "Go to Today"
+msgstr "Đi tới hôm nay"
+
+#: data/ui/CatfishWindow.ui:566
+msgid "<b>Start Date</b>"
+msgstr "<b>Ngày bắt đầu</b>"
+
+#: data/ui/CatfishWindow.ui:661
+msgid "<b>End Date</b>"
+msgstr "<b>Ngày kết thúc</b>"
+
+#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:240
+#: data/metainfo/catfish.appdata.xml.in:7
+msgid "Catfish"
+msgstr "Catfish"
+
+#: data/ui/CatfishWindow.ui:703
+msgid "Update"
+msgstr "Cập nhật"
+
+#: data/ui/CatfishWindow.ui:744
+msgid "The search database is more than 7 days old.  Update now?"
+msgstr "Cơ sở dữ liệu tìm kiếm đã cũ hơn 7 ngày. Cập nhật ngay bây giờ?"
+
+#: data/ui/CatfishWindow.ui:802
+msgid "File Type"
+msgstr "Loại tệp"
+
+#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1721
+msgid "Modified"
+msgstr "Đã sửa đổi"
+
+#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2376
+msgid "Results will be displayed as soon as they are found."
+msgstr "Kết quả sẽ được hiển thị ngay khi tìm thấy."
+
+#: data/ui/CatfishWindow.ui:1269
+msgid "Unlock"
+msgstr "Mở khóa"
+
+#: data/ui/CatfishWindow.ui:1321
+msgid "<b>Database:</b>"
+msgstr "<b>Cơ sở dữ liệu:</b>"
+
+#: data/ui/CatfishWindow.ui:1334
+msgid "<b>Updated:</b>"
+msgstr "<b>Đã cập nhật:</b>"
+
+#: data/ui/CatfishWindow.ui:1347
+msgid "<big><b>Update Search Database</b></big>"
+msgstr "<big><b>Cập nhật cơ sở dữ liệu tìm kiếm</b></big>"
+
+#: data/ui/CatfishWindow.ui:1361
+msgid ""
+"For faster search results, the search database needs to be refreshed.\n"
+"This action requires administrative rights."
+msgstr ""
+"Để có kết quả tìm kiếm nhanh hơn, cơ sở dữ liệu tìm kiếm cần được làm mới.\n"
+"Hành động này yêu cầu quyền quản trị."
+
+#: data/ui/CatfishWindow.ui:1493
+msgid "Update Search Database"
+msgstr "Cập nhật cơ sở dữ liệu tìm kiếm"
+
+#: data/ui/CatfishWindow.ui:1517
+msgid "Search for files"
+msgstr "Tìm kiếm tệp"
+
+#: data/ui/CatfishWindow.ui:1563
+msgid "Compact List"
+msgstr "Danh sách gọn"
+
+#: data/ui/CatfishWindow.ui:1582
+msgid "Thumbnails"
+msgstr "Ảnh thu nhỏ"
+
+#: data/ui/CatfishWindow.ui:1633
+msgid "Show _sidebar"
+msgstr "Hiển thị thanh _bên"
+
+#: data/ui/CatfishWindow.ui:1672
+msgid "Show _hidden files"
+msgstr "Hiển thị tệp ẩ_n"
+
+#: data/ui/CatfishWindow.ui:1687
+msgid "Search file _contents"
+msgstr "Tìm kiếm _nội dung tệp"
+
+#: data/ui/CatfishWindow.ui:1704
+msgid "_Match results exactly"
+msgstr "Khớp kết quả _chính xác"
+
+#: data/ui/CatfishWindow.ui:1757
+msgid "_Refresh search index..."
+msgstr "_Làm mới chỉ mục tìm kiếm..."
+
+#: data/ui/CatfishWindow.ui:1812
+msgid "_Preferences"
+msgstr "_Tùy chọn"
+
+#: data/ui/CatfishWindow.ui:1853
+msgid "_About"
+msgstr "_Giới thiệu"
+
+#: catfish/__init__.py:39
+msgid "Usage: %prog [options] path query"
+msgstr "Sử dụng: %prog [tùy chọn] đường dẫn truy vấn"
+
+#: catfish/__init__.py:44
+msgid "Show debug messages (-vv will also debug catfish_lib)"
+msgstr "Hiển thị thông báo gỡ lỗi (-vv cũng sẽ gỡ lỗi catfish_lib)"
+
+#: catfish/__init__.py:47
+msgid "Use large icons"
+msgstr "Sử dụng biểu tượng lớn"
+
+#: catfish/__init__.py:49
+msgid "Use thumbnails"
+msgstr "Sử dụng ảnh thu nhỏ"
+
+#: catfish/__init__.py:51
+msgid "Display time in ISO format"
+msgstr "Hiển thị thời gian ở định dạng ISO"
+
+#. Translators: Do not translate PATH, it is a variable.
+#: catfish/__init__.py:53
+msgid "Set the default search path"
+msgstr "Đặt đường dẫn tìm kiếm mặc định"
+
+#: catfish/__init__.py:55
+msgid "Perform exact match"
+msgstr "Thực hiện khớp chính xác"
+
+#: catfish/__init__.py:57
+msgid "Include hidden files"
+msgstr "Bao gồm tệp ẩn"
+
+#: catfish/__init__.py:59
+msgid "Perform fulltext search"
+msgstr "Thực hiện tìm kiếm toàn văn"
+
+#: catfish/__init__.py:61
+msgid ""
+"If path and query are provided, start searching when the application is "
+"displayed."
+msgstr ""
+"Nếu đường dẫn và truy vấn được cung cấp, bắt đầu tìm kiếm khi ứng dụng được "
+"hiển thị."
+
+#: catfish/__init__.py:63
+msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
+msgstr "đặt cột mặc định để sắp xếp (name|size|path|date|type),(asc|desc)"
+
+#: catfish/__init__.py:66
+msgid "Close after selecting a file"
+msgstr "Đóng sau khi chọn tệp"
+
+#: catfish/__init__.py:68
+msgid "Do not close after selecting a file"
+msgstr "Không đóng sau khi chọn tệp"
+
+#. Translators: this text is displayed next to
+#. a filename that is not utf-8 encoded.
+#: catfish/CatfishWindow.py:110
+#, python-format
+msgid "%s (invalid encoding)"
+msgstr "%s (mã hóa không hợp lệ)"
+
+#: catfish/CatfishWindow.py:152
+msgid "translator-credits"
+msgstr "giới thiêu người dịch"
+
+#: catfish/CatfishWindow.py:303
+msgid "Unknown"
+msgstr "Không rõ"
+
+#: catfish/CatfishWindow.py:307
+msgid "Never"
+msgstr "Không bao giờ"
+
+#: catfish/CatfishWindow.py:419
+#, python-format
+msgid ""
+"Enter your query above to find your files\n"
+"or click the %s icon for more options."
+msgstr ""
+"Nhập truy vấn của bạn ở trên để tìm tệp\n"
+"hoặc nhấp biểu tượng %s để có thêm tùy chọn."
+
+#: catfish/CatfishWindow.py:824
+msgid "An error occurred while updating the database."
+msgstr "Đã xảy ra lỗi khi cập nhật cơ sở dữ liệu."
+
+#: catfish/CatfishWindow.py:826
+msgid "Authentication failed."
+msgstr "Xác thực thất bại."
+
+#: catfish/CatfishWindow.py:832
+msgid "Authentication cancelled."
+msgstr "Xác thực đã bị hủy."
+
+#: catfish/CatfishWindow.py:838
+msgid "Search database updated successfully."
+msgstr "Cơ sở dữ liệu tìm kiếm đã được cập nhật thành công."
+
+#. Update the Cancel button to Close, make it default
+#: catfish/CatfishWindow.py:899
+msgid "Close"
+msgstr "Đóng"
+
+#. Set the dialog status to running.
+#: catfish/CatfishWindow.py:913
+msgid "Updating..."
+msgstr "Đang cập nhật..."
+
+#: catfish/CatfishWindow.py:948
+msgid "Stop Search"
+msgstr "Dừng tìm kiếm"
+
+#: catfish/CatfishWindow.py:949
+msgid ""
+"Search is in progress...\n"
+"Press the cancel button or the Escape key to stop."
+msgstr ""
+"Tìm kiếm đang tiến hành...\n"
+"Nhấn nút hủy bỏ hoặc phím Escape để dừng."
+
+#: catfish/CatfishWindow.py:960
+msgid "Begin Search"
+msgstr "Bắt đầu tìm kiếm"
+
+#: catfish/CatfishWindow.py:1098
+msgid "No folder selected."
+msgstr "Không chọn thư mục nào."
+
+#: catfish/CatfishWindow.py:1103
+msgid "Folder not found."
+msgstr "Không tìm thấy thư mục."
+
+#: catfish/CatfishWindow.py:1368
+#, python-format
+msgid "\"%s\" could not be opened."
+msgstr "Không thể mở \"%s\"."
+
+#: catfish/CatfishWindow.py:1489
+msgid "Enter the new name:"
+msgstr "Nhập tên mới:"
+
+#: catfish/CatfishWindow.py:1560 catfish/CatfishWindow.py:1586
+#, python-format
+msgid "\"%s\" could not be saved."
+msgstr "Không thể lưu \"%s\"."
+
+#: catfish/CatfishWindow.py:1567
+msgid "Selected Results"
+msgstr "Kết quả đã chọn"
+
+#: catfish/CatfishWindow.py:1602
+#, python-format
+msgid "\"%s\" could not be deleted."
+msgstr "Không thể xóa \"%s\"."
+
+#: catfish/CatfishWindow.py:1641
+#, python-format
+msgid "Save \"%s\" as..."
+msgstr "Lưu \"%s\" thành..."
+
+#: catfish/CatfishWindow.py:1677
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete \"%s\"?"
+msgstr ""
+"Bạn có chắc chắn muốn\n"
+"xóa vĩnh viễn \"%s\"?"
+
+#: catfish/CatfishWindow.py:1681
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete the %i selected files?"
+msgstr ""
+"Bạn có chắc chắn muốn\n"
+"xóa vĩnh viễn %i tệp đã chọn?"
+
+#: catfish/CatfishWindow.py:1684
+msgid "If you delete a file, it is permanently lost."
+msgstr "Nếu bạn xóa tệp, nó sẽ mất vĩnh viễn."
+
+#: catfish/CatfishWindow.py:1718
+msgid "Filename"
+msgstr "Tên tập tin"
+
+#: catfish/CatfishWindow.py:1719
+msgid "Size"
+msgstr "Kích thước"
+
+#: catfish/CatfishWindow.py:1720
+msgid "Location"
+msgstr "Vị trí"
+
+#: catfish/CatfishWindow.py:1730
+msgid "Preview"
+msgstr "Xem trước"
+
+#: catfish/CatfishWindow.py:1737
+msgid "Details"
+msgstr "Chi tiết"
+
+#: catfish/CatfishWindow.py:1943
+msgid "Open with default applications"
+msgstr "Mở với ứng dụng mặc định"
+
+#: catfish/CatfishWindow.py:1959
+msgid "Open with"
+msgstr "Mở với"
+
+#: catfish/CatfishWindow.py:2040
+msgid "Yesterday"
+msgstr "Hôm qua"
+
+#: catfish/CatfishWindow.py:2159
+msgid "No files found."
+msgstr "Không tìm thấy tệp nào."
+
+#: catfish/CatfishWindow.py:2161
+msgid ""
+"Try making your search less specific\n"
+"or try another directory."
+msgstr ""
+"Thử làm cho tìm kiếm của bạn ít cụ thể hơn\n"
+"hoặc thử thư mục khác."
+
+#: catfish/CatfishWindow.py:2170
+msgid "file"
+msgid_plural "files"
+msgstr[0] "tệp"
+
+#: catfish/CatfishWindow.py:2171
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "giây"
+
+#: catfish/CatfishWindow.py:2173
+msgid "{n} {files} found in {m:.{prec}f} {seconds}"
+msgstr "Tìm thấy {n} {files} trong {m:.{prec}f} {seconds}"
+
+#: catfish/CatfishWindow.py:2183 catfish/CatfishWindow.py:2186
+msgid "bytes"
+msgstr "byte"
+
+#: catfish/CatfishWindow.py:2374
+msgid "Searching..."
+msgstr "Đang tìm kiếm..."
+
+#: catfish/CatfishWindow.py:2382
+#, python-format
+msgid "\"%s\" - searching | Catfish"
+msgstr "\"%s\" - đang tìm kiếm | Catfish"
+
+#: catfish/CatfishWindow.py:2502
+#, python-format
+msgid "\"%s\" - results | Catfish"
+msgstr "\"%s\" - kết quả | Catfish"
+
+#: catfish_lib/catfishconfig.py:94
+msgid "Catfish is a versatile file searching tool."
+msgstr "Catfish là công cụ tìm kiếm tệp đa năng."
+
+#: catfish_lib/SudoDialog.py:126
+msgid "Password Required"
+msgstr "Yêu cầu mật khẩu"
+
+#: catfish_lib/SudoDialog.py:163
+msgid "Incorrect password... try again."
+msgstr "Mật khẩu không đúng... thử lại."
+
+#: catfish_lib/SudoDialog.py:173
+msgid "Password:"
+msgstr "Mật khẩu"
+
+#: catfish_lib/SudoDialog.py:187
+msgid "OK"
+msgstr "OK"
+
+#: catfish_lib/SudoDialog.py:205
+msgid ""
+"Enter your password to\n"
+"perform administrative tasks."
+msgstr ""
+"Nhập mật khẩu của bạn để\n"
+"thực hiện các tác vụ quản trị."
+
+#: catfish_lib/SudoDialog.py:207
+#, python-format
+msgid ""
+"The application '%s' lets you\n"
+"modify essential parts of your system."
+msgstr ""
+"Ứng dụng '%s' cho phép bạn\n"
+"sửa đổi các phần thiết yếu của hệ thống."
+
+#: data/metainfo/catfish.appdata.xml.in:8
+msgid "Versatile file searching tool"
+msgstr "Công cụ tìm kiếm tệp đa năng"
+
+#: data/metainfo/catfish.appdata.xml.in:11
+msgid ""
+"Catfish is a small, fast, and powerful file search utility. Featuring a "
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
+msgstr ""
+"Catfish là tiện ích tìm kiếm tệp nhỏ gọn, nhanh và mạnh mẽ. Với giao diện "
+"tối giản tập trung vào kết quả, nó giúp người dùng tìm thấy các tệp họ cần "
+"mà không cần trình quản lý tệp. Với các bộ lọc mạnh mẽ như ngày sửa đổi, "
+"loại tệp và nội dung tệp, người dùng sẽ không còn phụ thuộc vào trình quản "
+"lý tệp hay kỹ năng tổ chức."
+
+#: data/metainfo/catfish.appdata.xml.in:25
+msgid "The main Catfish window displaying image search results"
+msgstr "Cửa sổ chính của Catfish hiển thị kết quả tìm kiếm ảnh"
+
+#: data/metainfo/catfish.appdata.xml.in:29
+msgid ""
+"The main Catfish window displaying available filters and filtered search "
+"results"
+msgstr ""
+"Cửa sổ chính của Catfish hiển thị các bộ lọc khả dụng và kết quả tìm kiếm đã"
+" lọc"
