@@ -31,7 +31,7 @@ def text_list():
     return txt_list
 
 def document_list():
-    doc_list = ('pdf', 'ebook', 'epub', 'msword')
+    doc_list = ('pdf', 'ebook', 'epub', 'msword', 'ms-excel')
     return doc_list
 
 def app_list():
