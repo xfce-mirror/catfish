@@ -1,0 +1,684 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.catfish package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# BoneNI, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce-apps.catfish\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-09-26 00:57+0200\n"
+"PO-Revision-Date: 2018-06-28 22:08+0000\n"
+"Last-Translator: BoneNI, 2026\n"
+"Language-Team: Lao (https://app.transifex.com/xfce/teams/16840/lo/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lo\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1111
+#: catfish_lib/catfishconfig.py:91
+msgid "Catfish File Search"
+msgstr "ການຄົ້ນຫາໄຟລ໌ Catfish"
+
+#: org.xfce.Catfish.desktop.in:4
+msgid "File search"
+msgstr "ຄົ້ນຫາໄຟລ໌"
+
+#: org.xfce.Catfish.desktop.in:5
+msgid "Search the file system"
+msgstr "ຄົ້ນຫາໃນລະບົບໄຟລ໌"
+
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: org.xfce.Catfish.desktop.in:7
+msgid "files;find;locate;lookup;search;"
+msgstr "ໄຟລ໌;ຊອກຫາ;ຕຳແໜ່ງ;ຄົ້ນຫາ;ຊອກ;"
+
+#: data/ui/CatfishPreferences.ui:14
+msgid "Catfish Preferences"
+msgstr "ການຕັ້ງຄ່າ Catfish"
+
+#: data/ui/CatfishPreferences.ui:30
+msgid "_Close"
+msgstr "_ປິດ"
+
+#: data/ui/CatfishPreferences.ui:111
+msgid "Classic (_Titlebar)"
+msgstr "ແບບຄລາສສິກ (_ແຖບຫົວຂໍ້)"
+
+#: data/ui/CatfishPreferences.ui:161
+msgid "_Modern (CSD)"
+msgstr "_ແບບທັນສະໄໝ (CSD)"
+
+#: data/ui/CatfishPreferences.ui:213
+msgid "Your new window layout will be applied after restarting Catfish."
+msgstr "ຮູບແບບໜ້າຕ່າງໃໝ່ຈະຖືກນຳໃຊ້ຫຼັງຈາກເລີ່ມ Catfish ໃໝ່."
+
+#: data/ui/CatfishPreferences.ui:236
+msgid "Window Layout"
+msgstr "ຮູບແບບໜ້າຕ່າງ"
+
+#: data/ui/CatfishPreferences.ui:269
+msgid "Show _hidden files in the results"
+msgstr "ສະແດງໄຟລ໌ທີ່_ຊ່ອນໄວ້ໃນຜົນການຄົ້ນຫາ"
+
+#: data/ui/CatfishPreferences.ui:285
+msgid "Show filter _sidebar"
+msgstr "ສະແດງ_ແຖບຂ້າງເຄື່ອງມືກັ່ນຕອງ"
+
+#: data/ui/CatfishPreferences.ui:301
+msgid "Show file sizes in binary format"
+msgstr "ສະແດງຂະໜາດໄຟລ໌ໃນຮູບແບບເລກຖານສອງ"
+
+#: data/ui/CatfishPreferences.ui:305
+msgid "Uncheck to show file size in decimal format"
+msgstr "ຍົກເລີກການເລືອກເພື່ອສະແດງຂະໜາດໄຟລ໌ໃນຮູບແບບເລກຖານສິບ"
+
+#: data/ui/CatfishPreferences.ui:324
+msgid "Display Options"
+msgstr "ຕົວເລືອກການສະແດງຜົນ"
+
+#: data/ui/CatfishPreferences.ui:340
+msgid "Appearance"
+msgstr "ຮູບລັກສະນະ"
+
+#: data/ui/CatfishPreferences.ui:382
+msgid "Path"
+msgstr "ເສັ້ນທາງ"
+
+#: data/ui/CatfishPreferences.ui:409
+msgid "Add Directory..."
+msgstr "ເພີ່ມໄດເຣັກທໍຣີ..."
+
+#: data/ui/CatfishPreferences.ui:410
+msgid "_Add"
+msgstr "_ເພີ່ມ"
+
+#: data/ui/CatfishPreferences.ui:424
+msgid "Remove Directory"
+msgstr "ລຶບໄດເຣັກທໍຣີ"
+
+#: data/ui/CatfishPreferences.ui:425
+msgid "_Remove"
+msgstr "_ລຶບອອກ"
+
+#: data/ui/CatfishPreferences.ui:453
+msgid "Exclude Directories"
+msgstr "ຍົກເວັ້ນໄດເຣັກທໍຣີ"
+
+#: data/ui/CatfishPreferences.ui:485
+msgid "Close the search _window after opening a file"
+msgstr "ປິດ_ໜ້າຕ່າງຄົ້ນຫາຫຼັງຈາກເປີດໄຟລ໌"
+
+#: data/ui/CatfishPreferences.ui:501
+msgid "Search within compressed files (.zip, .odt, .docx)"
+msgstr "ຄົ້ນຫາພາຍໃນໄຟລ໌ທີ່ບີບອັດ (.zip, .odt, .docx)"
+
+#: data/ui/CatfishPreferences.ui:523
+msgid "Miscellaneous"
+msgstr "ອື່ນໆທົ່ວໄປ"
+
+#: data/ui/CatfishPreferences.ui:539
+msgid "Advanced"
+msgstr "ຂັ້ນສູງ"
+
+#: data/ui/CatfishWindow.ui:10 data/ui/CatfishWindow.ui:119
+msgid "Select a Folder"
+msgstr "ເລືອກໂຟນເດີ"
+
+#: data/ui/CatfishWindow.ui:53
+msgid "Folder not found!"
+msgstr "ບໍ່ພົບໂຟນເດີ!"
+
+#. Restore Cancel button
+#. Buttons
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1255
+#: catfish/CatfishWindow.py:809 catfish_lib/SudoDialog.py:184
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+#: data/ui/CatfishWindow.ui:84
+msgid "Select Folder"
+msgstr "ເລືອກໂຟນເດີ"
+
+#: data/ui/CatfishWindow.ui:177
+msgid "_Open"
+msgstr "_ເປີດ"
+
+#: data/ui/CatfishWindow.ui:188
+msgid "_Open with..."
+msgstr "_ເປີດດ້ວຍ..."
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:205
+msgid "Show in _File Manager"
+msgstr "ສະແດງໃນ_ໂປຣແກຣມຈັດການໄຟລ໌"
+
+#: data/ui/CatfishWindow.ui:216
+msgid "_Rename"
+msgstr "_ປ່ຽນຊື່"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:232
+msgid "_Copy Location"
+msgstr "_ສຳເນົາທີ່ຢູ່"
+
+#: data/ui/CatfishWindow.ui:243
+msgid "_Save as..."
+msgstr "_ບັນທຶກເປັນ..."
+
+#: data/ui/CatfishWindow.ui:254
+msgid "_Copy selected items to folder..."
+msgstr "_ສຳເນົາລາຍການທີ່ເລືອກໄປຍັງໂຟນເດີ..."
+
+#: data/ui/CatfishWindow.ui:271
+msgid "_Delete..."
+msgstr "_ລຶບ..."
+
+#: data/ui/CatfishWindow.ui:295
+msgid "File Extensions"
+msgstr "ນາມສະກຸນໄຟລ໌"
+
+#: data/ui/CatfishWindow.ui:316
+msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
+msgstr "ປ້ອນລາຍຊື່ນາມສະກຸນໄຟລ໌ໂດຍແຍກດ້ວຍຈຸດ (ຕົວຢ່າງ: odt, png, txt)"
+
+#: data/ui/CatfishWindow.ui:344
+msgid "Documents"
+msgstr "ເອກະສານ"
+
+#: data/ui/CatfishWindow.ui:352
+msgid "Folders"
+msgstr "ໂຟນເດີ"
+
+#: data/ui/CatfishWindow.ui:360
+msgid "Images"
+msgstr "ຮູບພາບ"
+
+#: data/ui/CatfishWindow.ui:368
+msgid "Music"
+msgstr "ເພງ"
+
+#: data/ui/CatfishWindow.ui:376
+msgid "Videos"
+msgstr "ວິດີໂອ"
+
+#: data/ui/CatfishWindow.ui:384
+msgid "Applications"
+msgstr "ແອັບພລິເຄຊັນ"
+
+#: data/ui/CatfishWindow.ui:392
+msgid "Archives"
+msgstr "ໄຟລ໌ຈັດເກັບ"
+
+#: data/ui/CatfishWindow.ui:400
+msgid "Other"
+msgstr "ອື່ນໆ"
+
+#: data/ui/CatfishWindow.ui:408
+msgid "Extension..."
+msgstr "ນາມສະກຸນ..."
+
+#: data/ui/CatfishWindow.ui:434
+msgid "Any time"
+msgstr "ທຸກເວລາ"
+
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2038
+msgid "Today"
+msgstr "ມື້ນີ້"
+
+#: data/ui/CatfishWindow.ui:450
+msgid "This week"
+msgstr "ອາທິດນີ້"
+
+#: data/ui/CatfishWindow.ui:458
+msgid "This month"
+msgstr "ເດືອນນີ້"
+
+#: data/ui/CatfishWindow.ui:466
+msgid "Custom..."
+msgstr "ກຳນົດເອງ..."
+
+#: data/ui/CatfishWindow.ui:538 data/ui/CatfishWindow.ui:633
+msgid "Go to Today"
+msgstr "ໄປຫາຂອງມື້ນີ້"
+
+#: data/ui/CatfishWindow.ui:566
+msgid "<b>Start Date</b>"
+msgstr "<b>ວັນທີເລີ່ມຕົ້ນ</b>"
+
+#: data/ui/CatfishWindow.ui:661
+msgid "<b>End Date</b>"
+msgstr "<b>ວັນທີສິ້ນສຸດ</b>"
+
+#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:240
+#: data/metainfo/catfish.appdata.xml.in:7
+msgid "Catfish"
+msgstr "Catfish"
+
+#: data/ui/CatfishWindow.ui:703
+msgid "Update"
+msgstr "ອັບເດດ"
+
+#: data/ui/CatfishWindow.ui:744
+msgid "The search database is more than 7 days old.  Update now?"
+msgstr "ຖານຂໍ້ມູນການຄົ້ນຫາມີອາຍຸເກີນ 7 ວັນແລ້ວ. ອັບເດດດຽວນີ້ເລີຍບໍ່?"
+
+#: data/ui/CatfishWindow.ui:802
+msgid "File Type"
+msgstr "ປະເພດໄຟລ໌"
+
+#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1721
+msgid "Modified"
+msgstr "ຖືກແກ້ໄຂ"
+
+#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2376
+msgid "Results will be displayed as soon as they are found."
+msgstr "ຜົນການຄົ້ນຫາຈະຖືກສະແດງທັນທີທີ່ພົບ."
+
+#: data/ui/CatfishWindow.ui:1269
+msgid "Unlock"
+msgstr "ປົດລັອກ"
+
+#: data/ui/CatfishWindow.ui:1321
+msgid "<b>Database:</b>"
+msgstr "<b>ຖານຂໍ້ມູນ:</b>"
+
+#: data/ui/CatfishWindow.ui:1334
+msgid "<b>Updated:</b>"
+msgstr "<b>ອັບເດດແລ້ວ:</b>"
+
+#: data/ui/CatfishWindow.ui:1347
+msgid "<big><b>Update Search Database</b></big>"
+msgstr "<big><b>ອັບເດດຖານຂໍ້ມູນການຄົ້ນຫາ</b></big>"
+
+#: data/ui/CatfishWindow.ui:1361
+msgid ""
+"For faster search results, the search database needs to be refreshed.\n"
+"This action requires administrative rights."
+msgstr ""
+"ເພື່ອຜົນການຄົ້ນຫາທີ່ໄວຂຶ້ນ, ຖານຂໍ້ມູນການຄົ້ນຫາຈຳເປັນຕ້ອງໄດ້ຮັບການຟື້ນຟູໃໝ່.\n"
+"ການດຳເນີນການນີ້ຕ້ອງການສິດຜູ້ດູແລລະບົບ."
+
+#: data/ui/CatfishWindow.ui:1493
+msgid "Update Search Database"
+msgstr "ອັບເດດຖານຂໍ້ມູນການຄົ້ນຫາ"
+
+#: data/ui/CatfishWindow.ui:1517
+msgid "Search for files"
+msgstr "ຄົ້ນຫາໄຟລ໌"
+
+#: data/ui/CatfishWindow.ui:1563
+msgid "Compact List"
+msgstr "ລາຍການແບບກະທັດຮັດ"
+
+#: data/ui/CatfishWindow.ui:1582
+msgid "Thumbnails"
+msgstr "ຮູບຕົວຢ່າງ"
+
+#: data/ui/CatfishWindow.ui:1633
+msgid "Show _sidebar"
+msgstr "ສະແດງ_ແຖບຂ້າງ"
+
+#: data/ui/CatfishWindow.ui:1672
+msgid "Show _hidden files"
+msgstr "ສະແດງໄຟລ໌ທີ່_ຊ່ອນໄວ້"
+
+#: data/ui/CatfishWindow.ui:1687
+msgid "Search file _contents"
+msgstr "ຄົ້ນຫາ_ເນື້ອໃນໄຟລ໌"
+
+#: data/ui/CatfishWindow.ui:1704
+msgid "_Match results exactly"
+msgstr "_ຜົນການຄົ້ນຫາຕ້ອງກົງກັນທັງໝົດ"
+
+#: data/ui/CatfishWindow.ui:1757
+msgid "_Refresh search index..."
+msgstr "_ຟື້ນຟູດັດຊະນີການຄົ້ນຫາ..."
+
+#: data/ui/CatfishWindow.ui:1812
+msgid "_Preferences"
+msgstr "_ການຕັ້ງຄ່າ"
+
+#: data/ui/CatfishWindow.ui:1853
+msgid "_About"
+msgstr "_ກ່ຽວກັບ"
+
+#: catfish/__init__.py:39
+msgid "Usage: %prog [options] path query"
+msgstr "ວິທີໃຊ້: %prog [ຕົວເລືອກ] ເສັ້ນທາງ ຄຳຄົ້ນຫາ"
+
+#: catfish/__init__.py:44
+msgid "Show debug messages (-vv will also debug catfish_lib)"
+msgstr "ສະແດງຂໍ້ຄວາມດີບັກ (-vv ຈະດີບັກ catfish_lib ນຳ)"
+
+#: catfish/__init__.py:47
+msgid "Use large icons"
+msgstr "ໃຊ້ໄອຄອນຂະໜາດໃຫຍ່"
+
+#: catfish/__init__.py:49
+msgid "Use thumbnails"
+msgstr "ໃຊ້ຮູບຕົວຢ່າງ"
+
+#: catfish/__init__.py:51
+msgid "Display time in ISO format"
+msgstr "ສະແດງເວລາໃນຮູບແບບ ISO"
+
+#. Translators: Do not translate PATH, it is a variable.
+#: catfish/__init__.py:53
+msgid "Set the default search path"
+msgstr "ຕັ້ງຄ່າເສັ້ນທາງການຄົ້ນຫາເລີ່ມຕົ້ນ"
+
+#: catfish/__init__.py:55
+msgid "Perform exact match"
+msgstr "ດຳເນີນການຄົ້ນຫາແບບກົງກັນທຸກຕົວອັກສອນ"
+
+#: catfish/__init__.py:57
+msgid "Include hidden files"
+msgstr "ລວມເອົາໄຟລ໌ທີ່ຊ່ອນໄວ້"
+
+#: catfish/__init__.py:59
+msgid "Perform fulltext search"
+msgstr "ດຳເນີນການຄົ້ນຫາແບບເຕັມຂໍ້ຄວາມ"
+
+#: catfish/__init__.py:61
+msgid ""
+"If path and query are provided, start searching when the application is "
+"displayed."
+msgstr ""
+"ຖ້າມີການລະບຸເສັ້ນທາງ ແລະ ຄຳຄົ້ນຫາ, "
+"ຈະເລີ່ມການຄົ້ນຫາທັນທີເມື່ອແອັບພລິເຄຊັນເປີດຂຶ້ນ."
+
+#: catfish/__init__.py:63
+msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
+msgstr ""
+"ຕັ້ງຄ່າຄໍລຳເລີ່ມຕົ້ນເພື່ອຈັດລຽງຕາມ "
+"(ຊື່|ຂະໜາດ|ເສັ້ນທາງ|ວັນທີ|ປະເພດ),(ນ້ອຍຫາໃຫຍ່|ໃຫຍ່ຫານ້ອຍ)"
+
+#: catfish/__init__.py:66
+msgid "Close after selecting a file"
+msgstr "ປິດຫຼັງຈາກເລືອກໄຟລ໌"
+
+#: catfish/__init__.py:68
+msgid "Do not close after selecting a file"
+msgstr "ບໍ່ຕ້ອງປິດຫຼັງຈາກເລືອກໄຟລ໌"
+
+#. Translators: this text is displayed next to
+#. a filename that is not utf-8 encoded.
+#: catfish/CatfishWindow.py:110
+#, python-format
+msgid "%s (invalid encoding)"
+msgstr "%s (ການຖອດລະຫັດບໍ່ຖືກຕ້ອງ)"
+
+#: catfish/CatfishWindow.py:152
+msgid "translator-credits"
+msgstr "ລາຍຊື່ຜູ້ແປ"
+
+#: catfish/CatfishWindow.py:303
+msgid "Unknown"
+msgstr "ບໍ່ຮູ້ຈັກ"
+
+#: catfish/CatfishWindow.py:307
+msgid "Never"
+msgstr "ບໍ່ເຄີຍ"
+
+#: catfish/CatfishWindow.py:419
+#, python-format
+msgid ""
+"Enter your query above to find your files\n"
+"or click the %s icon for more options."
+msgstr ""
+"ປ້ອນຄຳຄົ້ນຫາຂອງເຈົ້າຢູ່ຂ້າງເທິງເພື່ອຊອກຫາໄຟລ໌\n"
+"ຫຼື ຄລິກໄອຄອນ %s ສຳລັບຕົວເລືອກເພີ່ມເຕີມ."
+
+#: catfish/CatfishWindow.py:824
+msgid "An error occurred while updating the database."
+msgstr "ເກີດຂໍ້ຜິດພາດໃນຂະນະທີ່ອັບເດດຖານຂໍ້ມູນ."
+
+#: catfish/CatfishWindow.py:826
+msgid "Authentication failed."
+msgstr "ການຢືນຢັນຕົວຕົນລົ້ມເຫຼວ."
+
+#: catfish/CatfishWindow.py:832
+msgid "Authentication cancelled."
+msgstr "ການຢືນຢັນຕົວຕົນຖືກຍົກເລີກ."
+
+#: catfish/CatfishWindow.py:838
+msgid "Search database updated successfully."
+msgstr "ອັບເດດຖານຂໍ້ມູນການຄົ້ນຫາສຳເລັດແລ້ວ."
+
+#. Update the Cancel button to Close, make it default
+#: catfish/CatfishWindow.py:899
+msgid "Close"
+msgstr "ປິດ"
+
+#. Set the dialog status to running.
+#: catfish/CatfishWindow.py:913
+msgid "Updating..."
+msgstr "ກຳລັງອັບເດດ..."
+
+#: catfish/CatfishWindow.py:948
+msgid "Stop Search"
+msgstr "ຢຸດການຄົ້ນຫາ"
+
+#: catfish/CatfishWindow.py:949
+msgid ""
+"Search is in progress...\n"
+"Press the cancel button or the Escape key to stop."
+msgstr ""
+"ກຳລັງຄົ້ນຫາ...\n"
+"ກົດປຸ່ມຍົກເລີກ ຫຼື ປຸ່ມ Escape ເພື່ອຢຸດ."
+
+#: catfish/CatfishWindow.py:960
+msgid "Begin Search"
+msgstr "ເລີ່ມການຄົ້ນຫາ"
+
+#: catfish/CatfishWindow.py:1098
+msgid "No folder selected."
+msgstr "ບໍ່ໄດ້ເລືອກໂຟນເດີ."
+
+#: catfish/CatfishWindow.py:1103
+msgid "Folder not found."
+msgstr "ບໍ່ພົບໂຟນເດີ."
+
+#: catfish/CatfishWindow.py:1368
+#, python-format
+msgid "\"%s\" could not be opened."
+msgstr "ບໍ່ສາມາດເປີດ \"%s\" ໄດ້."
+
+#: catfish/CatfishWindow.py:1489
+msgid "Enter the new name:"
+msgstr "ປ້ອນຊື່ໃໝ່:"
+
+#: catfish/CatfishWindow.py:1560 catfish/CatfishWindow.py:1586
+#, python-format
+msgid "\"%s\" could not be saved."
+msgstr "ບໍ່ສາມາດບັນທຶກ \"%s\" ໄດ້."
+
+#: catfish/CatfishWindow.py:1567
+msgid "Selected Results"
+msgstr "ຜົນການຄົ້ນຫາທີ່ເລືອກ"
+
+#: catfish/CatfishWindow.py:1602
+#, python-format
+msgid "\"%s\" could not be deleted."
+msgstr "ບໍ່ສາມາດລຶບ \"%s\" ໄດ້."
+
+#: catfish/CatfishWindow.py:1641
+#, python-format
+msgid "Save \"%s\" as..."
+msgstr "ບັນທຶກ \"%s\" ເປັນ..."
+
+#: catfish/CatfishWindow.py:1677
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete \"%s\"?"
+msgstr ""
+"ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການ\n"
+"ລຶບ \"%s\" ແບບຖາວອນ?"
+
+#: catfish/CatfishWindow.py:1681
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete the %i selected files?"
+msgstr ""
+"ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການ\n"
+"ລຶບໄຟລ໌ທີ່ເລືອກ %i ໄຟລ໌ແບບຖາວອນ?"
+
+#: catfish/CatfishWindow.py:1684
+msgid "If you delete a file, it is permanently lost."
+msgstr "ຖ້າເຈົ້າລຶບໄຟລ໌, ມັນຈະສູນຫາຍໄປແບບຖາວອນ."
+
+#: catfish/CatfishWindow.py:1718
+msgid "Filename"
+msgstr "ຊື່ໄຟລ໌"
+
+#: catfish/CatfishWindow.py:1719
+msgid "Size"
+msgstr "ຂະໜາດ"
+
+#: catfish/CatfishWindow.py:1720
+msgid "Location"
+msgstr "ສະຖານທີ່"
+
+#: catfish/CatfishWindow.py:1730
+msgid "Preview"
+msgstr "ເບິ່ງຕົວຢ່າງ"
+
+#: catfish/CatfishWindow.py:1737
+msgid "Details"
+msgstr "ລາຍລະອຽດ"
+
+#: catfish/CatfishWindow.py:1943
+msgid "Open with default applications"
+msgstr "ເປີດດ້ວຍແອັບພລິເຄຊັນເລີ່ມຕົ້ນ"
+
+#: catfish/CatfishWindow.py:1959
+msgid "Open with"
+msgstr "ເປີດດ້ວຍ"
+
+#: catfish/CatfishWindow.py:2040
+msgid "Yesterday"
+msgstr "ມື້ວານນີ້"
+
+#: catfish/CatfishWindow.py:2159
+msgid "No files found."
+msgstr "ບໍ່ພົບໄຟລ໌."
+
+#: catfish/CatfishWindow.py:2161
+msgid ""
+"Try making your search less specific\n"
+"or try another directory."
+msgstr ""
+"ລອງຄົ້ນຫາແບບບໍ່ເຈາະຈົງເກີນໄປ\n"
+"ຫຼື ລອງຄົ້ນຫາໃນໄດເຣັກທໍຣີອື່ນ."
+
+#: catfish/CatfishWindow.py:2170
+msgid "file"
+msgid_plural "files"
+msgstr[0] "ໄຟລ໌"
+
+#: catfish/CatfishWindow.py:2171
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "ວິນາທີ"
+
+#: catfish/CatfishWindow.py:2173
+msgid "{n} {files} found in {m:.{prec}f} {seconds}"
+msgstr "ພົບ {n} {files} ໃນ {m:.{prec}f} {seconds}"
+
+#: catfish/CatfishWindow.py:2183 catfish/CatfishWindow.py:2186
+msgid "bytes"
+msgstr "ໄບຕ໌"
+
+#: catfish/CatfishWindow.py:2374
+msgid "Searching..."
+msgstr "ກຳລັງຄົ້ນຫາ..."
+
+#: catfish/CatfishWindow.py:2382
+#, python-format
+msgid "\"%s\" - searching | Catfish"
+msgstr "\"%s\" - ກຳລັງຄົ້ນຫາ | Catfish"
+
+#: catfish/CatfishWindow.py:2502
+#, python-format
+msgid "\"%s\" - results | Catfish"
+msgstr "\"%s\" - ຜົນການຄົ້ນຫາ | Catfish"
+
+#: catfish_lib/catfishconfig.py:94
+msgid "Catfish is a versatile file searching tool."
+msgstr "Catfish ແມ່ນເຄື່ອງມືຄົ້ນຫາໄຟລ໌ທີ່ໃຊ້ງານໄດ້ຫຼາກຫຼາຍ."
+
+#: catfish_lib/SudoDialog.py:126
+msgid "Password Required"
+msgstr "ຕ້ອງການລະຫັດຜ່ານ"
+
+#: catfish_lib/SudoDialog.py:163
+msgid "Incorrect password... try again."
+msgstr "ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ... ລອງໃໝ່ອີກຄັ້ງ."
+
+#: catfish_lib/SudoDialog.py:173
+msgid "Password:"
+msgstr "ລະຫັດຜ່ານ:"
+
+#: catfish_lib/SudoDialog.py:187
+msgid "OK"
+msgstr "ຕົກລົງ"
+
+#: catfish_lib/SudoDialog.py:205
+msgid ""
+"Enter your password to\n"
+"perform administrative tasks."
+msgstr ""
+"ປ້ອນລະຫັດຜ່ານຂອງເຈົ້າເພື່ອ\n"
+"ດຳເນີນການວຽກງານການດູແລລະບົບ."
+
+#: catfish_lib/SudoDialog.py:207
+#, python-format
+msgid ""
+"The application '%s' lets you\n"
+"modify essential parts of your system."
+msgstr ""
+"ແອັບພລິເຄຊັນ '%s' ອະນຸຍາດໃຫ້ເຈົ້າ\n"
+"ແກ້ໄຂພາກສ່ວນທີ່ສຳຄັນຂອງລະບົບ."
+
+#: data/metainfo/catfish.appdata.xml.in:8
+msgid "Versatile file searching tool"
+msgstr "ເຄື່ອງມືຄົ້ນຫາໄຟລ໌ທີ່ຫຼາກຫຼາຍຄວາມສາມາດ"
+
+#: data/metainfo/catfish.appdata.xml.in:11
+msgid ""
+"Catfish is a small, fast, and powerful file search utility. Featuring a "
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
+msgstr ""
+"Catfish ແມ່ນເຄື່ອງມືຄົ້ນຫາໄຟລ໌ທີ່ມີຂະໜາດນ້ອຍ, ໄວ ແລະ ຊົງພະລັງ. "
+"ດ້ວຍໜ້າຕ່າງທີ່ລຽບງ່າຍທີ່ເນັ້ນໃສ່ຜົນການຄົ້ນຫາ, "
+"ມັນຊ່ວຍໃຫ້ຜູ້ໃຊ້ຊອກຫາໄຟລ໌ທີ່ຕ້ອງການໄດ້ໂດຍບໍ່ຕ້ອງຜ່ານໂປຣແກຣມຈັດການໄຟລ໌. "
+"ດ້ວຍລະບົບກັ່ນຕອງທີ່ຊົງພະລັງ ເຊັ່ນ: ວັນທີແກ້ໄຂ, ປະເພດໄຟລ໌ ແລະ ເນື້ອໃນໄຟລ໌, "
+"ຜູ້ໃຊ້ຈະບໍ່ຈຳເປັນຕ້ອງເພິ່ງພາໂປຣແກຣມຈັດການໄຟລ໌ ຫຼື "
+"ທັກສະການຈັດລະບຽບໄຟລ໌ອີກຕໍ່ໄປ."
+
+#: data/metainfo/catfish.appdata.xml.in:25
+msgid "The main Catfish window displaying image search results"
+msgstr "ໜ້າຕ່າງຫຼັກຂອງ Catfish ສະແດງຜົນການຄົ້ນຫາຮູບພາບ"
+
+#: data/metainfo/catfish.appdata.xml.in:29
+msgid ""
+"The main Catfish window displaying available filters and filtered search "
+"results"
+msgstr ""
+"ໜ້າຕ່າງຫຼັກຂອງ Catfish ສະແດງເຄື່ອງມືກັ່ນຕອງ ແລະ "
+"ຜົນການຄົ້ນຫາທີ່ຖືກກັ່ນຕອງແລ້ວ"
