@@ -59,7 +59,7 @@ LOCATE_SUPPORT = which('locate') is not None
 
 
 def get_keyword_list(keywords):
-    keywords = keywords.replace(",", " ").strip().lower()
+    keywords = ' '.join(keywords.replace(",", " ").strip().lower().split())
     kwords = []
     matches = re.findall(r'\"(.+?)\"', keywords)
     for match in matches:
@@ -88,7 +88,7 @@ def string_regex(keywords, path):  # pylint: disable=W0613
             if i == 0:
                 string = p[i]
             else:
-                string += "(.)*" + p[i]
+                string += ".*" + p[i]
         regex += string
         count += 1
 
