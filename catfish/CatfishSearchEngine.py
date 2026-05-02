@@ -410,7 +410,7 @@ class CatfishSearchMethod_Walk(CatfishSearchMethod):
 
         self.running = True
         if isinstance(keywords, str):
-            keywords = keywords.replace(',', ' ').strip().split()
+            keywords = keywords.strip().split()
 
         # Enable symbolic link directories, but process once
         processed_links = []
@@ -577,7 +577,7 @@ class CatfishSearchMethod_Fulltext(CatfishSearchMethod):
         if not self.exact:
             # Split the keywords into a list if they are not already.
             if isinstance(keywords, str):
-                keywords = keywords.replace(',', ' ').strip().split()
+                keywords = keywords.strip().split()
 
             for keyword in keywords:
                 if keyword not in find_keywords_backup:
