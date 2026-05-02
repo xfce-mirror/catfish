@@ -59,15 +59,16 @@ LOCATE_SUPPORT = which('locate') is not None
 
 
 def get_keyword_list(keywords):
-    keywords = keywords.replace(",", " ").strip().lower()
-    kwords = []
-    matches = re.findall(r'\"(.+?)\"', keywords)
-    for match in matches:
-        newmatch = match.replace(" ", "\0")
-        newmatch = newmatch.replace("\"", "")
-        keywords = keywords.replace("\"%s\"" % match, newmatch)
+    keywords = keywords.strip().lower()
+    matches = re.findall(r'^"([^"]*)"(?= |$)|(?<= )"([^"]*)"(?= |$)', keywords)
+    for pair in matches:
+        for match in pair:
+            if match != "":
+                newmatch = match.replace(" ", "\0")
+                keywords = keywords.replace('"%s"' % match, newmatch, 1)
 
     keywords = " ".join(keywords.split())
+    kwords = []
     for keyword in keywords.split(" "):
         kwords.append(keyword.replace("\0", " "))
     return kwords
