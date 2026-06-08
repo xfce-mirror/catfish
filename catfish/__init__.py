@@ -65,6 +65,9 @@ def parse_options():
                       help=_('Close after selecting a file'))
     parser.add_option('', '--persist-after-select', action='store_true',dest='persist_after_select',
                       help=_('Do not close after selecting a file'))
+    parser.add_option('', '--col', help=_("A comma-separated list of columns to use."
+                                                "(name|size|path|date|type|hidden|exact)"))
+    parser.add_option('', '--col-size', help=_("A comma-separated list of column widths."))
     parser.set_defaults(icons_large=0, thumbnails=0, time_iso=0,
                         path=None, start=False, sort=None,
                         exact=0, hidden=0, fulltext=0, file_action='open')
