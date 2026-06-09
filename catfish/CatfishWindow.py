@@ -2399,12 +2399,12 @@ class CatfishWindow(Window):
         # Initialize the results filter.
         self.results_filter = model.filter_new()
         self.results_filter.set_visible_func(self.results_filter_func)
-        model.set_default_sort_func(lambda w,x,y,z: 0)
-        model.set_sort_func(2, self.size_sort_func, None)
+        sort = Gtk.TreeModelSort(model=self.results_filter)
+        sort.set_sort_func(2, self.size_sort_func, None)
         if self.sort[0]:  # command-line sort method
-            model.set_sort_column_id(self.sort[0], self.sort[1])
-        self.treeview.set_model(self.results_filter)
-        model.clear()
+            sort.set_sort_column_id(self.sort[0], self.sort[1])
+        self.treeview.set_model(sort)
+        sort.get_model().get_model().clear()
         self.treeview.columns_autosize()
 
         # Enable multiple-selection
