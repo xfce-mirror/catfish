@@ -1,0 +1,673 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.catfish package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# ზურაბი დავითაშვილი <zurabi@tuta.io>, 2024
+# Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce-apps.catfish\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-09-26 00:57+0200\n"
+"PO-Revision-Date: 2018-06-28 22:08+0000\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2026\n"
+"Language-Team: Georgian (https://app.transifex.com/xfce/teams/16840/ka/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ka\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1111
+#: catfish_lib/catfishconfig.py:91
+msgid "Catfish File Search"
+msgstr "Catfish"
+
+#: org.xfce.Catfish.desktop.in:4
+msgid "File search"
+msgstr "ფაილის ძებნა"
+
+#: org.xfce.Catfish.desktop.in:5
+msgid "Search the file system"
+msgstr "ძებნა ფაილურ სისტემაში"
+
+#. TRANSLATORS: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: org.xfce.Catfish.desktop.in:7
+msgid "files;find;locate;lookup;search;"
+msgstr "files;find;locate;lookup;search;ძებნა;მოძებნა;ფაილები;"
+
+#: data/ui/CatfishPreferences.ui:14
+msgid "Catfish Preferences"
+msgstr "Catfish-ის მორგება"
+
+#: data/ui/CatfishPreferences.ui:30
+msgid "_Close"
+msgstr "დახურვა"
+
+#: data/ui/CatfishPreferences.ui:111
+msgid "Classic (_Titlebar)"
+msgstr "კლასიკური (სა_თაურის ზოლი)"
+
+#: data/ui/CatfishPreferences.ui:161
+msgid "_Modern (CSD)"
+msgstr "თანა_მედროვე (CSD)"
+
+#: data/ui/CatfishPreferences.ui:213
+msgid "Your new window layout will be applied after restarting Catfish."
+msgstr ""
+"თქვენი ახალი ფანჯრის განლაგება Catfish-ის გადატვირთვის შემდეგ შევა ძალაში."
+
+#: data/ui/CatfishPreferences.ui:236
+msgid "Window Layout"
+msgstr "ფანჯრების განლაგება"
+
+#: data/ui/CatfishPreferences.ui:269
+msgid "Show _hidden files in the results"
+msgstr "დამალული ფაილების ჩვენება _შედეგებში"
+
+#: data/ui/CatfishPreferences.ui:285
+msgid "Show filter _sidebar"
+msgstr "ფილტრი_ს გვერდითი ზოლის ჩვენება"
+
+#: data/ui/CatfishPreferences.ui:301
+msgid "Show file sizes in binary format"
+msgstr "ფაილის ზომების ჩვენება ბინარულ ფორმატში"
+
+#: data/ui/CatfishPreferences.ui:305
+msgid "Uncheck to show file size in decimal format"
+msgstr "გამორთეთ ფაილის ზომის ათობით ფორმატში საჩვენებლად"
+
+#: data/ui/CatfishPreferences.ui:324
+msgid "Display Options"
+msgstr "ჩვენების მორგება"
+
+#: data/ui/CatfishPreferences.ui:340
+msgid "Appearance"
+msgstr "გარეგნობა"
+
+#: data/ui/CatfishPreferences.ui:382
+msgid "Path"
+msgstr "ბილიკი"
+
+#: data/ui/CatfishPreferences.ui:409
+msgid "Add Directory..."
+msgstr "საქაღალდის დამატება..."
+
+#: data/ui/CatfishPreferences.ui:410
+msgid "_Add"
+msgstr "_დამატება"
+
+#: data/ui/CatfishPreferences.ui:424
+msgid "Remove Directory"
+msgstr "საქაღალდის წაშლა"
+
+#: data/ui/CatfishPreferences.ui:425
+msgid "_Remove"
+msgstr "_წაშლა"
+
+#: data/ui/CatfishPreferences.ui:453
+msgid "Exclude Directories"
+msgstr "საქაღალდეების ამოღება"
+
+#: data/ui/CatfishPreferences.ui:485
+msgid "Close the search _window after opening a file"
+msgstr "_ძებნის ფანჯრის დახურვა ფაილის გახსნის შემდეგ"
+
+#: data/ui/CatfishPreferences.ui:501
+msgid "Search within compressed files (.zip, .odt, .docx)"
+msgstr "ძებნა შეკუმშულ ფაილებში (.zip, .odt, .docx)"
+
+#: data/ui/CatfishPreferences.ui:523
+msgid "Miscellaneous"
+msgstr "სხვადასხვა"
+
+#: data/ui/CatfishPreferences.ui:539
+msgid "Advanced"
+msgstr "დამატებით"
+
+#: data/ui/CatfishWindow.ui:10 data/ui/CatfishWindow.ui:119
+msgid "Select a Folder"
+msgstr "აირჩიეთ საქაღალდე"
+
+#: data/ui/CatfishWindow.ui:53
+msgid "Folder not found!"
+msgstr "საქაღალდე აღმოჩენილი არაა!"
+
+#. Restore Cancel button
+#. Buttons
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1255
+#: catfish/CatfishWindow.py:809 catfish_lib/SudoDialog.py:184
+msgid "Cancel"
+msgstr "გაუქმება"
+
+#: data/ui/CatfishWindow.ui:84
+msgid "Select Folder"
+msgstr "აირჩიეთ საქაღალდე"
+
+#: data/ui/CatfishWindow.ui:177
+msgid "_Open"
+msgstr "_გახსნა"
+
+#: data/ui/CatfishWindow.ui:188
+msgid "_Open with..."
+msgstr "გახსნა პრ_ოგრამით..."
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:205
+msgid "Show in _File Manager"
+msgstr "ფაილმენეჯერში ჩვენება"
+
+#: data/ui/CatfishWindow.ui:216
+msgid "_Rename"
+msgstr "_სახელის გადარქმევა"
+
+#. This menu contains the menu items: _Open, Show in _File Manager, _Copy
+#. Location, Save _As, _Delete
+#: data/ui/CatfishWindow.ui:232
+msgid "_Copy Location"
+msgstr "_მდებარეობის კოპირება"
+
+#: data/ui/CatfishWindow.ui:243
+msgid "_Save as..."
+msgstr "_შენახვა როგორც..."
+
+#: data/ui/CatfishWindow.ui:254
+msgid "_Copy selected items to folder..."
+msgstr "_მონიშნული ელემენტების კოპირება საქაღალდეში..."
+
+#: data/ui/CatfishWindow.ui:271
+msgid "_Delete..."
+msgstr "წ_აშლა..."
+
+#: data/ui/CatfishWindow.ui:295
+msgid "File Extensions"
+msgstr "ფაილის გაფართოება"
+
+#: data/ui/CatfishWindow.ui:316
+msgid "Enter a comma-separated list of file extensions (e.g. odt, png, txt)"
+msgstr ""
+"შეიყვანეთ ფაილის გაფართოებების მძიმით გამოყოფილი სია (მაგ: odt, png, txt)"
+
+#: data/ui/CatfishWindow.ui:344
+msgid "Documents"
+msgstr "დოკუმენტები"
+
+#: data/ui/CatfishWindow.ui:352
+msgid "Folders"
+msgstr "საქაღალდეები"
+
+#: data/ui/CatfishWindow.ui:360
+msgid "Images"
+msgstr "გამოსახულებები"
+
+#: data/ui/CatfishWindow.ui:368
+msgid "Music"
+msgstr "მუსიკა"
+
+#: data/ui/CatfishWindow.ui:376
+msgid "Videos"
+msgstr "ვიდეოები"
+
+#: data/ui/CatfishWindow.ui:384
+msgid "Applications"
+msgstr "პროგრამები"
+
+#: data/ui/CatfishWindow.ui:392
+msgid "Archives"
+msgstr "არქივები"
+
+#: data/ui/CatfishWindow.ui:400
+msgid "Other"
+msgstr "სხვა"
+
+#: data/ui/CatfishWindow.ui:408
+msgid "Extension..."
+msgstr "გაფართოება..."
+
+#: data/ui/CatfishWindow.ui:434
+msgid "Any time"
+msgstr "ნებისმიერ დროს"
+
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2038
+msgid "Today"
+msgstr "დღეს"
+
+#: data/ui/CatfishWindow.ui:450
+msgid "This week"
+msgstr "ეს კვირა"
+
+#: data/ui/CatfishWindow.ui:458
+msgid "This month"
+msgstr "ამ თვეში"
+
+#: data/ui/CatfishWindow.ui:466
+msgid "Custom..."
+msgstr "ხელით..."
+
+#: data/ui/CatfishWindow.ui:538 data/ui/CatfishWindow.ui:633
+msgid "Go to Today"
+msgstr "დღევანდელზე გადასვლა"
+
+#: data/ui/CatfishWindow.ui:566
+msgid "<b>Start Date</b>"
+msgstr "<b>დაწყების თარიღი</b>"
+
+#: data/ui/CatfishWindow.ui:661
+msgid "<b>End Date</b>"
+msgstr "<b>დასრულების თარიღი</b>"
+
+#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:240
+#: data/metainfo/catfish.appdata.xml.in:7
+msgid "Catfish"
+msgstr "Catfish"
+
+#: data/ui/CatfishWindow.ui:703
+msgid "Update"
+msgstr "განახლება"
+
+#: data/ui/CatfishWindow.ui:744
+msgid "The search database is more than 7 days old.  Update now?"
+msgstr "ძებნის მონაცემთა ბაზა 7 დღეზე ძველია.  განვაახლო?"
+
+#: data/ui/CatfishWindow.ui:802
+msgid "File Type"
+msgstr "ფაილის ტიპი"
+
+#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1721
+msgid "Modified"
+msgstr "შეიცვალა"
+
+#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2376
+msgid "Results will be displayed as soon as they are found."
+msgstr "შედეგები ნაჩვენები იქნება მაშინვე, როცა ვიპოვით."
+
+#: data/ui/CatfishWindow.ui:1269
+msgid "Unlock"
+msgstr "განბლოკვა"
+
+#: data/ui/CatfishWindow.ui:1321
+msgid "<b>Database:</b>"
+msgstr "<b>მონაცემთა ბაზა:</b>"
+
+#: data/ui/CatfishWindow.ui:1334
+msgid "<b>Updated:</b>"
+msgstr "<b>განახლდა:</b>"
+
+#: data/ui/CatfishWindow.ui:1347
+msgid "<big><b>Update Search Database</b></big>"
+msgstr "<big><b>საძიებო მონაცემთა ბაზის განახლება</b></big>"
+
+#: data/ui/CatfishWindow.ui:1361
+msgid ""
+"For faster search results, the search database needs to be refreshed.\n"
+"This action requires administrative rights."
+msgstr ""
+"უფრო სწრაფი ძებნის შედეგებისთვის საჭიროა მონაცემთა ბაზის განახლება.\n"
+"ამ ქმედებას ადმინისტრატორის უფლებები სჭირდება."
+
+#: data/ui/CatfishWindow.ui:1493
+msgid "Update Search Database"
+msgstr "ძებნის მონაცემთა ბაზის განახლება"
+
+#: data/ui/CatfishWindow.ui:1517
+msgid "Search for files"
+msgstr "ფაილების ძებნა"
+
+#: data/ui/CatfishWindow.ui:1563
+msgid "Compact List"
+msgstr "კომპაქტური სია"
+
+#: data/ui/CatfishWindow.ui:1582
+msgid "Thumbnails"
+msgstr "მინატურები"
+
+#: data/ui/CatfishWindow.ui:1633
+msgid "Show _sidebar"
+msgstr "გვერდითი ზოლი_ს ჩვენება"
+
+#: data/ui/CatfishWindow.ui:1672
+msgid "Show _hidden files"
+msgstr "დამალული ფაილების ჩვენება"
+
+#: data/ui/CatfishWindow.ui:1687
+msgid "Search file _contents"
+msgstr "_ძებნა ფაილის შემცველობაში"
+
+#: data/ui/CatfishWindow.ui:1704
+msgid "_Match results exactly"
+msgstr "ზუსტი და_მთხვევა"
+
+#: data/ui/CatfishWindow.ui:1757
+msgid "_Refresh search index..."
+msgstr "ძებნის ინდექსის _განახლება..."
+
+#: data/ui/CatfishWindow.ui:1812
+msgid "_Preferences"
+msgstr "_მორგება"
+
+#: data/ui/CatfishWindow.ui:1853
+msgid "_About"
+msgstr "_შესახებ"
+
+#: catfish/__init__.py:39
+msgid "Usage: %prog [options] path query"
+msgstr "გამოყენება: %prog [პარამეტრები] ბილიკი მოთხოვნა"
+
+#: catfish/__init__.py:44
+msgid "Show debug messages (-vv will also debug catfish_lib)"
+msgstr "გამართვის შეტყობინებების ჩვენება (-vv ასევე გამართვს catfish_lib-ს)"
+
+#: catfish/__init__.py:47
+msgid "Use large icons"
+msgstr "დიდი ხატულების გამოყენება"
+
+#: catfish/__init__.py:49
+msgid "Use thumbnails"
+msgstr "მინიატურების გამოყენება"
+
+#: catfish/__init__.py:51
+msgid "Display time in ISO format"
+msgstr "დროის ჩვენება ISO ფორმატში"
+
+#. Translators: Do not translate PATH, it is a variable.
+#: catfish/__init__.py:53
+msgid "Set the default search path"
+msgstr "ნაგულისხმევი ძებნის ბილიკის გამოყენება"
+
+#: catfish/__init__.py:55
+msgid "Perform exact match"
+msgstr "ზუსტი დამთხვევების აღმოჩენა"
+
+#: catfish/__init__.py:57
+msgid "Include hidden files"
+msgstr "დამალული ფაილების ჩათვლა"
+
+#: catfish/__init__.py:59
+msgid "Perform fulltext search"
+msgstr "სრულტექსტიანი ძებნა"
+
+#: catfish/__init__.py:61
+msgid ""
+"If path and query are provided, start searching when the application is "
+"displayed."
+msgstr ""
+"თუ ბილიკი და მოთხოვნა მოწოდებულია, ძებნის დაწყება, როცა აპლიკაცია ნაჩვენები "
+"იქნება."
+
+#: catfish/__init__.py:63
+msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
+msgstr ""
+"დააყენეთ ნაგულისხმევი სვეტი, რომლითაც დალაგება მოხდება "
+"(სახელი|ზომა|ბილიკი|თარიღი|ტიპი), (აღმ|დაღმ)"
+
+#: catfish/__init__.py:66
+msgid "Close after selecting a file"
+msgstr "დახურვა ფაილის არჩევის შემდეგ"
+
+#: catfish/__init__.py:68
+msgid "Do not close after selecting a file"
+msgstr "არ დახურო ფაილის არჩევის შემდეგ"
+
+#. Translators: this text is displayed next to
+#. a filename that is not utf-8 encoded.
+#: catfish/CatfishWindow.py:110
+#, python-format
+msgid "%s (invalid encoding)"
+msgstr "%s (არასწორი კოდირება)"
+
+#: catfish/CatfishWindow.py:152
+msgid "translator-credits"
+msgstr "ეკატერინე პაპავა"
+
+#: catfish/CatfishWindow.py:303
+msgid "Unknown"
+msgstr "უცნობი"
+
+#: catfish/CatfishWindow.py:307
+msgid "Never"
+msgstr "არასდროს"
+
+#: catfish/CatfishWindow.py:419
+#, python-format
+msgid ""
+"Enter your query above to find your files\n"
+"or click the %s icon for more options."
+msgstr ""
+
+#: catfish/CatfishWindow.py:824
+msgid "An error occurred while updating the database."
+msgstr ""
+
+#: catfish/CatfishWindow.py:826
+msgid "Authentication failed."
+msgstr "ავთენტიკაცია წარუმატებელია."
+
+#: catfish/CatfishWindow.py:832
+msgid "Authentication cancelled."
+msgstr "ავთენტიკაცია გაუქმდა."
+
+#: catfish/CatfishWindow.py:838
+msgid "Search database updated successfully."
+msgstr "ძებნის მონაცემთა ბაზა წარმატებით განახლდა."
+
+#. Update the Cancel button to Close, make it default
+#: catfish/CatfishWindow.py:899
+msgid "Close"
+msgstr "დახურვა"
+
+#. Set the dialog status to running.
+#: catfish/CatfishWindow.py:913
+msgid "Updating..."
+msgstr "განახლება..."
+
+#: catfish/CatfishWindow.py:948
+msgid "Stop Search"
+msgstr "ძებნის გაჩერება"
+
+#: catfish/CatfishWindow.py:949
+msgid ""
+"Search is in progress...\n"
+"Press the cancel button or the Escape key to stop."
+msgstr ""
+
+#: catfish/CatfishWindow.py:960
+msgid "Begin Search"
+msgstr "ძებნის დაწყება"
+
+#: catfish/CatfishWindow.py:1098
+msgid "No folder selected."
+msgstr "საქაღალდე არჩეული არაა."
+
+#: catfish/CatfishWindow.py:1103
+msgid "Folder not found."
+msgstr "საქაღალდე აღმოჩენილი არაა."
+
+#: catfish/CatfishWindow.py:1368
+#, python-format
+msgid "\"%s\" could not be opened."
+msgstr "\"%s\"-ის გახსნის შეცდომა."
+
+#: catfish/CatfishWindow.py:1489
+msgid "Enter the new name:"
+msgstr "შეიყვანეთ ახალი სახელი:"
+
+#: catfish/CatfishWindow.py:1560 catfish/CatfishWindow.py:1586
+#, python-format
+msgid "\"%s\" could not be saved."
+msgstr "\"%s\"-ის შენახვა შეუძლებელია."
+
+#: catfish/CatfishWindow.py:1567
+msgid "Selected Results"
+msgstr "მონიშნული შედეგები"
+
+#: catfish/CatfishWindow.py:1602
+#, python-format
+msgid "\"%s\" could not be deleted."
+msgstr "\"%s\"-ის წაშლა შეუძლებელია."
+
+#: catfish/CatfishWindow.py:1641
+#, python-format
+msgid "Save \"%s\" as..."
+msgstr "\"%s\"-ის შენახვა, როგორც..."
+
+#: catfish/CatfishWindow.py:1677
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete \"%s\"?"
+msgstr ""
+"დარწმუნებული ბრძანდებით, რომ გსურთ\n"
+"სამუდამოდ წაშალოთ \"%s\"?"
+
+#: catfish/CatfishWindow.py:1681
+#, python-format
+msgid ""
+"Are you sure that you want to \n"
+"permanently delete the %i selected files?"
+msgstr ""
+
+#: catfish/CatfishWindow.py:1684
+msgid "If you delete a file, it is permanently lost."
+msgstr "თუ ფაილს წაშლით, მას სამუდამოდ დაკარგავთ."
+
+#: catfish/CatfishWindow.py:1718
+msgid "Filename"
+msgstr "ფაილის სახელი"
+
+#: catfish/CatfishWindow.py:1719
+msgid "Size"
+msgstr "ზომა"
+
+#: catfish/CatfishWindow.py:1720
+msgid "Location"
+msgstr "მდებარეობა"
+
+#: catfish/CatfishWindow.py:1730
+msgid "Preview"
+msgstr "მინიატურა"
+
+#: catfish/CatfishWindow.py:1737
+msgid "Details"
+msgstr "დეტალები"
+
+#: catfish/CatfishWindow.py:1943
+msgid "Open with default applications"
+msgstr "გახსნა ნაგულისხმევი აპლიკაციებით"
+
+#: catfish/CatfishWindow.py:1959
+msgid "Open with"
+msgstr "გამხსნელი პროგრამა"
+
+#: catfish/CatfishWindow.py:2040
+msgid "Yesterday"
+msgstr "გუშინ"
+
+#: catfish/CatfishWindow.py:2159
+msgid "No files found."
+msgstr "ფაილები ვერ მოიძებნა."
+
+#: catfish/CatfishWindow.py:2161
+msgid ""
+"Try making your search less specific\n"
+"or try another directory."
+msgstr ""
+
+#: catfish/CatfishWindow.py:2170
+msgid "file"
+msgid_plural "files"
+msgstr[0] "ფაილი"
+msgstr[1] "ფაილები"
+
+#: catfish/CatfishWindow.py:2171
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "წამი"
+msgstr[1] "წამი"
+
+#: catfish/CatfishWindow.py:2173
+msgid "{n} {files} found in {m:.{prec}f} {seconds}"
+msgstr "{n} {files} აღმოჩენილია {m:.{prec}f} {seconds}-ში"
+
+#: catfish/CatfishWindow.py:2183 catfish/CatfishWindow.py:2186
+msgid "bytes"
+msgstr "ბაიტი"
+
+#: catfish/CatfishWindow.py:2374
+msgid "Searching..."
+msgstr "ძებნა..."
+
+#: catfish/CatfishWindow.py:2382
+#, python-format
+msgid "\"%s\" - searching | Catfish"
+msgstr "\"%s\" - ვეძებ | Catfish"
+
+#: catfish/CatfishWindow.py:2502
+#, python-format
+msgid "\"%s\" - results | Catfish"
+msgstr "\"%s\" - შედეგები | Catfish"
+
+#: catfish_lib/catfishconfig.py:94
+msgid "Catfish is a versatile file searching tool."
+msgstr "Catfish მძლავრი ფაილების ძებნის პროგრამაა."
+
+#: catfish_lib/SudoDialog.py:126
+msgid "Password Required"
+msgstr "საჭიროა პაროლი"
+
+#: catfish_lib/SudoDialog.py:163
+msgid "Incorrect password... try again."
+msgstr "არასწორი პაროლი... თავიდან სცადეთ."
+
+#: catfish_lib/SudoDialog.py:173
+msgid "Password:"
+msgstr "პაროლი:"
+
+#: catfish_lib/SudoDialog.py:187
+msgid "OK"
+msgstr "დიახ"
+
+#: catfish_lib/SudoDialog.py:205
+msgid ""
+"Enter your password to\n"
+"perform administrative tasks."
+msgstr ""
+"შეიყვანეთ თქვენი პაროლი\n"
+"ადმინისტრაციული ამოცანების შესასრულებლად."
+
+#: catfish_lib/SudoDialog.py:207
+#, python-format
+msgid ""
+"The application '%s' lets you\n"
+"modify essential parts of your system."
+msgstr ""
+"აპლიკაცია '%s' საშუალებას გაძლევთ,\n"
+"თქვენი სისტემის ძირითადი ნაწილები შეცვალოთ."
+
+#: data/metainfo/catfish.appdata.xml.in:8
+msgid "Versatile file searching tool"
+msgstr "მძლავრი ფაილების ძებნის პროგრამა"
+
+#: data/metainfo/catfish.appdata.xml.in:11
+msgid ""
+"Catfish is a small, fast, and powerful file search utility. Featuring a "
+"minimal interface with an emphasis on results, it helps users find the files"
+" they need without a file manager. With powerful filters such as "
+"modification date, file type, and file contents, users will no longer be "
+"dependent on the file manager or organization skills."
+msgstr ""
+
+#: data/metainfo/catfish.appdata.xml.in:25
+msgid "The main Catfish window displaying image search results"
+msgstr ""
+
+#: data/metainfo/catfish.appdata.xml.in:29
+msgid ""
+"The main Catfish window displaying available filters and filtered search "
+"results"
+msgstr ""
