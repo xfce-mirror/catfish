@@ -1428,8 +1428,29 @@ class CatfishWindow(Window):
         files, dirs, nfiles = self.on_menu_filemanager_get_file_lists()
         num = len(files)
 
-        if 'nemo' or 'io.elementary.files' in fm:
+        if 'nemo' in fm or 'io.elementary.files' in fm:
             num = len(nfiles)
+
+        if num > 3:
+            dialog = Gtk.MessageDialog(
+                transient_for=self,
+                modal=True,
+                destroy_with_parent=True,
+                message_type=Gtk.MessageType.WARNING,
+                buttons=Gtk.ButtonsType.YES_NO,
+                text=_("Open Multiple Windows?"),
+            )
+            secondary_message = _(
+                "Continue opening {} file manager windows at once?"
+            ).format(num)
+
+            dialog.format_secondary_text(secondary_message)
+            dialog.set_default_response(Gtk.ResponseType.NO)
+            response = dialog.run()
+            dialog.destroy()
+
+            if response != Gtk.ResponseType.YES:
+                return
 
         if 'thunar' in fm:
             for filename in files:
