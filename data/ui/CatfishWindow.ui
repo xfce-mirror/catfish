@@ -681,6 +681,7 @@
     <signal name="key-release-event" handler="on_catfish_window_key_release_event" swapped="no"/>
     <signal name="size-allocate" handler="on_catfish_window_size_allocate" swapped="no"/>
     <signal name="window-state-event" handler="on_catfish_window_window_state_event" swapped="no"/>
+    <signal name="notify::is-active" handler="on_catfish_window_focus_change" swapped="no"/>
     <child>
       <object class="GtkBox" id="catfish_window_box">
         <property name="visible">True</property>

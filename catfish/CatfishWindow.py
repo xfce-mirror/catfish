@@ -1111,7 +1111,6 @@ class CatfishWindow(Window):
 
     def open_folder_dialog(self, widget):
         self.builder.get_object("fc_open_dialog").show()
-        self.keys_pressed = []
 
     def toolbar_hotkeys(self):
         window = self.builder.get_object("Catfish")
