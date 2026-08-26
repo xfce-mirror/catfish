@@ -213,7 +213,7 @@
     </child>
     <child>
       <object class="GtkImageMenuItem" id="file_menu_rename">
-        <property name="label" translatable="yes">_Rename</property>
+        <property name="label" translatable="yes">_Rename...</property>
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <property name="use-underline">True</property>
