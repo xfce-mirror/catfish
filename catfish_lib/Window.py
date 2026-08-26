@@ -287,6 +287,10 @@ class Window(Gtk.Window):
         self.window_is_fullscreen = bool(event.new_window_state &
                                          Gdk.WindowState.FULLSCREEN)
 
+    def on_catfish_window_focus_change(self, window, pspec):
+        if not window.get_property("is-active"):
+            self.keys_pressed = []
+
     def get_keys_from_event(self, event):
         keys = []
         keys.append(Gdk.keyval_name(event.keyval))
