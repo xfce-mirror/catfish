@@ -117,6 +117,8 @@ class CatfishWindow(Window):
     """The application window."""
     __gtype_name__ = "CatfishWindow"
 
+    app_icon_name = "org.xfce.catfish"
+
     filter_timerange = (0.0, 9999999999.0)
     start_date = datetime.datetime.now()
     end_date = datetime.datetime.now()
@@ -1494,39 +1496,188 @@ class CatfishWindow(Window):
                 nfiles.add(os.path.dirname(filename))
         return files, dirs, nfiles
 
+    def on_rename_entry_text_changed(self, entry, dialog):
+        """Validate rename entry text, checking for illegal characters"""
+        text = entry.get_text()
+        rename_button = dialog.get_widget_for_response(Gtk.ResponseType.ACCEPT)
+
+        error_message = None
+        warning_message = None
+
+        # Check for impossible/illegal filenames
+        if not text:
+            error_message = _("New name cannot be empty")
+        elif "/" in text:
+            error_message = _("New name cannot contain '/'")
+        elif text in (".", ".."):
+            error_message = _("New name cannot be '.' or '..'")
+        # Check for problematic filenames
+        elif text.startswith(" ") or text.endswith(" "):
+            warning_message = _("New name starts or ends with a space")
+        elif not text.isprintable():
+            warning_message = _("New name contains unprintable or control characters")
+
+        style_context = entry.get_style_context()
+
+        # Prevent renaming if impossible/illegal name
+        if error_message:
+            rename_button.set_sensitive(False)
+            style_context.remove_class("warning")
+            style_context.add_class("error")
+            entry.set_icon_from_icon_name(Gtk.EntryIconPosition.SECONDARY, "dialog-error-symbolic")
+            entry.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, error_message)
+        # Allow renaming, but warn for problematic names
+        elif warning_message:
+            rename_button.set_sensitive(True)
+            style_context.remove_class("error")
+            style_context.add_class("warning")
+            entry.set_icon_from_icon_name(Gtk.EntryIconPosition.SECONDARY, "dialog-warning-symbolic")
+            entry.set_icon_tooltip_text(Gtk.EntryIconPosition.SECONDARY, warning_message)
+        # Allow rename, clear all warning/errors
+        else:
+            rename_button.set_sensitive(True)
+            style_context.remove_class("error")
+            style_context.remove_class("warning")
+            entry.set_icon_from_icon_name(Gtk.EntryIconPosition.SECONDARY, None)
+
+    def get_filename_without_extensions(self, text):
+        """Try to return only filename without any extensions"""
+        filename = pathlib.Path(text).name
+        filename_suffixes = reversed(pathlib.Path(filename).suffixes)
+
+        alt_suffixes = {".part", ".bak", ".old", ".temp", ".tmp", ".crdownload"}
+        valid_suffixes = set(mimetypes.types_map.keys()) | set(mimetypes.common_types.keys()) | alt_suffixes
+
+        last_suffix = ""
+        text_to_select = filename
+
+        for suffix in filename_suffixes:
+            nums = "0123456789 "
+            stripped_suffix = suffix.lower().rstrip(nums).rstrip()
+            lower_suffix = suffix.lower()
+            if last_suffix:
+                if lower_suffix in valid_suffixes:
+                    text_to_select = text_to_select.removesuffix(suffix + last_suffix)
+                elif stripped_suffix in valid_suffixes:
+                    text_to_select = text_to_select.removesuffix(suffix + last_suffix)
+                elif stripped_suffix == '.':
+                    last_suffix = suffix + last_suffix
+            elif stripped_suffix in valid_suffixes:
+                text_to_select = text_to_select.removesuffix(suffix)
+            elif lower_suffix in valid_suffixes:
+                text_to_select = text_to_select.removesuffix(suffix)
+            elif stripped_suffix == '.':
+                last_suffix = suffix
+
+        return text_to_select
+
     def on_menu_rename_activate(self, widget):
-        sel = self.treeview.get_selection().get_selected_rows()[1][0]
+        """Create rename dialog, validate new name,
+        allow rename when valid, refresh in treeview
+        """
         sel_file = self.selected_filenames[0]
+
+        # Stop if files inside archives, deleted, or moved
+        if not os.path.exists(sel_file):
+            return
+
+        basename = os.path.basename(sel_file)
+
         dialog = Gtk.Dialog()
-        dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
-                           Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT)
+        dialog.add_button(_("Cancel"), Gtk.ResponseType.CANCEL)
+        dialog.add_button(_("Rename"), Gtk.ResponseType.ACCEPT)
         dialog.set_default_response(Gtk.ResponseType.ACCEPT)
-        box = dialog.get_content_area()
+        dialog.set_title(_('Rename "{}"').format(basename))
+        dialog.set_icon_name(self.app_icon_name)
+
+        content_area = dialog.get_content_area()
+
+        grid = Gtk.Grid(column_spacing=12, row_spacing=6)
+        grid.set_margin_start(12)
+        grid.set_margin_end(12)
+        grid.set_margin_top(12)
+        grid.set_margin_bottom(12)
+
+        file_info = Gio.File.new_for_path(sel_file).query_info(
+            Gio.FILE_ATTRIBUTE_STANDARD_ICON,
+            Gio.FileQueryInfoFlags.NONE,
+            None
+        )
+        gicon = file_info.get_icon()
+        image = Gtk.Image.new_from_gicon(gicon, Gtk.IconSize.DIALOG)
+        image.set_valign(Gtk.Align.END)
+        grid.attach(image, 0, 0, 1, 2)
+
+        label = Gtk.Label(label=_("Enter the new name:"))
+        label.set_xalign(0.0)
+        grid.attach(label, 1, 0, 1, 1)
+
         entry = Gtk.Entry()
         entry.set_activates_default(True)
-        basename = os.path.basename(sel_file)
+        min_chars = 30
+        max_chars = 60
+        name_len = len(basename)
+        target_chars = max(min_chars, min(name_len, max_chars))
+        entry.set_width_chars(target_chars)
         entry.set_text(basename)
-        box.pack_start(Gtk.Label(label=_("Enter the new name:")), True, True, 8)
-        box.pack_start(entry, True, True, 8)
+        grid.attach(entry, 1, 1, 1, 1)
+
+        content_area.pack_start(grid, True, True, 0)
+
+        # Set conditions for checking for illegal/problematic characters
+        entry.connect("changed", self.on_rename_entry_text_changed, dialog)
+        entry.set_icon_from_icon_name(Gtk.EntryIconPosition.SECONDARY, None)
+        rename_button = dialog.get_widget_for_response(Gtk.ResponseType.ACCEPT)
+        rename_button.set_sensitive(False)
+
         dialog.show_all()
+
+        # Try to be smart about selecting text, try to avoid multiple exts
+        text_to_select = self.get_filename_without_extensions(basename)
+        entry.select_region(0, len(text_to_select))
+
         resp = dialog.run()
+
         if resp == Gtk.ResponseType.ACCEPT:
             dirname = os.path.dirname(sel_file)
             new_name = entry.get_text()
-            os.rename(sel_file, os.path.join(dirname, new_name))
-            model = self.treeview.get_model().get_model()
-            treeiter = model.get_iter(sel)
+            new_path = os.path.join(dirname, new_name)
+
+            try:
+                os.rename(sel_file, new_path)
+            except OSError as e:
+                LOGGER.error(f"Failed to rename {basename} to {new_name}: {e}")
+                dialog.destroy()
+                return False
+
+            # Get selected path and top model from treeview
+            sel_path = self.treeview.get_selection().get_selected_rows()[1][0]
+            model = self.treeview.get_model()
+
+            # Make sure we have the final GtkTreeStore by going through possible
+            # GtkTreeView submodels GtkTreeModelSort, GtkTreeModelFilter, etc.
+            while not isinstance(model, Gtk.TreeStore):
+                sel_path = model.convert_path_to_child_path(sel_path)
+                if sel_path is None:
+                    break
+                model = model.get_model()
+            if not isinstance(model, Gtk.TreeStore):
+                return
+
+            treeiter = model.get_iter(sel_path)
             row = model[treeiter]
-            if self.settings.get_setting('match-results-exactly'):
-                compare = (self.search_keyword, new_name)
-            else:
-                compare = (self.search_keyword.lower(), new_name.lower())
-            if not(compare[0] in compare[1]):
-                self.remove_filenames_from_treeview((sel_file,))
-                self.refilter()
-            else:
-                row[1] = new_name
+
+            row[1] = new_name
+            # Don't change 'exact match' row/status for:
+            # Archives if they have matching children
+            # Any file in fulltext mode since file contents don't change
+            if not (model.iter_has_child(treeiter) or self.filter_formats['fulltext']):
+                row[7] = (self.search_keyword in new_name)
+
+            self.refilter()
+
             LOGGER.debug("Renaming %s to %s" % (basename, new_name))
+
         dialog.destroy()
         return True
 
@@ -1907,10 +2058,14 @@ class CatfishWindow(Window):
             directory
         self.file_menu_save.set_visible(show_on_single_file)
         writeable = True
+        exists = False
         for filename in self.selected_filenames:
             if not os.access(filename, os.W_OK):
                 writeable = False
+            if os.path.exists(filename):
+                exists = True
         self.file_menu_delete.set_sensitive(writeable)
+        self.file_menu_rename.set_sensitive(exists)
         self.file_menu_open.set_label(self.set_right_click_open_label())
         if len(self.selected_filenames) > 1:
             self.file_menu_rename.hide()
