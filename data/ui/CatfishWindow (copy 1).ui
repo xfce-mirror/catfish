@@ -1783,47 +1783,6 @@ This action requires administrative rights.</property>
       </object>
     </child>
     <child>
-      <object class="GtkListBoxRow" id="application_menu_keyboard_shortcuts">
-        <property name="visible">True</property>
-        <property name="can-focus">True</property>
-        <child>
-          <object class="GtkBox" id="box_shortcuts">
-            <property name="visible">True</property>
-            <property name="can-focus">False</property>
-            <child>
-              <object class="GtkImage" id="image_shortcuts">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="xpad">4</property>
-                <property name="pixel-size">16</property>
-                <property name="icon-name">preferences-desktop-keyboard-symbolic</property>
-                <property name="use-fallback">True</property>
-                <property name="icon_size">1</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="label_shortcuts">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="label" translatable="yes">_Keyboard Shortcuts</property>
-                <property name="use-underline">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-          </object>
-        </child>
-      </object>
-    </child>
-    <child>
       <object class="GtkListBoxRow" id="application_menu_prefs">
         <property name="visible">True</property>
         <property name="can-focus">True</property>
@@ -1915,7 +1874,6 @@ This action requires administrative rights.</property>
       <widget name="listboxrow5"/>
       <widget name="application_menu_update"/>
       <widget name="application_menu_prefs"/>
-      <widget name="application_menu_keyboard_shortcuts"/>
       <widget name="listboxrow8"/>
     </widgets>
   </object>

@@ -2,6 +2,7 @@ catfish_sources = [
   '__init__.py',
   'CatfishPrefsDialog.py',
   'CatfishSearchEngine.py',
+  'CatfishShortcutsDialog.py',
   'CatfishWindow.py',
 ]
 
