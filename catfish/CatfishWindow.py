@@ -51,6 +51,7 @@ from gi.repository import GLib, GObject, Pango, Gdk, GdkPixbuf, Gtk, Gio
 
 from catfish.CatfishPrefsDialog import CatfishPrefsDialog
 from catfish.CatfishSearchEngine import CatfishSearchEngine, get_keyword_list
+from catfish.CatfishShortcutsDialog import CatfishShortcutsDialog
 from catfish_lib import catfishconfig, helpers, get_about
 from catfish_lib import CatfishSettings, SudoDialog, Window
 from catfish_lib import Thumbnailer
@@ -116,6 +117,8 @@ class CatfishWindow(Window):
 
     """The application window."""
     __gtype_name__ = "CatfishWindow"
+
+    app_icon_name = "org.xfce.catfish"
 
     filter_timerange = (0.0, 9999999999.0)
     start_date = datetime.datetime.now()
@@ -480,8 +483,14 @@ class CatfishWindow(Window):
             self.on_menu_update_index_activate(row)
         if listbox.get_row_at_index(10) == row:
             listbox.get_parent().hide()
-            self.on_menu_preferences_activate(row)
+            shortcuts_dialog = CatfishShortcutsDialog(
+                parent_window=self,
+                catfish_icon=self.app_icon_name)
+            shortcuts_dialog.show_all()
         if listbox.get_row_at_index(11) == row:
+            listbox.get_parent().hide()
+            self.on_menu_preferences_activate(row)
+        if listbox.get_row_at_index(12) == row:
             listbox.get_parent().hide()
             self.on_mnu_about_activate(row)
 
