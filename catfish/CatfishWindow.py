@@ -51,6 +51,7 @@ from gi.repository import GLib, GObject, Pango, Gdk, GdkPixbuf, Gtk, Gio
 
 from catfish.CatfishPrefsDialog import CatfishPrefsDialog
 from catfish.CatfishSearchEngine import CatfishSearchEngine, get_keyword_list
+from catfish.CatfishShortcutsDialog import CatfishShortcutsDialog
 from catfish_lib import catfishconfig, helpers, get_about
 from catfish_lib import CatfishSettings, SudoDialog, Window
 from catfish_lib import Thumbnailer
@@ -480,8 +481,12 @@ class CatfishWindow(Window):
             self.on_menu_update_index_activate(row)
         if listbox.get_row_at_index(10) == row:
             listbox.get_parent().hide()
-            self.on_menu_preferences_activate(row)
+            shortcuts_dialog = CatfishShortcutsDialog(parent_window=self)
+            shortcuts_dialog.show_all()
         if listbox.get_row_at_index(11) == row:
+            listbox.get_parent().hide()
+            self.on_menu_preferences_activate(row)
+        if listbox.get_row_at_index(12) == row:
             listbox.get_parent().hide()
             self.on_mnu_about_activate(row)
 
