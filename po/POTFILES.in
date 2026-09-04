@@ -25,6 +25,7 @@ data/ui/CatfishWindow.ui
 catfish/__init__.py
 catfish/CatfishPrefsDialog.py
 catfish/CatfishSearchEngine.py
+catfish/CatfishShortcutsDialog.py
 catfish/CatfishWindow.py
 catfish_lib/__init__.py
 catfish_lib/Builder.py
