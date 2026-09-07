@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2024
-# Саша Петровић <salepetronije@gmail.com>, 2025
+# Саша Петровић <salepetronije@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-09-26 00:57+0200\n"
+"POT-Creation-Date: 2026-08-25 13:00+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Саша Петровић <salepetronije@gmail.com>, 2025\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>, 2026\n"
 "Language-Team: Serbian (https://app.transifex.com/xfce/teams/16840/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1111
-#: catfish_lib/catfishconfig.py:91
+#: catfish_lib/catfishconfig.py:89
 msgid "Catfish File Search"
 msgstr "Претрага датотека Сом"
 
@@ -140,7 +140,7 @@ msgstr "Нисам пронашао омот!"
 #. Restore Cancel button
 #. Buttons
 #: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1255
-#: catfish/CatfishWindow.py:809 catfish_lib/SudoDialog.py:184
+#: catfish/CatfishWindow.py:807 catfish_lib/SudoDialog.py:182
 msgid "Cancel"
 msgstr "Откажи"
 
@@ -233,7 +233,7 @@ msgstr "Наставак..."
 msgid "Any time"
 msgstr "Било када"
 
-#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2038
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2059
 msgid "Today"
 msgstr "Данас"
 
@@ -261,7 +261,7 @@ msgstr "<b>Почетни дан</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>Завршни дан</b>"
 
-#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:240
+#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:239
 #: data/metainfo/catfish.appdata.xml.in:7
 msgid "Catfish"
 msgstr "Сом"
@@ -278,11 +278,11 @@ msgstr "Складиште података претраге је старије
 msgid "File Type"
 msgstr "Врста датотеке"
 
-#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1721
+#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1742
 msgid "Modified"
 msgstr "Измењено"
 
-#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2376
+#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2398
 msgid "Results will be displayed as soon as they are found."
 msgstr "Налази ће се приказивати чим буду пронађени."
 
@@ -354,45 +354,45 @@ msgstr "_Својства"
 msgid "_About"
 msgstr "_О програму"
 
-#: catfish/__init__.py:39
+#: catfish/__init__.py:38
 msgid "Usage: %prog [options] path query"
 msgstr "Употреба: %prog [могућности] путања упита"
 
-#: catfish/__init__.py:44
+#: catfish/__init__.py:43
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr ""
 "Приказуј поруке исправака грешака (-vv ће пратити грешке књижнице сома)"
 
-#: catfish/__init__.py:47
+#: catfish/__init__.py:46
 msgid "Use large icons"
 msgstr "Користи велике сличице"
 
-#: catfish/__init__.py:49
+#: catfish/__init__.py:48
 msgid "Use thumbnails"
 msgstr "Користи умањене сличице"
 
-#: catfish/__init__.py:51
+#: catfish/__init__.py:50
 msgid "Display time in ISO format"
 msgstr "Приказуј време у облику ИСО"
 
 #. Translators: Do not translate PATH, it is a variable.
-#: catfish/__init__.py:53
+#: catfish/__init__.py:52
 msgid "Set the default search path"
 msgstr "Постави подразумевану путању претраге"
 
-#: catfish/__init__.py:55
+#: catfish/__init__.py:54
 msgid "Perform exact match"
 msgstr "Изведи потпуно слагање"
 
-#: catfish/__init__.py:57
+#: catfish/__init__.py:56
 msgid "Include hidden files"
 msgstr "Обухвати скривене датотеке"
 
-#: catfish/__init__.py:59
+#: catfish/__init__.py:58
 msgid "Perform fulltext search"
 msgstr "Изведи потпуну претрагу писма"
 
-#: catfish/__init__.py:61
+#: catfish/__init__.py:60
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
@@ -400,40 +400,40 @@ msgstr ""
 "Уколико су путања и упит достављени, покрени претрагу пошто се прикаже "
 "програм."
 
-#: catfish/__init__.py:63
+#: catfish/__init__.py:62
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
 "постави подразумевани стубац ради распореда по "
 "(имену|величини|путањи|времену|врсти),(силазно|узлазно)"
 
-#: catfish/__init__.py:66
+#: catfish/__init__.py:65
 msgid "Close after selecting a file"
 msgstr "Затварај након одабира датотеке"
 
-#: catfish/__init__.py:68
+#: catfish/__init__.py:67
 msgid "Do not close after selecting a file"
 msgstr "Не затварај након одабира датотеке"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: catfish/CatfishWindow.py:110
+#: catfish/CatfishWindow.py:108
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (неисправно кодовање знакова)"
 
-#: catfish/CatfishWindow.py:152
+#: catfish/CatfishWindow.py:150
 msgid "translator-credits"
 msgstr "Саша Петровић <salepetronije@gmail.com>"
 
-#: catfish/CatfishWindow.py:303
+#: catfish/CatfishWindow.py:301
 msgid "Unknown"
 msgstr "Непознато"
 
-#: catfish/CatfishWindow.py:307
+#: catfish/CatfishWindow.py:305
 msgid "Never"
 msgstr "Никад"
 
-#: catfish/CatfishWindow.py:419
+#: catfish/CatfishWindow.py:417
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -442,37 +442,37 @@ msgstr ""
 "Унесите упит изнад ради налажења датотека\n"
 "или кликните на сличицу %s за више могућности."
 
-#: catfish/CatfishWindow.py:824
+#: catfish/CatfishWindow.py:822
 msgid "An error occurred while updating the database."
 msgstr "Десила се грешка приликом освежавања складишта података."
 
-#: catfish/CatfishWindow.py:826
+#: catfish/CatfishWindow.py:824
 msgid "Authentication failed."
 msgstr "Потврда овлашћења није успела."
 
-#: catfish/CatfishWindow.py:832
+#: catfish/CatfishWindow.py:830
 msgid "Authentication cancelled."
 msgstr "Потврда овлашћења је отказана."
 
-#: catfish/CatfishWindow.py:838
+#: catfish/CatfishWindow.py:836
 msgid "Search database updated successfully."
 msgstr "Складиште претраге је успешно освежено."
 
 #. Update the Cancel button to Close, make it default
-#: catfish/CatfishWindow.py:899
+#: catfish/CatfishWindow.py:897
 msgid "Close"
 msgstr "Затвори"
 
 #. Set the dialog status to running.
-#: catfish/CatfishWindow.py:913
+#: catfish/CatfishWindow.py:911
 msgid "Updating..."
 msgstr "Освежавам..."
 
-#: catfish/CatfishWindow.py:948
+#: catfish/CatfishWindow.py:946
 msgid "Stop Search"
 msgstr "Заустави претрагу"
 
-#: catfish/CatfishWindow.py:949
+#: catfish/CatfishWindow.py:947
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -480,15 +480,15 @@ msgstr ""
 "Претрага је у току...\n"
 "Притисните дугме откажи или излаз за заустављање."
 
-#: catfish/CatfishWindow.py:960
+#: catfish/CatfishWindow.py:958
 msgid "Begin Search"
 msgstr "Почни претрагу"
 
-#: catfish/CatfishWindow.py:1098
+#: catfish/CatfishWindow.py:1096
 msgid "No folder selected."
 msgstr "Није одабран омот."
 
-#: catfish/CatfishWindow.py:1103
+#: catfish/CatfishWindow.py:1101
 msgid "Folder not found."
 msgstr "Нисам успео да пронађем омот."
 
@@ -497,30 +497,38 @@ msgstr "Нисам успео да пронађем омот."
 msgid "\"%s\" could not be opened."
 msgstr "Нисам успео да отворим „%s“."
 
-#: catfish/CatfishWindow.py:1489
+#: catfish/CatfishWindow.py:1441
+msgid "Open Multiple Windows?"
+msgstr "Да ли отворити вишеструке прозоре?"
+
+#: catfish/CatfishWindow.py:1444
+msgid "Continue opening {} file manager windows at once?"
+msgstr "Да ли наставити са отварањем {} прозора управника датотека одједном?"
+
+#: catfish/CatfishWindow.py:1510
 msgid "Enter the new name:"
 msgstr "Унесите нови назив:"
 
-#: catfish/CatfishWindow.py:1560 catfish/CatfishWindow.py:1586
+#: catfish/CatfishWindow.py:1581 catfish/CatfishWindow.py:1607
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "Нисам успео да сачувам „%s“."
 
-#: catfish/CatfishWindow.py:1567
+#: catfish/CatfishWindow.py:1588
 msgid "Selected Results"
 msgstr "Означени налази"
 
-#: catfish/CatfishWindow.py:1602
+#: catfish/CatfishWindow.py:1623
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "Нисам успео да избришем „%s“."
 
-#: catfish/CatfishWindow.py:1641
+#: catfish/CatfishWindow.py:1662
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Сачувај „%s“ као..."
 
-#: catfish/CatfishWindow.py:1677
+#: catfish/CatfishWindow.py:1698
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -529,7 +537,7 @@ msgstr ""
 "Да ли заиста желите да \n"
 "трајно избришете „%s“?"
 
-#: catfish/CatfishWindow.py:1681
+#: catfish/CatfishWindow.py:1702
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -538,47 +546,47 @@ msgstr ""
 "Да ли заиста желите да \n"
 "трајно избришете %i означених датотека?"
 
-#: catfish/CatfishWindow.py:1684
+#: catfish/CatfishWindow.py:1705
 msgid "If you delete a file, it is permanently lost."
 msgstr "Ако ли избришете датотеку, биће трајно изгубљена."
 
-#: catfish/CatfishWindow.py:1718
+#: catfish/CatfishWindow.py:1739
 msgid "Filename"
 msgstr "Назив датотеке"
 
-#: catfish/CatfishWindow.py:1719
+#: catfish/CatfishWindow.py:1740
 msgid "Size"
 msgstr "Величина"
 
-#: catfish/CatfishWindow.py:1720
+#: catfish/CatfishWindow.py:1741
 msgid "Location"
 msgstr "Место"
 
-#: catfish/CatfishWindow.py:1730
+#: catfish/CatfishWindow.py:1751
 msgid "Preview"
 msgstr "Преглед"
 
-#: catfish/CatfishWindow.py:1737
+#: catfish/CatfishWindow.py:1758
 msgid "Details"
 msgstr "Појединости"
 
-#: catfish/CatfishWindow.py:1943
+#: catfish/CatfishWindow.py:1964
 msgid "Open with default applications"
 msgstr "Отвори помоћу подразумеваних програма"
 
-#: catfish/CatfishWindow.py:1959
+#: catfish/CatfishWindow.py:1980
 msgid "Open with"
 msgstr "Отвори помоћу"
 
-#: catfish/CatfishWindow.py:2040
+#: catfish/CatfishWindow.py:2061
 msgid "Yesterday"
 msgstr "Јуче"
 
-#: catfish/CatfishWindow.py:2159
+#: catfish/CatfishWindow.py:2180
 msgid "No files found."
 msgstr "Нисам пронашао ни једну датотеку."
 
-#: catfish/CatfishWindow.py:2161
+#: catfish/CatfishWindow.py:2182
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -586,63 +594,65 @@ msgstr ""
 "Покушајте са мање одређеним упитима\n"
 "или тражите у другом омоту."
 
-#: catfish/CatfishWindow.py:2170
+#: catfish/CatfishWindow.py:2191
 msgid "file"
 msgid_plural "files"
 msgstr[0] "датотека"
 msgstr[1] "датотеке"
 msgstr[2] "датотека"
 
-#: catfish/CatfishWindow.py:2171
+#: catfish/CatfishWindow.py:2192
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "секунда"
 msgstr[1] "секунде"
 msgstr[2] "секунди"
 
-#: catfish/CatfishWindow.py:2173
+#. Translators: Do not translate words between curly braces, they are
+#. variables.
+#: catfish/CatfishWindow.py:2195
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
 msgstr "{n} {files} је пронађену у {m:.{prec}f} {seconds}"
 
-#: catfish/CatfishWindow.py:2183 catfish/CatfishWindow.py:2186
+#: catfish/CatfishWindow.py:2205 catfish/CatfishWindow.py:2208
 msgid "bytes"
 msgstr "бајта"
 
-#: catfish/CatfishWindow.py:2374
+#: catfish/CatfishWindow.py:2396
 msgid "Searching..."
 msgstr "Претрага..."
 
-#: catfish/CatfishWindow.py:2382
+#: catfish/CatfishWindow.py:2404
 #, python-format
 msgid "\"%s\" - searching | Catfish"
 msgstr "„%s“ - претрага | Сом"
 
-#: catfish/CatfishWindow.py:2502
+#: catfish/CatfishWindow.py:2524
 #, python-format
 msgid "\"%s\" - results | Catfish"
 msgstr "„%s“ - налази | Сом"
 
-#: catfish_lib/catfishconfig.py:94
+#: catfish_lib/catfishconfig.py:92
 msgid "Catfish is a versatile file searching tool."
 msgstr "Сом је свестрани прибор за претрагу датотека."
 
-#: catfish_lib/SudoDialog.py:126
+#: catfish_lib/SudoDialog.py:124
 msgid "Password Required"
 msgstr "Потребна је лозинка"
 
-#: catfish_lib/SudoDialog.py:163
+#: catfish_lib/SudoDialog.py:161
 msgid "Incorrect password... try again."
 msgstr "Лозинка је нетачна... Покушајте поново."
 
-#: catfish_lib/SudoDialog.py:173
+#: catfish_lib/SudoDialog.py:171
 msgid "Password:"
 msgstr "Лозинка:"
 
-#: catfish_lib/SudoDialog.py:187
+#: catfish_lib/SudoDialog.py:185
 msgid "OK"
 msgstr "У реду"
 
-#: catfish_lib/SudoDialog.py:205
+#: catfish_lib/SudoDialog.py:203
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
@@ -650,7 +660,7 @@ msgstr ""
 "Унесите своју лозинку ради\n"
 "обављања управљачких задатака."
 
-#: catfish_lib/SudoDialog.py:207
+#: catfish_lib/SudoDialog.py:205
 #, python-format
 msgid ""
 "The application '%s' lets you\n"
