@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-09-26 00:57+0200\n"
+"POT-Creation-Date: 2026-08-25 13:00+0200\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
 "Last-Translator: BoneNI, 2026\n"
 "Language-Team: Lao (https://app.transifex.com/xfce/teams/16840/lo/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1111
-#: catfish_lib/catfishconfig.py:91
+#: catfish_lib/catfishconfig.py:89
 msgid "Catfish File Search"
 msgstr "ການຄົ້ນຫາໄຟລ໌ Catfish"
 
@@ -139,7 +139,7 @@ msgstr "ບໍ່ພົບໂຟນເດີ!"
 #. Restore Cancel button
 #. Buttons
 #: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1255
-#: catfish/CatfishWindow.py:809 catfish_lib/SudoDialog.py:184
+#: catfish/CatfishWindow.py:807 catfish_lib/SudoDialog.py:182
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
 
@@ -231,7 +231,7 @@ msgstr "ນາມສະກຸນ..."
 msgid "Any time"
 msgstr "ທຸກເວລາ"
 
-#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2038
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2059
 msgid "Today"
 msgstr "ມື້ນີ້"
 
@@ -259,7 +259,7 @@ msgstr "<b>ວັນທີເລີ່ມຕົ້ນ</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>ວັນທີສິ້ນສຸດ</b>"
 
-#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:240
+#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:239
 #: data/metainfo/catfish.appdata.xml.in:7
 msgid "Catfish"
 msgstr "Catfish"
@@ -276,11 +276,11 @@ msgstr "ຖານຂໍ້ມູນການຄົ້ນຫາມີອາຍຸ
 msgid "File Type"
 msgstr "ປະເພດໄຟລ໌"
 
-#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1721
+#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1742
 msgid "Modified"
 msgstr "ຖືກແກ້ໄຂ"
 
-#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2376
+#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2398
 msgid "Results will be displayed as soon as they are found."
 msgstr "ຜົນການຄົ້ນຫາຈະຖືກສະແດງທັນທີທີ່ພົບ."
 
@@ -352,44 +352,44 @@ msgstr "_ການຕັ້ງຄ່າ"
 msgid "_About"
 msgstr "_ກ່ຽວກັບ"
 
-#: catfish/__init__.py:39
+#: catfish/__init__.py:38
 msgid "Usage: %prog [options] path query"
 msgstr "ວິທີໃຊ້: %prog [ຕົວເລືອກ] ເສັ້ນທາງ ຄຳຄົ້ນຫາ"
 
-#: catfish/__init__.py:44
+#: catfish/__init__.py:43
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr "ສະແດງຂໍ້ຄວາມດີບັກ (-vv ຈະດີບັກ catfish_lib ນຳ)"
 
-#: catfish/__init__.py:47
+#: catfish/__init__.py:46
 msgid "Use large icons"
 msgstr "ໃຊ້ໄອຄອນຂະໜາດໃຫຍ່"
 
-#: catfish/__init__.py:49
+#: catfish/__init__.py:48
 msgid "Use thumbnails"
 msgstr "ໃຊ້ຮູບຕົວຢ່າງ"
 
-#: catfish/__init__.py:51
+#: catfish/__init__.py:50
 msgid "Display time in ISO format"
 msgstr "ສະແດງເວລາໃນຮູບແບບ ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
-#: catfish/__init__.py:53
+#: catfish/__init__.py:52
 msgid "Set the default search path"
 msgstr "ຕັ້ງຄ່າເສັ້ນທາງການຄົ້ນຫາເລີ່ມຕົ້ນ"
 
-#: catfish/__init__.py:55
+#: catfish/__init__.py:54
 msgid "Perform exact match"
 msgstr "ດຳເນີນການຄົ້ນຫາແບບກົງກັນທຸກຕົວອັກສອນ"
 
-#: catfish/__init__.py:57
+#: catfish/__init__.py:56
 msgid "Include hidden files"
 msgstr "ລວມເອົາໄຟລ໌ທີ່ຊ່ອນໄວ້"
 
-#: catfish/__init__.py:59
+#: catfish/__init__.py:58
 msgid "Perform fulltext search"
 msgstr "ດຳເນີນການຄົ້ນຫາແບບເຕັມຂໍ້ຄວາມ"
 
-#: catfish/__init__.py:61
+#: catfish/__init__.py:60
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
@@ -397,40 +397,40 @@ msgstr ""
 "ຖ້າມີການລະບຸເສັ້ນທາງ ແລະ ຄຳຄົ້ນຫາ, "
 "ຈະເລີ່ມການຄົ້ນຫາທັນທີເມື່ອແອັບພລິເຄຊັນເປີດຂຶ້ນ."
 
-#: catfish/__init__.py:63
+#: catfish/__init__.py:62
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
 "ຕັ້ງຄ່າຄໍລຳເລີ່ມຕົ້ນເພື່ອຈັດລຽງຕາມ "
 "(ຊື່|ຂະໜາດ|ເສັ້ນທາງ|ວັນທີ|ປະເພດ),(ນ້ອຍຫາໃຫຍ່|ໃຫຍ່ຫານ້ອຍ)"
 
-#: catfish/__init__.py:66
+#: catfish/__init__.py:65
 msgid "Close after selecting a file"
 msgstr "ປິດຫຼັງຈາກເລືອກໄຟລ໌"
 
-#: catfish/__init__.py:68
+#: catfish/__init__.py:67
 msgid "Do not close after selecting a file"
 msgstr "ບໍ່ຕ້ອງປິດຫຼັງຈາກເລືອກໄຟລ໌"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: catfish/CatfishWindow.py:110
+#: catfish/CatfishWindow.py:108
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (ການຖອດລະຫັດບໍ່ຖືກຕ້ອງ)"
 
-#: catfish/CatfishWindow.py:152
+#: catfish/CatfishWindow.py:150
 msgid "translator-credits"
 msgstr "ລາຍຊື່ຜູ້ແປ"
 
-#: catfish/CatfishWindow.py:303
+#: catfish/CatfishWindow.py:301
 msgid "Unknown"
 msgstr "ບໍ່ຮູ້ຈັກ"
 
-#: catfish/CatfishWindow.py:307
+#: catfish/CatfishWindow.py:305
 msgid "Never"
 msgstr "ບໍ່ເຄີຍ"
 
-#: catfish/CatfishWindow.py:419
+#: catfish/CatfishWindow.py:417
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -439,37 +439,37 @@ msgstr ""
 "ປ້ອນຄຳຄົ້ນຫາຂອງເຈົ້າຢູ່ຂ້າງເທິງເພື່ອຊອກຫາໄຟລ໌\n"
 "ຫຼື ຄລິກໄອຄອນ %s ສຳລັບຕົວເລືອກເພີ່ມເຕີມ."
 
-#: catfish/CatfishWindow.py:824
+#: catfish/CatfishWindow.py:822
 msgid "An error occurred while updating the database."
 msgstr "ເກີດຂໍ້ຜິດພາດໃນຂະນະທີ່ອັບເດດຖານຂໍ້ມູນ."
 
-#: catfish/CatfishWindow.py:826
+#: catfish/CatfishWindow.py:824
 msgid "Authentication failed."
 msgstr "ການຢືນຢັນຕົວຕົນລົ້ມເຫຼວ."
 
-#: catfish/CatfishWindow.py:832
+#: catfish/CatfishWindow.py:830
 msgid "Authentication cancelled."
 msgstr "ການຢືນຢັນຕົວຕົນຖືກຍົກເລີກ."
 
-#: catfish/CatfishWindow.py:838
+#: catfish/CatfishWindow.py:836
 msgid "Search database updated successfully."
 msgstr "ອັບເດດຖານຂໍ້ມູນການຄົ້ນຫາສຳເລັດແລ້ວ."
 
 #. Update the Cancel button to Close, make it default
-#: catfish/CatfishWindow.py:899
+#: catfish/CatfishWindow.py:897
 msgid "Close"
 msgstr "ປິດ"
 
 #. Set the dialog status to running.
-#: catfish/CatfishWindow.py:913
+#: catfish/CatfishWindow.py:911
 msgid "Updating..."
 msgstr "ກຳລັງອັບເດດ..."
 
-#: catfish/CatfishWindow.py:948
+#: catfish/CatfishWindow.py:946
 msgid "Stop Search"
 msgstr "ຢຸດການຄົ້ນຫາ"
 
-#: catfish/CatfishWindow.py:949
+#: catfish/CatfishWindow.py:947
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -477,15 +477,15 @@ msgstr ""
 "ກຳລັງຄົ້ນຫາ...\n"
 "ກົດປຸ່ມຍົກເລີກ ຫຼື ປຸ່ມ Escape ເພື່ອຢຸດ."
 
-#: catfish/CatfishWindow.py:960
+#: catfish/CatfishWindow.py:958
 msgid "Begin Search"
 msgstr "ເລີ່ມການຄົ້ນຫາ"
 
-#: catfish/CatfishWindow.py:1098
+#: catfish/CatfishWindow.py:1096
 msgid "No folder selected."
 msgstr "ບໍ່ໄດ້ເລືອກໂຟນເດີ."
 
-#: catfish/CatfishWindow.py:1103
+#: catfish/CatfishWindow.py:1101
 msgid "Folder not found."
 msgstr "ບໍ່ພົບໂຟນເດີ."
 
@@ -494,30 +494,38 @@ msgstr "ບໍ່ພົບໂຟນເດີ."
 msgid "\"%s\" could not be opened."
 msgstr "ບໍ່ສາມາດເປີດ \"%s\" ໄດ້."
 
-#: catfish/CatfishWindow.py:1489
+#: catfish/CatfishWindow.py:1441
+msgid "Open Multiple Windows?"
+msgstr "ເປີດຫຼາຍໜ້າຕ່າງບໍ?"
+
+#: catfish/CatfishWindow.py:1444
+msgid "Continue opening {} file manager windows at once?"
+msgstr "ສືບຕໍ່ເປີດໜ້າຕ່າງຕົວຈັດການໄຟລ໌ {} ໜ້າຕ່າງພ້ອມກັນບໍ?"
+
+#: catfish/CatfishWindow.py:1510
 msgid "Enter the new name:"
 msgstr "ປ້ອນຊື່ໃໝ່:"
 
-#: catfish/CatfishWindow.py:1560 catfish/CatfishWindow.py:1586
+#: catfish/CatfishWindow.py:1581 catfish/CatfishWindow.py:1607
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "ບໍ່ສາມາດບັນທຶກ \"%s\" ໄດ້."
 
-#: catfish/CatfishWindow.py:1567
+#: catfish/CatfishWindow.py:1588
 msgid "Selected Results"
 msgstr "ຜົນການຄົ້ນຫາທີ່ເລືອກ"
 
-#: catfish/CatfishWindow.py:1602
+#: catfish/CatfishWindow.py:1623
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "ບໍ່ສາມາດລຶບ \"%s\" ໄດ້."
 
-#: catfish/CatfishWindow.py:1641
+#: catfish/CatfishWindow.py:1662
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "ບັນທຶກ \"%s\" ເປັນ..."
 
-#: catfish/CatfishWindow.py:1677
+#: catfish/CatfishWindow.py:1698
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -526,7 +534,7 @@ msgstr ""
 "ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການ\n"
 "ລຶບ \"%s\" ແບບຖາວອນ?"
 
-#: catfish/CatfishWindow.py:1681
+#: catfish/CatfishWindow.py:1702
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -535,47 +543,47 @@ msgstr ""
 "ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການ\n"
 "ລຶບໄຟລ໌ທີ່ເລືອກ %i ໄຟລ໌ແບບຖາວອນ?"
 
-#: catfish/CatfishWindow.py:1684
+#: catfish/CatfishWindow.py:1705
 msgid "If you delete a file, it is permanently lost."
 msgstr "ຖ້າເຈົ້າລຶບໄຟລ໌, ມັນຈະສູນຫາຍໄປແບບຖາວອນ."
 
-#: catfish/CatfishWindow.py:1718
+#: catfish/CatfishWindow.py:1739
 msgid "Filename"
 msgstr "ຊື່ໄຟລ໌"
 
-#: catfish/CatfishWindow.py:1719
+#: catfish/CatfishWindow.py:1740
 msgid "Size"
 msgstr "ຂະໜາດ"
 
-#: catfish/CatfishWindow.py:1720
+#: catfish/CatfishWindow.py:1741
 msgid "Location"
 msgstr "ສະຖານທີ່"
 
-#: catfish/CatfishWindow.py:1730
+#: catfish/CatfishWindow.py:1751
 msgid "Preview"
 msgstr "ເບິ່ງຕົວຢ່າງ"
 
-#: catfish/CatfishWindow.py:1737
+#: catfish/CatfishWindow.py:1758
 msgid "Details"
 msgstr "ລາຍລະອຽດ"
 
-#: catfish/CatfishWindow.py:1943
+#: catfish/CatfishWindow.py:1964
 msgid "Open with default applications"
 msgstr "ເປີດດ້ວຍແອັບພລິເຄຊັນເລີ່ມຕົ້ນ"
 
-#: catfish/CatfishWindow.py:1959
+#: catfish/CatfishWindow.py:1980
 msgid "Open with"
 msgstr "ເປີດດ້ວຍ"
 
-#: catfish/CatfishWindow.py:2040
+#: catfish/CatfishWindow.py:2061
 msgid "Yesterday"
 msgstr "ມື້ວານນີ້"
 
-#: catfish/CatfishWindow.py:2159
+#: catfish/CatfishWindow.py:2180
 msgid "No files found."
 msgstr "ບໍ່ພົບໄຟລ໌."
 
-#: catfish/CatfishWindow.py:2161
+#: catfish/CatfishWindow.py:2182
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -583,59 +591,61 @@ msgstr ""
 "ລອງຄົ້ນຫາແບບບໍ່ເຈາະຈົງເກີນໄປ\n"
 "ຫຼື ລອງຄົ້ນຫາໃນໄດເຣັກທໍຣີອື່ນ."
 
-#: catfish/CatfishWindow.py:2170
+#: catfish/CatfishWindow.py:2191
 msgid "file"
 msgid_plural "files"
 msgstr[0] "ໄຟລ໌"
 
-#: catfish/CatfishWindow.py:2171
+#: catfish/CatfishWindow.py:2192
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "ວິນາທີ"
 
-#: catfish/CatfishWindow.py:2173
+#. Translators: Do not translate words between curly braces, they are
+#. variables.
+#: catfish/CatfishWindow.py:2195
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
 msgstr "ພົບ {n} {files} ໃນ {m:.{prec}f} {seconds}"
 
-#: catfish/CatfishWindow.py:2183 catfish/CatfishWindow.py:2186
+#: catfish/CatfishWindow.py:2205 catfish/CatfishWindow.py:2208
 msgid "bytes"
 msgstr "ໄບຕ໌"
 
-#: catfish/CatfishWindow.py:2374
+#: catfish/CatfishWindow.py:2396
 msgid "Searching..."
 msgstr "ກຳລັງຄົ້ນຫາ..."
 
-#: catfish/CatfishWindow.py:2382
+#: catfish/CatfishWindow.py:2404
 #, python-format
 msgid "\"%s\" - searching | Catfish"
 msgstr "\"%s\" - ກຳລັງຄົ້ນຫາ | Catfish"
 
-#: catfish/CatfishWindow.py:2502
+#: catfish/CatfishWindow.py:2524
 #, python-format
 msgid "\"%s\" - results | Catfish"
 msgstr "\"%s\" - ຜົນການຄົ້ນຫາ | Catfish"
 
-#: catfish_lib/catfishconfig.py:94
+#: catfish_lib/catfishconfig.py:92
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish ແມ່ນເຄື່ອງມືຄົ້ນຫາໄຟລ໌ທີ່ໃຊ້ງານໄດ້ຫຼາກຫຼາຍ."
 
-#: catfish_lib/SudoDialog.py:126
+#: catfish_lib/SudoDialog.py:124
 msgid "Password Required"
 msgstr "ຕ້ອງການລະຫັດຜ່ານ"
 
-#: catfish_lib/SudoDialog.py:163
+#: catfish_lib/SudoDialog.py:161
 msgid "Incorrect password... try again."
 msgstr "ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ... ລອງໃໝ່ອີກຄັ້ງ."
 
-#: catfish_lib/SudoDialog.py:173
+#: catfish_lib/SudoDialog.py:171
 msgid "Password:"
 msgstr "ລະຫັດຜ່ານ:"
 
-#: catfish_lib/SudoDialog.py:187
+#: catfish_lib/SudoDialog.py:185
 msgid "OK"
 msgstr "ຕົກລົງ"
 
-#: catfish_lib/SudoDialog.py:205
+#: catfish_lib/SudoDialog.py:203
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
@@ -643,7 +653,7 @@ msgstr ""
 "ປ້ອນລະຫັດຜ່ານຂອງເຈົ້າເພື່ອ\n"
 "ດຳເນີນການວຽກງານການດູແລລະບົບ."
 
-#: catfish_lib/SudoDialog.py:207
+#: catfish_lib/SudoDialog.py:205
 #, python-format
 msgid ""
 "The application '%s' lets you\n"
