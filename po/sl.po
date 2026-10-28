@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2018
-# Kernc, 2018
+# K, 2018
 # ansich <mojmejlzaforume@gmail.com>, 2024
 # Martin Srebotnjak <miles@filmsi.net>, 2024
 # 8b03701f910565d01acaec9ce3f558ab_e9f0fee <b5b06e8f85fb8288fe43ad0bc2422d94_32848>, 2024
@@ -102,7 +102,7 @@ msgstr "Pot"
 
 #: data/ui/CatfishPreferences.ui:409
 msgid "Add Directory..."
-msgstr "Dodaj mapo..."
+msgstr "Dodaj mapo ..."
 
 #: data/ui/CatfishPreferences.ui:410
 msgid "_Add"
@@ -181,11 +181,11 @@ msgstr "_Kopiraj lokacijo"
 
 #: data/ui/CatfishWindow.ui:243
 msgid "_Save as..."
-msgstr "_Shrani kot..."
+msgstr "_Shrani kot ..."
 
 #: data/ui/CatfishWindow.ui:254
 msgid "_Copy selected items to folder..."
-msgstr "Kopiraj izbrane predmete v _mapo..."
+msgstr "Kopiraj izbrane predmete v _mapo ..."
 
 #: data/ui/CatfishWindow.ui:271
 msgid "_Delete..."
@@ -234,7 +234,7 @@ msgstr "Drugo"
 
 #: data/ui/CatfishWindow.ui:408
 msgid "Extension..."
-msgstr "Končnica..."
+msgstr "Končnica ..."
 
 #: data/ui/CatfishWindow.ui:434
 msgid "Any time"
@@ -351,7 +351,7 @@ msgstr "_Točno ujemanje rezultatov"
 
 #: data/ui/CatfishWindow.ui:1757
 msgid "_Refresh search index..."
-msgstr "Osveži iskalni _indeks..."
+msgstr "Osveži iskalni _indeks ..."
 
 #: data/ui/CatfishWindow.ui:1812
 msgid "_Preferences"
@@ -472,7 +472,7 @@ msgstr "Zapri"
 #. Set the dialog status to running.
 #: catfish/CatfishWindow.py:911
 msgid "Updating..."
-msgstr "Posodabljanje..."
+msgstr "Posodabljanje ..."
 
 #: catfish/CatfishWindow.py:946
 msgid "Stop Search"
@@ -532,7 +532,7 @@ msgstr "\"%s\" ni bilo mogoče izbrisati."
 #: catfish/CatfishWindow.py:1662
 #, python-format
 msgid "Save \"%s\" as..."
-msgstr "Shrani \"%s\" kot..."
+msgstr "Shrani \"%s\" kot ..."
 
 #: catfish/CatfishWindow.py:1698
 #, python-format
@@ -628,7 +628,7 @@ msgstr "bajtov"
 
 #: catfish/CatfishWindow.py:2396
 msgid "Searching..."
-msgstr "Iskanje..."
+msgstr "Iskanje ..."
 
 #: catfish/CatfishWindow.py:2404
 #, python-format
