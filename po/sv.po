@@ -505,7 +505,7 @@ msgstr "Öppna flera fönster?"
 
 #: catfish/CatfishWindow.py:1444
 msgid "Continue opening {} file manager windows at once?"
-msgstr ""
+msgstr "Fortsätt med att öppna {} filhanterarfönster samtidigt?"
 
 #: catfish/CatfishWindow.py:1510
 msgid "Enter the new name:"
