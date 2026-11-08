@@ -1923,8 +1923,38 @@ class CatfishWindow(Window):
             self.file_menu_rename.hide()
         else:
             self.file_menu_rename.show()
-        self.file_menu.popup_at_pointer()
+
+        if event and hasattr(event, "keyval"):
+            self.menu_popup_at_row(treeview, event)
+        else:
+            self.file_menu.popup_at_pointer(event)
         return True
+
+    def menu_popup_at_row(self, treeview, event=None):
+        visible_range = treeview.get_visible_range()
+        selection = treeview.get_selection()
+
+        visible_start_row = visible_range[0].get_indices()[0]
+        visible_end_row = visible_range[1].get_indices()[0] + 1
+
+        #Use first visible row if no selected row is found below
+        target_path = visible_range[0]
+
+        for row in range(visible_start_row, visible_end_row):
+            path = Gtk.TreePath.new_from_indices([row])
+            if selection.path_is_selected(path):
+                target_path = path
+                break
+
+        treeview_area = treeview.get_bin_window()
+        row_rect = treeview.get_cell_area(target_path, None)
+
+        self.file_menu.popup_at_rect(
+            treeview_area,
+            row_rect,
+            Gdk.Gravity.SOUTH_WEST,
+            Gdk.Gravity.NORTH_WEST,
+            event)
 
     def treeview_alt_clicked(self, treeview, event=None):
         self.update_treeview_stats(treeview, event)
@@ -1989,6 +2019,9 @@ class CatfishWindow(Window):
             return ''
 
     def on_treeview_key_press_event(self, treeview, event):
+        if "Menu" in self.keys_pressed or \
+           "Shift" in self.keys_pressed and "F10" in self.keys_pressed:
+            self.treeview_right_click(treeview, event)
         if "Control" in self.keys_pressed and "a" in self.keys_pressed:
             sel = treeview.get_selection()
             sel.select_all()
