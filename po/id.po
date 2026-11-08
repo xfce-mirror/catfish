@@ -5,21 +5,21 @@
 # 
 # Translators:
 # Faisal Rachmadin <frachmadin@gmail.com>, 2024
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2024
 # Xfce Bot <transifex@xfce.org>, 2024
 # Nick Schermer <nick@xfce.org>, 2024
 # Triyan W. Nugroho <triyan.wn@gmail.com>, 2024
 # Ardjuna <Asyura.x@gmail.com>, 2024
 # Arif Budiman <arifpedia@gmail.com>, 2026
+# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-09-26 00:57+0200\n"
+"POT-Creation-Date: 2026-11-08 12:56+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Arif Budiman <arifpedia@gmail.com>, 2026\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>, 2026\n"
 "Language-Team: Indonesian (https://app.transifex.com/xfce/teams/16840/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,8 +27,8 @@ msgstr ""
 "Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1111
-#: catfish_lib/catfishconfig.py:91
+#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1112
+#: catfish_lib/catfishconfig.py:89
 msgid "Catfish File Search"
 msgstr "Catfish Pencari Berkas"
 
@@ -146,8 +146,8 @@ msgstr "Folder tidak ditemukan!"
 
 #. Restore Cancel button
 #. Buttons
-#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1255
-#: catfish/CatfishWindow.py:809 catfish_lib/SudoDialog.py:184
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1256
+#: catfish/CatfishWindow.py:814 catfish_lib/SudoDialog.py:182
 msgid "Cancel"
 msgstr "Batal"
 
@@ -241,7 +241,7 @@ msgstr "Ekstensi..."
 msgid "Any time"
 msgstr "Segala waktu"
 
-#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2038
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2068
 msgid "Today"
 msgstr "Hari Ini"
 
@@ -269,49 +269,49 @@ msgstr "<b>Tanggal Mula</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>Tanggal Akhir</b>"
 
-#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:240
+#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:239
 #: data/metainfo/catfish.appdata.xml.in:7
 msgid "Catfish"
 msgstr "Catfish"
 
-#: data/ui/CatfishWindow.ui:703
+#: data/ui/CatfishWindow.ui:704
 msgid "Update"
 msgstr "Perbarui"
 
-#: data/ui/CatfishWindow.ui:744
+#: data/ui/CatfishWindow.ui:745
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr ""
 "Data pencarian yang ada sudah lebih 7 hari. Jalankan pembaruan sekarang?"
 
-#: data/ui/CatfishWindow.ui:802
+#: data/ui/CatfishWindow.ui:803
 msgid "File Type"
 msgstr "Tipe Berkas"
 
-#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1721
+#: data/ui/CatfishWindow.ui:942 catfish/CatfishWindow.py:1748
 msgid "Modified"
 msgstr "Diubah"
 
-#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2376
+#: data/ui/CatfishWindow.ui:1133 catfish/CatfishWindow.py:2407
 msgid "Results will be displayed as soon as they are found."
 msgstr "Hasil akan ditampilkan segera setelah ditemukan."
 
-#: data/ui/CatfishWindow.ui:1269
+#: data/ui/CatfishWindow.ui:1270
 msgid "Unlock"
 msgstr "Buka Kunci"
 
-#: data/ui/CatfishWindow.ui:1321
+#: data/ui/CatfishWindow.ui:1322
 msgid "<b>Database:</b>"
 msgstr "<b>Data Pencarian:</b>"
 
-#: data/ui/CatfishWindow.ui:1334
+#: data/ui/CatfishWindow.ui:1335
 msgid "<b>Updated:</b>"
 msgstr "<b>Diperbarui:</b>"
 
-#: data/ui/CatfishWindow.ui:1347
+#: data/ui/CatfishWindow.ui:1348
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Perbarui Data Pencarian</b></big>"
 
-#: data/ui/CatfishWindow.ui:1361
+#: data/ui/CatfishWindow.ui:1362
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -319,116 +319,188 @@ msgstr ""
 "Agar proses pencarian lebih cepat, basis data pencarian perlu diperbarui.\n"
 "Untuk melakukannya, diperlukan hak akses administrator."
 
-#: data/ui/CatfishWindow.ui:1493
+#: data/ui/CatfishWindow.ui:1494
 msgid "Update Search Database"
 msgstr "Perbarui Data Pencarian"
 
-#: data/ui/CatfishWindow.ui:1517
+#: data/ui/CatfishWindow.ui:1518
 msgid "Search for files"
 msgstr "Cari berkas"
 
-#: data/ui/CatfishWindow.ui:1563
+#: data/ui/CatfishWindow.ui:1564
 msgid "Compact List"
 msgstr "Senarai Ringkas"
 
-#: data/ui/CatfishWindow.ui:1582
+#: data/ui/CatfishWindow.ui:1583
 msgid "Thumbnails"
 msgstr "Miniatur"
 
-#: data/ui/CatfishWindow.ui:1633
+#: data/ui/CatfishWindow.ui:1634
 msgid "Show _sidebar"
 msgstr "Tampilkan bilah _sisi"
 
-#: data/ui/CatfishWindow.ui:1672
+#: data/ui/CatfishWindow.ui:1673
 msgid "Show _hidden files"
 msgstr "Tampilkan _berkas tersembunyi"
 
-#: data/ui/CatfishWindow.ui:1687
+#: data/ui/CatfishWindow.ui:1688
 msgid "Search file _contents"
 msgstr "Cari dalam _isi berkas"
 
-#: data/ui/CatfishWindow.ui:1704
+#: data/ui/CatfishWindow.ui:1705
 msgid "_Match results exactly"
 msgstr "_Cocokkan hasil sama persis"
 
-#: data/ui/CatfishWindow.ui:1757
+#: data/ui/CatfishWindow.ui:1758
 msgid "_Refresh search index..."
 msgstr "Sega_rkan indeks pencarian..."
 
-#: data/ui/CatfishWindow.ui:1812
+#: data/ui/CatfishWindow.ui:1813
+msgid "_Keyboard Shortcuts"
+msgstr "Pintasan Papan Ti_k"
+
+#: data/ui/CatfishWindow.ui:1854
 msgid "_Preferences"
 msgstr "_Preferensi"
 
-#: data/ui/CatfishWindow.ui:1853
+#: data/ui/CatfishWindow.ui:1895
 msgid "_About"
 msgstr "Perih_al"
 
-#: catfish/__init__.py:39
+#: catfish/__init__.py:38
 msgid "Usage: %prog [options] path query"
 msgstr "Penggunaan: %prog [opsi] path kueri"
 
-#: catfish/__init__.py:44
+#: catfish/__init__.py:43
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr "Tampilkan pesan awakutu (-vv juga mengaktifkan awakutu catfish_lib)"
 
-#: catfish/__init__.py:47
+#: catfish/__init__.py:46
 msgid "Use large icons"
 msgstr "Gunakan ikon besar"
 
-#: catfish/__init__.py:49
+#: catfish/__init__.py:48
 msgid "Use thumbnails"
 msgstr "Gunakan miniatur"
 
-#: catfish/__init__.py:51
+#: catfish/__init__.py:50
 msgid "Display time in ISO format"
 msgstr "Tampilkan waktu dalam format ISO"
 
 #. Translators: Do not translate PATH, it is a variable.
-#: catfish/__init__.py:53
+#: catfish/__init__.py:52
 msgid "Set the default search path"
 msgstr "Setel path pencarian baku"
 
-#: catfish/__init__.py:55
+#: catfish/__init__.py:54
 msgid "Perform exact match"
 msgstr "Lakukan pencocokan tepat"
 
-#: catfish/__init__.py:57
+#: catfish/__init__.py:56
 msgid "Include hidden files"
 msgstr "Termasuk berkas tersembunyi"
 
-#: catfish/__init__.py:59
+#: catfish/__init__.py:58
 msgid "Perform fulltext search"
 msgstr "Lakukan pencarian teks lengkap"
 
-#: catfish/__init__.py:61
+#: catfish/__init__.py:60
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
 "Jika path dan kueri diberikan, mulai pencarian ketika aplikasi ditampilkan."
 
-#: catfish/__init__.py:63
+#: catfish/__init__.py:62
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
 "tetapkan kolom default untuk pengurutan "
 "(name|size|path|date|type),(asc|desc)"
 
-#: catfish/__init__.py:66
+#: catfish/__init__.py:65
 msgid "Close after selecting a file"
 msgstr "Tutup setelah memilih file"
 
-#: catfish/__init__.py:68
+#: catfish/__init__.py:67
 msgid "Do not close after selecting a file"
 msgstr "Jangan tutup setelah memilih file"
 
+#: catfish/CatfishShortcutsDialog.py:39
+msgid "Catfish Keyboard Shortcuts"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:44
+msgid "Main Window"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:45
+msgid "Open/Set Search Folder"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:46
+msgid "Focus Search Box"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:47
+msgid "Stop Ongoing Search"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:48
+msgid "Toggle Filter Sidebar"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:49
+msgid "Toggle Hidden Files"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:50
+msgid "Toggle Fullscreen Mode"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:51
+msgid "Quit Catfish"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:53
+msgid "Results"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:54
+msgid "Select All Results"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:55
+msgid "Deselect All, Return Focus to Search"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:56
+msgid "Open Context Menu"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:57
+msgid "Show in File Manager"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:58
+msgid "Rename Selected Item"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:59
+msgid "Copy Selected Paths to Clipboard"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:60
+msgid "Delete Selected Items"
+msgstr ""
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: catfish/CatfishWindow.py:110
+#: catfish/CatfishWindow.py:109
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (pengkodean tidak valid)"
 
-#: catfish/CatfishWindow.py:152
+#: catfish/CatfishWindow.py:151
 msgid "translator-credits"
 msgstr ""
 "Andhika Padmawan <andhika.padmawan@gmail.com>, 2012.\n"
@@ -452,37 +524,37 @@ msgstr ""
 "Masukkan kueri Anda di atas untuk mencari berkas\n"
 "atau klik pada ikon %s untuk lebih banyak opsi."
 
-#: catfish/CatfishWindow.py:824
+#: catfish/CatfishWindow.py:829
 msgid "An error occurred while updating the database."
 msgstr "Terjadi kesalahan saat memutakhirkan basis data."
 
-#: catfish/CatfishWindow.py:826
+#: catfish/CatfishWindow.py:831
 msgid "Authentication failed."
 msgstr "Autentikasi gagal."
 
-#: catfish/CatfishWindow.py:832
+#: catfish/CatfishWindow.py:837
 msgid "Authentication cancelled."
 msgstr "Autentikasi dibatalkan."
 
-#: catfish/CatfishWindow.py:838
+#: catfish/CatfishWindow.py:843
 msgid "Search database updated successfully."
 msgstr "Basis data pencarian berhasil dimutakhirkan."
 
 #. Update the Cancel button to Close, make it default
-#: catfish/CatfishWindow.py:899
+#: catfish/CatfishWindow.py:904
 msgid "Close"
 msgstr "Tutup"
 
 #. Set the dialog status to running.
-#: catfish/CatfishWindow.py:913
+#: catfish/CatfishWindow.py:918
 msgid "Updating..."
 msgstr "Memutakhirkan..."
 
-#: catfish/CatfishWindow.py:948
+#: catfish/CatfishWindow.py:953
 msgid "Stop Search"
 msgstr "Hentikan Pencarian"
 
-#: catfish/CatfishWindow.py:949
+#: catfish/CatfishWindow.py:954
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -490,47 +562,55 @@ msgstr ""
 "Pencarian sedang berlangsung...\n"
 "Tekan tombol batal atau Escape untuk menghentikan."
 
-#: catfish/CatfishWindow.py:960
+#: catfish/CatfishWindow.py:965
 msgid "Begin Search"
 msgstr "Mulai Pencarian"
 
-#: catfish/CatfishWindow.py:1098
+#: catfish/CatfishWindow.py:1103
 msgid "No folder selected."
 msgstr "Tidak ada folder terpilih."
 
-#: catfish/CatfishWindow.py:1103
+#: catfish/CatfishWindow.py:1108
 msgid "Folder not found."
 msgstr "Folder tidak ditemukan."
 
-#: catfish/CatfishWindow.py:1368
+#: catfish/CatfishWindow.py:1374
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" tidak dapat dibuka."
 
-#: catfish/CatfishWindow.py:1489
+#: catfish/CatfishWindow.py:1447
+msgid "Open Multiple Windows?"
+msgstr ""
+
+#: catfish/CatfishWindow.py:1450
+msgid "Continue opening {} file manager windows at once?"
+msgstr ""
+
+#: catfish/CatfishWindow.py:1516
 msgid "Enter the new name:"
 msgstr "Masukkan nama baru:"
 
-#: catfish/CatfishWindow.py:1560 catfish/CatfishWindow.py:1586
+#: catfish/CatfishWindow.py:1587 catfish/CatfishWindow.py:1613
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" tidak dapat disimpan."
 
-#: catfish/CatfishWindow.py:1567
+#: catfish/CatfishWindow.py:1594
 msgid "Selected Results"
 msgstr "Hasil yang Dipilih"
 
-#: catfish/CatfishWindow.py:1602
+#: catfish/CatfishWindow.py:1629
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" tidak dapat dihapus."
 
-#: catfish/CatfishWindow.py:1641
+#: catfish/CatfishWindow.py:1668
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Simpan \"%s\" sebagai..."
 
-#: catfish/CatfishWindow.py:1677
+#: catfish/CatfishWindow.py:1704
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -539,7 +619,7 @@ msgstr ""
 "Apakah Anda yakin akan menghapus \n"
 "\"%s\" secara permanen?"
 
-#: catfish/CatfishWindow.py:1681
+#: catfish/CatfishWindow.py:1708
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -548,47 +628,47 @@ msgstr ""
 "Apakah Anda yakin akan menghapus \n"
 "%i berkas yang dipilih secara permanen?"
 
-#: catfish/CatfishWindow.py:1684
+#: catfish/CatfishWindow.py:1711
 msgid "If you delete a file, it is permanently lost."
 msgstr "Jika Anda menghapus sebuah berkas, ia akan hilang secara permanen."
 
-#: catfish/CatfishWindow.py:1718
+#: catfish/CatfishWindow.py:1745
 msgid "Filename"
 msgstr "Nama Berkas"
 
-#: catfish/CatfishWindow.py:1719
+#: catfish/CatfishWindow.py:1746
 msgid "Size"
 msgstr "Ukuran"
 
-#: catfish/CatfishWindow.py:1720
+#: catfish/CatfishWindow.py:1747
 msgid "Location"
 msgstr "Lokasi"
 
-#: catfish/CatfishWindow.py:1730
+#: catfish/CatfishWindow.py:1757
 msgid "Preview"
 msgstr "Pratinjau"
 
-#: catfish/CatfishWindow.py:1737
+#: catfish/CatfishWindow.py:1764
 msgid "Details"
 msgstr "Detail"
 
-#: catfish/CatfishWindow.py:1943
+#: catfish/CatfishWindow.py:1970
 msgid "Open with default applications"
 msgstr "Buka dengan aplikasi standar"
 
-#: catfish/CatfishWindow.py:1959
+#: catfish/CatfishWindow.py:1986
 msgid "Open with"
 msgstr "Buka dengan"
 
-#: catfish/CatfishWindow.py:2040
+#: catfish/CatfishWindow.py:2070
 msgid "Yesterday"
 msgstr "Kemarin"
 
-#: catfish/CatfishWindow.py:2159
+#: catfish/CatfishWindow.py:2189
 msgid "No files found."
 msgstr "Berkas tidak ditemukan."
 
-#: catfish/CatfishWindow.py:2161
+#: catfish/CatfishWindow.py:2191
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -596,59 +676,61 @@ msgstr ""
 "Cobalah melakukan pencarian secara kurang spesifik\n"
 "atau cobalah direktori lain."
 
-#: catfish/CatfishWindow.py:2170
+#: catfish/CatfishWindow.py:2200
 msgid "file"
 msgid_plural "files"
 msgstr[0] ""
 
-#: catfish/CatfishWindow.py:2171
+#: catfish/CatfishWindow.py:2201
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] ""
 
-#: catfish/CatfishWindow.py:2173
+#. Translators: Do not translate words between curly braces, they are
+#. variables.
+#: catfish/CatfishWindow.py:2204
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
 msgstr "{n} {files} ditemukan dalam {m:.{prec}f} {seconds}"
 
-#: catfish/CatfishWindow.py:2183 catfish/CatfishWindow.py:2186
+#: catfish/CatfishWindow.py:2214 catfish/CatfishWindow.py:2217
 msgid "bytes"
 msgstr "bita"
 
-#: catfish/CatfishWindow.py:2374
+#: catfish/CatfishWindow.py:2405
 msgid "Searching..."
 msgstr "Mencari..."
 
-#: catfish/CatfishWindow.py:2382
+#: catfish/CatfishWindow.py:2413
 #, python-format
 msgid "\"%s\" - searching | Catfish"
 msgstr "\"%s\" - mencari | Catfish"
 
-#: catfish/CatfishWindow.py:2502
+#: catfish/CatfishWindow.py:2533
 #, python-format
 msgid "\"%s\" - results | Catfish"
 msgstr "\"%s\" - hasil | Catfish"
 
-#: catfish_lib/catfishconfig.py:94
+#: catfish_lib/catfishconfig.py:92
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish adalah perangkat pencari berkas yang serba guna."
 
-#: catfish_lib/SudoDialog.py:126
+#: catfish_lib/SudoDialog.py:124
 msgid "Password Required"
 msgstr "Perlu Kata Sandi"
 
-#: catfish_lib/SudoDialog.py:163
+#: catfish_lib/SudoDialog.py:161
 msgid "Incorrect password... try again."
 msgstr "Kata sandi salah... coba lagi."
 
-#: catfish_lib/SudoDialog.py:173
+#: catfish_lib/SudoDialog.py:171
 msgid "Password:"
 msgstr "Kata Sandi:"
 
-#: catfish_lib/SudoDialog.py:187
+#: catfish_lib/SudoDialog.py:185
 msgid "OK"
 msgstr "OK"
 
-#: catfish_lib/SudoDialog.py:205
+#: catfish_lib/SudoDialog.py:203
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
@@ -656,7 +738,7 @@ msgstr ""
 "Masukkan kata sandi Anda untuk\n"
 "melakukan tugas administratif."
 
-#: catfish_lib/SudoDialog.py:207
+#: catfish_lib/SudoDialog.py:205
 #, python-format
 msgid ""
 "The application '%s' lets you\n"
