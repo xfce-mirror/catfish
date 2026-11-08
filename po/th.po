@@ -5,17 +5,17 @@
 # 
 # Translators:
 # Xfce Bot <transifex@xfce.org>, 2024
-# Theppitak Karoonboonyanan <theppitak@gmail.com>, 2024
 # Warut Bunprasert <warut.b@disroot.org>, 2026
+# Theppitak Karoonboonyanan <theppitak@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2026-08-25 13:00+0200\n"
+"POT-Creation-Date: 2026-11-08 12:56+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Warut Bunprasert <warut.b@disroot.org>, 2026\n"
+"Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>, 2026\n"
 "Language-Team: Thai (https://app.transifex.com/xfce/teams/16840/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Language: th\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1111
+#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1112
 #: catfish_lib/catfishconfig.py:89
 msgid "Catfish File Search"
 msgstr "เครื่องมือค้นหาแฟ้ม Catfish"
@@ -140,8 +140,8 @@ msgstr "ไม่พบโฟลเดอร์!"
 
 #. Restore Cancel button
 #. Buttons
-#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1255
-#: catfish/CatfishWindow.py:807 catfish_lib/SudoDialog.py:182
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1256
+#: catfish/CatfishWindow.py:814 catfish_lib/SudoDialog.py:182
 msgid "Cancel"
 msgstr "ยกเลิก"
 
@@ -233,7 +233,7 @@ msgstr "นามสกุล..."
 msgid "Any time"
 msgstr "ทุกเวลา"
 
-#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2059
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2068
 msgid "Today"
 msgstr "วันนี้"
 
@@ -266,43 +266,43 @@ msgstr "<b>วันที่สุดท้าย</b>"
 msgid "Catfish"
 msgstr "Catfish"
 
-#: data/ui/CatfishWindow.ui:703
+#: data/ui/CatfishWindow.ui:704
 msgid "Update"
 msgstr "ปรับข้อมูล"
 
-#: data/ui/CatfishWindow.ui:744
+#: data/ui/CatfishWindow.ui:745
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr "ฐานข้อมูลค้นหาเก่ากว่า 7 วันแล้ว จะปรับข้อมูลเดี๋ยวนี้เลยหรือไม่?"
 
-#: data/ui/CatfishWindow.ui:802
+#: data/ui/CatfishWindow.ui:803
 msgid "File Type"
 msgstr "ชนิดแฟ้ม"
 
-#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1742
+#: data/ui/CatfishWindow.ui:942 catfish/CatfishWindow.py:1748
 msgid "Modified"
 msgstr "แก้ไขเมื่อ"
 
-#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2398
+#: data/ui/CatfishWindow.ui:1133 catfish/CatfishWindow.py:2407
 msgid "Results will be displayed as soon as they are found."
 msgstr "ผลลัพธ์จะแสดงทันทีที่พบ"
 
-#: data/ui/CatfishWindow.ui:1269
+#: data/ui/CatfishWindow.ui:1270
 msgid "Unlock"
 msgstr "ปลดล็อค"
 
-#: data/ui/CatfishWindow.ui:1321
+#: data/ui/CatfishWindow.ui:1322
 msgid "<b>Database:</b>"
 msgstr "<b>ฐานข้อมูล:</b>"
 
-#: data/ui/CatfishWindow.ui:1334
+#: data/ui/CatfishWindow.ui:1335
 msgid "<b>Updated:</b>"
 msgstr "<b>ปรับข้อมูลเมื่อ:</b>"
 
-#: data/ui/CatfishWindow.ui:1347
+#: data/ui/CatfishWindow.ui:1348
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>ปรับฐานข้อมูลค้นหา</b></big>"
 
-#: data/ui/CatfishWindow.ui:1361
+#: data/ui/CatfishWindow.ui:1362
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -310,47 +310,51 @@ msgstr ""
 "เพื่อให้ค้นหาได้เร็วยิ่งขึ้น จำเป็นต้องปรับฐานข้อมูลสำหรับค้นหา\n"
 "การกระทำนี้จำเป็นต้องใช้สิทธิ์ผู้ดูแลระบบ"
 
-#: data/ui/CatfishWindow.ui:1493
+#: data/ui/CatfishWindow.ui:1494
 msgid "Update Search Database"
 msgstr "ปรับฐานข้อมูลค้นหา"
 
-#: data/ui/CatfishWindow.ui:1517
+#: data/ui/CatfishWindow.ui:1518
 msgid "Search for files"
 msgstr "ค้นหาแฟ้ม"
 
-#: data/ui/CatfishWindow.ui:1563
+#: data/ui/CatfishWindow.ui:1564
 msgid "Compact List"
 msgstr "รายชื่อแบบกระชับ"
 
-#: data/ui/CatfishWindow.ui:1582
+#: data/ui/CatfishWindow.ui:1583
 msgid "Thumbnails"
 msgstr "ภาพย่อ"
 
-#: data/ui/CatfishWindow.ui:1633
+#: data/ui/CatfishWindow.ui:1634
 msgid "Show _sidebar"
 msgstr "แสดงแถบ_ข้าง"
 
-#: data/ui/CatfishWindow.ui:1672
+#: data/ui/CatfishWindow.ui:1673
 msgid "Show _hidden files"
 msgstr "แสดงแฟ้มซ่_อน"
 
-#: data/ui/CatfishWindow.ui:1687
+#: data/ui/CatfishWindow.ui:1688
 msgid "Search file _contents"
 msgstr "ค้นในเ_นื้อหาแฟ้ม"
 
-#: data/ui/CatfishWindow.ui:1704
+#: data/ui/CatfishWindow.ui:1705
 msgid "_Match results exactly"
 msgstr "_ตรงทุกตัวอักษร"
 
-#: data/ui/CatfishWindow.ui:1757
+#: data/ui/CatfishWindow.ui:1758
 msgid "_Refresh search index..."
 msgstr "_ปรับข้อมูลดัชนีค้นหา..."
 
-#: data/ui/CatfishWindow.ui:1812
+#: data/ui/CatfishWindow.ui:1813
+msgid "_Keyboard Shortcuts"
+msgstr "ปุ่ม_ลัดแป้นพิมพ์"
+
+#: data/ui/CatfishWindow.ui:1854
 msgid "_Preferences"
 msgstr "_ปรับแต่ง"
 
-#: data/ui/CatfishWindow.ui:1853
+#: data/ui/CatfishWindow.ui:1895
 msgid "_About"
 msgstr "เ_กี่ยวกับ"
 
@@ -411,26 +415,94 @@ msgstr "ปิดหลังจากเลือกแฟ้ม"
 msgid "Do not close after selecting a file"
 msgstr "อย่าปิดหลังจากเลือกแฟ้ม"
 
+#: catfish/CatfishShortcutsDialog.py:39
+msgid "Catfish Keyboard Shortcuts"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:44
+msgid "Main Window"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:45
+msgid "Open/Set Search Folder"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:46
+msgid "Focus Search Box"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:47
+msgid "Stop Ongoing Search"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:48
+msgid "Toggle Filter Sidebar"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:49
+msgid "Toggle Hidden Files"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:50
+msgid "Toggle Fullscreen Mode"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:51
+msgid "Quit Catfish"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:53
+msgid "Results"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:54
+msgid "Select All Results"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:55
+msgid "Deselect All, Return Focus to Search"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:56
+msgid "Open Context Menu"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:57
+msgid "Show in File Manager"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:58
+msgid "Rename Selected Item"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:59
+msgid "Copy Selected Paths to Clipboard"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:60
+msgid "Delete Selected Items"
+msgstr ""
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: catfish/CatfishWindow.py:108
+#: catfish/CatfishWindow.py:109
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (รหัสอักขระไม่ถูกต้อง)"
 
-#: catfish/CatfishWindow.py:150
+#: catfish/CatfishWindow.py:151
 msgid "translator-credits"
 msgstr "Theppitak Karoonboonyanan <theppitak@gmail.com>"
 
-#: catfish/CatfishWindow.py:301
+#: catfish/CatfishWindow.py:303
 msgid "Unknown"
 msgstr "ไม่ทราบ"
 
-#: catfish/CatfishWindow.py:305
+#: catfish/CatfishWindow.py:307
 msgid "Never"
 msgstr "ไม่เลย"
 
-#: catfish/CatfishWindow.py:417
+#: catfish/CatfishWindow.py:419
 #, python-format
 msgid ""
 "Enter your query above to find your files\n"
@@ -439,37 +511,37 @@ msgstr ""
 "ป้อนคำค้นที่ด้านบนเพื่อค้นหาแฟ้มของคุณ\n"
 "หรือคลิกที่ไอคอน %s เพื่อใช้ตัวเลือกเพิ่มเติม"
 
-#: catfish/CatfishWindow.py:822
+#: catfish/CatfishWindow.py:829
 msgid "An error occurred while updating the database."
 msgstr "เกิดข้อผิดพลาดขณะปรับฐานข้อมูล"
 
-#: catfish/CatfishWindow.py:824
+#: catfish/CatfishWindow.py:831
 msgid "Authentication failed."
 msgstr "ยืนยันตัวบุคคลไม่สำเร็จ"
 
-#: catfish/CatfishWindow.py:830
+#: catfish/CatfishWindow.py:837
 msgid "Authentication cancelled."
 msgstr "การยืนยันตัวบุคคลถูกยกเลิก"
 
-#: catfish/CatfishWindow.py:836
+#: catfish/CatfishWindow.py:843
 msgid "Search database updated successfully."
 msgstr "ปรับฐานข้อมูลสำเร็จแล้ว"
 
 #. Update the Cancel button to Close, make it default
-#: catfish/CatfishWindow.py:897
+#: catfish/CatfishWindow.py:904
 msgid "Close"
 msgstr "ปิด"
 
 #. Set the dialog status to running.
-#: catfish/CatfishWindow.py:911
+#: catfish/CatfishWindow.py:918
 msgid "Updating..."
 msgstr "กำลังปรับข้อมูล..."
 
-#: catfish/CatfishWindow.py:946
+#: catfish/CatfishWindow.py:953
 msgid "Stop Search"
 msgstr "หยุดค้นหา"
 
-#: catfish/CatfishWindow.py:947
+#: catfish/CatfishWindow.py:954
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -477,55 +549,55 @@ msgstr ""
 "กำลังดำเนินการค้นหา...\n"
 "คลิกปุ่มยกเลิกหรือกดปุ่ม Escape หากต้องการหยุดค้น"
 
-#: catfish/CatfishWindow.py:958
+#: catfish/CatfishWindow.py:965
 msgid "Begin Search"
 msgstr "เริ่มค้นหา"
 
-#: catfish/CatfishWindow.py:1096
+#: catfish/CatfishWindow.py:1103
 msgid "No folder selected."
 msgstr "ไม่มีโฟลเดอร์ที่เลือก"
 
-#: catfish/CatfishWindow.py:1101
+#: catfish/CatfishWindow.py:1108
 msgid "Folder not found."
 msgstr "ไม่พบโฟลเดอร์"
 
-#: catfish/CatfishWindow.py:1368
+#: catfish/CatfishWindow.py:1374
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" ไม่สามารถเปิดได้"
 
-#: catfish/CatfishWindow.py:1441
+#: catfish/CatfishWindow.py:1447
 msgid "Open Multiple Windows?"
 msgstr "เปิดหลายหน้าต่างหรือไม่?"
 
-#: catfish/CatfishWindow.py:1444
+#: catfish/CatfishWindow.py:1450
 msgid "Continue opening {} file manager windows at once?"
 msgstr "เปิดหน้าต่างโปรแกรมจัดการแฟ้ม {} ต่อไปพร้อมกันหรือไม่?"
 
-#: catfish/CatfishWindow.py:1510
+#: catfish/CatfishWindow.py:1516
 msgid "Enter the new name:"
 msgstr "กรุณาป้อนชื่อใหม่:"
 
-#: catfish/CatfishWindow.py:1581 catfish/CatfishWindow.py:1607
+#: catfish/CatfishWindow.py:1587 catfish/CatfishWindow.py:1613
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" ไม่สามารถบันทึกได้"
 
-#: catfish/CatfishWindow.py:1588
+#: catfish/CatfishWindow.py:1594
 msgid "Selected Results"
 msgstr "ผลลัพธ์ที่เลือก"
 
-#: catfish/CatfishWindow.py:1623
+#: catfish/CatfishWindow.py:1629
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" ไม่สามารถลบได้"
 
-#: catfish/CatfishWindow.py:1662
+#: catfish/CatfishWindow.py:1668
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "บันทึก \"%s\" เป็น..."
 
-#: catfish/CatfishWindow.py:1698
+#: catfish/CatfishWindow.py:1704
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -534,7 +606,7 @@ msgstr ""
 "ยืนยันหรือไม่ว่าคุณต้องการลบ\n"
 "\"%s\" ทิ้งอย่างถาวร?"
 
-#: catfish/CatfishWindow.py:1702
+#: catfish/CatfishWindow.py:1708
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -543,47 +615,47 @@ msgstr ""
 "ยืนยันหรือไม่ว่าคุณต้องการลบ\n"
 "แฟ้ม %i แฟ้มที่เลือกทิ้งอย่างถาวร?"
 
-#: catfish/CatfishWindow.py:1705
+#: catfish/CatfishWindow.py:1711
 msgid "If you delete a file, it is permanently lost."
 msgstr "ถ้าคุณลบแฟ้ม แฟ้มนั้นก็จะสูญหายไปอย่างถาวร"
 
-#: catfish/CatfishWindow.py:1739
+#: catfish/CatfishWindow.py:1745
 msgid "Filename"
 msgstr "ชื่อแฟ้ม"
 
-#: catfish/CatfishWindow.py:1740
+#: catfish/CatfishWindow.py:1746
 msgid "Size"
 msgstr "ขนาด"
 
-#: catfish/CatfishWindow.py:1741
+#: catfish/CatfishWindow.py:1747
 msgid "Location"
 msgstr "ตำแหน่งเก็บ"
 
-#: catfish/CatfishWindow.py:1751
+#: catfish/CatfishWindow.py:1757
 msgid "Preview"
 msgstr "ตัวอย่าง"
 
-#: catfish/CatfishWindow.py:1758
+#: catfish/CatfishWindow.py:1764
 msgid "Details"
 msgstr "รายละเอียด"
 
-#: catfish/CatfishWindow.py:1964
+#: catfish/CatfishWindow.py:1970
 msgid "Open with default applications"
 msgstr "เปิดด้วยโปรแกรมปริยาย"
 
-#: catfish/CatfishWindow.py:1980
+#: catfish/CatfishWindow.py:1986
 msgid "Open with"
 msgstr "เปิดด้วย"
 
-#: catfish/CatfishWindow.py:2061
+#: catfish/CatfishWindow.py:2070
 msgid "Yesterday"
 msgstr "เมื่อวาน"
 
-#: catfish/CatfishWindow.py:2180
+#: catfish/CatfishWindow.py:2189
 msgid "No files found."
 msgstr "ไม่พบแฟ้ม"
 
-#: catfish/CatfishWindow.py:2182
+#: catfish/CatfishWindow.py:2191
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -591,36 +663,36 @@ msgstr ""
 "ลองค้นแบบเฉพาะเจาะจงน้อยกว่านี้\n"
 "หรือลองค้นหาในไดเรกทอรีอื่น"
 
-#: catfish/CatfishWindow.py:2191
+#: catfish/CatfishWindow.py:2200
 msgid "file"
 msgid_plural "files"
 msgstr[0] "แฟ้ม"
 
-#: catfish/CatfishWindow.py:2192
+#: catfish/CatfishWindow.py:2201
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "วินาที"
 
 #. Translators: Do not translate words between curly braces, they are
 #. variables.
-#: catfish/CatfishWindow.py:2195
+#: catfish/CatfishWindow.py:2204
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
 msgstr "{n} {แฟ้ม} พบใน {m:.{prec}f} {วินาที}"
 
-#: catfish/CatfishWindow.py:2205 catfish/CatfishWindow.py:2208
+#: catfish/CatfishWindow.py:2214 catfish/CatfishWindow.py:2217
 msgid "bytes"
 msgstr "ไบต์"
 
-#: catfish/CatfishWindow.py:2396
+#: catfish/CatfishWindow.py:2405
 msgid "Searching..."
 msgstr "กำลังค้นหา..."
 
-#: catfish/CatfishWindow.py:2404
+#: catfish/CatfishWindow.py:2413
 #, python-format
 msgid "\"%s\" - searching | Catfish"
 msgstr "\"%s\" - กำลังค้นหา | Catfish"
 
-#: catfish/CatfishWindow.py:2524
+#: catfish/CatfishWindow.py:2533
 #, python-format
 msgid "\"%s\" - results | Catfish"
 msgstr "\"%s\" - ผลลัพท์ | Catfish"
