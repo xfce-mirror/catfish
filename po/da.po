@@ -6,16 +6,16 @@
 # Translators:
 # Nick Schermer <nick@xfce.org>, 2024
 # Xfce Bot <transifex@xfce.org>, 2024
-# scootergrisen, 2025
+# scootergrisen, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce-apps.catfish\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-09-26 00:57+0200\n"
+"POT-Creation-Date: 2026-11-08 12:56+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: scootergrisen, 2025\n"
+"Last-Translator: scootergrisen, 2026\n"
 "Language-Team: Danish (https://app.transifex.com/xfce/teams/16840/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,8 +23,8 @@ msgstr ""
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1111
-#: catfish_lib/catfishconfig.py:91
+#: org.xfce.Catfish.desktop.in:3 data/ui/CatfishWindow.ui:1112
+#: catfish_lib/catfishconfig.py:89
 msgid "Catfish File Search"
 msgstr "Catfish Filsøgning"
 
@@ -140,8 +140,8 @@ msgstr "Mappe ikke fundet!"
 
 #. Restore Cancel button
 #. Buttons
-#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1255
-#: catfish/CatfishWindow.py:809 catfish_lib/SudoDialog.py:184
+#: data/ui/CatfishWindow.ui:71 data/ui/CatfishWindow.ui:1256
+#: catfish/CatfishWindow.py:814 catfish_lib/SudoDialog.py:182
 msgid "Cancel"
 msgstr "Annuller"
 
@@ -234,7 +234,7 @@ msgstr "Endelse ..."
 msgid "Any time"
 msgstr "Enhver tid"
 
-#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2038
+#: data/ui/CatfishWindow.ui:442 catfish/CatfishWindow.py:2068
 msgid "Today"
 msgstr "I dag"
 
@@ -262,48 +262,48 @@ msgstr "<b>Startdato</b>"
 msgid "<b>End Date</b>"
 msgstr "<b>Slutdato</b>"
 
-#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:240
+#: data/ui/CatfishWindow.ui:676 catfish_lib/Window.py:239
 #: data/metainfo/catfish.appdata.xml.in:7
 msgid "Catfish"
 msgstr "Catfish"
 
-#: data/ui/CatfishWindow.ui:703
+#: data/ui/CatfishWindow.ui:704
 msgid "Update"
 msgstr "Opdater"
 
-#: data/ui/CatfishWindow.ui:744
+#: data/ui/CatfishWindow.ui:745
 msgid "The search database is more than 7 days old.  Update now?"
 msgstr "Søgedatabasen er mere end 7 dage gammel. Opdater nu?"
 
-#: data/ui/CatfishWindow.ui:802
+#: data/ui/CatfishWindow.ui:803
 msgid "File Type"
 msgstr "Filtype"
 
-#: data/ui/CatfishWindow.ui:941 catfish/CatfishWindow.py:1721
+#: data/ui/CatfishWindow.ui:942 catfish/CatfishWindow.py:1748
 msgid "Modified"
 msgstr "Ændret"
 
-#: data/ui/CatfishWindow.ui:1132 catfish/CatfishWindow.py:2376
+#: data/ui/CatfishWindow.ui:1133 catfish/CatfishWindow.py:2407
 msgid "Results will be displayed as soon as they are found."
 msgstr "Resultater vil blive vist så snart de findes."
 
-#: data/ui/CatfishWindow.ui:1269
+#: data/ui/CatfishWindow.ui:1270
 msgid "Unlock"
 msgstr "Lås op"
 
-#: data/ui/CatfishWindow.ui:1321
+#: data/ui/CatfishWindow.ui:1322
 msgid "<b>Database:</b>"
 msgstr "<b>Database:</b>"
 
-#: data/ui/CatfishWindow.ui:1334
+#: data/ui/CatfishWindow.ui:1335
 msgid "<b>Updated:</b>"
 msgstr "<b>Opdateret:</b>"
 
-#: data/ui/CatfishWindow.ui:1347
+#: data/ui/CatfishWindow.ui:1348
 msgid "<big><b>Update Search Database</b></big>"
 msgstr "<big><b>Opdater søgedatabase</b></big>"
 
-#: data/ui/CatfishWindow.ui:1361
+#: data/ui/CatfishWindow.ui:1362
 msgid ""
 "For faster search results, the search database needs to be refreshed.\n"
 "This action requires administrative rights."
@@ -311,116 +311,188 @@ msgstr ""
 "For at få hurtigere søgeresultater skal søgedatabasen genopfriskes.\n"
 "Denne handling kræver administratortilladelser."
 
-#: data/ui/CatfishWindow.ui:1493
+#: data/ui/CatfishWindow.ui:1494
 msgid "Update Search Database"
 msgstr "Opdater søgedatabase"
 
-#: data/ui/CatfishWindow.ui:1517
+#: data/ui/CatfishWindow.ui:1518
 msgid "Search for files"
 msgstr "Søg efter filer"
 
-#: data/ui/CatfishWindow.ui:1563
+#: data/ui/CatfishWindow.ui:1564
 msgid "Compact List"
 msgstr "Kompakt liste"
 
-#: data/ui/CatfishWindow.ui:1582
+#: data/ui/CatfishWindow.ui:1583
 msgid "Thumbnails"
 msgstr "Miniaturer"
 
-#: data/ui/CatfishWindow.ui:1633
+#: data/ui/CatfishWindow.ui:1634
 msgid "Show _sidebar"
 msgstr "Vis _sidelinje"
 
-#: data/ui/CatfishWindow.ui:1672
+#: data/ui/CatfishWindow.ui:1673
 msgid "Show _hidden files"
 msgstr "Vis _skjulte filer"
 
-#: data/ui/CatfishWindow.ui:1687
+#: data/ui/CatfishWindow.ui:1688
 msgid "Search file _contents"
 msgstr "Søg i fil_indhold"
 
-#: data/ui/CatfishWindow.ui:1704
+#: data/ui/CatfishWindow.ui:1705
 msgid "_Match results exactly"
 msgstr "_Match resultater præcist"
 
-#: data/ui/CatfishWindow.ui:1757
+#: data/ui/CatfishWindow.ui:1758
 msgid "_Refresh search index..."
 msgstr "_Opdater søgeindeks ..."
 
-#: data/ui/CatfishWindow.ui:1812
+#: data/ui/CatfishWindow.ui:1813
+msgid "_Keyboard Shortcuts"
+msgstr "_Tastaturgenveje"
+
+#: data/ui/CatfishWindow.ui:1854
 msgid "_Preferences"
 msgstr "_Præferencer"
 
-#: data/ui/CatfishWindow.ui:1853
+#: data/ui/CatfishWindow.ui:1895
 msgid "_About"
 msgstr "_Om"
 
-#: catfish/__init__.py:39
+#: catfish/__init__.py:38
 msgid "Usage: %prog [options] path query"
 msgstr "Anvendelse: %prog [tilvalg] sti forespørgsel"
 
-#: catfish/__init__.py:44
+#: catfish/__init__.py:43
 msgid "Show debug messages (-vv will also debug catfish_lib)"
 msgstr "Vis fejlsøgningsmeddelelser (-vv fejlsøger også catfish_lib)"
 
-#: catfish/__init__.py:47
+#: catfish/__init__.py:46
 msgid "Use large icons"
 msgstr "Brug store ikoner"
 
-#: catfish/__init__.py:49
+#: catfish/__init__.py:48
 msgid "Use thumbnails"
 msgstr "Brug miniaturer"
 
-#: catfish/__init__.py:51
+#: catfish/__init__.py:50
 msgid "Display time in ISO format"
 msgstr "Vis tid i ISO-format"
 
 #. Translators: Do not translate PATH, it is a variable.
-#: catfish/__init__.py:53
+#: catfish/__init__.py:52
 msgid "Set the default search path"
 msgstr "Indstil standardsøgestien"
 
-#: catfish/__init__.py:55
+#: catfish/__init__.py:54
 msgid "Perform exact match"
 msgstr "Udfør præcist match"
 
-#: catfish/__init__.py:57
+#: catfish/__init__.py:56
 msgid "Include hidden files"
 msgstr "Medtag skjulte filer"
 
-#: catfish/__init__.py:59
+#: catfish/__init__.py:58
 msgid "Perform fulltext search"
 msgstr "Udfør søgning i fuld tekst"
 
-#: catfish/__init__.py:61
+#: catfish/__init__.py:60
 msgid ""
 "If path and query are provided, start searching when the application is "
 "displayed."
 msgstr ""
 "Hvis sti og forespørgsel gives, så start søgning når programmet vises."
 
-#: catfish/__init__.py:63
+#: catfish/__init__.py:62
 msgid "set a default column to sort by (name|size|path|date|type),(asc|desc)"
 msgstr ""
 "indstil en standardkolonne til at sortere efter "
 "(name|size|path|date|type),(asc|desc)"
 
-#: catfish/__init__.py:66
+#: catfish/__init__.py:65
 msgid "Close after selecting a file"
 msgstr "Luk når en fil er blevet valgt"
 
-#: catfish/__init__.py:68
+#: catfish/__init__.py:67
 msgid "Do not close after selecting a file"
 msgstr "Luk ikke når en fil er blevet valgt"
 
+#: catfish/CatfishShortcutsDialog.py:39
+msgid "Catfish Keyboard Shortcuts"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:44
+msgid "Main Window"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:45
+msgid "Open/Set Search Folder"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:46
+msgid "Focus Search Box"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:47
+msgid "Stop Ongoing Search"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:48
+msgid "Toggle Filter Sidebar"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:49
+msgid "Toggle Hidden Files"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:50
+msgid "Toggle Fullscreen Mode"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:51
+msgid "Quit Catfish"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:53
+msgid "Results"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:54
+msgid "Select All Results"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:55
+msgid "Deselect All, Return Focus to Search"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:56
+msgid "Open Context Menu"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:57
+msgid "Show in File Manager"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:58
+msgid "Rename Selected Item"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:59
+msgid "Copy Selected Paths to Clipboard"
+msgstr ""
+
+#: catfish/CatfishShortcutsDialog.py:60
+msgid "Delete Selected Items"
+msgstr ""
+
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
-#: catfish/CatfishWindow.py:110
+#: catfish/CatfishWindow.py:109
 #, python-format
 msgid "%s (invalid encoding)"
 msgstr "%s (ugyldig kodning)"
 
-#: catfish/CatfishWindow.py:152
+#: catfish/CatfishWindow.py:151
 msgid "translator-credits"
 msgstr ""
 "Per Kongstad\n"
@@ -444,37 +516,37 @@ msgstr ""
 "Indtast din forespørgsel ovenfor for at finde dine filer\n"
 "eller klik på %s-ikonet for flere valgmuligheder."
 
-#: catfish/CatfishWindow.py:824
+#: catfish/CatfishWindow.py:829
 msgid "An error occurred while updating the database."
 msgstr "Der opstod en fejl under opdatering af databasen."
 
-#: catfish/CatfishWindow.py:826
+#: catfish/CatfishWindow.py:831
 msgid "Authentication failed."
 msgstr "Autentifikation mislykkedes."
 
-#: catfish/CatfishWindow.py:832
+#: catfish/CatfishWindow.py:837
 msgid "Authentication cancelled."
 msgstr "Autentifikation annulleret."
 
-#: catfish/CatfishWindow.py:838
+#: catfish/CatfishWindow.py:843
 msgid "Search database updated successfully."
 msgstr "Søgedatabase blev opdateret."
 
 #. Update the Cancel button to Close, make it default
-#: catfish/CatfishWindow.py:899
+#: catfish/CatfishWindow.py:904
 msgid "Close"
 msgstr "Luk"
 
 #. Set the dialog status to running.
-#: catfish/CatfishWindow.py:913
+#: catfish/CatfishWindow.py:918
 msgid "Updating..."
 msgstr "Opdaterer ..."
 
-#: catfish/CatfishWindow.py:948
+#: catfish/CatfishWindow.py:953
 msgid "Stop Search"
 msgstr "Stop søgning"
 
-#: catfish/CatfishWindow.py:949
+#: catfish/CatfishWindow.py:954
 msgid ""
 "Search is in progress...\n"
 "Press the cancel button or the Escape key to stop."
@@ -482,47 +554,55 @@ msgstr ""
 "Igangværende søgning ...\n"
 "Tryk på Annuller-knappen eller Escape-tasten for at stoppe."
 
-#: catfish/CatfishWindow.py:960
+#: catfish/CatfishWindow.py:965
 msgid "Begin Search"
 msgstr "Begynd søgning"
 
-#: catfish/CatfishWindow.py:1098
+#: catfish/CatfishWindow.py:1103
 msgid "No folder selected."
 msgstr "Ingen mappe valgt."
 
-#: catfish/CatfishWindow.py:1103
+#: catfish/CatfishWindow.py:1108
 msgid "Folder not found."
 msgstr "Mappe ikke fundet."
 
-#: catfish/CatfishWindow.py:1368
+#: catfish/CatfishWindow.py:1374
 #, python-format
 msgid "\"%s\" could not be opened."
 msgstr "\"%s\" kunne ikke åbnes."
 
-#: catfish/CatfishWindow.py:1489
+#: catfish/CatfishWindow.py:1447
+msgid "Open Multiple Windows?"
+msgstr ""
+
+#: catfish/CatfishWindow.py:1450
+msgid "Continue opening {} file manager windows at once?"
+msgstr ""
+
+#: catfish/CatfishWindow.py:1516
 msgid "Enter the new name:"
 msgstr "Indtast det nye navn:"
 
-#: catfish/CatfishWindow.py:1560 catfish/CatfishWindow.py:1586
+#: catfish/CatfishWindow.py:1587 catfish/CatfishWindow.py:1613
 #, python-format
 msgid "\"%s\" could not be saved."
 msgstr "\"%s\" kunne ikke gemmes."
 
-#: catfish/CatfishWindow.py:1567
+#: catfish/CatfishWindow.py:1594
 msgid "Selected Results"
 msgstr "Valgte resultater"
 
-#: catfish/CatfishWindow.py:1602
+#: catfish/CatfishWindow.py:1629
 #, python-format
 msgid "\"%s\" could not be deleted."
 msgstr "\"%s\" kunne ikke slettes."
 
-#: catfish/CatfishWindow.py:1641
+#: catfish/CatfishWindow.py:1668
 #, python-format
 msgid "Save \"%s\" as..."
 msgstr "Gem \"%s\" som ..."
 
-#: catfish/CatfishWindow.py:1677
+#: catfish/CatfishWindow.py:1704
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -531,7 +611,7 @@ msgstr ""
 "Er du sikker på, at du vil \n"
 "slette \"%s\" permanent?"
 
-#: catfish/CatfishWindow.py:1681
+#: catfish/CatfishWindow.py:1708
 #, python-format
 msgid ""
 "Are you sure that you want to \n"
@@ -540,47 +620,47 @@ msgstr ""
 "Er du sikker på, at du vil \n"
 "slette de %i valgte filer permanent?"
 
-#: catfish/CatfishWindow.py:1684
+#: catfish/CatfishWindow.py:1711
 msgid "If you delete a file, it is permanently lost."
 msgstr "Hvis du sletter en fil, er denne tabt permanent."
 
-#: catfish/CatfishWindow.py:1718
+#: catfish/CatfishWindow.py:1745
 msgid "Filename"
 msgstr "Filnavn"
 
-#: catfish/CatfishWindow.py:1719
+#: catfish/CatfishWindow.py:1746
 msgid "Size"
 msgstr "Størrelse"
 
-#: catfish/CatfishWindow.py:1720
+#: catfish/CatfishWindow.py:1747
 msgid "Location"
 msgstr "Placering"
 
-#: catfish/CatfishWindow.py:1730
+#: catfish/CatfishWindow.py:1757
 msgid "Preview"
 msgstr "Forhåndsvisning"
 
-#: catfish/CatfishWindow.py:1737
+#: catfish/CatfishWindow.py:1764
 msgid "Details"
 msgstr "Detaljer"
 
-#: catfish/CatfishWindow.py:1943
+#: catfish/CatfishWindow.py:1970
 msgid "Open with default applications"
 msgstr "Åbn med standardprogrammer"
 
-#: catfish/CatfishWindow.py:1959
+#: catfish/CatfishWindow.py:1986
 msgid "Open with"
 msgstr "Åbn med"
 
-#: catfish/CatfishWindow.py:2040
+#: catfish/CatfishWindow.py:2070
 msgid "Yesterday"
 msgstr "I går"
 
-#: catfish/CatfishWindow.py:2159
+#: catfish/CatfishWindow.py:2189
 msgid "No files found."
 msgstr "Ingen filer fundet."
 
-#: catfish/CatfishWindow.py:2161
+#: catfish/CatfishWindow.py:2191
 msgid ""
 "Try making your search less specific\n"
 "or try another directory."
@@ -588,61 +668,63 @@ msgstr ""
 "Prøv at gøre din søgning mindre specifik\n"
 "eller prøv en anden mappe."
 
-#: catfish/CatfishWindow.py:2170
+#: catfish/CatfishWindow.py:2200
 msgid "file"
 msgid_plural "files"
 msgstr[0] "fil"
 msgstr[1] "filer"
 
-#: catfish/CatfishWindow.py:2171
+#: catfish/CatfishWindow.py:2201
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "sekund"
 msgstr[1] "sekunder"
 
-#: catfish/CatfishWindow.py:2173
+#. Translators: Do not translate words between curly braces, they are
+#. variables.
+#: catfish/CatfishWindow.py:2204
 msgid "{n} {files} found in {m:.{prec}f} {seconds}"
 msgstr "{n} {files} fundet på {m:.{prec}f} {seconds}"
 
-#: catfish/CatfishWindow.py:2183 catfish/CatfishWindow.py:2186
+#: catfish/CatfishWindow.py:2214 catfish/CatfishWindow.py:2217
 msgid "bytes"
 msgstr "bytes"
 
-#: catfish/CatfishWindow.py:2374
+#: catfish/CatfishWindow.py:2405
 msgid "Searching..."
 msgstr "Søger ..."
 
-#: catfish/CatfishWindow.py:2382
+#: catfish/CatfishWindow.py:2413
 #, python-format
 msgid "\"%s\" - searching | Catfish"
 msgstr "\"%s\" - søger | Catfish"
 
-#: catfish/CatfishWindow.py:2502
+#: catfish/CatfishWindow.py:2533
 #, python-format
 msgid "\"%s\" - results | Catfish"
 msgstr "\"%s\" - resultater | Catfish"
 
-#: catfish_lib/catfishconfig.py:94
+#: catfish_lib/catfishconfig.py:92
 msgid "Catfish is a versatile file searching tool."
 msgstr "Catfish er et alsidigt filsøgningsværktøj."
 
-#: catfish_lib/SudoDialog.py:126
+#: catfish_lib/SudoDialog.py:124
 msgid "Password Required"
 msgstr "Adgangskode krævet"
 
-#: catfish_lib/SudoDialog.py:163
+#: catfish_lib/SudoDialog.py:161
 msgid "Incorrect password... try again."
 msgstr "Forkert adgangskode ... prøv igen."
 
-#: catfish_lib/SudoDialog.py:173
+#: catfish_lib/SudoDialog.py:171
 msgid "Password:"
 msgstr "Adgangskode:"
 
-#: catfish_lib/SudoDialog.py:187
+#: catfish_lib/SudoDialog.py:185
 msgid "OK"
 msgstr "OK"
 
-#: catfish_lib/SudoDialog.py:205
+#: catfish_lib/SudoDialog.py:203
 msgid ""
 "Enter your password to\n"
 "perform administrative tasks."
@@ -650,7 +732,7 @@ msgstr ""
 "Indtast din adgangskode for at\n"
 "udføre administrative opgaver."
 
-#: catfish_lib/SudoDialog.py:207
+#: catfish_lib/SudoDialog.py:205
 #, python-format
 msgid ""
 "The application '%s' lets you\n"
