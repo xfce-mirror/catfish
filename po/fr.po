@@ -13,8 +13,8 @@
 # Remi Andruccioli <remi.andruccioli@gmail.com>, 2024
 # Charles Monzat <c.monzat@laposte.net>, 2024
 # David D, 2025
-# Wallon <wallon@ik.me>, 2026
 # Yannick Le Guen <leguen.yannick@gmail.com>, 2026
+# Wallon <wallon@ik.me>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2026-11-08 12:56+0100\n"
 "PO-Revision-Date: 2018-06-28 22:08+0000\n"
-"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>, 2026\n"
+"Last-Translator: Wallon <wallon@ik.me>, 2026\n"
 "Language-Team: French (https://app.transifex.com/xfce/teams/16840/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -434,71 +434,71 @@ msgstr "Ne pas fermer après avoir sélectionné un fichier"
 
 #: catfish/CatfishShortcutsDialog.py:39
 msgid "Catfish Keyboard Shortcuts"
-msgstr ""
+msgstr "Raccourcis clavier de Catfish"
 
 #: catfish/CatfishShortcutsDialog.py:44
 msgid "Main Window"
-msgstr ""
+msgstr "Fenêtre principale"
 
 #: catfish/CatfishShortcutsDialog.py:45
 msgid "Open/Set Search Folder"
-msgstr ""
+msgstr "Ouvrir/Définir le dossier de recherche"
 
 #: catfish/CatfishShortcutsDialog.py:46
 msgid "Focus Search Box"
-msgstr ""
+msgstr "Activer la zone de recherche"
 
 #: catfish/CatfishShortcutsDialog.py:47
 msgid "Stop Ongoing Search"
-msgstr ""
+msgstr "Arrêter la recherche en cours"
 
 #: catfish/CatfishShortcutsDialog.py:48
 msgid "Toggle Filter Sidebar"
-msgstr ""
+msgstr "Afficher/masquer la barre latérale de filtres"
 
 #: catfish/CatfishShortcutsDialog.py:49
 msgid "Toggle Hidden Files"
-msgstr ""
+msgstr "Afficher/masquer les fichiers cachés"
 
 #: catfish/CatfishShortcutsDialog.py:50
 msgid "Toggle Fullscreen Mode"
-msgstr ""
+msgstr "Activer/désactiver le mode plein écran"
 
 #: catfish/CatfishShortcutsDialog.py:51
 msgid "Quit Catfish"
-msgstr ""
+msgstr "Quitter Catfish"
 
 #: catfish/CatfishShortcutsDialog.py:53
 msgid "Results"
-msgstr ""
+msgstr "Résultats"
 
 #: catfish/CatfishShortcutsDialog.py:54
 msgid "Select All Results"
-msgstr ""
+msgstr "Sélectionner tous les résultats"
 
 #: catfish/CatfishShortcutsDialog.py:55
 msgid "Deselect All, Return Focus to Search"
-msgstr ""
+msgstr "Tout désélectionner, revenir à la recherche"
 
 #: catfish/CatfishShortcutsDialog.py:56
 msgid "Open Context Menu"
-msgstr ""
+msgstr "Ouvrir le menu contextuel"
 
 #: catfish/CatfishShortcutsDialog.py:57
 msgid "Show in File Manager"
-msgstr ""
+msgstr "Afficher dans le gestionnaire de fichiers"
 
 #: catfish/CatfishShortcutsDialog.py:58
 msgid "Rename Selected Item"
-msgstr ""
+msgstr "Renommer l’élément sélectionné"
 
 #: catfish/CatfishShortcutsDialog.py:59
 msgid "Copy Selected Paths to Clipboard"
-msgstr ""
+msgstr "Copier les chemins sélectionnés dans le presse-papiers"
 
 #: catfish/CatfishShortcutsDialog.py:60
 msgid "Delete Selected Items"
-msgstr ""
+msgstr "Supprimer les éléments sélectionnés"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
