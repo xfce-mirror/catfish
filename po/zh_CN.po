@@ -419,71 +419,71 @@ msgstr "选择文件后不要关闭"
 
 #: catfish/CatfishShortcutsDialog.py:39
 msgid "Catfish Keyboard Shortcuts"
-msgstr ""
+msgstr "Catfish 键盘快捷键"
 
 #: catfish/CatfishShortcutsDialog.py:44
 msgid "Main Window"
-msgstr ""
+msgstr "主窗口"
 
 #: catfish/CatfishShortcutsDialog.py:45
 msgid "Open/Set Search Folder"
-msgstr ""
+msgstr "打开/设置搜索文件夹"
 
 #: catfish/CatfishShortcutsDialog.py:46
 msgid "Focus Search Box"
-msgstr ""
+msgstr "聚焦搜索框"
 
 #: catfish/CatfishShortcutsDialog.py:47
 msgid "Stop Ongoing Search"
-msgstr ""
+msgstr "停止当前搜索"
 
 #: catfish/CatfishShortcutsDialog.py:48
 msgid "Toggle Filter Sidebar"
-msgstr ""
+msgstr "切换筛选侧边栏"
 
 #: catfish/CatfishShortcutsDialog.py:49
 msgid "Toggle Hidden Files"
-msgstr ""
+msgstr "切换隐藏文件"
 
 #: catfish/CatfishShortcutsDialog.py:50
 msgid "Toggle Fullscreen Mode"
-msgstr ""
+msgstr "切换全屏模式"
 
 #: catfish/CatfishShortcutsDialog.py:51
 msgid "Quit Catfish"
-msgstr ""
+msgstr "退出 Catfish"
 
 #: catfish/CatfishShortcutsDialog.py:53
 msgid "Results"
-msgstr ""
+msgstr "结果"
 
 #: catfish/CatfishShortcutsDialog.py:54
 msgid "Select All Results"
-msgstr ""
+msgstr "选择所有结果"
 
 #: catfish/CatfishShortcutsDialog.py:55
 msgid "Deselect All, Return Focus to Search"
-msgstr ""
+msgstr "取消全选，并将焦点移回到搜索框"
 
 #: catfish/CatfishShortcutsDialog.py:56
 msgid "Open Context Menu"
-msgstr ""
+msgstr "打开交互菜单"
 
 #: catfish/CatfishShortcutsDialog.py:57
 msgid "Show in File Manager"
-msgstr ""
+msgstr "在文件管理器中打开"
 
 #: catfish/CatfishShortcutsDialog.py:58
 msgid "Rename Selected Item"
-msgstr ""
+msgstr "重命名所选项目"
 
 #: catfish/CatfishShortcutsDialog.py:59
 msgid "Copy Selected Paths to Clipboard"
-msgstr ""
+msgstr "复制所选路径至剪贴板"
 
 #: catfish/CatfishShortcutsDialog.py:60
 msgid "Delete Selected Items"
-msgstr ""
+msgstr "删除所选项目"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
