@@ -1698,44 +1698,92 @@ class CatfishWindow(Window):
         dialog.run()
         dialog.destroy()
 
-    def get_delete_dialog(self, filenames):
+    def get_delete_dialog(self, file_list):
         """Show a delete confirmation dialog.  Return True if delete wanted."""
-        if len(filenames) == 1:
-            primary = _("Are you sure that you want to \n"
-                        "permanently delete \"%s\"?") % \
-                escape(os.path.basename(filenames[0]))
-        else:
-            primary = _("Are you sure that you want to \n"
-                        "permanently delete the %i selected files?") % \
-                len(filenames)
-        secondary = _("If you delete a file, it is permanently lost.")
+        if not file_list:
+            return False
 
-        dialog_text = "<big><b>%s</b></big>\n\n%s" % (primary, secondary)
-        dialog = Gtk.MessageDialog(transient_for=self,
-                                   modal=True,
-                                   destroy_with_parent=True,
-                                   message_type=Gtk.MessageType.QUESTION,
-                                   buttons=Gtk.ButtonsType.NONE,
-                                   text="")
-        dialog.set_markup(surrogate_escape(dialog_text))
+        dialog_title = _("Permanently Delete?")
+        dialog_message = ngettext(
+                            "The following %d file will be permanently deleted:",
+                            "The following %d files will be permanently deleted:",
+                            len(file_list),
+                            ) % len(file_list)
 
-        cancel = dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.NO)
-        delete = dialog.add_button(Gtk.STOCK_DELETE, Gtk.ResponseType.YES)
+        dialog = Gtk.Dialog(
+            title=dialog_title,
+            transient_for=self,
+            flags=Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT
+        )
 
-        cancel_image = Gtk.Image.new_from_icon_name("window-close-symbolic",
-                                                    Gtk.IconSize.BUTTON)
-        delete_image = Gtk.Image.new_from_icon_name("edit-delete-symbolic",
-                                                    Gtk.IconSize.BUTTON)
-        cancel_image.set_property("use-fallback", True)
-        delete_image.set_property("use-fallback", True)
+        dialog_message = Gtk.Label(label=dialog_message)
+        dialog_message .set_halign(Gtk.Align.START)
 
-        cancel.set_image(cancel_image)
-        delete.set_image(delete_image)
-        delete.get_style_context().add_class("destructive-action")
+        dialog.set_default_size(350, -1)
 
-        dialog.set_default_response(Gtk.ResponseType.NO)
+        content_area = dialog.get_content_area()
+        content_area.set_spacing(12)
+        content_area.set_border_width(0)
+        content_area.set_margin_start(18)
+        content_area.set_margin_end(18)
+        content_area.set_margin_top(12)
+        content_area.set_margin_bottom(8)
+        content_area.pack_start(dialog_message, False, False, 0)
+
+        scrolled = Gtk.ScrolledWindow()
+        scrolled.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
+        scrolled.set_shadow_type(Gtk.ShadowType.IN)
+        scrolled.set_propagate_natural_height(True)
+        scrolled.set_min_content_height(20)
+        scrolled.set_max_content_height(200)
+
+        listbox = Gtk.ListBox()
+        listbox.set_selection_mode(Gtk.SelectionMode.NONE)
+
+        for filepath in file_list:
+            row = Gtk.ListBoxRow()
+            row.set_tooltip_text(filepath)
+
+            row.set_activatable(False)
+            row.set_selectable(False)
+            row.set_can_focus(False)
+
+            label = Gtk.Label(label=os.path.basename(filepath))
+            label.set_halign(Gtk.Align.START)
+            label.set_margin_start(6)
+            label.set_margin_end(6)
+            label.set_margin_top(2)
+            label.set_margin_bottom(2)
+
+            row.add(label)
+            listbox.add(row)
+
+        scrolled.add(listbox)
+        content_area.pack_start(scrolled, True, True, 0)
+
+        action_area = dialog.get_action_area()
+        action_area.set_layout(Gtk.ButtonBoxStyle.EXPAND)
+
+        cancel_button = Gtk.Button(label=_("Cancel"))
+        cancel_icon = Gtk.Image.new_from_icon_name("window-close-symbolic", Gtk.IconSize.BUTTON)
+        cancel_button.set_image(cancel_icon)
+        cancel_button.set_always_show_image(True)
+        dialog.add_action_widget(cancel_button, Gtk.ResponseType.CANCEL)
+
+        delete_button = Gtk.Button(label=_("Delete"))
+        delete_icon = Gtk.Image.new_from_icon_name("user-trash-symbolic", Gtk.IconSize.BUTTON)
+        delete_button.set_image(delete_icon)
+        delete_button.set_always_show_image(True)
+        delete_button.get_style_context().add_class("destructive-action")
+        dialog.add_action_widget(delete_button, Gtk.ResponseType.YES)
+
+        cancel_button.set_can_default(True)
+        cancel_button.grab_default()
+
+        dialog.show_all()
         response = dialog.run()
         dialog.destroy()
+
         return response == Gtk.ResponseType.YES
 
     def setup_small_view(self):
