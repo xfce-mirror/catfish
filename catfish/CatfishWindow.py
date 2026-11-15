@@ -1955,6 +1955,7 @@ class CatfishWindow(Window):
             Gdk.Gravity.SOUTH_WEST,
             Gdk.Gravity.NORTH_WEST,
             event)
+        self.keys_pressed = []
 
     def treeview_alt_clicked(self, treeview, event=None):
         self.update_treeview_stats(treeview, event)
