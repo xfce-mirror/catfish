@@ -425,71 +425,71 @@ msgstr "Não fechar depois de selecionar um ficheiro"
 
 #: catfish/CatfishShortcutsDialog.py:39
 msgid "Catfish Keyboard Shortcuts"
-msgstr ""
+msgstr "Atalhos de teclado do Catfish"
 
 #: catfish/CatfishShortcutsDialog.py:44
 msgid "Main Window"
-msgstr ""
+msgstr "Janela principal"
 
 #: catfish/CatfishShortcutsDialog.py:45
 msgid "Open/Set Search Folder"
-msgstr ""
+msgstr "Abrir/Definir pasta de pesquisa"
 
 #: catfish/CatfishShortcutsDialog.py:46
 msgid "Focus Search Box"
-msgstr ""
+msgstr "Focar caixa de pesquisa"
 
 #: catfish/CatfishShortcutsDialog.py:47
 msgid "Stop Ongoing Search"
-msgstr ""
+msgstr "Parar a pesquisa em curso"
 
 #: catfish/CatfishShortcutsDialog.py:48
 msgid "Toggle Filter Sidebar"
-msgstr ""
+msgstr "Ativar/desativar filtros da barra lateral"
 
 #: catfish/CatfishShortcutsDialog.py:49
 msgid "Toggle Hidden Files"
-msgstr ""
+msgstr "Mostrar/ocultar ficheiros ocultos"
 
 #: catfish/CatfishShortcutsDialog.py:50
 msgid "Toggle Fullscreen Mode"
-msgstr ""
+msgstr "Ativar/desativar o modo de ecrã inteiro"
 
 #: catfish/CatfishShortcutsDialog.py:51
 msgid "Quit Catfish"
-msgstr ""
+msgstr "Sair do Catfish"
 
 #: catfish/CatfishShortcutsDialog.py:53
 msgid "Results"
-msgstr ""
+msgstr "Resultados"
 
 #: catfish/CatfishShortcutsDialog.py:54
 msgid "Select All Results"
-msgstr ""
+msgstr "Selecionar todos os resultados"
 
 #: catfish/CatfishShortcutsDialog.py:55
 msgid "Deselect All, Return Focus to Search"
-msgstr ""
+msgstr "Desselecionar tudo, voltar o foco para a pesquisa"
 
 #: catfish/CatfishShortcutsDialog.py:56
 msgid "Open Context Menu"
-msgstr ""
+msgstr "Abrir menu de contexto"
 
 #: catfish/CatfishShortcutsDialog.py:57
 msgid "Show in File Manager"
-msgstr ""
+msgstr "Mostrar no gestor de ficheiros"
 
 #: catfish/CatfishShortcutsDialog.py:58
 msgid "Rename Selected Item"
-msgstr ""
+msgstr "Renomear o item selecionado"
 
 #: catfish/CatfishShortcutsDialog.py:59
 msgid "Copy Selected Paths to Clipboard"
-msgstr ""
+msgstr "Copiar os caminhos selecionados para a área de transferência"
 
 #: catfish/CatfishShortcutsDialog.py:60
 msgid "Delete Selected Items"
-msgstr ""
+msgstr "Eliminar itens selecionados"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
