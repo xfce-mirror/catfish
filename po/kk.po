@@ -422,71 +422,71 @@ msgstr "Файлды таңдағаннан кейін жаппау"
 
 #: catfish/CatfishShortcutsDialog.py:39
 msgid "Catfish Keyboard Shortcuts"
-msgstr ""
+msgstr "Catfish пернетақта жарлықтары"
 
 #: catfish/CatfishShortcutsDialog.py:44
 msgid "Main Window"
-msgstr ""
+msgstr "Негізгі терезе"
 
 #: catfish/CatfishShortcutsDialog.py:45
 msgid "Open/Set Search Folder"
-msgstr ""
+msgstr "Іздеу бумасын ашу/орнату"
 
 #: catfish/CatfishShortcutsDialog.py:46
 msgid "Focus Search Box"
-msgstr ""
+msgstr "Іздеу өрісіне фокустау"
 
 #: catfish/CatfishShortcutsDialog.py:47
 msgid "Stop Ongoing Search"
-msgstr ""
+msgstr "Жүріп жатқан іздеуді тоқтату"
 
 #: catfish/CatfishShortcutsDialog.py:48
 msgid "Toggle Filter Sidebar"
-msgstr ""
+msgstr "Сүзгі бүйірлік панелін көрсету/жасыру"
 
 #: catfish/CatfishShortcutsDialog.py:49
 msgid "Toggle Hidden Files"
-msgstr ""
+msgstr "Жасырын файлдарды көрсету/жасыру"
 
 #: catfish/CatfishShortcutsDialog.py:50
 msgid "Toggle Fullscreen Mode"
-msgstr ""
+msgstr "Толық экран режимін қосу/сөндіру"
 
 #: catfish/CatfishShortcutsDialog.py:51
 msgid "Quit Catfish"
-msgstr ""
+msgstr "Catfish қолданбасынан шығу"
 
 #: catfish/CatfishShortcutsDialog.py:53
 msgid "Results"
-msgstr ""
+msgstr "Нәтижелер"
 
 #: catfish/CatfishShortcutsDialog.py:54
 msgid "Select All Results"
-msgstr ""
+msgstr "Барлық нәтижелерді таңдау"
 
 #: catfish/CatfishShortcutsDialog.py:55
 msgid "Deselect All, Return Focus to Search"
-msgstr ""
+msgstr "Барлығын таңдаудан шығару, фокусты іздеуге қайтару"
 
 #: catfish/CatfishShortcutsDialog.py:56
 msgid "Open Context Menu"
-msgstr ""
+msgstr "Контекст мәзірін ашу"
 
 #: catfish/CatfishShortcutsDialog.py:57
 msgid "Show in File Manager"
-msgstr ""
+msgstr "Файлдық басқарушыда көрсету"
 
 #: catfish/CatfishShortcutsDialog.py:58
 msgid "Rename Selected Item"
-msgstr ""
+msgstr "Таңдалған элементтің атын өзгерту"
 
 #: catfish/CatfishShortcutsDialog.py:59
 msgid "Copy Selected Paths to Clipboard"
-msgstr ""
+msgstr "Таңдалған жолдарды алмасу буферіне көшіру"
 
 #: catfish/CatfishShortcutsDialog.py:60
 msgid "Delete Selected Items"
-msgstr ""
+msgstr "Таңдалған элементтерді өшіру"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
