@@ -432,71 +432,71 @@ msgstr "Χωρίς κλείσιμο μετά την επιλογή ενός αρ
 
 #: catfish/CatfishShortcutsDialog.py:39
 msgid "Catfish Keyboard Shortcuts"
-msgstr ""
+msgstr "Συντομεύσεις πληκτρολογίου του Catfish"
 
 #: catfish/CatfishShortcutsDialog.py:44
 msgid "Main Window"
-msgstr ""
+msgstr "Κεντρικό παράθυρο"
 
 #: catfish/CatfishShortcutsDialog.py:45
 msgid "Open/Set Search Folder"
-msgstr ""
+msgstr "Άνοιγμα/Ρύθμιση φακέλου αναζήτησης"
 
 #: catfish/CatfishShortcutsDialog.py:46
 msgid "Focus Search Box"
-msgstr ""
+msgstr "Εστίαση στην αναζήτηση"
 
 #: catfish/CatfishShortcutsDialog.py:47
 msgid "Stop Ongoing Search"
-msgstr ""
+msgstr "Διακοπή αναζήτησης"
 
 #: catfish/CatfishShortcutsDialog.py:48
 msgid "Toggle Filter Sidebar"
-msgstr ""
+msgstr "Εναλλαγή πλευρικής μπάρας φίλτρων"
 
 #: catfish/CatfishShortcutsDialog.py:49
 msgid "Toggle Hidden Files"
-msgstr ""
+msgstr "Εναλλαγή κρυφών αρχείων"
 
 #: catfish/CatfishShortcutsDialog.py:50
 msgid "Toggle Fullscreen Mode"
-msgstr ""
+msgstr "Εναλλαγή πλήρους οθόνης"
 
 #: catfish/CatfishShortcutsDialog.py:51
 msgid "Quit Catfish"
-msgstr ""
+msgstr "Έξοδος"
 
 #: catfish/CatfishShortcutsDialog.py:53
 msgid "Results"
-msgstr ""
+msgstr "Αποτελέσματα"
 
 #: catfish/CatfishShortcutsDialog.py:54
 msgid "Select All Results"
-msgstr ""
+msgstr "Επιλογή όλων"
 
 #: catfish/CatfishShortcutsDialog.py:55
 msgid "Deselect All, Return Focus to Search"
-msgstr ""
+msgstr "Αποεπιλογή όλων, επιστροφή εστίασης στην αναζήτηση"
 
 #: catfish/CatfishShortcutsDialog.py:56
 msgid "Open Context Menu"
-msgstr ""
+msgstr "Άνοιγμα μενού επιλογών"
 
 #: catfish/CatfishShortcutsDialog.py:57
 msgid "Show in File Manager"
-msgstr ""
+msgstr "Εμφάνιση στον διαχειριστή αρχείων"
 
 #: catfish/CatfishShortcutsDialog.py:58
 msgid "Rename Selected Item"
-msgstr ""
+msgstr "Μετονομασία επιλογής"
 
 #: catfish/CatfishShortcutsDialog.py:59
 msgid "Copy Selected Paths to Clipboard"
-msgstr ""
+msgstr "Αντιγραφή επιλεγμένων διαδρομών στο πρόχειρο"
 
 #: catfish/CatfishShortcutsDialog.py:60
 msgid "Delete Selected Items"
-msgstr ""
+msgstr "Διαγραφή επιλεγμένων"
 
 #. Translators: this text is displayed next to
 #. a filename that is not utf-8 encoded.
@@ -587,11 +587,11 @@ msgstr "Αδυναμία ανοίγματος \"%s\"."
 
 #: catfish/CatfishWindow.py:1447
 msgid "Open Multiple Windows?"
-msgstr ""
+msgstr "Να ανοίξουν πολλά παράθυρα;"
 
 #: catfish/CatfishWindow.py:1450
 msgid "Continue opening {} file manager windows at once?"
-msgstr ""
+msgstr "Θα συνεχίσετε να ανοίγετε {} παράθυρα του διαχειριστή αρχείων;"
 
 #: catfish/CatfishWindow.py:1516
 msgid "Enter the new name:"
